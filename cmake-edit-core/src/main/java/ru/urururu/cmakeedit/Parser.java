@@ -12,8 +12,14 @@ public class Parser {
     public static FileNode parse(ParseContext ctx) throws ParseException {
         List<FileElementNode> nodes = new ArrayList<>();
 
-        while (ctx.hasMore()) {
-            nodes.add(parseFileNode(ctx));
+        int position = 0;
+        try {
+            while (ctx.hasMore()) {
+                position = ctx.position();
+                nodes.add(parseFileNode(ctx));
+            }
+        } catch (ParseException e) {
+            nodes.add(new ParseErrorNode(ctx, e, position));
         }
 
         return new FileNode(nodes);

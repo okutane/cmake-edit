@@ -25,6 +25,6 @@ public class CommentsDetectorTest {
     }
 
     private void checkComment(int expected, String content, int start) throws ParseException {
-        Assert.assertEquals(content, expected, CommentsDetector.parseComment(content, start).end());
+        Assert.assertEquals(content, expected, CommentsDetector.parseComment(content, start).getEnd());
     }
 }

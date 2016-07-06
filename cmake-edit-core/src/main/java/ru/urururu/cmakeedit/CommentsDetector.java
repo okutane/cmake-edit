@@ -1,53 +1,65 @@
 package ru.urururu.cmakeedit;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * Created by okutane on 01/07/16.
  */
 public class CommentsDetector {
-    public static List<CommentNode> findAll(String contents) {
-        List<CommentNode> comments = new ArrayList<>();
-
-        int pos = 0;
-        while (pos < contents.length()) {
-            char c = contents.charAt(pos);
-            if (c == '#') {
-                CommentNode comment = parseComment(contents, pos);
-                pos = comment.end();
-            }
+    static CommentNode parseComment(ParseContext ctx) throws ParseException {
+        if (ctx.peek() != '#') {
+            throw new UnexpectedCharacterException(ctx);
         }
 
-        return comments;
-    }
+        int start = ctx.position();
 
-    static CommentNode parseComment(String contents, int start) {
-        if (start + 1 < contents.length() && contents.charAt(start + 1) == '[') {
-            int len = 1;
-            while (contents.charAt(start + len + 1) == '[') {
+        if (ctx.hasMore()) {
+            ctx.advance();
+            int len = 0;
+            while (ctx.peek() == '[') {
                 len++;
+                if (ctx.hasMore()) {
+                    ctx.advance();
+                } else {
+                    break;
+                }
             }
-            return parseBracketComment(contents, start, len);
+            if (len != 0) {
+                return parseBracketComment(ctx, start, len);
+            }
         }
 
-        return parseLineComment(contents, start);
+        return parseLineComment(ctx, start);
     }
 
-    private static CommentNode parseLineComment(String contents, int start) {
-        int end = start + 1;
-        while (end < contents.length() && contents.charAt(end) != '\n') {
-            end++;
-        }
-        return new CommentNode(start, end);
+    static CommentNode parseComment(String contents, int start) throws ParseException {
+        return parseComment(new StringParseContext(contents, start));
     }
 
-    private static CommentNode parseBracketComment(String contents, int start, int len) {
-        String close = new String(new char[len]).replace("\0", "]");
-        int end = contents.indexOf(close, start);
-        if (end == -1) {
-            return null; // todo throw ParseException("not closed bracked comment")
+    private static CommentNode parseLineComment(ParseContext ctx, int start) {
+        while (ctx.hasMore() && ctx.peek() != '\n') {
+            ctx.advance();
         }
-        return new CommentNode(start, end + len);
+        return new CommentNode(start, ctx.peek() == '\n' ? ctx.position() : ctx.position() + 1);
+    }
+
+    private static CommentNode parseBracketComment(ParseContext ctx, int start, int len) throws ParseException {
+        int closeLen = 0;
+        while (ctx.hasMore()) {
+            if (ctx.peek() == ']') {
+                closeLen++;
+                if (closeLen == len) {
+                    return new CommentNode(start, ctx.position() + 1);
+                }
+            } else {
+                closeLen = 0;
+            }
+            ctx.advance();
+        }
+        if (ctx.peek() == ']') {
+            closeLen++;
+            if (closeLen == len) {
+                return new CommentNode(start, ctx.position() + 1);
+            }
+        }
+        throw new ParseException("Not expected end of content");
     }
 }

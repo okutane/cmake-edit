@@ -8,7 +8,7 @@ import org.junit.Test;
  */
 public class CommentsDetectorTest {
     @Test
-    public void testLineComments() {
+    public void testLineComments() throws ParseException {
         checkComment(1, "#", 0);
         checkComment(7, "#simple", 0);
         checkComment(7, "#simple\nmessage(\"test\")", 0);
@@ -19,12 +19,12 @@ public class CommentsDetectorTest {
     }
 
     @Test
-    public void testBlockComments() {
+    public void testBlockComments() throws ParseException {
         checkComment(5, "#[[]]", 0);
         checkComment(8, "#[[[\n]]]", 0);
     }
 
-    private void checkComment(int expected, String content, int start) {
+    private void checkComment(int expected, String content, int start) throws ParseException {
         Assert.assertEquals(content, expected, CommentsDetector.parseComment(content, start).end());
     }
 }

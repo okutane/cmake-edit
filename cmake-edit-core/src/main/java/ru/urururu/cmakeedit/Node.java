@@ -3,20 +3,26 @@ package ru.urururu.cmakeedit;
 /**
  * Created by okutane on 07/07/16.
  */
-public class Node {
-    protected final int start;
-    protected final int end;
+public abstract class Node {
+    protected final SourceRef start;
+    protected final SourceRef end;
 
-    public Node(int start, int end) {
+    protected Node(SourceRef start, SourceRef end) {
         this.start = start;
         this.end = end;
     }
 
-    public int getStart() {
+    /**
+     * @return Reference to first character of the node.
+     */
+    public SourceRef getStart() {
         return start;
     }
 
-    public int getEnd() {
+    /**
+     * @return Reference to last character of the node.
+     */
+    public SourceRef getEnd() {
         return end;
     }
 }

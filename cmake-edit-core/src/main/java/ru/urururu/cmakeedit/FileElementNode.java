@@ -10,7 +10,7 @@ public class FileElementNode extends Node {
         this(commentNode, commentNode.getStart(), commentNode.getEnd());
     }
 
-    public FileElementNode(CommentNode commentNode, int start, int end) {
+    public FileElementNode(CommentNode commentNode, SourceRef start, SourceRef end) {
         super (start, end);
         this.commentNode = commentNode;
     }

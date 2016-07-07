@@ -2,17 +2,21 @@
   <nodes>
     <ru.urururu.cmakeedit.FileElementNode>
       <commentNode>
-        <start>0</start>
-        <end>1</end>
+        <start>
+          <offset>0</offset>
+        </start>
+        <end reference="../start"/>
       </commentNode>
-      <start>0</start>
-      <end>1</end>
+      <start reference="../commentNode/start"/>
+      <end reference="../commentNode/start"/>
     </ru.urururu.cmakeedit.FileElementNode>
     <ru.urururu.cmakeedit.ParseErrorNode>
       <message>Unexpected character &apos;
 &apos; at 2</message>
-      <start>2</start>
-      <end>3</end>
+      <start>
+        <offset>2</offset>
+      </start>
+      <end reference="../start"/>
     </ru.urururu.cmakeedit.ParseErrorNode>
   </nodes>
 </ru.urururu.cmakeedit.FileNode>

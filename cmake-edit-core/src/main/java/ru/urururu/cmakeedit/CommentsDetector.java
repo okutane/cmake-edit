@@ -9,7 +9,7 @@ public class CommentsDetector {
             throw new UnexpectedCharacterException(ctx);
         }
 
-        int start = ctx.position();
+        SourceRef start = ctx.position();
 
         if (ctx.hasMore()) {
             ctx.advance();
@@ -34,20 +34,22 @@ public class CommentsDetector {
         return parseComment(new StringParseContext(contents, start));
     }
 
-    private static CommentNode parseLineComment(ParseContext ctx, int start) {
+    private static CommentNode parseLineComment(ParseContext ctx, SourceRef start) {
+        SourceRef end = start;
         while (ctx.hasMore() && ctx.peek() != '\n') {
+            end = ctx.position();
             ctx.advance();
         }
-        return new CommentNode(start, ctx.peek() == '\n' ? ctx.position() : ctx.position() + 1);
+        return new CommentNode(start, ctx.peek() == '\n' ? end : ctx.position());
     }
 
-    private static CommentNode parseBracketComment(ParseContext ctx, int start, int len) throws ParseException {
+    private static CommentNode parseBracketComment(ParseContext ctx, SourceRef start, int len) throws ParseException {
         int closeLen = 0;
         while (ctx.hasMore()) {
             if (ctx.peek() == ']') {
                 closeLen++;
                 if (closeLen == len) {
-                    return new CommentNode(start, ctx.position() + 1);
+                    return new CommentNode(start, ctx.position());
                 }
             } else {
                 closeLen = 0;
@@ -57,7 +59,7 @@ public class CommentsDetector {
         if (ctx.peek() == ']') {
             closeLen++;
             if (closeLen == len) {
-                return new CommentNode(start, ctx.position() + 1);
+                return new CommentNode(start, ctx.position());
             }
         }
         throw new ParseException("Not expected end of content");

@@ -2,16 +2,22 @@
   <nodes>
     <ru.urururu.cmakeedit.FileElementNode>
       <commentNode>
-        <start>0</start>
-        <end>33</end>
+        <start>
+          <offset>0</offset>
+        </start>
+        <end>
+          <offset>32</offset>
+        </end>
       </commentNode>
-      <start>0</start>
-      <end>33</end>
+      <start reference="../commentNode/start"/>
+      <end reference="../commentNode/end"/>
     </ru.urururu.cmakeedit.FileElementNode>
     <ru.urururu.cmakeedit.ParseErrorNode>
       <message>Not supported yet</message>
-      <start>34</start>
-      <end>35</end>
+      <start>
+        <offset>34</offset>
+      </start>
+      <end reference="../start"/>
     </ru.urururu.cmakeedit.ParseErrorNode>
   </nodes>
 </ru.urururu.cmakeedit.FileNode>

@@ -9,22 +9,22 @@ import org.junit.Test;
 public class CommentsDetectorTest {
     @Test
     public void testLineComments() throws ParseException {
-        checkComment(1, "#", 0);
-        checkComment(7, "#simple", 0);
-        checkComment(7, "#simple\nmessage(\"test\")", 0);
+        checkComment(0, "#", 0);
+        checkComment(6, "#simple", 0);
+        checkComment(6, "#simple\nmessage(\"test\")", 0);
 
-        checkComment(2, " #", 1);
-        checkComment(8, " #simple", 1);
-        checkComment(8, " #simple\nmessage(\"test\")", 1);
+        checkComment(1, " #", 1);
+        checkComment(7, " #simple", 1);
+        checkComment(7, " #simple\nmessage(\"test\")", 1);
     }
 
     @Test
     public void testBlockComments() throws ParseException {
-        checkComment(5, "#[[]]", 0);
-        checkComment(8, "#[[[\n]]]", 0);
+        checkComment(4, "#[[]]", 0);
+        checkComment(7, "#[[[\n]]]", 0);
     }
 
     private void checkComment(int expected, String content, int start) throws ParseException {
-        Assert.assertEquals(content, expected, CommentsDetector.parseComment(content, start).getEnd());
+        Assert.assertEquals(content, expected, CommentsDetector.parseComment(content, start).getEnd().getOffset());
     }
 }

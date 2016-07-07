@@ -21,7 +21,7 @@ import java.nio.file.NoSuchFileException;
  */
 public class ParserIntegrationTests {
     static File ROOT;
-    static String SRC_ROOT = System.getenv("SRC_ROOT");
+    static String SRC_ROOT = System.getProperty("SRC_ROOT");
     static boolean UPDATE = Boolean.getBoolean("AUTO_UPDATE_ON_DIFF");
 
     @Test

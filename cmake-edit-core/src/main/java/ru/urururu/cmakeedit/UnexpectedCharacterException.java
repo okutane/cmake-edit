@@ -5,6 +5,6 @@ package ru.urururu.cmakeedit;
  */
 public class UnexpectedCharacterException extends ParseException {
     public UnexpectedCharacterException(ParseContext ctx) {
-        super("Unexpected character '" + ctx.peek() + "' at " + ctx.position());
+        super("Unexpected character '" + ctx.peek() + "' at " + ctx.position().getOffset());
     }
 }

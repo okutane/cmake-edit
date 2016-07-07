@@ -18,8 +18,8 @@ public class StringParseContext implements ParseContext {
     }
 
     @Override
-    public int position() {
-        return position;
+    public SourceRef position() {
+        return new SourceRef(position);
     }
 
     @Override

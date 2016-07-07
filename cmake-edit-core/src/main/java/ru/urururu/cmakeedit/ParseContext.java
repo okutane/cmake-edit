@@ -10,9 +10,9 @@ public interface ParseContext {
     char peek();
 
     /**
-     * @return absolute position of current context cursor.
+     * @return reference position of current context cursor.
      */
-    int position();
+    SourceRef position();
 
     /**
      * @return <code>true</code> if this ParseContext contains more text.

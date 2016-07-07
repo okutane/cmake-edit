@@ -12,7 +12,7 @@ public class Parser {
     public static FileNode parse(ParseContext ctx) throws ParseException {
         List<FileElementNode> nodes = new ArrayList<>();
 
-        int position = 0;
+        SourceRef position = null;
         try {
             while (ctx.hasMore()) {
                 position = ctx.position();

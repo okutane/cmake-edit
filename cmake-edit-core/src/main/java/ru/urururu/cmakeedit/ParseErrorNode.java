@@ -6,8 +6,8 @@ package ru.urururu.cmakeedit;
 public class ParseErrorNode extends FileElementNode {
     String message;
 
-    public ParseErrorNode(ParseContext ctx, ParseException e, int position) {
-        super(null, position, ctx.position() + 1);
+    public ParseErrorNode(ParseContext ctx, ParseException e, SourceRef position) {
+        super(null, position, position);
         this.message = e.getMessage();
     }
 }

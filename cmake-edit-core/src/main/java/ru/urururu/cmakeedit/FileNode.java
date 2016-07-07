@@ -11,4 +11,8 @@ public class FileNode {
     public FileNode(List<FileElementNode> nodes) {
         this.nodes = nodes;
     }
+
+    public List<FileElementNode> getNodes() {
+        return nodes;
+    }
 }

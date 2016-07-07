@@ -15,9 +15,9 @@ public interface ParseContext {
     SourceRef position();
 
     /**
-     * @return <code>true</code> if this ParseContext contains more text.
+     * @return <code>true</code> if this ParseContext doesn't contains any more text.
      */
-    boolean hasMore();
+    boolean reachedEnd();
 
     /**
      * moves current context cursor by 1 character.

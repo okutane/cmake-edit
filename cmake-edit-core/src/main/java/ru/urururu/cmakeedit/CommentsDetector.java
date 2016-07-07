@@ -11,20 +11,14 @@ public class CommentsDetector {
 
         SourceRef start = ctx.position();
 
-        if (ctx.hasMore()) {
+        ctx.advance();
+        int len = 0;
+        while (!ctx.reachedEnd() && ctx.peek() == '[') {
+            len++;
             ctx.advance();
-            int len = 0;
-            while (ctx.peek() == '[') {
-                len++;
-                if (ctx.hasMore()) {
-                    ctx.advance();
-                } else {
-                    break;
-                }
-            }
-            if (len != 0) {
-                return parseBracketComment(ctx, start, len);
-            }
+        }
+        if (len != 0) {
+            return parseBracketComment(ctx, start, len);
         }
 
         return parseLineComment(ctx, start);
@@ -36,31 +30,27 @@ public class CommentsDetector {
 
     private static CommentNode parseLineComment(ParseContext ctx, SourceRef start) {
         SourceRef end = start;
-        while (ctx.hasMore() && ctx.peek() != '\n') {
+        while (!ctx.reachedEnd() && ctx.peek() != '\n') {
             end = ctx.position();
             ctx.advance();
         }
-        return new CommentNode(start, ctx.peek() == '\n' ? end : ctx.position());
+        return new CommentNode(start, end);
     }
 
     private static CommentNode parseBracketComment(ParseContext ctx, SourceRef start, int len) throws ParseException {
         int closeLen = 0;
-        while (ctx.hasMore()) {
+        while (!ctx.reachedEnd()) {
             if (ctx.peek() == ']') {
                 closeLen++;
                 if (closeLen == len) {
-                    return new CommentNode(start, ctx.position());
+                    SourceRef end = ctx.position();
+                    ctx.advance();
+                    return new CommentNode(start, end);
                 }
             } else {
                 closeLen = 0;
             }
             ctx.advance();
-        }
-        if (ctx.peek() == ']') {
-            closeLen++;
-            if (closeLen == len) {
-                return new CommentNode(start, ctx.position());
-            }
         }
         throw new ParseException("Not expected end of content");
     }

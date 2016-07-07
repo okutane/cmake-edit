@@ -14,6 +14,9 @@ public class StringParseContext implements ParseContext {
 
     @Override
     public char peek() {
+        if (reachedEnd()) {
+            throw new IllegalStateException("End reached");
+        }
         return contents.charAt(position);
     }
 
@@ -23,12 +26,15 @@ public class StringParseContext implements ParseContext {
     }
 
     @Override
-    public boolean hasMore() {
-        return position + 1 < contents.length();
+    public boolean reachedEnd() {
+        return position == contents.length();
     }
 
     @Override
     public void advance() {
+        if (reachedEnd()) {
+            throw new IllegalStateException("End reached");
+        }
         position++;
     }
 }

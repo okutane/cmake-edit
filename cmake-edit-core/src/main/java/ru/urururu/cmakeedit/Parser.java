@@ -4,22 +4,41 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Parser {
+
     /**
      * file         ::=  file_element*
      * @param ctx
      * @return
      */
     public static FileNode parse(ParseContext ctx) throws ParseException {
+        return parse(ctx, ErrorHandling.Exception);
+    }
+
+    /**
+     * file         ::=  file_element*
+     * @param ctx
+     * @param errorHandling
+     * @return
+     */
+    public static FileNode parse(ParseContext ctx, ErrorHandling errorHandling) throws ParseException {
         List<FileElementNode> nodes = new ArrayList<>();
 
-        SourceRef position = null;
-        try {
-            while (ctx.hasMore()) {
-                position = ctx.position();
-                nodes.add(parseFileNode(ctx));
+        if (!ctx.reachedEnd()) {
+            SourceRef position = null;
+            try {
+                while (!ctx.reachedEnd()) {
+                    position = ctx.position();
+                    FileElementNode node = parseFileNode(ctx);
+                    if (!node.equals(FileElementNode.EMPTY)) {
+                        nodes.add(node);
+                    }
+                }
+            } catch (ParseException e) {
+                if (errorHandling == ErrorHandling.Exception) {
+                    throw e;
+                }
+                nodes.add(new ParseErrorNode(ctx, e, position));
             }
-        } catch (ParseException e) {
-            nodes.add(new ParseErrorNode(ctx, e, position));
         }
 
         return new FileNode(nodes);
@@ -33,14 +52,21 @@ public class Parser {
     private static FileElementNode parseFileNode(ParseContext ctx) throws ParseException {
         skipSpaces(ctx);
 
-        FileElementNode result;
+        FileElementNode result = FileElementNode.EMPTY;
 
         char c = ctx.peek();
         if (c == '#') {
-            result = new FileElementNode(CommentsDetector.parseComment(ctx));
+            List<CommentNode> comments = new ArrayList<>();
+
+            do {
+                comments.add(CommentsDetector.parseComment(ctx));
+                skipSpaces(ctx);
+            } while (!ctx.reachedEnd() && ctx.peek() != '\n');
+
+            result = new FileElementNode(comments, comments.get(0).getStart(), comments.get(comments.size() - 1).getEnd());
         } else if (Character.isAlphabetic(c) || c == '_') {
             result = parseCommandInvocation(ctx);
-        } else {
+        } else if (c != '\n') {
             throw new UnexpectedCharacterException(ctx);
         }
 
@@ -56,10 +82,15 @@ public class Parser {
      * space        ::=  <match '[ \t]+'>
      */
     private static void skipSpaces(ParseContext ctx) {
-        char c = ctx.peek();
-        while (c == ' ' || c == '\t') {
-            ctx.advance();
-            c = ctx.peek();
+        while (!ctx.reachedEnd()) {
+            switch (ctx.peek()) {
+                case ' ':
+                case '\t':
+                    ctx.advance();
+                    continue;
+                default:
+                    return;
+            }
         }
     }
 
@@ -67,6 +98,10 @@ public class Parser {
      * newline      ::=  <match '\n'>
      */
     private static void skipNewline(ParseContext ctx) throws UnexpectedCharacterException {
+        if (ctx.reachedEnd()) {
+            return;
+        }
+
         char c = ctx.peek();
         if (c == '\n') {
             ctx.advance();
@@ -75,4 +110,9 @@ public class Parser {
         }
     }
 
+    public enum ErrorHandling {
+        Exception,
+        NodesBefore,
+        PartialResult
+    }
 }

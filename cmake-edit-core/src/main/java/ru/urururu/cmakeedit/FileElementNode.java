@@ -1,17 +1,18 @@
 package ru.urururu.cmakeedit;
 
+import java.util.Collections;
+import java.util.List;
+
 /**
  * Created by okutane on 05/07/16.
  */
 public class FileElementNode extends Node {
-    private CommentNode commentNode;
+    public static final FileElementNode EMPTY = new FileElementNode(Collections.emptyList(), null, null);
 
-    public FileElementNode(CommentNode commentNode) {
-        this(commentNode, commentNode.getStart(), commentNode.getEnd());
-    }
+    private List<CommentNode> comments;
 
-    public FileElementNode(CommentNode commentNode, SourceRef start, SourceRef end) {
+    public FileElementNode(List<CommentNode> comments, SourceRef start, SourceRef end) {
         super (start, end);
-        this.commentNode = commentNode;
+        this.comments = comments;
     }
 }

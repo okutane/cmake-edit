@@ -48,9 +48,11 @@ public class ParserIntegrationTests {
                     protected void runTest() throws Throwable {
                         String text = new String(Files.readAllBytes(child.toPath()), StandardCharsets.UTF_8);
 
+                        text = text.replace("\r", "");
+
                         Object result;
                         try {
-                            result = Parser.parse(new StringParseContext(text, 0));
+                            result = Parser.parse(new StringParseContext(text, 0), Parser.ErrorHandling.NodesBefore);
                         } catch (ParseException e) {
                             result = e.getMessage();
                         }

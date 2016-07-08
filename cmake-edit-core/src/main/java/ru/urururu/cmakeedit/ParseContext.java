@@ -1,5 +1,7 @@
 package ru.urururu.cmakeedit;
 
+import com.codahale.metrics.MetricRegistry;
+
 /**
  * Created by okutane on 06/07/16.
  */
@@ -23,4 +25,6 @@ public interface ParseContext {
      * moves current context cursor by 1 character.
      */
     void advance();
+
+    MetricRegistry getRegistry();
 }

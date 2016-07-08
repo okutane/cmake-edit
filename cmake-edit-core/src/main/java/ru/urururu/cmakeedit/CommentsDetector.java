@@ -61,6 +61,6 @@ public class CommentsDetector {
 
             ctx.advance();
         }
-        throw new ParseException("Not expected end of content");
+        throw new ParseException(ctx, "Not expected end of content");
     }
 }

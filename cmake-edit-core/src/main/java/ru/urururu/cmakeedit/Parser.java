@@ -1,5 +1,7 @@
 package ru.urururu.cmakeedit;
 
+import com.codahale.metrics.Timer;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,27 +23,29 @@ public class Parser {
      * @return
      */
     public static FileNode parse(ParseContext ctx, ErrorHandling errorHandling) throws ParseException {
-        List<FileElementNode> nodes = new ArrayList<>();
+        try (Timer.Context timing = ctx.getRegistry().timer("Parser.parse").time()) {
+            List<FileElementNode> nodes = new ArrayList<>();
 
-        if (!ctx.reachedEnd()) {
-            SourceRef position = null;
-            try {
-                while (!ctx.reachedEnd()) {
-                    position = ctx.position();
-                    FileElementNode node = parseFileNode(ctx);
-                    if (!node.equals(FileElementNode.EMPTY)) {
-                        nodes.add(node);
+            if (!ctx.reachedEnd()) {
+                SourceRef position = null;
+                try {
+                    while (!ctx.reachedEnd()) {
+                        position = ctx.position();
+                        FileElementNode node = parseFileNode(ctx);
+                        if (!node.equals(FileElementNode.EMPTY)) {
+                            nodes.add(node);
+                        }
                     }
+                } catch (ParseException e) {
+                    if (errorHandling == ErrorHandling.Exception) {
+                        throw e;
+                    }
+                    nodes.add(new ParseErrorNode(ctx, e, position));
                 }
-            } catch (ParseException e) {
-                if (errorHandling == ErrorHandling.Exception) {
-                    throw e;
-                }
-                nodes.add(new ParseErrorNode(ctx, e, position));
             }
-        }
 
-        return new FileNode(nodes);
+            return new FileNode(nodes);
+        }
     }
 
     /**
@@ -74,8 +78,18 @@ public class Parser {
         return result;
     }
 
+    /**
+     * command_invocation  ::=  space* identifier space* '(' arguments ')'
+     * identifier          ::=  <match '[A-Za-z_][A-Za-z0-9_]*'>
+     * arguments           ::=  argument? separated_arguments*
+     * separated_arguments ::=  separation+ argument? | separation* '(' arguments ')'
+     * separation          ::=  space | line_ending
+     * @param ctx
+     * @return
+     * @throws ParseException
+     */
     private static FileElementNode parseCommandInvocation(ParseContext ctx) throws ParseException {
-        throw new ParseException("Not supported yet");
+        throw new ParseException(ctx, "command_invocation not supported yet");
     }
 
     /**

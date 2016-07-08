@@ -1,11 +1,14 @@
 package ru.urururu.cmakeedit;
 
+import com.codahale.metrics.ConsoleReporter;
+import com.codahale.metrics.MetricRegistry;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.converters.reflection.FieldDictionary;
 import com.thoughtworks.xstream.converters.reflection.ImmutableFieldKeySorter;
 import com.thoughtworks.xstream.converters.reflection.Sun14ReflectionProvider;
 import com.thoughtworks.xstream.io.xml.DomDriver;
 import junit.framework.AssertionFailedError;
+import junit.framework.TestCase;
 import junit.framework.TestSuite;
 import org.custommonkey.xmlunit.XMLTestCase;
 import org.junit.Test;
@@ -15,6 +18,7 @@ import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.NoSuchFileException;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Created by okutane on 07/07/16.
@@ -29,10 +33,26 @@ public class ParserIntegrationTests {
         URL url = ParserIntegrationTests.class.getResource("/integration");
         ROOT = new File(url.getFile());
 
-        return createSuite(ROOT);
+        MetricRegistry registry = new MetricRegistry();
+
+        TestSuite pack = createSuite(ROOT, registry);
+
+        pack.addTest(new TestCase("Report results") {
+            @Override
+            protected void runTest() throws Throwable {
+                ConsoleReporter reporter = ConsoleReporter.forRegistry(registry)
+                        .convertRatesTo(TimeUnit.SECONDS)
+                        .convertDurationsTo(TimeUnit.MILLISECONDS)
+                        .build();
+
+                reporter.report();
+            }
+        });
+
+        return pack;
     }
 
-    private static TestSuite createSuite(File file) {
+    private static TestSuite createSuite(File file, MetricRegistry registry) {
         TestSuite suite = new TestSuite(file.getName());
 
         for (File child : file.listFiles()) {
@@ -41,7 +61,7 @@ public class ParserIntegrationTests {
             }
 
             if (child.isDirectory()) {
-                suite.addTest(createSuite(child));
+                suite.addTest(createSuite(child, registry));
             } else {
                 suite.addTest(new XMLTestCase(child.getName()) {
                     @Override
@@ -52,7 +72,7 @@ public class ParserIntegrationTests {
 
                         Object result;
                         try {
-                            result = Parser.parse(new StringParseContext(text, 0), Parser.ErrorHandling.NodesBefore);
+                            result = Parser.parse(new StringParseContext(text, 0, registry), Parser.ErrorHandling.NodesBefore);
                         } catch (ParseException e) {
                             result = e.getMessage();
                         }

@@ -21,7 +21,8 @@ public class CommentsDetectorTest {
     @Test
     public void testBlockComments() throws ParseException {
         checkComment(4, "#[[]]", 0);
-        checkComment(7, "#[[[\n]]]", 0);
+        checkComment(11, "#[==[[\n]]==]", 0);
+        checkComment(6, "#[=[]=]", 0);
     }
 
     private void checkComment(int expected, String content, int start) throws ParseException {

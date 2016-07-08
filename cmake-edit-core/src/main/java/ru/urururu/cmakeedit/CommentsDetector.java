@@ -12,13 +12,17 @@ public class CommentsDetector {
         SourceRef start = ctx.position();
 
         ctx.advance();
-        int len = 0;
-        while (!ctx.reachedEnd() && ctx.peek() == '[') {
-            len++;
+        if (!ctx.reachedEnd() && ctx.peek() == '[') {
             ctx.advance();
-        }
-        if (len != 0) {
-            return parseBracketComment(ctx, start, len);
+            int len = 0;
+            while (!ctx.reachedEnd() && ctx.peek() == '=') {
+                len++;
+                ctx.advance();
+            }
+            if (!ctx.reachedEnd() && ctx.peek() == '[') {
+                ctx.advance();
+                return parseBracketComment(ctx, start, len);
+            }
         }
 
         return parseLineComment(ctx, start);
@@ -38,18 +42,23 @@ public class CommentsDetector {
     }
 
     private static CommentNode parseBracketComment(ParseContext ctx, SourceRef start, int len) throws ParseException {
+        boolean firstBraceSeen = false;
         int closeLen = 0;
         while (!ctx.reachedEnd()) {
             if (ctx.peek() == ']') {
-                closeLen++;
-                if (closeLen == len) {
+                if (firstBraceSeen && closeLen == len) {
                     SourceRef end = ctx.position();
                     ctx.advance();
                     return new CommentNode(start, end);
                 }
-            } else {
+                firstBraceSeen = true;
                 closeLen = 0;
+            } else if (ctx.peek() == '=') {
+                closeLen++;
+            } else {
+                firstBraceSeen = false;
             }
+
             ctx.advance();
         }
         throw new ParseException("Not expected end of content");

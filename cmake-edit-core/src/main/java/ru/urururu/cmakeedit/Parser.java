@@ -84,12 +84,55 @@ public class Parser {
      * arguments           ::=  argument? separated_arguments*
      * separated_arguments ::=  separation+ argument? | separation* '(' arguments ')'
      * separation          ::=  space | line_ending
-     * @param ctx
-     * @return
-     * @throws ParseException
+     *
+     * Precondition: Character.isAlphabetic(ctx.peek()) || ctx.peek() == '_'
      */
     private static FileElementNode parseCommandInvocation(ParseContext ctx) throws ParseException {
-        throw new ParseException(ctx, "command_invocation not supported yet");
+        StringBuilder nameBuilder = new StringBuilder();
+
+        SourceRef start = ctx.position();
+
+        nameBuilder.append(ctx.peek());
+        ctx.advance();
+        while (!ctx.reachedEnd()) {
+            char c = ctx.peek();
+            if (Character.isAlphabetic(c) || Character.isDigit(c) || c == '_') {
+                nameBuilder.append(ctx.peek());
+                ctx.advance();
+            } else {
+                break;
+            }
+        }
+
+        skipSpaces(ctx);
+
+        if (ctx.reachedEnd()) {
+            throw new ParseException(ctx, "Unexpected end of source");
+        }
+        char c = ctx.peek();
+
+        if (c != '(') {
+            throw new UnexpectedCharacterException(ctx);
+        }
+
+        List<Node> arguments = new ArrayList<>();
+
+        do {
+            skipSpaces(ctx);
+
+            if (ctx.reachedEnd()) {
+                throw new ParseException(ctx, "Unexpected end of source");
+            }
+            c = ctx.peek();
+
+            if (c == ')') {
+                SourceRef end = ctx.position();
+                ctx.advance();
+                return new CommandInvocationNode(nameBuilder.toString(), arguments, start, end);
+            } else {
+                arguments.add(ArgumentParser.parse(ctx));
+            }
+        } while (true);
     }
 
     /**

@@ -1,9 +1,99 @@
 <ru.urururu.cmakeedit.FileNode>
   <nodes>
-    <ru.urururu.cmakeedit.ParseErrorNode>
-      <message>unquoted_argument not supported</message>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>include</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>Compiler/Clang</argument>
+          <start>
+            <offset>8</offset>
+          </start>
+          <end>
+            <offset>21</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments class="java.util.Collections$EmptyList"/>
       <start>
         <offset>0</offset>
+      </start>
+      <end>
+        <offset>22</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>__compiler_clang</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>C</argument>
+          <start>
+            <offset>41</offset>
+          </start>
+          <end>
+            <offset>41</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments class="java.util.Collections$EmptyList" reference="../../ru.urururu.cmakeedit.CommandInvocationNode/comments"/>
+      <start>
+        <offset>24</offset>
+      </start>
+      <end>
+        <offset>42</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>if</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>NOT</argument>
+          <start>
+            <offset>48</offset>
+          </start>
+          <end>
+            <offset>50</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>CMAKE_C_COMPILER_VERSION</argument>
+          <start>
+            <offset>52</offset>
+          </start>
+          <end>
+            <offset>75</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>VERSION_LESS</argument>
+          <start>
+            <offset>77</offset>
+          </start>
+          <end>
+            <offset>88</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>4.0</argument>
+          <start>
+            <offset>90</offset>
+          </start>
+          <end>
+            <offset>92</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments class="java.util.Collections$EmptyList" reference="../../ru.urururu.cmakeedit.CommandInvocationNode/comments"/>
+      <start>
+        <offset>45</offset>
+      </start>
+      <end>
+        <offset>93</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.ParseErrorNode>
+      <message>quoted_argument not supported</message>
+      <start>
+        <offset>95</offset>
       </start>
       <end reference="../start"/>
     </ru.urururu.cmakeedit.ParseErrorNode>

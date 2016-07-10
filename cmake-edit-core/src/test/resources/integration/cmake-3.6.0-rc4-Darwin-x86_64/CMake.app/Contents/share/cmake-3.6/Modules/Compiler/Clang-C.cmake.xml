@@ -1,9 +1,90 @@
 <ru.urururu.cmakeedit.FileNode>
   <nodes>
-    <ru.urururu.cmakeedit.ParseErrorNode>
-      <message>unquoted_argument not supported</message>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>include</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>Compiler/Clang</argument>
+          <start>
+            <offset>8</offset>
+          </start>
+          <end>
+            <offset>21</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments class="java.util.Collections$EmptyList"/>
       <start>
         <offset>0</offset>
+      </start>
+      <end>
+        <offset>22</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>__compiler_clang</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>C</argument>
+          <start>
+            <offset>41</offset>
+          </start>
+          <end>
+            <offset>41</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments class="java.util.Collections$EmptyList" reference="../../ru.urururu.cmakeedit.CommandInvocationNode/comments"/>
+      <start>
+        <offset>24</offset>
+      </start>
+      <end>
+        <offset>42</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>cmake_policy</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>GET</argument>
+          <start>
+            <offset>58</offset>
+          </start>
+          <end>
+            <offset>60</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>CMP0025</argument>
+          <start>
+            <offset>62</offset>
+          </start>
+          <end>
+            <offset>68</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>appleClangPolicy</argument>
+          <start>
+            <offset>70</offset>
+          </start>
+          <end>
+            <offset>85</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments class="java.util.Collections$EmptyList" reference="../../ru.urururu.cmakeedit.CommandInvocationNode/comments"/>
+      <start>
+        <offset>45</offset>
+      </start>
+      <end>
+        <offset>86</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.ParseErrorNode>
+      <message>Unexpected character &apos;)&apos; at 145</message>
+      <start>
+        <offset>88</offset>
       </start>
       <end reference="../start"/>
     </ru.urururu.cmakeedit.ParseErrorNode>

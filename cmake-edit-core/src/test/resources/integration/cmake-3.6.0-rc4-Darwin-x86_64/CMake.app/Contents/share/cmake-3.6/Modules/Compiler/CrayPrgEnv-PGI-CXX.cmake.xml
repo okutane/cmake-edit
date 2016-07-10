@@ -1,9 +1,103 @@
 <ru.urururu.cmakeedit.FileNode>
   <nodes>
-    <ru.urururu.cmakeedit.ParseErrorNode>
-      <message>unquoted_argument not supported</message>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>if</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>__craylinux_crayprgenv_pgi_cxx</argument>
+          <start>
+            <offset>3</offset>
+          </start>
+          <end>
+            <offset>32</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments class="java.util.Collections$EmptyList"/>
       <start>
         <offset>0</offset>
+      </start>
+      <end>
+        <offset>33</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>return</commandName>
+      <arguments/>
+      <comments class="java.util.Collections$EmptyList" reference="../../ru.urururu.cmakeedit.CommandInvocationNode/comments"/>
+      <start>
+        <offset>37</offset>
+      </start>
+      <end>
+        <offset>44</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>endif</commandName>
+      <arguments/>
+      <comments class="java.util.Collections$EmptyList" reference="../../ru.urururu.cmakeedit.CommandInvocationNode/comments"/>
+      <start>
+        <offset>46</offset>
+      </start>
+      <end>
+        <offset>52</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>set</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>__craylinux_crayprgenv_pgi_cxx</argument>
+          <start>
+            <offset>58</offset>
+          </start>
+          <end>
+            <offset>87</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>1</argument>
+          <start>
+            <offset>89</offset>
+          </start>
+          <end>
+            <offset>89</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments class="java.util.Collections$EmptyList" reference="../../ru.urururu.cmakeedit.CommandInvocationNode/comments"/>
+      <start>
+        <offset>54</offset>
+      </start>
+      <end>
+        <offset>90</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>include</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>Compiler/CrayPrgEnv-CXX</argument>
+          <start>
+            <offset>101</offset>
+          </start>
+          <end>
+            <offset>123</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments class="java.util.Collections$EmptyList" reference="../../ru.urururu.cmakeedit.CommandInvocationNode/comments"/>
+      <start>
+        <offset>93</offset>
+      </start>
+      <end>
+        <offset>124</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.ParseErrorNode>
+      <message>quoted_argument not supported</message>
+      <start>
+        <offset>126</offset>
       </start>
       <end reference="../start"/>
     </ru.urururu.cmakeedit.ParseErrorNode>

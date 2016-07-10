@@ -586,10 +586,88 @@
       <start reference="../comments/ru.urururu.cmakeedit.CommentNode/start"/>
       <end reference="../comments/ru.urururu.cmakeedit.CommentNode/end"/>
     </ru.urururu.cmakeedit.FileElementNode>
-    <ru.urururu.cmakeedit.ParseErrorNode>
-      <message>unquoted_argument not supported</message>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>macro</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>RTI_MESSAGE_QUIETLY</argument>
+          <start>
+            <offset>1467</offset>
+          </start>
+          <end>
+            <offset>1485</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>QUIET</argument>
+          <start>
+            <offset>1487</offset>
+          </start>
+          <end>
+            <offset>1491</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>TYPE</argument>
+          <start>
+            <offset>1493</offset>
+          </start>
+          <end>
+            <offset>1496</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>MSG</argument>
+          <start>
+            <offset>1498</offset>
+          </start>
+          <end>
+            <offset>1500</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments class="java.util.Collections$EmptyList"/>
       <start>
         <offset>1461</offset>
+      </start>
+      <end>
+        <offset>1501</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>if</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>NOT</argument>
+          <start>
+            <offset>1508</offset>
+          </start>
+          <end>
+            <offset>1510</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>${QUIET}</argument>
+          <start>
+            <offset>1512</offset>
+          </start>
+          <end>
+            <offset>1519</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments class="java.util.Collections$EmptyList" reference="../../ru.urururu.cmakeedit.CommandInvocationNode/comments"/>
+      <start>
+        <offset>1505</offset>
+      </start>
+      <end>
+        <offset>1520</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.ParseErrorNode>
+      <message>quoted_argument not supported</message>
+      <start>
+        <offset>1522</offset>
       </start>
       <end reference="../start"/>
     </ru.urururu.cmakeedit.ParseErrorNode>

@@ -220,10 +220,31 @@
       <start reference="../comments/ru.urururu.cmakeedit.CommentNode/start"/>
       <end reference="../comments/ru.urururu.cmakeedit.CommentNode/end"/>
     </ru.urururu.cmakeedit.FileElementNode>
-    <ru.urururu.cmakeedit.ParseErrorNode>
-      <message>unquoted_argument not supported</message>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>set</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>CMAKE_BASE_NAME</argument>
+          <start>
+            <offset>828</offset>
+          </start>
+          <end>
+            <offset>842</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments class="java.util.Collections$EmptyList"/>
       <start>
         <offset>824</offset>
+      </start>
+      <end>
+        <offset>843</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.ParseErrorNode>
+      <message>quoted_argument not supported</message>
+      <start>
+        <offset>845</offset>
       </start>
       <end reference="../start"/>
     </ru.urururu.cmakeedit.ParseErrorNode>

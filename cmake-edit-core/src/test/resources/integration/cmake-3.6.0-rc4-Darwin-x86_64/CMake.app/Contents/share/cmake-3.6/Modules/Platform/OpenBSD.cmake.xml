@@ -1,9 +1,184 @@
 <ru.urururu.cmakeedit.FileNode>
   <nodes>
-    <ru.urururu.cmakeedit.ParseErrorNode>
-      <message>unquoted_argument not supported</message>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>include</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>Platform/NetBSD</argument>
+          <start>
+            <offset>8</offset>
+          </start>
+          <end>
+            <offset>22</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments class="java.util.Collections$EmptyList"/>
       <start>
         <offset>0</offset>
+      </start>
+      <end>
+        <offset>23</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.FileElementNode>
+      <comments>
+        <ru.urururu.cmakeedit.CommentNode>
+          <start>
+            <offset>26</offset>
+          </start>
+          <end>
+            <offset>101</offset>
+          </end>
+        </ru.urururu.cmakeedit.CommentNode>
+      </comments>
+      <start reference="../comments/ru.urururu.cmakeedit.CommentNode/start"/>
+      <end reference="../comments/ru.urururu.cmakeedit.CommentNode/end"/>
+    </ru.urururu.cmakeedit.FileElementNode>
+    <ru.urururu.cmakeedit.FileElementNode>
+      <comments>
+        <ru.urururu.cmakeedit.CommentNode>
+          <start>
+            <offset>103</offset>
+          </start>
+          <end>
+            <offset>176</offset>
+          </end>
+        </ru.urururu.cmakeedit.CommentNode>
+      </comments>
+      <start reference="../comments/ru.urururu.cmakeedit.CommentNode/start"/>
+      <end reference="../comments/ru.urururu.cmakeedit.CommentNode/end"/>
+    </ru.urururu.cmakeedit.FileElementNode>
+    <ru.urururu.cmakeedit.FileElementNode>
+      <comments>
+        <ru.urururu.cmakeedit.CommentNode>
+          <start>
+            <offset>178</offset>
+          </start>
+          <end>
+            <offset>250</offset>
+          </end>
+        </ru.urururu.cmakeedit.CommentNode>
+      </comments>
+      <start reference="../comments/ru.urururu.cmakeedit.CommentNode/start"/>
+      <end reference="../comments/ru.urururu.cmakeedit.CommentNode/end"/>
+    </ru.urururu.cmakeedit.FileElementNode>
+    <ru.urururu.cmakeedit.FileElementNode>
+      <comments>
+        <ru.urururu.cmakeedit.CommentNode>
+          <start>
+            <offset>252</offset>
+          </start>
+          <end>
+            <offset>270</offset>
+          </end>
+        </ru.urururu.cmakeedit.CommentNode>
+      </comments>
+      <start reference="../comments/ru.urururu.cmakeedit.CommentNode/start"/>
+      <end reference="../comments/ru.urururu.cmakeedit.CommentNode/end"/>
+    </ru.urururu.cmakeedit.FileElementNode>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>if</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>NOT</argument>
+          <start>
+            <offset>275</offset>
+          </start>
+          <end>
+            <offset>277</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>CMAKE_PLATFORM_RUNTIME_PATH</argument>
+          <start>
+            <offset>279</offset>
+          </start>
+          <end>
+            <offset>305</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments class="java.util.Collections$EmptyList" reference="../../ru.urururu.cmakeedit.CommandInvocationNode/comments"/>
+      <start>
+        <offset>272</offset>
+      </start>
+      <end>
+        <offset>306</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>execute_process</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>COMMAND</argument>
+          <start>
+            <offset>326</offset>
+          </start>
+          <end>
+            <offset>332</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>/sbin/ldconfig</argument>
+          <start>
+            <offset>334</offset>
+          </start>
+          <end>
+            <offset>347</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>-r
+</argument>
+          <start>
+            <offset>349</offset>
+          </start>
+          <end>
+            <offset>351</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>OUTPUT_VARIABLE</argument>
+          <start>
+            <offset>370</offset>
+          </start>
+          <end>
+            <offset>384</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>LDCONFIG_HINTS
+</argument>
+          <start>
+            <offset>386</offset>
+          </start>
+          <end>
+            <offset>400</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>ERROR_QUIET</argument>
+          <start>
+            <offset>419</offset>
+          </start>
+          <end>
+            <offset>429</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments class="java.util.Collections$EmptyList" reference="../../ru.urururu.cmakeedit.CommandInvocationNode/comments"/>
+      <start>
+        <offset>310</offset>
+      </start>
+      <end>
+        <offset>430</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.ParseErrorNode>
+      <message>quoted_argument not supported</message>
+      <start>
+        <offset>432</offset>
       </start>
       <end reference="../start"/>
     </ru.urururu.cmakeedit.ParseErrorNode>

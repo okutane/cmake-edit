@@ -164,10 +164,96 @@
       <start reference="../comments/ru.urururu.cmakeedit.CommentNode/start"/>
       <end reference="../comments/ru.urururu.cmakeedit.CommentNode/end"/>
     </ru.urururu.cmakeedit.FileElementNode>
-    <ru.urururu.cmakeedit.ParseErrorNode>
-      <message>unquoted_argument not supported</message>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>include</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>Compiler/GNU</argument>
+          <start>
+            <offset>616</offset>
+          </start>
+          <end>
+            <offset>627</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments class="java.util.Collections$EmptyList"/>
       <start>
         <offset>608</offset>
+      </start>
+      <end>
+        <offset>628</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>macro</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>__compiler_qcc</argument>
+          <start>
+            <offset>637</offset>
+          </start>
+          <end>
+            <offset>650</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>lang</argument>
+          <start>
+            <offset>652</offset>
+          </start>
+          <end>
+            <offset>655</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments class="java.util.Collections$EmptyList" reference="../../ru.urururu.cmakeedit.CommandInvocationNode/comments"/>
+      <start>
+        <offset>631</offset>
+      </start>
+      <end>
+        <offset>656</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>__compiler_gnu</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>${lang}</argument>
+          <start>
+            <offset>675</offset>
+          </start>
+          <end>
+            <offset>681</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments class="java.util.Collections$EmptyList" reference="../../ru.urururu.cmakeedit.CommandInvocationNode/comments"/>
+      <start>
+        <offset>660</offset>
+      </start>
+      <end>
+        <offset>682</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.FileElementNode>
+      <comments>
+        <ru.urururu.cmakeedit.CommentNode>
+          <start>
+            <offset>687</offset>
+          </start>
+          <end>
+            <offset>767</offset>
+          </end>
+        </ru.urururu.cmakeedit.CommentNode>
+      </comments>
+      <start reference="../comments/ru.urururu.cmakeedit.CommentNode/start"/>
+      <end reference="../comments/ru.urururu.cmakeedit.CommentNode/end"/>
+    </ru.urururu.cmakeedit.FileElementNode>
+    <ru.urururu.cmakeedit.ParseErrorNode>
+      <message>quoted_argument not supported</message>
+      <start>
+        <offset>769</offset>
       </start>
       <end reference="../start"/>
     </ru.urururu.cmakeedit.ParseErrorNode>

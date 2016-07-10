@@ -412,10 +412,134 @@
       <start reference="../comments/ru.urururu.cmakeedit.CommentNode/start"/>
       <end reference="../comments/ru.urururu.cmakeedit.CommentNode/end"/>
     </ru.urururu.cmakeedit.FileElementNode>
-    <ru.urururu.cmakeedit.ParseErrorNode>
-      <message>unquoted_argument not supported</message>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>include</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>${CMAKE_CURRENT_LIST_DIR}/FindCygwin.cmake</argument>
+          <start>
+            <offset>969</offset>
+          </start>
+          <end>
+            <offset>1010</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments class="java.util.Collections$EmptyList"/>
       <start>
         <offset>961</offset>
+      </start>
+      <end>
+        <offset>1011</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>find_program</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>GNUPLOT_EXECUTABLE
+</argument>
+          <start>
+            <offset>1027</offset>
+          </start>
+          <end>
+            <offset>1045</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>NAMES
+</argument>
+          <start>
+            <offset>1048</offset>
+          </start>
+          <end>
+            <offset>1053</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>gnuplot
+</argument>
+          <start>
+            <offset>1056</offset>
+          </start>
+          <end>
+            <offset>1063</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>pgnuplot
+</argument>
+          <start>
+            <offset>1066</offset>
+          </start>
+          <end>
+            <offset>1074</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>wgnupl32
+</argument>
+          <start>
+            <offset>1077</offset>
+          </start>
+          <end>
+            <offset>1085</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>PATHS
+</argument>
+          <start>
+            <offset>1088</offset>
+          </start>
+          <end>
+            <offset>1093</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>${CYGWIN_INSTALL_PATH}/bin
+</argument>
+          <start>
+            <offset>1096</offset>
+          </start>
+          <end>
+            <offset>1122</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments class="java.util.Collections$EmptyList" reference="../../ru.urururu.cmakeedit.CommandInvocationNode/comments"/>
+      <start>
+        <offset>1014</offset>
+      </start>
+      <end>
+        <offset>1123</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>if</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>GNUPLOT_EXECUTABLE</argument>
+          <start>
+            <offset>1130</offset>
+          </start>
+          <end>
+            <offset>1147</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments class="java.util.Collections$EmptyList" reference="../../ru.urururu.cmakeedit.CommandInvocationNode/comments"/>
+      <start>
+        <offset>1126</offset>
+      </start>
+      <end>
+        <offset>1148</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.ParseErrorNode>
+      <message>quoted_argument not supported</message>
+      <start>
+        <offset>1150</offset>
       </start>
       <end reference="../start"/>
     </ru.urururu.cmakeedit.ParseErrorNode>

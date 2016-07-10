@@ -698,10 +698,187 @@
       <start reference="../comments/ru.urururu.cmakeedit.CommentNode/start"/>
       <end reference="../comments/ru.urururu.cmakeedit.CommentNode/end"/>
     </ru.urururu.cmakeedit.FileElementNode>
-    <ru.urururu.cmakeedit.ParseErrorNode>
-      <message>unquoted_argument not supported</message>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>include</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>${CMAKE_CURRENT_LIST_DIR}/FindPerl.cmake</argument>
+          <start>
+            <offset>1865</offset>
+          </start>
+          <end>
+            <offset>1904</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments class="java.util.Collections$EmptyList"/>
       <start>
         <offset>1857</offset>
+      </start>
+      <end>
+        <offset>1905</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>if</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>PERL_EXECUTABLE</argument>
+          <start>
+            <offset>1912</offset>
+          </start>
+          <end>
+            <offset>1926</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments class="java.util.Collections$EmptyList" reference="../../ru.urururu.cmakeedit.CommandInvocationNode/comments"/>
+      <start>
+        <offset>1908</offset>
+      </start>
+      <end>
+        <offset>1927</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.FileElementNode>
+      <comments>
+        <ru.urururu.cmakeedit.CommentNode>
+          <start>
+            <offset>1931</offset>
+          </start>
+          <end>
+            <offset>1945</offset>
+          </end>
+        </ru.urururu.cmakeedit.CommentNode>
+      </comments>
+      <start reference="../comments/ru.urururu.cmakeedit.CommentNode/start"/>
+      <end reference="../comments/ru.urururu.cmakeedit.CommentNode/end"/>
+    </ru.urururu.cmakeedit.FileElementNode>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>execute_process</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>
+</argument>
+          <start>
+            <offset>1965</offset>
+          </start>
+          <end>
+            <offset>1965</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>COMMAND
+</argument>
+          <start>
+            <offset>1970</offset>
+          </start>
+          <end>
+            <offset>1977</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>${PERL_EXECUTABLE}</argument>
+          <start>
+            <offset>1984</offset>
+          </start>
+          <end>
+            <offset>2001</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>-V:prefix
+</argument>
+          <start>
+            <offset>2003</offset>
+          </start>
+          <end>
+            <offset>2012</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>OUTPUT_VARIABLE
+</argument>
+          <start>
+            <offset>2019</offset>
+          </start>
+          <end>
+            <offset>2034</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>PERL_PREFIX_OUTPUT_VARIABLE
+</argument>
+          <start>
+            <offset>2043</offset>
+          </start>
+          <end>
+            <offset>2070</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>RESULT_VARIABLE
+</argument>
+          <start>
+            <offset>2077</offset>
+          </start>
+          <end>
+            <offset>2092</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>PERL_PREFIX_RESULT_VARIABLE
+</argument>
+          <start>
+            <offset>2101</offset>
+          </start>
+          <end>
+            <offset>2128</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments class="java.util.Collections$EmptyList" reference="../../ru.urururu.cmakeedit.CommandInvocationNode/comments"/>
+      <start>
+        <offset>1949</offset>
+      </start>
+      <end>
+        <offset>2131</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>if</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>NOT</argument>
+          <start>
+            <offset>2140</offset>
+          </start>
+          <end>
+            <offset>2142</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>PERL_PREFIX_RESULT_VARIABLE</argument>
+          <start>
+            <offset>2144</offset>
+          </start>
+          <end>
+            <offset>2170</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments class="java.util.Collections$EmptyList" reference="../../ru.urururu.cmakeedit.CommandInvocationNode/comments"/>
+      <start>
+        <offset>2136</offset>
+      </start>
+      <end>
+        <offset>2171</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.ParseErrorNode>
+      <message>quoted_argument not supported</message>
+      <start>
+        <offset>2173</offset>
       </start>
       <end reference="../start"/>
     </ru.urururu.cmakeedit.ParseErrorNode>

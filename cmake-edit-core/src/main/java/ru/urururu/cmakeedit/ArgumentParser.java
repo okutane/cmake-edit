@@ -58,7 +58,29 @@ public abstract class ArgumentParser {
     private static final ArgumentParser UNQUOTED = new ArgumentParser("unquoted_argument") {
         @Override
         Node parseInternal(ParseContext ctx) throws ParseException {
-            return super.parseInternal(ctx);
+            SourceRef start = ctx.position();
+            SourceRef end;
+            StringBuilder sb = new StringBuilder();
+            do {
+                end = ctx.position();
+                sb.append(ctx.peek());
+                ctx.advance();
+
+                if (ctx.peek() == '\\') {
+                    throw new ParseException(ctx, "escape_sequence not supported");
+                }
+            } while (!ctx.reachedEnd() && isAllowed(ctx.peek()));
+            return new ArgumentNode(sb.toString(), start, end);
+        }
+
+        private boolean isAllowed(char c) {
+            if (c == ' ' || c == '\t') {
+                return false;
+            }
+            if (c == '(' || c == ')' || c == '#' || c == '"') {
+                return false;
+            }
+            return true;
         }
     };
 }

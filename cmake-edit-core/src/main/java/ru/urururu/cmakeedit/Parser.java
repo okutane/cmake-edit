@@ -114,6 +114,7 @@ public class Parser {
         if (c != '(') {
             throw new UnexpectedCharacterException(ctx);
         }
+        ctx.advance();
 
         List<Node> arguments = new ArrayList<>();
 

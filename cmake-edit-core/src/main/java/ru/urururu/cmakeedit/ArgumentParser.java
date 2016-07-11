@@ -36,10 +36,53 @@ public abstract class ArgumentParser {
         }
     }
 
+    /**
+     * bracket_argument ::=  bracket_open bracket_content bracket_close
+     * bracket_open     ::=  '[' '='{len} '['
+     * bracket_content  ::=  <any text not containing a bracket_close of the same {len} as the bracket_open>
+     * bracket_close    ::=  ']' '='{len} ']'
+     */
     private static final ArgumentParser BRACKET = new ArgumentParser("bracket_argument") {
         @Override
         Node parseInternal(ParseContext ctx) throws ParseException {
-            return super.parseInternal(ctx);
+            SourceRef start = ctx.position();
+
+            if (!ctx.reachedEnd() && ctx.peek() == '[') {
+                ctx.advance();
+                int len = 0;
+                while (!ctx.reachedEnd() && ctx.peek() == '=') {
+                    len++;
+                    ctx.advance();
+                }
+                if (!ctx.reachedEnd() && ctx.peek() == '[') {
+                    ctx.advance();
+                    return parseBracketComment(ctx, start, len);
+                }
+            }
+            throw new UnexpectedCharacterException(ctx);
+        }
+
+        private ArgumentNode parseBracketComment(ParseContext ctx, SourceRef start, int len) throws ParseException {
+            boolean firstBraceSeen = false;
+            int closeLen = 0;
+            while (!ctx.reachedEnd()) {
+                if (ctx.peek() == ']') {
+                    if (firstBraceSeen && closeLen == len) {
+                        SourceRef end = ctx.position();
+                        ctx.advance();
+                        return new ArgumentNode("", start, end);
+                    }
+                    firstBraceSeen = true;
+                    closeLen = 0;
+                } else if (ctx.peek() == '=') {
+                    closeLen++;
+                } else {
+                    firstBraceSeen = false;
+                }
+
+                ctx.advance();
+            }
+            throw new ParseException(ctx, "Not expected end of content");
         }
     };
 

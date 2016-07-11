@@ -156,6 +156,8 @@ public class Parser {
      * newline      ::=  <match '\n'>
      */
     private static void skipNewline(ParseContext ctx) throws UnexpectedCharacterException {
+        skipSpaces(ctx);
+
         if (ctx.reachedEnd()) {
             return;
         }

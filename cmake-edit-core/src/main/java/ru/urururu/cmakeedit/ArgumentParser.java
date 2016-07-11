@@ -43,10 +43,63 @@ public abstract class ArgumentParser {
         }
     };
 
+    /**
+     * quoted_argument     ::=  '"' quoted_element* '"'
+     * quoted_element      ::=  <any character except '\' or '"'> | escape_sequence | quoted_continuation
+     * quoted_continuation ::=  '\' newline
+     */
     private static final ArgumentParser QUOTED = new ArgumentParser("quoted_argument") {
         @Override
         Node parseInternal(ParseContext ctx) throws ParseException {
-            return super.parseInternal(ctx);
+            SourceRef start = ctx.position();
+            SourceRef end;
+            StringBuilder sb = new StringBuilder();
+            char prev = 0;
+
+            while (!ctx.reachedEnd()) {
+                end = ctx.position();
+                char cur = ctx.peek();
+                if (prev == '\\') {
+                    switch (cur) {
+                        case '(':
+                        case ')':
+                        case '#':
+                        case '"':
+                        case ' ':
+                        case '\\':
+                        case '$':
+                        case '@':
+                        case '^':
+                        case ';':
+                            sb.append(cur);
+                            break;
+                        case 't':
+                            sb.append('\t');
+                            break;
+                        case 'r':
+                            sb.append('\r');
+                            break;
+                        case 'n':
+                            sb.append('\n');
+                            break;
+                        case '\n':
+                            // line continuation
+                            break;
+                        default:
+                            throw new UnexpectedCharacterException(ctx);
+                    }
+                    prev = 0;
+                } else if (cur == '"')  {
+                    ctx.advance();
+                    return new ArgumentNode(sb.toString(), start, end);
+                } else {
+                    sb.append(cur);
+                    prev = cur;
+                }
+                ctx.advance();
+            }
+
+            throw new ParseException(ctx, "Unexpected end of source");
         }
     };
 

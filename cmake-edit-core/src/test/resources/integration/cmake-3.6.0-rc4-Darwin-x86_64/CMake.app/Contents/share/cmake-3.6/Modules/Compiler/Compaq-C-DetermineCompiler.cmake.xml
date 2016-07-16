@@ -1,11 +1,68 @@
 <ru.urururu.cmakeedit.FileNode>
   <nodes>
-    <ru.urururu.cmakeedit.ParseErrorNode>
-      <message>Unexpected character &apos;&quot;&apos;</message>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>set</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>_compiler_id_pp_test</argument>
+          <start>
+            <offset>5</offset>
+          </start>
+          <end>
+            <offset>24</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>defined(__DECC)</argument>
+          <start>
+            <offset>26</offset>
+          </start>
+          <end>
+            <offset>42</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments/>
       <start>
         <offset>1</offset>
       </start>
-      <end reference="../start"/>
-    </ru.urururu.cmakeedit.ParseErrorNode>
+      <end>
+        <offset>43</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>set</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>_compiler_id_version_compute</argument>
+          <start>
+            <offset>50</offset>
+          </start>
+          <end>
+            <offset>77</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>
+  /* __DECC_VER = VVRRTPPPP */
+# define @PREFIX@COMPILER_VERSION_MAJOR @MACRO_DEC@(__DECC_VER/10000000)
+# define @PREFIX@COMPILER_VERSION_MINOR @MACRO_DEC@(__DECC_VER/100000  % 100)
+# define @PREFIX@COMPILER_VERSION_PATCH @MACRO_DEC@(__DECC_VER         % 10000)</argument>
+          <start>
+            <offset>79</offset>
+          </start>
+          <end>
+            <offset>342</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments/>
+      <start>
+        <offset>46</offset>
+      </start>
+      <end>
+        <offset>343</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
   </nodes>
 </ru.urururu.cmakeedit.FileNode>

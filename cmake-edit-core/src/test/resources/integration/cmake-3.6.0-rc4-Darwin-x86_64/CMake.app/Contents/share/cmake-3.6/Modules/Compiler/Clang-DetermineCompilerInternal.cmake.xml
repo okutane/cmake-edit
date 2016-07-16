@@ -13,126 +13,63 @@
           </end>
         </ru.urururu.cmakeedit.ArgumentNode>
         <ru.urururu.cmakeedit.ArgumentNode>
-          <argument></argument>
-          <start>
-            <offset>34</offset>
-          </start>
-          <end>
-            <offset>34</offset>
-          </end>
-        </ru.urururu.cmakeedit.ArgumentNode>
-        <ru.urururu.cmakeedit.ArgumentNode>
           <argument>
-</argument>
+# define @PREFIX@COMPILER_VERSION_MAJOR @MACRO_DEC@(__clang_major__)
+# define @PREFIX@COMPILER_VERSION_MINOR @MACRO_DEC@(__clang_minor__)
+# define @PREFIX@COMPILER_VERSION_PATCH @MACRO_DEC@(__clang_patchlevel__)
+# if defined(_MSC_VER)
+   /* _MSC_VER = VVRR */
+#  define @PREFIX@SIMULATE_VERSION_MAJOR @MACRO_DEC@(_MSC_VER / 100)
+#  define @PREFIX@SIMULATE_VERSION_MINOR @MACRO_DEC@(_MSC_VER % 100)
+# endif</argument>
           <start>
-            <offset>35</offset>
+            <offset>34</offset>
           </start>
           <end>
-            <offset>35</offset>
-          </end>
-        </ru.urururu.cmakeedit.ArgumentNode>
-        <ru.urururu.cmakeedit.ArgumentNode>
-          <argument>#</argument>
-          <start>
-            <offset>36</offset>
-          </start>
-          <end>
-            <offset>36</offset>
-          </end>
-        </ru.urururu.cmakeedit.ArgumentNode>
-        <ru.urururu.cmakeedit.ArgumentNode>
-          <argument>define</argument>
-          <start>
-            <offset>38</offset>
-          </start>
-          <end>
-            <offset>43</offset>
-          </end>
-        </ru.urururu.cmakeedit.ArgumentNode>
-        <ru.urururu.cmakeedit.ArgumentNode>
-          <argument>@PREFIX@COMPILER_VERSION_MAJOR</argument>
-          <start>
-            <offset>45</offset>
-          </start>
-          <end>
-            <offset>74</offset>
-          </end>
-        </ru.urururu.cmakeedit.ArgumentNode>
-        <ru.urururu.cmakeedit.ArgumentNode>
-          <argument>@MACRO_DEC@</argument>
-          <start>
-            <offset>76</offset>
-          </start>
-          <end>
-            <offset>86</offset>
-          </end>
-        </ru.urururu.cmakeedit.ArgumentNode>
-        <ru.urururu.cmakeedit.ArgumentNode>
-          <argument>(__clang_major__</argument>
-          <start>
-            <offset>87</offset>
-          </start>
-          <end>
-            <offset>102</offset>
+            <offset>441</offset>
           </end>
         </ru.urururu.cmakeedit.ArgumentNode>
       </arguments>
-      <comments class="java.util.Collections$EmptyList"/>
+      <comments/>
       <start>
         <offset>1</offset>
       </start>
       <end>
-        <offset>103</offset>
+        <offset>442</offset>
       </end>
     </ru.urururu.cmakeedit.CommandInvocationNode>
-    <ru.urururu.cmakeedit.FileElementNode>
-      <comments>
-        <ru.urururu.cmakeedit.CommentNode>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>set</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>_compiler_id_simulate</argument>
           <start>
-            <offset>105</offset>
+            <offset>449</offset>
           </start>
           <end>
-            <offset>172</offset>
+            <offset>469</offset>
           </end>
-        </ru.urururu.cmakeedit.CommentNode>
-      </comments>
-      <start reference="../comments/ru.urururu.cmakeedit.CommentNode/start"/>
-      <end reference="../comments/ru.urururu.cmakeedit.CommentNode/end"/>
-    </ru.urururu.cmakeedit.FileElementNode>
-    <ru.urururu.cmakeedit.FileElementNode>
-      <comments>
-        <ru.urururu.cmakeedit.CommentNode>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>
+# if defined(_MSC_VER)
+#  define @PREFIX@SIMULATE_ID \&quot;MSVC\&quot;
+# endif</argument>
           <start>
-            <offset>174</offset>
+            <offset>471</offset>
           </start>
           <end>
-            <offset>246</offset>
+            <offset>542</offset>
           </end>
-        </ru.urururu.cmakeedit.CommentNode>
-      </comments>
-      <start reference="../comments/ru.urururu.cmakeedit.CommentNode/start"/>
-      <end reference="../comments/ru.urururu.cmakeedit.CommentNode/end"/>
-    </ru.urururu.cmakeedit.FileElementNode>
-    <ru.urururu.cmakeedit.FileElementNode>
-      <comments>
-        <ru.urururu.cmakeedit.CommentNode>
-          <start>
-            <offset>248</offset>
-          </start>
-          <end>
-            <offset>269</offset>
-          </end>
-        </ru.urururu.cmakeedit.CommentNode>
-      </comments>
-      <start reference="../comments/ru.urururu.cmakeedit.CommentNode/start"/>
-      <end reference="../comments/ru.urururu.cmakeedit.CommentNode/end"/>
-    </ru.urururu.cmakeedit.FileElementNode>
-    <ru.urururu.cmakeedit.ParseErrorNode>
-      <message>Unexpected character &apos;/&apos;</message>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments/>
       <start>
-        <offset>271</offset>
+        <offset>445</offset>
       </start>
-      <end reference="../start"/>
-    </ru.urururu.cmakeedit.ParseErrorNode>
+      <end>
+        <offset>543</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
   </nodes>
 </ru.urururu.cmakeedit.FileNode>

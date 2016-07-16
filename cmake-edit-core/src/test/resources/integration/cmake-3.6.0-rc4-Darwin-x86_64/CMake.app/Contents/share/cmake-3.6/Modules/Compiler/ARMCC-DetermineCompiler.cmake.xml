@@ -14,12 +14,77 @@
       <start reference="../comments/ru.urururu.cmakeedit.CommentNode/start"/>
       <end reference="../comments/ru.urururu.cmakeedit.CommentNode/end"/>
     </ru.urururu.cmakeedit.FileElementNode>
-    <ru.urururu.cmakeedit.ParseErrorNode>
-      <message>Unexpected character &apos;&quot;&apos;</message>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>set</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>_compiler_id_pp_test</argument>
+          <start>
+            <offset>22</offset>
+          </start>
+          <end>
+            <offset>41</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>defined(__ARMCC_VERSION)</argument>
+          <start>
+            <offset>43</offset>
+          </start>
+          <end>
+            <offset>68</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments/>
       <start>
         <offset>18</offset>
       </start>
-      <end reference="../start"/>
-    </ru.urururu.cmakeedit.ParseErrorNode>
+      <end>
+        <offset>69</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>set</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>_compiler_id_version_compute</argument>
+          <start>
+            <offset>76</offset>
+          </start>
+          <end>
+            <offset>103</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>
+#if __ARMCC_VERSION &gt;= 1000000
+  /* __ARMCC_VERSION = VRRPPPP */
+  # define @PREFIX@COMPILER_VERSION_MAJOR @MACRO_DEC@(__ARMCC_VERSION/1000000)
+  # define @PREFIX@COMPILER_VERSION_MINOR @MACRO_DEC@(__ARMCC_VERSION/10000 % 100)
+  # define @PREFIX@COMPILER_VERSION_PATCH @MACRO_DEC@(__ARMCC_VERSION     % 10000)
+#else
+  /* __ARMCC_VERSION = VRPPPP */
+  # define @PREFIX@COMPILER_VERSION_MAJOR @MACRO_DEC@(__ARMCC_VERSION/100000)
+  # define @PREFIX@COMPILER_VERSION_MINOR @MACRO_DEC@(__ARMCC_VERSION/10000 % 10)
+  # define @PREFIX@COMPILER_VERSION_PATCH @MACRO_DEC@(__ARMCC_VERSION    % 10000)
+#endif
+</argument>
+          <start>
+            <offset>105</offset>
+          </start>
+          <end>
+            <offset>705</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments/>
+      <start>
+        <offset>72</offset>
+      </start>
+      <end>
+        <offset>706</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
   </nodes>
 </ru.urururu.cmakeedit.FileNode>

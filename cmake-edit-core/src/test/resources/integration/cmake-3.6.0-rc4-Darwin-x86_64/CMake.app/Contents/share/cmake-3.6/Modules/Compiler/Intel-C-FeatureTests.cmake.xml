@@ -74,27 +74,9 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.ArgumentNode>
-          <argument></argument>
-          <start>
-            <offset>366</offset>
-          </start>
-          <end>
-            <offset>366</offset>
-          </end>
-        </ru.urururu.cmakeedit.ArgumentNode>
-        <ru.urururu.cmakeedit.ArgumentNode>
           <argument>x${CMAKE_C_SIMULATE_ID}</argument>
           <start>
-            <offset>367</offset>
-          </start>
-          <end>
-            <offset>389</offset>
-          </end>
-        </ru.urururu.cmakeedit.ArgumentNode>
-        <ru.urururu.cmakeedit.ArgumentNode>
-          <argument></argument>
-          <start>
-            <offset>390</offset>
+            <offset>366</offset>
           </start>
           <end>
             <offset>390</offset>
@@ -110,34 +92,16 @@
           </end>
         </ru.urururu.cmakeedit.ArgumentNode>
         <ru.urururu.cmakeedit.ArgumentNode>
-          <argument></argument>
-          <start>
-            <offset>401</offset>
-          </start>
-          <end>
-            <offset>401</offset>
-          </end>
-        </ru.urururu.cmakeedit.ArgumentNode>
-        <ru.urururu.cmakeedit.ArgumentNode>
           <argument>xMSVC</argument>
           <start>
-            <offset>402</offset>
-          </start>
-          <end>
-            <offset>406</offset>
-          </end>
-        </ru.urururu.cmakeedit.ArgumentNode>
-        <ru.urururu.cmakeedit.ArgumentNode>
-          <argument></argument>
-          <start>
-            <offset>407</offset>
+            <offset>401</offset>
           </start>
           <end>
             <offset>407</offset>
           </end>
         </ru.urururu.cmakeedit.ArgumentNode>
       </arguments>
-      <comments class="java.util.Collections$EmptyList"/>
+      <comments/>
       <start>
         <offset>363</offset>
       </start>
@@ -148,7 +112,7 @@
     <ru.urururu.cmakeedit.CommandInvocationNode>
       <commandName>return</commandName>
       <arguments/>
-      <comments class="java.util.Collections$EmptyList" reference="../../ru.urururu.cmakeedit.CommandInvocationNode/comments"/>
+      <comments/>
       <start>
         <offset>412</offset>
       </start>
@@ -159,7 +123,7 @@
     <ru.urururu.cmakeedit.CommandInvocationNode>
       <commandName>endif</commandName>
       <arguments/>
-      <comments class="java.util.Collections$EmptyList" reference="../../ru.urururu.cmakeedit.CommandInvocationNode/comments"/>
+      <comments/>
       <start>
         <offset>421</offset>
       </start>
@@ -167,12 +131,271 @@
         <offset>427</offset>
       </end>
     </ru.urururu.cmakeedit.CommandInvocationNode>
-    <ru.urururu.cmakeedit.ParseErrorNode>
-      <message>Unexpected character &apos;&amp;&apos;</message>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>set</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>DETECT_C99</argument>
+          <start>
+            <offset>434</offset>
+          </start>
+          <end>
+            <offset>443</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>defined(__STDC_VERSION__) &amp;&amp; __STDC_VERSION__ &gt;= 199901L</argument>
+          <start>
+            <offset>445</offset>
+          </start>
+          <end>
+            <offset>502</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments/>
       <start>
         <offset>430</offset>
       </start>
-      <end reference="../start"/>
-    </ru.urururu.cmakeedit.ParseErrorNode>
+      <end>
+        <offset>503</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.FileElementNode>
+      <comments>
+        <ru.urururu.cmakeedit.CommentNode>
+          <start>
+            <offset>506</offset>
+          </start>
+          <end>
+            <offset>569</offset>
+          </end>
+        </ru.urururu.cmakeedit.CommentNode>
+      </comments>
+      <start reference="../comments/ru.urururu.cmakeedit.CommentNode/start"/>
+      <end reference="../comments/ru.urururu.cmakeedit.CommentNode/end"/>
+    </ru.urururu.cmakeedit.FileElementNode>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>set</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>_cmake_feature_test_c_static_assert</argument>
+          <start>
+            <offset>575</offset>
+          </start>
+          <end>
+            <offset>609</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>(__INTEL_COMPILER &gt; 1500 || (__INTEL_COMPILER == 1500 &amp;&amp; __INTEL_COMPILER_UPDATE &gt; 1) ) &amp;&amp; ${DETECT_C99}</argument>
+          <start>
+            <offset>611</offset>
+          </start>
+          <end>
+            <offset>716</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments/>
+      <start>
+        <offset>571</offset>
+      </start>
+      <end>
+        <offset>717</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>set</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>_cmake_oldestSupported</argument>
+          <start>
+            <offset>724</offset>
+          </start>
+          <end>
+            <offset>745</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>__INTEL_COMPILER &gt;= 1110</argument>
+          <start>
+            <offset>747</offset>
+          </start>
+          <end>
+            <offset>772</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments/>
+      <start>
+        <offset>720</offset>
+      </start>
+      <end>
+        <offset>773</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>set</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>Intel_C99</argument>
+          <start>
+            <offset>779</offset>
+          </start>
+          <end>
+            <offset>787</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>${_cmake_oldestSupported} &amp;&amp; ${DETECT_C99}</argument>
+          <start>
+            <offset>789</offset>
+          </start>
+          <end>
+            <offset>832</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments/>
+      <start>
+        <offset>775</offset>
+      </start>
+      <end>
+        <offset>833</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>set</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>_cmake_feature_test_c_restrict</argument>
+          <start>
+            <offset>839</offset>
+          </start>
+          <end>
+            <offset>868</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>${Intel_C99}</argument>
+          <start>
+            <offset>870</offset>
+          </start>
+          <end>
+            <offset>883</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments/>
+      <start>
+        <offset>835</offset>
+      </start>
+      <end>
+        <offset>884</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>set</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>_cmake_feature_test_c_variadic_macros</argument>
+          <start>
+            <offset>890</offset>
+          </start>
+          <end>
+            <offset>926</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>${Intel_C99}</argument>
+          <start>
+            <offset>928</offset>
+          </start>
+          <end>
+            <offset>941</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments/>
+      <start>
+        <offset>886</offset>
+      </start>
+      <end>
+        <offset>942</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>set</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>_cmake_feature_test_c_function_prototypes</argument>
+          <start>
+            <offset>948</offset>
+          </start>
+          <end>
+            <offset>988</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>${_cmake_oldestSupported}</argument>
+          <start>
+            <offset>990</offset>
+          </start>
+          <end>
+            <offset>1016</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments/>
+      <start>
+        <offset>944</offset>
+      </start>
+      <end>
+        <offset>1017</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>unset</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>Intel_C99</argument>
+          <start>
+            <offset>1025</offset>
+          </start>
+          <end>
+            <offset>1033</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments/>
+      <start>
+        <offset>1019</offset>
+      </start>
+      <end>
+        <offset>1034</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>unset</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>DETECT_C99</argument>
+          <start>
+            <offset>1043</offset>
+          </start>
+          <end>
+            <offset>1052</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments/>
+      <start>
+        <offset>1037</offset>
+      </start>
+      <end>
+        <offset>1053</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
   </nodes>
 </ru.urururu.cmakeedit.FileNode>

@@ -1,11 +1,55 @@
 <ru.urururu.cmakeedit.FileNode>
   <nodes>
-    <ru.urururu.cmakeedit.ParseErrorNode>
-      <message>Unexpected character &apos;&amp;&apos;</message>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>set</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>_compiler_id_pp_test</argument>
+          <start>
+            <offset>5</offset>
+          </start>
+          <end>
+            <offset>24</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>defined(__IBMCPP__) &amp;&amp; !defined(__COMPILER_VER__) &amp;&amp; __IBMCPP__ &gt;= 800</argument>
+          <start>
+            <offset>26</offset>
+          </start>
+          <end>
+            <offset>97</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments/>
       <start>
         <offset>1</offset>
       </start>
-      <end reference="../start"/>
-    </ru.urururu.cmakeedit.ParseErrorNode>
+      <end>
+        <offset>98</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>include</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>${CMAKE_CURRENT_LIST_DIR}/IBMCPP-CXX-DetermineVersionInternal.cmake</argument>
+          <start>
+            <offset>109</offset>
+          </start>
+          <end>
+            <offset>177</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments/>
+      <start>
+        <offset>101</offset>
+      </start>
+      <end>
+        <offset>178</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
   </nodes>
 </ru.urururu.cmakeedit.FileNode>

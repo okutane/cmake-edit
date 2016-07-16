@@ -2,30 +2,74 @@ package ru.urururu.cmakeedit;
 
 import com.codahale.metrics.Timer;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by okutane on 09/07/16.
  */
-public abstract class ArgumentParser {
+abstract class ArgumentParser {
     private String name;
 
     private ArgumentParser(String name) {
         this.name = name;
     }
 
-    private Node parseExternal(ParseContext ctx) throws ParseException {
+    private ArgumentNode parseExternal(ParseContext ctx) throws ParseException {
         try (Timer.Context timer = ctx.getRegistry().timer(name + ".parse").time()) {
             return parseInternal(ctx);
         }
     }
 
-    Node parseInternal(ParseContext ctx) throws ParseException {
+    ArgumentNode parseInternal(ParseContext ctx) throws ParseException {
         throw new ParseException(ctx, name + " not supported");
+    }
+
+    /**
+     * arguments           ::=  argument? separated_arguments*
+     * separated_arguments ::=  separation+ argument? | separation* '(' arguments ')'
+     * separation          ::=  space | line_ending
+     */
+    static List<ArgumentNode> parseArguments(ParseContext ctx, List<CommentNode> comments) throws ParseException {
+        char c = ctx.peek();
+        if (c != '(') {
+            throw new UnexpectedCharacterException(ctx);
+        }
+        ctx.advance();
+
+        List<ArgumentNode> arguments = new ArrayList<>();
+
+        do {
+            Parser.skipSpaces(ctx);
+
+            if (ctx.reachedEnd()) {
+                throw new ParseException(ctx, "Unexpected end of source");
+            }
+            c = ctx.peek();
+
+            if (c == ')') {
+                return arguments;
+            } else if (c == '#') {
+                comments.add(CommentsDetector.parseComment(ctx));
+            } else if (c == '(') {
+                List<ArgumentNode> nested = parseArguments(ctx, comments);
+
+                if (nested.isEmpty()) {
+                    arguments.add(ArgumentNode.EMPTY);
+                } else {
+                    arguments.add(new ArgumentNode(nested, nested.get(0).getStart(), nested.get(nested.size() - 1).getEnd()));
+                }
+                ctx.advance();
+            } else {
+                arguments.add(ArgumentParser.parse(ctx));
+            }
+        } while (true);
     }
 
     /**
      * argument ::=  bracket_argument | quoted_argument | unquoted_argument
      */
-    public static Node parse(ParseContext ctx) throws ParseException {
+    public static ArgumentNode parse(ParseContext ctx) throws ParseException {
         char c = ctx.peek();
         if (c == '[') {
             return BRACKET.parseExternal(ctx);
@@ -44,7 +88,7 @@ public abstract class ArgumentParser {
      */
     private static final ArgumentParser BRACKET = new ArgumentParser("bracket_argument") {
         @Override
-        Node parseInternal(ParseContext ctx) throws ParseException {
+        ArgumentNode parseInternal(ParseContext ctx) throws ParseException {
             SourceRef start = ctx.position();
 
             if (!ctx.reachedEnd() && ctx.peek() == '[') {
@@ -93,11 +137,13 @@ public abstract class ArgumentParser {
      */
     private static final ArgumentParser QUOTED = new ArgumentParser("quoted_argument") {
         @Override
-        Node parseInternal(ParseContext ctx) throws ParseException {
+        ArgumentNode parseInternal(ParseContext ctx) throws ParseException {
             SourceRef start = ctx.position();
             SourceRef end;
             StringBuilder sb = new StringBuilder();
             char prev = 0;
+
+            ctx.advance();
 
             while (!ctx.reachedEnd()) {
                 end = ctx.position();
@@ -153,30 +199,55 @@ public abstract class ArgumentParser {
      */
     private static final ArgumentParser UNQUOTED = new ArgumentParser("unquoted_argument") {
         @Override
-        Node parseInternal(ParseContext ctx) throws ParseException {
+        ArgumentNode parseInternal(ParseContext ctx) throws ParseException {
             SourceRef start = ctx.position();
-            SourceRef end;
+            SourceRef end = start;
             StringBuilder sb = new StringBuilder();
-            do {
-                end = ctx.position();
-                sb.append(ctx.peek());
-                ctx.advance();
+            char prev = 0;
 
-                if (ctx.peek() == '\\') {
-                    throw new ParseException(ctx, "escape_sequence not supported");
+            while (!ctx.reachedEnd()) {
+                char cur = ctx.peek();
+                if (prev == '\\') {
+                    switch (cur) {
+                        case '(':
+                        case ')':
+                        case '#':
+                        case '"':
+                        case ' ':
+                        case '\\':
+                        case '$':
+                        case '@':
+                        case '^':
+                        case ';':
+                            sb.append(cur);
+                            break;
+                        case 't':
+                            sb.append('\t');
+                            break;
+                        case 'r':
+                            sb.append('\r');
+                            break;
+                        case 'n':
+                            sb.append('\n');
+                            break;
+                        case '\n':
+                            // line continuation
+                            break;
+                        default:
+                            throw new UnexpectedCharacterException(ctx);
+                    }
+                    prev = 0;
+                } else if (cur == ' ' || cur == '\t' || cur == '"' || cur == '(' || cur == ')' || cur == '#')  {
+                    return new ArgumentNode(sb.toString(), start, end);
+                } else {
+                    sb.append(cur);
+                    prev = cur;
                 }
-            } while (!ctx.reachedEnd() && isAllowed(ctx.peek()));
-            return new ArgumentNode(sb.toString(), start, end);
-        }
+                end = ctx.position();
+                ctx.advance();
+            }
 
-        private boolean isAllowed(char c) {
-            if (c == ' ' || c == '\t') {
-                return false;
-            }
-            if (c == '(' || c == ')' || c == '#' || c == '"') {
-                return false;
-            }
-            return true;
+            throw new ParseException(ctx, "Unexpected end of source");
         }
     };
 }

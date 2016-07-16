@@ -1,11 +1,79 @@
 <ru.urururu.cmakeedit.FileNode>
   <nodes>
-    <ru.urururu.cmakeedit.ParseErrorNode>
-      <message>Unexpected character &apos;&quot;&apos;</message>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>set</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>_compiler_id_pp_test</argument>
+          <start>
+            <offset>5</offset>
+          </start>
+          <end>
+            <offset>24</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>defined(_MSC_VER)</argument>
+          <start>
+            <offset>26</offset>
+          </start>
+          <end>
+            <offset>44</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments/>
       <start>
         <offset>1</offset>
       </start>
-      <end reference="../start"/>
-    </ru.urururu.cmakeedit.ParseErrorNode>
+      <end>
+        <offset>45</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>set</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>_compiler_id_version_compute</argument>
+          <start>
+            <offset>52</offset>
+          </start>
+          <end>
+            <offset>79</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>
+  /* _MSC_VER = VVRR */
+# define @PREFIX@COMPILER_VERSION_MAJOR @MACRO_DEC@(_MSC_VER / 100)
+# define @PREFIX@COMPILER_VERSION_MINOR @MACRO_DEC@(_MSC_VER % 100)
+# if defined(_MSC_FULL_VER)
+#  if _MSC_VER &gt;= 1400
+    /* _MSC_FULL_VER = VVRRPPPPP */
+#   define @PREFIX@COMPILER_VERSION_PATCH @MACRO_DEC@(_MSC_FULL_VER % 100000)
+#  else
+    /* _MSC_FULL_VER = VVRRPPPP */
+#   define @PREFIX@COMPILER_VERSION_PATCH @MACRO_DEC@(_MSC_FULL_VER % 10000)
+#  endif
+# endif
+# if defined(_MSC_BUILD)
+#  define @PREFIX@COMPILER_VERSION_TWEAK @MACRO_DEC@(_MSC_BUILD)
+# endif</argument>
+          <start>
+            <offset>81</offset>
+          </start>
+          <end>
+            <offset>642</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments/>
+      <start>
+        <offset>48</offset>
+      </start>
+      <end>
+        <offset>643</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
   </nodes>
 </ru.urururu.cmakeedit.FileNode>

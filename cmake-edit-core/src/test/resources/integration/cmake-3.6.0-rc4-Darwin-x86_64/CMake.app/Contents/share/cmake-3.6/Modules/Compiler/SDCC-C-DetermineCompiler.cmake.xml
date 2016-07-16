@@ -28,12 +28,69 @@
       <start reference="../comments/ru.urururu.cmakeedit.CommentNode/start"/>
       <end reference="../comments/ru.urururu.cmakeedit.CommentNode/end"/>
     </ru.urururu.cmakeedit.FileElementNode>
-    <ru.urururu.cmakeedit.ParseErrorNode>
-      <message>Unexpected character &apos;&quot;&apos;</message>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>set</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>_compiler_id_pp_test</argument>
+          <start>
+            <offset>100</offset>
+          </start>
+          <end>
+            <offset>119</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>defined(SDCC)</argument>
+          <start>
+            <offset>121</offset>
+          </start>
+          <end>
+            <offset>135</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments/>
       <start>
         <offset>96</offset>
       </start>
-      <end reference="../start"/>
-    </ru.urururu.cmakeedit.ParseErrorNode>
+      <end>
+        <offset>136</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>set</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>_compiler_id_version_compute</argument>
+          <start>
+            <offset>143</offset>
+          </start>
+          <end>
+            <offset>170</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>
+  /* SDCC = VRP */
+#  define COMPILER_VERSION_MAJOR @MACRO_DEC@(SDCC/100)
+#  define COMPILER_VERSION_MINOR @MACRO_DEC@(SDCC/10 % 10)
+#  define COMPILER_VERSION_PATCH @MACRO_DEC@(SDCC    % 10)</argument>
+          <start>
+            <offset>172</offset>
+          </start>
+          <end>
+            <offset>365</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments/>
+      <start>
+        <offset>139</offset>
+      </start>
+      <end>
+        <offset>366</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
   </nodes>
 </ru.urururu.cmakeedit.FileNode>

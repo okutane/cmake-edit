@@ -27,7 +27,7 @@
           </end>
         </ru.urururu.cmakeedit.ArgumentNode>
       </arguments>
-      <comments class="java.util.Collections$EmptyList"/>
+      <comments/>
       <start>
         <offset>34</offset>
       </start>
@@ -35,12 +35,35 @@
         <offset>56</offset>
       </end>
     </ru.urururu.cmakeedit.CommandInvocationNode>
-    <ru.urururu.cmakeedit.ParseErrorNode>
-      <message>Unexpected character &apos;a&apos;</message>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>set</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>CMAKE_LIBRARY_ARCHITECTURE_REGEX</argument>
+          <start>
+            <offset>63</offset>
+          </start>
+          <end>
+            <offset>94</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>[a-z0-9_]+(-[a-z0-9_]+)?-kfreebsd-gnu[a-z0-9_]*</argument>
+          <start>
+            <offset>96</offset>
+          </start>
+          <end>
+            <offset>144</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments/>
       <start>
         <offset>59</offset>
       </start>
-      <end reference="../start"/>
-    </ru.urururu.cmakeedit.ParseErrorNode>
+      <end>
+        <offset>145</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
   </nodes>
 </ru.urururu.cmakeedit.FileNode>

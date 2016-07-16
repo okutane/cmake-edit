@@ -655,7 +655,7 @@
           </end>
         </ru.urururu.cmakeedit.ArgumentNode>
       </arguments>
-      <comments class="java.util.Collections$EmptyList"/>
+      <comments/>
       <start>
         <offset>1696</offset>
       </start>
@@ -676,7 +676,7 @@
           </end>
         </ru.urururu.cmakeedit.ArgumentNode>
       </arguments>
-      <comments class="java.util.Collections$EmptyList" reference="../../ru.urururu.cmakeedit.CommandInvocationNode/comments"/>
+      <comments/>
       <start>
         <offset>1726</offset>
       </start>
@@ -733,7 +733,7 @@
           </end>
         </ru.urururu.cmakeedit.ArgumentNode>
       </arguments>
-      <comments class="java.util.Collections$EmptyList" reference="../../ru.urururu.cmakeedit.CommandInvocationNode/comments"/>
+      <comments/>
       <start>
         <offset>1759</offset>
       </start>
@@ -754,7 +754,7 @@
           </end>
         </ru.urururu.cmakeedit.ArgumentNode>
       </arguments>
-      <comments class="java.util.Collections$EmptyList" reference="../../ru.urururu.cmakeedit.CommandInvocationNode/comments"/>
+      <comments/>
       <start>
         <offset>1826</offset>
       </start>
@@ -784,7 +784,7 @@
           </end>
         </ru.urururu.cmakeedit.ArgumentNode>
       </arguments>
-      <comments class="java.util.Collections$EmptyList" reference="../../ru.urururu.cmakeedit.CommandInvocationNode/comments"/>
+      <comments/>
       <start>
         <offset>1849</offset>
       </start>
@@ -792,12 +792,480 @@
         <offset>1871</offset>
       </end>
     </ru.urururu.cmakeedit.CommandInvocationNode>
-    <ru.urururu.cmakeedit.ParseErrorNode>
-      <message>escape_sequence not supported</message>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>set</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>_INCLUDE_FILES</argument>
+          <start>
+            <offset>1883</offset>
+          </start>
+          <end>
+            <offset>1896</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>${_INCLUDE_FILES}#include &lt;${it}&gt;\
+</argument>
+          <start>
+            <offset>1898</offset>
+          </start>
+          <end>
+            <offset>1934</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments/>
       <start>
-        <offset>1873</offset>
+        <offset>1879</offset>
       </start>
-      <end reference="../start"/>
-    </ru.urururu.cmakeedit.ParseErrorNode>
+      <end>
+        <offset>1935</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>endforeach</commandName>
+      <arguments/>
+      <comments/>
+      <start>
+        <offset>1940</offset>
+      </start>
+      <end>
+        <offset>1952</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>if</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>x${ARGN}</argument>
+          <start>
+            <offset>1961</offset>
+          </start>
+          <end>
+            <offset>1970</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>STREQUAL</argument>
+          <start>
+            <offset>1972</offset>
+          </start>
+          <end>
+            <offset>1979</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>x</argument>
+          <start>
+            <offset>1981</offset>
+          </start>
+          <end>
+            <offset>1983</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments/>
+      <start>
+        <offset>1958</offset>
+      </start>
+      <end>
+        <offset>1984</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>set</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>_lang</argument>
+          <start>
+            <offset>1996</offset>
+          </start>
+          <end>
+            <offset>2000</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>C</argument>
+          <start>
+            <offset>2002</offset>
+          </start>
+          <end>
+            <offset>2002</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments/>
+      <start>
+        <offset>1992</offset>
+      </start>
+      <end>
+        <offset>2003</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>elseif</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>x${ARGN}</argument>
+          <start>
+            <offset>2015</offset>
+          </start>
+          <end>
+            <offset>2024</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>MATCHES</argument>
+          <start>
+            <offset>2026</offset>
+          </start>
+          <end>
+            <offset>2032</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>^xLANGUAGE;([a-zA-Z]+)$</argument>
+          <start>
+            <offset>2034</offset>
+          </start>
+          <end>
+            <offset>2058</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments/>
+      <start>
+        <offset>2008</offset>
+      </start>
+      <end>
+        <offset>2059</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>set</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>_lang</argument>
+          <start>
+            <offset>2071</offset>
+          </start>
+          <end>
+            <offset>2075</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>${CMAKE_MATCH_1}</argument>
+          <start>
+            <offset>2077</offset>
+          </start>
+          <end>
+            <offset>2094</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments/>
+      <start>
+        <offset>2067</offset>
+      </start>
+      <end>
+        <offset>2095</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>else</commandName>
+      <arguments/>
+      <comments/>
+      <start>
+        <offset>2100</offset>
+      </start>
+      <end>
+        <offset>2105</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>message</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>FATAL_ERROR</argument>
+          <start>
+            <offset>2121</offset>
+          </start>
+          <end>
+            <offset>2131</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>Unknown arguments:\
+  ${ARGN}\
+</argument>
+          <start>
+            <offset>2133</offset>
+          </start>
+          <end>
+            <offset>2165</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments/>
+      <start>
+        <offset>2113</offset>
+      </start>
+      <end>
+        <offset>2166</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>endif</commandName>
+      <arguments/>
+      <comments/>
+      <start>
+        <offset>2171</offset>
+      </start>
+      <end>
+        <offset>2177</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>set</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>_CHECK_STRUCT_MEMBER_SOURCE_CODE</argument>
+          <start>
+            <offset>2187</offset>
+          </start>
+          <end>
+            <offset>2218</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>
+${_INCLUDE_FILES}
+int main()
+{
+   (void)sizeof(((${_STRUCT} *)0)-&gt;${_MEMBER});
+   return 0;
+}
+</argument>
+          <start>
+            <offset>2220</offset>
+          </start>
+          <end>
+            <offset>2316</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments/>
+      <start>
+        <offset>2183</offset>
+      </start>
+      <end>
+        <offset>2317</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>if</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>${_lang}</argument>
+          <start>
+            <offset>2326</offset>
+          </start>
+          <end>
+            <offset>2335</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>STREQUAL</argument>
+          <start>
+            <offset>2337</offset>
+          </start>
+          <end>
+            <offset>2344</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>C</argument>
+          <start>
+            <offset>2346</offset>
+          </start>
+          <end>
+            <offset>2348</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments/>
+      <start>
+        <offset>2323</offset>
+      </start>
+      <end>
+        <offset>2349</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>CHECK_C_SOURCE_COMPILES</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>${_CHECK_STRUCT_MEMBER_SOURCE_CODE}</argument>
+          <start>
+            <offset>2381</offset>
+          </start>
+          <end>
+            <offset>2417</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>${_RESULT}</argument>
+          <start>
+            <offset>2419</offset>
+          </start>
+          <end>
+            <offset>2428</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments/>
+      <start>
+        <offset>2357</offset>
+      </start>
+      <end>
+        <offset>2429</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>elseif</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>${_lang}</argument>
+          <start>
+            <offset>2441</offset>
+          </start>
+          <end>
+            <offset>2450</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>STREQUAL</argument>
+          <start>
+            <offset>2452</offset>
+          </start>
+          <end>
+            <offset>2459</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>CXX</argument>
+          <start>
+            <offset>2461</offset>
+          </start>
+          <end>
+            <offset>2465</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments/>
+      <start>
+        <offset>2434</offset>
+      </start>
+      <end>
+        <offset>2466</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>CHECK_CXX_SOURCE_COMPILES</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>${_CHECK_STRUCT_MEMBER_SOURCE_CODE}</argument>
+          <start>
+            <offset>2500</offset>
+          </start>
+          <end>
+            <offset>2536</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>${_RESULT}</argument>
+          <start>
+            <offset>2538</offset>
+          </start>
+          <end>
+            <offset>2547</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments/>
+      <start>
+        <offset>2474</offset>
+      </start>
+      <end>
+        <offset>2548</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>else</commandName>
+      <arguments/>
+      <comments/>
+      <start>
+        <offset>2553</offset>
+      </start>
+      <end>
+        <offset>2558</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>message</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>FATAL_ERROR</argument>
+          <start>
+            <offset>2574</offset>
+          </start>
+          <end>
+            <offset>2584</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>Unknown language:\
+  ${_lang}\
+Supported languages: C, CXX.\
+</argument>
+          <start>
+            <offset>2586</offset>
+          </start>
+          <end>
+            <offset>2648</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments/>
+      <start>
+        <offset>2566</offset>
+      </start>
+      <end>
+        <offset>2649</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>endif</commandName>
+      <arguments/>
+      <comments/>
+      <start>
+        <offset>2654</offset>
+      </start>
+      <end>
+        <offset>2660</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>endmacro</commandName>
+      <arguments/>
+      <comments/>
+      <start>
+        <offset>2662</offset>
+      </start>
+      <end>
+        <offset>2672</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
   </nodes>
 </ru.urururu.cmakeedit.FileNode>

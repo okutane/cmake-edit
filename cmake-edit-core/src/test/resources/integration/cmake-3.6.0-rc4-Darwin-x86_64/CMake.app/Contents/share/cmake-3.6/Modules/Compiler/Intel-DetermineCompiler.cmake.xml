@@ -1,11 +1,114 @@
 <ru.urururu.cmakeedit.FileNode>
   <nodes>
-    <ru.urururu.cmakeedit.ParseErrorNode>
-      <message>Unexpected character &apos;|&apos;</message>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>set</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>_compiler_id_pp_test</argument>
+          <start>
+            <offset>5</offset>
+          </start>
+          <end>
+            <offset>24</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>defined(__INTEL_COMPILER) || defined(__ICC)</argument>
+          <start>
+            <offset>26</offset>
+          </start>
+          <end>
+            <offset>70</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments/>
       <start>
         <offset>1</offset>
       </start>
-      <end reference="../start"/>
-    </ru.urururu.cmakeedit.ParseErrorNode>
+      <end>
+        <offset>71</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>set</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>_compiler_id_version_compute</argument>
+          <start>
+            <offset>78</offset>
+          </start>
+          <end>
+            <offset>105</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>
+  /* __INTEL_COMPILER = VRP */
+# define @PREFIX@COMPILER_VERSION_MAJOR @MACRO_DEC@(__INTEL_COMPILER/100)
+# define @PREFIX@COMPILER_VERSION_MINOR @MACRO_DEC@(__INTEL_COMPILER/10 % 10)
+# if defined(__INTEL_COMPILER_UPDATE)
+#  define @PREFIX@COMPILER_VERSION_PATCH @MACRO_DEC@(__INTEL_COMPILER_UPDATE)
+# else
+#  define @PREFIX@COMPILER_VERSION_PATCH @MACRO_DEC@(__INTEL_COMPILER   % 10)
+# endif
+# if defined(__INTEL_COMPILER_BUILD_DATE)
+  /* __INTEL_COMPILER_BUILD_DATE = YYYYMMDD */
+#  define @PREFIX@COMPILER_VERSION_TWEAK @MACRO_DEC@(__INTEL_COMPILER_BUILD_DATE)
+# endif
+# if defined(_MSC_VER)
+   /* _MSC_VER = VVRR */
+#  define @PREFIX@SIMULATE_VERSION_MAJOR @MACRO_DEC@(_MSC_VER / 100)
+#  define @PREFIX@SIMULATE_VERSION_MINOR @MACRO_DEC@(_MSC_VER % 100)
+# endif</argument>
+          <start>
+            <offset>107</offset>
+          </start>
+          <end>
+            <offset>873</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments/>
+      <start>
+        <offset>74</offset>
+      </start>
+      <end>
+        <offset>874</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>set</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>_compiler_id_simulate</argument>
+          <start>
+            <offset>881</offset>
+          </start>
+          <end>
+            <offset>901</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>
+# if defined(_MSC_VER)
+#  define @PREFIX@SIMULATE_ID \&quot;MSVC\&quot;
+# endif</argument>
+          <start>
+            <offset>903</offset>
+          </start>
+          <end>
+            <offset>974</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments/>
+      <start>
+        <offset>877</offset>
+      </start>
+      <end>
+        <offset>975</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
   </nodes>
 </ru.urururu.cmakeedit.FileNode>

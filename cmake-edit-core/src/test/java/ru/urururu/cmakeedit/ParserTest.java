@@ -1,15 +1,20 @@
 package ru.urururu.cmakeedit;
 
-import org.junit.Assert;
+import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.converters.reflection.FieldDictionary;
+import com.thoughtworks.xstream.converters.reflection.ImmutableFieldKeySorter;
+import com.thoughtworks.xstream.converters.reflection.Sun14ReflectionProvider;
+import com.thoughtworks.xstream.io.xml.DomDriver;
+import org.custommonkey.xmlunit.XMLTestCase;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
+import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  * Created by okutane on 07/07/16.
  */
-public class ParserTest {
+public class ParserTest extends XMLTestCase {
     @Test
     public void testParseErrors() throws ParseException {
         try {
@@ -30,8 +35,25 @@ public class ParserTest {
     }
 
     @Test
-    public void severalComments() throws ParseException {
+    public void testSeveralComments() throws ParseException {
         FileNode severalComments = parseString("#[]#[]");
+    }
+
+    @Test
+    public void testParseCommandInvocation() throws Exception {
+        XStream xstream = new XStream(new Sun14ReflectionProvider(
+                new FieldDictionary(new ImmutableFieldKeySorter())),
+                new DomDriver("utf-8"));
+
+        CommandInvocationNode actual = Parser.parseCommandInvocation(new StringParseContext("test()", 0));
+        CommandInvocationNode expected = new CommandInvocationNode("test",
+                new ArrayList<>(),
+                new ArrayList<>(),
+                new SourceRef(0),
+                new SourceRef(5)
+        );
+
+        assertXMLEqual(xstream.toXML(expected), xstream.toXML(actual));
     }
 
     private FileNode parseString(String source) throws ParseException {

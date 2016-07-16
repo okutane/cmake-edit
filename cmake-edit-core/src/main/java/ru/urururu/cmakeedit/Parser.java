@@ -87,7 +87,7 @@ public class Parser {
      *
      * Precondition: Character.isAlphabetic(ctx.peek()) || ctx.peek() == '_'
      */
-    private static FileElementNode parseCommandInvocation(ParseContext ctx) throws ParseException {
+    static CommandInvocationNode parseCommandInvocation(ParseContext ctx) throws ParseException {
         StringBuilder nameBuilder = new StringBuilder();
 
         SourceRef start = ctx.position();
@@ -109,37 +109,19 @@ public class Parser {
         if (ctx.reachedEnd()) {
             throw new ParseException(ctx, "Unexpected end of source");
         }
-        char c = ctx.peek();
 
-        if (c != '(') {
-            throw new UnexpectedCharacterException(ctx);
-        }
+        List<CommentNode> comments = new ArrayList<>();
+        List<ArgumentNode> arguments = ArgumentParser.parseArguments(ctx, comments);
+        SourceRef end = ctx.position();
         ctx.advance();
 
-        List<Node> arguments = new ArrayList<>();
-
-        do {
-            skipSpaces(ctx);
-
-            if (ctx.reachedEnd()) {
-                throw new ParseException(ctx, "Unexpected end of source");
-            }
-            c = ctx.peek();
-
-            if (c == ')') {
-                SourceRef end = ctx.position();
-                ctx.advance();
-                return new CommandInvocationNode(nameBuilder.toString(), arguments, start, end);
-            } else {
-                arguments.add(ArgumentParser.parse(ctx));
-            }
-        } while (true);
+        return new CommandInvocationNode(nameBuilder.toString(), arguments, comments, start, end);
     }
 
     /**
      * space        ::=  <match '[ \t]+'>
      */
-    private static void skipSpaces(ParseContext ctx) {
+    static void skipSpaces(ParseContext ctx) {
         while (!ctx.reachedEnd()) {
             switch (ctx.peek()) {
                 case ' ':

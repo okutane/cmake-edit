@@ -1,11 +1,75 @@
 <ru.urururu.cmakeedit.FileNode>
   <nodes>
-    <ru.urururu.cmakeedit.ParseErrorNode>
-      <message>Unexpected character &apos;|&apos;</message>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>set</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>_compiler_id_pp_test</argument>
+          <start>
+            <offset>5</offset>
+          </start>
+          <end>
+            <offset>24</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>defined(_SGI_COMPILER_VERSION) || defined(_COMPILER_VERSION)</argument>
+          <start>
+            <offset>26</offset>
+          </start>
+          <end>
+            <offset>87</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments/>
       <start>
         <offset>1</offset>
       </start>
-      <end reference="../start"/>
-    </ru.urururu.cmakeedit.ParseErrorNode>
+      <end>
+        <offset>88</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>set</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>_compiler_id_version_compute</argument>
+          <start>
+            <offset>95</offset>
+          </start>
+          <end>
+            <offset>122</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>
+# if defined(_SGI_COMPILER_VERSION)
+  /* _SGI_COMPILER_VERSION = VRP */
+#  define @PREFIX@COMPILER_VERSION_MAJOR @MACRO_DEC@(_SGI_COMPILER_VERSION/100)
+#  define @PREFIX@COMPILER_VERSION_MINOR @MACRO_DEC@(_SGI_COMPILER_VERSION/10 % 10)
+#  define @PREFIX@COMPILER_VERSION_PATCH @MACRO_DEC@(_SGI_COMPILER_VERSION    % 10)
+# else
+  /* _COMPILER_VERSION = VRP */
+#  define @PREFIX@COMPILER_VERSION_MAJOR @MACRO_DEC@(_COMPILER_VERSION/100)
+#  define @PREFIX@COMPILER_VERSION_MINOR @MACRO_DEC@(_COMPILER_VERSION/10 % 10)
+#  define @PREFIX@COMPILER_VERSION_PATCH @MACRO_DEC@(_COMPILER_VERSION    % 10)
+# endif</argument>
+          <start>
+            <offset>124</offset>
+          </start>
+          <end>
+            <offset>728</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments/>
+      <start>
+        <offset>91</offset>
+      </start>
+      <end>
+        <offset>729</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
   </nodes>
 </ru.urururu.cmakeedit.FileNode>

@@ -8,10 +8,10 @@ import java.util.List;
  */
 public class CommandInvocationNode extends FileElementNode {
     private final String commandName;
-    private List<Node> arguments;
+    private List<ArgumentNode> arguments;
 
-    public CommandInvocationNode(String commandName, List<Node> arguments, SourceRef start, SourceRef end) {
-        super(Collections.emptyList(), start, end);
+    public CommandInvocationNode(String commandName, List<ArgumentNode> arguments, List<CommentNode> comments, SourceRef start, SourceRef end) {
+        super(comments, start, end);
         this.commandName = commandName;
         this.arguments = arguments;
     }

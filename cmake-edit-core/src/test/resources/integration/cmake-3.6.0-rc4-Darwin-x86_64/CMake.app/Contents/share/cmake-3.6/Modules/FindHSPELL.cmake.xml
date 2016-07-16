@@ -492,7 +492,7 @@
           </end>
         </ru.urururu.cmakeedit.ArgumentNode>
       </arguments>
-      <comments class="java.util.Collections$EmptyList"/>
+      <comments/>
       <start>
         <offset>1165</offset>
       </start>
@@ -531,7 +531,7 @@
           </end>
         </ru.urururu.cmakeedit.ArgumentNode>
       </arguments>
-      <comments class="java.util.Collections$EmptyList" reference="../../ru.urururu.cmakeedit.CommandInvocationNode/comments"/>
+      <comments/>
       <start>
         <offset>1205</offset>
       </start>
@@ -552,7 +552,7 @@
           </end>
         </ru.urururu.cmakeedit.ArgumentNode>
       </arguments>
-      <comments class="java.util.Collections$EmptyList" reference="../../ru.urururu.cmakeedit.CommandInvocationNode/comments"/>
+      <comments/>
       <start>
         <offset>1250</offset>
       </start>
@@ -560,12 +560,403 @@
         <offset>1272</offset>
       </end>
     </ru.urururu.cmakeedit.CommandInvocationNode>
-    <ru.urururu.cmakeedit.ParseErrorNode>
-      <message>Unexpected character &apos;R&apos;</message>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>file</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>STRINGS</argument>
+          <start>
+            <offset>1283</offset>
+          </start>
+          <end>
+            <offset>1289</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>${HSPELL_INCLUDE_DIR}/hspell.h</argument>
+          <start>
+            <offset>1291</offset>
+          </start>
+          <end>
+            <offset>1322</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>HSPELL_H</argument>
+          <start>
+            <offset>1324</offset>
+          </start>
+          <end>
+            <offset>1331</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>REGEX</argument>
+          <start>
+            <offset>1333</offset>
+          </start>
+          <end>
+            <offset>1337</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>#define HSPELL_VERSION_M(AJO|INO)R [0-9]+</argument>
+          <start>
+            <offset>1339</offset>
+          </start>
+          <end>
+            <offset>1381</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments/>
       <start>
-        <offset>1274</offset>
+        <offset>1278</offset>
       </start>
-      <end reference="../start"/>
-    </ru.urururu.cmakeedit.ParseErrorNode>
+      <end>
+        <offset>1382</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>string</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>REGEX</argument>
+          <start>
+            <offset>1395</offset>
+          </start>
+          <end>
+            <offset>1399</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>REPLACE</argument>
+          <start>
+            <offset>1401</offset>
+          </start>
+          <end>
+            <offset>1407</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>.*#define HSPELL_VERSION_MAJOR ([0-9]+).*</argument>
+          <start>
+            <offset>1409</offset>
+          </start>
+          <end>
+            <offset>1451</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>\\1</argument>
+          <start>
+            <offset>1453</offset>
+          </start>
+          <end>
+            <offset>1457</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>HSPELL_VERSION_MAJOR</argument>
+          <start>
+            <offset>1459</offset>
+          </start>
+          <end>
+            <offset>1478</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>${HSPELL_H}</argument>
+          <start>
+            <offset>1480</offset>
+          </start>
+          <end>
+            <offset>1492</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments/>
+      <start>
+        <offset>1388</offset>
+      </start>
+      <end>
+        <offset>1493</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>string</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>REGEX</argument>
+          <start>
+            <offset>1506</offset>
+          </start>
+          <end>
+            <offset>1510</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>REPLACE</argument>
+          <start>
+            <offset>1512</offset>
+          </start>
+          <end>
+            <offset>1518</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>.*#define HSPELL_VERSION_MINOR ([0-9]+).*</argument>
+          <start>
+            <offset>1520</offset>
+          </start>
+          <end>
+            <offset>1562</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>\\1</argument>
+          <start>
+            <offset>1564</offset>
+          </start>
+          <end>
+            <offset>1568</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>HSPELL_VERSION_MINOR</argument>
+          <start>
+            <offset>1570</offset>
+          </start>
+          <end>
+            <offset>1589</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>${HSPELL_H}</argument>
+          <start>
+            <offset>1591</offset>
+          </start>
+          <end>
+            <offset>1603</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments/>
+      <start>
+        <offset>1499</offset>
+      </start>
+      <end>
+        <offset>1604</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>set</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>HSPELL_VERSION_STRING</argument>
+          <start>
+            <offset>1614</offset>
+          </start>
+          <end>
+            <offset>1634</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>${HSPELL_VERSION_MAJOR}.${HSPELL_VERSION_MINOR}</argument>
+          <start>
+            <offset>1636</offset>
+          </start>
+          <end>
+            <offset>1684</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments/>
+      <start>
+        <offset>1610</offset>
+      </start>
+      <end>
+        <offset>1685</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>unset</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>HSPELL_H</argument>
+          <start>
+            <offset>1697</offset>
+          </start>
+          <end>
+            <offset>1704</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments/>
+      <start>
+        <offset>1691</offset>
+      </start>
+      <end>
+        <offset>1705</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>endif</commandName>
+      <arguments/>
+      <comments/>
+      <start>
+        <offset>1707</offset>
+      </start>
+      <end>
+        <offset>1713</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.FileElementNode>
+      <comments>
+        <ru.urururu.cmakeedit.CommentNode>
+          <start>
+            <offset>1716</offset>
+          </start>
+          <end>
+            <offset>1790</offset>
+          </end>
+        </ru.urururu.cmakeedit.CommentNode>
+      </comments>
+      <start reference="../comments/ru.urururu.cmakeedit.CommentNode/start"/>
+      <end reference="../comments/ru.urururu.cmakeedit.CommentNode/end"/>
+    </ru.urururu.cmakeedit.FileElementNode>
+    <ru.urururu.cmakeedit.FileElementNode>
+      <comments>
+        <ru.urururu.cmakeedit.CommentNode>
+          <start>
+            <offset>1792</offset>
+          </start>
+          <end>
+            <offset>1822</offset>
+          </end>
+        </ru.urururu.cmakeedit.CommentNode>
+      </comments>
+      <start reference="../comments/ru.urururu.cmakeedit.CommentNode/start"/>
+      <end reference="../comments/ru.urururu.cmakeedit.CommentNode/end"/>
+    </ru.urururu.cmakeedit.FileElementNode>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>include</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>${CMAKE_CURRENT_LIST_DIR}/FindPackageHandleStandardArgs.cmake</argument>
+          <start>
+            <offset>1832</offset>
+          </start>
+          <end>
+            <offset>1892</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments/>
+      <start>
+        <offset>1824</offset>
+      </start>
+      <end>
+        <offset>1893</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>FIND_PACKAGE_HANDLE_STANDARD_ARGS</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>HSPELL
+</argument>
+          <start>
+            <offset>1929</offset>
+          </start>
+          <end>
+            <offset>1935</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>REQUIRED_VARS</argument>
+          <start>
+            <offset>1970</offset>
+          </start>
+          <end>
+            <offset>1982</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>HSPELL_LIBRARIES</argument>
+          <start>
+            <offset>1984</offset>
+          </start>
+          <end>
+            <offset>1999</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>HSPELL_INCLUDE_DIR
+</argument>
+          <start>
+            <offset>2001</offset>
+          </start>
+          <end>
+            <offset>2019</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>VERSION_VAR</argument>
+          <start>
+            <offset>2054</offset>
+          </start>
+          <end>
+            <offset>2064</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>HSPELL_VERSION_STRING</argument>
+          <start>
+            <offset>2066</offset>
+          </start>
+          <end>
+            <offset>2086</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments/>
+      <start>
+        <offset>1895</offset>
+      </start>
+      <end>
+        <offset>2087</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>mark_as_advanced</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>HSPELL_INCLUDE_DIR</argument>
+          <start>
+            <offset>2107</offset>
+          </start>
+          <end>
+            <offset>2124</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>HSPELL_LIBRARIES</argument>
+          <start>
+            <offset>2126</offset>
+          </start>
+          <end>
+            <offset>2141</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments/>
+      <start>
+        <offset>2090</offset>
+      </start>
+      <end>
+        <offset>2142</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
   </nodes>
 </ru.urururu.cmakeedit.FileNode>

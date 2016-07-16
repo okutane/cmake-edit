@@ -8,6 +8,9 @@ public abstract class Node {
     protected final SourceRef end;
 
     protected Node(SourceRef start, SourceRef end) {
+        if ((start != null || end != null) && start.getOffset() > end.getOffset()) {
+            throw new IllegalArgumentException(start.getOffset() + " > " + end.getOffset());
+        }
         this.start = start;
         this.end = end;
     }

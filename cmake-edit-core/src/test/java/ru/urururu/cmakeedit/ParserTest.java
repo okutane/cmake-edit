@@ -7,7 +7,9 @@ import com.thoughtworks.xstream.converters.reflection.Sun14ReflectionProvider;
 import com.thoughtworks.xstream.io.xml.DomDriver;
 import org.custommonkey.xmlunit.XMLTestCase;
 import org.junit.Test;
+import org.xml.sax.SAXException;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -41,19 +43,32 @@ public class ParserTest extends XMLTestCase {
 
     @Test
     public void testParseCommandInvocation() throws Exception {
-        XStream xstream = new XStream(new Sun14ReflectionProvider(
-                new FieldDictionary(new ImmutableFieldKeySorter())),
-                new DomDriver("utf-8"));
-
-        CommandInvocationNode actual = Parser.parseCommandInvocation(new StringParseContext("test()", 0));
-        CommandInvocationNode expected = new CommandInvocationNode("test",
+        checkCommandInvocation("test()", new CommandInvocationNode("test",
                 new ArrayList<>(),
                 new ArrayList<>(),
                 new SourceRef(0),
                 new SourceRef(5)
-        );
+        ));
+    }
+
+    private void checkCommandInvocation(String contents, CommandInvocationNode expected) throws ParseException, SAXException, IOException {
+        XStream xstream = new XStream(new Sun14ReflectionProvider(
+                new FieldDictionary(new ImmutableFieldKeySorter())),
+                new DomDriver("utf-8"));
+
+        CommandInvocationNode actual = Parser.parseCommandInvocation(new StringParseContext(contents, 0));
 
         assertXMLEqual(xstream.toXML(expected), xstream.toXML(actual));
+    }
+
+    @Test
+    public void testMacroInvocation() throws Exception {
+        checkCommandInvocation("@macro@", new MacroInvocationNode("macro",
+                new ArrayList<>(),
+                new ArrayList<>(),
+                new SourceRef(0),
+                new SourceRef(6)
+        ));
     }
 
     @Test

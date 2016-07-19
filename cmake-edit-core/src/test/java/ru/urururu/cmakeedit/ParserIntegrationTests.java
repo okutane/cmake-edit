@@ -70,12 +70,7 @@ public class ParserIntegrationTests {
 
                         text = text.replace("\r", "");
 
-                        Object result;
-                        try {
-                            result = Parser.parse(new StringParseContext(text, 0, registry), Parser.ErrorHandling.NodesBefore);
-                        } catch (ParseException e) {
-                            result = e.getMessage();
-                        }
+                        FileNode result = Parser.parse(new StringParseContext(text, 0, registry));
 
                         XStream xstream = new XStream(new Sun14ReflectionProvider(
                                 new FieldDictionary(new ImmutableFieldKeySorter())),

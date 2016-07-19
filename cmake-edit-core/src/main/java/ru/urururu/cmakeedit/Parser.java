@@ -5,6 +5,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Parser {
@@ -77,13 +78,12 @@ public class Parser {
             } while (!ctx.reachedEnd() && ctx.peek() != '\n');
 
             result = new FileElementNode(comments, comments.get(0).getStart(), comments.get(comments.size() - 1).getEnd());
-        } else if (Character.isAlphabetic(c) || c == '_') {
+        } else if (Character.isAlphabetic(c) || c == '_' || c == '@') {
             result = parseCommandInvocation(ctx);
         } else if (c != '\n') {
             throw new UnexpectedCharacterException(ctx);
         }
 
-        //skipNewline(ctx);
         return result;
     }
 
@@ -97,11 +97,16 @@ public class Parser {
      * Precondition: Character.isAlphabetic(ctx.peek()) || ctx.peek() == '_'
      */
     static CommandInvocationNode parseCommandInvocation(ParseContext ctx) throws ParseException {
-        StringBuilder nameBuilder = new StringBuilder();
+        char first = ctx.peek();
+
+        if (first == '@') {
+            return parseMacroInvocation(ctx);
+        }
 
         SourceRef start = ctx.position();
 
-        nameBuilder.append(ctx.peek());
+        StringBuilder nameBuilder = new StringBuilder();
+        nameBuilder.append(first);
         ctx.advance();
         while (!ctx.reachedEnd()) {
             char c = ctx.peek();
@@ -125,6 +130,32 @@ public class Parser {
         ctx.advance();
 
         return new CommandInvocationNode(nameBuilder.toString(), arguments, comments, start, end);
+    }
+
+    private static CommandInvocationNode parseMacroInvocation(ParseContext ctx) throws ParseException {
+        try (Timer.Context timing = ctx.getRegistry().timer("Parser.parseMacroInvocation").time()) {
+            // super lazy mode
+            SourceRef start = ctx.position();
+            ctx.advance();
+
+            StringBuilder nameBuilder = new StringBuilder();
+            while (!ctx.reachedEnd() && ctx.peek() != '@') {
+                nameBuilder.append(ctx.peek());
+                ctx.advance();
+            }
+
+            if (ctx.reachedEnd()) {
+                throw new ParseException(ctx, "Unexpected end of contents");
+            }
+
+            SourceRef end = ctx.position();
+            ctx.advance();
+
+            return new MacroInvocationNode(nameBuilder.toString(),
+                    new ArrayList<>(), new ArrayList<>(),
+                    start, end
+            );
+        }
     }
 
     /**

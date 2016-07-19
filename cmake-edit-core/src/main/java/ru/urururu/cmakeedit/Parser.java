@@ -43,7 +43,7 @@ public class Parser {
                     }
                 } catch (ParseException e) {
                     if (logger.isInfoEnabled()) {
-                        logger.info(e.getMessage() + " at " + ctx.position().getOffset() + " in context:" + ctx.getContext(10), e);
+                        logger.info(e.getMessage() + " at " + ctx.position().getOffset() + " in context:" + ctx.getContext(20), e);
                     }
 
                     if (errorHandling == ErrorHandling.Exception) {

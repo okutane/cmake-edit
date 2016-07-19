@@ -33,6 +33,11 @@ public class StringParseContext extends AbstractParseContext {
     }
 
     @Override
+    public void move(SourceRef position) {
+        this.position = position.getOffset();
+    }
+
+    @Override
     public boolean reachedEnd() {
         return position == contents.length();
     }
@@ -49,10 +54,21 @@ public class StringParseContext extends AbstractParseContext {
     public String getContext(int size) {
         int from = position - size / 2;
         int to = position + size / 2;
+        String prefix = "";
+        String suffix = "";
 
-        from = Math.max(from, 0);
-        to = Math.min(to, contents.length());
+        if (from < 0) {
+            from = 0;
+        } else {
+            prefix = "...";
+        }
 
-        return contents.substring(from, to);
+        if (to > contents.length()) {
+            to = contents.length();
+        } else {
+            suffix = "...";
+        }
+
+        return prefix + contents.substring(from, to) + suffix;
     }
 }

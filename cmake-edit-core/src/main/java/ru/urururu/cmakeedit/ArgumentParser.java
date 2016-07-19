@@ -3,6 +3,7 @@ package ru.urururu.cmakeedit;
 import com.codahale.metrics.Timer;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -11,19 +12,31 @@ import java.util.List;
 abstract class ArgumentParser {
     private String name;
 
+    private static List<ArgumentParser> parsers = Arrays.asList(
+            new QuotedArgumentParser(),
+            new BracketArgumentParser(),
+            new UnquotedArgumentParser()
+    );
+
     private ArgumentParser(String name) {
         this.name = name;
     }
 
-    private ArgumentNode parseExternal(ParseContext ctx) throws ParseException {
+    public final ArgumentNode parseExternal(ParseContext ctx) throws ParseException {
         try (Timer.Context timer = ctx.getRegistry().timer(name + ".parse").time()) {
             return parseInternal(ctx);
         }
     }
 
-    ArgumentNode parseInternal(ParseContext ctx) throws ParseException {
-        throw new ParseException(ctx, name + " not supported");
+    public final boolean canParse(ParseContext ctx) {
+        try (Timer.Context timer = ctx.getRegistry().timer(name + ".canParse").time()) {
+            return canParseInternal(ctx);
+        }
     }
+
+    abstract boolean canParseInternal(ParseContext ctx);
+
+    abstract ArgumentNode parseInternal(ParseContext ctx) throws ParseException;
 
     /**
      * arguments           ::=  argument? separated_arguments*
@@ -70,14 +83,12 @@ abstract class ArgumentParser {
      * argument ::=  bracket_argument | quoted_argument | unquoted_argument
      */
     public static ArgumentNode parse(ParseContext ctx) throws ParseException {
-        char c = ctx.peek();
-        if (c == '[') {
-            return BRACKET.parseExternal(ctx);
-        } else if (c == '"') {
-            return QUOTED.parseExternal(ctx);
-        } else {
-            return UNQUOTED.parseExternal(ctx);
+        for (ArgumentParser parser : parsers) {
+            if (parser.canParse(ctx)) {
+                return parser.parseExternal(ctx);
+            }
         }
+        throw new UnexpectedCharacterException(ctx);
     }
 
     /**
@@ -86,7 +97,33 @@ abstract class ArgumentParser {
      * bracket_content  ::=  <any text not containing a bracket_close of the same {len} as the bracket_open>
      * bracket_close    ::=  ']' '='{len} ']'
      */
-    private static final ArgumentParser BRACKET = new ArgumentParser("bracket_argument") {
+    private static class BracketArgumentParser extends ArgumentParser {
+        public BracketArgumentParser() {
+            super("bracket_argument");
+        }
+
+        @Override
+        boolean canParseInternal(ParseContext ctx) {
+            SourceRef start = ctx.position();
+            try {
+                if (!ctx.reachedEnd() && ctx.peek() == '[') {
+                    ctx.advance();
+                    int len = 0;
+                    while (!ctx.reachedEnd() && ctx.peek() == '=') {
+                        len++;
+                        ctx.advance();
+                    }
+                    if (!ctx.reachedEnd() && ctx.peek() == '[') {
+                        ctx.advance();
+                        return true;
+                    }
+                }
+                return false;
+            } finally {
+                ctx.move(start);
+            }
+        }
+
         @Override
         ArgumentNode parseInternal(ParseContext ctx) throws ParseException {
             SourceRef start = ctx.position();
@@ -128,14 +165,23 @@ abstract class ArgumentParser {
             }
             throw new ParseException(ctx, "Not expected end of content");
         }
-    };
+    }
 
     /**
      * quoted_argument     ::=  '"' quoted_element* '"'
      * quoted_element      ::=  <any character except '\' or '"'> | escape_sequence | quoted_continuation
      * quoted_continuation ::=  '\' newline
      */
-    private static final ArgumentParser QUOTED = new ArgumentParser("quoted_argument") {
+    private static class QuotedArgumentParser extends ArgumentParser {
+        public QuotedArgumentParser() {
+            super("quoted_argument");
+        }
+
+        @Override
+        boolean canParseInternal(ParseContext ctx) {
+            return ctx.peek() == '"';
+        }
+
         @Override
         ArgumentNode parseInternal(ParseContext ctx) throws ParseException {
             SourceRef start = ctx.position();
@@ -190,14 +236,23 @@ abstract class ArgumentParser {
 
             throw new ParseException(ctx, "Unexpected end of source");
         }
-    };
+    }
 
     /**
      * unquoted_argument ::=  unquoted_element+ | unquoted_legacy
      * unquoted_element  ::=  <any character except whitespace or one of '()#"\'> | escape_sequence
      * unquoted_legacy   ::=  <see note in text> todo
      */
-    private static final ArgumentParser UNQUOTED = new ArgumentParser("unquoted_argument") {
+    private static class UnquotedArgumentParser extends ArgumentParser {
+        public UnquotedArgumentParser() {
+            super("unquoted_argument");
+        }
+
+        @Override
+        boolean canParseInternal(ParseContext ctx) {
+            return true;
+        }
+
         @Override
         ArgumentNode parseInternal(ParseContext ctx) throws ParseException {
             SourceRef start = ctx.position();
@@ -249,5 +304,5 @@ abstract class ArgumentParser {
 
             throw new ParseException(ctx, "Unexpected end of source");
         }
-    };
+    }
 }

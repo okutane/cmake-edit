@@ -17,6 +17,11 @@ public interface ParseContext {
     SourceRef position();
 
     /**
+     * @param position which will be referenced by cursor.
+     */
+    void move(SourceRef position);
+
+    /**
      * @return <code>true</code> if this ParseContext doesn't contains any more text.
      */
     boolean reachedEnd();

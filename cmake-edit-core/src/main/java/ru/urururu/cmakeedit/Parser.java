@@ -1,11 +1,14 @@
 package ru.urururu.cmakeedit;
 
 import com.codahale.metrics.Timer;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Parser {
+    private static final Logger logger = LoggerFactory.getLogger(Parser.class);
 
     /**
      * file         ::=  file_element*
@@ -35,8 +38,14 @@ public class Parser {
                         if (!node.equals(FileElementNode.EMPTY)) {
                             nodes.add(node);
                         }
+
+                        skipWhitespace(ctx);
                     }
                 } catch (ParseException e) {
+                    if (logger.isInfoEnabled()) {
+                        logger.info(e.getMessage() + " at " + ctx.position().getOffset() + " in context:" + ctx.getContext(10), e);
+                    }
+
                     if (errorHandling == ErrorHandling.Exception) {
                         throw e;
                     }
@@ -74,7 +83,7 @@ public class Parser {
             throw new UnexpectedCharacterException(ctx);
         }
 
-        skipNewline(ctx);
+        //skipNewline(ctx);
         return result;
     }
 
@@ -135,20 +144,20 @@ public class Parser {
     }
 
     /**
+     * space        ::=  <match '[ \t]+'>
      * newline      ::=  <match '\n'>
      */
-    private static void skipNewline(ParseContext ctx) throws UnexpectedCharacterException {
-        skipSpaces(ctx);
-
-        if (ctx.reachedEnd()) {
-            return;
-        }
-
-        char c = ctx.peek();
-        if (c == '\n') {
-            ctx.advance();
-        } else {
-            throw new UnexpectedCharacterException(ctx);
+    private static void skipWhitespace(ParseContext ctx) throws UnexpectedCharacterException {
+        while (!ctx.reachedEnd()) {
+            switch (ctx.peek()) {
+                case ' ':
+                case '\t':
+                case '\n':
+                    ctx.advance();
+                    continue;
+                default:
+                    return;
+            }
         }
     }
 

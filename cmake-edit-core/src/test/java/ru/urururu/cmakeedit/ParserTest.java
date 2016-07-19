@@ -56,6 +56,11 @@ public class ParserTest extends XMLTestCase {
         assertXMLEqual(xstream.toXML(expected), xstream.toXML(actual));
     }
 
+    @Test
+    public void testCommentsAtEndOfLine() throws Exception {
+        parseString("set(var \"val\") #?");
+    }
+
     private FileNode parseString(String source) throws ParseException {
         return Parser.parse(new StringParseContext(source, 0));
     }

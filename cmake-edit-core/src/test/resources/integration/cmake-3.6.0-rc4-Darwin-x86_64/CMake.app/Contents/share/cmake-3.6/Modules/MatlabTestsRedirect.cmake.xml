@@ -1519,12 +1519,136 @@
         <offset>2828</offset>
       </end>
     </ru.urururu.cmakeedit.CommandInvocationNode>
-    <ru.urururu.cmakeedit.ParseErrorNode>
-      <message>Unexpected character &apos;#&apos;</message>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>message</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>Matlab test ${name_of_the_test} output:\
+${matlab_log_content}</argument>
+          <start>
+            <offset>2838</offset>
+          </start>
+          <end>
+            <offset>2901</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments/>
       <start>
         <offset>2830</offset>
       </start>
-      <end reference="../start"/>
-    </ru.urururu.cmakeedit.ParseErrorNode>
+      <end>
+        <offset>2902</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.FileElementNode>
+      <comments>
+        <ru.urururu.cmakeedit.CommentNode>
+          <start>
+            <offset>2904</offset>
+          </start>
+          <end>
+            <offset>2954</offset>
+          </end>
+        </ru.urururu.cmakeedit.CommentNode>
+      </comments>
+      <start reference="../comments/ru.urururu.cmakeedit.CommentNode/start"/>
+      <end reference="../comments/ru.urururu.cmakeedit.CommentNode/end"/>
+    </ru.urururu.cmakeedit.FileElementNode>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>if</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>NOT</argument>
+          <start>
+            <offset>2961</offset>
+          </start>
+          <end>
+            <offset>2963</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <children>
+            <ru.urururu.cmakeedit.ArgumentNode>
+              <argument>res</argument>
+              <start>
+                <offset>2966</offset>
+              </start>
+              <end>
+                <offset>2968</offset>
+              </end>
+            </ru.urururu.cmakeedit.ArgumentNode>
+            <ru.urururu.cmakeedit.ArgumentNode>
+              <argument>EQUAL</argument>
+              <start>
+                <offset>2970</offset>
+              </start>
+              <end>
+                <offset>2974</offset>
+              </end>
+            </ru.urururu.cmakeedit.ArgumentNode>
+            <ru.urururu.cmakeedit.ArgumentNode>
+              <argument>0</argument>
+              <start>
+                <offset>2976</offset>
+              </start>
+              <end>
+                <offset>2976</offset>
+              </end>
+            </ru.urururu.cmakeedit.ArgumentNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.ArgumentNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.ArgumentNode[3]/end"/>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments/>
+      <start>
+        <offset>2958</offset>
+      </start>
+      <end>
+        <offset>2978</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>message</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>FATAL_ERROR</argument>
+          <start>
+            <offset>2991</offset>
+          </start>
+          <end>
+            <offset>3001</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.ArgumentNode>
+          <argument>[MATLAB] TEST FAILED</argument>
+          <start>
+            <offset>3003</offset>
+          </start>
+          <end>
+            <offset>3024</offset>
+          </end>
+        </ru.urururu.cmakeedit.ArgumentNode>
+      </arguments>
+      <comments/>
+      <start>
+        <offset>2982</offset>
+      </start>
+      <end>
+        <offset>3026</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.CommandInvocationNode>
+      <commandName>endif</commandName>
+      <arguments/>
+      <comments/>
+      <start>
+        <offset>3028</offset>
+      </start>
+      <end>
+        <offset>3034</offset>
+      </end>
+    </ru.urururu.cmakeedit.CommandInvocationNode>
   </nodes>
 </ru.urururu.cmakeedit.FileNode>

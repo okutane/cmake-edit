@@ -27,4 +27,6 @@ public interface ParseContext {
     void advance();
 
     MetricRegistry getRegistry();
+
+    String getContext(int size);
 }

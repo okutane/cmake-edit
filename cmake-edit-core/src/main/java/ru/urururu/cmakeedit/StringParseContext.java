@@ -44,4 +44,15 @@ public class StringParseContext extends AbstractParseContext {
         }
         position++;
     }
+
+    @Override
+    public String getContext(int size) {
+        int from = position - size / 2;
+        int to = position + size / 2;
+
+        from = Math.max(from, 0);
+        to = Math.min(to, contents.length());
+
+        return contents.substring(from, to);
+    }
 }

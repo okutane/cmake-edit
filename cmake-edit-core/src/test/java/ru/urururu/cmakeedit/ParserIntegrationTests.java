@@ -63,10 +63,11 @@ public class ParserIntegrationTests {
             if (child.isDirectory()) {
                 suite.addTest(createSuite(child, registry));
             } else {
-                suite.addTest(new XMLTestCase(child.getName()) {
+                File source = child;
+                suite.addTest(new XMLTestCase(source.getName()) {
                     @Override
                     protected void runTest() throws Throwable {
-                        String text = new String(Files.readAllBytes(child.toPath()), StandardCharsets.UTF_8);
+                        String text = new String(Files.readAllBytes(source.toPath()), StandardCharsets.UTF_8);
 
                         text = text.replace("\r", "");
 
@@ -78,7 +79,7 @@ public class ParserIntegrationTests {
 
                         String actual = xstream.toXML(result);
 
-                        File expectedFile = new File(child.getAbsolutePath() + ".xml");
+                        File expectedFile = new File(source.getAbsolutePath() + ".xml");
                         String expected;
                         try {
                             expected = new String(Files.readAllBytes(expectedFile.toPath()), StandardCharsets.UTF_8);

@@ -1,8 +1,6 @@
-package ru.urururu.cmakeedit;
+package ru.urururu.cmakeedit.core;
 
 import com.codahale.metrics.MetricRegistry;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  * Created by okutane on 06/07/16.

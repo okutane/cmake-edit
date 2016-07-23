@@ -1,6 +1,5 @@
-package ru.urururu.cmakeedit;
+package ru.urururu.cmakeedit.core;
 
-import java.util.Collections;
 import java.util.List;
 
 /**

@@ -1,4 +1,4 @@
-package ru.urururu.cmakeedit;
+package ru.urururu.cmakeedit.core;
 
 import com.codahale.metrics.ConsoleReporter;
 import com.codahale.metrics.MetricRegistry;

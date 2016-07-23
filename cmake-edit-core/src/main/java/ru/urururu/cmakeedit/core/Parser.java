@@ -1,11 +1,10 @@
-package ru.urururu.cmakeedit;
+package ru.urururu.cmakeedit.core;
 
 import com.codahale.metrics.Timer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class Parser {

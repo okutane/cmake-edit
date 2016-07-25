@@ -5,18 +5,16 @@ import com.codahale.metrics.MetricRegistry;
 /**
  * Created by okutane on 06/07/16.
  */
-public class StringParseContext extends AbstractParseContext {
+public class StringParseContext extends RandomAccessContext {
     private final String contents;
-    private int position;
 
     public StringParseContext(String contents, int start) {
         this(contents, start, new MetricRegistry());
     }
 
     public StringParseContext(String contents, int start, MetricRegistry metricRegistry) {
-        super(metricRegistry);
+        super(metricRegistry, start);
         this.contents = contents;
-        this.position = start;
     }
 
     @Override
@@ -28,47 +26,12 @@ public class StringParseContext extends AbstractParseContext {
     }
 
     @Override
-    public SourceRef position() {
-        return new SourceRef(position);
+    protected String getText(int from, int to) {
+        return contents.substring(from, to);
     }
 
     @Override
-    public void move(SourceRef position) {
-        this.position = position.getOffset();
-    }
-
-    @Override
-    public boolean reachedEnd() {
-        return position == contents.length();
-    }
-
-    @Override
-    public void advance() {
-        if (reachedEnd()) {
-            throw new IllegalStateException("End reached");
-        }
-        position++;
-    }
-
-    @Override
-    public String getContext(int size) {
-        int from = position - size / 2;
-        int to = position + size / 2;
-        String prefix = "";
-        String suffix = "";
-
-        if (from < 0) {
-            from = 0;
-        } else {
-            prefix = "...";
-        }
-
-        if (to > contents.length()) {
-            to = contents.length();
-        } else {
-            suffix = "...";
-        }
-
-        return prefix + contents.substring(from, to) + suffix;
+    protected int getLength() {
+        return contents.length();
     }
 }

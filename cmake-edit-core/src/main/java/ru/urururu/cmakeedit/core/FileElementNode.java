@@ -15,4 +15,12 @@ public class FileElementNode extends Node {
         super (start, end);
         this.comments = comments;
     }
+
+    @Override
+    public void visitAll(NodeVisitor visitor) {
+        visitor.accept(this);
+        for (CommentNode node : comments) {
+            node.visitAll(visitor);
+        }
+    }
 }

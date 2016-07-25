@@ -14,4 +14,12 @@ public class CommandInvocationNode extends FileElementNode {
         this.commandName = commandName;
         this.arguments = arguments;
     }
+
+    @Override
+    public void visitAll(NodeVisitor visitor) {
+        super.visitAll(visitor);
+        for (ArgumentNode argument : arguments) {
+            argument.visitAll(visitor);
+        }
+    }
 }

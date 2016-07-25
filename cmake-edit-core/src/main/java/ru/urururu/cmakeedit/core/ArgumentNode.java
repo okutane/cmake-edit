@@ -32,4 +32,9 @@ public class ArgumentNode extends Node {
         }
         return "arg:" + argument + " from:" + getStart().getOffset() + " to: " + getEnd().getOffset();
     }
+
+    @Override
+    public void visitAll(NodeVisitor visitor) {
+        visitor.accept(this);
+    }
 }

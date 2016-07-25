@@ -28,4 +28,6 @@ public abstract class Node {
     public SourceRef getEnd() {
         return end;
     }
+
+    public abstract void visitAll(NodeVisitor visitor);
 }

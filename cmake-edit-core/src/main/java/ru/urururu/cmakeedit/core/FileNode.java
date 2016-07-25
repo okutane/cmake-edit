@@ -15,4 +15,10 @@ public class FileNode {
     public List<FileElementNode> getNodes() {
         return nodes;
     }
+
+    public void visitAll(NodeVisitor visitor) {
+        for (FileElementNode node : nodes) {
+            node.visitAll(visitor);
+        }
+    }
 }

@@ -14,7 +14,9 @@ import org.custommonkey.xmlunit.XMLTestCase;
 import org.junit.Test;
 
 import java.io.File;
+import java.io.UnsupportedEncodingException;
 import java.net.URL;
+import java.net.URLDecoder;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.NoSuchFileException;
@@ -31,7 +33,11 @@ public class ParserIntegrationTests {
     @Test
     public static TestSuite suite() {
         URL url = ParserIntegrationTests.class.getResource("/integration");
-        ROOT = new File(url.getFile());
+        try {
+            ROOT = new File(URLDecoder.decode(url.getFile(), "UTF-8"));
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
 
         MetricRegistry registry = new MetricRegistry();
 

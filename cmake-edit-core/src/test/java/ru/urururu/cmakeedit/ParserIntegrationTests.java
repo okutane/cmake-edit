@@ -20,6 +20,7 @@ import java.net.URLDecoder;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.NoSuchFileException;
+import java.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -29,6 +30,27 @@ public class ParserIntegrationTests {
     static File ROOT;
     static String SRC_ROOT = System.getProperty("SRC_ROOT");
     static boolean UPDATE = Boolean.getBoolean("AUTO_UPDATE_ON_DIFF");
+    static final double TESTS_THRESHOLD;
+
+    static {
+        double candidate;
+        String testsThreshold = System.getProperty("INTEGRATION_TESTS_THRESHOLD");
+        if (testsThreshold == null) {
+            candidate = 1d;
+        } else {
+            try {
+                candidate = Double.parseDouble(testsThreshold);
+                if (candidate >= 0d && candidate < 1d) {
+                    // can't invert due to bug in intellij.  ¯\_(ツ)_/¯
+                } else {
+                    candidate = 1d;
+                }
+            } catch (NumberFormatException e) {
+                candidate = 1d;
+            }
+        }
+        TESTS_THRESHOLD = candidate;
+    }
 
     @Test
     public static TestSuite suite() {
@@ -68,7 +90,7 @@ public class ParserIntegrationTests {
 
             if (child.isDirectory()) {
                 suite.addTest(createSuite(child, registry));
-            } else {
+            } else if (shouldAdd()) {
                 File source = child;
                 suite.addTest(new XMLTestCase(source.getName()) {
                     @Override
@@ -113,5 +135,9 @@ public class ParserIntegrationTests {
         }
 
         return suite;
+    }
+
+    private static boolean shouldAdd() {
+        return ThreadLocalRandom.current().nextDouble() <= TESTS_THRESHOLD;
     }
 }

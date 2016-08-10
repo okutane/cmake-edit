@@ -1,4 +1,4 @@
-package ru.urururu.cmakeedit;
+package ru.urururu.cmakeedit.core;
 
 /**
  * Created by okutane on 07/07/16.
@@ -28,4 +28,6 @@ public abstract class Node {
     public SourceRef getEnd() {
         return end;
     }
+
+    public abstract void visitAll(NodeVisitor visitor);
 }

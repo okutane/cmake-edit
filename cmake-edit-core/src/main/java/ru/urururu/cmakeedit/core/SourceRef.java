@@ -1,4 +1,4 @@
-package ru.urururu.cmakeedit;
+package ru.urururu.cmakeedit.core;
 
 /**
  * Describes position in the source.

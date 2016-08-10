@@ -1,30 +1,16 @@
-package ru.urururu.cmakeedit;
+package ru.urururu.cmakeedit.core;
 
 import com.codahale.metrics.MetricRegistry;
 
 /**
- * Created by okutane on 06/07/16.
+ * Created by okutane on 07/08/16.
  */
-public class StringParseContext extends AbstractParseContext {
-    private final String contents;
-    private int position;
+public abstract class RandomAccessContext extends AbstractParseContext {
+    protected int position;
 
-    public StringParseContext(String contents, int start) {
-        this(contents, start, new MetricRegistry());
-    }
-
-    public StringParseContext(String contents, int start, MetricRegistry metricRegistry) {
-        super(metricRegistry);
-        this.contents = contents;
+    public RandomAccessContext(MetricRegistry registry, int start) {
+        super(registry);
         this.position = start;
-    }
-
-    @Override
-    public char peek() {
-        if (reachedEnd()) {
-            throw new IllegalStateException("End reached");
-        }
-        return contents.charAt(position);
     }
 
     @Override
@@ -39,7 +25,7 @@ public class StringParseContext extends AbstractParseContext {
 
     @Override
     public boolean reachedEnd() {
-        return position == contents.length();
+        return position == getLength();
     }
 
     @Override
@@ -63,12 +49,16 @@ public class StringParseContext extends AbstractParseContext {
             prefix = "...";
         }
 
-        if (to > contents.length()) {
-            to = contents.length();
+        if (to > getLength()) {
+            to = getLength();
         } else {
             suffix = "...";
         }
 
-        return prefix + contents.substring(from, to) + suffix;
+        return prefix + getText(from, to) + suffix;
     }
+
+    protected abstract String getText(int from, int to);
+
+    protected abstract int getLength();
 }

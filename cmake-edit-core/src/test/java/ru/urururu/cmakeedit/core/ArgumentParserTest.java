@@ -1,4 +1,4 @@
-package ru.urururu.cmakeedit;
+package ru.urururu.cmakeedit.core;
 
 import org.junit.Assert;
 import org.junit.Test;

@@ -1,4 +1,4 @@
-package ru.urururu.cmakeedit;
+package ru.urururu.cmakeedit.core;
 
 import java.util.Collections;
 import java.util.List;
@@ -14,5 +14,13 @@ public class FileElementNode extends Node {
     public FileElementNode(List<CommentNode> comments, SourceRef start, SourceRef end) {
         super (start, end);
         this.comments = comments;
+    }
+
+    @Override
+    public void visitAll(NodeVisitor visitor) {
+        visitor.accept(this);
+        for (CommentNode node : comments) {
+            node.visitAll(visitor);
+        }
     }
 }

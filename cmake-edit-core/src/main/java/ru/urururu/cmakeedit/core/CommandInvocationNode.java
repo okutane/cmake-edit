@@ -1,6 +1,5 @@
-package ru.urururu.cmakeedit;
+package ru.urururu.cmakeedit.core;
 
-import java.util.Collections;
 import java.util.List;
 
 /**
@@ -14,5 +13,13 @@ public class CommandInvocationNode extends FileElementNode {
         super(comments, start, end);
         this.commandName = commandName;
         this.arguments = arguments;
+    }
+
+    @Override
+    public void visitAll(NodeVisitor visitor) {
+        super.visitAll(visitor);
+        for (ArgumentNode argument : arguments) {
+            argument.visitAll(visitor);
+        }
     }
 }

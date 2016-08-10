@@ -1,9 +1,9 @@
-<ru.urururu.cmakeedit.FileNode>
+<ru.urururu.cmakeedit.core.FileNode>
   <nodes>
-    <ru.urururu.cmakeedit.CommandInvocationNode>
+    <ru.urururu.cmakeedit.core.CommandInvocationNode>
       <commandName>set</commandName>
       <arguments>
-        <ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>_compiler_id_version_compute</argument>
           <start>
             <offset>5</offset>
@@ -11,8 +11,8 @@
           <end>
             <offset>32</offset>
           </end>
-        </ru.urururu.cmakeedit.ArgumentNode>
-        <ru.urururu.cmakeedit.ArgumentNode>
+        </ru.urururu.cmakeedit.core.ArgumentNode>
+        <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>
 # define @PREFIX@COMPILER_VERSION_MAJOR @MACRO_DEC@(__clang_major__)
 # define @PREFIX@COMPILER_VERSION_MINOR @MACRO_DEC@(__clang_minor__)
@@ -28,7 +28,7 @@
           <end>
             <offset>441</offset>
           </end>
-        </ru.urururu.cmakeedit.ArgumentNode>
+        </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
       <start>
@@ -37,11 +37,11 @@
       <end>
         <offset>442</offset>
       </end>
-    </ru.urururu.cmakeedit.CommandInvocationNode>
-    <ru.urururu.cmakeedit.CommandInvocationNode>
+    </ru.urururu.cmakeedit.core.CommandInvocationNode>
+    <ru.urururu.cmakeedit.core.CommandInvocationNode>
       <commandName>set</commandName>
       <arguments>
-        <ru.urururu.cmakeedit.ArgumentNode>
+        <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>_compiler_id_simulate</argument>
           <start>
             <offset>449</offset>
@@ -49,8 +49,8 @@
           <end>
             <offset>469</offset>
           </end>
-        </ru.urururu.cmakeedit.ArgumentNode>
-        <ru.urururu.cmakeedit.ArgumentNode>
+        </ru.urururu.cmakeedit.core.ArgumentNode>
+        <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>
 # if defined(_MSC_VER)
 #  define @PREFIX@SIMULATE_ID \&quot;MSVC\&quot;
@@ -61,7 +61,7 @@
           <end>
             <offset>542</offset>
           </end>
-        </ru.urururu.cmakeedit.ArgumentNode>
+        </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
       <start>
@@ -70,6 +70,6 @@
       <end>
         <offset>543</offset>
       </end>
-    </ru.urururu.cmakeedit.CommandInvocationNode>
+    </ru.urururu.cmakeedit.core.CommandInvocationNode>
   </nodes>
-</ru.urururu.cmakeedit.FileNode>
+</ru.urururu.cmakeedit.core.FileNode>

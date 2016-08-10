@@ -1,4 +1,4 @@
-package ru.urururu.cmakeedit;
+package ru.urururu.cmakeedit.core;
 
 import java.util.Collections;
 import java.util.List;
@@ -31,5 +31,10 @@ public class ArgumentNode extends Node {
             return "children:" + children + " from:" + getStart().getOffset() + " to: " + getEnd().getOffset();
         }
         return "arg:" + argument + " from:" + getStart().getOffset() + " to: " + getEnd().getOffset();
+    }
+
+    @Override
+    public void visitAll(NodeVisitor visitor) {
+        visitor.accept(this);
     }
 }

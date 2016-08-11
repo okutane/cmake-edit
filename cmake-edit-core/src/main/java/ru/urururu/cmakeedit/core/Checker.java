@@ -26,8 +26,9 @@ public class Checker {
 
             @Override
             public void accept(CommandInvocationNode node) {
+                List<Node> arguments = node.getArguments();
+
                 if (node.getCommandName().equals("set")) {
-                    List<Node> arguments = node.getArguments();
 
                     if (!arguments.isEmpty()) {
                         ArgumentNode first = (ArgumentNode) arguments.get(0);
@@ -35,6 +36,15 @@ public class Checker {
 
                         if (unused != null) {
                             result.put(unused, "Value replaced");
+                        }
+                    }
+                } else if (node.getCommandName().equals("unset")) {
+                    if (!arguments.isEmpty()) {
+                        ArgumentNode first = (ArgumentNode) arguments.get(0);
+                        SourceRange unused = stores.remove(first.getArgument());
+
+                        if (unused != null) {
+                            result.put(unused, "Value unset");
                         }
                     }
                 }

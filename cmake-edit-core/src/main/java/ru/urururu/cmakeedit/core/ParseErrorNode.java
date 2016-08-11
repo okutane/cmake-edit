@@ -12,4 +12,9 @@ public class ParseErrorNode extends FileElementNode {
         super(Collections.emptyList(), position, position);
         this.message = e.getMessage();
     }
+
+    @Override
+    public void visitAll(NodeVisitor visitor) {
+        visitor.accept(this);
+    }
 }

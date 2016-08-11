@@ -21,6 +21,11 @@ class CmakeTextPane extends JScrollPane implements DocumentListener, NodeVisitor
     private final Style argument;
     private final Style expression;
 
+    private final Highlighter.HighlightPainter warningsHighlighter =
+            new DefaultHighlighter.DefaultHighlightPainter(new Color(127, 127, 0, 50));
+    private final Highlighter.HighlightPainter errorsHighlighter =
+            new DefaultHighlighter.DefaultHighlightPainter(new Color(255, 0, 0, 50));
+
     CmakeTextPane(String text) {
         styledDocument = new DefaultStyledDocument();
 
@@ -66,7 +71,7 @@ class CmakeTextPane extends JScrollPane implements DocumentListener, NodeVisitor
         Map<SourceRange, String> problems = Checker.findUnused(fileNode);
         for (SourceRange sourceRange : problems.keySet()) {
             try {
-                textPane.getHighlighter().addHighlight(sourceRange.getStart().getOffset(), sourceRange.getEnd().getOffset() + 1, new DefaultHighlighter.DefaultHighlightPainter(new Color(127, 127, 0, 50)));
+                textPane.getHighlighter().addHighlight(sourceRange.getStart().getOffset(), sourceRange.getEnd().getOffset() + 1, warningsHighlighter);
             } catch (BadLocationException e) {
                 throw new IllegalStateException(e);
             }
@@ -110,6 +115,16 @@ class CmakeTextPane extends JScrollPane implements DocumentListener, NodeVisitor
     @Override
     public void accept(CommentNode node) {
         colorize(node, comment);
+    }
+
+    @Override
+    public void accept(ParseErrorNode node) {
+        try {
+            // todo node range is close to the error, but not precise. hightlight entire line?
+            textPane.getHighlighter().addHighlight(node.getStart().getOffset(), node.getEnd().getOffset() + 1, errorsHighlighter);
+        } catch (BadLocationException e) {
+            throw new IllegalStateException(e);
+        }
     }
 
     private void colorize(Node node, Style style) {

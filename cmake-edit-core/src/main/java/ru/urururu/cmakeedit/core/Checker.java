@@ -44,6 +44,12 @@ public class Checker {
             public void accept(ExpressionNode node) {
 
             }
+
+            @Override
+            public void accept(ParseErrorNode node) {
+                // can't say much about what after that node.
+                stores.clear();
+            }
         });
 
         stores.forEach((var, range) -> result.put(range, "Value not used"));

@@ -9,7 +9,7 @@ import java.util.List;
 public class FileElementNode extends Node {
     public static final FileElementNode EMPTY = new FileElementNode(Collections.emptyList(), null, null);
 
-    private List<CommentNode> comments;
+    protected List<CommentNode> comments;
 
     public FileElementNode(List<CommentNode> comments, SourceRef start, SourceRef end) {
         super (start, end);
@@ -18,7 +18,6 @@ public class FileElementNode extends Node {
 
     @Override
     public void visitAll(NodeVisitor visitor) {
-        visitor.accept(this);
         for (CommentNode node : comments) {
             node.visitAll(visitor);
         }

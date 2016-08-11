@@ -40,4 +40,8 @@ public class ArgumentNode extends Node {
             children.forEach(n -> n.visitAll(visitor));
         }
     }
+
+    public String getArgument() {
+        return argument;
+    }
 }

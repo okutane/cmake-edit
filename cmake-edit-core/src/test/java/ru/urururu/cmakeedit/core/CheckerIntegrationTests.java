@@ -6,11 +6,11 @@ import org.junit.Test;
 import java.util.function.Function;
 
 /**
- * Created by okutane on 07/07/16.
+ * Created by okutane on 11/08/16.
  */
-public class ParserIntegrationTests {
+public class CheckerIntegrationTests {
     @Test
     public static TestSuite suite() {
-        return TestHelper.buildPack("/integration", Function.identity());
+        return TestHelper.buildPack("/checkers/unused", ast -> Checker.findUnused(ast));
     }
 }

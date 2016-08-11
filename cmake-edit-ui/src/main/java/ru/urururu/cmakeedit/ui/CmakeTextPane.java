@@ -7,11 +7,12 @@ import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import javax.swing.text.*;
 import java.awt.*;
+import java.util.Map;
 
 /**
  * Created by okutane on 07/08/16.
  */
-public class CmakeTextPane extends JScrollPane implements DocumentListener, NodeVisitor {
+class CmakeTextPane extends JScrollPane implements DocumentListener, NodeVisitor {
     private final JTextPane textPane;
 
     private final DefaultStyledDocument styledDocument;
@@ -20,7 +21,7 @@ public class CmakeTextPane extends JScrollPane implements DocumentListener, Node
     private final Style argument;
     private final Style expression;
 
-    public CmakeTextPane(String text) {
+    CmakeTextPane(String text) {
         styledDocument = new DefaultStyledDocument();
 
         Style parent = styledDocument.addStyle("parent", null);
@@ -49,13 +50,27 @@ public class CmakeTextPane extends JScrollPane implements DocumentListener, Node
     }
 
     private void parseAll() {
+        styledDocument.setCharacterAttributes(0, styledDocument.getLength(), normal, true);
+        textPane.getHighlighter().removeAllHighlights();
+
         FileNode fileNode;
         try {
             fileNode = Parser.parse(new DocumentParseContext(styledDocument), Parser.ErrorHandling.NodesBefore);
         } catch (ParseException e) {
-            throw new IllegalStateException(e);
+            // can't be thrown since we're using Parser.ErrorHandling.NodesBefore
+            return;
         }
+
         fileNode.visitAll(CmakeTextPane.this);
+
+        Map<SourceRange, String> problems = Checker.findUnused(fileNode);
+        for (SourceRange sourceRange : problems.keySet()) {
+            try {
+                textPane.getHighlighter().addHighlight(sourceRange.getStart().getOffset(), sourceRange.getEnd().getOffset() + 1, new DefaultHighlighter.DefaultHighlightPainter(new Color(127, 127, 0, 50)));
+            } catch (BadLocationException e) {
+                throw new IllegalStateException(e);
+            }
+        }
     }
 
     @Override
@@ -78,7 +93,7 @@ public class CmakeTextPane extends JScrollPane implements DocumentListener, Node
     }
 
     @Override
-    public void accept(FileElementNode node) {
+    public void accept(CommandInvocationNode node) {
         colorize(node, normal);
     }
 

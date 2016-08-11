@@ -4,6 +4,7 @@ import com.codahale.metrics.Timer;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -43,14 +44,14 @@ abstract class ArgumentParser {
      * separated_arguments ::=  separation+ argument? | separation* '(' arguments ')'
      * separation          ::=  space | line_ending
      */
-    static List<ArgumentNode> parseArguments(ParseContext ctx, List<CommentNode> comments) throws ParseException {
+    static List<Node> parseArguments(ParseContext ctx, List<CommentNode> comments) throws ParseException {
         char c = ctx.peek();
         if (c != '(') {
             throw new UnexpectedCharacterException(ctx);
         }
         ctx.advance();
 
-        List<ArgumentNode> arguments = new ArrayList<>();
+        List<Node> arguments = new ArrayList<>();
 
         do {
             Parser.skipSpaces(ctx);
@@ -65,7 +66,7 @@ abstract class ArgumentParser {
             } else if (c == '#') {
                 comments.add(CommentsDetector.parseComment(ctx));
             } else if (c == '(') {
-                List<ArgumentNode> nested = parseArguments(ctx, comments);
+                List<Node> nested = parseArguments(ctx, comments);
 
                 if (nested.isEmpty()) {
                     arguments.add(ArgumentNode.EMPTY);
@@ -151,7 +152,7 @@ abstract class ArgumentParser {
                     if (firstBraceSeen && closeLen == len) {
                         SourceRef end = ctx.position();
                         ctx.advance();
-                        return new ArgumentNode("", start, end);
+                        return new ArgumentNode("", Collections.emptyList(), start, end);
                     }
                     firstBraceSeen = true;
                     closeLen = 0;
@@ -184,6 +185,8 @@ abstract class ArgumentParser {
 
         @Override
         ArgumentNode parseInternal(ParseContext ctx) throws ParseException {
+            List<Node> expressions = new ArrayList<>();
+
             SourceRef start = ctx.position();
             SourceRef end;
             StringBuilder sb = new StringBuilder();
@@ -226,7 +229,7 @@ abstract class ArgumentParser {
                     prev = 0;
                 } else if (cur == '"')  {
                     ctx.advance();
-                    return new ArgumentNode(sb.toString(), start, end);
+                    return new ArgumentNode(sb.toString(), expressions, start, end);
                 } else {
                     sb.append(cur);
                     prev = cur;
@@ -255,6 +258,8 @@ abstract class ArgumentParser {
 
         @Override
         ArgumentNode parseInternal(ParseContext ctx) throws ParseException {
+            List<Node> expressions = new ArrayList<>();
+
             SourceRef start = ctx.position();
             SourceRef end = start;
             StringBuilder sb = new StringBuilder();
@@ -263,6 +268,7 @@ abstract class ArgumentParser {
             while (!ctx.reachedEnd()) {
                 char cur = ctx.peek();
                 if (prev == '\\') {
+                    // escape_sequence completion
                     switch (cur) {
                         case '(':
                         case ')':
@@ -293,7 +299,11 @@ abstract class ArgumentParser {
                     }
                     prev = 0;
                 } else if (cur == ' ' || cur == '\t' || cur == '"' || cur == '(' || cur == ')' || cur == '#')  {
-                    return new ArgumentNode(sb.toString(), start, end);
+                    return new ArgumentNode(sb.toString(), expressions, start, end);
+                } else if (cur == '$') {
+                    ExpressionNode expression = ExpressionParser.parseExpression(ctx);
+                    expressions.add(expression);
+                    sb.append(expression);
                 } else {
                     sb.append(cur);
                     prev = cur;

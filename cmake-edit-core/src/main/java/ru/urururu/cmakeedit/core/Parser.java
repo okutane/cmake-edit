@@ -124,7 +124,7 @@ public class Parser {
         }
 
         List<CommentNode> comments = new ArrayList<>();
-        List<ArgumentNode> arguments = ArgumentParser.parseArguments(ctx, comments);
+        List<Node> arguments = ArgumentParser.parseArguments(ctx, comments);
         SourceRef end = ctx.position();
         ctx.advance();
 

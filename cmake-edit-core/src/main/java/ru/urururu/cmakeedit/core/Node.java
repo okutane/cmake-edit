@@ -1,5 +1,7 @@
 package ru.urururu.cmakeedit.core;
 
+import java.util.List;
+
 /**
  * Created by okutane on 07/07/16.
  */
@@ -27,6 +29,10 @@ public abstract class Node {
      */
     public SourceRef getEnd() {
         return end;
+    }
+
+    protected List<Node> maskEmpty(List<Node> nested) {
+        return nested.isEmpty() ? null : nested;
     }
 
     public abstract void visitAll(NodeVisitor visitor);

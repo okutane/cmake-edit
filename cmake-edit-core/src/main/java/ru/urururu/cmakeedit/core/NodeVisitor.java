@@ -9,4 +9,6 @@ public interface NodeVisitor {
     void accept(CommentNode node);
 
     void accept(FileElementNode node);
+
+    void accept(ExpressionNode node);
 }

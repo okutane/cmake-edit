@@ -18,6 +18,7 @@ public class CmakeTextPane extends JScrollPane implements DocumentListener, Node
     private final Style normal;
     private final Style comment;
     private final Style argument;
+    private final Style expression;
 
     public CmakeTextPane(String text) {
         styledDocument = new DefaultStyledDocument();
@@ -32,6 +33,9 @@ public class CmakeTextPane extends JScrollPane implements DocumentListener, Node
 
         argument = styledDocument.addStyle("argument", parent);
         StyleConstants.setForeground(argument, new Color(13, 119, 0));
+
+        expression = styledDocument.addStyle("expression", parent);
+        StyleConstants.setForeground(expression, new Color(0, 119, 240));
 
         textPane = new JTextPane(styledDocument);
         setViewportView(textPane);
@@ -81,6 +85,11 @@ public class CmakeTextPane extends JScrollPane implements DocumentListener, Node
     @Override
     public void accept(ArgumentNode node) {
         colorize(node, argument);
+    }
+
+    @Override
+    public void accept(ExpressionNode node) {
+        colorize(node, expression);
     }
 
     @Override

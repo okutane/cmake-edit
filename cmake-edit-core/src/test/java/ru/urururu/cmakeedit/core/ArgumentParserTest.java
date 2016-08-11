@@ -36,8 +36,18 @@ public class ArgumentParserTest {
         );
     }
 
-    private ArgumentNode arg(String argument, int from, int to) {
-        return new ArgumentNode(argument, new SourceRef(from), new SourceRef(to));
+    @Test
+    public void testExpressions() throws ParseException {
+        checkArguments("(${a})",
+                arg("${a}", 1, 4, expr("${a}", 1, 4)));
+    }
+
+    private ArgumentNode arg(String argument, int from, int to, Node... expressions) {
+        return new ArgumentNode(argument, Arrays.asList(expressions), new SourceRef(from), new SourceRef(to));
+    }
+
+    private ExpressionNode expr(String expr, int from, int to, Node... nested) {
+        return new ExpressionNode(expr, Arrays.asList(nested), new SourceRef(from), new SourceRef(to));
     }
 
     private ArgumentNode nested(int from, int to, ArgumentNode... children) {
@@ -45,12 +55,12 @@ public class ArgumentParserTest {
     }
 
     private void checkArguments(String source, ArgumentNode... expected) throws ParseException {
-        List<ArgumentNode> expectedList = Arrays.asList(expected);
-        List<ArgumentNode> actualList = parseString(source);
+        List<Node> expectedList = Arrays.asList(expected);
+        List<Node> actualList = parseString(source);
         Assert.assertEquals("for source: " + source, expectedList.toString(), actualList.toString());
     }
 
-    private List<ArgumentNode> parseString(String source) throws ParseException {
+    private List<Node> parseString(String source) throws ParseException {
         StringParseContext ctx = new StringParseContext(source, 0);
         return ArgumentParser.parseArguments(ctx, Collections.emptyList());
     }

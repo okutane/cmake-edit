@@ -39,9 +39,22 @@ public class ArgumentParserTest {
     @Test
     public void testExpressions() throws ParseException {
         checkArguments("(${a})",
-                arg("${a}", 1, 4, expr("${a}", 1, 4)));
+                arg("${a}", 1, 4, expr("${a}", 1, 4))
+        );
+        //checkArguments("(${a})",
+        //        arg("${a}", 1, 4, expr("${a}", 1, 4)));
         checkArguments("($ENV{a})",
-                arg("$ENV{a}", 1, 7, expr("$ENV{a}", 1, 7)));
+                arg("$ENV{a}", 1, 7, expr("$ENV{a}", 1, 7))
+        );
+    }
+
+    @Test
+    public void testLogicalExpression() throws ParseException {
+        checkArguments("($<$<BOOL:$<CONFIGURATION>>:_$<CONFIGURATION>>)",
+                arg("$<$<BOOL:$<CONFIGURATION>>:_$<CONFIGURATION>>", 1, 45,
+                        expr("$<$<BOOL:$<CONFIGURATION>>:_$<CONFIGURATION>>", 1, 45)
+                )
+        );
     }
 
     private ArgumentNode arg(String argument, int from, int to, Node... expressions) {

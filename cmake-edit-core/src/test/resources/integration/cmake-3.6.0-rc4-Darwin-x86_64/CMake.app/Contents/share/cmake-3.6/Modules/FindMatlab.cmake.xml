@@ -15332,15 +15332,26 @@
 </argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>$&lt;TARGET_FILE_DIR:${${prefix}_NAME}</expression>
+              <expression>$&lt;TARGET_FILE_DIR:${${prefix}_NAME}&gt;</expression>
               <nested>
                 <ru.urururu.cmakeedit.core.ExpressionNode>
-                  <expression>${prefix}</expression>
+                  <expression>${${prefix}_NAME}</expression>
+                  <nested>
+                    <ru.urururu.cmakeedit.core.ExpressionNode>
+                      <expression>${prefix}</expression>
+                      <start>
+                        <offset>29338</offset>
+                      </start>
+                      <end>
+                        <offset>29346</offset>
+                      </end>
+                    </ru.urururu.cmakeedit.core.ExpressionNode>
+                  </nested>
                   <start>
-                    <offset>29338</offset>
+                    <offset>29336</offset>
                   </start>
                   <end>
-                    <offset>29346</offset>
+                    <offset>29352</offset>
                   </end>
                 </ru.urururu.cmakeedit.core.ExpressionNode>
               </nested>
@@ -15348,7 +15359,7 @@
                 <offset>29318</offset>
               </start>
               <end>
-                <offset>29352</offset>
+                <offset>29353</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
             <ru.urururu.cmakeedit.core.ExpressionNode>

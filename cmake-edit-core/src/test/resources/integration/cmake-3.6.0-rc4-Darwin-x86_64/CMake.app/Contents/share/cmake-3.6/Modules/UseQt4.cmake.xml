@@ -358,18 +358,87 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>$&lt;$&lt;NOT:$&lt;CONFIG:Debug&gt;&gt;:QT_NO_DEBUG&gt;)
-
-if(QT_INCLUDE_DIRS_NO_SYSTEM)
-  include_directories(${QT_INCLUDE_DIR}</argument>
+          <argument>$&lt;$&lt;NOT:$&lt;CONFIG:Debug&gt;&gt;:QT_NO_DEBUG&gt;</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>$&lt;$&lt;NOT:$&lt;CONFIG:Debug&gt;&gt;:QT_NO_DEBUG&gt;)
-
-if(QT_INCLUDE_DIRS_NO_SYSTEM)
-  include_directories(${QT_INCLUDE_DIR}</expression>
+              <expression>$&lt;$&lt;NOT:$&lt;CONFIG:Debug&gt;&gt;:QT_NO_DEBUG&gt;</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ExpressionNode>
+                  <expression>$&lt;NOT:$&lt;CONFIG:Debug&gt;&gt;</expression>
+                  <nested>
+                    <ru.urururu.cmakeedit.core.ExpressionNode>
+                      <expression>$&lt;CONFIG:Debug&gt;</expression>
+                      <start>
+                        <offset>935</offset>
+                      </start>
+                      <end>
+                        <offset>949</offset>
+                      </end>
+                    </ru.urururu.cmakeedit.core.ExpressionNode>
+                  </nested>
+                  <start>
+                    <offset>929</offset>
+                  </start>
+                  <end>
+                    <offset>950</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ExpressionNode>
+              </nested>
               <start>
                 <offset>927</offset>
+              </start>
+              <end>
+                <offset>963</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
+          <start>
+            <offset>927</offset>
+          </start>
+          <end>
+            <offset>963</offset>
+          </end>
+        </ru.urururu.cmakeedit.core.ArgumentNode>
+      </arguments>
+      <comments/>
+      <start>
+        <offset>868</offset>
+      </start>
+      <end>
+        <offset>964</offset>
+      </end>
+    </ru.urururu.cmakeedit.core.CommandInvocationNode>
+    <ru.urururu.cmakeedit.core.CommandInvocationNode>
+      <commandName>if</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.core.ArgumentNode>
+          <argument>QT_INCLUDE_DIRS_NO_SYSTEM</argument>
+          <start>
+            <offset>970</offset>
+          </start>
+          <end>
+            <offset>994</offset>
+          </end>
+        </ru.urururu.cmakeedit.core.ArgumentNode>
+      </arguments>
+      <comments/>
+      <start>
+        <offset>967</offset>
+      </start>
+      <end>
+        <offset>995</offset>
+      </end>
+    </ru.urururu.cmakeedit.core.CommandInvocationNode>
+    <ru.urururu.cmakeedit.core.CommandInvocationNode>
+      <commandName>include_directories</commandName>
+      <arguments>
+        <ru.urururu.cmakeedit.core.ArgumentNode>
+          <argument>${QT_INCLUDE_DIR}</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${QT_INCLUDE_DIR}</expression>
+              <start>
+                <offset>1019</offset>
               </start>
               <end>
                 <offset>1035</offset>
@@ -377,7 +446,7 @@ if(QT_INCLUDE_DIRS_NO_SYSTEM)
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
-            <offset>927</offset>
+            <offset>1019</offset>
           </start>
           <end>
             <offset>1035</offset>
@@ -386,7 +455,7 @@ if(QT_INCLUDE_DIRS_NO_SYSTEM)
       </arguments>
       <comments/>
       <start>
-        <offset>868</offset>
+        <offset>999</offset>
       </start>
       <end>
         <offset>1036</offset>

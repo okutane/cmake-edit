@@ -15,8 +15,17 @@ public class ExpressionParser {
         sb.append(ctx.peek());
         ctx.advance();
 
-        if (ctx.peek() != '{') {
-            throw new UnexpectedCharacterException(ctx);
+        StringBuilder variableSpace = new StringBuilder();
+        while (!ctx.reachedEnd() && ctx.peek() != '{') {
+            // we may want to save variableSpace as a separate field in ExpressionParser.
+            variableSpace.append(ctx.peek());
+            ctx.advance();
+        }
+
+        sb.append(variableSpace);
+
+        if (ctx.reachedEnd()) {
+            throw new ParseException(ctx, "Unexpected end of source");
         }
 
         sb.append(ctx.peek());

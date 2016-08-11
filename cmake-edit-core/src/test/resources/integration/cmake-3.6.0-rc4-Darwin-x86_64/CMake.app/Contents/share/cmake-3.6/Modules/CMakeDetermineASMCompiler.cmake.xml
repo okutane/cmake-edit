@@ -182,9 +182,17 @@
       <commandName>include</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{CMAKE_ROOT}/Modules/CMakeDetermineCompiler.cmake</argument>
+          <argument>${CMAKE_ROOT}/Modules/CMakeDetermineCompiler.cmake</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${CMAKE_ROOT}</expression>
+              <start>
+                <offset>667</offset>
+              </start>
+              <end>
+                <offset>679</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>667</offset>
@@ -215,9 +223,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_ASMnull{ASM_DIALECT}_COMPILER</argument>
+          <argument>CMAKE_ASM${ASM_DIALECT}_COMPILER</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${ASM_DIALECT}</expression>
+              <start>
+                <offset>736</offset>
+              </start>
+              <end>
+                <offset>749</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>727</offset>
@@ -262,10 +278,28 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>nullENV{ASMnull{ASM_DIALECT}}</argument>
+          <argument>$ENV{ASM${ASM_DIALECT}}</argument>
           <children>
-            <null/>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>$ENV{ASM${ASM_DIALECT}}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ExpressionNode>
+                  <expression>${ASM_DIALECT}</expression>
+                  <start>
+                    <offset>818</offset>
+                  </start>
+                  <end>
+                    <offset>831</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ExpressionNode>
+              </nested>
+              <start>
+                <offset>810</offset>
+              </start>
+              <end>
+                <offset>832</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>810</offset>
@@ -305,9 +339,17 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_ASMnull{ASM_DIALECT}_COMPILER_INIT</argument>
+          <argument>CMAKE_ASM${ASM_DIALECT}_COMPILER_INIT</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${ASM_DIALECT}</expression>
+              <start>
+                <offset>864</offset>
+              </start>
+              <end>
+                <offset>877</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>855</offset>
@@ -687,10 +729,18 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_ASMnull{ASM_DIALECT}_COMPILER_LIST
+          <argument>CMAKE_ASM${ASM_DIALECT}_COMPILER_LIST
 </argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${ASM_DIALECT}</expression>
+              <start>
+                <offset>1515</offset>
+              </start>
+              <end>
+                <offset>1528</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>1506</offset>
@@ -700,9 +750,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{_CMAKE_TOOLCHAIN_PREFIX}cc</argument>
+          <argument>${_CMAKE_TOOLCHAIN_PREFIX}cc</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${_CMAKE_TOOLCHAIN_PREFIX}</expression>
+              <start>
+                <offset>1557</offset>
+              </start>
+              <end>
+                <offset>1582</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>1557</offset>
@@ -712,9 +770,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{_CMAKE_TOOLCHAIN_PREFIX}gcc</argument>
+          <argument>${_CMAKE_TOOLCHAIN_PREFIX}gcc</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${_CMAKE_TOOLCHAIN_PREFIX}</expression>
+              <start>
+                <offset>1587</offset>
+              </start>
+              <end>
+                <offset>1612</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>1587</offset>
@@ -761,9 +827,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{_CMAKE_TOOLCHAIN_PREFIX}c++</argument>
+          <argument>${_CMAKE_TOOLCHAIN_PREFIX}c++</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${_CMAKE_TOOLCHAIN_PREFIX}</expression>
+              <start>
+                <offset>1641</offset>
+              </start>
+              <end>
+                <offset>1666</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>1641</offset>
@@ -773,9 +847,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{_CMAKE_TOOLCHAIN_PREFIX}g++</argument>
+          <argument>${_CMAKE_TOOLCHAIN_PREFIX}g++</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${_CMAKE_TOOLCHAIN_PREFIX}</expression>
+              <start>
+                <offset>1671</offset>
+              </start>
+              <end>
+                <offset>1696</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>1671</offset>
@@ -889,9 +971,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_ASMnull{ASM_DIALECT}_COMPILER_INIT</argument>
+          <argument>CMAKE_ASM${ASM_DIALECT}_COMPILER_INIT</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${ASM_DIALECT}</expression>
+              <start>
+                <offset>1808</offset>
+              </start>
+              <end>
+                <offset>1821</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>1799</offset>
@@ -919,9 +1009,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_ASMnull{ASM_DIALECT}_COMPILER_LIST</argument>
+          <argument>CMAKE_ASM${ASM_DIALECT}_COMPILER_LIST</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${ASM_DIALECT}</expression>
+              <start>
+                <offset>1855</offset>
+              </start>
+              <end>
+                <offset>1868</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>1846</offset>
@@ -1009,9 +1107,17 @@
       <commandName>_cmake_find_compiler</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>ASMnull{ASM_DIALECT}</argument>
+          <argument>ASM${ASM_DIALECT}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${ASM_DIALECT}</expression>
+              <start>
+                <offset>2082</offset>
+              </start>
+              <end>
+                <offset>2095</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>2079</offset>
@@ -1044,9 +1150,17 @@
       <commandName>_cmake_find_compiler_path</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>ASMnull{ASM_DIALECT}</argument>
+          <argument>ASM${ASM_DIALECT}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${ASM_DIALECT}</expression>
+              <start>
+                <offset>2137</offset>
+              </start>
+              <end>
+                <offset>2150</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>2134</offset>
@@ -1079,9 +1193,17 @@
       <commandName>mark_as_advanced</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_ASMnull{ASM_DIALECT}_COMPILER</argument>
+          <argument>CMAKE_ASM${ASM_DIALECT}_COMPILER</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${ASM_DIALECT}</expression>
+              <start>
+                <offset>2187</offset>
+              </start>
+              <end>
+                <offset>2200</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>2178</offset>
@@ -1192,9 +1314,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_ASMnull{ASM_DIALECT}_COMPILER_ID</argument>
+          <argument>CMAKE_ASM${ASM_DIALECT}_COMPILER_ID</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${ASM_DIALECT}</expression>
+              <start>
+                <offset>2370</offset>
+              </start>
+              <end>
+                <offset>2383</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>2361</offset>
@@ -1239,9 +1369,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_ASMnull{ASM_DIALECT}_COMPILER_ID_VENDORS</argument>
+          <argument>CMAKE_ASM${ASM_DIALECT}_COMPILER_ID_VENDORS</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${ASM_DIALECT}</expression>
+              <start>
+                <offset>2486</offset>
+              </start>
+              <end>
+                <offset>2499</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>2477</offset>
@@ -1272,9 +1410,17 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_ASMnull{ASM_DIALECT}_COMPILER_ID_VENDOR_FLAGS_GNU</argument>
+          <argument>CMAKE_ASM${ASM_DIALECT}_COMPILER_ID_VENDOR_FLAGS_GNU</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${ASM_DIALECT}</expression>
+              <start>
+                <offset>2542</offset>
+              </start>
+              <end>
+                <offset>2555</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>2533</offset>
@@ -1305,9 +1451,17 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_ASMnull{ASM_DIALECT}_COMPILER_ID_VENDOR_REGEX_GNU</argument>
+          <argument>CMAKE_ASM${ASM_DIALECT}_COMPILER_ID_VENDOR_REGEX_GNU</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${ASM_DIALECT}</expression>
+              <start>
+                <offset>2614</offset>
+              </start>
+              <end>
+                <offset>2627</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>2605</offset>
@@ -1347,9 +1501,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_ASMnull{ASM_DIALECT}_COMPILER_ID_VENDORS</argument>
+          <argument>CMAKE_ASM${ASM_DIALECT}_COMPILER_ID_VENDORS</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${ASM_DIALECT}</expression>
+              <start>
+                <offset>2734</offset>
+              </start>
+              <end>
+                <offset>2747</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>2725</offset>
@@ -1380,9 +1542,17 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_ASMnull{ASM_DIALECT}_COMPILER_ID_VENDOR_FLAGS_HP</argument>
+          <argument>CMAKE_ASM${ASM_DIALECT}_COMPILER_ID_VENDOR_FLAGS_HP</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${ASM_DIALECT}</expression>
+              <start>
+                <offset>2789</offset>
+              </start>
+              <end>
+                <offset>2802</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>2780</offset>
@@ -1413,9 +1583,17 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_ASMnull{ASM_DIALECT}_COMPILER_ID_VENDOR_REGEX_HP</argument>
+          <argument>CMAKE_ASM${ASM_DIALECT}_COMPILER_ID_VENDOR_REGEX_HP</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${ASM_DIALECT}</expression>
+              <start>
+                <offset>2853</offset>
+              </start>
+              <end>
+                <offset>2866</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>2844</offset>
@@ -1455,9 +1633,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_ASMnull{ASM_DIALECT}_COMPILER_ID_VENDORS</argument>
+          <argument>CMAKE_ASM${ASM_DIALECT}_COMPILER_ID_VENDORS</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${ASM_DIALECT}</expression>
+              <start>
+                <offset>2928</offset>
+              </start>
+              <end>
+                <offset>2941</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>2919</offset>
@@ -1488,9 +1674,17 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_ASMnull{ASM_DIALECT}_COMPILER_ID_VENDOR_FLAGS_Intel</argument>
+          <argument>CMAKE_ASM${ASM_DIALECT}_COMPILER_ID_VENDOR_FLAGS_Intel</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${ASM_DIALECT}</expression>
+              <start>
+                <offset>2986</offset>
+              </start>
+              <end>
+                <offset>2999</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>2977</offset>
@@ -1521,9 +1715,17 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_ASMnull{ASM_DIALECT}_COMPILER_ID_VENDOR_REGEX_Intel</argument>
+          <argument>CMAKE_ASM${ASM_DIALECT}_COMPILER_ID_VENDOR_REGEX_Intel</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${ASM_DIALECT}</expression>
+              <start>
+                <offset>3060</offset>
+              </start>
+              <end>
+                <offset>3073</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>3051</offset>
@@ -1563,9 +1765,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_ASMnull{ASM_DIALECT}_COMPILER_ID_VENDORS</argument>
+          <argument>CMAKE_ASM${ASM_DIALECT}_COMPILER_ID_VENDORS</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${ASM_DIALECT}</expression>
+              <start>
+                <offset>3139</offset>
+              </start>
+              <end>
+                <offset>3152</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>3130</offset>
@@ -1596,9 +1806,17 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_ASMnull{ASM_DIALECT}_COMPILER_ID_VENDOR_FLAGS_SunPro</argument>
+          <argument>CMAKE_ASM${ASM_DIALECT}_COMPILER_ID_VENDOR_FLAGS_SunPro</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${ASM_DIALECT}</expression>
+              <start>
+                <offset>3198</offset>
+              </start>
+              <end>
+                <offset>3211</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>3189</offset>
@@ -1629,9 +1847,17 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_ASMnull{ASM_DIALECT}_COMPILER_ID_VENDOR_REGEX_SunPro</argument>
+          <argument>CMAKE_ASM${ASM_DIALECT}_COMPILER_ID_VENDOR_REGEX_SunPro</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${ASM_DIALECT}</expression>
+              <start>
+                <offset>3266</offset>
+              </start>
+              <end>
+                <offset>3279</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>3257</offset>
@@ -1671,9 +1897,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_ASMnull{ASM_DIALECT}_COMPILER_ID_VENDORS</argument>
+          <argument>CMAKE_ASM${ASM_DIALECT}_COMPILER_ID_VENDORS</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${ASM_DIALECT}</expression>
+              <start>
+                <offset>3346</offset>
+              </start>
+              <end>
+                <offset>3359</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>3337</offset>
@@ -1704,9 +1938,17 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_ASMnull{ASM_DIALECT}_COMPILER_ID_VENDOR_FLAGS_XL</argument>
+          <argument>CMAKE_ASM${ASM_DIALECT}_COMPILER_ID_VENDOR_FLAGS_XL</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${ASM_DIALECT}</expression>
+              <start>
+                <offset>3401</offset>
+              </start>
+              <end>
+                <offset>3414</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>3392</offset>
@@ -1737,9 +1979,17 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_ASMnull{ASM_DIALECT}_COMPILER_ID_VENDOR_REGEX_XL</argument>
+          <argument>CMAKE_ASM${ASM_DIALECT}_COMPILER_ID_VENDOR_REGEX_XL</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${ASM_DIALECT}</expression>
+              <start>
+                <offset>3472</offset>
+              </start>
+              <end>
+                <offset>3485</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>3463</offset>
@@ -1779,9 +2029,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_ASMnull{ASM_DIALECT}_COMPILER_ID_VENDORS</argument>
+          <argument>CMAKE_ASM${ASM_DIALECT}_COMPILER_ID_VENDORS</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${ASM_DIALECT}</expression>
+              <start>
+                <offset>3547</offset>
+              </start>
+              <end>
+                <offset>3560</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>3538</offset>
@@ -1812,9 +2070,17 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_ASMnull{ASM_DIALECT}_COMPILER_ID_VENDOR_FLAGS_MSVC</argument>
+          <argument>CMAKE_ASM${ASM_DIALECT}_COMPILER_ID_VENDOR_FLAGS_MSVC</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${ASM_DIALECT}</expression>
+              <start>
+                <offset>3604</offset>
+              </start>
+              <end>
+                <offset>3617</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>3595</offset>
@@ -1845,9 +2111,17 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_ASMnull{ASM_DIALECT}_COMPILER_ID_VENDOR_REGEX_MSVC</argument>
+          <argument>CMAKE_ASM${ASM_DIALECT}_COMPILER_ID_VENDOR_REGEX_MSVC</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${ASM_DIALECT}</expression>
+              <start>
+                <offset>3670</offset>
+              </start>
+              <end>
+                <offset>3683</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>3661</offset>
@@ -1887,9 +2161,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_ASMnull{ASM_DIALECT}_COMPILER_ID_VENDORS</argument>
+          <argument>CMAKE_ASM${ASM_DIALECT}_COMPILER_ID_VENDORS</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${ASM_DIALECT}</expression>
+              <start>
+                <offset>3752</offset>
+              </start>
+              <end>
+                <offset>3765</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>3743</offset>
@@ -1920,9 +2202,17 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_ASMnull{ASM_DIALECT}_COMPILER_ID_VENDOR_FLAGS_TI</argument>
+          <argument>CMAKE_ASM${ASM_DIALECT}_COMPILER_ID_VENDOR_FLAGS_TI</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${ASM_DIALECT}</expression>
+              <start>
+                <offset>3807</offset>
+              </start>
+              <end>
+                <offset>3820</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>3798</offset>
@@ -1953,9 +2243,17 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_ASMnull{ASM_DIALECT}_COMPILER_ID_VENDOR_REGEX_TI</argument>
+          <argument>CMAKE_ASM${ASM_DIALECT}_COMPILER_ID_VENDOR_REGEX_TI</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${ASM_DIALECT}</expression>
+              <start>
+                <offset>3871</offset>
+              </start>
+              <end>
+                <offset>3884</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>3862</offset>
@@ -1995,9 +2293,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_ASMnull{ASM_DIALECT}_COMPILER_ID_VENDORS</argument>
+          <argument>CMAKE_ASM${ASM_DIALECT}_COMPILER_ID_VENDORS</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${ASM_DIALECT}</expression>
+              <start>
+                <offset>3959</offset>
+              </start>
+              <end>
+                <offset>3972</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>3950</offset>
@@ -2037,9 +2343,17 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_ASMnull{ASM_DIALECT}_COMPILER_ID_VENDOR_FLAGS_IAR</argument>
+          <argument>CMAKE_ASM${ASM_DIALECT}_COMPILER_ID_VENDOR_FLAGS_IAR</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${ASM_DIALECT}</expression>
+              <start>
+                <offset>4018</offset>
+              </start>
+              <end>
+                <offset>4031</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>4009</offset>
@@ -2061,9 +2375,17 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_ASMnull{ASM_DIALECT}_COMPILER_ID_VENDOR_REGEX_IAR</argument>
+          <argument>CMAKE_ASM${ASM_DIALECT}_COMPILER_ID_VENDOR_REGEX_IAR</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${ASM_DIALECT}</expression>
+              <start>
+                <offset>4079</offset>
+              </start>
+              <end>
+                <offset>4092</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>4070</offset>
@@ -2103,9 +2425,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_ASMnull{ASM_DIALECT}_COMPILER_ID_VENDORS</argument>
+          <argument>CMAKE_ASM${ASM_DIALECT}_COMPILER_ID_VENDORS</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${ASM_DIALECT}</expression>
+              <start>
+                <offset>4164</offset>
+              </start>
+              <end>
+                <offset>4177</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>4155</offset>
@@ -2136,9 +2466,17 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_ASMnull{ASM_DIALECT}_COMPILER_ID_VENDOR_FLAGS_ARMCC</argument>
+          <argument>CMAKE_ASM${ASM_DIALECT}_COMPILER_ID_VENDOR_FLAGS_ARMCC</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${ASM_DIALECT}</expression>
+              <start>
+                <offset>4221</offset>
+              </start>
+              <end>
+                <offset>4234</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>4212</offset>
@@ -2160,9 +2498,17 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_ASMnull{ASM_DIALECT}_COMPILER_ID_VENDOR_REGEX_ARMCC</argument>
+          <argument>CMAKE_ASM${ASM_DIALECT}_COMPILER_ID_VENDOR_REGEX_ARMCC</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${ASM_DIALECT}</expression>
+              <start>
+                <offset>4284</offset>
+              </start>
+              <end>
+                <offset>4297</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>4275</offset>
@@ -2214,9 +2560,17 @@
       <commandName>CMAKE_DETERMINE_COMPILER_ID_VENDOR</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>ASMnull{ASM_DIALECT}</argument>
+          <argument>ASM${ASM_DIALECT}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${ASM_DIALECT}</expression>
+              <start>
+                <offset>4441</offset>
+              </start>
+              <end>
+                <offset>4454</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>4438</offset>
@@ -2249,9 +2603,17 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_ASMnull{ASM_DIALECT}_COMPILER_ID</argument>
+          <argument>CMAKE_ASM${ASM_DIALECT}_COMPILER_ID</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${ASM_DIALECT}</expression>
+              <start>
+                <offset>4479</offset>
+              </start>
+              <end>
+                <offset>4492</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>4470</offset>
@@ -2570,9 +2932,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{CMAKE_MATCH_1}</argument>
+          <argument>${CMAKE_MATCH_1}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${CMAKE_MATCH_1}</expression>
+              <start>
+                <offset>5415</offset>
+              </start>
+              <end>
+                <offset>5430</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>5415</offset>
@@ -2708,9 +3078,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{CMAKE_MATCH_1}</argument>
+          <argument>${CMAKE_MATCH_1}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${CMAKE_MATCH_1}</expression>
+              <start>
+                <offset>5636</offset>
+              </start>
+              <end>
+                <offset>5651</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>5636</offset>
@@ -2846,9 +3224,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{CMAKE_MATCH_1}</argument>
+          <argument>${CMAKE_MATCH_1}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${CMAKE_MATCH_1}</expression>
+              <start>
+                <offset>5869</offset>
+              </start>
+              <end>
+                <offset>5884</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>5869</offset>
@@ -2913,9 +3299,17 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_ASMnull{ASM_DIALECT}_COMPILER_ENV_VAR</argument>
+          <argument>CMAKE_ASM${ASM_DIALECT}_COMPILER_ENV_VAR</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${ASM_DIALECT}</expression>
+              <start>
+                <offset>5950</offset>
+              </start>
+              <end>
+                <offset>5963</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>5941</offset>
@@ -2946,9 +3340,17 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_ASMnull{ASM_DIALECT}_COMPILER</argument>
+          <argument>CMAKE_ASM${ASM_DIALECT}_COMPILER</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${ASM_DIALECT}</expression>
+              <start>
+                <offset>6016</offset>
+              </start>
+              <end>
+                <offset>6029</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>6007</offset>
@@ -3186,10 +3588,18 @@
       <commandName>configure_file</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{CMAKE_ROOT}/Modules/CMakeASMCompiler.cmake.in
+          <argument>${CMAKE_ROOT}/Modules/CMakeASMCompiler.cmake.in
 </argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${CMAKE_ROOT}</expression>
+              <start>
+                <offset>6537</offset>
+              </start>
+              <end>
+                <offset>6549</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>6537</offset>
@@ -3199,10 +3609,26 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{CMAKE_PLATFORM_INFO_DIR}/CMakeASMnull{ASM_DIALECT}Compiler.cmake</argument>
+          <argument>${CMAKE_PLATFORM_INFO_DIR}/CMakeASM${ASM_DIALECT}Compiler.cmake</argument>
           <children>
-            <null/>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${CMAKE_PLATFORM_INFO_DIR}</expression>
+              <start>
+                <offset>6587</offset>
+              </start>
+              <end>
+                <offset>6612</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${ASM_DIALECT}</expression>
+              <start>
+                <offset>6622</offset>
+              </start>
+              <end>
+                <offset>6635</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>6587</offset>

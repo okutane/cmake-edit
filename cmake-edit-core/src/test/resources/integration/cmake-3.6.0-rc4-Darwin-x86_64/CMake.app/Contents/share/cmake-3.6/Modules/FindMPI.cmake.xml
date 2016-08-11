@@ -1410,9 +1410,17 @@
       <commandName>include</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{CMAKE_CURRENT_LIST_DIR}/FindPackageHandleStandardArgs.cmake</argument>
+          <argument>${CMAKE_CURRENT_LIST_DIR}/FindPackageHandleStandardArgs.cmake</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${CMAKE_CURRENT_LIST_DIR}</expression>
+              <start>
+                <offset>4270</offset>
+              </start>
+              <end>
+                <offset>4294</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>4270</offset>
@@ -3082,9 +3090,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_null{lang}_COMPILER_ID</argument>
+          <argument>CMAKE_${lang}_COMPILER_ID</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${lang}</expression>
+              <start>
+                <offset>7497</offset>
+              </start>
+              <end>
+                <offset>7503</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>7491</offset>
@@ -3103,9 +3119,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_null{lang}_COMPILER_ID</argument>
+          <argument>CMAKE_${lang}_COMPILER_ID</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${lang}</expression>
+              <start>
+                <offset>7526</offset>
+              </start>
+              <end>
+                <offset>7532</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>7520</offset>
@@ -3154,9 +3178,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>_MPI_null{lang}_COMPILER_NAMES</argument>
+          <argument>_MPI_${lang}_COMPILER_NAMES</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${lang}</expression>
+              <start>
+                <offset>7582</offset>
+              </start>
+              <end>
+                <offset>7588</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>7577</offset>
@@ -3166,11 +3198,37 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{_MPI_null{id}_null{lang}_COMPILER_NAMES}</argument>
+          <argument>${_MPI_${id}_${lang}_COMPILER_NAMES}</argument>
           <children>
-            <null/>
-            <null/>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${_MPI_${id}_${lang}_COMPILER_NAMES}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ExpressionNode>
+                  <expression>${id}</expression>
+                  <start>
+                    <offset>7612</offset>
+                  </start>
+                  <end>
+                    <offset>7616</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ExpressionNode>
+                <ru.urururu.cmakeedit.core.ExpressionNode>
+                  <expression>${lang}</expression>
+                  <start>
+                    <offset>7618</offset>
+                  </start>
+                  <end>
+                    <offset>7624</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ExpressionNode>
+              </nested>
+              <start>
+                <offset>7605</offset>
+              </start>
+              <end>
+                <offset>7640</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>7605</offset>
@@ -3203,10 +3261,26 @@
       <commandName>unset</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>_MPI_null{id}_null{lang}_COMPILER_NAMES</argument>
+          <argument>_MPI_${id}_${lang}_COMPILER_NAMES</argument>
           <children>
-            <null/>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${id}</expression>
+              <start>
+                <offset>7670</offset>
+              </start>
+              <end>
+                <offset>7674</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${lang}</expression>
+              <start>
+                <offset>7676</offset>
+              </start>
+              <end>
+                <offset>7682</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>7665</offset>
@@ -3775,9 +3849,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{CMAKE_SYSTEM_PREFIX_PATH}</argument>
+          <argument>${CMAKE_SYSTEM_PREFIX_PATH}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${CMAKE_SYSTEM_PREFIX_PATH}</expression>
+              <start>
+                <offset>8692</offset>
+              </start>
+              <end>
+                <offset>8718</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>8692</offset>
@@ -3808,9 +3890,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{_MPI_PREFIX_PATH}</argument>
+          <argument>${_MPI_PREFIX_PATH}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${_MPI_PREFIX_PATH}</expression>
+              <start>
+                <offset>8745</offset>
+              </start>
+              <end>
+                <offset>8763</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>8745</offset>
@@ -3841,10 +3931,26 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{SystemPrefixDir}/null{MpiPackageDir}</argument>
+          <argument>${SystemPrefixDir}/${MpiPackageDir}</argument>
           <children>
-            <null/>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${SystemPrefixDir}</expression>
+              <start>
+                <offset>8780</offset>
+              </start>
+              <end>
+                <offset>8797</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${MpiPackageDir}</expression>
+              <start>
+                <offset>8799</offset>
+              </start>
+              <end>
+                <offset>8814</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>8780</offset>
@@ -4023,10 +4129,18 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{options}
+          <argument>${options}
 </argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${options}</expression>
+              <start>
+                <offset>9039</offset>
+              </start>
+              <end>
+                <offset>9048</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>9039</offset>
@@ -4280,9 +4394,17 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{cmdvar}</argument>
+          <argument>${cmdvar}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${cmdvar}</expression>
+              <start>
+                <offset>9470</offset>
+              </start>
+              <end>
+                <offset>9478</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>9470</offset>
@@ -4322,9 +4444,17 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{resvar}</argument>
+          <argument>${resvar}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${resvar}</expression>
+              <start>
+                <offset>9513</offset>
+              </start>
+              <end>
+                <offset>9521</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>9513</offset>
@@ -4826,9 +4956,17 @@
                   </end>
                 </ru.urururu.cmakeedit.core.ArgumentNode>
                 <ru.urururu.cmakeedit.core.ArgumentNode>
-                  <argument>MPI_null{lang}_INCLUDE_PATH</argument>
+                  <argument>MPI_${lang}_INCLUDE_PATH</argument>
                   <children>
-                    <null/>
+                    <ru.urururu.cmakeedit.core.ExpressionNode>
+                      <expression>${lang}</expression>
+                      <start>
+                        <offset>11125</offset>
+                      </start>
+                      <end>
+                        <offset>11131</offset>
+                      </end>
+                    </ru.urururu.cmakeedit.core.ExpressionNode>
                   </children>
                   <start>
                     <offset>11121</offset>
@@ -4862,9 +5000,17 @@
                   </end>
                 </ru.urururu.cmakeedit.core.ArgumentNode>
                 <ru.urururu.cmakeedit.core.ArgumentNode>
-                  <argument>MPI_null{lang}_LIBRARIES</argument>
+                  <argument>MPI_${lang}_LIBRARIES</argument>
                   <children>
-                    <null/>
+                    <ru.urururu.cmakeedit.core.ExpressionNode>
+                      <expression>${lang}</expression>
+                      <start>
+                        <offset>11159</offset>
+                      </start>
+                      <end>
+                        <offset>11165</offset>
+                      </end>
+                    </ru.urururu.cmakeedit.core.ExpressionNode>
                   </children>
                   <start>
                     <offset>11155</offset>
@@ -4894,9 +5040,17 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>MPI_null{lang}_COMPILER</argument>
+          <argument>MPI_${lang}_COMPILER</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${lang}</expression>
+              <start>
+                <offset>11192</offset>
+              </start>
+              <end>
+                <offset>11198</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>11188</offset>
@@ -5080,10 +5234,28 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{MPI_null{lang}_COMPILER}</argument>
+          <argument>${MPI_${lang}_COMPILER}</argument>
           <children>
-            <null/>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${MPI_${lang}_COMPILER}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ExpressionNode>
+                  <expression>${lang}</expression>
+                  <start>
+                    <offset>11698</offset>
+                  </start>
+                  <end>
+                    <offset>11704</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ExpressionNode>
+              </nested>
+              <start>
+                <offset>11692</offset>
+              </start>
+              <end>
+                <offset>11714</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>11692</offset>
@@ -5275,10 +5447,28 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{MPI_null{lang}_COMPILER}</argument>
+          <argument>${MPI_${lang}_COMPILER}</argument>
           <children>
-            <null/>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${MPI_${lang}_COMPILER}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ExpressionNode>
+                  <expression>${lang}</expression>
+                  <start>
+                    <offset>12143</offset>
+                  </start>
+                  <end>
+                    <offset>12149</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ExpressionNode>
+              </nested>
+              <start>
+                <offset>12137</offset>
+              </start>
+              <end>
+                <offset>12159</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>12137</offset>
@@ -5384,10 +5574,28 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{MPI_null{lang}_COMPILER}</argument>
+          <argument>${MPI_${lang}_COMPILER}</argument>
           <children>
-            <null/>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${MPI_${lang}_COMPILER}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ExpressionNode>
+                  <expression>${lang}</expression>
+                  <start>
+                    <offset>12379</offset>
+                  </start>
+                  <end>
+                    <offset>12385</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ExpressionNode>
+              </nested>
+              <start>
+                <offset>12373</offset>
+              </start>
+              <end>
+                <offset>12395</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>12373</offset>
@@ -5866,10 +6074,28 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{MPI_null{lang}_COMPILER}</argument>
+          <argument>${MPI_${lang}_COMPILER}</argument>
           <children>
-            <null/>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${MPI_${lang}_COMPILER}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ExpressionNode>
+                  <expression>${lang}</expression>
+                  <start>
+                    <offset>13329</offset>
+                  </start>
+                  <end>
+                    <offset>13335</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ExpressionNode>
+              </nested>
+              <start>
+                <offset>13323</offset>
+              </start>
+              <end>
+                <offset>13345</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>13323</offset>
@@ -6339,9 +6565,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{MPI_COMPILE_CMDLINE}</argument>
+          <argument>${MPI_COMPILE_CMDLINE}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${MPI_COMPILE_CMDLINE}</expression>
+              <start>
+                <offset>14259</offset>
+              </start>
+              <end>
+                <offset>14280</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>14259</offset>
@@ -6650,9 +6884,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{MPI_ALL_COMPILE_FLAGS}</argument>
+          <argument>${MPI_ALL_COMPILE_FLAGS}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${MPI_ALL_COMPILE_FLAGS}</expression>
+              <start>
+                <offset>15024</offset>
+              </start>
+              <end>
+                <offset>15047</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>15024</offset>
@@ -6745,9 +6987,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{FLAG}</argument>
+          <argument>${FLAG}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${FLAG}</expression>
+              <start>
+                <offset>15220</offset>
+              </start>
+              <end>
+                <offset>15226</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>15220</offset>
@@ -6871,9 +7121,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{MPI_ALL_INCLUDE_PATHS}</argument>
+          <argument>${MPI_ALL_INCLUDE_PATHS}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${MPI_ALL_INCLUDE_PATHS}</expression>
+              <start>
+                <offset>15457</offset>
+              </start>
+              <end>
+                <offset>15480</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>15457</offset>
@@ -6940,9 +7198,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{IPATH}</argument>
+          <argument>${IPATH}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${IPATH}</expression>
+              <start>
+                <offset>15531</offset>
+              </start>
+              <end>
+                <offset>15538</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>15531</offset>
@@ -7000,9 +7266,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{IPATH}</argument>
+          <argument>${IPATH}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${IPATH}</expression>
+              <start>
+                <offset>15581</offset>
+              </start>
+              <end>
+                <offset>15588</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>15581</offset>
@@ -7042,9 +7316,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{IPATH}</argument>
+          <argument>${IPATH}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${IPATH}</expression>
+              <start>
+                <offset>15635</offset>
+              </start>
+              <end>
+                <offset>15642</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>15635</offset>
@@ -7130,9 +7412,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{MPI_INCDIRS}</argument>
+          <argument>${MPI_INCDIRS}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${MPI_INCDIRS}</expression>
+              <start>
+                <offset>15804</offset>
+              </start>
+              <end>
+                <offset>15817</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>15804</offset>
@@ -7324,9 +7614,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{_MPI_BASE_DIR}</argument>
+          <argument>${_MPI_BASE_DIR}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${_MPI_BASE_DIR}</expression>
+              <start>
+                <offset>16157</offset>
+              </start>
+              <end>
+                <offset>16172</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>16157</offset>
@@ -7336,10 +7634,18 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{_MPI_PREFIX_PATH}
+          <argument>${_MPI_PREFIX_PATH}
 </argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${_MPI_PREFIX_PATH}</expression>
+              <start>
+                <offset>16174</offset>
+              </start>
+              <end>
+                <offset>16192</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>16174</offset>
@@ -7388,9 +7694,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{MPI_HEADER_PATH}</argument>
+          <argument>${MPI_HEADER_PATH}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${MPI_HEADER_PATH}</expression>
+              <start>
+                <offset>16265</offset>
+              </start>
+              <end>
+                <offset>16282</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>16265</offset>
@@ -7524,9 +7838,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{MPI_ALL_LINK_PATHS}</argument>
+          <argument>${MPI_ALL_LINK_PATHS}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${MPI_ALL_LINK_PATHS}</expression>
+              <start>
+                <offset>16528</offset>
+              </start>
+              <end>
+                <offset>16548</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>16528</offset>
@@ -7593,9 +7915,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{LPATH}</argument>
+          <argument>${LPATH}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${LPATH}</expression>
+              <start>
+                <offset>16618</offset>
+              </start>
+              <end>
+                <offset>16625</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>16618</offset>
@@ -7653,9 +7983,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{LPATH}</argument>
+          <argument>${LPATH}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${LPATH}</expression>
+              <start>
+                <offset>16668</offset>
+              </start>
+              <end>
+                <offset>16675</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>16668</offset>
@@ -7695,9 +8033,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{LPATH}</argument>
+          <argument>${LPATH}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${LPATH}</expression>
+              <start>
+                <offset>16714</offset>
+              </start>
+              <end>
+                <offset>16721</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>16714</offset>
@@ -7783,9 +8129,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{MPI_LIBDIRS}</argument>
+          <argument>${MPI_LIBDIRS}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${MPI_LIBDIRS}</expression>
+              <start>
+                <offset>16867</offset>
+              </start>
+              <end>
+                <offset>16880</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>16867</offset>
@@ -7940,9 +8294,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{MPI_ALL_LINK_FLAGS}</argument>
+          <argument>${MPI_ALL_LINK_FLAGS}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${MPI_ALL_LINK_FLAGS}</expression>
+              <start>
+                <offset>17172</offset>
+              </start>
+              <end>
+                <offset>17192</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>17172</offset>
@@ -8035,9 +8397,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{FLAG}</argument>
+          <argument>${FLAG}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${FLAG}</expression>
+              <start>
+                <offset>17353</offset>
+              </start>
+              <end>
+                <offset>17359</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>17353</offset>
@@ -8304,9 +8674,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{tmp}</argument>
+          <argument>${tmp}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${tmp}</expression>
+              <start>
+                <offset>17948</offset>
+              </start>
+              <end>
+                <offset>17953</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>17948</offset>
@@ -8404,9 +8782,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_null{lang}_IMPLICIT_LINK_DIRECTORIES</argument>
+          <argument>CMAKE_${lang}_IMPLICIT_LINK_DIRECTORIES</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${lang}</expression>
+              <start>
+                <offset>18247</offset>
+              </start>
+              <end>
+                <offset>18253</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>18241</offset>
@@ -8507,9 +8893,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{MPI_LIBNAMES}</argument>
+          <argument>${MPI_LIBNAMES}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${MPI_LIBNAMES}</expression>
+              <start>
+                <offset>18543</offset>
+              </start>
+              <end>
+                <offset>18557</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>18543</offset>
@@ -8576,9 +8970,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{LIB}</argument>
+          <argument>${LIB}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${LIB}</expression>
+              <start>
+                <offset>18606</offset>
+              </start>
+              <end>
+                <offset>18611</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>18606</offset>
@@ -8666,9 +9068,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{LIB}</argument>
+          <argument>${LIB}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${LIB}</expression>
+              <start>
+                <offset>18684</offset>
+              </start>
+              <end>
+                <offset>18689</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>18684</offset>
@@ -8710,9 +9120,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{LIB}</argument>
+          <argument>${LIB}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${LIB}</expression>
+              <start>
+                <offset>18733</offset>
+              </start>
+              <end>
+                <offset>18738</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>18733</offset>
@@ -8841,9 +9259,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{LIB}</argument>
+          <argument>${LIB}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${LIB}</expression>
+              <start>
+                <offset>18943</offset>
+              </start>
+              <end>
+                <offset>18948</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>18943</offset>
@@ -8862,9 +9288,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{MPI_LINK_PATH}</argument>
+          <argument>${MPI_LINK_PATH}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${MPI_LINK_PATH}</expression>
+              <start>
+                <offset>18956</offset>
+              </start>
+              <end>
+                <offset>18971</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>18956</offset>
@@ -8925,9 +9359,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{MPI_LIB}</argument>
+          <argument>${MPI_LIB}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${MPI_LIB}</expression>
+              <start>
+                <offset>19041</offset>
+              </start>
+              <end>
+                <offset>19050</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>19041</offset>
@@ -9328,9 +9770,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{_MPI_BASE_DIR}</argument>
+          <argument>${_MPI_BASE_DIR}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${_MPI_BASE_DIR}</expression>
+              <start>
+                <offset>19983</offset>
+              </start>
+              <end>
+                <offset>19998</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>19983</offset>
@@ -9340,10 +9790,18 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{_MPI_PREFIX_PATH}
+          <argument>${_MPI_PREFIX_PATH}
 </argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${_MPI_PREFIX_PATH}</expression>
+              <start>
+                <offset>20000</offset>
+              </start>
+              <end>
+                <offset>20018</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>20000</offset>
@@ -9401,9 +9859,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{MPI_HEADER_PATH}</argument>
+          <argument>${MPI_HEADER_PATH}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${MPI_HEADER_PATH}</expression>
+              <start>
+                <offset>20087</offset>
+              </start>
+              <end>
+                <offset>20104</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>20087</offset>
@@ -9751,9 +10217,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{_MPI_BASE_DIR}</argument>
+          <argument>${_MPI_BASE_DIR}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${_MPI_BASE_DIR}</expression>
+              <start>
+                <offset>20550</offset>
+              </start>
+              <end>
+                <offset>20565</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>20550</offset>
@@ -9763,10 +10237,18 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{_MPI_PREFIX_PATH}
+          <argument>${_MPI_PREFIX_PATH}
 </argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${_MPI_PREFIX_PATH}</expression>
+              <start>
+                <offset>20567</offset>
+              </start>
+              <end>
+                <offset>20585</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>20567</offset>
@@ -9794,9 +10276,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>lib/null{MS_MPI_ARCH_DIR}</argument>
+          <argument>lib/${MS_MPI_ARCH_DIR}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${MS_MPI_ARCH_DIR}</expression>
+              <start>
+                <offset>20617</offset>
+              </start>
+              <end>
+                <offset>20634</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>20613</offset>
@@ -9815,9 +10305,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>Lib/null{MS_MPI_ARCH_DIR}</argument>
+          <argument>Lib/${MS_MPI_ARCH_DIR}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${MS_MPI_ARCH_DIR}</expression>
+              <start>
+                <offset>20644</offset>
+              </start>
+              <end>
+                <offset>20661</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>20640</offset>
@@ -9827,9 +10325,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>Lib/null{MS_MPI_ARCH_DIR2}</argument>
+          <argument>Lib/${MS_MPI_ARCH_DIR2}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${MS_MPI_ARCH_DIR2}</expression>
+              <start>
+                <offset>20667</offset>
+              </start>
+              <end>
+                <offset>20685</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>20663</offset>
@@ -9860,9 +10366,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{MPI_LIB}</argument>
+          <argument>${MPI_LIB}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${MPI_LIB}</expression>
+              <start>
+                <offset>20717</offset>
+              </start>
+              <end>
+                <offset>20726</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>20717</offset>
@@ -9940,9 +10454,17 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{lang}</argument>
+          <argument>${lang}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${lang}</expression>
+              <start>
+                <offset>21010</offset>
+              </start>
+              <end>
+                <offset>21016</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>21010</offset>
@@ -10113,9 +10635,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{_MPI_BASE_DIR}</argument>
+          <argument>${_MPI_BASE_DIR}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${_MPI_BASE_DIR}</expression>
+              <start>
+                <offset>21205</offset>
+              </start>
+              <end>
+                <offset>21220</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>21205</offset>
@@ -10125,10 +10655,18 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{_MPI_PREFIX_PATH}
+          <argument>${_MPI_PREFIX_PATH}
 </argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${_MPI_PREFIX_PATH}</expression>
+              <start>
+                <offset>21222</offset>
+              </start>
+              <end>
+                <offset>21240</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>21222</offset>
@@ -10225,9 +10763,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{MPI_LIB}</argument>
+          <argument>${MPI_LIB}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${MPI_LIB}</expression>
+              <start>
+                <offset>21356</offset>
+              </start>
+              <end>
+                <offset>21365</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>21356</offset>
@@ -10367,9 +10913,17 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>MPI_null{lang}_COMPILE_FLAGS</argument>
+          <argument>MPI_${lang}_COMPILE_FLAGS</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${lang}</expression>
+              <start>
+                <offset>21604</offset>
+              </start>
+              <end>
+                <offset>21610</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>21600</offset>
@@ -10379,9 +10933,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{MPI_COMPILE_FLAGS_WORK}</argument>
+          <argument>${MPI_COMPILE_FLAGS_WORK}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${MPI_COMPILE_FLAGS_WORK}</expression>
+              <start>
+                <offset>21626</offset>
+              </start>
+              <end>
+                <offset>21650</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>21626</offset>
@@ -10439,9 +11001,17 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>MPI_null{lang}_INCLUDE_PATH</argument>
+          <argument>MPI_${lang}_INCLUDE_PATH</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${lang}</expression>
+              <start>
+                <offset>21724</offset>
+              </start>
+              <end>
+                <offset>21730</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>21720</offset>
@@ -10451,9 +11021,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{MPI_INCLUDE_PATH_WORK}</argument>
+          <argument>${MPI_INCLUDE_PATH_WORK}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${MPI_INCLUDE_PATH_WORK}</expression>
+              <start>
+                <offset>21746</offset>
+              </start>
+              <end>
+                <offset>21769</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>21746</offset>
@@ -10511,9 +11089,17 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>MPI_null{lang}_LINK_FLAGS</argument>
+          <argument>MPI_${lang}_LINK_FLAGS</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${lang}</expression>
+              <start>
+                <offset>21844</offset>
+              </start>
+              <end>
+                <offset>21850</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>21840</offset>
@@ -10523,9 +11109,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{MPI_LINK_FLAGS_WORK}</argument>
+          <argument>${MPI_LINK_FLAGS_WORK}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${MPI_LINK_FLAGS_WORK}</expression>
+              <start>
+                <offset>21866</offset>
+              </start>
+              <end>
+                <offset>21887</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>21866</offset>
@@ -10583,9 +11177,17 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>MPI_null{lang}_LIBRARIES</argument>
+          <argument>MPI_${lang}_LIBRARIES</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${lang}</expression>
+              <start>
+                <offset>21964</offset>
+              </start>
+              <end>
+                <offset>21970</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>21960</offset>
@@ -10595,9 +11197,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{MPI_LIBRARIES_WORK}</argument>
+          <argument>${MPI_LIBRARIES_WORK}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${MPI_LIBRARIES_WORK}</expression>
+              <start>
+                <offset>21986</offset>
+              </start>
+              <end>
+                <offset>22006</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>21986</offset>
@@ -10655,9 +11265,17 @@
       <commandName>mark_as_advanced</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>MPI_null{lang}_COMPILE_FLAGS</argument>
+          <argument>MPI_${lang}_COMPILE_FLAGS</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${lang}</expression>
+              <start>
+                <offset>22097</offset>
+              </start>
+              <end>
+                <offset>22103</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>22093</offset>
@@ -10667,9 +11285,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>MPI_null{lang}_INCLUDE_PATH</argument>
+          <argument>MPI_${lang}_INCLUDE_PATH</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${lang}</expression>
+              <start>
+                <offset>22123</offset>
+              </start>
+              <end>
+                <offset>22129</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>22119</offset>
@@ -10679,9 +11305,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>MPI_null{lang}_LINK_FLAGS</argument>
+          <argument>MPI_${lang}_LINK_FLAGS</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${lang}</expression>
+              <start>
+                <offset>22148</offset>
+              </start>
+              <end>
+                <offset>22154</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>22144</offset>
@@ -10691,9 +11325,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>MPI_null{lang}_LIBRARIES</argument>
+          <argument>MPI_${lang}_LIBRARIES</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${lang}</expression>
+              <start>
+                <offset>22171</offset>
+              </start>
+              <end>
+                <offset>22177</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>22167</offset>
@@ -10886,9 +11528,17 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>MPI_null{lang}_INCLUDE_PATH</argument>
+          <argument>MPI_${lang}_INCLUDE_PATH</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${lang}</expression>
+              <start>
+                <offset>22568</offset>
+              </start>
+              <end>
+                <offset>22574</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>22564</offset>
@@ -10907,9 +11557,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>MPI_null{lang}_LIBRARIES</argument>
+          <argument>MPI_${lang}_LIBRARIES</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${lang}</expression>
+              <start>
+                <offset>22597</offset>
+              </start>
+              <end>
+                <offset>22603</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>22593</offset>
@@ -10931,9 +11589,17 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>MPI_null{lang}_FOUND</argument>
+          <argument>MPI_${lang}_FOUND</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${lang}</expression>
+              <start>
+                <offset>22628</offset>
+              </start>
+              <end>
+                <offset>22634</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>22624</offset>
@@ -10984,9 +11650,17 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>MPI_null{lang}_FOUND</argument>
+          <argument>MPI_${lang}_FOUND</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${lang}</expression>
+              <start>
+                <offset>22682</offset>
+              </start>
+              <end>
+                <offset>22688</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>22678</offset>
@@ -11152,10 +11826,26 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{CMAKE_CURRENT_BINARY_DIR}null{CMAKE_FILES_DIRECTORY}</argument>
+          <argument>${CMAKE_CURRENT_BINARY_DIR}${CMAKE_FILES_DIRECTORY}</argument>
           <children>
-            <null/>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${CMAKE_CURRENT_BINARY_DIR}</expression>
+              <start>
+                <offset>23156</offset>
+              </start>
+              <end>
+                <offset>23182</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${CMAKE_FILES_DIRECTORY}</expression>
+              <start>
+                <offset>23183</offset>
+              </start>
+              <end>
+                <offset>23206</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>23156</offset>
@@ -11177,9 +11867,17 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{lang}</argument>
+          <argument>${lang}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${lang}</expression>
+              <start>
+                <offset>23215</offset>
+              </start>
+              <end>
+                <offset>23221</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>23215</offset>
@@ -11228,9 +11926,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{scratch_directory}/cmake_mpi_test.f90</argument>
+          <argument>${scratch_directory}/cmake_mpi_test.f90</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${scratch_directory}</expression>
+              <start>
+                <offset>23259</offset>
+              </start>
+              <end>
+                <offset>23278</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>23259</offset>
@@ -11261,10 +11967,18 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{test_file}
+          <argument>${test_file}
 </argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${test_file}</expression>
+              <start>
+                <offset>23315</offset>
+              </start>
+              <end>
+                <offset>23326</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>23315</offset>
@@ -11407,9 +12121,17 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{lang}</argument>
+          <argument>${lang}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${lang}</expression>
+              <start>
+                <offset>23504</offset>
+              </start>
+              <end>
+                <offset>23510</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>23504</offset>
@@ -11458,9 +12180,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{scratch_directory}/cmake_mpi_test.cpp</argument>
+          <argument>${scratch_directory}/cmake_mpi_test.cpp</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${scratch_directory}</expression>
+              <start>
+                <offset>23546</offset>
+              </start>
+              <end>
+                <offset>23565</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>23546</offset>
@@ -11502,9 +12232,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{scratch_directory}/cmake_mpi_test.c</argument>
+          <argument>${scratch_directory}/cmake_mpi_test.c</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${scratch_directory}</expression>
+              <start>
+                <offset>23618</offset>
+              </start>
+              <end>
+                <offset>23637</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>23618</offset>
@@ -11546,10 +12284,18 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{test_file}
+          <argument>${test_file}
 </argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${test_file}</expression>
+              <start>
+                <offset>23684</offset>
+              </start>
+              <end>
+                <offset>23695</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>23684</offset>
@@ -11681,9 +12427,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{scratch_directory}</argument>
+          <argument>${scratch_directory}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${scratch_directory}</expression>
+              <start>
+                <offset>23886</offset>
+              </start>
+              <end>
+                <offset>23905</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>23886</offset>
@@ -11693,9 +12447,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{test_file}</argument>
+          <argument>${test_file}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${test_file}</expression>
+              <start>
+                <offset>23907</offset>
+              </start>
+              <end>
+                <offset>23918</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>23907</offset>
@@ -11738,9 +12500,17 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>MPI_null{lang}_NO_INTERROGATE</argument>
+          <argument>MPI_${lang}_NO_INTERROGATE</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${lang}</expression>
+              <start>
+                <offset>23957</offset>
+              </start>
+              <end>
+                <offset>23963</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>23953</offset>
@@ -11750,10 +12520,28 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{CMAKE_null{lang}_COMPILER}</argument>
+          <argument>${CMAKE_${lang}_COMPILER}</argument>
           <children>
-            <null/>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${CMAKE_${lang}_COMPILER}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ExpressionNode>
+                  <expression>${lang}</expression>
+                  <start>
+                    <offset>23988</offset>
+                  </start>
+                  <end>
+                    <offset>23994</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ExpressionNode>
+              </nested>
+              <start>
+                <offset>23980</offset>
+              </start>
+              <end>
+                <offset>24004</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>23980</offset>
@@ -11811,9 +12599,17 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>MPI_null{lang}_COMPILER</argument>
+          <argument>MPI_${lang}_COMPILER</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${lang}</expression>
+              <start>
+                <offset>24084</offset>
+              </start>
+              <end>
+                <offset>24090</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>24080</offset>
@@ -11823,10 +12619,28 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{CMAKE_null{lang}_COMPILER}</argument>
+          <argument>${CMAKE_${lang}_COMPILER}</argument>
           <children>
-            <null/>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${CMAKE_${lang}_COMPILER}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ExpressionNode>
+                  <expression>${lang}</expression>
+                  <start>
+                    <offset>24115</offset>
+                  </start>
+                  <end>
+                    <offset>24121</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ExpressionNode>
+              </nested>
+              <start>
+                <offset>24107</offset>
+              </start>
+              <end>
+                <offset>24131</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>24107</offset>
@@ -11884,9 +12698,17 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>MPI_null{lang}_COMPILE_FLAGS</argument>
+          <argument>MPI_${lang}_COMPILE_FLAGS</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${lang}</expression>
+              <start>
+                <offset>24211</offset>
+              </start>
+              <end>
+                <offset>24217</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>24207</offset>
@@ -11953,9 +12775,17 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>MPI_null{lang}_INCLUDE_PATH</argument>
+          <argument>MPI_${lang}_INCLUDE_PATH</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${lang}</expression>
+              <start>
+                <offset>24338</offset>
+              </start>
+              <end>
+                <offset>24344</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>24334</offset>
@@ -12022,9 +12852,17 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>MPI_null{lang}_LINK_FLAGS</argument>
+          <argument>MPI_${lang}_LINK_FLAGS</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${lang}</expression>
+              <start>
+                <offset>24465</offset>
+              </start>
+              <end>
+                <offset>24471</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>24461</offset>
@@ -12091,9 +12929,17 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>MPI_null{lang}_LIBRARIES</argument>
+          <argument>MPI_${lang}_LIBRARIES</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${lang}</expression>
+              <start>
+                <offset>24592</offset>
+              </start>
+              <end>
+                <offset>24598</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>24588</offset>
@@ -12171,9 +13017,17 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{success}</argument>
+          <argument>${success}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${success}</expression>
+              <start>
+                <offset>24723</offset>
+              </start>
+              <end>
+                <offset>24732</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>24723</offset>
@@ -12183,9 +13037,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{compiler_has_mpi}</argument>
+          <argument>${compiler_has_mpi}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${compiler_has_mpi}</expression>
+              <start>
+                <offset>24734</offset>
+              </start>
+              <end>
+                <offset>24752</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>24734</offset>
@@ -12304,10 +13166,18 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{_MPI_EXEC_NAMES}
+          <argument>${_MPI_EXEC_NAMES}
 </argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${_MPI_EXEC_NAMES}</expression>
+              <start>
+                <offset>24985</offset>
+              </start>
+              <end>
+                <offset>25002</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>24985</offset>
@@ -12326,9 +13196,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{MPI_HOME}</argument>
+          <argument>${MPI_HOME}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${MPI_HOME}</expression>
+              <start>
+                <offset>25012</offset>
+              </start>
+              <end>
+                <offset>25022</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>25012</offset>
@@ -12338,10 +13216,18 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>nullENV{MPI_HOME}
+          <argument>$ENV{MPI_HOME}
 </argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>$ENV{MPI_HOME}</expression>
+              <start>
+                <offset>25024</offset>
+              </start>
+              <end>
+                <offset>25037</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>25024</offset>
@@ -12360,10 +13246,18 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{_MPI_PREFIX_PATH}
+          <argument>${_MPI_PREFIX_PATH}
 </argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${_MPI_PREFIX_PATH}</expression>
+              <start>
+                <offset>25047</offset>
+              </start>
+              <end>
+                <offset>25065</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>25047</offset>
@@ -13042,9 +13936,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{_MPI_OLD_INPUT_VARS}</argument>
+          <argument>${_MPI_OLD_INPUT_VARS}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${_MPI_OLD_INPUT_VARS}</expression>
+              <start>
+                <offset>26677</offset>
+              </start>
+              <end>
+                <offset>26698</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>26677</offset>
@@ -13075,10 +13977,26 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>MPI_null{lang}_null{var}</argument>
+          <argument>MPI_${lang}_${var}</argument>
           <children>
-            <null/>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${lang}</expression>
+              <start>
+                <offset>26717</offset>
+              </start>
+              <end>
+                <offset>26723</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${var}</expression>
+              <start>
+                <offset>26725</offset>
+              </start>
+              <end>
+                <offset>26730</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>26713</offset>
@@ -13097,9 +14015,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>MPI_null{var}</argument>
+          <argument>MPI_${var}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${var}</expression>
+              <start>
+                <offset>26740</offset>
+              </start>
+              <end>
+                <offset>26745</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>26736</offset>
@@ -13121,10 +14047,26 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>MPI_null{lang}_null{var}</argument>
+          <argument>MPI_${lang}_${var}</argument>
           <children>
-            <null/>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${lang}</expression>
+              <start>
+                <offset>26762</offset>
+              </start>
+              <end>
+                <offset>26768</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${var}</expression>
+              <start>
+                <offset>26770</offset>
+              </start>
+              <end>
+                <offset>26775</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>26758</offset>
@@ -13214,9 +14156,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>MPI_null{lang}_LIBRARIES</argument>
+          <argument>MPI_${lang}_LIBRARIES</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${lang}</expression>
+              <start>
+                <offset>26986</offset>
+              </start>
+              <end>
+                <offset>26992</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>26982</offset>
@@ -13280,9 +14230,17 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>MPI_null{lang}_LIBRARIES</argument>
+          <argument>MPI_${lang}_LIBRARIES</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${lang}</expression>
+              <start>
+                <offset>27056</offset>
+              </start>
+              <end>
+                <offset>27062</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>27052</offset>
@@ -13292,9 +14250,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{MPI_LIBRARY}</argument>
+          <argument>${MPI_LIBRARY}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${MPI_LIBRARY}</expression>
+              <start>
+                <offset>27074</offset>
+              </start>
+              <end>
+                <offset>27087</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>27074</offset>
@@ -13304,9 +14270,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{MPI_EXTRA_LIBRARY}</argument>
+          <argument>${MPI_EXTRA_LIBRARY}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${MPI_EXTRA_LIBRARY}</expression>
+              <start>
+                <offset>27089</offset>
+              </start>
+              <end>
+                <offset>27108</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>27089</offset>
@@ -13426,9 +14400,17 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_null{lang}_COMPILER_WORKS</argument>
+          <argument>CMAKE_${lang}_COMPILER_WORKS</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${lang}</expression>
+              <start>
+                <offset>27326</offset>
+              </start>
+              <end>
+                <offset>27332</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>27320</offset>
@@ -13464,9 +14446,17 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>MPI_null{lang}_COMPILER</argument>
+          <argument>MPI_${lang}_COMPILER</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${lang}</expression>
+              <start>
+                <offset>27479</offset>
+              </start>
+              <end>
+                <offset>27485</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>27475</offset>
@@ -13541,9 +14531,17 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>_MPI_null{lang}_COMPILER_NAMES</argument>
+          <argument>_MPI_${lang}_COMPILER_NAMES</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${lang}</expression>
+              <start>
+                <offset>27659</offset>
+              </start>
+              <end>
+                <offset>27665</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>27654</offset>
@@ -13553,10 +14551,28 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{MPI_null{lang}_COMPILER}</argument>
+          <argument>${MPI_${lang}_COMPILER}</argument>
           <children>
-            <null/>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${MPI_${lang}_COMPILER}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ExpressionNode>
+                  <expression>${lang}</expression>
+                  <start>
+                    <offset>27688</offset>
+                  </start>
+                  <end>
+                    <offset>27694</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ExpressionNode>
+              </nested>
+              <start>
+                <offset>27682</offset>
+              </start>
+              <end>
+                <offset>27704</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>27682</offset>
@@ -13578,9 +14594,17 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>MPI_null{lang}_COMPILER</argument>
+          <argument>MPI_${lang}_COMPILER</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${lang}</expression>
+              <start>
+                <offset>27723</offset>
+              </start>
+              <end>
+                <offset>27729</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>27719</offset>
@@ -13754,10 +14778,18 @@
       <commandName>find_program</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>MPI_null{lang}_COMPILER
+          <argument>MPI_${lang}_COMPILER
 </argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${lang}</expression>
+              <start>
+                <offset>28005</offset>
+              </start>
+              <end>
+                <offset>28011</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>28001</offset>
@@ -13776,11 +14808,29 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{_MPI_null{lang}_COMPILER_NAMES}
+          <argument>${_MPI_${lang}_COMPILER_NAMES}
 </argument>
           <children>
-            <null/>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${_MPI_${lang}_COMPILER_NAMES}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ExpressionNode>
+                  <expression>${lang}</expression>
+                  <start>
+                    <offset>28042</offset>
+                  </start>
+                  <end>
+                    <offset>28048</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ExpressionNode>
+              </nested>
+              <start>
+                <offset>28035</offset>
+              </start>
+              <end>
+                <offset>28064</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>28035</offset>
@@ -13799,10 +14849,18 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{_MPI_BASE_DIR}/bin
+          <argument>${_MPI_BASE_DIR}/bin
 </argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${_MPI_BASE_DIR}</expression>
+              <start>
+                <offset>28079</offset>
+              </start>
+              <end>
+                <offset>28094</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>28079</offset>
@@ -13821,10 +14879,18 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{_MPI_PREFIX_PATH}
+          <argument>${_MPI_PREFIX_PATH}
 </argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${_MPI_PREFIX_PATH}</expression>
+              <start>
+                <offset>28113</offset>
+              </start>
+              <end>
+                <offset>28131</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>28113</offset>
@@ -13846,9 +14912,17 @@
       <commandName>interrogate_mpi_compiler</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{lang}</argument>
+          <argument>${lang}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${lang}</expression>
+              <start>
+                <offset>28170</offset>
+              </start>
+              <end>
+                <offset>28176</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>28170</offset>
@@ -13858,9 +14932,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{try_libs}</argument>
+          <argument>${try_libs}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${try_libs}</expression>
+              <start>
+                <offset>28178</offset>
+              </start>
+              <end>
+                <offset>28188</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>28178</offset>
@@ -13882,9 +14964,17 @@
       <commandName>mark_as_advanced</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>MPI_null{lang}_COMPILER</argument>
+          <argument>MPI_${lang}_COMPILER</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${lang}</expression>
+              <start>
+                <offset>28216</offset>
+              </start>
+              <end>
+                <offset>28222</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>28212</offset>
@@ -13973,9 +15063,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>MPI_null{lang}_LIBRARIES</argument>
+          <argument>MPI_${lang}_LIBRARIES</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${lang}</expression>
+              <start>
+                <offset>28423</offset>
+              </start>
+              <end>
+                <offset>28429</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>28419</offset>
@@ -14003,9 +15101,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>MPI_null{lang}_INCLUDE_PATH</argument>
+          <argument>MPI_${lang}_INCLUDE_PATH</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${lang}</expression>
+              <start>
+                <offset>28452</offset>
+              </start>
+              <end>
+                <offset>28458</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>28448</offset>
@@ -14027,9 +15133,17 @@
       <commandName>try_regular_compiler</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{lang}</argument>
+          <argument>${lang}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${lang}</expression>
+              <start>
+                <offset>28501</offset>
+              </start>
+              <end>
+                <offset>28507</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>28501</offset>
@@ -14071,9 +15185,17 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>MPI_null{lang}_FIND_QUIETLY</argument>
+          <argument>MPI_${lang}_FIND_QUIETLY</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${lang}</expression>
+              <start>
+                <offset>28559</offset>
+              </start>
+              <end>
+                <offset>28565</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>28555</offset>
@@ -14083,9 +15205,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{MPI_FIND_QUIETLY}</argument>
+          <argument>${MPI_FIND_QUIETLY}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${MPI_FIND_QUIETLY}</expression>
+              <start>
+                <offset>28580</offset>
+              </start>
+              <end>
+                <offset>28598</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>28580</offset>
@@ -14107,9 +15237,17 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>MPI_null{lang}_FIND_REQUIRED</argument>
+          <argument>MPI_${lang}_FIND_REQUIRED</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${lang}</expression>
+              <start>
+                <offset>28613</offset>
+              </start>
+              <end>
+                <offset>28619</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>28609</offset>
@@ -14119,9 +15257,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{MPI_FIND_REQUIRED}</argument>
+          <argument>${MPI_FIND_REQUIRED}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${MPI_FIND_REQUIRED}</expression>
+              <start>
+                <offset>28635</offset>
+              </start>
+              <end>
+                <offset>28654</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>28635</offset>
@@ -14143,9 +15289,17 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>MPI_null{lang}_FIND_VERSION</argument>
+          <argument>MPI_${lang}_FIND_VERSION</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${lang}</expression>
+              <start>
+                <offset>28669</offset>
+              </start>
+              <end>
+                <offset>28675</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>28665</offset>
@@ -14155,9 +15309,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{MPI_FIND_VERSION}</argument>
+          <argument>${MPI_FIND_VERSION}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${MPI_FIND_VERSION}</expression>
+              <start>
+                <offset>28690</offset>
+              </start>
+              <end>
+                <offset>28708</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>28690</offset>
@@ -14179,9 +15341,17 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>MPI_null{lang}_FIND_VERSION_EXACT</argument>
+          <argument>MPI_${lang}_FIND_VERSION_EXACT</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${lang}</expression>
+              <start>
+                <offset>28723</offset>
+              </start>
+              <end>
+                <offset>28729</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>28719</offset>
@@ -14191,9 +15361,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{MPI_FIND_VERSION_EXACT}</argument>
+          <argument>${MPI_FIND_VERSION_EXACT}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${MPI_FIND_VERSION_EXACT}</expression>
+              <start>
+                <offset>28750</offset>
+              </start>
+              <end>
+                <offset>28774</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>28750</offset>
@@ -14236,9 +15414,17 @@
       <commandName>find_package_handle_standard_args</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>MPI_null{lang}</argument>
+          <argument>MPI_${lang}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${lang}</expression>
+              <start>
+                <offset>28855</offset>
+              </start>
+              <end>
+                <offset>28861</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>28851</offset>
@@ -14257,9 +15443,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>MPI_null{lang}_COMPILER</argument>
+          <argument>MPI_${lang}_COMPILER</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${lang}</expression>
+              <start>
+                <offset>28879</offset>
+              </start>
+              <end>
+                <offset>28885</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>28875</offset>
@@ -14292,9 +15486,17 @@
       <commandName>find_package_handle_standard_args</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>MPI_null{lang}</argument>
+          <argument>MPI_${lang}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${lang}</expression>
+              <start>
+                <offset>28952</offset>
+              </start>
+              <end>
+                <offset>28958</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>28948</offset>
@@ -14313,9 +15515,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>MPI_null{lang}_LIBRARIES</argument>
+          <argument>MPI_${lang}_LIBRARIES</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${lang}</expression>
+              <start>
+                <offset>28976</offset>
+              </start>
+              <end>
+                <offset>28982</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>28972</offset>
@@ -14325,9 +15535,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>MPI_null{lang}_INCLUDE_PATH</argument>
+          <argument>MPI_${lang}_INCLUDE_PATH</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${lang}</expression>
+              <start>
+                <offset>28998</offset>
+              </start>
+              <end>
+                <offset>29004</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>28994</offset>
@@ -14555,9 +15773,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{_MPI_OLD_VARS}</argument>
+          <argument>${_MPI_OLD_VARS}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${_MPI_OLD_VARS}</expression>
+              <start>
+                <offset>29437</offset>
+              </start>
+              <end>
+                <offset>29452</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>29437</offset>
@@ -14579,9 +15805,17 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>MPI_null{var}</argument>
+          <argument>MPI_${var}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${var}</expression>
+              <start>
+                <offset>29467</offset>
+              </start>
+              <end>
+                <offset>29472</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>29463</offset>
@@ -14591,10 +15825,28 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{MPI_CXX_null{var}}</argument>
+          <argument>${MPI_CXX_${var}}</argument>
           <children>
-            <null/>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${MPI_CXX_${var}}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ExpressionNode>
+                  <expression>${var}</expression>
+                  <start>
+                    <offset>29484</offset>
+                  </start>
+                  <end>
+                    <offset>29489</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ExpressionNode>
+              </nested>
+              <start>
+                <offset>29474</offset>
+              </start>
+              <end>
+                <offset>29490</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>29474</offset>
@@ -14657,9 +15909,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{_MPI_OLD_VARS}</argument>
+          <argument>${_MPI_OLD_VARS}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${_MPI_OLD_VARS}</expression>
+              <start>
+                <offset>29544</offset>
+              </start>
+              <end>
+                <offset>29559</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>29544</offset>
@@ -14681,9 +15941,17 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>MPI_null{var}</argument>
+          <argument>MPI_${var}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${var}</expression>
+              <start>
+                <offset>29574</offset>
+              </start>
+              <end>
+                <offset>29579</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>29570</offset>
@@ -14693,10 +15961,28 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{MPI_C_null{var}}</argument>
+          <argument>${MPI_C_${var}}</argument>
           <children>
-            <null/>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${MPI_C_${var}}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ExpressionNode>
+                  <expression>${var}</expression>
+                  <start>
+                    <offset>29589</offset>
+                  </start>
+                  <end>
+                    <offset>29594</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ExpressionNode>
+              </nested>
+              <start>
+                <offset>29581</offset>
+              </start>
+              <end>
+                <offset>29595</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>29581</offset>
@@ -14887,9 +16173,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{MPI_LIBRARY_WORK}</argument>
+          <argument>${MPI_LIBRARY_WORK}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${MPI_LIBRARY_WORK}</expression>
+              <start>
+                <offset>29922</offset>
+              </start>
+              <end>
+                <offset>29940</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>29922</offset>
@@ -15122,9 +16416,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{MPI_LIBRARIES}</argument>
+          <argument>${MPI_LIBRARIES}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${MPI_LIBRARIES}</expression>
+              <start>
+                <offset>30198</offset>
+              </start>
+              <end>
+                <offset>30213</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>30198</offset>
@@ -15194,9 +16496,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>null{MPI_EXTRA_LIBRARY_WORK}</argument>
+          <argument>${MPI_EXTRA_LIBRARY_WORK}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${MPI_EXTRA_LIBRARY_WORK}</expression>
+              <start>
+                <offset>30283</offset>
+              </start>
+              <end>
+                <offset>30307</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>30283</offset>
@@ -15481,9 +16791,17 @@
       <commandName>unset</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>_MPI_null{lang}_COMPILER_NAMES</argument>
+          <argument>_MPI_${lang}_COMPILER_NAMES</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${lang}</expression>
+              <start>
+                <offset>30721</offset>
+              </start>
+              <end>
+                <offset>30727</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>30716</offset>

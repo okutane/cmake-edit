@@ -259,9 +259,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>nullENV{CMAKE_LEGACY_CYGWIN_WIN32}</argument>
+          <argument>$ENV{CMAKE_LEGACY_CYGWIN_WIN32}</argument>
           <children>
-            <null/>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>$ENV{CMAKE_LEGACY_CYGWIN_WIN32}</expression>
+              <start>
+                <offset>335</offset>
+              </start>
+              <end>
+                <offset>365</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
           <start>
             <offset>335</offset>

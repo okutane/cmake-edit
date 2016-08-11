@@ -40,6 +40,8 @@ public class ArgumentParserTest {
     public void testExpressions() throws ParseException {
         checkArguments("(${a})",
                 arg("${a}", 1, 4, expr("${a}", 1, 4)));
+        checkArguments("($ENV{a})",
+                arg("$ENV{a}", 1, 7, expr("$ENV{a}", 1, 7)));
     }
 
     private ArgumentNode arg(String argument, int from, int to, Node... expressions) {

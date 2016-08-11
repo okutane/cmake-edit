@@ -1,4 +1,6 @@
-package ru.urururu.cmakeedit.core;
+package ru.urururu.cmakeedit.core.checker;
+
+import ru.urururu.cmakeedit.core.*;
 
 import java.util.*;
 
@@ -6,11 +8,8 @@ import java.util.*;
  * Created by okutane on 11/08/16.
  */
 public class Checker {
-    public static Map<SourceRange, String> findUnused(FileNode ast) {
+    public static void findUnused(FileNode ast, ProblemReporter reporter) {
         // super naive checker
-
-        Map<SourceRange, String> result = new LinkedHashMap<>();
-
         Map<String, SourceRange> stores = new HashMap<>();
 
         ast.visitAll(new NodeVisitor() {
@@ -35,7 +34,7 @@ public class Checker {
                         SourceRange unused = stores.put(first.getArgument(), new SourceRange(node.getStart(), node.getEnd()));
 
                         if (unused != null) {
-                            result.put(unused, "Value replaced");
+                            reporter.report(unused, "Value replaced");
                         }
                     }
                 } else if (node.getCommandName().equals("unset")) {
@@ -44,7 +43,7 @@ public class Checker {
                         SourceRange unused = stores.remove(first.getArgument());
 
                         if (unused != null) {
-                            result.put(unused, "Value unset");
+                            reporter.report(unused, "Value unset");
                         }
                     }
                 }
@@ -62,8 +61,6 @@ public class Checker {
             }
         });
 
-        stores.forEach((var, range) -> result.put(range, "Value not used"));
-
-        return result;
+        stores.forEach((var, range) -> reporter.report(range, "Value not used"));
     }
 }

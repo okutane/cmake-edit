@@ -11,6 +11,6 @@ import java.util.function.Function;
 public class ParserIntegrationTests {
     @Test
     public static TestSuite suite() {
-        return TestHelper.buildPack("/integration", Function.identity());
+        return TestHelper.buildPack("/integration", (ctx, ast) -> ast);
     }
 }

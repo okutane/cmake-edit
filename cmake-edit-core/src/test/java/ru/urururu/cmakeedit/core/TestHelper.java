@@ -21,12 +21,16 @@ import java.nio.file.Files;
 import java.nio.file.NoSuchFileException;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.TimeUnit;
-import java.util.function.Function;
+import java.util.function.BiFunction;
 
 /**
  * Created by okutane on 11/08/16.
  */
 class TestHelper {
+    public static final XStream X_STREAM = new XStream(new Sun14ReflectionProvider(
+            new FieldDictionary(new ImmutableFieldKeySorter())),
+            new DomDriver("utf-8"));
+
     private static final double TESTS_THRESHOLD;
     private static final File ROOT;
     private static String SRC_ROOT = System.getProperty("SRC_ROOT");
@@ -59,7 +63,7 @@ class TestHelper {
         TESTS_THRESHOLD = candidate;
     }
 
-    static TestSuite buildPack(String path, Function<FileNode, ?> conversion) {
+    static TestSuite buildPack(String path, BiFunction<RandomAccessContext, FileNode, ?> conversion) {
         URL url = ParserIntegrationTests.class.getResource(path);
         File packRoot;
         try {
@@ -87,7 +91,7 @@ class TestHelper {
         return pack;
     }
 
-    private static TestSuite createSuite(File file, MetricRegistry registry, Function<FileNode, ?> conversion) {
+    private static TestSuite createSuite(File file, MetricRegistry registry, BiFunction<RandomAccessContext, FileNode, ?> conversion) {
         TestSuite suite = new TestSuite(file.getName());
 
         for (File child : file.listFiles()) {
@@ -106,13 +110,10 @@ class TestHelper {
 
                         text = text.replace("\r", "");
 
-                        FileNode result = Parser.parse(new StringParseContext(text, 0, registry));
+                        StringParseContext ctx = new StringParseContext(text, 0, registry);
+                        FileNode result = Parser.parse(ctx);
 
-                        XStream xstream = new XStream(new Sun14ReflectionProvider(
-                                new FieldDictionary(new ImmutableFieldKeySorter())),
-                                new DomDriver("utf-8"));
-
-                        String actual = xstream.toXML(conversion.apply(result));
+                        String actual = X_STREAM.toXML(conversion.apply(ctx, result));
 
                         File expectedFile = new File(source.getAbsolutePath() + ".xml");
                         String expected;

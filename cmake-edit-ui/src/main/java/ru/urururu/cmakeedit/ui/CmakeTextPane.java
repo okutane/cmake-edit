@@ -1,6 +1,8 @@
 package ru.urururu.cmakeedit.ui;
 
 import ru.urururu.cmakeedit.core.*;
+import ru.urururu.cmakeedit.core.checker.Checker;
+import ru.urururu.cmakeedit.core.checker.ProblemReporter;
 
 import javax.swing.*;
 import javax.swing.event.DocumentEvent;
@@ -68,14 +70,16 @@ class CmakeTextPane extends JScrollPane implements DocumentListener, NodeVisitor
 
         fileNode.visitAll(CmakeTextPane.this);
 
-        Map<SourceRange, String> problems = Checker.findUnused(fileNode);
-        for (SourceRange sourceRange : problems.keySet()) {
-            try {
-                textPane.getHighlighter().addHighlight(sourceRange.getStart().getOffset(), sourceRange.getEnd().getOffset() + 1, warningsHighlighter);
-            } catch (BadLocationException e) {
-                throw new IllegalStateException(e);
+        Checker.findUnused(fileNode, new ProblemReporter() {
+            @Override
+            public void report(SourceRange range, String problem) {
+                try {
+                    textPane.getHighlighter().addHighlight(range.getStart().getOffset(), range.getEnd().getOffset() + 1, warningsHighlighter);
+                } catch (BadLocationException e) {
+                    throw new IllegalStateException(e);
+                }
             }
-        }
+        });
     }
 
     @Override

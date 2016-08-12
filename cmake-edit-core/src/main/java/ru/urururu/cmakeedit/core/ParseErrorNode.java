@@ -8,8 +8,8 @@ import java.util.Collections;
 public class ParseErrorNode extends FileElementNode {
     String message;
 
-    public ParseErrorNode(ParseContext ctx, ParseException e, SourceRef position) {
-        super(Collections.emptyList(), position, position);
+    public ParseErrorNode(ParseContext ctx, ParseException e, SourceRef start, SourceRef end) {
+        super(Collections.emptyList(), start, end);
         this.message = e.getMessage();
     }
 

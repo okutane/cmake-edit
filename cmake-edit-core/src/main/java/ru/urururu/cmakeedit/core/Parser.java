@@ -49,7 +49,7 @@ public class Parser {
                     if (errorHandling == ErrorHandling.Exception) {
                         throw e;
                     }
-                    nodes.add(new ParseErrorNode(ctx, e, position));
+                    nodes.add(new ParseErrorNode(ctx, e, position, ctx.position()));
                 }
             }
 

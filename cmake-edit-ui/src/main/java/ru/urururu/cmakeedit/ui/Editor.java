@@ -43,8 +43,8 @@ public class Editor {
         frame.add(textArea);
 
         //Display the window.
-        frame.pack();
         frame.setMinimumSize(new Dimension(500, 500));
+        frame.pack();
         frame.setVisible(true);
     }
 }

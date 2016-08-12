@@ -9,58 +9,162 @@ import java.util.*;
  */
 public class Checker {
     public static void findUnused(FileNode ast, ProblemReporter reporter) {
-        // super naive checker
-        Map<String, SourceRange> stores = new HashMap<>();
+        List<FileElementNode> nodes = ast.getNodes();
 
-        ast.visitAll(new NodeVisitor() {
-            @Override
-            public void accept(ArgumentNode node) {
-
-            }
-
-            @Override
-            public void accept(CommentNode node) {
-
-            }
-
+        Set<Node> suspiciousPoints = new LinkedHashSet<>();
+        ast.visitAll(new NodeVisitorAdapter() {
             @Override
             public void accept(CommandInvocationNode node) {
-                List<Node> arguments = node.getArguments();
-
-                if (node.getCommandName().equals("set")) {
-
-                    if (!arguments.isEmpty()) {
-                        ArgumentNode first = (ArgumentNode) arguments.get(0);
-                        SourceRange unused = stores.put(first.getArgument(), new SourceRange(node.getStart(), node.getEnd()));
-
-                        if (unused != null) {
-                            reporter.report(unused, "Value replaced");
-                        }
-                    }
-                } else if (node.getCommandName().equals("unset")) {
-                    if (!arguments.isEmpty()) {
-                        ArgumentNode first = (ArgumentNode) arguments.get(0);
-                        SourceRange unused = stores.remove(first.getArgument());
-
-                        if (unused != null) {
-                            reporter.report(unused, "Value unset");
-                        }
-                    }
+                if (!node.getCommandName().equalsIgnoreCase("set")) {
+                    return;
                 }
-            }
 
-            @Override
-            public void accept(ExpressionNode node) {
+                if (node.getArguments().isEmpty()) {
+                    // strange stuff
+                    return;
+                }
 
-            }
+                ArgumentNode first = (ArgumentNode) node.getArguments().get(0);
+                if (first.getArgument().startsWith("CMAKE_")) {
+                    return;
+                }
 
-            @Override
-            public void accept(ParseErrorNode node) {
-                // can't say much about what after that node.
-                stores.clear();
+                suspiciousPoints.add(node);
             }
         });
 
-        stores.forEach((var, range) -> reporter.report(range, "Value not used"));
+        Queue<SimulationState> states = new LinkedList<>();
+        states.offer(new SimulationState(nodes, 0));
+
+        while (!states.isEmpty() && !suspiciousPoints.isEmpty()) {
+            SimulationState state = states.poll();
+            state.simulate(states);
+        }
+
+        suspiciousPoints.forEach(n -> reporter.report(new SourceRange(n.getStart(), n.getEnd()), "Value not used"));
+    }
+
+    private static class SimulationState {
+        static final List<String> builtins = Arrays.asList("include_directories");
+
+        private final List<FileElementNode> nodes;
+        private final int position;
+        private final Map<String, CommandInvocationNode> variables;
+        private final Stack<Integer> jumps;
+
+        public SimulationState(List<FileElementNode> nodes, int position) {
+            this(nodes, position, new HashMap<>(), new Stack<>());
+        }
+
+        public SimulationState(List<FileElementNode> nodes, int position, Map<String, CommandInvocationNode> variables, Stack<Integer> jumps) {
+            this.nodes = nodes;
+            this.position = position;
+            this.variables = variables;
+            this.jumps = jumps;
+        }
+
+        public void simulate(Queue<SimulationState> states) {
+            Node node = nodes.get(position);
+
+            node.visitAll(new NodeVisitorAdapter() {
+                @Override
+                public void accept(CommandInvocationNode node) {
+                    if (node.getCommandName().equalsIgnoreCase("set")) {
+                        List<Node> arguments = node.getArguments();
+                        if (arguments.size() > 0) {
+                            String variable = ((ArgumentNode) arguments.get(0)).getArgument();
+                            // todo if variable is a reference through other variables we should inline it.
+
+                            variables.put(variable, node);
+                        }
+                    } else if (node.getCommandName().equalsIgnoreCase("unset")) {
+                        List<Node> arguments = node.getArguments();
+                        if (arguments.size() > 0) {
+                            String variable = ((ArgumentNode) arguments.get(0)).getArgument();
+                            // todo if variable is a reference through other variables we should inline it.
+
+                            variables.remove(variable);
+                        }
+                    } else if (node.getCommandName().equalsIgnoreCase("if")) {
+                        //List<Integer> elseifPositions = new ArrayList<>();
+                        //Integer elsePosition = null;
+                        //int endifPosition;
+                        List<Integer> blockPositions = new ArrayList<>();
+                        blockPositions.add(position);
+
+                        int depth = 0;
+
+                        for (int i = position + 1; i < nodes.size(); i++) {
+                            if (nodes.get(i) instanceof CommandInvocationNode) {
+                                CommandInvocationNode futureCommand = (CommandInvocationNode) nodes.get(i);
+                                switch (futureCommand.getCommandName().toLowerCase()) {
+                                    case "if":
+                                        depth++;
+                                        continue;
+                                    case "elseif":
+                                        if (depth == 0) {
+                                            blockPositions.add(i);
+                                        }
+                                        continue;
+                                    case "else":
+                                        if (depth == 0) {
+                                            blockPositions.add(i);
+                                        }
+                                        continue;
+                                    case "endif":
+                                        if (depth == 0) {
+                                            // do the needful
+                                            blockPositions.add(i);
+
+                                            processIf(blockPositions);
+                                            return;
+                                        }
+                                        depth--;
+                                }
+                            }
+                        }
+                    } else if (builtins.contains(node.getCommandName().toLowerCase())) {
+                        // verified ok.
+                    } else {
+                        throw new IllegalStateException(node.getCommandName());
+                    }
+
+                    for (int newPosition = getNext(position); newPosition < nodes.size(); newPosition = getNext(newPosition)) {
+                        if (nodes.get(newPosition) instanceof CommandInvocationNode) {
+                            states.offer(new SimulationState(nodes, newPosition, variables, jumps));
+                            return;
+                        }
+                    }
+                }
+
+                private int getNext(int current) {
+                    if (jumps.isEmpty()) {
+                        return current + 1;
+                    } else if (current + 1 < jumps.peek()) {
+                        return current + 1;
+                    }
+                    jumps.pop();
+                    return jumps.pop();
+                }
+
+                private void processIf(List<Integer> blockPositions) {
+                    // todo evaluate expressions from if and elseifs.
+
+                    for (int i = 0; i < blockPositions.size() - 1; i++) {
+                        for (int newPosition = blockPositions.get(i) + 1; newPosition < blockPositions.get(i + 1); newPosition++) {
+                            if (nodes.get(newPosition) instanceof CommandInvocationNode) {
+                                Stack<Integer> newJumps = (Stack<Integer>) jumps.clone();
+                                int jumpTo = blockPositions.get(blockPositions.size() - 1) + 1;
+                                newJumps.push(jumpTo); // jump to past endif.
+                                int jumpFrom = blockPositions.get(i + 1);
+                                newJumps.push(jumpFrom); // jump from elseif/else/endif.
+                                states.offer(new SimulationState(nodes, newPosition, new HashMap<>(variables), newJumps));
+                                break;
+                            }
+                        }
+                    }
+                }
+            });
+        }
     }
 }

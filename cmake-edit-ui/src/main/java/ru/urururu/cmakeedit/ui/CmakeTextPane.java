@@ -1,25 +1,34 @@
 package ru.urururu.cmakeedit.ui;
 
 import ru.urururu.cmakeedit.core.*;
+import ru.urururu.cmakeedit.core.checker.Checker;
+import ru.urururu.cmakeedit.core.checker.ProblemReporter;
 
 import javax.swing.*;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import javax.swing.text.*;
 import java.awt.*;
+import java.util.Map;
 
 /**
  * Created by okutane on 07/08/16.
  */
-public class CmakeTextPane extends JScrollPane implements DocumentListener, NodeVisitor {
+class CmakeTextPane extends JScrollPane implements DocumentListener, NodeVisitor {
     private final JTextPane textPane;
 
     private final DefaultStyledDocument styledDocument;
     private final Style normal;
     private final Style comment;
     private final Style argument;
+    private final Style expression;
 
-    public CmakeTextPane(String text) {
+    private final Highlighter.HighlightPainter warningsHighlighter =
+            new DefaultHighlighter.DefaultHighlightPainter(new Color(127, 127, 0, 50));
+    private final Highlighter.HighlightPainter errorsHighlighter =
+            new DefaultHighlighter.DefaultHighlightPainter(new Color(255, 0, 0, 50));
+
+    CmakeTextPane(String text) {
         styledDocument = new DefaultStyledDocument();
 
         Style parent = styledDocument.addStyle("parent", null);
@@ -33,6 +42,9 @@ public class CmakeTextPane extends JScrollPane implements DocumentListener, Node
         argument = styledDocument.addStyle("argument", parent);
         StyleConstants.setForeground(argument, new Color(13, 119, 0));
 
+        expression = styledDocument.addStyle("expression", parent);
+        StyleConstants.setForeground(expression, new Color(0, 119, 240));
+
         textPane = new JTextPane(styledDocument);
         setViewportView(textPane);
 
@@ -45,13 +57,29 @@ public class CmakeTextPane extends JScrollPane implements DocumentListener, Node
     }
 
     private void parseAll() {
+        styledDocument.setCharacterAttributes(0, styledDocument.getLength(), normal, true);
+        textPane.getHighlighter().removeAllHighlights();
+
         FileNode fileNode;
         try {
             fileNode = Parser.parse(new DocumentParseContext(styledDocument), Parser.ErrorHandling.NodesBefore);
         } catch (ParseException e) {
-            throw new IllegalStateException(e);
+            // can't be thrown since we're using Parser.ErrorHandling.NodesBefore
+            return;
         }
+
         fileNode.visitAll(CmakeTextPane.this);
+
+        Checker.findUnused(fileNode, new ProblemReporter() {
+            @Override
+            public void report(SourceRange range, String problem) {
+                try {
+                    textPane.getHighlighter().addHighlight(range.getStart().getOffset(), range.getEnd().getOffset() + 1, warningsHighlighter);
+                } catch (BadLocationException e) {
+                    throw new IllegalStateException(e);
+                }
+            }
+        });
     }
 
     @Override
@@ -74,7 +102,7 @@ public class CmakeTextPane extends JScrollPane implements DocumentListener, Node
     }
 
     @Override
-    public void accept(FileElementNode node) {
+    public void accept(CommandInvocationNode node) {
         colorize(node, normal);
     }
 
@@ -84,8 +112,23 @@ public class CmakeTextPane extends JScrollPane implements DocumentListener, Node
     }
 
     @Override
+    public void accept(ExpressionNode node) {
+        colorize(node, expression);
+    }
+
+    @Override
     public void accept(CommentNode node) {
         colorize(node, comment);
+    }
+
+    @Override
+    public void accept(ParseErrorNode node) {
+        try {
+            // todo node range is close to the error, but not precise. hightlight entire line?
+            textPane.getHighlighter().addHighlight(node.getStart().getOffset(), node.getEnd().getOffset() + 1, errorsHighlighter);
+        } catch (BadLocationException e) {
+            throw new IllegalStateException(e);
+        }
     }
 
     private void colorize(Node node, Style style) {

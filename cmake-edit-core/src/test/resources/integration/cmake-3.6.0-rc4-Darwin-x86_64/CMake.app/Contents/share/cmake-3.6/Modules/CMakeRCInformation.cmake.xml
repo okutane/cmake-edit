@@ -335,6 +335,17 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>${CMAKE_RC_COMPILER}</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${CMAKE_RC_COMPILER}</expression>
+              <start>
+                <offset>970</offset>
+              </start>
+              <end>
+                <offset>989</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>970</offset>
           </start>
@@ -386,6 +397,35 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>${CMAKE_ROOT}/Modules/Platform/${CMAKE_SYSTEM_NAME}-${CMAKE_BASE_NAME}.cmake</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${CMAKE_ROOT}</expression>
+              <start>
+                <offset>1053</offset>
+              </start>
+              <end>
+                <offset>1065</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${CMAKE_SYSTEM_NAME}</expression>
+              <start>
+                <offset>1084</offset>
+              </start>
+              <end>
+                <offset>1103</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${CMAKE_BASE_NAME}</expression>
+              <start>
+                <offset>1105</offset>
+              </start>
+              <end>
+                <offset>1122</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>1053</offset>
           </start>
@@ -407,6 +447,26 @@
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>Platform/${CMAKE_SYSTEM_NAME}-${CMAKE_BASE_NAME}</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${CMAKE_SYSTEM_NAME}</expression>
+              <start>
+                <offset>1148</offset>
+              </start>
+              <end>
+                <offset>1167</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${CMAKE_BASE_NAME}</expression>
+              <start>
+                <offset>1169</offset>
+              </start>
+              <end>
+                <offset>1186</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>1139</offset>
           </start>
@@ -446,6 +506,26 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>$ENV{RCFLAGS} ${CMAKE_RC_FLAGS_INIT}</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>$ENV{RCFLAGS}</expression>
+              <start>
+                <offset>1222</offset>
+              </start>
+              <end>
+                <offset>1234</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${CMAKE_RC_FLAGS_INIT}</expression>
+              <start>
+                <offset>1236</offset>
+              </start>
+              <end>
+                <offset>1257</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>1221</offset>
           </start>

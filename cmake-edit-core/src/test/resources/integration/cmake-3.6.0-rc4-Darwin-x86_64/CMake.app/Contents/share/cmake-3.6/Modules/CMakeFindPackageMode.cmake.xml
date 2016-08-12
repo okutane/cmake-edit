@@ -860,6 +860,35 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>${CMAKE_MAJOR_VERSION}.${CMAKE_MINOR_VERSION}.${CMAKE_PATCH_VERSION}</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${CMAKE_MAJOR_VERSION}</expression>
+              <start>
+                <offset>2017</offset>
+              </start>
+              <end>
+                <offset>2038</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${CMAKE_MINOR_VERSION}</expression>
+              <start>
+                <offset>2040</offset>
+              </start>
+              <end>
+                <offset>2061</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${CMAKE_PATCH_VERSION}</expression>
+              <start>
+                <offset>2063</offset>
+              </start>
+              <end>
+                <offset>2084</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>2017</offset>
           </start>
@@ -964,6 +993,26 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>${CMAKE_BINARY_DIR}${CMAKE_FILES_DIRECTORY}</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${CMAKE_BINARY_DIR}</expression>
+              <start>
+                <offset>2403</offset>
+              </start>
+              <end>
+                <offset>2421</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${CMAKE_FILES_DIRECTORY}</expression>
+              <start>
+                <offset>2422</offset>
+              </start>
+              <end>
+                <offset>2445</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>2403</offset>
           </start>
@@ -1020,6 +1069,17 @@
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>${CMAKE_SYSTEM_NAME}</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${CMAKE_SYSTEM_NAME}</expression>
+              <start>
+                <offset>2540</offset>
+              </start>
+              <end>
+                <offset>2559</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>2539</offset>
           </start>
@@ -1056,6 +1116,17 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>${COMPILER_ID}</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${COMPILER_ID}</expression>
+              <start>
+                <offset>2584</offset>
+              </start>
+              <end>
+                <offset>2597</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>2583</offset>
           </start>
@@ -1095,6 +1166,17 @@
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>CMAKE_${LANGUAGE}_SYSROOT_FLAG</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${LANGUAGE}</expression>
+              <start>
+                <offset>2625</offset>
+              </start>
+              <end>
+                <offset>2635</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>2619</offset>
           </start>
@@ -1125,6 +1207,17 @@
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>CMAKE_${LANGUAGE}_OSX_DEPLOYMENT_TARGET_FLAG</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${LANGUAGE}</expression>
+              <start>
+                <offset>2666</offset>
+              </start>
+              <end>
+                <offset>2676</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>2660</offset>
           </start>
@@ -1469,6 +1562,17 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>${FILE_EXECUTABLE}</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${FILE_EXECUTABLE}</expression>
+              <start>
+                <offset>3295</offset>
+              </start>
+              <end>
+                <offset>3312</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>3294</offset>
           </start>
@@ -1508,6 +1612,17 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>${FILE_ABSPATH}</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${FILE_ABSPATH}</expression>
+              <start>
+                <offset>3358</offset>
+              </start>
+              <end>
+                <offset>3372</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>3357</offset>
           </start>
@@ -1517,6 +1632,17 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>${FILE_ABSPATH}</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${FILE_ABSPATH}</expression>
+              <start>
+                <offset>3376</offset>
+              </start>
+              <end>
+                <offset>3390</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>3375</offset>
           </start>
@@ -1565,6 +1691,17 @@
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>${fileOutput}</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${fileOutput}</expression>
+              <start>
+                <offset>3445</offset>
+              </start>
+              <end>
+                <offset>3457</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>3444</offset>
           </start>
@@ -1731,6 +1868,17 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>CMAKE_${LANGUAGE}_LIBRARY_ARCHITECTURE</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${LANGUAGE}</expression>
+              <start>
+                <offset>3669</offset>
+              </start>
+              <end>
+                <offset>3679</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>3663</offset>
           </start>
@@ -1818,6 +1966,17 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>${filesInLib}</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${filesInLib}</expression>
+              <start>
+                <offset>3784</offset>
+              </start>
+              <end>
+                <offset>3796</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>3784</offset>
           </start>
@@ -1839,6 +1998,17 @@
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>${file}</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${file}</expression>
+              <start>
+                <offset>3811</offset>
+              </start>
+              <end>
+                <offset>3817</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>3810</offset>
           </start>
@@ -1857,6 +2027,17 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>${CMAKE_LIBRARY_ARCHITECTURE_REGEX}</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${CMAKE_LIBRARY_ARCHITECTURE_REGEX}</expression>
+              <start>
+                <offset>3829</offset>
+              </start>
+              <end>
+                <offset>3863</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>3828</offset>
           </start>
@@ -1878,6 +2059,17 @@
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>CMAKE_${LANGUAGE}_LIBRARY_ARCHITECTURE</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${LANGUAGE}</expression>
+              <start>
+                <offset>3887</offset>
+              </start>
+              <end>
+                <offset>3897</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>3881</offset>
           </start>
@@ -1887,6 +2079,17 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>${file}</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${file}</expression>
+              <start>
+                <offset>3920</offset>
+              </start>
+              <end>
+                <offset>3926</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>3920</offset>
           </start>
@@ -1991,6 +2194,28 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>${CMAKE_${LANGUAGE}_LIBRARY_ARCHITECTURE}</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${CMAKE_${LANGUAGE}_LIBRARY_ARCHITECTURE}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ExpressionNode>
+                  <expression>${LANGUAGE}</expression>
+                  <start>
+                    <offset>4078</offset>
+                  </start>
+                  <end>
+                    <offset>4088</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ExpressionNode>
+              </nested>
+              <start>
+                <offset>4070</offset>
+              </start>
+              <end>
+                <offset>4110</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>4070</offset>
           </start>
@@ -2045,6 +2270,17 @@
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>CMAKE_${LANGUAGE}_COMPILER</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${LANGUAGE}</expression>
+              <start>
+                <offset>4155</offset>
+              </start>
+              <end>
+                <offset>4165</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>4149</offset>
           </start>
@@ -2075,6 +2311,17 @@
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>CMAKE_${LANGUAGE}_COMPILER_ID</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${LANGUAGE}</expression>
+              <start>
+                <offset>4195</offset>
+              </start>
+              <end>
+                <offset>4205</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>4189</offset>
           </start>
@@ -2084,6 +2331,17 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>${COMPILER_ID}</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${COMPILER_ID}</expression>
+              <start>
+                <offset>4220</offset>
+              </start>
+              <end>
+                <offset>4233</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>4219</offset>
           </start>
@@ -2105,6 +2363,17 @@
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>CMake${LANGUAGE}Information</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${LANGUAGE}</expression>
+              <start>
+                <offset>4250</offset>
+              </start>
+              <end>
+                <offset>4260</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>4245</offset>
           </start>
@@ -2165,6 +2434,17 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>${_packageName}</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${_packageName}</expression>
+              <start>
+                <offset>4339</offset>
+              </start>
+              <end>
+                <offset>4353</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>4338</offset>
           </start>
@@ -2323,6 +2603,17 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>${_packageName}_INCLUDE_DIRS</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${_packageName}</expression>
+              <start>
+                <offset>4550</offset>
+              </start>
+              <end>
+                <offset>4564</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>4550</offset>
           </start>
@@ -2353,6 +2644,17 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>${_packageName}_INCLUDE_DIRS</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${_packageName}</expression>
+              <start>
+                <offset>4597</offset>
+              </start>
+              <end>
+                <offset>4611</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>4597</offset>
           </start>
@@ -2383,6 +2685,17 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>${PACKAGE_NAME}_INCLUDE_DIRS</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${PACKAGE_NAME}</expression>
+              <start>
+                <offset>4644</offset>
+              </start>
+              <end>
+                <offset>4658</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>4644</offset>
           </start>
@@ -2413,6 +2726,17 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>${PACKAGE_NAME}_INCLUDE_DIRS</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${PACKAGE_NAME}</expression>
+              <start>
+                <offset>4691</offset>
+              </start>
+              <end>
+                <offset>4705</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>4691</offset>
           </start>
@@ -2443,6 +2767,17 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>${_packageName}_INCLUDES</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${_packageName}</expression>
+              <start>
+                <offset>4738</offset>
+              </start>
+              <end>
+                <offset>4752</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>4738</offset>
           </start>
@@ -2473,6 +2808,17 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>${_packageName}_INCLUDES</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${_packageName}</expression>
+              <start>
+                <offset>4781</offset>
+              </start>
+              <end>
+                <offset>4795</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>4781</offset>
           </start>
@@ -2503,6 +2849,17 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>${PACKAGE_NAME}_INCLUDES</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${PACKAGE_NAME}</expression>
+              <start>
+                <offset>4824</offset>
+              </start>
+              <end>
+                <offset>4838</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>4824</offset>
           </start>
@@ -2533,6 +2890,17 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>${PACKAGE_NAME}_INCLUDES</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${PACKAGE_NAME}</expression>
+              <start>
+                <offset>4867</offset>
+              </start>
+              <end>
+                <offset>4881</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>4867</offset>
           </start>
@@ -2563,6 +2931,17 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>${_packageName}_INCLUDE_DIR</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${_packageName}</expression>
+              <start>
+                <offset>4910</offset>
+              </start>
+              <end>
+                <offset>4924</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>4910</offset>
           </start>
@@ -2593,6 +2972,17 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>${_packageName}_INCLUDE_DIR</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${_packageName}</expression>
+              <start>
+                <offset>4956</offset>
+              </start>
+              <end>
+                <offset>4970</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>4956</offset>
           </start>
@@ -2623,6 +3013,17 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>${PACKAGE_NAME}_INCLUDE_DIR</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${PACKAGE_NAME}</expression>
+              <start>
+                <offset>5002</offset>
+              </start>
+              <end>
+                <offset>5016</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>5002</offset>
           </start>
@@ -2653,6 +3054,17 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>${PACKAGE_NAME}_INCLUDE_DIR</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${PACKAGE_NAME}</expression>
+              <start>
+                <offset>5048</offset>
+              </start>
+              <end>
+                <offset>5062</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>5048</offset>
           </start>
@@ -2694,6 +3106,28 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>${${includes}}</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${${includes}}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ExpressionNode>
+                  <expression>${includes}</expression>
+                  <start>
+                    <offset>5118</offset>
+                  </start>
+                  <end>
+                    <offset>5128</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ExpressionNode>
+              </nested>
+              <start>
+                <offset>5116</offset>
+              </start>
+              <end>
+                <offset>5129</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>5115</offset>
           </start>
@@ -2796,6 +3230,17 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>${_packageName}_DEFINITIONS</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${_packageName}</expression>
+              <start>
+                <offset>5254</offset>
+              </start>
+              <end>
+                <offset>5268</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>5254</offset>
           </start>
@@ -2826,6 +3271,17 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>${_packageName}_DEFINITIONS</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${_packageName}</expression>
+              <start>
+                <offset>5303</offset>
+              </start>
+              <end>
+                <offset>5317</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>5303</offset>
           </start>
@@ -2856,6 +3312,17 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>${PACKAGE_NAME}_DEFINITIONS</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${PACKAGE_NAME}</expression>
+              <start>
+                <offset>5349</offset>
+              </start>
+              <end>
+                <offset>5363</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>5349</offset>
           </start>
@@ -2886,6 +3353,17 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>${PACKAGE_NAME}_DEFINITIONS</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${PACKAGE_NAME}</expression>
+              <start>
+                <offset>5398</offset>
+              </start>
+              <end>
+                <offset>5412</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>5398</offset>
           </start>
@@ -2927,6 +3405,28 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>${${definitions}}</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${${definitions}}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ExpressionNode>
+                  <expression>${definitions}</expression>
+                  <start>
+                    <offset>5468</offset>
+                  </start>
+                  <end>
+                    <offset>5481</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ExpressionNode>
+              </nested>
+              <start>
+                <offset>5466</offset>
+              </start>
+              <end>
+                <offset>5482</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>5465</offset>
           </start>
@@ -2998,6 +3498,17 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>${_packageName}</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${_packageName}</expression>
+              <start>
+                <offset>5564</offset>
+              </start>
+              <end>
+                <offset>5578</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>5563</offset>
           </start>
@@ -3128,6 +3639,17 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>${_packageName}_LIBRARIES</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${_packageName}</expression>
+              <start>
+                <offset>5717</offset>
+              </start>
+              <end>
+                <offset>5731</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>5717</offset>
           </start>
@@ -3158,6 +3680,17 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>${_packageName}_LIBRARIES</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${_packageName}</expression>
+              <start>
+                <offset>5757</offset>
+              </start>
+              <end>
+                <offset>5771</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>5757</offset>
           </start>
@@ -3188,6 +3721,17 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>${PACKAGE_NAME}_LIBRARIES</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${PACKAGE_NAME}</expression>
+              <start>
+                <offset>5801</offset>
+              </start>
+              <end>
+                <offset>5815</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>5801</offset>
           </start>
@@ -3218,6 +3762,17 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>${PACKAGE_NAME}_LIBRARIES</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${PACKAGE_NAME}</expression>
+              <start>
+                <offset>5841</offset>
+              </start>
+              <end>
+                <offset>5855</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>5841</offset>
           </start>
@@ -3248,6 +3803,17 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>${_packageName}_LIBS</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${_packageName}</expression>
+              <start>
+                <offset>5885</offset>
+              </start>
+              <end>
+                <offset>5899</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>5885</offset>
           </start>
@@ -3278,6 +3844,17 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>${_packageName}_LIBS</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${_packageName}</expression>
+              <start>
+                <offset>5920</offset>
+              </start>
+              <end>
+                <offset>5934</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>5920</offset>
           </start>
@@ -3308,6 +3885,17 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>${PACKAGE_NAME}_LIBS</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${PACKAGE_NAME}</expression>
+              <start>
+                <offset>5959</offset>
+              </start>
+              <end>
+                <offset>5973</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>5959</offset>
           </start>
@@ -3338,6 +3926,17 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>${PACKAGE_NAME}_LIBS</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${PACKAGE_NAME}</expression>
+              <start>
+                <offset>5994</offset>
+              </start>
+              <end>
+                <offset>6008</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>5994</offset>
           </start>
@@ -3379,6 +3978,28 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>${${libs}}</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${${libs}}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ExpressionNode>
+                  <expression>${libs}</expression>
+                  <start>
+                    <offset>6054</offset>
+                  </start>
+                  <end>
+                    <offset>6060</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ExpressionNode>
+              </nested>
+              <start>
+                <offset>6052</offset>
+              </start>
+              <end>
+                <offset>6061</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>6051</offset>
           </start>
@@ -3420,6 +4041,17 @@
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>${NAME}</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${NAME}</expression>
+              <start>
+                <offset>6110</offset>
+              </start>
+              <end>
+                <offset>6116</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>6109</offset>
           </start>
@@ -3489,6 +4121,17 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>${NAME}</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${NAME}</expression>
+              <start>
+                <offset>6169</offset>
+              </start>
+              <end>
+                <offset>6175</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>6168</offset>
           </start>
@@ -3519,6 +4162,17 @@
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>${NAME}_FOUND</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${NAME}</expression>
+              <start>
+                <offset>6198</offset>
+              </start>
+              <end>
+                <offset>6204</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>6198</offset>
           </start>
@@ -3537,6 +4191,17 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>${UPPERCASE_NAME}_FOUND</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${UPPERCASE_NAME}</expression>
+              <start>
+                <offset>6217</offset>
+              </start>
+              <end>
+                <offset>6233</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>6217</offset>
           </start>
@@ -3588,6 +4253,17 @@
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>${MODE}</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${MODE}</expression>
+              <start>
+                <offset>6275</offset>
+              </start>
+              <end>
+                <offset>6281</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>6274</offset>
           </start>
@@ -3641,6 +4317,17 @@
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>${MODE}</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${MODE}</expression>
+              <start>
+                <offset>6329</offset>
+              </start>
+              <end>
+                <offset>6335</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>6328</offset>
           </start>
@@ -3680,6 +4367,17 @@
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>${NAME}</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${NAME}</expression>
+              <start>
+                <offset>6384</offset>
+              </start>
+              <end>
+                <offset>6390</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>6384</offset>
           </start>
@@ -3701,6 +4399,17 @@
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>${MODE}</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${MODE}</expression>
+              <start>
+                <offset>6403</offset>
+              </start>
+              <end>
+                <offset>6409</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>6402</offset>
           </start>
@@ -3740,6 +4449,17 @@
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>${NAME}</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${NAME}</expression>
+              <start>
+                <offset>6452</offset>
+              </start>
+              <end>
+                <offset>6458</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>6452</offset>
           </start>
@@ -3781,6 +4501,17 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>Invalid mode argument ${MODE} given.</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${MODE}</expression>
+              <start>
+                <offset>6517</offset>
+              </start>
+              <end>
+                <offset>6523</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>6494</offset>
           </start>
@@ -3833,6 +4564,17 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>${SILENT}</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${SILENT}</expression>
+              <start>
+                <offset>6572</offset>
+              </start>
+              <end>
+                <offset>6580</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>6572</offset>
           </start>

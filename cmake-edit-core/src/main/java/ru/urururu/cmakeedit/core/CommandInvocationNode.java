@@ -7,9 +7,9 @@ import java.util.List;
  */
 public class CommandInvocationNode extends FileElementNode {
     private final String commandName;
-    private List<ArgumentNode> arguments;
+    private List<Node> arguments;
 
-    public CommandInvocationNode(String commandName, List<ArgumentNode> arguments, List<CommentNode> comments, SourceRef start, SourceRef end) {
+    public CommandInvocationNode(String commandName, List<Node> arguments, List<CommentNode> comments, SourceRef start, SourceRef end) {
         super(comments, start, end);
         this.commandName = commandName;
         this.arguments = arguments;
@@ -17,9 +17,16 @@ public class CommandInvocationNode extends FileElementNode {
 
     @Override
     public void visitAll(NodeVisitor visitor) {
+        visitor.accept(this);
         super.visitAll(visitor);
-        for (ArgumentNode argument : arguments) {
-            argument.visitAll(visitor);
-        }
+        arguments.forEach(n -> n.visitAll(visitor));
+    }
+
+    public String getCommandName() {
+        return commandName;
+    }
+
+    public List<Node> getArguments() {
+        return arguments;
     }
 }

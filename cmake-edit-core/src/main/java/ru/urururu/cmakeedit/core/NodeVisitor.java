@@ -8,5 +8,9 @@ public interface NodeVisitor {
 
     void accept(CommentNode node);
 
-    void accept(FileElementNode node);
+    void accept(ExpressionNode node);
+
+    void accept(CommandInvocationNode node);
+
+    void accept(ParseErrorNode node);
 }

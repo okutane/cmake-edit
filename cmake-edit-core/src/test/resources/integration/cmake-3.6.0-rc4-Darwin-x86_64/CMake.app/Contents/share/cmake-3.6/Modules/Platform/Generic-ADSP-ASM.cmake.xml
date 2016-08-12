@@ -96,6 +96,26 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>&lt;CMAKE_ASM_COMPILER&gt; &lt;INCLUDES&gt; &lt;FLAGS&gt; -proc ${ADSP_PROCESSOR} -si-revision ${ADSP_PROCESSOR_SILICIUM_REVISION} -o &lt;OBJECT&gt; &lt;SOURCE&gt;</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${ADSP_PROCESSOR}</expression>
+              <start>
+                <offset>201</offset>
+              </start>
+              <end>
+                <offset>217</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${ADSP_PROCESSOR_SILICIUM_REVISION}</expression>
+              <start>
+                <offset>232</offset>
+              </start>
+              <end>
+                <offset>266</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>154</offset>
           </start>

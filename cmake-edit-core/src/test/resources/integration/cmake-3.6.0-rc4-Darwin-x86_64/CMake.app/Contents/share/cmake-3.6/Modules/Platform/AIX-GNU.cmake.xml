@@ -518,6 +518,28 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>${CMAKE_SHARED_LIBRARY_CREATE_${lang}_FLAGS} -Wl,-G,-bnoipath</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${CMAKE_SHARED_LIBRARY_CREATE_${lang}_FLAGS}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ExpressionNode>
+                  <expression>${lang}</expression>
+                  <start>
+                    <offset>1297</offset>
+                  </start>
+                  <end>
+                    <offset>1303</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ExpressionNode>
+              </nested>
+              <start>
+                <offset>1267</offset>
+              </start>
+              <end>
+                <offset>1310</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>1266</offset>
           </start>

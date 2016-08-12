@@ -35,7 +35,13 @@ public class Checker {
         });
 
         Queue<SimulationState> states = new LinkedList<>();
-        states.offer(new SimulationState(nodes, 0));
+
+        for (int i = 0; i < nodes.size(); i++) {
+            if (nodes.get(i) instanceof CommandInvocationNode) {
+                states.offer(new SimulationState(nodes, i));
+                break;
+            }
+        }
 
         while (!states.isEmpty() && !suspiciousPoints.isEmpty()) {
             SimulationState state = states.poll();

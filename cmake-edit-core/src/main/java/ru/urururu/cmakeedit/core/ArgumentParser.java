@@ -109,13 +109,10 @@ abstract class ArgumentParser {
             try {
                 if (!ctx.reachedEnd() && ctx.peek() == '[') {
                     ctx.advance();
-                    int len = 0;
                     while (!ctx.reachedEnd() && ctx.peek() == '=') {
-                        len++;
                         ctx.advance();
                     }
                     if (!ctx.reachedEnd() && ctx.peek() == '[') {
-                        ctx.advance();
                         return true;
                     }
                 }
@@ -227,7 +224,11 @@ abstract class ArgumentParser {
                             throw new UnexpectedCharacterException(ctx);
                     }
                     prev = 0;
-                } else if (cur == '"')  {
+                } else if (cur == '$' && ExpressionParser.canParse(ctx, true)) {
+                    ExpressionNode expression = ExpressionParser.parseExpression(ctx);
+                    expressions.add(expression);
+                    sb.append(expression);
+                } else if (cur == '"') {
                     ctx.advance();
                     return new ArgumentNode(sb.toString(), expressions, start, end);
                 } else {

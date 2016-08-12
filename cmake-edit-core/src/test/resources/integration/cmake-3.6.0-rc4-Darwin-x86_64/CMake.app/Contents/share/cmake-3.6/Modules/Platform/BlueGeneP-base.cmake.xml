@@ -2229,6 +2229,17 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>&lt;FLAGS&gt; &lt;CMAKE_${lang}_LINK_FLAGS&gt; &lt;LINK_FLAGS&gt; &lt;OBJECTS&gt;  -o &lt;TARGET&gt; &lt;LINK_LIBRARIES&gt;</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${lang}</expression>
+              <start>
+                <offset>5128</offset>
+              </start>
+              <end>
+                <offset>5134</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>5112</offset>
           </start>
@@ -2271,6 +2282,57 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>&lt;CMAKE_${lang}_COMPILER&gt; -Wl,-relax ${BGP_${lang}_DYNAMIC_EXE_FLAGS} ${BGP_${lang}_DEFAULT_EXE_FLAGS}</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${lang}</expression>
+              <start>
+                <offset>5251</offset>
+              </start>
+              <end>
+                <offset>5257</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${BGP_${lang}_DYNAMIC_EXE_FLAGS}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ExpressionNode>
+                  <expression>${lang}</expression>
+                  <start>
+                    <offset>5286</offset>
+                  </start>
+                  <end>
+                    <offset>5292</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ExpressionNode>
+              </nested>
+              <start>
+                <offset>5280</offset>
+              </start>
+              <end>
+                <offset>5311</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${BGP_${lang}_DEFAULT_EXE_FLAGS}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ExpressionNode>
+                  <expression>${lang}</expression>
+                  <start>
+                    <offset>5319</offset>
+                  </start>
+                  <end>
+                    <offset>5325</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ExpressionNode>
+              </nested>
+              <start>
+                <offset>5313</offset>
+              </start>
+              <end>
+                <offset>5344</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>5243</offset>
           </start>
@@ -2415,6 +2477,17 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>&lt;FLAGS&gt; &lt;CMAKE_${lang}_LINK_FLAGS&gt; &lt;LINK_FLAGS&gt; &lt;OBJECTS&gt;  -o &lt;TARGET&gt; &lt;LINK_LIBRARIES&gt;</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${lang}</expression>
+              <start>
+                <offset>5579</offset>
+              </start>
+              <end>
+                <offset>5585</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>5563</offset>
           </start>
@@ -2457,6 +2530,37 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>&lt;CMAKE_${lang}_COMPILER&gt; -Wl,-relax ${BGP_${lang}_DEFAULT_EXE_FLAGS}</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${lang}</expression>
+              <start>
+                <offset>5702</offset>
+              </start>
+              <end>
+                <offset>5708</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${BGP_${lang}_DEFAULT_EXE_FLAGS}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ExpressionNode>
+                  <expression>${lang}</expression>
+                  <start>
+                    <offset>5737</offset>
+                  </start>
+                  <end>
+                    <offset>5743</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ExpressionNode>
+              </nested>
+              <start>
+                <offset>5731</offset>
+              </start>
+              <end>
+                <offset>5762</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>5694</offset>
           </start>

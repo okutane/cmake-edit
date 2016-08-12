@@ -306,6 +306,28 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>${CMAKE_SHARED_LIBRARY_CREATE_${lang}_FLAGS} -Wl,-E,-b,+nodefaultrpath</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${CMAKE_SHARED_LIBRARY_CREATE_${lang}_FLAGS}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ExpressionNode>
+                  <expression>${lang}</expression>
+                  <start>
+                    <offset>859</offset>
+                  </start>
+                  <end>
+                    <offset>865</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ExpressionNode>
+              </nested>
+              <start>
+                <offset>829</offset>
+              </start>
+              <end>
+                <offset>872</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>828</offset>
           </start>

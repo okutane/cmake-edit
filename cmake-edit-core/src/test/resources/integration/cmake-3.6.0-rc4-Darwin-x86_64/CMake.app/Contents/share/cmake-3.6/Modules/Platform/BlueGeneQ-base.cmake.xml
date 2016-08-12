@@ -1894,6 +1894,26 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>${BGQ_SYSTEM_INCLUDES} -I${dir}</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${BGQ_SYSTEM_INCLUDES}</expression>
+              <start>
+                <offset>4554</offset>
+              </start>
+              <end>
+                <offset>4575</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${dir}</expression>
+              <start>
+                <offset>4579</offset>
+              </start>
+              <end>
+                <offset>4584</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>4553</offset>
           </start>
@@ -1935,6 +1955,17 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>&lt;CMAKE_C_COMPILER&gt;   &lt;DEFINES&gt; ${BGQ_SYSTEM_INCLUDES} &lt;INCLUDES&gt; &lt;FLAGS&gt; -o &lt;OBJECT&gt; -c &lt;SOURCE&gt;</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${BGQ_SYSTEM_INCLUDES}</expression>
+              <start>
+                <offset>4666</offset>
+              </start>
+              <end>
+                <offset>4687</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>4634</offset>
           </start>
@@ -1965,6 +1996,17 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>&lt;CMAKE_CXX_COMPILER&gt; &lt;DEFINES&gt; ${BGQ_SYSTEM_INCLUDES} &lt;INCLUDES&gt; &lt;FLAGS&gt; -o &lt;OBJECT&gt; -c &lt;SOURCE&gt;</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${BGQ_SYSTEM_INCLUDES}</expression>
+              <start>
+                <offset>4797</offset>
+              </start>
+              <end>
+                <offset>4818</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>4765</offset>
           </start>
@@ -2975,6 +3017,17 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>&lt;FLAGS&gt; &lt;CMAKE_${lang}_LINK_FLAGS&gt; &lt;LINK_FLAGS&gt; &lt;OBJECTS&gt;  -o &lt;TARGET&gt; &lt;LINK_LIBRARIES&gt;</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${lang}</expression>
+              <start>
+                <offset>6836</offset>
+              </start>
+              <end>
+                <offset>6842</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>6820</offset>
           </start>
@@ -3017,6 +3070,57 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>&lt;CMAKE_${lang}_COMPILER&gt; -Wl,-relax ${BGQ_${lang}_DYNAMIC_EXE_FLAGS} ${BGQ_${lang}_DEFAULT_EXE_FLAGS}</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${lang}</expression>
+              <start>
+                <offset>6959</offset>
+              </start>
+              <end>
+                <offset>6965</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${BGQ_${lang}_DYNAMIC_EXE_FLAGS}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ExpressionNode>
+                  <expression>${lang}</expression>
+                  <start>
+                    <offset>6994</offset>
+                  </start>
+                  <end>
+                    <offset>7000</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ExpressionNode>
+              </nested>
+              <start>
+                <offset>6988</offset>
+              </start>
+              <end>
+                <offset>7019</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${BGQ_${lang}_DEFAULT_EXE_FLAGS}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ExpressionNode>
+                  <expression>${lang}</expression>
+                  <start>
+                    <offset>7027</offset>
+                  </start>
+                  <end>
+                    <offset>7033</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ExpressionNode>
+              </nested>
+              <start>
+                <offset>7021</offset>
+              </start>
+              <end>
+                <offset>7052</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>6951</offset>
           </start>
@@ -3227,6 +3331,17 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>&lt;FLAGS&gt; &lt;CMAKE_${lang}_LINK_FLAGS&gt; &lt;LINK_FLAGS&gt; &lt;OBJECTS&gt;  -o &lt;TARGET&gt; &lt;LINK_LIBRARIES&gt;</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${lang}</expression>
+              <start>
+                <offset>7390</offset>
+              </start>
+              <end>
+                <offset>7396</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>7374</offset>
           </start>
@@ -3269,6 +3384,37 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>&lt;CMAKE_${lang}_COMPILER&gt; -Wl,-relax ${BGQ_${lang}_DEFAULT_EXE_FLAGS}</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${lang}</expression>
+              <start>
+                <offset>7513</offset>
+              </start>
+              <end>
+                <offset>7519</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${BGQ_${lang}_DEFAULT_EXE_FLAGS}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ExpressionNode>
+                  <expression>${lang}</expression>
+                  <start>
+                    <offset>7548</offset>
+                  </start>
+                  <end>
+                    <offset>7554</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ExpressionNode>
+              </nested>
+              <start>
+                <offset>7542</offset>
+              </start>
+              <end>
+                <offset>7573</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>7505</offset>
           </start>

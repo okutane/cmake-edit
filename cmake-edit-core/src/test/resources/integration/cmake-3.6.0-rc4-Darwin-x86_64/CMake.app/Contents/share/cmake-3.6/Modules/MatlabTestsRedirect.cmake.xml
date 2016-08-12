@@ -652,6 +652,17 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>${unittest_file_to_run}</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${unittest_file_to_run}</expression>
+              <start>
+                <offset>1428</offset>
+              </start>
+              <end>
+                <offset>1450</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>1427</offset>
           </start>
@@ -691,6 +702,17 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>${unittest_file_to_run}</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${unittest_file_to_run}</expression>
+              <start>
+                <offset>1514</offset>
+              </start>
+              <end>
+                <offset>1536</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>1513</offset>
           </start>
@@ -819,6 +841,17 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>${s}</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${s}</expression>
+              <start>
+                <offset>1644</offset>
+              </start>
+              <end>
+                <offset>1647</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>1643</offset>
           </start>
@@ -867,6 +900,26 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>${concat_string}, &apos;${s}&apos;</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${concat_string}</expression>
+              <start>
+                <offset>1686</offset>
+              </start>
+              <end>
+                <offset>1701</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${s}</expression>
+              <start>
+                <offset>1705</offset>
+              </start>
+              <end>
+                <offset>1708</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>1685</offset>
           </start>
@@ -919,6 +972,17 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>runtests(&apos;${unittest_file_to_run_name}&apos;), exit(max([ans(1,:).Failed]))</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${unittest_file_to_run_name}</expression>
+              <start>
+                <offset>1768</offset>
+              </start>
+              <end>
+                <offset>1795</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>1757</offset>
           </start>
@@ -970,6 +1034,17 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>try, ${unittest_file_to_run_name}, catch err, disp(&apos;An exception has been thrown during the execution&apos;), disp(err), disp(err.stack), exit(1), end, exit(0)</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${unittest_file_to_run_name}</expression>
+              <start>
+                <offset>1885</offset>
+              </start>
+              <end>
+                <offset>1912</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>1879</offset>
           </start>
@@ -1012,6 +1087,35 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>addpath(${concat_string}), path, ${cmd_to_run_before_test}, ${unittest_to_run}</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${concat_string}</expression>
+              <start>
+                <offset>2084</offset>
+              </start>
+              <end>
+                <offset>2099</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${cmd_to_run_before_test}</expression>
+              <start>
+                <offset>2109</offset>
+              </start>
+              <end>
+                <offset>2133</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${unittest_to_run}</expression>
+              <start>
+                <offset>2136</offset>
+              </start>
+              <end>
+                <offset>2153</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>2075</offset>
           </start>
@@ -1052,6 +1156,26 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>${output_directory}/${test_name}.log</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${output_directory}</expression>
+              <start>
+                <offset>2183</offset>
+              </start>
+              <end>
+                <offset>2201</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${test_name}</expression>
+              <start>
+                <offset>2203</offset>
+              </start>
+              <end>
+                <offset>2214</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>2182</offset>
           </start>
@@ -1244,6 +1368,17 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>${Matlab_PROGRAM}</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${Matlab_PROGRAM}</expression>
+              <start>
+                <offset>2362</offset>
+              </start>
+              <end>
+                <offset>2378</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>2361</offset>
           </start>
@@ -1282,6 +1417,17 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>${test_name}.log</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${test_name}</expression>
+              <start>
+                <offset>2416</offset>
+              </start>
+              <end>
+                <offset>2427</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>2415</offset>
           </start>
@@ -1300,6 +1446,17 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>${Matlab_SCRIPT_TO_RUN}</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${Matlab_SCRIPT_TO_RUN}</expression>
+              <start>
+                <offset>2438</offset>
+              </start>
+              <end>
+                <offset>2460</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>2437</offset>
           </start>
@@ -1396,6 +1553,17 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>${output_directory}</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${output_directory}</expression>
+              <start>
+                <offset>2581</offset>
+              </start>
+              <end>
+                <offset>2599</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>2580</offset>
           </start>
@@ -1516,6 +1684,17 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>[MATLAB] ERROR: cannot find the log file ${Matlab_LOG_FILE}</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${Matlab_LOG_FILE}</expression>
+              <start>
+                <offset>2719</offset>
+              </start>
+              <end>
+                <offset>2736</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>2677</offset>
           </start>
@@ -1613,6 +1792,26 @@
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>Matlab test ${name_of_the_test} output:\
 ${matlab_log_content}</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${name_of_the_test}</expression>
+              <start>
+                <offset>2851</offset>
+              </start>
+              <end>
+                <offset>2869</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${matlab_log_content}</expression>
+              <start>
+                <offset>2880</offset>
+              </start>
+              <end>
+                <offset>2900</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>2838</offset>
           </start>

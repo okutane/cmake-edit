@@ -217,6 +217,46 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>Check for working ${LANG} compiler: ${CMAKE_${LANG}_COMPILER}${MSG}</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${LANG}</expression>
+              <start>
+                <offset>683</offset>
+              </start>
+              <end>
+                <offset>689</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${CMAKE_${LANG}_COMPILER}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ExpressionNode>
+                  <expression>${LANG}</expression>
+                  <start>
+                    <offset>709</offset>
+                  </start>
+                  <end>
+                    <offset>715</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ExpressionNode>
+              </nested>
+              <start>
+                <offset>701</offset>
+              </start>
+              <end>
+                <offset>725</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${MSG}</expression>
+              <start>
+                <offset>726</offset>
+              </start>
+              <end>
+                <offset>731</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>664</offset>
           </start>

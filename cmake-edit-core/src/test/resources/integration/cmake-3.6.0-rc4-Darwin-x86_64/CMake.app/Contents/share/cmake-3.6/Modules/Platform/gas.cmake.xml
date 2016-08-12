@@ -150,6 +150,17 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>&lt;CMAKE_ASM${ASM_DIALECT}_COMPILER&gt; &lt;INCLUDES&gt; &lt;FLAGS&gt; -o &lt;OBJECT&gt; &lt;SOURCE&gt;</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${ASM_DIALECT}</expression>
+              <start>
+                <offset>183</offset>
+              </start>
+              <end>
+                <offset>196</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>172</offset>
           </start>
@@ -253,6 +264,17 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>&lt;CMAKE_LINKER&gt; &lt;FLAGS&gt; &lt;CMAKE_ASM${ASM_DIALECT}_LINK_FLAGS&gt; &lt;LINK_FLAGS&gt; &lt;OBJECTS&gt;  -o &lt;TARGET&gt; &lt;LINK_LIBRARIES&gt;</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${ASM_DIALECT}</expression>
+              <start>
+                <offset>473</offset>
+              </start>
+              <end>
+                <offset>486</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>439</offset>
           </start>

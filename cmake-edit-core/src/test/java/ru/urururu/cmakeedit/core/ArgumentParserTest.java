@@ -41,11 +41,17 @@ public class ArgumentParserTest {
         checkArguments("(${a})",
                 arg("${a}", 1, 4, expr("${a}", 1, 4))
         );
-        //checkArguments("(${a})",
-        //        arg("${a}", 1, 4, expr("${a}", 1, 4)));
+        checkArguments("(${a})",
+                arg("${a}", 1, 4, expr("${a}", 1, 4)));
         checkArguments("($ENV{a})",
                 arg("$ENV{a}", 1, 7, expr("$ENV{a}", 1, 7))
         );
+    }
+
+    @Test
+    public void testSpecialCharacters() throws ParseException {
+        checkArguments("(regex \"[0-9]+$\")",
+                arg("regex", 1, 5), arg("[0-9]+$", 7, 15));
     }
 
     @Test

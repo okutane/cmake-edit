@@ -649,6 +649,17 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>&lt;CMAKE_${lang}_COMPILER&gt; &lt;DEFINES&gt; &lt;INCLUDES&gt; &lt;FLAGS&gt; -E &lt;SOURCE&gt; &gt; &lt;PREPROCESSED_SOURCE&gt;</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${lang}</expression>
+              <start>
+                <offset>1287</offset>
+              </start>
+              <end>
+                <offset>1293</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>1279</offset>
           </start>
@@ -690,6 +701,17 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>&lt;CMAKE_${lang}_COMPILER&gt; &lt;DEFINES&gt; &lt;INCLUDES&gt; &lt;FLAGS&gt; -S &lt;SOURCE&gt; -o &lt;ASSEMBLY_SOURCE&gt;</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${lang}</expression>
+              <start>
+                <offset>1427</offset>
+              </start>
+              <end>
+                <offset>1433</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>1419</offset>
           </start>
@@ -879,6 +901,17 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>${CMAKE_XL_CreateExportList} &lt;OBJECT_DIR&gt;/objects.exp &lt;OBJECTS&gt;</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${CMAKE_XL_CreateExportList}</expression>
+              <start>
+                <offset>2289</offset>
+              </start>
+              <end>
+                <offset>2316</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>2288</offset>
           </start>
@@ -898,6 +931,35 @@
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <argument>&lt;CMAKE_${lang}_COMPILER&gt; &lt;CMAKE_SHARED_LIBRARY_${lang}_FLAGS&gt; &lt;LANGUAGE_COMPILE_FLAGS&gt; &lt;LINK_FLAGS&gt; &lt;CMAKE_SHARED_LIBRARY_CREATE_${lang}_FLAGS&gt; -Wl,-bE:&lt;OBJECT_DIR&gt;/objects.exp &lt;SONAME_FLAG&gt;&lt;TARGET_SONAME&gt; -o &lt;TARGET&gt; &lt;OBJECTS&gt; &lt;LINK_LIBRARIES&gt;</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${lang}</expression>
+              <start>
+                <offset>2368</offset>
+              </start>
+              <end>
+                <offset>2374</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${lang}</expression>
+              <start>
+                <offset>2408</offset>
+              </start>
+              <end>
+                <offset>2414</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ExpressionNode>
+              <expression>${lang}</expression>
+              <start>
+                <offset>2490</offset>
+              </start>
+              <end>
+                <offset>2496</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ExpressionNode>
+          </children>
           <start>
             <offset>2360</offset>
           </start>

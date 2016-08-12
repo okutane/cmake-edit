@@ -22,10 +22,16 @@ public class ExpressionParser {
         try (Timer.Context timer = ctx.getRegistry().timer(ExpressionParser.class.getSimpleName() + ".canParse").time()) {
             SourceRef start = ctx.position();
             try {
-                char prev = 0;
-                while (!ctx.reachedEnd() && !BRACKETS.containsKey(ctx.peek()) && !(ctx.peek() == '"' && prev != '\\')) {
-                    prev = ctx.peek();
-                    ctx.advance();
+                if (insideQuoted) {
+                    char prev = 0;
+                    while (!ctx.reachedEnd() && !BRACKETS.containsKey(ctx.peek()) && !(ctx.peek() == '"' && prev != '\\')) {
+                        prev = ctx.peek();
+                        ctx.advance();
+                    }
+                } else {
+                    while (!ctx.reachedEnd() && !BRACKETS.containsKey(ctx.peek())) {
+                        ctx.advance();
+                    }
                 }
                 return !ctx.reachedEnd() && BRACKETS.containsKey(ctx.peek());
             } finally {

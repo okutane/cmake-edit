@@ -1,6 +1,7 @@
 package ru.urururu.cmakeedit.ui;
 
 import javax.swing.*;
+import java.awt.*;
 import java.io.File;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -13,10 +14,6 @@ public class Editor {
     public static void main(String... args) {
         String text = null;
 
-        if (args.length == 0) {
-            // Open new
-            throw new IllegalStateException("Not implemented yet. Should offer new or open file");
-        }
         if (args.length == 1) {
             // First parameter is a path
             File source = new File(args[0]);
@@ -47,6 +44,7 @@ public class Editor {
 
         //Display the window.
         frame.pack();
+        frame.setMinimumSize(new Dimension(500, 500));
         frame.setVisible(true);
     }
 }

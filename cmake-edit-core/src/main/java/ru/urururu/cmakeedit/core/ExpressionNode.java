@@ -23,6 +23,10 @@ public class ExpressionNode extends Node {
         }
     }
 
+    public String getExpression() {
+        return expression;
+    }
+
     @Override
     public String toString() {
         return expression;

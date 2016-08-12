@@ -3,6 +3,7 @@ package ru.urururu.cmakeedit.core.checker;
 import ru.urururu.cmakeedit.core.*;
 
 import java.util.*;
+import java.util.concurrent.BlockingDeque;
 
 /**
  * Created by okutane on 11/08/16.
@@ -38,7 +39,7 @@ public class Checker {
 
         while (!states.isEmpty() && !suspiciousPoints.isEmpty()) {
             SimulationState state = states.poll();
-            state.simulate(states);
+            state.simulate(states, suspiciousPoints);
         }
 
         suspiciousPoints.forEach(n -> reporter.report(new SourceRange(n.getStart(), n.getEnd()), "Value not used"));
@@ -63,34 +64,18 @@ public class Checker {
             this.jumps = jumps;
         }
 
-        public void simulate(Queue<SimulationState> states) {
+        public void simulate(Queue<SimulationState> states, Set<Node> suspiciousPoints) {
             Node node = nodes.get(position);
 
             node.visitAll(new NodeVisitorAdapter() {
                 @Override
                 public void accept(CommandInvocationNode node) {
-                    if (node.getCommandName().equalsIgnoreCase("set")) {
-                        List<Node> arguments = node.getArguments();
-                        if (arguments.size() > 0) {
-                            String variable = ((ArgumentNode) arguments.get(0)).getArgument();
-                            // todo if variable is a reference through other variables we should inline it.
+                    processUsages(node);
 
-                            variables.put(variable, node);
-                        }
-                    } else if (node.getCommandName().equalsIgnoreCase("unset")) {
-                        List<Node> arguments = node.getArguments();
-                        if (arguments.size() > 0) {
-                            String variable = ((ArgumentNode) arguments.get(0)).getArgument();
-                            // todo if variable is a reference through other variables we should inline it.
-
-                            variables.remove(variable);
-                        }
-                    } else if (node.getCommandName().equalsIgnoreCase("if")) {
-                        //List<Integer> elseifPositions = new ArrayList<>();
-                        //Integer elsePosition = null;
-                        //int endifPosition;
-                        List<Integer> blockPositions = new ArrayList<>();
-                        blockPositions.add(position);
+                    if (node.getCommandName().equalsIgnoreCase("if")) {
+                        List<Integer> elseifPositions = new ArrayList<>();
+                        Integer elsePosition = null;
+                        int endifPosition;
 
                         int depth = 0;
 
@@ -103,18 +88,24 @@ public class Checker {
                                         continue;
                                     case "elseif":
                                         if (depth == 0) {
-                                            blockPositions.add(i);
+                                            processUsages(futureCommand);
+                                            elseifPositions.add(i);
                                         }
                                         continue;
                                     case "else":
                                         if (depth == 0) {
-                                            blockPositions.add(i);
+                                            elsePosition = i;
                                         }
                                         continue;
                                     case "endif":
                                         if (depth == 0) {
                                             // do the needful
-                                            blockPositions.add(i);
+                                            endifPosition = i;
+                                            List<Integer> blockPositions = new ArrayList<>();
+                                            blockPositions.add(position); // if
+                                            blockPositions.addAll(elseifPositions); // elseifs
+                                            blockPositions.add(elsePosition != null ? elsePosition : endifPosition); // else explicit or empty implicit
+                                            blockPositions.add(endifPosition); // endif
 
                                             processIf(blockPositions);
                                             return;
@@ -123,10 +114,28 @@ public class Checker {
                                 }
                             }
                         }
-                    } else if (builtins.contains(node.getCommandName().toLowerCase())) {
-                        // verified ok.
                     } else {
-                        throw new IllegalStateException(node.getCommandName());
+                        if (node.getCommandName().equalsIgnoreCase("set")) {
+                            List<Node> arguments = node.getArguments();
+                            if (arguments.size() > 0) {
+                                String variable = ((ArgumentNode) arguments.get(0)).getArgument();
+                                // todo if variable is a reference through other variables we should inline it.
+
+                                variables.put(variable, node);
+                            }
+                        } else if (node.getCommandName().equalsIgnoreCase("unset")) {
+                            List<Node> arguments = node.getArguments();
+                            if (arguments.size() > 0) {
+                                String variable = ((ArgumentNode) arguments.get(0)).getArgument();
+                                // todo if variable is a reference through other variables we should inline it.
+
+                                variables.remove(variable);
+                            }
+                        } /*else if (builtins.contains(node.getCommandName().toLowerCase())) {
+                            // verified ok.
+                        } else {
+                            throw new IllegalStateException(node.getCommandName());
+                        }*/
                     }
 
                     for (int newPosition = getNext(position); newPosition < nodes.size(); newPosition = getNext(newPosition)) {
@@ -135,6 +144,24 @@ public class Checker {
                             return;
                         }
                     }
+                }
+
+                private void processUsages(CommandInvocationNode node) {
+                    node.visitAll(new NodeVisitorAdapter() {
+                        @Override
+                        public void accept(ExpressionNode node) {
+                            // fixme dirty
+                            String expression = node.getExpression();
+                            int expressionStart = expression.indexOf('{');
+                            int expressionEnd = expression.lastIndexOf('}');
+
+                            if (expressionStart != -1 && expressionEnd != -1) {
+                                String argument = expression.substring(expressionStart + 1, expressionEnd);
+                                CommandInvocationNode commandInvocationNode = variables.get(argument);
+                                suspiciousPoints.remove(commandInvocationNode);
+                            }
+                        }
+                    });
                 }
 
                 private int getNext(int current) {

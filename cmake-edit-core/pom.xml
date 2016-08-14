@@ -31,6 +31,7 @@
                                 <include>**/*Tests.java</include>
                             </includes>
                             <excludes>
+                                <exclude>**/CheckerIntegrationTests.java</exclude>
                                 <exclude>**/ParserIntegrationTests.java</exclude>
                             </excludes>
                             <argLine>${argLine}</argLine>
@@ -51,6 +52,7 @@
                         <configuration>
                             <forkMode>never</forkMode>
                             <includes>
+                                <include>**/CheckerIntegrationTests.java</include>
                                 <include>**/ParserIntegrationTests.java</include>
                             </includes>
                         </configuration>
@@ -82,7 +84,12 @@
             <scope>test</scope>
         </dependency>
 
-
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>19.0</version>
+            <scope>test</scope>
+        </dependency>
 
         <dependency>
             <groupId>junit</groupId>

@@ -1,0 +1,23 @@
+<list>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(_compiler_id_pp_test &quot;defined(__SUNPRO_C)&quot;)</details>
+    <lineRange>2</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(_compiler_id_version_compute &quot;
+# if __SUNPRO_C &gt;= 0x5100
+   /* __SUNPRO_C = 0xVRRP */
+#  define @PREFIX@COMPILER_VERSION_MAJOR @MACRO_HEX@(__SUNPRO_C&gt;&gt;12)
+#  define @PREFIX@COMPILER_VERSION_MINOR @MACRO_HEX@(__SUNPRO_C&gt;&gt;4 &amp; 0xFF)
+#  define @PREFIX@COMPILER_VERSION_PATCH @MACRO_HEX@(__SUNPRO_C    &amp; 0xF)
+# else
+   /* __SUNPRO_CC = 0xVRP */
+#  define @PREFIX@COMPILER_VERSION_MAJOR @MACRO_HEX@(__SUNPRO_C&gt;&gt;8)
+#  define @PREFIX@COMPILER_VERSION_MINOR @MACRO_HEX@(__SUNPRO_C&gt;&gt;4 &amp; 0xF)
+#  define @PREFIX@COMPILER_VERSION_PATCH @MACRO_HEX@(__SUNPRO_C    &amp; 0xF)
+# endif&quot;)</details>
+    <lineRange>4-15</lineRange>
+  </problem>
+</list>

@@ -1,0 +1,126 @@
+<list>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(OpenMP_FLAG_CANDIDATES
+    #Empty, if compiler automatically accepts openmp
+    &quot; &quot;
+    #GNU
+    &quot;-fopenmp&quot;
+    #Clang
+    &quot;-fopenmp=libomp&quot;
+    #Microsoft Visual Studio
+    &quot;/openmp&quot;
+    #Intel windows
+    &quot;-Qopenmp&quot;
+    #PathScale, Intel
+    &quot;-openmp&quot;
+    #Sun
+    &quot;-xopenmp&quot;
+    #HP
+    &quot;+Oopenmp&quot;
+    #IBM XL C/c++
+    &quot;-qsmp&quot;
+    #Portland Group, MIPSpro
+    &quot;-mp&quot;
+  )</details>
+    <lineRange>48-69</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(OMP_FLAG_GNU &quot;-fopenmp&quot;)</details>
+    <lineRange>71</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(OMP_FLAG_Clang &quot;-fopenmp=libomp&quot;)</details>
+    <lineRange>72</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(OMP_FLAG_HP &quot;+Oopenmp&quot;)</details>
+    <lineRange>73</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(OMP_FLAG_Intel &quot;-Qopenmp&quot;)</details>
+    <lineRange>75</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(OMP_FLAG_Intel &quot;-openmp&quot;)</details>
+    <lineRange>78</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(OMP_FLAG_Intel &quot;-qopenmp&quot;)</details>
+    <lineRange>80</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(OMP_FLAG_MIPSpro &quot;-mp&quot;)</details>
+    <lineRange>82</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(OMP_FLAG_MSVC &quot;/openmp&quot;)</details>
+    <lineRange>83</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(OMP_FLAG_PathScale &quot;-openmp&quot;)</details>
+    <lineRange>84</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(OMP_FLAG_PGI &quot;-mp&quot;)</details>
+    <lineRange>85</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(OMP_FLAG_SunPro &quot;-xopenmp&quot;)</details>
+    <lineRange>86</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(OMP_FLAG_XL &quot;-qsmp&quot;)</details>
+    <lineRange>87</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(OMP_FLAG_Cray &quot; &quot;)</details>
+    <lineRange>88</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(OpenMP_${LANG}_FLAG_CANDIDATES &quot;${OpenMP_FLAG_CANDIDATES}&quot; PARENT_SCOPE)</details>
+    <lineRange>98</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(OpenMP_C_TEST_SOURCE
+&quot;
+#include &lt;omp.h&gt;
+int main() {
+#ifdef _OPENMP
+  return 0;
+#else
+  breaks_on_purpose
+#endif
+}
+&quot;)</details>
+    <lineRange>102-112</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(OpenMP_Fortran_TEST_SOURCE
+  &quot;
+      program test
+      use omp_lib
+      integer :: n
+      n = omp_get_num_threads()
+      end program test
+  &quot;
+  )</details>
+    <lineRange>115-123</lineRange>
+  </problem>
+</list>

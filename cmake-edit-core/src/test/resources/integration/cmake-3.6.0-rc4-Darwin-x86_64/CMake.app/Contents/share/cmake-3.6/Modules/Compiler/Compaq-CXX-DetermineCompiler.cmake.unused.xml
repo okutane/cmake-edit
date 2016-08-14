@@ -1,0 +1,16 @@
+<list>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(_compiler_id_pp_test &quot;defined(__DECCXX)&quot;)</details>
+    <lineRange>2</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(_compiler_id_version_compute &quot;
+  /* __DECCXX_VER = VVRRTPPPP */
+# define @PREFIX@COMPILER_VERSION_MAJOR @MACRO_DEC@(__DECCXX_VER/10000000)
+# define @PREFIX@COMPILER_VERSION_MINOR @MACRO_DEC@(__DECCXX_VER/100000  % 100)
+# define @PREFIX@COMPILER_VERSION_PATCH @MACRO_DEC@(__DECCXX_VER         % 10000)&quot;)</details>
+    <lineRange>4-8</lineRange>
+  </problem>
+</list>

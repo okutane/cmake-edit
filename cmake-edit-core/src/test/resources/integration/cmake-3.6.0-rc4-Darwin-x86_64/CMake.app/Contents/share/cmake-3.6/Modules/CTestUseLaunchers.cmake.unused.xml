@@ -1,0 +1,55 @@
+<list>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(CTEST_USE_LAUNCHERS &quot;$ENV{CTEST_USE_LAUNCHERS_DEFAULT}&quot;
+    CACHE INTERNAL &quot;CTEST_USE_LAUNCHERS initial value from ENV&quot;)</details>
+    <lineRange>40-41</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(CTEST_USE_LAUNCHERS 0)</details>
+    <lineRange>45</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(__launch_common_options
+    &quot;--target-name &lt;TARGET_NAME&gt; --build-dir &lt;CMAKE_CURRENT_BINARY_DIR&gt;&quot;)</details>
+    <lineRange>49-50</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(__launch_compile_options
+    &quot;${__launch_common_options} --output &lt;OBJECT&gt; --source &lt;SOURCE&gt; --language &lt;LANGUAGE&gt;&quot;)</details>
+    <lineRange>52-53</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(__launch_link_options
+    &quot;${__launch_common_options} --output &lt;TARGET&gt; --target-type &lt;TARGET_TYPE&gt; --language &lt;LANGUAGE&gt;&quot;)</details>
+    <lineRange>55-56</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(__launch_custom_options
+    &quot;${__launch_common_options} --output &lt;OUTPUT&gt;&quot;)</details>
+    <lineRange>58-59</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(CTEST_LAUNCH_COMPILE
+    &quot;\&quot;${CMAKE_CTEST_COMMAND}\&quot; --launch ${__launch_compile_options} --&quot;)</details>
+    <lineRange>65-66</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(CTEST_LAUNCH_LINK
+    &quot;\&quot;${CMAKE_CTEST_COMMAND}\&quot; --launch ${__launch_link_options} --&quot;)</details>
+    <lineRange>68-69</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(CTEST_LAUNCH_CUSTOM
+    &quot;\&quot;${CMAKE_CTEST_COMMAND}\&quot; --launch ${__launch_custom_options} --&quot;)</details>
+    <lineRange>71-72</lineRange>
+  </problem>
+</list>

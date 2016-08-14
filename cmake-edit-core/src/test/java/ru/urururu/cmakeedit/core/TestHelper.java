@@ -63,7 +63,7 @@ class TestHelper {
         TESTS_THRESHOLD = candidate;
     }
 
-    static TestSuite buildPack(String path, BiFunction<RandomAccessContext, FileNode, ?> conversion) {
+    static TestSuite buildPack(String path, BiFunction<RandomAccessContext, FileNode, ?> conversion, String suffix) {
         URL url = ParserIntegrationTests.class.getResource(path);
         File packRoot;
         try {
@@ -74,7 +74,7 @@ class TestHelper {
 
         MetricRegistry registry = new MetricRegistry();
 
-        TestSuite pack = createSuite(packRoot, registry, conversion);
+        TestSuite pack = createSuite(packRoot, registry, conversion, suffix);
 
         pack.addTest(new TestCase("Report results") {
             @Override
@@ -91,7 +91,7 @@ class TestHelper {
         return pack;
     }
 
-    private static TestSuite createSuite(File file, MetricRegistry registry, BiFunction<RandomAccessContext, FileNode, ?> conversion) {
+    private static TestSuite createSuite(File file, MetricRegistry registry, BiFunction<RandomAccessContext, FileNode, ?> conversion, final String suffix) {
         TestSuite suite = new TestSuite(file.getName());
 
         for (File child : file.listFiles()) {
@@ -100,7 +100,7 @@ class TestHelper {
             }
 
             if (child.isDirectory()) {
-                suite.addTest(createSuite(child, registry, conversion));
+                suite.addTest(createSuite(child, registry, conversion, suffix));
             } else if (shouldAdd()) {
                 File source = child;
                 suite.addTest(new XMLTestCase(source.getName()) {
@@ -115,7 +115,7 @@ class TestHelper {
 
                         String actual = X_STREAM.toXML(conversion.apply(ctx, result));
 
-                        File expectedFile = new File(source.getAbsolutePath() + ".xml");
+                        File expectedFile = new File(source.getAbsolutePath() + suffix);
                         String expected;
                         try {
                             expected = new String(Files.readAllBytes(expectedFile.toPath()), StandardCharsets.UTF_8);

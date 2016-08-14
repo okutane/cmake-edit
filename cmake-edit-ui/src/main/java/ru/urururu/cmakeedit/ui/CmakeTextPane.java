@@ -9,7 +9,6 @@ import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import javax.swing.text.*;
 import java.awt.*;
-import java.util.Map;
 
 /**
  * Created by okutane on 07/08/16.
@@ -70,16 +69,25 @@ class CmakeTextPane extends JScrollPane implements DocumentListener, NodeVisitor
 
         fileNode.visitAll(CmakeTextPane.this);
 
-        Checker.findUnused(fileNode, new ProblemReporter() {
-            @Override
-            public void report(SourceRange range, String problem) {
-                try {
-                    textPane.getHighlighter().addHighlight(range.getStart().getOffset(), range.getEnd().getOffset() + 1, warningsHighlighter);
-                } catch (BadLocationException e) {
-                    throw new IllegalStateException(e);
+        try {
+            Checker.findUnused(fileNode, new ProblemReporter() {
+                @Override
+                public void report(SourceRange range, String problem) {
+                    try {
+                        textPane.getHighlighter().addHighlight(range.getStart().getOffset(), range.getEnd().getOffset() + 1, warningsHighlighter);
+                    } catch (BadLocationException e) {
+                        throw new IllegalStateException(e);
+                    }
                 }
+            });
+        } catch (Throwable e) {
+            e.printStackTrace();
+            try {
+                textPane.getHighlighter().addHighlight(0, styledDocument.getLength(), errorsHighlighter);
+            } catch (BadLocationException e1) {
+                e1.printStackTrace();
             }
-        });
+        }
     }
 
     @Override

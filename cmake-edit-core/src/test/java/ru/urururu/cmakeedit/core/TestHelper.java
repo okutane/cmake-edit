@@ -8,7 +8,6 @@ import com.thoughtworks.xstream.converters.reflection.ImmutableFieldKeySorter;
 import com.thoughtworks.xstream.converters.reflection.Sun14ReflectionProvider;
 import com.thoughtworks.xstream.io.xml.DomDriver;
 import junit.framework.AssertionFailedError;
-import junit.framework.TestCase;
 import junit.framework.TestSuite;
 import org.custommonkey.xmlunit.XMLTestCase;
 
@@ -30,6 +29,7 @@ class TestHelper {
     public static final XStream X_STREAM = new XStream(new Sun14ReflectionProvider(
             new FieldDictionary(new ImmutableFieldKeySorter())),
             new DomDriver("utf-8"));
+    public static final MetricRegistry REGISTRY = new MetricRegistry();
 
     private static final double TESTS_THRESHOLD;
     private static final File ROOT;
@@ -61,6 +61,18 @@ class TestHelper {
             }
         }
         TESTS_THRESHOLD = candidate;
+
+        Runtime.getRuntime().addShutdownHook(new Thread() {
+            @Override
+            public void run() {
+                ConsoleReporter reporter = ConsoleReporter.forRegistry(REGISTRY)
+                        .convertRatesTo(TimeUnit.SECONDS)
+                        .convertDurationsTo(TimeUnit.MILLISECONDS)
+                        .build();
+
+                reporter.report();
+            }
+        });
     }
 
     static TestSuite buildPack(String path, BiFunction<RandomAccessContext, FileNode, ?> conversion, String suffix) {
@@ -72,23 +84,7 @@ class TestHelper {
             throw new IllegalStateException(e);
         }
 
-        MetricRegistry registry = new MetricRegistry();
-
-        TestSuite pack = createSuite(packRoot, registry, conversion, suffix);
-
-        pack.addTest(new TestCase("Report results") {
-            @Override
-            protected void runTest() throws Throwable {
-                ConsoleReporter reporter = ConsoleReporter.forRegistry(registry)
-                        .convertRatesTo(TimeUnit.SECONDS)
-                        .convertDurationsTo(TimeUnit.MILLISECONDS)
-                        .build();
-
-                reporter.report();
-            }
-        });
-
-        return pack;
+        return createSuite(packRoot, REGISTRY, conversion, suffix);
     }
 
     private static TestSuite createSuite(File file, MetricRegistry registry, BiFunction<RandomAccessContext, FileNode, ?> conversion, final String suffix) {

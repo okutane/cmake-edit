@@ -5,4 +5,3 @@ after_success:
   - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar -Dsonar.host.url=https://sonarqube.com -Dsonar.login=9cbedb34e2ab1cb418b2b0e48b5ef23000769f58
   - bash <(curl -s https://codecov.io/bash)
   - mvn jacoco:report coveralls:report
-  - mvn clean test -Pintegration-tests

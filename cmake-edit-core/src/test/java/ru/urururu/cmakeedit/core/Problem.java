@@ -1,6 +1,7 @@
 package ru.urururu.cmakeedit.core;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
+import ru.urururu.cmakeedit.core.checker.CheckContext;
 import ru.urururu.cmakeedit.core.checker.Checker;
 import ru.urururu.cmakeedit.core.checker.LogicalException;
 
@@ -33,7 +34,7 @@ class Problem {
         LineNumbersCache lineNumbers = new LineNumbersCache(ctx);
 
         try {
-            Checker.findUnused(ast, (range, problem) -> result.add(new Problem(problem, getText(ctx, range), lineNumbers.getLineRange(range))));
+            Checker.findUnused(new CheckContext(ast, TestHelper.REGISTRY, (range, problem) -> result.add(new Problem(problem, getText(ctx, range), lineNumbers.getLineRange(range)))));
         } catch (LogicalException e) {
             throw new IllegalStateException(e);
         }

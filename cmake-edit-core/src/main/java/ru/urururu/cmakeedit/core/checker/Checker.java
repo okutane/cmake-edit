@@ -1,54 +1,61 @@
 package ru.urururu.cmakeedit.core.checker;
 
+import com.codahale.metrics.*;
+import com.codahale.metrics.Timer;
 import ru.urururu.cmakeedit.core.*;
 
 import java.util.*;
 import java.util.stream.Collectors;
 
+import static com.codahale.metrics.MetricRegistry.name;
+
 /**
  * Created by okutane on 11/08/16.
  */
 public class Checker {
-    public static void findUnused(FileNode ast, ProblemReporter reporter) throws LogicalException {
-        List<CommandInvocationNode> nodes =
-                ast.getNodes().stream()
-                        .filter(n -> n instanceof CommandInvocationNode)
-                        .map(n -> (CommandInvocationNode)n)
-                        .collect(Collectors.toList());
+    public static void findUnused(CheckContext ctx) throws LogicalException {
+        try (Timer.Context time = ctx.getRegistry().timer(name(Checker.class, "findUnused")).time()) {
+            FileNode ast = ctx.getAst();
 
-        Set<Node> suspiciousPoints = new LinkedHashSet<>();
-        ast.visitAll(new NodeVisitorAdapter() {
-            @Override
-            public void accept(CommandInvocationNode node) {
-                if (!node.getCommandName().equalsIgnoreCase("set")) {
-                    return;
+            List<CommandInvocationNode> nodes =
+                    ast.getNodes().stream()
+                            .filter(n -> n instanceof CommandInvocationNode)
+                            .map(n -> (CommandInvocationNode) n)
+                            .collect(Collectors.toList());
+
+            Set<Node> suspiciousPoints = new LinkedHashSet<>();
+            ast.visitAll(new NodeVisitorAdapter() {
+                @Override
+                public void accept(CommandInvocationNode node) {
+                    if (!node.getCommandName().equalsIgnoreCase("set")) {
+                        return;
+                    }
+
+                    if (node.getArguments().isEmpty()) {
+                        // strange stuff
+                        return;
+                    }
+
+                    ArgumentNode first = (ArgumentNode) node.getArguments().get(0);
+                    if (first.getArgument().startsWith("CMAKE_")) {
+                        return;
+                    }
+
+                    suspiciousPoints.add(node);
                 }
+            });
 
-                if (node.getArguments().isEmpty()) {
-                    // strange stuff
-                    return;
+            AbstractSimulator unusedSimulator = new AbstractSimulator() {
+                @Override
+                protected void process(SimulationState state, CommandInvocationNode node) {
+                    state.simulate(suspiciousPoints);
+                    super.process(state, node);
                 }
+            };
 
-                ArgumentNode first = (ArgumentNode) node.getArguments().get(0);
-                if (first.getArgument().startsWith("CMAKE_")) {
-                    return;
-                }
+            unusedSimulator.simulate(ctx, new SimulationState(nodes, 0));
 
-                suspiciousPoints.add(node);
-            }
-        });
-
-        AbstractSimulator unusedSimulator = new AbstractSimulator() {
-            @Override
-            protected void process(SimulationState state, CommandInvocationNode node) {
-                state.simulate(suspiciousPoints);
-                super.process(state, node);
-            }
-        };
-
-        unusedSimulator.simulate(new SimulationState(nodes, 0));
-
-        suspiciousPoints.forEach(n -> reporter.report(new SourceRange(n.getStart(), n.getEnd()), "Value not used"));
+            suspiciousPoints.forEach(n -> ctx.getReporter().report(new SourceRange(n.getStart(), n.getEnd()), "Value not used"));
+        }
     }
-
 }

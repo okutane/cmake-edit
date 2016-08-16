@@ -1,8 +1,11 @@
 package ru.urururu.cmakeedit.core.checker;
 
+import com.codahale.metrics.Timer;
 import ru.urururu.cmakeedit.core.CommandInvocationNode;
 
 import java.util.*;
+
+import static com.codahale.metrics.MetricRegistry.name;
 
 /**
  * Created by okutane on 16/08/16.
@@ -10,24 +13,28 @@ import java.util.*;
 public class AbstractSimulator {
     private BranchingStrategy branchingStrategy = new BranchingStrategy();
 
-    void simulate(SimulationState state) throws LogicalException {
-        while (state.getPosition() < state.getNodes().size()) {
-            CommandInvocationNode current = state.getNodes().get(state.getPosition());
+    void simulate(CheckContext ctx, SimulationState state) throws LogicalException {
+        try (Timer.Context simulateTime = ctx.getRegistry().timer(name(getClass(), "simulate")).time()) {
+            while (state.getPosition() < state.getNodes().size()) {
+                CommandInvocationNode current = state.getNodes().get(state.getPosition());
 
-            if (current.getCommandName().equalsIgnoreCase("if")) {
-                BranchingInfo branches = branchingStrategy.getIfBranches(current, state);
+                    if (current.getCommandName().equalsIgnoreCase("if")) {
+                        try (Timer.Context processTime = ctx.getRegistry().timer(name(getClass(), "process", current.getCommandName())).time()) {
+                            BranchingInfo branches = branchingStrategy.getIfBranches(current, state);
 
-                List<SimulationState> newStates = new ArrayList<>();
-                for (List<CommandInvocationNode> branch : branches.branches) {
-                    SimulationState newState = new SimulationState(branch, 0, new LinkedHashMap<>(state.getVariables()));
-                    simulate(newState);
-                    newStates.add(newState);
+                            List<SimulationState> newStates = new ArrayList<>();
+                            for (List<CommandInvocationNode> branch : branches.branches) {
+                                SimulationState newState = new SimulationState(branch, 0, new LinkedHashMap<>(state.getVariables()));
+                                simulate(ctx, newState);
+                                newStates.add(newState);
+                            }
+
+                            state = merge(newStates, state.getNodes(), branches.mergePoint);
+                        }
+                    } else {
+                        process(state, current);
+                    }
                 }
-
-                state = merge(newStates, state.getNodes(), branches.mergePoint);
-            } else {
-                process(state, current);
-            }
         }
     }
 

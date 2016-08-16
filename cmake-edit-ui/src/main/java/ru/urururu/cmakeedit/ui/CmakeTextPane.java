@@ -2,7 +2,7 @@ package ru.urururu.cmakeedit.ui;
 
 import ru.urururu.cmakeedit.core.*;
 import ru.urururu.cmakeedit.core.checker.Checker;
-import ru.urururu.cmakeedit.core.checker.ProblemReporter;
+import ru.urururu.cmakeedit.core.checker.LogicalException;
 
 import javax.swing.*;
 import javax.swing.event.DocumentEvent;
@@ -70,23 +70,17 @@ class CmakeTextPane extends JScrollPane implements DocumentListener, NodeVisitor
         fileNode.visitAll(CmakeTextPane.this);
 
         try {
-            Checker.findUnused(fileNode, new ProblemReporter() {
-                @Override
-                public void report(SourceRange range, String problem) {
-                    try {
-                        textPane.getHighlighter().addHighlight(range.getStart().getOffset(), range.getEnd().getOffset() + 1, warningsHighlighter);
-                    } catch (BadLocationException e) {
-                        throw new IllegalStateException(e);
-                    }
-                }
-            });
-        } catch (Throwable e) {
-            e.printStackTrace();
-            try {
-                textPane.getHighlighter().addHighlight(0, styledDocument.getLength(), errorsHighlighter);
-            } catch (BadLocationException e1) {
-                e1.printStackTrace();
-            }
+            Checker.findUnused(fileNode, (range, problem) -> addHighlight(range.getStart(), range.getEnd(), warningsHighlighter));
+        } catch (LogicalException e) {
+            addHighlight(e.getFirstNode().getStart(), e.getLastNode().getEnd(), errorsHighlighter);
+        }
+    }
+
+    private void addHighlight(SourceRef start, SourceRef end, Highlighter.HighlightPainter warningsHighlighter) {
+        try {
+            textPane.getHighlighter().addHighlight(start.getOffset(), end.getOffset() + 1, warningsHighlighter);
+        } catch (BadLocationException e) {
+            throw new IllegalStateException(e);
         }
     }
 
@@ -131,12 +125,7 @@ class CmakeTextPane extends JScrollPane implements DocumentListener, NodeVisitor
 
     @Override
     public void accept(ParseErrorNode node) {
-        try {
-            // todo node range is close to the error, but not precise. hightlight entire line?
-            textPane.getHighlighter().addHighlight(node.getStart().getOffset(), node.getEnd().getOffset() + 1, errorsHighlighter);
-        } catch (BadLocationException e) {
-            throw new IllegalStateException(e);
-        }
+        addHighlight(node.getStart(), node.getEnd(), errorsHighlighter);
     }
 
     private void colorize(Node node, Style style) {

@@ -66,15 +66,7 @@ class SimulationState {
                     arguments.get(0).visitAll(new NodeVisitorAdapter() {
                         @Override
                         public void accept(ExpressionNode node) {
-                            // fixme dirty
-                            String expression = node.getExpression();
-                            int expressionStart = expression.indexOf('{');
-                            int expressionEnd = expression.lastIndexOf('}');
-
-                            if (expressionStart != -1 && expressionEnd != -1) {
-                                String argument = expression.substring(expressionStart + 1, expressionEnd);
-                                processUsage(argument, suspiciousPoints);
-                            }
+                            processExpression(node, suspiciousPoints);
                         }
                     });
 
@@ -82,15 +74,7 @@ class SimulationState {
                         arguments.get(i).visitAll(new NodeVisitorAdapter() {
                             @Override
                             public void accept(ExpressionNode node) {
-                                // fixme dirty
-                                String expression = node.getExpression();
-                                int expressionStart = expression.indexOf('{');
-                                int expressionEnd = expression.lastIndexOf('}');
-
-                                if (expressionStart != -1 && expressionEnd != -1) {
-                                    String argument = expression.substring(expressionStart + 1, expressionEnd);
-                                    processUsage(argument, suspiciousPoints);
-                                }
+                                processExpression(node, suspiciousPoints);
                             }
 
                             @Override
@@ -108,15 +92,7 @@ class SimulationState {
                 node.visitAll(new NodeVisitorAdapter() {
                     @Override
                     public void accept(ExpressionNode node) {
-                        // fixme dirty
-                        String expression = node.getExpression();
-                        int expressionStart = expression.indexOf('{');
-                        int expressionEnd = expression.lastIndexOf('}');
-
-                        if (expressionStart != -1 && expressionEnd != -1) {
-                            String argument = expression.substring(expressionStart + 1, expressionEnd);
-                            processUsage(argument, suspiciousPoints);
-                        }
+                        processExpression(node, suspiciousPoints);
                     }
 
                     @Override
@@ -128,6 +104,18 @@ class SimulationState {
                 });
             }
         });
+    }
+
+    private void processExpression(ExpressionNode node, Set<Node> suspiciousPoints) {
+        // fixme dirty
+        String expression = node.getExpression();
+        int expressionStart = expression.indexOf('{');
+        int expressionEnd = expression.lastIndexOf('}');
+
+        if (expressionStart != -1 && expressionEnd != -1) {
+            String argument = expression.substring(expressionStart + 1, expressionEnd);
+            processUsage(argument, suspiciousPoints);
+        }
     }
 
     private void processUsage(String argument, Set<Node> suspiciousPoints) {

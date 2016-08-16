@@ -5,6 +5,7 @@ import com.codahale.metrics.Timer;
 import ru.urururu.cmakeedit.core.*;
 
 import java.util.*;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import static com.codahale.metrics.MetricRegistry.name;
@@ -13,6 +14,12 @@ import static com.codahale.metrics.MetricRegistry.name;
  * Created by okutane on 11/08/16.
  */
 public class Checker {
+    static final Map<String, Function<CommandInvocationNode, Node>> setters =
+            new HashMap<String, Function<CommandInvocationNode, Node>>() {{
+                put("set", cmd -> cmd.getArguments().get(0));
+                put("list", cmd -> Arrays.asList("LENGTH", "GET", "FIND").contains(((ArgumentNode) cmd.getArguments().get(0)).getArgument()) ? cmd.getArguments().get(cmd.getArguments().size() - 1) : null);
+            }};
+
     public static void findUnused(CheckContext ctx) throws LogicalException {
         try (Timer.Context time = ctx.getRegistry().timer(name(Checker.class, "findUnused")).time()) {
             FileNode ast = ctx.getAst();
@@ -27,17 +34,15 @@ public class Checker {
             ast.visitAll(new NodeVisitorAdapter() {
                 @Override
                 public void accept(CommandInvocationNode node) {
-                    if (!node.getCommandName().equals("set")) {
+                    Function<CommandInvocationNode, Node> setter = setters.get(node.getCommandName());
+
+                    if (setter == null) {
                         return;
                     }
 
-                    if (node.getArguments().isEmpty()) {
-                        // strange stuff
-                        return;
-                    }
+                    ArgumentNode argument = (ArgumentNode) setter.apply(node);
 
-                    ArgumentNode first = (ArgumentNode) node.getArguments().get(0);
-                    if (first.getArgument().startsWith("CMAKE_")) {
+                    if (argument == null || argument.getArgument().startsWith("CMAKE_")) {
                         return;
                     }
 

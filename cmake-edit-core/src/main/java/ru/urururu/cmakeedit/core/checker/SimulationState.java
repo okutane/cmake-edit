@@ -3,13 +3,12 @@ package ru.urururu.cmakeedit.core.checker;
 import ru.urururu.cmakeedit.core.*;
 
 import java.util.*;
+import java.util.function.Function;
 
 /**
  * Created by okutane on 16/08/16.
  */
 class SimulationState {
-    static final List<String> builtins = Arrays.asList("include_directories");
-
     private final List<CommandInvocationNode> nodes;
     private int position;
     private final Map<String, Set<CommandInvocationNode>> variables;
@@ -32,12 +31,13 @@ class SimulationState {
             public void accept(CommandInvocationNode node) {
                 processUsages(node);
 
-                if (node.getCommandName().equals("set")) {
-                    List<Node> arguments = node.getArguments();
-                    if (arguments.size() > 0) {
-                        String variable = ((ArgumentNode) arguments.get(0)).getArgument();
-                        // todo if variable is a reference through other variables we should inline it.
+                Function<CommandInvocationNode, Node> setter = Checker.setters.get(node.getCommandName());
+                if (setter != null) {
+                    Node argument = setter.apply(node);
 
+                    if (argument != null) {
+                        String variable = ((ArgumentNode) argument).getArgument();
+                        // todo if variable is a reference through other variables we should inline it.
                         variables.put(variable, Collections.singleton(node));
                     }
                 } else if (node.getCommandName().equals("unset")) {
@@ -48,11 +48,7 @@ class SimulationState {
 
                         variables.remove(variable);
                     }
-                } /*else if (builtins.contains(node.getCommandName().toLowerCase())) {
-                        // verified ok.
-                    } else {
-                        throw new IllegalStateException(node.getCommandName());
-                    }*/
+                }
             }
 
             private void processUsages(CommandInvocationNode node) {

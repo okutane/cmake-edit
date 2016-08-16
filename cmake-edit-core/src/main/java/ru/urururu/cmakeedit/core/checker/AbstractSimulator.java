@@ -16,7 +16,7 @@ public class AbstractSimulator {
             while (state.getPosition() < state.getNodes().size()) {
                 CommandInvocationNode current = state.getNodes().get(state.getPosition());
 
-                    if (current.getCommandName().equalsIgnoreCase("if")) {
+                    if (current.getCommandName().equals("if")) {
                         try (Timer.Context processTime = ctx.getRegistry().timer(name(getClass(), "process", current.getCommandName())).time()) {
                             LogicalBlock branches = LogicalBlockFinder.findIfNodes(state.getNodes(), state.getPosition());
 

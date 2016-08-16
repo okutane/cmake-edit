@@ -32,7 +32,7 @@ class SimulationState {
             public void accept(CommandInvocationNode node) {
                 processUsages(node);
 
-                if (node.getCommandName().equalsIgnoreCase("set")) {
+                if (node.getCommandName().equals("set")) {
                     List<Node> arguments = node.getArguments();
                     if (arguments.size() > 0) {
                         String variable = ((ArgumentNode) arguments.get(0)).getArgument();
@@ -40,7 +40,7 @@ class SimulationState {
 
                         variables.put(variable, Collections.singleton(node));
                     }
-                } else if (node.getCommandName().equalsIgnoreCase("unset")) {
+                } else if (node.getCommandName().equals("unset")) {
                     List<Node> arguments = node.getArguments();
                     if (arguments.size() > 0) {
                         String variable = ((ArgumentNode) arguments.get(0)).getArgument();
@@ -56,7 +56,7 @@ class SimulationState {
             }
 
             private void processUsages(CommandInvocationNode node) {
-                if (node.getCommandName().equalsIgnoreCase("set")) {
+                if (node.getCommandName().equals("set")) {
                     List<Node> arguments = node.getArguments();
 
                     if (arguments.isEmpty()) {

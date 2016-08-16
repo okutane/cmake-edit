@@ -27,7 +27,7 @@ public class Checker {
             ast.visitAll(new NodeVisitorAdapter() {
                 @Override
                 public void accept(CommandInvocationNode node) {
-                    if (!node.getCommandName().equalsIgnoreCase("set")) {
+                    if (!node.getCommandName().equals("set")) {
                         return;
                     }
 

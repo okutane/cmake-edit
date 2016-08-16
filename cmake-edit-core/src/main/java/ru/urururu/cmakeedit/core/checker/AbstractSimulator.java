@@ -2,6 +2,7 @@ package ru.urururu.cmakeedit.core.checker;
 
 import com.codahale.metrics.Timer;
 import ru.urururu.cmakeedit.core.CommandInvocationNode;
+import ru.urururu.cmakeedit.core.Node;
 
 import java.util.*;
 
@@ -12,7 +13,12 @@ import static com.codahale.metrics.MetricRegistry.name;
  */
 public class AbstractSimulator {
     boolean explicit = false;
-    static final List<String> builtins = Arrays.asList("include_directories","set","unset","if","message");
+    static final List<String> builtins = Arrays.asList("include_directories", "set", "unset", "if", "message");
+    private Set<Node> suspiciousPoints;
+
+    public AbstractSimulator(Set<Node> suspiciousPoints) {
+        this.suspiciousPoints = suspiciousPoints;
+    }
 
     void simulate(CheckContext ctx, SimulationState state) throws LogicalException {
         try (Timer.Context simulateTime = ctx.getRegistry().timer(name(getClass(), "simulate")).time()) {
@@ -23,6 +29,10 @@ public class AbstractSimulator {
                 if (commandName.equals("if")) {
                     try (Timer.Context processTime = ctx.getRegistry().timer(name(getClass(), "process", commandName)).time()) {
                         LogicalBlock branches = LogicalBlockFinder.findIfNodes(state.getNodes(), state.getPosition());
+
+                        for (CommandInvocationNode header : branches.headers) {
+                            state.simulate(suspiciousPoints, header);
+                        }
 
                         List<SimulationState> newStates = new ArrayList<>();
                         for (List<CommandInvocationNode> branch : branches.bodies) {

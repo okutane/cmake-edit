@@ -1,6 +1,5 @@
 package ru.urururu.cmakeedit.core.checker;
 
-import com.codahale.metrics.*;
 import com.codahale.metrics.Timer;
 import ru.urururu.cmakeedit.core.*;
 
@@ -50,10 +49,10 @@ public class Checker {
                 }
             });
 
-            AbstractSimulator unusedSimulator = new AbstractSimulator() {
+            AbstractSimulator unusedSimulator = new AbstractSimulator(suspiciousPoints) {
                 @Override
                 protected void process(SimulationState state, CommandInvocationNode node) {
-                    state.simulate(suspiciousPoints);
+                    state.simulate(suspiciousPoints, state.getCurrent());
                     super.process(state, node);
                 }
             };

@@ -23,9 +23,7 @@ class SimulationState {
         this.variables = variables;
     }
 
-    public void simulate(Set<Node> suspiciousPoints) {
-        Node node = nodes.get(position);
-
+    public void simulate(Set<Node> suspiciousPoints, Node node) {
         node.visitAll(new NodeVisitorAdapter() {
             @Override
             public void accept(CommandInvocationNode node) {

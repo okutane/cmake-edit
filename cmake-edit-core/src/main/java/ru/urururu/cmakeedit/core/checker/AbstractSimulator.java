@@ -11,8 +11,6 @@ import static com.codahale.metrics.MetricRegistry.name;
  * Created by okutane on 16/08/16.
  */
 public class AbstractSimulator {
-    private BranchingStrategy branchingStrategy = new BranchingStrategy();
-
     void simulate(CheckContext ctx, SimulationState state) throws LogicalException {
         try (Timer.Context simulateTime = ctx.getRegistry().timer(name(getClass(), "simulate")).time()) {
             while (state.getPosition() < state.getNodes().size()) {
@@ -20,16 +18,16 @@ public class AbstractSimulator {
 
                     if (current.getCommandName().equalsIgnoreCase("if")) {
                         try (Timer.Context processTime = ctx.getRegistry().timer(name(getClass(), "process", current.getCommandName())).time()) {
-                            BranchingInfo branches = branchingStrategy.getIfBranches(current, state);
+                            LogicalBlock branches = LogicalBlockFinder.findIfNodes(state.getNodes(), state.getPosition());
 
                             List<SimulationState> newStates = new ArrayList<>();
-                            for (List<CommandInvocationNode> branch : branches.branches) {
+                            for (List<CommandInvocationNode> branch : branches.bodies) {
                                 SimulationState newState = new SimulationState(branch, 0, new LinkedHashMap<>(state.getVariables()));
                                 simulate(ctx, newState);
                                 newStates.add(newState);
                             }
 
-                            state = merge(newStates, state.getNodes(), branches.mergePoint);
+                            state = merge(newStates, state.getNodes(), branches.endPosition);
                         }
                     } else {
                         process(state, current);

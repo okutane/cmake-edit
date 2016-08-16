@@ -11,7 +11,7 @@ public class CommandInvocationNode extends FileElementNode {
 
     public CommandInvocationNode(String commandName, List<Node> arguments, List<CommentNode> comments, SourceRef start, SourceRef end) {
         super(comments, start, end);
-        this.commandName = commandName;
+        this.commandName = commandName.toLowerCase();
         this.arguments = arguments;
     }
 

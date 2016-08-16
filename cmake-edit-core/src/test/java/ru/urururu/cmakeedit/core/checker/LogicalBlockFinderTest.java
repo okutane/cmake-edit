@@ -2,37 +2,38 @@ package ru.urururu.cmakeedit.core.checker;
 
 import org.junit.Assert;
 import org.junit.Test;
-import ru.urururu.cmakeedit.core.*;
+import ru.urururu.cmakeedit.core.ArgumentNode;
+import ru.urururu.cmakeedit.core.CommandInvocationNode;
 
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import static org.junit.Assert.*;
+
 /**
  * Created by okutane on 16/08/16.
  */
-public class BranchingStrategyTest {
+public class LogicalBlockFinderTest {
     @Test
-    public void getBranches() throws Exception {
-        BranchingStrategy branching = new BranchingStrategy();
-
+    public void find() throws Exception {
         List<CommandInvocationNode> nodes = Arrays.asList(
                 command("if", "a"),
                 command("message", "1"),
                 command("endif")
         );
 
-        BranchingInfo branches = branching.getBranches(new SimulationState(nodes, 0));
+        LogicalBlock branches = LogicalBlockFinder.findIfNodes(nodes, 0);
 
-        Assert.assertEquals(3, branches.mergePoint);
+        Assert.assertEquals(3, branches.endPosition);
         Assert.assertEquals(
                 Arrays.asList(
                         Arrays.asList(
                                 nodes.get(1)
                         ),
                         Collections.emptyList()
-                ), branches.branches
+                ), branches.bodies
         );
     }
 

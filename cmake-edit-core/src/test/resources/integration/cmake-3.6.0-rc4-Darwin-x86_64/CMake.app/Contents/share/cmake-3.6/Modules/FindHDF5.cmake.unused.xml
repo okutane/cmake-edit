@@ -1,13 +1,8 @@
 <list>
   <problem>
     <problem>Value not used</problem>
-    <details>set(HDF5_VALID_LANGUAGE_BINDINGS C CXX Fortran)</details>
-    <lineRange>111</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>list(FIND HDF5_VALID_LANGUAGE_BINDINGS ${component} component_location)</details>
-    <lineRange>127</lineRange>
+    <details>set(FIND_HL ON)</details>
+    <lineRange>122</lineRange>
   </problem>
   <problem>
     <problem>Value not used</problem>
@@ -78,11 +73,6 @@
   </problem>
   <problem>
     <problem>Value not used</problem>
-    <details>set(HDF5_LIBRARIES)</details>
-    <lineRange>352</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
     <details>set(HDF5_C_TARGET hdf5)</details>
     <lineRange>353</lineRange>
   </problem>
@@ -113,16 +103,6 @@
   </problem>
   <problem>
     <problem>Value not used</problem>
-    <details>set(_suffix &quot;-static&quot;)</details>
-    <lineRange>360</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set(_suffix &quot;-shared&quot;)</details>
-    <lineRange>362</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
     <details>set(HDF5_FOUND FALSE)</details>
     <lineRange>372</lineRange>
   </problem>
@@ -133,20 +113,8 @@
   </problem>
   <problem>
     <problem>Value not used</problem>
-    <details>set(HDF5_${_lang}_LIBRARY ${_lang_location} CACHE PATH
-                    &quot;HDF5 ${_lang} library&quot; )</details>
-    <lineRange>380-381</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
     <details>set(HDF5_${_lang}_LIBRARIES ${HDF5_${_lang}_LIBRARY})</details>
     <lineRange>384</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set(HDF5_${_lang}_HL_LIBRARY ${_lang_hl_location} CACHE PATH
-                        &quot;HDF5 ${_lang} HL library&quot; )</details>
-    <lineRange>389-390</lineRange>
   </problem>
   <problem>
     <problem>Value not used</problem>
@@ -167,38 +135,8 @@
   </problem>
   <problem>
     <problem>Value not used</problem>
-    <details>set(HDF5_${__lang}_DEFINITIONS)</details>
-    <lineRange>426</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set(HDF5_${__lang}_INCLUDE_DIRS)</details>
-    <lineRange>427</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set(HDF5_${__lang}_LIBRARIES)</details>
-    <lineRange>428</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set(HDF5_${__lang}_HL_LIBRARIES)</details>
-    <lineRange>429</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
     <details>set(HDF5_COMPILER_NO_INTERROGATE False)</details>
     <lineRange>437</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set(HDF5_${__lang}_LIBRARIES)</details>
-    <lineRange>461</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set(HDF5_${__lang}_HL_LIBRARIES)</details>
-    <lineRange>471</lineRange>
   </problem>
   <problem>
     <problem>Value not used</problem>
@@ -222,6 +160,11 @@
   </problem>
   <problem>
     <problem>Value not used</problem>
+    <details>set(HDF5_FOUND True)</details>
+    <lineRange>535</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
     <details>set(HDF5_CXX_HL_LIBRARY_NAMES     hdf5_hl_cpp ${HDF5_C_HL_LIBRARY_NAMES} ${HDF5_CXX_LIBRARY_NAMES})</details>
     <lineRange>555</lineRange>
   </problem>
@@ -232,45 +175,10 @@
   </problem>
   <problem>
     <problem>Value not used</problem>
-    <details>set(SEARCH_OPTS NO_DEFAULT_PATH)</details>
-    <lineRange>561</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set(HDF5_INCLUDE_FILENAME hdf5.mod)</details>
-    <lineRange>566</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set(HDF5_INCLUDE_FILENAME H5Cpp.h)</details>
-    <lineRange>568</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set(HDF5_INCLUDE_FILENAME hdf5.h)</details>
-    <lineRange>570</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
     <details>set( THIS_LIBRARY_SEARCH_DEBUG
                     lib${LIB}d.a lib${LIB}_debug.a ${LIB}d ${LIB}_debug
                     lib${LIB}d-static.a lib${LIB}_debug-static.a ${LIB}d-static ${LIB}_debug-static )</details>
     <lineRange>590-592</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set( THIS_LIBRARY_SEARCH_RELEASE lib${LIB}.a ${LIB} lib${LIB}-static.a ${LIB}-static)</details>
-    <lineRange>593</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set( THIS_LIBRARY_SEARCH_DEBUG ${LIB}d ${LIB}_debug ${LIB}d-shared ${LIB}_debug-shared)</details>
-    <lineRange>595</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set( THIS_LIBRARY_SEARCH_RELEASE ${LIB} ${LIB}-shared)</details>
-    <lineRange>596</lineRange>
   </problem>
   <problem>
     <problem>Value not used</problem>
@@ -281,21 +189,6 @@
   </problem>
   <problem>
     <problem>Value not used</problem>
-    <details>set( THIS_LIBRARY_SEARCH_RELEASE lib${LIB}.a ${LIB} lib${LIB}-static.a ${LIB}-static)</details>
-    <lineRange>627</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set( THIS_LIBRARY_SEARCH_DEBUG ${LIB}d ${LIB}_debug ${LIB}d-shared ${LIB}_debug-shared)</details>
-    <lineRange>629</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set( THIS_LIBRARY_SEARCH_RELEASE ${LIB} ${LIB}-shared)</details>
-    <lineRange>630</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
     <details>set( HDF5_VERSION &quot;&quot; )</details>
     <lineRange>659</lineRange>
   </problem>
@@ -303,11 +196,6 @@
     <problem>Value not used</problem>
     <details>set( HDF5_IS_PARALLEL TRUE )</details>
     <lineRange>667</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set( HDF5_VERSION &quot;${CMAKE_MATCH_1}&quot; )</details>
-    <lineRange>676</lineRange>
   </problem>
   <problem>
     <problem>Value not used</problem>

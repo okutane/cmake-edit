@@ -61,7 +61,7 @@ public class Checker {
                         List<CommandInvocationNode> macroBody = logicalBlock.bodies.get(0);
                         simulate(ctx, new SimulationState(macroBody, 0));
 
-                        macroSimulator.simulate(ctx, state, command);
+                        return macroSimulator.simulate(ctx, state, command);
                     });
 
                     CommandSimulator functionSimulator = simulators.get("function");
@@ -71,7 +71,7 @@ public class Checker {
                         List<CommandInvocationNode> functionBody = logicalBlock.bodies.get(0);
                         simulate(ctx, new SimulationState(functionBody, 0));
 
-                        functionSimulator.simulate(ctx, state, command);
+                        return functionSimulator.simulate(ctx, state, command);
                     });
                 }
 

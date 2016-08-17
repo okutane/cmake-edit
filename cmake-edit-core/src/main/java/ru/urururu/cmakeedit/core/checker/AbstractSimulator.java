@@ -12,8 +12,6 @@ import static com.codahale.metrics.MetricRegistry.name;
  * Created by okutane on 16/08/16.
  */
 public class AbstractSimulator {
-    boolean explicit = false;
-    static final List<String> builtins = Arrays.asList("include_directories", "set", "unset", "if", "message");
     private Set<Node> suspiciousPoints;
 
     Map<String, CommandSimulator> simulators = new HashMap<>();
@@ -30,24 +28,22 @@ public class AbstractSimulator {
         simulators.put("function", (ctx, state, cmd) -> {
             LogicalBlock logicalBlock = LogicalBlockFinder.find(state.getNodes(), state.getPosition(), "endfunction");
             state.setPosition(logicalBlock.endPosition);
+
+            return state;
         });
         simulators.put("macro", (ctx, state, cmd) -> {
             LogicalBlock logicalBlock = LogicalBlockFinder.find(state.getNodes(), state.getPosition(), "endmacro");
             state.setPosition(logicalBlock.endPosition);
+
+            return state;
         });
         simulators.put("foreach", (ctx, state, cmd) -> {
             LogicalBlock logicalBlock = LogicalBlockFinder.find(state.getNodes(), state.getPosition(), "endforeach");
-
-            List<CommandInvocationNode> foreachBody = logicalBlock.bodies.get(0);
-
-            state.setPosition(logicalBlock.endPosition);
+            return simulateLoop(ctx, state, logicalBlock);
         });
         simulators.put("while", (ctx, state, cmd) -> {
             LogicalBlock logicalBlock = LogicalBlockFinder.find(state.getNodes(), state.getPosition(), "endwhile");
-
-            List<CommandInvocationNode> whileBody = logicalBlock.bodies.get(0);
-
-            state.setPosition(logicalBlock.endPosition);
+            return simulateLoop(ctx, state, logicalBlock);
         });
 
         simulators.put("endforeach", (ctx, state, cmd) -> {
@@ -67,6 +63,23 @@ public class AbstractSimulator {
         });
     }
 
+    private SimulationState simulateLoop(CheckContext ctx, SimulationState state, LogicalBlock logicalBlock) throws LogicalException {
+        for (CommandInvocationNode header : logicalBlock.headers) {
+            state.simulate(suspiciousPoints, header);
+        }
+
+        List<SimulationState> newStates = new ArrayList<>();
+        for (List<CommandInvocationNode> branch : logicalBlock.bodies) {
+            SimulationState newState = new SimulationState(branch, 0, new LinkedHashMap<>(state.getVariables()));
+            simulate(ctx, newState);
+            newStates.add(newState);
+        }
+        newStates.add(state); // case when we don't enter loop
+
+        state = merge(newStates, state.getNodes(), logicalBlock.endPosition);
+        return state;
+    }
+
     void simulate(CheckContext ctx, SimulationState state) throws LogicalException {
         try (Timer.Context simulateTime = ctx.getRegistry().timer(name(getClass(), "simulate")).time()) {
             while (state.getPosition() < state.getNodes().size()) {
@@ -75,7 +88,7 @@ public class AbstractSimulator {
                 String commandName = current.getCommandName();
                 CommandSimulator simulator = simulators.get(commandName);
                 if (simulator != null) {
-                    simulator.simulate(ctx, state, current);
+                    state = simulator.simulate(ctx, state, current);
                 } else if (commandName.equals("if")) {
                     try (Timer.Context processTime = ctx.getRegistry().timer(name(getClass(), "process", commandName)).time()) {
                         LogicalBlock branches = LogicalBlockFinder.findIfNodes(state.getNodes(), state.getPosition());
@@ -93,8 +106,6 @@ public class AbstractSimulator {
 
                         state = merge(newStates, state.getNodes(), branches.endPosition);
                     }
-                } else if (!builtins.contains(commandName) && explicit) {
-                    throw new IllegalStateException(commandName);
                 } else {
                     process(state, current);
                 }
@@ -122,6 +133,6 @@ public class AbstractSimulator {
     }
 
     interface CommandSimulator {
-        void simulate(CheckContext ctx, SimulationState state, CommandInvocationNode command) throws LogicalException;
+        SimulationState simulate(CheckContext ctx, SimulationState state, CommandInvocationNode command) throws LogicalException;
     }
 }

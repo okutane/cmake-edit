@@ -2,7 +2,7 @@ package ru.urururu.cmakeedit.ui;
 
 import com.codahale.metrics.MetricRegistry;
 import ru.urururu.cmakeedit.core.*;
-import ru.urururu.cmakeedit.core.checker.CheckContext;
+import ru.urururu.cmakeedit.core.checker.FileCheckContext;
 import ru.urururu.cmakeedit.core.checker.Checker;
 import ru.urururu.cmakeedit.core.checker.LogicalException;
 import ru.urururu.cmakeedit.core.parser.ParseException;
@@ -74,7 +74,7 @@ class CmakeTextPane extends JScrollPane implements DocumentListener, NodeVisitor
         fileNode.visitAll(CmakeTextPane.this);
 
         try {
-            Checker.findUnused(new CheckContext(fileNode, new MetricRegistry(),(range, problem) -> addHighlight(range.getStart(), range.getEnd(), warningsHighlighter)));
+            Checker.findUnused(new FileCheckContext(fileNode, new MetricRegistry(),(range, problem) -> addHighlight(range.getStart(), range.getEnd(), warningsHighlighter)));
         } catch (LogicalException e) {
             addHighlight(e.getFirstNode().getStart(), e.getLastNode().getEnd(), errorsHighlighter);
         }

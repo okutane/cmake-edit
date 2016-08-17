@@ -81,39 +81,8 @@
   </problem>
   <problem>
     <problem>Value not used</problem>
-    <details>set(pp_if &quot;elif&quot;)</details>
-    <lineRange>454</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
     <details>set(${compiler_file_content} &quot;${${compiler_file_content}}${_define_item}&quot;)</details>
     <lineRange>465</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set(file_content &quot;${file_content}
-#  ifndef ${def_value}
-#    if ${def_name}
-#      define ${def_value} [[deprecated]]
-#      define ${def_value}_MSG(MSG) [[deprecated(MSG)]]
-#    elif ${prefix_arg}_COMPILER_IS_GNU || ${prefix_arg}_COMPILER_IS_Clang
-#      define ${def_value} __attribute__((__deprecated__))
-#      define ${def_value}_MSG(MSG) __attribute__((__deprecated__(MSG)))
-#    elif ${prefix_arg}_COMPILER_IS_MSVC
-#      define ${def_value} __declspec(deprecated)
-#      define ${def_value}_MSG(MSG) __declspec(deprecated(MSG))
-#    else
-#      define ${def_value}
-#      define ${def_value}_MSG(MSG)
-#    endif
-#  endif
-\n&quot;)</details>
-    <lineRange>611-627</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set(file_content &quot;${file_content}#endif\n&quot;)</details>
-    <lineRange>631</lineRange>
   </problem>
   <problem>
     <problem>Value not used</problem>

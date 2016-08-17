@@ -3,26 +3,20 @@ package ru.urururu.cmakeedit.core.checker;
 import com.codahale.metrics.MetricRegistry;
 import ru.urururu.cmakeedit.core.FileNode;
 
-public class CheckContext {
-    private final FileNode ast;
-    private MetricRegistry registry;
-    private final ProblemReporter reporter;
+import java.util.List;
 
-    public CheckContext(FileNode ast, MetricRegistry registry, ProblemReporter reporter) {
-        this.ast = ast;
-        this.registry = registry;
-        this.reporter = reporter;
-    }
+/**
+ * Created by okutane on 18/08/16.
+ */
+public interface CheckContext {
+    FileNode getAst();
 
-    public FileNode getAst() {
-        return ast;
-    }
+    MetricRegistry getRegistry();
 
-    public MetricRegistry getRegistry() {
-        return registry;
-    }
+    ProblemReporter getReporter();
 
-    public ProblemReporter getReporter() {
-        return reporter;
-    }
+    /** todo think of better name, it's used for function/file/directory */
+    List<SimulationState> getFunctionStates();
+
+    List<SimulationState> getLoopStates();
 }

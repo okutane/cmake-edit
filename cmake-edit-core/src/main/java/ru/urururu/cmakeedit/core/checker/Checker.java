@@ -69,7 +69,18 @@ public class Checker {
                         LogicalBlock logicalBlock = LogicalBlockFinder.find(state.getNodes(), state.getPosition(), "endfunction");
 
                         List<CommandInvocationNode> functionBody = logicalBlock.bodies.get(0);
-                        simulate(ctx, new SimulationState(functionBody, 0));
+                        List<SimulationState> ignored = new ArrayList<>();
+                        simulate(new CheckContextDecorator(ctx) {
+                            @Override
+                            public List<SimulationState> getFunctionStates() {
+                                return ignored;
+                            }
+
+                            @Override
+                            public List<SimulationState> getLoopStates() {
+                                return null;
+                            }
+                        }, new SimulationState(functionBody, 0));
 
                         return functionSimulator.simulate(ctx, state, command);
                     });

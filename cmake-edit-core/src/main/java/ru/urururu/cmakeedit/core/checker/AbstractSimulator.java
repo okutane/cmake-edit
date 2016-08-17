@@ -14,7 +14,7 @@ import static com.codahale.metrics.MetricRegistry.name;
 public class AbstractSimulator {
     private Set<Node> suspiciousPoints;
 
-    Map<String, CommandSimulator> simulators = new HashMap<>();
+    private Map<String, CommandSimulator> simulators = new HashMap<>();
 
     public AbstractSimulator(Set<Node> suspiciousPoints) {
         this.suspiciousPoints = suspiciousPoints;
@@ -31,6 +31,12 @@ public class AbstractSimulator {
 
             return state;
         });
+        simulators.put("return", (ctx, state, cmd) -> {
+            List<SimulationState> functionStates = ctx.getFunctionStates();
+            functionStates.add(state);
+            return null;
+        });
+
         simulators.put("macro", (ctx, state, cmd) -> {
             LogicalBlock logicalBlock = LogicalBlockFinder.find(state.getNodes(), state.getPosition(), "endmacro");
             state.setPosition(logicalBlock.endPosition);
@@ -44,6 +50,15 @@ public class AbstractSimulator {
         simulators.put("while", (ctx, state, cmd) -> {
             LogicalBlock logicalBlock = LogicalBlockFinder.find(state.getNodes(), state.getPosition(), "endwhile");
             return simulateLoop(ctx, state, logicalBlock);
+        });
+        simulators.put("break", (ctx, state, cmd) -> {
+            List<SimulationState> loopStates = ctx.getLoopStates();
+            if (loopStates == null) {
+                throw new UnexpectedCommandException(cmd);
+            }
+
+            loopStates.add(state);
+            return null;
         });
 
         simulators.put("endforeach", (ctx, state, cmd) -> {
@@ -68,21 +83,28 @@ public class AbstractSimulator {
             state.simulate(suspiciousPoints, header);
         }
 
-        List<SimulationState> newStates = new ArrayList<>();
-        for (List<CommandInvocationNode> branch : logicalBlock.bodies) {
-            SimulationState newState = new SimulationState(branch, 0, new LinkedHashMap<>(state.getVariables()));
-            simulate(ctx, newState);
-            newStates.add(newState);
-        }
-        newStates.add(state); // case when we don't enter loop
+        List<SimulationState> loopStates = new ArrayList<>();
+        CheckContext loopCtx = new CheckContextDecorator(ctx) {
+            @Override
+            public List<SimulationState> getLoopStates() {
+                return loopStates;
+            }
+        };
 
-        state = merge(newStates, state.getNodes(), logicalBlock.endPosition);
-        return state;
+        for (List<CommandInvocationNode> branch : logicalBlock.bodies) {
+            SimulationState newState = simulate(loopCtx, new SimulationState(branch, 0, new LinkedHashMap<>(state.getVariables())));
+            if (newState != null) {
+                loopStates.add(newState);
+            }
+        }
+        loopStates.add(state); // case when we don't enter loop
+
+        return merge(loopStates, state.getNodes(), logicalBlock.endPosition);
     }
 
-    void simulate(CheckContext ctx, SimulationState state) throws LogicalException {
+    SimulationState simulate(CheckContext ctx, SimulationState state) throws LogicalException {
         try (Timer.Context simulateTime = ctx.getRegistry().timer(name(getClass(), "simulate")).time()) {
-            while (state.getPosition() < state.getNodes().size()) {
+            while (state != null && state.getPosition() < state.getNodes().size()) {
                 CommandInvocationNode current = state.getNodes().get(state.getPosition());
 
                 String commandName = current.getCommandName();
@@ -110,6 +132,7 @@ public class AbstractSimulator {
                     process(state, current);
                 }
             }
+            return state;
         }
     }
 
@@ -122,6 +145,10 @@ public class AbstractSimulator {
     }
 
     private SimulationState merge(List<SimulationState> newStates, List<CommandInvocationNode> nodes, int mergePoint) {
+        if (newStates.isEmpty()) {
+            return null;
+        }
+
         Map<String, Set<CommandInvocationNode>> variables = new HashMap<>();
         for (SimulationState newState : newStates) {
             for (Map.Entry<String, Set<CommandInvocationNode>> variable : newState.getVariables().entrySet()) {

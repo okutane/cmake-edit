@@ -35,7 +35,7 @@ public class Problem {
         LineNumbersCache lineNumbers = new LineNumbersCache(ctx);
 
         try {
-            Checker.findUnused(new CheckContext(ast, TestHelper.REGISTRY, (range, problem) -> result.add(new Problem(problem, getText(ctx, range), lineNumbers.getLineRange(range)))));
+            Checker.findUnused(new FileCheckContext(ast, TestHelper.REGISTRY, (range, problem) -> result.add(new Problem(problem, getText(ctx, range), lineNumbers.getLineRange(range)))));
         } catch (LogicalException e) {
             throw new IllegalStateException(e);
         }

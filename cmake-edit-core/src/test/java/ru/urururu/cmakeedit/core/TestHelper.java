@@ -15,13 +15,11 @@ import ru.urururu.cmakeedit.core.parser.Parser;
 import ru.urururu.cmakeedit.core.parser.RandomAccessContext;
 import ru.urururu.cmakeedit.core.parser.StringParseContext;
 
-import java.io.File;
-import java.io.UnsupportedEncodingException;
+import java.io.*;
 import java.net.URL;
 import java.net.URLDecoder;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
-import java.nio.file.NoSuchFileException;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.TimeUnit;
 import java.util.function.BiFunction;
@@ -113,27 +111,47 @@ public class TestHelper {
                         StringParseContext ctx = new StringParseContext(text, 0, registry);
                         FileNode result = Parser.parse(ctx);
 
-                        String actual = X_STREAM.toXML(conversion.apply(ctx, result));
+                        PipedReader actualReader = new PipedReader();
+
+                        Object actual = conversion.apply(ctx, result);
+
+                        PipedWriter actualWriter = new PipedWriter(actualReader);
+                        Thread writerThread = new Thread() {
+                            @Override
+                            public void run() {
+                                try {
+                                    X_STREAM.toXML(actual, actualWriter);
+                                } finally {
+                                    try {
+                                        actualWriter.close();
+                                    } catch (IOException e) {
+                                        throw new IllegalStateException(e);
+                                    }
+                                }
+                            }
+                        };
+                        writerThread.start();
 
                         File expectedFile = new File(source.getAbsolutePath() + suffix);
-                        String expected;
-                        try {
-                            expected = new String(Files.readAllBytes(expectedFile.toPath()), StandardCharsets.UTF_8);
-                        } catch (NoSuchFileException e) {
+                        if (!expectedFile.exists()) {
                             if (SRC_ROOT != null) {
                                 File srcExpectedFile = new File(expectedFile.getAbsolutePath().replace(ROOT.getAbsolutePath(), SRC_ROOT));
-                                Files.write(srcExpectedFile.toPath(), actual.getBytes());
+                                try (OutputStream os = Files.newOutputStream(srcExpectedFile.toPath())) {
+                                    X_STREAM.toXML(actual, os);
+                                }
                                 fail("Expectations file not found and created: " + expectedFile.getAbsolutePath());
                             }
-                            throw e;
+                            fail("Expectations file not found: " + expectedFile.getAbsolutePath());
                         }
 
-                        try {
-                            assertXMLEqual(expected, actual);
+                        try (Reader expectedReader = new FileReader(expectedFile)) {
+                            assertXMLEqual(expectedReader, actualReader);
                         } catch (AssertionFailedError e) {
                             if (UPDATE && SRC_ROOT != null) {
                                 File srcExpectedFile = new File(expectedFile.getAbsolutePath().replace(ROOT.getAbsolutePath(), SRC_ROOT));
-                                Files.write(srcExpectedFile.toPath(), actual.getBytes());
+                                try (OutputStream os = Files.newOutputStream(srcExpectedFile.toPath())) {
+                                    X_STREAM.toXML(actual, os);
+                                }
                             }
                             throw e;
                         }

@@ -101,6 +101,10 @@ class SimulationState {
     }
 
     private void processExpression(ExpressionNode node, Set<Node> suspiciousPoints) {
+        if (node.getKey() != null) {
+            return;
+        }
+
         // fixme dirty
         String expression = node.getExpression();
         int expressionStart = expression.indexOf('{');

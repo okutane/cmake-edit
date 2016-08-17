@@ -16,8 +16,33 @@
   </problem>
   <problem>
     <problem>Value not used</problem>
+    <details>set(pp_if &quot;#if&quot;)</details>
+    <lineRange>109</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(id_content &quot;${pp_if} ${_compiler_id_pp_test_${Id}}\n&quot;)</details>
+    <lineRange>119</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
     <details>set(PREFIX ${CID_PREFIX})</details>
     <lineRange>121</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(id_content &quot;${id_content}# define ${CID_PREFIX}COMPILER_ID \&quot;${Id}\&quot;${SIMULATE_BLOCK}&quot;)</details>
+    <lineRange>123</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(id_content &quot;${id_content}# undef ${CID_PREFIX}COMPILER_IS_${Id}\n&quot;)</details>
+    <lineRange>126</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(id_content &quot;${id_content}# define ${CID_PREFIX}COMPILER_IS_${Id} 1\n&quot;)</details>
+    <lineRange>127</lineRange>
   </problem>
   <problem>
     <problem>Value not used</problem>
@@ -33,6 +58,11 @@
     <problem>Value not used</problem>
     <details>set(MACRO_HEX HEX)</details>
     <lineRange>132</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(id_content &quot;${id_content}${VERSION_BLOCK}\n&quot;)</details>
+    <lineRange>134</lineRange>
   </problem>
   <problem>
     <problem>Value not used</problem>

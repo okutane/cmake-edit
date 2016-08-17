@@ -51,6 +51,31 @@ public class Checker {
 
             AbstractSimulator unusedSimulator = new AbstractSimulator(suspiciousPoints) {
                 @Override
+                protected void init(Map<String, CommandSimulator> simulators) {
+                    super.init(simulators);
+
+                    CommandSimulator macroSimulator = simulators.get("macro");
+                    simulators.put("macro", (ctx, state, command) -> {
+                        LogicalBlock logicalBlock = LogicalBlockFinder.find(state.getNodes(), state.getPosition(), "endmacro");
+
+                        List<CommandInvocationNode> macroBody = logicalBlock.bodies.get(0);
+                        simulate(ctx, new SimulationState(macroBody, 0));
+
+                        macroSimulator.simulate(ctx, state, command);
+                    });
+
+                    CommandSimulator functionSimulator = simulators.get("function");
+                    simulators.put("function", (ctx, state, command) -> {
+                        LogicalBlock logicalBlock = LogicalBlockFinder.find(state.getNodes(), state.getPosition(), "endfunction");
+
+                        List<CommandInvocationNode> functionBody = logicalBlock.bodies.get(0);
+                        simulate(ctx, new SimulationState(functionBody, 0));
+
+                        functionSimulator.simulate(ctx, state, command);
+                    });
+                }
+
+                @Override
                 protected void process(SimulationState state, CommandInvocationNode node) {
                     state.simulate(suspiciousPoints, state.getCurrent());
                     super.process(state, node);

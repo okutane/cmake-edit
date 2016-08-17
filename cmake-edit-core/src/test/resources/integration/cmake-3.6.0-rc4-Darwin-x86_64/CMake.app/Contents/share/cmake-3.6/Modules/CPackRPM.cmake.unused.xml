@@ -1,6 +1,11 @@
 <list>
   <problem>
     <problem>Value not used</problem>
+    <details>set(${PERMISSION_TYPE}_PERMISSIONS 0)</details>
+    <lineRange>728</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
     <details>set(${RETURN_VAR} &quot;${OWNER_PERMISSIONS}${GROUP_PERMISSIONS}${WORLD_PERMISSIONS}&quot; PARENT_SCOPE)</details>
     <lineRange>743</lineRange>
   </problem>
@@ -11,13 +16,48 @@
   </problem>
   <problem>
     <problem>Value not used</problem>
+    <details>set(PREPARED_RELOCATION_PATH &quot;${RELOCATION_PATH}&quot;)</details>
+    <lineRange>776</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(PREPARED_RELOCATION_PATH &quot;${PATH_PREFIX}/${RELOCATION_PATH}&quot;)</details>
+    <lineRange>778</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(TMP_RPM_PREFIXES &quot;${TMP_RPM_PREFIXES}Prefix: ${PREPARED_RELOCATION_PATH}\n&quot;)</details>
+    <lineRange>782</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(TPM_PATH_FOUND_ TRUE)</details>
+    <lineRange>804</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(RPM_USED_PACKAGE_PREFIXES &quot;${RPM_USED_PACKAGE_PREFIXES}&quot; PARENT_SCOPE)</details>
+    <lineRange>814</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
     <details>set(TMP_RPM_PREFIXES &quot;${TMP_RPM_PREFIXES}&quot; PARENT_SCOPE)</details>
     <lineRange>815</lineRange>
   </problem>
   <problem>
     <problem>Value not used</problem>
+    <details>set(_DISTINCT_PATH &quot;NOT_SET&quot;)</details>
+    <lineRange>836</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
     <details>set(_DISTINCT_PATH &quot;${_RPM_RELOCATION_PREFIX}&quot;)</details>
     <lineRange>839</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>list(FIND CPACK_RPM_INSTALL_FILES &quot;${PACK_LOCATION}&quot; INDEX)</details>
+    <lineRange>901</lineRange>
   </problem>
   <problem>
     <problem>Value not used</problem>
@@ -31,8 +71,198 @@
   </problem>
   <problem>
     <problem>Value not used</problem>
+    <details>list(GET SORTED_PACKAGE_PREFIXES ${SYMLINK_INDEX} SRC_PATH)</details>
+    <lineRange>938</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>list(FIND PACKAGE_PREFIXES &quot;${SRC_PATH}&quot; SYMLINK_INDEX)</details>
+    <lineRange>939</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(PARTS_CNT 0)</details>
+    <lineRange>942</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(SCRIPT_PART &quot;if [ \&quot;$RPM_INSTALL_PREFIX${SYMLINK_INDEX}\&quot; != \&quot;${SRC_PATH}\&quot; ]; then\n&quot;)</details>
+    <lineRange>943</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>list(GET SORTED_PACKAGE_PREFIXES ${POINT_INDEX} POINT_PATH)</details>
+    <lineRange>947</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>list(FIND PACKAGE_PREFIXES &quot;${POINT_PATH}&quot; POINT_INDEX)</details>
+    <lineRange>948</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(INDENT &quot;&quot;)</details>
+    <lineRange>953</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(SCRIPT_PART &quot;${SCRIPT_PART}  if [ \&quot;$RPM_INSTALL_PREFIX${POINT_INDEX}\&quot; != \&quot;${POINT_PATH}\&quot; ]; then\n&quot;)</details>
+    <lineRange>955</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(INDENT &quot;  &quot;)</details>
+    <lineRange>956</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>list(GET _RPM_RELOCATION_SCRIPT_PAIRS ${RELOCATION_INDEX} RELOCATION_SCRIPT_PAIR)</details>
+    <lineRange>963</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(SCRIPT_PART &quot;${SCRIPT_PART}  ${INDENT}if [ -z \&quot;$CPACK_RPM_RELOCATED_SYMLINK_${RELOCATION_INDEX}\&quot; ]; then\n&quot;)</details>
+    <lineRange>972</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(SCRIPT_PART &quot;${SCRIPT_PART}    ${INDENT}ln -s \&quot;$RPM_INSTALL_PREFIX${POINT_INDEX}${POINT_}\&quot; \&quot;$RPM_INSTALL_PREFIX${SYMLINK_INDEX}${SYMLINK_}\&quot;\n&quot;)</details>
+    <lineRange>973</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(SCRIPT_PART &quot;${SCRIPT_PART}    ${INDENT}CPACK_RPM_RELOCATED_SYMLINK_${RELOCATION_INDEX}=true\n&quot;)</details>
+    <lineRange>974</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(SCRIPT_PART &quot;${SCRIPT_PART}  ${INDENT}fi\n&quot;)</details>
+    <lineRange>975</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
     <details>set(SCRIPT_PART &quot;${SCRIPT_PART}  fi\n&quot;)</details>
     <lineRange>979</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>list(GET _RPM_RELOCATION_SCRIPT_PAIRS ${RELOCATION_INDEX} RELOCATION_SCRIPT_PAIR)</details>
+    <lineRange>990</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(SCRIPT_PART &quot;${SCRIPT_PART}  if [ -z \&quot;$CPACK_RPM_RELOCATED_SYMLINK_${RELOCATION_INDEX}\&quot; ]; then\n&quot;)</details>
+    <lineRange>999</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(SCRIPT_PART &quot;${SCRIPT_PART}    ln -s \&quot;${POINT_}\&quot; \&quot;$RPM_INSTALL_PREFIX${SYMLINK_INDEX}${SYMLINK_}\&quot;\n&quot;)</details>
+    <lineRange>1000</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(SCRIPT_PART &quot;${SCRIPT_PART}    CPACK_RPM_RELOCATED_SYMLINK_${RELOCATION_INDEX}=true\n&quot;)</details>
+    <lineRange>1001</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(SCRIPT_PART &quot;${SCRIPT_PART}  fi\n&quot;)</details>
+    <lineRange>1002</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(SCRIPT &quot;${SCRIPT_PART}&quot;)</details>
+    <lineRange>1007</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(SCRIPT &quot;${SCRIPT}fi\n&quot;)</details>
+    <lineRange>1008</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>list(GET SORTED_PACKAGE_PREFIXES ${POINT_INDEX} POINT_PATH)</details>
+    <lineRange>1014</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>list(FIND PACKAGE_PREFIXES &quot;${POINT_PATH}&quot; POINT_INDEX)</details>
+    <lineRange>1015</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(SCRIPT &quot;${SCRIPT}if [ \&quot;$RPM_INSTALL_PREFIX${POINT_INDEX}\&quot; != \&quot;${POINT_PATH}\&quot; ]; then\n&quot;)</details>
+    <lineRange>1019</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>list(GET _RPM_RELOCATION_SCRIPT_PAIRS ${RELOCATION_INDEX} RELOCATION_SCRIPT_PAIR)</details>
+    <lineRange>1023</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(SCRIPT &quot;${SCRIPT}  if [ -z \&quot;$CPACK_RPM_RELOCATED_SYMLINK_${RELOCATION_INDEX}\&quot; ]; then\n&quot;)</details>
+    <lineRange>1031</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(SCRIPT &quot;${SCRIPT}    ln -s \&quot;$RPM_INSTALL_PREFIX${POINT_INDEX}${POINT_}\&quot; \&quot;${SYMLINK_}\&quot;\n&quot;)</details>
+    <lineRange>1032</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(SCRIPT &quot;${SCRIPT}    CPACK_RPM_RELOCATED_SYMLINK_${RELOCATION_INDEX}=true\n&quot;)</details>
+    <lineRange>1033</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(SCRIPT &quot;${SCRIPT}  fi\n&quot;)</details>
+    <lineRange>1034</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(SCRIPT &quot;${SCRIPT}fi\n&quot;)</details>
+    <lineRange>1037</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>list(GET _RPM_RELOCATION_SCRIPT_PAIRS ${RELOCATION_INDEX} RELOCATION_SCRIPT_PAIR)</details>
+    <lineRange>1045</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(SCRIPT &quot;${SCRIPT}if [ -z \&quot;$CPACK_RPM_RELOCATED_SYMLINK_${RELOCATION_INDEX}\&quot; ]; then\n&quot;)</details>
+    <lineRange>1053</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(SCRIPT &quot;${SCRIPT}  ln -s \&quot;${POINT_}\&quot; \&quot;${SYMLINK_}\&quot;\n&quot;)</details>
+    <lineRange>1054</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(SCRIPT &quot;${SCRIPT}fi\n&quot;)</details>
+    <lineRange>1055</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(RPM_SYMLINK_POSTINSTALL &quot;${SCRIPT}&quot; PARENT_SCOPE)</details>
+    <lineRange>1059</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>list(FIND PACKAGE_PREFIXES &quot;${SYMLINK_RELOC_PATH}&quot; SYMLINK_INDEX)</details>
+    <lineRange>1071</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>list(FIND PACKAGE_PREFIXES &quot;${POINT_RELOC_PATH}&quot; POINT_INDEX)</details>
+    <lineRange>1078</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>list(FIND PACKAGE_PREFIXES &quot;${POINT_RELOC_PATH}&quot; POINT_INDEX)</details>
+    <lineRange>1091</lineRange>
   </problem>
   <problem>
     <problem>Value not used</problem>
@@ -46,8 +276,58 @@
   </problem>
   <problem>
     <problem>Value not used</problem>
+    <details>set(REQUIRES_SYMLINK_RELOCATION_SCRIPT &quot;true&quot; PARENT_SCOPE)</details>
+    <lineRange>1108</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(DIRECTIVE &quot;%ghost &quot; PARENT_SCOPE)</details>
+    <lineRange>1109</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>list(LENGTH SYMLINK_RELOCATIONS SYMLINK_RELOCATIONS_COUNT)</details>
+    <lineRange>1165</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>list(LENGTH POINT_RELOCATIONS POINT_RELOCATIONS_COUNT)</details>
+    <lineRange>1166</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(SYMLINK_POINT_WD_ &quot;${SYMLINK_POINT_}&quot;)</details>
+    <lineRange>1169</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>list(FIND POINT_RELOCATIONS &quot;${SYMLINK_RELOCATION_PREFIX}&quot; FOUND_INDEX)</details>
+    <lineRange>1182</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(DIRECTIVE &quot;%dir &quot;)</details>
+    <lineRange>1215</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(INSTALL_FILES &quot;${INSTALL_FILES}${DIRECTIVE}\&quot;${F}\&quot;\n&quot;)</details>
+    <lineRange>1218</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
     <details>set(RPM_SYMLINK_POSTINSTALL &quot;${RPM_SYMLINK_POSTINSTALL}&quot; PARENT_SCOPE)</details>
     <lineRange>1225</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(CPACK_RPM_INSTALL_FILES &quot;${INSTALL_FILES}&quot; PARENT_SCOPE)</details>
+    <lineRange>1226</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(FALLBACK_VAR_NAMES ${ARGN})</details>
+    <lineRange>1238</lineRange>
   </problem>
   <problem>
     <problem>Value not used</problem>
@@ -146,6 +426,26 @@
   </problem>
   <problem>
     <problem>Value not used</problem>
+    <details>set(_PACKAGE_HEADER_NAME &quot;${_PACKAGE_HEADER_NAME}${_PACKAGE_HEADER_TAIL}&quot;)</details>
+    <lineRange>1527</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(SCRIPTS_REQUIREMENTS_LIST REQUIRES_PRE REQUIRES_POST REQUIRES_PREUN REQUIRES_POSTUN)</details>
+    <lineRange>1529</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>list(FIND SCRIPTS_REQUIREMENTS_LIST ${_RPM_SPEC_HEADER} IS_SCRIPTS_REQUIREMENT_FOUND)</details>
+    <lineRange>1530</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(_PACKAGE_HEADER_NAME &quot;${_PACKAGE_HEADER_NAME})&quot;)</details>
+    <lineRange>1533</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
     <details>set(TMP_RPM_${_RPM_SPEC_HEADER} &quot;${_PACKAGE_HEADER_NAME}: ${CPACK_RPM_PACKAGE_${_RPM_SPEC_HEADER}_TMP}&quot;)</details>
     <lineRange>1538</lineRange>
   </problem>
@@ -153,6 +453,12 @@
     <problem>Value not used</problem>
     <details>set(TMP_RPM_SPEC_INSTALL_POST &quot;%define __spec_install_post ${CPACK_RPM_SPEC_INSTALL_POST}&quot;)</details>
     <lineRange>1551</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(&quot;CPACK_RPM_${RPM_SCRIPT_FILE_TIME_}_${RPM_SCRIPT_FILE_TYPE_}_READ_FILE&quot;
+        &quot;${CPACK_RPM_${RPM_SCRIPT_FILE_TIME_}_${RPM_SCRIPT_FILE_TYPE_}_SCRIPT_FILE}&quot;)</details>
+    <lineRange>1567-1568</lineRange>
   </problem>
   <problem>
     <problem>Value not used</problem>
@@ -171,8 +477,23 @@
   </problem>
   <problem>
     <problem>Value not used</problem>
+    <details>set(CPACK_RPM_USER_INSTALL_FILES &quot;&quot;)</details>
+    <lineRange>1684</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(F_PREFIX &quot;${F_PREFIX} &quot;)</details>
+    <lineRange>1693</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
     <details>set(CPACK_RPM_USER_INSTALL_FILES &quot;${CPACK_RPM_USER_INSTALL_FILES}${F_PREFIX}\&quot;${F_PATH}\&quot;\n&quot;)</details>
     <lineRange>1696</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(CPACK_RPM_INSTALL_FILES &quot;&quot;)</details>
+    <lineRange>1707</lineRange>
   </problem>
   <problem>
     <problem>Value not used</problem>
@@ -183,6 +504,16 @@
     <problem>Value not used</problem>
     <details>set(CPACK_RPM_USER_INSTALL_FILES &quot;&quot;)</details>
     <lineRange>1712</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(CPACK_RPM_INSTALL_FILES &quot;${CPACK_RPM_INSTALL_FILES}\&quot;${F}\&quot;\n&quot;)</details>
+    <lineRange>1730</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(CPACK_RPM_ABSOLUTE_INSTALL_FILES &quot;${CPACK_RPM_ABSOLUTE_INSTALL_FILES}%config \&quot;${F}\&quot;\n&quot;)</details>
+    <lineRange>1735</lineRange>
   </problem>
   <problem>
     <problem>Value not used</problem>

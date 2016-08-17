@@ -36,6 +36,54 @@
   </problem>
   <problem>
     <problem>Value not used</problem>
+    <details>set(_COMP &quot;_${m}&quot;)</details>
+    <lineRange>142</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(_version_info &quot;${_version_info}
+#if defined(COMPILER_VERSION${_COMP})&quot;)</details>
+    <lineRange>143-144</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(_version_info &quot;${_version_info}
+# undef DEC
+# undef HEX
+# define DEC(n) DEC_${d}(n)
+# define HEX(n) HEX_${d}(n)
+# if COMPILER_VERSION${_COMP} == 0
+        PRINT *, &apos;INFO:compiler_version${_COMP}_digit_${d}[0]&apos;
+# elif COMPILER_VERSION${_COMP} == 1
+        PRINT *, &apos;INFO:compiler_version${_COMP}_digit_${d}[1]&apos;
+# elif COMPILER_VERSION${_COMP} == 2
+        PRINT *, &apos;INFO:compiler_version${_COMP}_digit_${d}[2]&apos;
+# elif COMPILER_VERSION${_COMP} == 3
+        PRINT *, &apos;INFO:compiler_version${_COMP}_digit_${d}[3]&apos;
+# elif COMPILER_VERSION${_COMP} == 4
+        PRINT *, &apos;INFO:compiler_version${_COMP}_digit_${d}[4]&apos;
+# elif COMPILER_VERSION${_COMP} == 5
+        PRINT *, &apos;INFO:compiler_version${_COMP}_digit_${d}[5]&apos;
+# elif COMPILER_VERSION${_COMP} == 6
+        PRINT *, &apos;INFO:compiler_version${_COMP}_digit_${d}[6]&apos;
+# elif COMPILER_VERSION${_COMP} == 7
+        PRINT *, &apos;INFO:compiler_version${_COMP}_digit_${d}[7]&apos;
+# elif COMPILER_VERSION${_COMP} == 8
+        PRINT *, &apos;INFO:compiler_version${_COMP}_digit_${d}[8]&apos;
+# elif COMPILER_VERSION${_COMP} == 9
+        PRINT *, &apos;INFO:compiler_version${_COMP}_digit_${d}[9]&apos;
+# endif
+&quot;)</details>
+    <lineRange>146-172</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(_version_info &quot;${_version_info}
+#endif&quot;)</details>
+    <lineRange>174-175</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
     <details>set(_CMAKE_TOOLCHAIN_PREFIX ${CMAKE_MATCH_1})</details>
     <lineRange>260</lineRange>
   </problem>

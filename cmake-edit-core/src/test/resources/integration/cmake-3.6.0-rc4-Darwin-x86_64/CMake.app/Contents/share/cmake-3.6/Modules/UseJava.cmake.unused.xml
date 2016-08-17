@@ -1,6 +1,41 @@
 <list>
   <problem>
     <problem>Value not used</problem>
+    <details>set(_JAVA_CLASS_FILELIST_SCRIPT ${CMAKE_CURRENT_LIST_DIR}/UseJavaClassFilelist.cmake)</details>
+    <lineRange>400</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(_JAVA_SYMLINK_SCRIPT ${CMAKE_CURRENT_LIST_DIR}/UseJavaSymlinks.cmake)</details>
+    <lineRange>401</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(_JAVA_SOURCE_FILES ${_add_jar_SOURCES} ${_add_jar_UNPARSED_ARGUMENTS})</details>
+    <lineRange>434</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(_JAVA_CLASS_FILES)</details>
+    <lineRange>486</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(_JAVA_REL_PATH ${_JAVA_REL_BINARY_PATH})</details>
+    <lineRange>509</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(_JAVA_REL_PATH ${_JAVA_REL_SOURCE_PATH})</details>
+    <lineRange>511</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(_JAVA_CLASS_FILE &quot;${CMAKE_JAVA_CLASS_OUTPUT_PATH}/${_JAVA_REL_PATH}/${_JAVA_FILE}.class&quot;)</details>
+    <lineRange>516</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
     <details>set(_JAVA_CLASS_FILES ${_JAVA_CLASS_FILES} ${_JAVA_CLASS_FILE})</details>
     <lineRange>517</lineRange>
   </problem>
@@ -32,11 +67,21 @@
   </problem>
   <problem>
     <problem>Value not used</problem>
+    <details>set(_jar_versions)</details>
+    <lineRange>776</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
     <details>set(_jar_paths
         /usr/share/java/
         /usr/local/share/java/
         ${Java_JAR_PATHS})</details>
     <lineRange>777-780</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(_state &quot;name&quot;)</details>
+    <lineRange>783</lineRange>
   </problem>
   <problem>
     <problem>Value not used</problem>
@@ -152,6 +197,21 @@
     <problem>Value not used</problem>
     <details>set(_jar_doc ${arg})</details>
     <lineRange>842</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(_jar_files ${_jar_files} ${jar_name}-${version}.jar)</details>
+    <lineRange>853</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(_jar_files ${_jar_files} ${jar_name}.jar)</details>
+    <lineRange>855</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(_state &quot;package&quot;)</details>
+    <lineRange>877</lineRange>
   </problem>
   <problem>
     <problem>Value not used</problem>
@@ -705,13 +765,33 @@
   </problem>
   <problem>
     <problem>Value not used</problem>
+    <details>set(_start TRUE)</details>
+    <lineRange>1136</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(_sourcepath ${_path})</details>
+    <lineRange>1139</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
     <details>set(_start FALSE)</details>
     <lineRange>1140</lineRange>
   </problem>
   <problem>
     <problem>Value not used</problem>
-    <details>set(_javadoc_options ${_javadoc_options} -sourcepath ${_sourcepath})</details>
-    <lineRange>1145</lineRange>
+    <details>set(_sourcepath ${_sourcepath}:${_path})</details>
+    <lineRange>1142</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(_start TRUE)</details>
+    <lineRange>1149</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(_classpath ${_path})</details>
+    <lineRange>1152</lineRange>
   </problem>
   <problem>
     <problem>Value not used</problem>
@@ -720,8 +800,13 @@
   </problem>
   <problem>
     <problem>Value not used</problem>
-    <details>set(_javadoc_options ${_javadoc_options} -classpath &quot;${_classpath}&quot;)</details>
-    <lineRange>1158</lineRange>
+    <details>set(_classpath ${_classpath}:${_path})</details>
+    <lineRange>1155</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set (_c_header  &quot;${_create_javah_OUTPUT_DIR}/${_c_header}.h&quot;)</details>
+    <lineRange>1268</lineRange>
   </problem>
   <problem>
     <problem>Value not used</problem>

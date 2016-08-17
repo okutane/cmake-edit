@@ -56,6 +56,11 @@
   </problem>
   <problem>
     <problem>Value not used</problem>
+    <details>set(_${v}_CHANGED 1)</details>
+    <lineRange>344</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
     <details>set(${changed_var} 1)</details>
     <lineRange>347</lineRange>
   </problem>
@@ -966,6 +971,11 @@
   </problem>
   <problem>
     <problem>Value not used</problem>
+    <details>set(_Boost_IMPORTED_TARGETS ${_Boost_IMPORTED_TARGETS} PARENT_SCOPE)</details>
+    <lineRange>749</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
     <details>set(_boost_DEPS_STRING &quot;(none)&quot;)</details>
     <lineRange>753</lineRange>
   </problem>
@@ -1176,6 +1186,26 @@
   </problem>
   <problem>
     <problem>Value not used</problem>
+    <details>set(_Boost_${uppercomponent}_DEPENDENCIES ${_Boost_${uppercomponent}_DEPENDENCIES} PARENT_SCOPE)</details>
+    <lineRange>843</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(_Boost_IMPORTED_TARGETS ${_Boost_IMPORTED_TARGETS} PARENT_SCOPE)</details>
+    <lineRange>844</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>list(FIND _boost_processed_components &quot;${componentdep}&quot; _boost_component_found)</details>
+    <lineRange>846</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>list(FIND _boost_new_components &quot;${componentdep}&quot; _boost_component_new)</details>
+    <lineRange>847</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
     <details>set(_boost_unprocessed_components ${_boost_new_components})</details>
     <lineRange>853</lineRange>
   </problem>
@@ -1198,6 +1228,11 @@
   </problem>
   <problem>
     <problem>Value not used</problem>
+    <details>set(_Boost_FIND_VERSION_SHORT &quot;${Boost_FIND_VERSION_MAJOR}.${Boost_FIND_VERSION_MINOR}&quot;)</details>
+    <lineRange>921</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
     <details>set(_boost_TEST_VERSIONS &quot;${_Boost_KNOWN_VERSIONS}&quot;)</details>
     <lineRange>935</lineRange>
   </problem>
@@ -1205,6 +1240,11 @@
     <problem>Value not used</problem>
     <details>set(Boost_LIB_DIAGNOSTIC_DEFINITIONS &quot;-DBOOST_LIB_DIAGNOSTIC&quot;)</details>
     <lineRange>988</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(_env $ENV{${v}})</details>
+    <lineRange>1003</lineRange>
   </problem>
   <problem>
     <problem>Value not used</problem>
@@ -1218,6 +1258,11 @@
   Boost_NO_SYSTEM_PATHS
   )</details>
     <lineRange>1018-1021</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(_boost_BOOSTIFIED_VERSION)</details>
+    <lineRange>1080</lineRange>
   </problem>
   <problem>
     <problem>Value not used</problem>
@@ -1287,6 +1332,21 @@
   </problem>
   <problem>
     <problem>Value not used</problem>
+    <details>set(Boost_LIB_PREFIX &quot;&quot;)</details>
+    <lineRange>1194</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(Boost_LIB_PREFIX &quot;lib&quot;)</details>
+    <lineRange>1197</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(Boost_NAMESPACE &quot;boost&quot;)</details>
+    <lineRange>1201</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
     <details>set(_Boost_VARS_NAME
   Boost_NAMESPACE
   Boost_COMPILER
@@ -1307,8 +1367,23 @@
   </problem>
   <problem>
     <problem>Value not used</problem>
+    <details>set(_Boost_VARS_LIB &quot;&quot;)</details>
+    <lineRange>1298</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(_Boost_VARS_LIB_${c} BOOST_LIBRARYDIR Boost_LIBRARY_DIR_${c})</details>
+    <lineRange>1300</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
     <details>set(_boost_LIBRARY_SEARCH_DIRS_${c} ${Boost_LIBRARY_DIR_${c}} NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)</details>
     <lineRange>1311</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(_boost_LIBRARY_SEARCH_DIRS_${c} &quot;&quot;)</details>
+    <lineRange>1313</lineRange>
   </problem>
   <problem>
     <problem>Value not used</problem>
@@ -1322,13 +1397,38 @@
   </problem>
   <problem>
     <problem>Value not used</problem>
+    <details>set(_boost_STATIC_RUNTIME_WORKAROUND false)</details>
+    <lineRange>1378</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
     <details>set(_boost_STATIC_RUNTIME_WORKAROUND true)</details>
     <lineRange>1381</lineRange>
   </problem>
   <problem>
     <problem>Value not used</problem>
+    <details>set(_var Boost_${UPPERCOMPONENT}_LIBRARY_${c})</details>
+    <lineRange>1409</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
     <details>set(${_var} &quot;${_var}-NOTFOUND&quot;)</details>
     <lineRange>1411</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set( _boost_docstring_release &quot;Boost ${COMPONENT} library (release)&quot;)</details>
+    <lineRange>1420</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set( _boost_docstring_debug   &quot;Boost ${COMPONENT} library (debug)&quot;)</details>
+    <lineRange>1421</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(_Boost_FIND_LIBRARY_HINTS_FOR_COMPONENT &quot;&quot;)</details>
+    <lineRange>1424</lineRange>
   </problem>
   <problem>
     <problem>Value not used</problem>
@@ -1347,8 +1447,39 @@
   </problem>
   <problem>
     <problem>Value not used</problem>
-    <details>set(_boost_CHECKED_COMPONENT FALSE)</details>
-    <lineRange>1579</lineRange>
+    <details>set(_boost_RELEASE_NAMES
+    ${Boost_LIB_PREFIX}${Boost_NAMESPACE}_${COMPONENT}${_boost_COMPILER}${_boost_MULTITHREADED}${_boost_RELEASE_ABI_TAG}-${Boost_LIB_VERSION}
+    ${Boost_LIB_PREFIX}${Boost_NAMESPACE}_${COMPONENT}${_boost_COMPILER}${_boost_MULTITHREADED}${_boost_RELEASE_ABI_TAG}
+    ${Boost_LIB_PREFIX}${Boost_NAMESPACE}_${COMPONENT}${_boost_MULTITHREADED}${_boost_RELEASE_ABI_TAG}-${Boost_LIB_VERSION}
+    ${Boost_LIB_PREFIX}${Boost_NAMESPACE}_${COMPONENT}${_boost_MULTITHREADED}${_boost_RELEASE_ABI_TAG}
+    ${Boost_LIB_PREFIX}${Boost_NAMESPACE}_${COMPONENT} )</details>
+    <lineRange>1465-1470</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(_boost_RELEASE_STATIC_ABI_TAG &quot;-s${_boost_RELEASE_ABI_TAG}&quot;)</details>
+    <lineRange>1472</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(_boost_DEBUG_NAMES
+    ${Boost_LIB_PREFIX}${Boost_NAMESPACE}_${COMPONENT}${_boost_COMPILER}${_boost_MULTITHREADED}${_boost_DEBUG_ABI_TAG}-${Boost_LIB_VERSION}
+    ${Boost_LIB_PREFIX}${Boost_NAMESPACE}_${COMPONENT}${_boost_COMPILER}${_boost_MULTITHREADED}${_boost_DEBUG_ABI_TAG}
+    ${Boost_LIB_PREFIX}${Boost_NAMESPACE}_${COMPONENT}${_boost_MULTITHREADED}${_boost_DEBUG_ABI_TAG}-${Boost_LIB_VERSION}
+    ${Boost_LIB_PREFIX}${Boost_NAMESPACE}_${COMPONENT}${_boost_MULTITHREADED}${_boost_DEBUG_ABI_TAG}
+    ${Boost_LIB_PREFIX}${Boost_NAMESPACE}_${COMPONENT}${_boost_MULTITHREADED}
+    ${Boost_LIB_PREFIX}${Boost_NAMESPACE}_${COMPONENT} )</details>
+    <lineRange>1506-1512</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(_boost_DEBUG_STATIC_ABI_TAG &quot;-s${_boost_DEBUG_ABI_TAG}&quot;)</details>
+    <lineRange>1514</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(_boost_CHECKED_COMPONENT TRUE)</details>
+    <lineRange>1583</lineRange>
   </problem>
   <problem>
     <problem>Value not used</problem>
@@ -1399,6 +1530,16 @@
     <problem>Value not used</problem>
     <details>set(Boost_LIBRARY_DIRS ${_boost_LIB_DIR})</details>
     <lineRange>1654</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(Boost_${UPPERCOMPONENT}_FOUND 0)</details>
+    <lineRange>1662</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(Boost_LIBRARIES &quot;&quot;)</details>
+    <lineRange>1734</lineRange>
   </problem>
   <problem>
     <problem>Value not used</problem>

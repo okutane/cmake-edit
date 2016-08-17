@@ -1,6 +1,12 @@
 <list>
   <problem>
     <problem>Value not used</problem>
+    <details>set(MSVC_${lang}_ARCHITECTURE_ID &quot;${MSVC_${lang}_ARCHITECTURE_ID}&quot;
+    PARENT_SCOPE)</details>
+    <lineRange>106-107</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
     <details>set(COMPILER_DESCRIPTION
     &quot;Compiler: ${CMAKE_${lang}_COMPILER} ${CMAKE_${lang}_COMPILER_ID_ARG1}
 Build flags: ${CMAKE_${lang}_COMPILER_ID_FLAGS_LIST}
@@ -268,6 +274,21 @@ ${CMAKE_${lang}_COMPILER_ID_OUTPUT}
   </problem>
   <problem>
     <problem>Value not used</problem>
+    <details>set(PLATFORM_ID &quot;${CMAKE_MATCH_1}&quot;)</details>
+    <lineRange>455</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(ARCHITECTURE_ID &quot;${CMAKE_MATCH_1}&quot;)</details>
+    <lineRange>458</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(value ${CMAKE_MATCH_1})</details>
+    <lineRange>467</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
     <details>set(HAVE_COMPILER_VERSION_${comp} 1)</details>
     <lineRange>469</lineRange>
   </problem>
@@ -275,6 +296,11 @@ ${CMAKE_${lang}_COMPILER_ID_OUTPUT}
     <problem>Value not used</problem>
     <details>set(COMPILER_WRAPPER &quot;${CMAKE_MATCH_1}&quot;)</details>
     <lineRange>474</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(SIMULATE_ID &quot;${CMAKE_MATCH_1}&quot;)</details>
+    <lineRange>477</lineRange>
   </problem>
   <problem>
     <problem>Value not used</problem>
@@ -321,5 +347,15 @@ ${CMAKE_${lang}_COMPILER_ID_OUTPUT}
     <problem>Value not used</problem>
     <details>set(COMPILER_QNXNTO &quot;${COMPILER_QNXNTO}&quot; PARENT_SCOPE)</details>
     <lineRange>592</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(flags ${CMAKE_${lang}_COMPILER_ID_VENDOR_FLAGS_${vendor}})</details>
+    <lineRange>617</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(regex ${CMAKE_${lang}_COMPILER_ID_VENDOR_REGEX_${vendor}})</details>
+    <lineRange>618</lineRange>
   </problem>
 </list>

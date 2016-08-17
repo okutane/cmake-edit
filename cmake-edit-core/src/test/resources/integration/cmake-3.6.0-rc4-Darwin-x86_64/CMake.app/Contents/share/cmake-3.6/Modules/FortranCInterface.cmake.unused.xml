@@ -1,6 +1,21 @@
 <list>
   <problem>
     <problem>Value not used</problem>
+    <details>set(MACRO_NAMESPACE &quot;FortranCInterface_&quot;)</details>
+    <lineRange>248</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(SYMBOL_NAMESPACE)</details>
+    <lineRange>249</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(doing)</details>
+    <lineRange>251</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
     <details>set(doing &quot;${arg}&quot;)</details>
     <lineRange>254</lineRange>
   </problem>
@@ -36,13 +51,74 @@
   </problem>
   <problem>
     <problem>Value not used</problem>
+    <details>set(HEADER_CONTENT &quot;${HEADER_CONTENT}
+${_desc_${macro}}
+#define ${MACRO_NAMESPACE}${macro}${FortranCInterface_${macro}_MACRO}
+&quot;)</details>
+    <lineRange>273-276</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(HEADER_CONTENT &quot;${HEADER_CONTENT}
+/*--------------------------------------------------------------------------*/
+/* Mangle some symbols automatically.                                       */
+&quot;)</details>
+    <lineRange>282-285</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>list(GET pieces 0 module)</details>
+    <lineRange>291</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>list(GET pieces 1 function)</details>
+    <lineRange>292</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(form &quot;_&quot;)</details>
+    <lineRange>298</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(form &quot;&quot;)</details>
+    <lineRange>300</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
     <details>set(HEADER_CONTENT &quot;${HEADER_CONTENT}#define ${SYMBOL_NAMESPACE}${module}_${function} ${MACRO_NAMESPACE}MODULE${form}(${m_lower},${f_lower}, ${m_upper},${f_upper})\n&quot;)</details>
     <lineRange>303</lineRange>
   </problem>
   <problem>
     <problem>Value not used</problem>
+    <details>set(form &quot;_&quot;)</details>
+    <lineRange>310</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(form &quot;&quot;)</details>
+    <lineRange>312</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
     <details>set(HEADER_CONTENT &quot;${HEADER_CONTENT}#define ${SYMBOL_NAMESPACE}${f} ${MACRO_NAMESPACE}GLOBAL${form}(${f_lower}, ${f_upper})\n&quot;)</details>
     <lineRange>317</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(quiet 1)</details>
+    <lineRange>336</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(lang CXX)</details>
+    <lineRange>338</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(verify_cxx 1)</details>
+    <lineRange>339</lineRange>
   </problem>
   <problem>
     <problem>Value not used</problem>

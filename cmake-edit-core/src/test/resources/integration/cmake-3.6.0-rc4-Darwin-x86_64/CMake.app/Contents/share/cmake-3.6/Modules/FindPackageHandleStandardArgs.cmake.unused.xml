@@ -1,6 +1,21 @@
 <list>
   <problem>
     <problem>Value not used</problem>
+    <details>list(GET ${_NAME}_CONSIDERED_CONFIGS ${currentConfigIndex} filename)</details>
+    <lineRange>170</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>list(GET ${_NAME}_CONSIDERED_VERSIONS ${currentConfigIndex} version)</details>
+    <lineRange>171</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(configsText &quot;${configsText}    ${filename} (version ${version})\n&quot;)</details>
+    <lineRange>172</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
     <details>set(FPHSA_FAIL_MESSAGE  &quot;DEFAULT_MSG&quot;)</details>
     <lineRange>210</lineRange>
   </problem>
@@ -16,6 +31,21 @@
   </problem>
   <problem>
     <problem>Value not used</problem>
+    <details>set(FPHSA_FOUND_${_NAME} FALSE)</details>
+    <lineRange>255</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(MISSING_VARS &quot;${MISSING_VARS} ${_CURRENT_VAR}&quot;)</details>
+    <lineRange>256</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(DETAILS &quot;${DETAILS}[${${_CURRENT_VAR}}]&quot;)</details>
+    <lineRange>258</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
     <details>set(${_NAME_UPPER}_FOUND TRUE)</details>
     <lineRange>263</lineRange>
   </problem>
@@ -26,8 +56,18 @@
   </problem>
   <problem>
     <problem>Value not used</problem>
+    <details>set(FOUND_COMPONENTS_MSG &quot;found components: &quot;)</details>
+    <lineRange>278</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
     <details>set(FOUND_COMPONENTS_MSG &quot;${FOUND_COMPONENTS_MSG} ${comp}&quot;)</details>
     <lineRange>280</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(MISSING_COMPONENTS_MSG &quot;missing components: &quot;)</details>
+    <lineRange>285</lineRange>
   </problem>
   <problem>
     <problem>Value not used</problem>
@@ -43,11 +83,6 @@
     <problem>Value not used</problem>
     <details>set(MISSING_VARS &quot;${MISSING_VARS} ${comp}&quot;)</details>
     <lineRange>291</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set(DETAILS &quot;${DETAILS}[c${COMPONENT_MSG}]&quot;)</details>
-    <lineRange>297</lineRange>
   </problem>
   <problem>
     <problem>Value not used</problem>

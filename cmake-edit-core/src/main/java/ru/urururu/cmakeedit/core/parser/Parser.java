@@ -1,8 +1,9 @@
-package ru.urururu.cmakeedit.core;
+package ru.urururu.cmakeedit.core.parser;
 
 import com.codahale.metrics.Timer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import ru.urururu.cmakeedit.core.*;
 
 import java.util.ArrayList;
 import java.util.List;

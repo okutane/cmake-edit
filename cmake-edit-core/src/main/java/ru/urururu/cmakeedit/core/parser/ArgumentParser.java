@@ -1,6 +1,7 @@
-package ru.urururu.cmakeedit.core;
+package ru.urururu.cmakeedit.core.parser;
 
 import com.codahale.metrics.Timer;
+import ru.urururu.cmakeedit.core.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;

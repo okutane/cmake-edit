@@ -1,7 +1,8 @@
-package ru.urururu.cmakeedit.core;
+package ru.urururu.cmakeedit.core.integration;
 
 import junit.framework.TestSuite;
 import org.junit.Test;
+import ru.urururu.cmakeedit.core.TestHelper;
 
 /**
  * Created by okutane on 07/07/16.

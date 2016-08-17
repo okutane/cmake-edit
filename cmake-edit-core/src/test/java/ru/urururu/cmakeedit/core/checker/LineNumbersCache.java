@@ -1,6 +1,9 @@
-package ru.urururu.cmakeedit.core;
+package ru.urururu.cmakeedit.core.checker;
 
 import com.google.common.primitives.Ints;
+import ru.urururu.cmakeedit.core.SourceRange;
+import ru.urururu.cmakeedit.core.SourceRef;
+import ru.urururu.cmakeedit.core.parser.RandomAccessContext;
 
 import java.util.ArrayList;
 import java.util.Arrays;

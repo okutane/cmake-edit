@@ -1,7 +1,9 @@
-package ru.urururu.cmakeedit.core;
+package ru.urururu.cmakeedit.core.parser;
 
 import org.junit.Assert;
 import org.junit.Test;
+import ru.urururu.cmakeedit.core.parser.CommentsDetector;
+import ru.urururu.cmakeedit.core.parser.ParseException;
 
 /**
  * Created by okutane on 01/07/16.

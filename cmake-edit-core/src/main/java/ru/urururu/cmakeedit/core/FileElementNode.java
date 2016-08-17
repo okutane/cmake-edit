@@ -7,7 +7,7 @@ import java.util.List;
  * Created by okutane on 05/07/16.
  */
 public class FileElementNode extends Node {
-    static final FileElementNode EMPTY = new FileElementNode(Collections.emptyList(), null, null);
+    public static final FileElementNode EMPTY = new FileElementNode(Collections.emptyList(), null, null);
 
     private List<CommentNode> comments;
 

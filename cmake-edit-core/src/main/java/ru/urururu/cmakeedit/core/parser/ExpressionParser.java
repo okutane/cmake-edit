@@ -1,6 +1,9 @@
-package ru.urururu.cmakeedit.core;
+package ru.urururu.cmakeedit.core.parser;
 
 import com.codahale.metrics.Timer;
+import ru.urururu.cmakeedit.core.ExpressionNode;
+import ru.urururu.cmakeedit.core.Node;
+import ru.urururu.cmakeedit.core.SourceRef;
 
 import java.util.*;
 

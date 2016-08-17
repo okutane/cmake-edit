@@ -1,4 +1,4 @@
-package ru.urururu.cmakeedit.core;
+package ru.urururu.cmakeedit.core.parser;
 
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.converters.reflection.FieldDictionary;
@@ -8,6 +8,13 @@ import com.thoughtworks.xstream.io.xml.DomDriver;
 import org.custommonkey.xmlunit.XMLTestCase;
 import org.junit.Test;
 import org.xml.sax.SAXException;
+import ru.urururu.cmakeedit.core.CommandInvocationNode;
+import ru.urururu.cmakeedit.core.FileNode;
+import ru.urururu.cmakeedit.core.MacroInvocationNode;
+import ru.urururu.cmakeedit.core.SourceRef;
+import ru.urururu.cmakeedit.core.parser.ParseException;
+import ru.urururu.cmakeedit.core.parser.Parser;
+import ru.urururu.cmakeedit.core.parser.StringParseContext;
 
 import java.io.IOException;
 import java.util.ArrayList;

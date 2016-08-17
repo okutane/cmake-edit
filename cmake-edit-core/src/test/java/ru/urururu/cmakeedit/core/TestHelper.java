@@ -10,6 +10,10 @@ import com.thoughtworks.xstream.io.xml.DomDriver;
 import junit.framework.AssertionFailedError;
 import junit.framework.TestSuite;
 import org.custommonkey.xmlunit.XMLTestCase;
+import ru.urururu.cmakeedit.core.integration.ParserIntegrationTests;
+import ru.urururu.cmakeedit.core.parser.Parser;
+import ru.urururu.cmakeedit.core.parser.RandomAccessContext;
+import ru.urururu.cmakeedit.core.parser.StringParseContext;
 
 import java.io.File;
 import java.io.UnsupportedEncodingException;
@@ -25,7 +29,7 @@ import java.util.function.BiFunction;
 /**
  * Created by okutane on 11/08/16.
  */
-class TestHelper {
+public class TestHelper {
     public static final XStream X_STREAM = new XStream(new Sun14ReflectionProvider(
             new FieldDictionary(new ImmutableFieldKeySorter())),
             new DomDriver("utf-8"));
@@ -75,7 +79,7 @@ class TestHelper {
         });
     }
 
-    static TestSuite buildPack(String path, BiFunction<RandomAccessContext, FileNode, ?> conversion, String suffix) {
+    public static TestSuite buildPack(String path, BiFunction<RandomAccessContext, FileNode, ?> conversion, String suffix) {
         URL url = ParserIntegrationTests.class.getResource(path);
         File packRoot;
         try {

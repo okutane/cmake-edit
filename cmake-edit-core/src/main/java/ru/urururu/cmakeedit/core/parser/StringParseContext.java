@@ -1,4 +1,4 @@
-package ru.urururu.cmakeedit.core;
+package ru.urururu.cmakeedit.core.parser;
 
 import com.codahale.metrics.MetricRegistry;
 
@@ -26,12 +26,12 @@ public class StringParseContext extends RandomAccessContext {
     }
 
     @Override
-    protected String getText(int from, int to) {
+    public String getText(int from, int to) {
         return contents.substring(from, to);
     }
 
     @Override
-    protected int getLength() {
+    public int getLength() {
         return contents.length();
     }
 }

@@ -1,6 +1,7 @@
-package ru.urururu.cmakeedit.core;
+package ru.urururu.cmakeedit.core.parser;
 
 import com.codahale.metrics.MetricRegistry;
+import ru.urururu.cmakeedit.core.SourceRef;
 
 /**
  * Created by okutane on 07/08/16.
@@ -58,7 +59,7 @@ public abstract class RandomAccessContext extends AbstractParseContext {
         return prefix + getText(from, to) + suffix;
     }
 
-    protected abstract String getText(int from, int to);
+    public abstract String getText(int from, int to);
 
-    protected abstract int getLength();
+    public abstract int getLength();
 }

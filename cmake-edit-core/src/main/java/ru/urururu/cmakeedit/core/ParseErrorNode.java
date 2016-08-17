@@ -1,5 +1,8 @@
 package ru.urururu.cmakeedit.core;
 
+import ru.urururu.cmakeedit.core.parser.ParseContext;
+import ru.urururu.cmakeedit.core.parser.ParseException;
+
 import java.util.Collections;
 
 /**

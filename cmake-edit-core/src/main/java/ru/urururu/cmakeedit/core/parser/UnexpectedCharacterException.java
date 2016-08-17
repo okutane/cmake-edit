@@ -1,4 +1,4 @@
-package ru.urururu.cmakeedit.core;
+package ru.urururu.cmakeedit.core.parser;
 
 /**
  * Created by okutane on 06/07/16.

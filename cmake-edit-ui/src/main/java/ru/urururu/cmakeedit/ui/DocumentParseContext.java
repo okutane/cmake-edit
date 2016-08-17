@@ -1,7 +1,7 @@
 package ru.urururu.cmakeedit.ui;
 
 import com.codahale.metrics.MetricRegistry;
-import ru.urururu.cmakeedit.core.RandomAccessContext;
+import ru.urururu.cmakeedit.core.parser.RandomAccessContext;
 
 import javax.swing.text.BadLocationException;
 import javax.swing.text.Document;

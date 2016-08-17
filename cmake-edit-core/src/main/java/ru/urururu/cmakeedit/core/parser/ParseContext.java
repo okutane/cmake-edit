@@ -1,6 +1,7 @@
-package ru.urururu.cmakeedit.core;
+package ru.urururu.cmakeedit.core.parser;
 
 import com.codahale.metrics.MetricRegistry;
+import ru.urururu.cmakeedit.core.SourceRef;
 
 /**
  * Created by okutane on 06/07/16.

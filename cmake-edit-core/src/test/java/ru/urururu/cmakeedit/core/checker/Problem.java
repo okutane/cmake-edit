@@ -1,9 +1,10 @@
-package ru.urururu.cmakeedit.core;
+package ru.urururu.cmakeedit.core.checker;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
-import ru.urururu.cmakeedit.core.checker.CheckContext;
-import ru.urururu.cmakeedit.core.checker.Checker;
-import ru.urururu.cmakeedit.core.checker.LogicalException;
+import ru.urururu.cmakeedit.core.FileNode;
+import ru.urururu.cmakeedit.core.SourceRange;
+import ru.urururu.cmakeedit.core.TestHelper;
+import ru.urururu.cmakeedit.core.parser.RandomAccessContext;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +14,7 @@ import java.util.List;
  */
 @SuppressWarnings({"unused", "FieldCanBeLocal"})
 @XStreamAlias("problem")
-class Problem {
+public class Problem {
     private final String problem;
     private final String details;
     private final String lineRange;
@@ -28,7 +29,7 @@ class Problem {
         this.lineRange = lineRange;
     }
 
-    static List<Problem> findProblems(RandomAccessContext ctx, FileNode ast) {
+    public static List<Problem> findProblems(RandomAccessContext ctx, FileNode ast) {
         List<Problem> result = new ArrayList<>();
 
         LineNumbersCache lineNumbers = new LineNumbersCache(ctx);

@@ -1,4 +1,7 @@
-package ru.urururu.cmakeedit.core;
+package ru.urururu.cmakeedit.core.parser;
+
+import ru.urururu.cmakeedit.core.CommentNode;
+import ru.urururu.cmakeedit.core.SourceRef;
 
 /**
  * Created by okutane on 01/07/16.

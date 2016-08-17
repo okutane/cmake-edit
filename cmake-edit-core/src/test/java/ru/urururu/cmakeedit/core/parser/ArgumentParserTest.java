@@ -1,7 +1,14 @@
-package ru.urururu.cmakeedit.core;
+package ru.urururu.cmakeedit.core.parser;
 
 import org.junit.Assert;
 import org.junit.Test;
+import ru.urururu.cmakeedit.core.ArgumentNode;
+import ru.urururu.cmakeedit.core.ExpressionNode;
+import ru.urururu.cmakeedit.core.Node;
+import ru.urururu.cmakeedit.core.SourceRef;
+import ru.urururu.cmakeedit.core.parser.ArgumentParser;
+import ru.urururu.cmakeedit.core.parser.ParseException;
+import ru.urururu.cmakeedit.core.parser.StringParseContext;
 
 import java.util.Arrays;
 import java.util.Collections;

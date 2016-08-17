@@ -5,6 +5,8 @@ import ru.urururu.cmakeedit.core.*;
 import ru.urururu.cmakeedit.core.checker.CheckContext;
 import ru.urururu.cmakeedit.core.checker.Checker;
 import ru.urururu.cmakeedit.core.checker.LogicalException;
+import ru.urururu.cmakeedit.core.parser.ParseException;
+import ru.urururu.cmakeedit.core.parser.Parser;
 
 import javax.swing.*;
 import javax.swing.event.DocumentEvent;

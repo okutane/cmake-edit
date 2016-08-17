@@ -1,6 +1,9 @@
-package ru.urururu.cmakeedit.core;
+package ru.urururu.cmakeedit.core.checker;
 
 import org.junit.Test;
+import ru.urururu.cmakeedit.core.SourceRange;
+import ru.urururu.cmakeedit.core.SourceRef;
+import ru.urururu.cmakeedit.core.parser.StringParseContext;
 
 import static org.junit.Assert.*;
 

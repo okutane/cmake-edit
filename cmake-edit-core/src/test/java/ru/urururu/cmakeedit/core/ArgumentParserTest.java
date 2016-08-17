@@ -7,9 +7,6 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
-
 /**
  * Created by okutane on 16/07/16.
  */
@@ -39,13 +36,14 @@ public class ArgumentParserTest {
     @Test
     public void testExpressions() throws ParseException {
         checkArguments("(${a})",
-                arg("${a}", 1, 4, expr("${a}", 1, 4))
+                arg("${a}", 1, 4, expr("", "${a}", 1, 4))
         );
         checkArguments("(${a})",
-                arg("${a}", 1, 4, expr("${a}", 1, 4)));
+                arg("${a}", 1, 4, expr("", "${a}", 1, 4)));
         checkArguments("($ENV{a})",
-                arg("$ENV{a}", 1, 7, expr("$ENV{a}", 1, 7))
+                arg("$ENV{a}", 1, 7, expr("ENV", "$ENV{a}", 1, 7))
         );
+        checkArguments("(\"$a${b}\")", arg("$a${b}", 1, 8, expr("", "${b}", 4, 7)));
     }
 
     @Test
@@ -58,7 +56,7 @@ public class ArgumentParserTest {
     public void testLogicalExpression() throws ParseException {
         checkArguments("($<$<BOOL:$<CONFIGURATION>>:_$<CONFIGURATION>>)",
                 arg("$<$<BOOL:$<CONFIGURATION>>:_$<CONFIGURATION>>", 1, 45,
-                        expr("$<$<BOOL:$<CONFIGURATION>>:_$<CONFIGURATION>>", 1, 45)
+                        expr("", "$<$<BOOL:$<CONFIGURATION>>:_$<CONFIGURATION>>", 1, 45)
                 )
         );
     }
@@ -67,8 +65,8 @@ public class ArgumentParserTest {
         return new ArgumentNode(argument, Arrays.asList(expressions), new SourceRef(from), new SourceRef(to));
     }
 
-    private ExpressionNode expr(String expr, int from, int to, Node... nested) {
-        return new ExpressionNode(expr, Arrays.asList(nested), new SourceRef(from), new SourceRef(to));
+    private ExpressionNode expr(String key, String expr, int from, int to, Node... nested) {
+        return new ExpressionNode(key, expr, Arrays.asList(nested), new SourceRef(from), new SourceRef(to));
     }
 
     private ArgumentNode nested(int from, int to, ArgumentNode... children) {

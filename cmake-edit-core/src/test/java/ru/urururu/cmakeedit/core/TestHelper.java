@@ -29,7 +29,7 @@ class TestHelper {
     public static final XStream X_STREAM = new XStream(new Sun14ReflectionProvider(
             new FieldDictionary(new ImmutableFieldKeySorter())),
             new DomDriver("utf-8"));
-    public static final MetricRegistry REGISTRY = new MetricRegistry();
+    public static MetricRegistry REGISTRY = new MetricRegistry();
 
     private static final double TESTS_THRESHOLD;
     private static final File ROOT;

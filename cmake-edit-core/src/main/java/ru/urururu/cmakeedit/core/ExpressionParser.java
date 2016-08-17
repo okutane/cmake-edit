@@ -2,16 +2,15 @@ package ru.urururu.cmakeedit.core;
 
 import com.codahale.metrics.Timer;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Created by okutane on 11/08/16.
  */
 public class ExpressionParser {
     private static final Map<Character, Character> BRACKETS = new HashMap<>();
+    /** @see <a href='https://cmake.org/Wiki/CMake/Language_Syntax#CMake_may_access_environment_variables'>cmake language syntax</a>. */
+    private static final List<String> ALLOWED_KEYS = Arrays.asList("", "ENV");
 
     static {
         BRACKETS.put('{', '}');
@@ -19,12 +18,20 @@ public class ExpressionParser {
     }
 
     public static boolean canParse(ParseContext ctx, boolean insideQuoted) {
+        // fixme should be well tested and rewritten
         try (Timer.Context timer = ctx.getRegistry().timer(ExpressionParser.class.getSimpleName() + ".canParse").time()) {
             SourceRef start = ctx.position();
             try {
                 if (insideQuoted) {
-                    char prev = 0;
+                    char prev = '$';
+                    ctx.advance();
                     while (!ctx.reachedEnd() && !BRACKETS.containsKey(ctx.peek()) && !(ctx.peek() == '"' && prev != '\\')) {
+                        if (ctx.peek() == '$' && prev != '\\') {
+                            return false;
+                        }
+                        if (ctx.peek() == ' ') {
+                            return false;
+                        }
                         prev = ctx.peek();
                         ctx.advance();
                     }
@@ -49,14 +56,18 @@ public class ExpressionParser {
             sb.append(ctx.peek());
             ctx.advance();
 
-            StringBuilder variableSpace = new StringBuilder();
+            StringBuilder keyBuilder = new StringBuilder();
             while (!ctx.reachedEnd() && !BRACKETS.containsKey(ctx.peek())) {
-                // we may want to save variableSpace as a separate field in ExpressionParser.
-                variableSpace.append(ctx.peek());
+                keyBuilder.append(ctx.peek());
                 ctx.advance();
             }
 
-            sb.append(variableSpace);
+            String key = keyBuilder.toString();
+            if (!ALLOWED_KEYS.contains(key)) {
+                throw new ParseException(ctx, "Key " + key + " is not used yet. For now only $ENV{..} is allowed");
+            }
+
+            sb.append(keyBuilder);
 
             if (ctx.reachedEnd()) {
                 throw new ParseException(ctx, "Unexpected end of source");
@@ -71,7 +82,7 @@ public class ExpressionParser {
                 char cur = ctx.peek();
                 if (cur == closingBracket) {
                     sb.append(cur);
-                    return new ExpressionNode(sb.toString(), nested, start, ctx.position());
+                    return new ExpressionNode(key, sb.toString(), nested, start, ctx.position());
                 } else if (cur == '$') {
                     // we need to go deeper
                     ExpressionNode expression = ExpressionParser.parseExpression(ctx);

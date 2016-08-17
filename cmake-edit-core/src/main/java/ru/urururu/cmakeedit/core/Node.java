@@ -40,8 +40,12 @@ public abstract class Node implements Serializable {
         return end;
     }
 
-    protected List<Node> maskEmpty(List<Node> nested) {
-        return nested.isEmpty() ? null : nested;
+    List<Node> maskEmpty(List<Node> list) {
+        return list.isEmpty() ? null : list;
+    }
+
+    String maskEmpty(String string) {
+        return string.isEmpty() ? null : string;
     }
 
     public abstract void visitAll(NodeVisitor visitor);

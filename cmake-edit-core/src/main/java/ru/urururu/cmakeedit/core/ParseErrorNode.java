@@ -11,7 +11,7 @@ import java.util.Collections;
 public class ParseErrorNode extends FileElementNode {
     String message;
 
-    public ParseErrorNode(ParseContext ctx, ParseException e, SourceRef start, SourceRef end) {
+    public ParseErrorNode(ParseException e, SourceRef start, SourceRef end) {
         super(Collections.emptyList(), start, end);
         this.message = e.getMessage();
     }

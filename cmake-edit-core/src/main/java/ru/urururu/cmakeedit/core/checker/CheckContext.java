@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * Created by okutane on 18/08/16.
  */
-public interface CheckContext {
+interface CheckContext {
     FileNode getAst();
 
     MetricRegistry getRegistry();

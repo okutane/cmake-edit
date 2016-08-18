@@ -9,7 +9,7 @@ public class LogicalException extends CheckerException {
     private final CommandInvocationNode firstNode;
     private final CommandInvocationNode lastNode;
 
-    public LogicalException(String message, CommandInvocationNode firstNode, CommandInvocationNode lastNode) {
+    LogicalException(String message, CommandInvocationNode firstNode, CommandInvocationNode lastNode) {
         super(message);
         this.firstNode = firstNode;
         this.lastNode = lastNode;

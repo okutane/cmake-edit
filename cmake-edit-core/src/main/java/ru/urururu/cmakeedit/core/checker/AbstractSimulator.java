@@ -11,12 +11,12 @@ import static com.codahale.metrics.MetricRegistry.name;
 /**
  * Created by okutane on 16/08/16.
  */
-public class AbstractSimulator {
+class AbstractSimulator {
     private Set<Node> suspiciousPoints;
 
     private Map<String, CommandSimulator> simulators = new HashMap<>();
 
-    public AbstractSimulator(Set<Node> suspiciousPoints) {
+    AbstractSimulator(Set<Node> suspiciousPoints) {
         this.suspiciousPoints = suspiciousPoints;
 
         Map<String, CommandSimulator> simulators = new HashMap<>();
@@ -43,6 +43,24 @@ public class AbstractSimulator {
 
             return state;
         });
+
+        simulators.put("if", (ctx, state, cmd) -> {
+            LogicalBlock branches = LogicalBlockFinder.findIfNodes(state.getNodes(), state.getPosition());
+
+            for (CommandInvocationNode header : branches.headers) {
+                state.simulate(suspiciousPoints, header);
+            }
+
+            List<SimulationState> newStates = new ArrayList<>();
+            for (List<CommandInvocationNode> branch : branches.bodies) {
+                SimulationState newState = new SimulationState(branch, 0, new LinkedHashMap<>(state.getVariables()));
+                simulate(ctx, newState);
+                newStates.add(newState);
+            }
+
+            return merge(newStates, state.getNodes(), branches.endPosition);
+        });
+
         simulators.put("foreach", (ctx, state, cmd) -> {
             LogicalBlock logicalBlock = LogicalBlockFinder.find(state.getNodes(), state.getPosition(), "endforeach");
             return simulateLoop(ctx, state, logicalBlock);
@@ -110,23 +128,8 @@ public class AbstractSimulator {
                 String commandName = current.getCommandName();
                 CommandSimulator simulator = simulators.get(commandName);
                 if (simulator != null) {
-                    state = simulator.simulate(ctx, state, current);
-                } else if (commandName.equals("if")) {
                     try (Timer.Context processTime = ctx.getRegistry().timer(name(getClass(), "process", commandName)).time()) {
-                        LogicalBlock branches = LogicalBlockFinder.findIfNodes(state.getNodes(), state.getPosition());
-
-                        for (CommandInvocationNode header : branches.headers) {
-                            state.simulate(suspiciousPoints, header);
-                        }
-
-                        List<SimulationState> newStates = new ArrayList<>();
-                        for (List<CommandInvocationNode> branch : branches.bodies) {
-                            SimulationState newState = new SimulationState(branch, 0, new LinkedHashMap<>(state.getVariables()));
-                            simulate(ctx, newState);
-                            newStates.add(newState);
-                        }
-
-                        state = merge(newStates, state.getNodes(), branches.endPosition);
+                        state = simulator.simulate(ctx, state, current);
                     }
                 } else {
                     process(state, current);

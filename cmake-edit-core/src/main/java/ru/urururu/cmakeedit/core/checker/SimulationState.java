@@ -13,17 +13,17 @@ class SimulationState {
     private int position;
     private final Map<String, Set<CommandInvocationNode>> variables;
 
-    public SimulationState(List<CommandInvocationNode> nodes, int position) {
+    SimulationState(List<CommandInvocationNode> nodes, int position) {
         this(nodes, position, new HashMap<>());
     }
 
-    public SimulationState(List<CommandInvocationNode> nodes, int position, Map<String, Set<CommandInvocationNode>> variables) {
+    SimulationState(List<CommandInvocationNode> nodes, int position, Map<String, Set<CommandInvocationNode>> variables) {
         this.nodes = nodes;
         this.position = position;
         this.variables = variables;
     }
 
-    public void simulate(Set<Node> suspiciousPoints, Node node) {
+    void simulate(Set<Node> suspiciousPoints, Node node) {
         node.visitAll(new NodeVisitorAdapter() {
             @Override
             public void accept(CommandInvocationNode node) {

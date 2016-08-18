@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * Created by okutane on 16/08/16.
  */
-public class LogicalBlockFinder {
+class LogicalBlockFinder {
     public static LogicalBlock find(List<CommandInvocationNode> nodes, int start, String endName, String... separatorNames) throws LogicalException {
         LogicalBlock result = new LogicalBlock();
 
@@ -44,7 +44,7 @@ public class LogicalBlockFinder {
         throw new LogicalException("A logical block is not closed", startNode, nodes.get(nodes.size() - 1));
     }
 
-    public static LogicalBlock findIfNodes(List<CommandInvocationNode> nodes, int start) throws LogicalException {
+    static LogicalBlock findIfNodes(List<CommandInvocationNode> nodes, int start) throws LogicalException {
         LogicalBlock result = find(nodes, start, "endif", "elseif", "else");
 
         if (!result.headers.stream().anyMatch(n -> n.getCommandName().equals("else"))) {

@@ -1,6 +1,7 @@
 package ru.urururu.cmakeedit.core.checker;
 
 import com.codahale.metrics.Timer;
+import ru.urururu.cmakeedit.core.ArgumentNode;
 import ru.urururu.cmakeedit.core.CommandInvocationNode;
 import ru.urururu.cmakeedit.core.Node;
 
@@ -27,8 +28,11 @@ class AbstractSimulator {
     protected void init(Map<String, CommandSimulator> simulators) {
         simulators.put("function", (ctx, state, cmd) -> {
             LogicalBlock logicalBlock = LogicalBlockFinder.find(state.getNodes(), state.getPosition(), "endfunction");
-            state.setPosition(logicalBlock.endPosition);
 
+            ArgumentNode node = (ArgumentNode) cmd.getArguments().get(0);
+            state.addSubroutine(node.getArgument(), logicalBlock);
+
+            state.setPosition(logicalBlock.endPosition);
             return state;
         });
         simulators.put("return", (ctx, state, cmd) -> {
@@ -39,8 +43,11 @@ class AbstractSimulator {
 
         simulators.put("macro", (ctx, state, cmd) -> {
             LogicalBlock logicalBlock = LogicalBlockFinder.find(state.getNodes(), state.getPosition(), "endmacro");
-            state.setPosition(logicalBlock.endPosition);
 
+            ArgumentNode node = (ArgumentNode) cmd.getArguments().get(0);
+            state.addSubroutine(node.getArgument(), logicalBlock);
+
+            state.setPosition(logicalBlock.endPosition);
             return state;
         });
 
@@ -132,7 +139,23 @@ class AbstractSimulator {
                         state = simulator.simulate(ctx, state, current);
                     }
                 } else {
-                    process(state, current);
+                    LogicalBlock subroutine = state.getSubroutine(commandName);
+                    if (subroutine != null) {
+                        CommandInvocationNode header = subroutine.headers.get(0);
+                        List<CommandInvocationNode> body = subroutine.bodies.get(0);
+
+                        if (header.getCommandName().equals("macro")) {
+                            SimulationState newState = simulate(ctx, new SimulationState(body, 0, new LinkedHashMap<>(state.getVariables())));
+                            if (newState != null) {
+                                state = merge(Collections.singletonList(newState), state.getNodes(), state.getPosition() + 1);
+                            }
+                        } else if (header.getCommandName().equals("function")) {
+                            // todo push variable scope and simulate
+                            process(state, current);
+                        }
+                    } else {
+                        process(state, current);
+                    }
                 }
             }
             return state;

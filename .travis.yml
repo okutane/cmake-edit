@@ -3,3 +3,19 @@ jdk:
   - oraclejdk8
 after_success:
   - mvn org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar -Dsonar.host.url=https://sonarqube.com -Dsonar.login=9cbedb34e2ab1cb418b2b0e48b5ef23000769f58
+
+env:
+  global:
+   # The next declaration is the encrypted COVERITY_SCAN_TOKEN, created
+   #   via the "travis encrypt" command using the project repo's public key
+   - secure: "QmQawHq9Jx+8FywKMy9jiUDn2lFQwQ3zlA79rq/VJ3RfdZQpzZlM4bZ5zxrCZbSVg1Gxv3y6RH8c2xziNoXQg1tsez8yATPTL+my7juAUS6h8B3E89Pr3GJhhi4T+W8QWo079c/dIQYsithkyjzc5neOouSHUx4uIETmGdh7psURXW2um7IVvPbXVIg20mXUU/k9c2XnP/2IYAmDTEmTB8164F+iDxdQpAJROqGpOsC7GvHEo25X6mwtCAFRefWOYvfmWnc0u1mdro6/e5pqCNlsKZqgJW5IAsUcnT/CjYskQFkf8l7XqZ0mVc2BjYYh9GdruaUFG55KNjtiQuTadIZnRp0WjMFnKsIsdkq7CqV7ks+NPRILGP6ImU09wIgp1al8HsH5QhY+f6ftD3udW/NSnPjGhb6cH5/xknnSRSQIokX6mAJeCWYvK6V8VT95J6ScSevjMt9qiBKTZaNf5Vt20xWOibXVOLuvRYkorEQMMHJ9WTKXwLhHHv9QGFQ923Tb4vcDo9LacniVU8wJWHVjblK/Q+mq957MpZ8NZkFxtM6BfhG3A2EGe56MBTtqaWFVVNLFjSgfZMy0xD5b9dl8dWOZdZVcAV8qSDw0t4gwh+zltDR8UMca1HcITxQL03gak6AMPAjOmh0THcs5lBXdoK1wPYHuE+kEjs+VCTg="
+
+addons:
+  coverity_scan:
+    project:
+      name: "okutane/cmake-edit"
+      description: "Build submitted via Travis CI"
+    notification_email: dmitriy.g.matveev@gmail.com
+    build_command_prepend: "mvn clean"
+    build_command:   "mvn -DskipTests=true compile"
+    branch_pattern: coverity_scan

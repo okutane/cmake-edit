@@ -60,9 +60,10 @@ class AbstractSimulator {
 
             List<SimulationState> newStates = new ArrayList<>();
             for (List<CommandInvocationNode> branch : branches.bodies) {
-                SimulationState newState = new SimulationState(branch, 0, new LinkedHashMap<>(state.getVariables()));
-                simulate(ctx, newState);
-                newStates.add(newState);
+                SimulationState newState = simulate(ctx, new SimulationState(branch, 0, new LinkedHashMap<>(state.getVariables())));
+                if (newState != null) {
+                    newStates.add(newState);
+                }
             }
 
             return merge(newStates, state.getNodes(), branches.endPosition);

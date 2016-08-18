@@ -6,11 +6,6 @@
   </problem>
   <problem>
     <problem>Value not used</problem>
-    <details>set(_ep_keywords_${_ep_func} &quot;^(&quot;)</details>
-    <lineRange>404</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
     <details>set(_ep_keyword_sep)</details>
     <lineRange>405</lineRange>
   </problem>
@@ -34,11 +29,6 @@
     <problem>Value not used</problem>
     <details>set(_ep_hash_regex &quot;^(${_ep_hash_algos})=([0-9A-Fa-f]+)$&quot;)</details>
     <lineRange>420</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set(is_value 0)</details>
-    <lineRange>442</lineRange>
   </problem>
   <problem>
     <problem>Value not used</problem>
@@ -142,11 +132,6 @@
   </problem>
   <problem>
     <problem>Value not used</problem>
-    <details>set(prefix &quot;${name}-prefix&quot;)</details>
-    <lineRange>1027</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
     <details>set(tmp_default &quot;${prefix}/tmp&quot;)</details>
     <lineRange>1032</lineRange>
   </problem>
@@ -207,31 +192,6 @@
   </problem>
   <problem>
     <problem>Value not used</problem>
-    <details>set(script_initial_cache &quot;${script_initial_cache}\n${setArg}&quot;)</details>
-    <lineRange>1121</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set(accumulator &quot;&quot;)</details>
-    <lineRange>1122</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set(setArg &quot;&quot;)</details>
-    <lineRange>1123</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set(type &quot;${CMAKE_MATCH_2}&quot;)</details>
-    <lineRange>1127</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set(setArg &quot;set(${name} \&quot;${value}&quot;)</details>
-    <lineRange>1129</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
     <details>set(${var} ${script_initial_cache} PARENT_SCOPE)</details>
     <lineRange>1143</lineRange>
   </problem>
@@ -272,71 +232,8 @@
   </problem>
   <problem>
     <problem>Value not used</problem>
-    <details>set(cmd &quot;$(MAKE)&quot;)</details>
-    <lineRange>1205</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set(args install)</details>
-    <lineRange>1207</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set(args test)</details>
-    <lineRange>1210</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set(cmd &quot;$(MAKE)&quot;)</details>
-    <lineRange>1255</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set(cmd &quot;make&quot;)</details>
-    <lineRange>1257</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set(args install)</details>
-    <lineRange>1260</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set(args test)</details>
-    <lineRange>1263</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
     <details>set(${cmd_var} &quot;${cmd}&quot; PARENT_SCOPE)</details>
     <lineRange>1276</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set(code_cygpath_make &quot;
-if(\${make} MATCHES \&quot;^/\&quot;)
-  execute_process(
-    COMMAND cygpath -w \${make}
-    OUTPUT_VARIABLE cygpath_make
-    ERROR_VARIABLE cygpath_make
-    RESULT_VARIABLE cygpath_error
-    OUTPUT_STRIP_TRAILING_WHITESPACE
-  )
-  if(NOT cygpath_error)
-    set(make \${cygpath_make})
-  endif()
-endif()
-&quot;)</details>
-    <lineRange>1292-1305</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set(code &quot;${code}set(command \&quot;${cmd}\&quot;)${code_execute_process}&quot;)</details>
-    <lineRange>1335</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set(cmd &quot;&quot;)</details>
-    <lineRange>1337</lineRange>
   </problem>
   <problem>
     <problem>Value not used</problem>
@@ -347,11 +244,6 @@ endif()
     <problem>Value not used</problem>
     <details>set(sep &quot;;&quot;)</details>
     <lineRange>1341</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set(command ${CMAKE_COMMAND} &quot;-Dmake=\${make}&quot; &quot;-Dconfig=\${config}&quot; -P ${stamp_dir}/${name}-${step}-$&lt;CONFIG&gt;-impl.cmake)</details>
-    <lineRange>1346</lineRange>
   </problem>
   <problem>
     <problem>Value not used</problem>
@@ -395,16 +287,6 @@ endif()
   </problem>
   <problem>
     <problem>Value not used</problem>
-    <details>set(comment &quot;Performing download step (CVS checkout) for &apos;${name}&apos;&quot;)</details>
-    <lineRange>1702</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set(cmd ${CVS_EXECUTABLE} -d ${cvs_repository} -q co ${cvs_tag} -d ${src_name} ${cvs_module})</details>
-    <lineRange>1703</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
     <details>set(repository &quot;${svn_repository} user=${svn_username} password=${svn_password}&quot;)</details>
     <lineRange>1716</lineRange>
   </problem>
@@ -417,17 +299,6 @@ endif()
     <problem>Value not used</problem>
     <details>set(tag ${svn_revision})</details>
     <lineRange>1718</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set(comment &quot;Performing download step (SVN checkout) for &apos;${name}&apos;&quot;)</details>
-    <lineRange>1727</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set(cmd ${Subversion_SVN_EXECUTABLE} co ${svn_repository} ${svn_revision}
-      --non-interactive ${svn_trust_cert_args} ${svn_user_pw_args} ${src_name})</details>
-    <lineRange>1738-1739</lineRange>
   </problem>
   <problem>
     <problem>Value not used</problem>
@@ -446,16 +317,6 @@ endif()
   </problem>
   <problem>
     <problem>Value not used</problem>
-    <details>set(comment &quot;Performing download step (git clone) for &apos;${name}&apos;&quot;)</details>
-    <lineRange>1797</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set(cmd ${CMAKE_COMMAND} -P ${tmp_dir}/${name}-gitclone.cmake)</details>
-    <lineRange>1798</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
     <details>set(repository ${hg_repository})</details>
     <lineRange>1817</lineRange>
   </problem>
@@ -471,16 +332,6 @@ endif()
   </problem>
   <problem>
     <problem>Value not used</problem>
-    <details>set(comment &quot;Performing download step (hg clone) for &apos;${name}&apos;&quot;)</details>
-    <lineRange>1837</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set(cmd ${CMAKE_COMMAND} -P ${tmp_dir}/${name}-hgclone.cmake)</details>
-    <lineRange>1838</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
     <details>set(repository &quot;external project URL&quot;)</details>
     <lineRange>1855</lineRange>
   </problem>
@@ -493,130 +344,5 @@ endif()
     <problem>Value not used</problem>
     <details>set(tag &quot;${hash}&quot;)</details>
     <lineRange>1857</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set(comment &quot;Performing download step (DIR copy) for &apos;${name}&apos;&quot;)</details>
-    <lineRange>1866</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set(cmd   ${CMAKE_COMMAND} -E remove_directory ${source_dir}
-        COMMAND ${CMAKE_COMMAND} -E copy_directory ${abs_dir} ${source_dir})</details>
-    <lineRange>1867-1868</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set(cmd ${CMAKE_COMMAND} -P &quot;${download_script}&quot;
-          COMMAND)</details>
-    <lineRange>1893-1894</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set(comment &quot;Performing download step (${steps}) for &apos;${name}&apos;&quot;)</details>
-    <lineRange>1900</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set(comment &quot;Performing download step (${steps}) for &apos;${name}&apos;&quot;)</details>
-    <lineRange>1909</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set(always 1)</details>
-    <lineRange>1989</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set(work_dir ${source_dir})</details>
-    <lineRange>1995</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set(comment &quot;Performing update step (CVS update) for &apos;${name}&apos;&quot;)</details>
-    <lineRange>1996</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set(cmd ${CVS_EXECUTABLE} -d ${cvs_repository} -q up -dP ${cvs_tag})</details>
-    <lineRange>1998</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set(always 1)</details>
-    <lineRange>1999</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set(work_dir ${source_dir})</details>
-    <lineRange>2004</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set(comment &quot;Performing update step (SVN update) for &apos;${name}&apos;&quot;)</details>
-    <lineRange>2005</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set(cmd ${Subversion_SVN_EXECUTABLE} up ${svn_revision}
-      --non-interactive ${svn_trust_cert_args} ${svn_user_pw_args})</details>
-    <lineRange>2020-2021</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set(always 1)</details>
-    <lineRange>2022</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set(comment &quot;Performing update step for &apos;${name}&apos;&quot;)</details>
-    <lineRange>2030</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set(cmd ${CMAKE_COMMAND} -P ${tmp_dir}/${name}-gitupdate.cmake)</details>
-    <lineRange>2043</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set(always 1)</details>
-    <lineRange>2044</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set(work_dir ${source_dir})</details>
-    <lineRange>2049</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set(comment &quot;Performing update step (hg pull) for &apos;${name}&apos;&quot;)</details>
-    <lineRange>2050</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set(cmd ${HG_EXECUTABLE} pull
-      COMMAND ${HG_EXECUTABLE} update ${hg_tag}
-      )</details>
-    <lineRange>2062-2064</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set(always 1)</details>
-    <lineRange>2065</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set(dependers_args DEPENDERS install)</details>
-    <lineRange>2374</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set(dependers_args &quot;&quot;)</details>
-    <lineRange>2376</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set(exclude_args &quot;&quot;)</details>
-    <lineRange>2378</lineRange>
   </problem>
 </list>

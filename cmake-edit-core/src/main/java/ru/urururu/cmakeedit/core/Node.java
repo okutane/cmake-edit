@@ -1,17 +1,26 @@
 package ru.urururu.cmakeedit.core;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
  * Created by okutane on 07/07/16.
  */
-public abstract class Node {
+public abstract class Node implements Serializable {
     protected final SourceRef start;
     protected final SourceRef end;
 
     protected Node(SourceRef start, SourceRef end) {
-        if ((start != null || end != null) && start.getOffset() > end.getOffset()) {
+        if ((start != null && end != null) && start.getOffset() > end.getOffset()) {
             throw new IllegalArgumentException(start.getOffset() + " > " + end.getOffset());
+        }
+        if (start != end) {
+            if (start == null) {
+                throw new IllegalArgumentException("start == null");
+            }
+            if (end == null) {
+                throw new IllegalArgumentException("end == null");
+            }
         }
         this.start = start;
         this.end = end;
@@ -31,8 +40,12 @@ public abstract class Node {
         return end;
     }
 
-    protected List<Node> maskEmpty(List<Node> nested) {
-        return nested.isEmpty() ? null : nested;
+    List<Node> maskEmpty(List<Node> list) {
+        return list.isEmpty() ? null : list;
+    }
+
+    String maskEmpty(String string) {
+        return string.isEmpty() ? null : string;
     }
 
     public abstract void visitAll(NodeVisitor visitor);

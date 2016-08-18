@@ -9,7 +9,7 @@ import java.util.List;
 public class FileElementNode extends Node {
     public static final FileElementNode EMPTY = new FileElementNode(Collections.emptyList(), null, null);
 
-    protected List<CommentNode> comments;
+    private List<CommentNode> comments;
 
     public FileElementNode(List<CommentNode> comments, SourceRef start, SourceRef end) {
         super (start, end);

@@ -1,0 +1,18 @@
+<list>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(_compiler_id_pp_test &quot;defined(__VISUALDSPVERSION__) || defined(__ADSPBLACKFIN__) || defined(__ADSPTS__) || defined(__ADSP21000__)&quot;)</details>
+    <lineRange>2</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(_compiler_id_version_compute &quot;
+#if defined(__VISUALDSPVERSION__)
+  /* __VISUALDSPVERSION__ = 0xVVRRPP00 */
+# define @PREFIX@COMPILER_VERSION_MAJOR @MACRO_HEX@(__VISUALDSPVERSION__&gt;&gt;24)
+# define @PREFIX@COMPILER_VERSION_MINOR @MACRO_HEX@(__VISUALDSPVERSION__&gt;&gt;16 &amp; 0xFF)
+# define @PREFIX@COMPILER_VERSION_PATCH @MACRO_HEX@(__VISUALDSPVERSION__&gt;&gt;8  &amp; 0xFF)
+#endif&quot;)</details>
+    <lineRange>4-10</lineRange>
+  </problem>
+</list>

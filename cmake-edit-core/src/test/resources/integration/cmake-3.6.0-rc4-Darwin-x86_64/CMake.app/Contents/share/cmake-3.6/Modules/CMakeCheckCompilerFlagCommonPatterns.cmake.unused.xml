@@ -1,0 +1,29 @@
+<list>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(${_VAR}
+     FAIL_REGEX &quot;[Uu]nrecogni[sz]ed .*option&quot;               # GNU, NAG
+     FAIL_REGEX &quot;unknown .*option&quot;                          # Clang
+     FAIL_REGEX &quot;optimization flag .* not supported&quot;        # Clang
+     FAIL_REGEX &quot;unknown argument ignored&quot;                  # Clang (cl)
+     FAIL_REGEX &quot;ignoring unknown option&quot;                   # MSVC, Intel
+     FAIL_REGEX &quot;warning D9002&quot;                             # MSVC, any lang
+     FAIL_REGEX &quot;option.*not supported&quot;                     # Intel
+     FAIL_REGEX &quot;invalid argument .*option&quot;                 # Intel
+     FAIL_REGEX &quot;ignoring option .*argument required&quot;       # Intel
+     FAIL_REGEX &quot;ignoring option .*argument is of wrong type&quot; # Intel
+     FAIL_REGEX &quot;[Uu]nknown option&quot;                         # HP
+     FAIL_REGEX &quot;[Ww]arning: [Oo]ption&quot;                     # SunPro
+     FAIL_REGEX &quot;command option .* is not recognized&quot;       # XL
+     FAIL_REGEX &quot;command option .* contains an incorrect subargument&quot; # XL
+     FAIL_REGEX &quot;not supported in this configuration. ignored&quot;       # AIX
+     FAIL_REGEX &quot;File with unknown suffix passed to linker&quot; # PGI
+     FAIL_REGEX &quot;[Uu]nknown switch&quot;                         # PGI
+     FAIL_REGEX &quot;WARNING: unknown flag:&quot;                    # Open64
+     FAIL_REGEX &quot;Incorrect command line option:&quot;            # Borland
+     FAIL_REGEX &quot;Warning: illegal option&quot;                   # SunStudio 12
+     FAIL_REGEX &quot;[Ww]arning: Invalid suboption&quot;             # Fujitsu
+   )</details>
+    <lineRange>23-45</lineRange>
+  </problem>
+</list>

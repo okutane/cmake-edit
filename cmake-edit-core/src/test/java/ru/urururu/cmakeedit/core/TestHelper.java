@@ -8,9 +8,12 @@ import com.thoughtworks.xstream.converters.reflection.ImmutableFieldKeySorter;
 import com.thoughtworks.xstream.converters.reflection.Sun14ReflectionProvider;
 import com.thoughtworks.xstream.io.xml.DomDriver;
 import junit.framework.AssertionFailedError;
-import junit.framework.TestCase;
 import junit.framework.TestSuite;
 import org.custommonkey.xmlunit.XMLTestCase;
+import ru.urururu.cmakeedit.core.integration.ParserIntegrationTests;
+import ru.urururu.cmakeedit.core.parser.Parser;
+import ru.urururu.cmakeedit.core.parser.RandomAccessContext;
+import ru.urururu.cmakeedit.core.parser.StringParseContext;
 
 import java.io.File;
 import java.io.UnsupportedEncodingException;
@@ -26,10 +29,11 @@ import java.util.function.BiFunction;
 /**
  * Created by okutane on 11/08/16.
  */
-class TestHelper {
+public class TestHelper {
     public static final XStream X_STREAM = new XStream(new Sun14ReflectionProvider(
             new FieldDictionary(new ImmutableFieldKeySorter())),
             new DomDriver("utf-8"));
+    public static MetricRegistry REGISTRY = new MetricRegistry();
 
     private static final double TESTS_THRESHOLD;
     private static final File ROOT;
@@ -61,9 +65,21 @@ class TestHelper {
             }
         }
         TESTS_THRESHOLD = candidate;
+
+        Runtime.getRuntime().addShutdownHook(new Thread() {
+            @Override
+            public void run() {
+                ConsoleReporter reporter = ConsoleReporter.forRegistry(REGISTRY)
+                        .convertRatesTo(TimeUnit.SECONDS)
+                        .convertDurationsTo(TimeUnit.MILLISECONDS)
+                        .build();
+
+                reporter.report();
+            }
+        });
     }
 
-    static TestSuite buildPack(String path, BiFunction<RandomAccessContext, FileNode, ?> conversion) {
+    public static TestSuite buildPack(String path, BiFunction<RandomAccessContext, FileNode, ?> conversion, String suffix) {
         URL url = ParserIntegrationTests.class.getResource(path);
         File packRoot;
         try {
@@ -72,26 +88,10 @@ class TestHelper {
             throw new IllegalStateException(e);
         }
 
-        MetricRegistry registry = new MetricRegistry();
-
-        TestSuite pack = createSuite(packRoot, registry, conversion);
-
-        pack.addTest(new TestCase("Report results") {
-            @Override
-            protected void runTest() throws Throwable {
-                ConsoleReporter reporter = ConsoleReporter.forRegistry(registry)
-                        .convertRatesTo(TimeUnit.SECONDS)
-                        .convertDurationsTo(TimeUnit.MILLISECONDS)
-                        .build();
-
-                reporter.report();
-            }
-        });
-
-        return pack;
+        return createSuite(packRoot, REGISTRY, conversion, suffix);
     }
 
-    private static TestSuite createSuite(File file, MetricRegistry registry, BiFunction<RandomAccessContext, FileNode, ?> conversion) {
+    private static TestSuite createSuite(File file, MetricRegistry registry, BiFunction<RandomAccessContext, FileNode, ?> conversion, final String suffix) {
         TestSuite suite = new TestSuite(file.getName());
 
         for (File child : file.listFiles()) {
@@ -100,7 +100,7 @@ class TestHelper {
             }
 
             if (child.isDirectory()) {
-                suite.addTest(createSuite(child, registry, conversion));
+                suite.addTest(createSuite(child, registry, conversion, suffix));
             } else if (shouldAdd()) {
                 File source = child;
                 suite.addTest(new XMLTestCase(source.getName()) {
@@ -115,7 +115,7 @@ class TestHelper {
 
                         String actual = X_STREAM.toXML(conversion.apply(ctx, result));
 
-                        File expectedFile = new File(source.getAbsolutePath() + ".xml");
+                        File expectedFile = new File(source.getAbsolutePath() + suffix);
                         String expected;
                         try {
                             expected = new String(Files.readAllBytes(expectedFile.toPath()), StandardCharsets.UTF_8);

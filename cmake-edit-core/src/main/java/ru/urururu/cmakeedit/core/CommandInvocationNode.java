@@ -23,7 +23,7 @@ public class CommandInvocationNode extends FileElementNode {
     }
 
     public String getCommandName() {
-        return commandName;
+        return commandName.toLowerCase();
     }
 
     public List<Node> getArguments() {

@@ -1,0 +1,24 @@
+<list>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(_compiler_id_pp_test &quot;defined(__ARMCC_VERSION)&quot;)</details>
+    <lineRange>2</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(_compiler_id_version_compute &quot;
+#if __ARMCC_VERSION &gt;= 1000000
+  /* __ARMCC_VERSION = VRRPPPP */
+  # define @PREFIX@COMPILER_VERSION_MAJOR @MACRO_DEC@(__ARMCC_VERSION/1000000)
+  # define @PREFIX@COMPILER_VERSION_MINOR @MACRO_DEC@(__ARMCC_VERSION/10000 % 100)
+  # define @PREFIX@COMPILER_VERSION_PATCH @MACRO_DEC@(__ARMCC_VERSION     % 10000)
+#else
+  /* __ARMCC_VERSION = VRPPPP */
+  # define @PREFIX@COMPILER_VERSION_MAJOR @MACRO_DEC@(__ARMCC_VERSION/100000)
+  # define @PREFIX@COMPILER_VERSION_MINOR @MACRO_DEC@(__ARMCC_VERSION/10000 % 10)
+  # define @PREFIX@COMPILER_VERSION_PATCH @MACRO_DEC@(__ARMCC_VERSION    % 10000)
+#endif
+&quot;)</details>
+    <lineRange>4-16</lineRange>
+  </problem>
+</list>

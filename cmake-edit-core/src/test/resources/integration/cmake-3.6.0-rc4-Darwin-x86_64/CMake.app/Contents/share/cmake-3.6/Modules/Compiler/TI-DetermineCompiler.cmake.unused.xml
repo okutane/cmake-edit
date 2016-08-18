@@ -1,0 +1,16 @@
+<list>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(_compiler_id_pp_test &quot;defined(__TI_COMPILER_VERSION__)&quot;)</details>
+    <lineRange>2</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(_compiler_id_version_compute &quot;
+  /* __TI_COMPILER_VERSION__ = VVVRRRPPP */
+# define @PREFIX@COMPILER_VERSION_MAJOR @MACRO_DEC@(__TI_COMPILER_VERSION__/1000000)
+# define @PREFIX@COMPILER_VERSION_MINOR @MACRO_DEC@(__TI_COMPILER_VERSION__/1000   % 1000)
+# define @PREFIX@COMPILER_VERSION_PATCH @MACRO_DEC@(__TI_COMPILER_VERSION__        % 1000)&quot;)</details>
+    <lineRange>4-8</lineRange>
+  </problem>
+</list>

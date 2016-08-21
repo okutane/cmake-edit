@@ -10,6 +10,9 @@ import ru.urururu.cmakeedit.core.TestHelper;
 public class CheckerTests {
     @Test
     public static TestSuite suite() {
-        return TestHelper.buildPack("/checkers/unused", Problem::findProblems, ".xml");
+        TestSuite suite = new TestSuite("Checker tests");
+        suite.addTest(TestHelper.buildPack("/checkers/unused", Problem::findProblems, ".xml"));
+        suite.addTest(TestHelper.buildPack("/checkers/errors", Problem::findErrors, ".xml"));
+        return suite;
     }
 }

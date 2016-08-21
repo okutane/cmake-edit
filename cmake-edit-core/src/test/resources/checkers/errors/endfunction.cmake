@@ -1,0 +1,1 @@
+endfunction() # error, no function before

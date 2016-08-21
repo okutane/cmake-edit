@@ -21,6 +21,10 @@ public class Problem {
 
     static {
         TestHelper.X_STREAM.alias("problem", Problem.class);
+
+        TestHelper.X_STREAM.alias("exception", UnexpectedCommandException.class);
+        TestHelper.X_STREAM.omitField(Throwable.class, "stackTrace");
+        TestHelper.X_STREAM.omitField(Throwable.class, "suppressedExceptions");
     }
 
     private Problem(String problem, String details, String lineRange) {
@@ -41,6 +45,20 @@ public class Problem {
         }
 
         return result;
+    }
+
+    public static LogicalException findErrors(RandomAccessContext ctx, FileNode ast) {
+        List<Problem> result = new ArrayList<>();
+
+        LineNumbersCache lineNumbers = new LineNumbersCache(ctx);
+
+        try {
+            Checker.findUnused(new FileCheckContext(ast, TestHelper.REGISTRY, (range, problem) -> {}));
+        } catch (LogicalException e) {
+            return e;
+        }
+
+        throw new IllegalStateException("No errors found");
     }
 
     private static String getText(RandomAccessContext ctx, SourceRange range) {

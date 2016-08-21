@@ -1,0 +1,1 @@
+endmacro() # error, no macro before

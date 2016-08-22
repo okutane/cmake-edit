@@ -15,8 +15,17 @@ import static com.codahale.metrics.MetricRegistry.name;
 public class Checker {
     static final Map<String, Function<CommandInvocationNode, Node>> setters =
             new HashMap<String, Function<CommandInvocationNode, Node>>() {{
-                put("set", cmd -> cmd.getArguments().get(0));
-                put("list", cmd -> Arrays.asList("LENGTH", "GET", "FIND").contains(((ArgumentNode) cmd.getArguments().get(0)).getArgument()) ? cmd.getArguments().get(cmd.getArguments().size() - 1) : null);
+                put("set", cmd -> {
+                    if (cmd.getArguments().size() > 2 && ((ArgumentNode)cmd.getArguments().get(cmd.getArguments().size() - 1)).getArgument().equals("PARENT_SCOPE")){
+                        return null;
+                    }
+                    return cmd.getArguments().get(0);
+                });
+                put("list", cmd -> {
+                    if (Arrays.asList("LENGTH", "GET", "FIND").contains(((ArgumentNode) cmd.getArguments().get(0)).getArgument()))
+                        return cmd.getArguments().get(cmd.getArguments().size() - 1);
+                    return null;
+                });
             }};
 
     public static void findUnused(CheckContext ctx) throws LogicalException {
@@ -59,7 +68,7 @@ public class Checker {
                         LogicalBlock logicalBlock = LogicalBlockFinder.find(state.getNodes(), state.getPosition(), "endmacro");
 
                         List<CommandInvocationNode> macroBody = logicalBlock.bodies.get(0);
-                        simulate(ctx, new SimulationState(macroBody, 0));
+                        simulate(ctx, new SimulationState(macroBody, 0)); // todo maybe we shouldn't simulate macroes at this point?
 
                         return macroSimulator.simulate(ctx, state, command);
                     });

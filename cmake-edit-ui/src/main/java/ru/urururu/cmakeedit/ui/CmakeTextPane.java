@@ -26,9 +26,9 @@ class CmakeTextPane extends JScrollPane implements DocumentListener, NodeVisitor
     private final Style argument;
     private final Style expression;
 
-    private final Highlighter.HighlightPainter warningsHighlighter =
+    private static final Highlighter.HighlightPainter warningsHighlighter =
             new DefaultHighlighter.DefaultHighlightPainter(new Color(127, 127, 0, 50));
-    private final Highlighter.HighlightPainter errorsHighlighter =
+    private static final Highlighter.HighlightPainter errorsHighlighter =
             new DefaultHighlighter.DefaultHighlightPainter(new Color(255, 0, 0, 50));
 
     CmakeTextPane(String text) {

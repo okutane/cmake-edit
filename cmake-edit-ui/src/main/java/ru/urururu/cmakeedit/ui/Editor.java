@@ -23,7 +23,7 @@ public class Editor {
                     text = new String(Files.readAllBytes(source.toPath()), StandardCharsets.UTF_8);
                     text = text.replace("\r", "");
                 } catch (IOException e) {
-                    e.printStackTrace();
+                    throw new IllegalStateException(e);
                 }
             } else {
                 throw new IllegalStateException("File not found. Should blame with messagebox about bad parameters");

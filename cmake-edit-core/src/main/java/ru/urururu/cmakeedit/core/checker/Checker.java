@@ -96,7 +96,12 @@ public class Checker {
                 }
 
                 @Override
-                protected void process(SimulationState state, CommandInvocationNode node) {
+                protected void process(SimulationState state, CommandInvocationNode node) throws LogicalException {
+                    String commandName = node.getCommandName();
+                    if (!Builtins.NORMAL.contains(commandName)) {
+                        throw new LogicalException("Unknown CMake command '" + commandName + "'", node, node);
+                    }
+
                     state.simulate(suspiciousPoints, state.getCurrent());
                     super.process(state, node);
                 }

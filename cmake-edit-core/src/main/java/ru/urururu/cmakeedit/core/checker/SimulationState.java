@@ -12,7 +12,7 @@ class SimulationState {
     private final List<CommandInvocationNode> nodes;
     private int position;
     private final Map<String, Set<CommandInvocationNode>> variables;
-    private final Map<String, LogicalBlock> subroutines = new HashMap<>();
+    private final Map<String, AbstractSimulator.CommandSimulator> dynamicSimulators = new HashMap<>();
 
     SimulationState(List<CommandInvocationNode> nodes, int position) {
         this(nodes, position, new HashMap<>());
@@ -147,11 +147,11 @@ class SimulationState {
         this.position = position;
     }
 
-    public void addSubroutine(String name, LogicalBlock block) {
-        subroutines.put(name, block);
+    public void addSimulator(String name, AbstractSimulator.CommandSimulator simulator) {
+        dynamicSimulators.put(name, simulator);
     }
 
-    public LogicalBlock getSubroutine(String name) {
-        return subroutines.get(name);
+    public AbstractSimulator.CommandSimulator getSimulator(String name) {
+        return dynamicSimulators.get(name);
     }
 }

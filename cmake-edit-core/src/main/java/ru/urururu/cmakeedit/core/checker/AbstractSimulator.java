@@ -15,14 +15,14 @@ import static com.codahale.metrics.MetricRegistry.name;
 class AbstractSimulator {
     private Set<Node> suspiciousPoints;
 
-    private Map<String, CommandSimulator> simulators = new HashMap<>();
+    private Map<String, CommandSimulator> staticSimulators = new HashMap<>();
 
     AbstractSimulator(Set<Node> suspiciousPoints) {
         this.suspiciousPoints = suspiciousPoints;
 
         Map<String, CommandSimulator> simulators = new HashMap<>();
         init(simulators);
-        this.simulators = new HashMap<>(simulators);
+        this.staticSimulators = new HashMap<>(simulators);
     }
 
     protected void init(Map<String, CommandSimulator> simulators) {
@@ -30,7 +30,7 @@ class AbstractSimulator {
             LogicalBlock logicalBlock = LogicalBlockFinder.find(state.getNodes(), state.getPosition(), "endfunction");
 
             ArgumentNode node = (ArgumentNode) cmd.getArguments().get(0);
-            state.addSubroutine(node.getArgument(), logicalBlock);
+            state.addSimulator(node.getArgument(), new FunctionSimulator(this, logicalBlock.bodies.get(0)));
 
             state.setPosition(logicalBlock.endPosition);
             return state;
@@ -45,7 +45,7 @@ class AbstractSimulator {
             LogicalBlock logicalBlock = LogicalBlockFinder.find(state.getNodes(), state.getPosition(), "endmacro");
 
             ArgumentNode node = (ArgumentNode) cmd.getArguments().get(0);
-            state.addSubroutine(node.getArgument(), logicalBlock);
+            state.addSimulator(node.getArgument(), new MacroSimulator(this, logicalBlock.bodies.get(0)));
 
             state.setPosition(logicalBlock.endPosition);
             return state;
@@ -134,36 +134,26 @@ class AbstractSimulator {
                 CommandInvocationNode current = state.getNodes().get(state.getPosition());
 
                 String commandName = current.getCommandName();
-                CommandSimulator simulator = simulators.get(commandName);
+
+                CommandSimulator dynamicSimulator = state.getSimulator(commandName);
+                if (dynamicSimulator != null) {
+                    state = dynamicSimulator.simulate(ctx, state, current);
+                }
+
+                CommandSimulator simulator = staticSimulators.get(commandName);
                 if (simulator != null) {
                     try (Timer.Context processTime = ctx.getRegistry().timer(name(getClass(), "process", commandName)).time()) {
                         state = simulator.simulate(ctx, state, current);
                     }
                 } else {
-                    LogicalBlock subroutine = state.getSubroutine(commandName);
-                    if (subroutine != null) {
-                        CommandInvocationNode header = subroutine.headers.get(0);
-                        List<CommandInvocationNode> body = subroutine.bodies.get(0);
-
-                        if (header.getCommandName().equals("macro")) {
-                            SimulationState newState = simulate(ctx, new SimulationState(body, 0, new LinkedHashMap<>(state.getVariables())));
-                            if (newState != null) {
-                                state = merge(Collections.singletonList(newState), state.getNodes(), state.getPosition() + 1);
-                            }
-                        } else if (header.getCommandName().equals("function")) {
-                            // todo push variable scope and simulate
-                            process(state, current);
-                        }
-                    } else {
-                        process(state, current);
-                    }
+                    process(state, current);
                 }
             }
             return state;
         }
     }
 
-    protected void process(SimulationState state, CommandInvocationNode node) {
+    protected void process(SimulationState state, CommandInvocationNode node) throws LogicalException {
         advance(state);
     }
 
@@ -171,7 +161,7 @@ class AbstractSimulator {
         state.setPosition(state.getPosition() + 1);
     }
 
-    private SimulationState merge(List<SimulationState> newStates, List<CommandInvocationNode> nodes, int mergePoint) {
+    public SimulationState merge(List<SimulationState> newStates, List<CommandInvocationNode> nodes, int mergePoint) {
         if (newStates.isEmpty()) {
             return null;
         }

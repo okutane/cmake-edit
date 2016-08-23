@@ -34,18 +34,20 @@ class SimulationState {
         int expressionStart = expression.indexOf("${"); // todo add support for ENV
         int expressionEnd = expression.lastIndexOf('}');
 
+        String result;
         if (expressionStart != -1 && expressionEnd > expressionStart) {
             String sub = expression.substring(expressionStart + 2, expressionEnd);
 
             // todo remove suspicious point for sub or for getValue(sub)?
-            suspiciousPoints.removeAll(variables.getOrDefault(sub, Collections.emptySet()));
 
-            String result = expression.substring(0, expressionStart) + getValue(sub) + expression.substring(expressionEnd);
-
-            return result;
+            result = expression.substring(0, expressionStart) + getValue(sub) + expression.substring(expressionEnd);
         } else {
-            return expression;
+            result = expression;
         }
+
+        suspiciousPoints.removeAll(variables.getOrDefault(result, Collections.emptySet()));
+
+        return result;
     }
 
     void putValue(ArgumentNode argumentNode, CommandInvocationNode command) {

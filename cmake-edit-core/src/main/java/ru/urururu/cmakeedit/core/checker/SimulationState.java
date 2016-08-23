@@ -12,19 +12,41 @@ class SimulationState {
     private final List<CommandInvocationNode> nodes;
     private int position;
     private final Map<String, Set<CommandInvocationNode>> variables;
+    private final Set<CommandInvocationNode> suspiciousPoints;
     private final Map<String, AbstractSimulator.CommandSimulator> dynamicSimulators = new HashMap<>();
 
-    SimulationState(List<CommandInvocationNode> nodes, int position) {
-        this(nodes, position, new HashMap<>());
+    SimulationState(List<CommandInvocationNode> nodes, int position, Set<CommandInvocationNode> suspiciousPoints) {
+        this(nodes, position, suspiciousPoints, new HashMap<>());
     }
 
-    SimulationState(List<CommandInvocationNode> nodes, int position, Map<String, Set<CommandInvocationNode>> variables) {
+    SimulationState(List<CommandInvocationNode> nodes, int position, Set<CommandInvocationNode> suspiciousPoints, Map<String, Set<CommandInvocationNode>> variables) {
         this.nodes = nodes;
         this.position = position;
         this.variables = variables;
+        this.suspiciousPoints = suspiciousPoints;
     }
 
-    void simulate(Set<Node> suspiciousPoints, Node node) {
+    String getValue(ArgumentNode argumentNode) {
+        // todo inline argumentNode via more calls to getValue()
+
+        Set<CommandInvocationNode> commandInvocationNodes = variables.get(argumentNode.getArgument());
+        if (commandInvocationNodes != null) {
+            suspiciousPoints.removeAll(commandInvocationNodes);
+        }
+
+        return argumentNode.getArgument();
+    }
+
+    void putValue(ArgumentNode argumentNode, CommandInvocationNode command) {
+        putValue(argumentNode, command, false);
+    }
+
+    void putValue(ArgumentNode argumentNode, CommandInvocationNode command, boolean parentScope) {
+        // todo inline argumentNode via getValue()
+        variables.put(argumentNode.getArgument(), Collections.singleton(command));
+    }
+
+    void simulate(Set<CommandInvocationNode> suspiciousPoints, Node node) {
         node.visitAll(new NodeVisitorAdapter() {
             @Override
             public void accept(CommandInvocationNode node) {
@@ -101,7 +123,7 @@ class SimulationState {
         });
     }
 
-    private void processExpression(ExpressionNode node, Set<Node> suspiciousPoints) {
+    private void processExpression(ExpressionNode node, Set<CommandInvocationNode> suspiciousPoints) {
         if (node.getKey() != null) {
             return;
         }
@@ -117,7 +139,7 @@ class SimulationState {
         }
     }
 
-    private void processUsage(String argument, Set<Node> suspiciousPoints) {
+    private void processUsage(String argument, Set<CommandInvocationNode> suspiciousPoints) {
         Set<CommandInvocationNode> commandInvocationNode = variables.get(argument);
 
         if (commandInvocationNode == null) {
@@ -137,6 +159,10 @@ class SimulationState {
 
     public List<CommandInvocationNode> getNodes() {
         return nodes;
+    }
+
+    public Set<CommandInvocationNode> getSuspiciousPoints() {
+        return suspiciousPoints;
     }
 
     public Map<String, Set<CommandInvocationNode>> getVariables() {

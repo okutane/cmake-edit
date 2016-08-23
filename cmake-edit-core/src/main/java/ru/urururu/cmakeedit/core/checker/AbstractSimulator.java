@@ -3,7 +3,6 @@ package ru.urururu.cmakeedit.core.checker;
 import com.codahale.metrics.Timer;
 import ru.urururu.cmakeedit.core.ArgumentNode;
 import ru.urururu.cmakeedit.core.CommandInvocationNode;
-import ru.urururu.cmakeedit.core.Node;
 
 import java.util.*;
 
@@ -13,11 +12,11 @@ import static com.codahale.metrics.MetricRegistry.name;
  * Created by okutane on 16/08/16.
  */
 class AbstractSimulator {
-    private Set<Node> suspiciousPoints;
+    private Set<CommandInvocationNode> suspiciousPoints; // todo delete
 
     private Map<String, CommandSimulator> staticSimulators = new HashMap<>();
 
-    AbstractSimulator(Set<Node> suspiciousPoints) {
+    AbstractSimulator(Set<CommandInvocationNode> suspiciousPoints) {
         this.suspiciousPoints = suspiciousPoints;
 
         Map<String, CommandSimulator> simulators = new HashMap<>();
@@ -60,7 +59,7 @@ class AbstractSimulator {
 
             List<SimulationState> newStates = new ArrayList<>();
             for (List<CommandInvocationNode> branch : branches.bodies) {
-                SimulationState newState = simulate(ctx, new SimulationState(branch, 0, new LinkedHashMap<>(state.getVariables())));
+                SimulationState newState = simulate(ctx, new SimulationState(branch, 0, state.getSuspiciousPoints(), new LinkedHashMap<>(state.getVariables())));
                 if (newState != null) {
                     newStates.add(newState);
                 }
@@ -118,7 +117,7 @@ class AbstractSimulator {
         };
 
         for (List<CommandInvocationNode> branch : logicalBlock.bodies) {
-            SimulationState newState = simulate(loopCtx, new SimulationState(branch, 0, new LinkedHashMap<>(state.getVariables())));
+            SimulationState newState = simulate(loopCtx, new SimulationState(branch, 0, state.getSuspiciousPoints(), new LinkedHashMap<>(state.getVariables())));
             if (newState != null) {
                 loopStates.add(newState);
             }
@@ -138,15 +137,15 @@ class AbstractSimulator {
                 CommandSimulator dynamicSimulator = state.getSimulator(commandName);
                 if (dynamicSimulator != null) {
                     state = dynamicSimulator.simulate(ctx, state, current);
-                }
-
-                CommandSimulator simulator = staticSimulators.get(commandName);
-                if (simulator != null) {
-                    try (Timer.Context processTime = ctx.getRegistry().timer(name(getClass(), "process", commandName)).time()) {
-                        state = simulator.simulate(ctx, state, current);
-                    }
                 } else {
-                    process(state, current);
+                    CommandSimulator simulator = staticSimulators.get(commandName);
+                    if (simulator != null) {
+                        try (Timer.Context processTime = ctx.getRegistry().timer(name(getClass(), "process", commandName)).time()) {
+                            state = simulator.simulate(ctx, state, current);
+                        }
+                    } else {
+                        process(state, current);
+                    }
                 }
             }
             return state;
@@ -173,7 +172,7 @@ class AbstractSimulator {
             }
         }
 
-        return new SimulationState(nodes, mergePoint, variables);
+        return new SimulationState(nodes, mergePoint, newStates.get(0).getSuspiciousPoints(), variables);
     }
 
     interface CommandSimulator {

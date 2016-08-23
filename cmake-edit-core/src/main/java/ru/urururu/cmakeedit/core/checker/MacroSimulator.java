@@ -20,7 +20,7 @@ class MacroSimulator implements AbstractSimulator.CommandSimulator {
 
     @Override
     public SimulationState simulate(CheckContext ctx, SimulationState state, CommandInvocationNode command) throws LogicalException {
-        SimulationState newState = simulator.simulate(ctx, new SimulationState(body, 0, new LinkedHashMap<>(state.getVariables())));
+        SimulationState newState = simulator.simulate(ctx, new SimulationState(body, 0, state.getSuspiciousPoints(), new LinkedHashMap<>(state.getVariables())));
         if (newState != null) {
             return simulator.merge(Collections.singletonList(newState), state.getNodes(), state.getPosition() + 1);
         }

@@ -91,7 +91,11 @@ public class Builtins {
             "try_run",
             "unset",
             "variable_watch",
-            "while");
+            "while",
+
+            // added by hand
+            "cmake_parse_arguments"
+    );
 
     /** @see <a href='https://cmake.org/cmake/help/v3.0/manual/cmake-commands.7.html#deprecated-commands'>cmake help</a> */
     List<String> DEPRECATED = Arrays.asList("build_name",

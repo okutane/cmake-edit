@@ -27,14 +27,25 @@ class SimulationState {
     }
 
     String getValue(ArgumentNode argumentNode) {
-        // todo inline argumentNode via more calls to getValue()
+        return getValue(argumentNode.getArgument());
+    }
 
-        Set<CommandInvocationNode> commandInvocationNodes = variables.get(argumentNode.getArgument());
-        if (commandInvocationNodes != null) {
-            suspiciousPoints.removeAll(commandInvocationNodes);
+    String getValue(String expression) {
+        int expressionStart = expression.indexOf("${"); // todo add support for ENV
+        int expressionEnd = expression.lastIndexOf('}');
+
+        if (expressionStart != -1 && expressionEnd > expressionStart) {
+            String sub = expression.substring(expressionStart + 2, expressionEnd);
+
+            // todo remove suspicious point for sub or for getValue(sub)?
+            suspiciousPoints.removeAll(variables.getOrDefault(sub, Collections.emptySet()));
+
+            String result = expression.substring(0, expressionStart) + getValue(sub) + expression.substring(expressionEnd);
+
+            return result;
+        } else {
+            return expression;
         }
-
-        return argumentNode.getArgument();
     }
 
     void putValue(ArgumentNode argumentNode, CommandInvocationNode command) {

@@ -237,7 +237,7 @@ abstract class ArgumentParser {
 
                     // begin read of new constant
                     sb.setLength(0);
-                    constantStart = ctx.position();
+                    constantStart = null;
                     constantEnd = null;
                 } else if (cur == '"') {
                     SourceRef argumentEnd = ctx.position();
@@ -250,6 +250,9 @@ abstract class ArgumentParser {
 
                     return new ArgumentNode(expressions, argumentStart, argumentEnd);
                 } else {
+                    if (constantStart == null) {
+                        constantStart = ctx.position();
+                    }
                     constantEnd = ctx.position();
                     sb.append(cur);
                     prev = cur;
@@ -334,9 +337,12 @@ abstract class ArgumentParser {
 
                     // reset constant builder
                     sb.setLength(0);
-                    start = ctx.position();
+                    start = null; // we're pointing at closing bracket now
                     end = null;
                 } else {
+                    if (start == null) {
+                        start = ctx.position();
+                    }
                     end = ctx.position();
                     sb.append(cur);
                     prev = cur;

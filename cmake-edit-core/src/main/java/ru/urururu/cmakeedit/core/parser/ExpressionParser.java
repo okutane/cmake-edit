@@ -99,9 +99,12 @@ public class ExpressionParser {
                     nested.add(expression);
 
                     // reset constant builder
-                    constantStart = ctx.position();
+                    constantStart = null;
                     sb.setLength(0);
                 } else {
+                    if (constantStart == null) {
+                        constantStart = ctx.position();
+                    }
                     constantEnd = ctx.position();
                     sb.append(cur);
                 }

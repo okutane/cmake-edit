@@ -62,7 +62,7 @@ public class ArgumentParserTest {
                                         val("BOOL:", 5, 9),
                                         expr("", 10, 25, val("CONFIGURATION", 12, 24))
                                 ),
-                                val(":_", 26, 28),
+                                val(":_", 27, 28),
                                 expr("", 29, 44, val("CONFIGURATION", 31, 43)))
                 )
 

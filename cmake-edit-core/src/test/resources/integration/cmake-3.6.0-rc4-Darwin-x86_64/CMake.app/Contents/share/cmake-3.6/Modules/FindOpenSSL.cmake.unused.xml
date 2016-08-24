@@ -1,36 +1,6 @@
 <list>
   <problem>
     <problem>Value not used</problem>
-    <details>set(_OPENSSL_ROOT_HINTS
-    ${OPENSSL_ROOT_DIR}
-    &quot;[HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\OpenSSL (32-bit)_is1;Inno Setup: App Path]&quot;
-    &quot;[HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\OpenSSL (64-bit)_is1;Inno Setup: App Path]&quot;
-    ENV OPENSSL_ROOT_DIR
-    )</details>
-    <lineRange>74-79</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set(_OPENSSL_ROOT_PATHS
-    &quot;${_programfiles}/OpenSSL&quot;
-    &quot;${_programfiles}/OpenSSL-Win32&quot;
-    &quot;${_programfiles}/OpenSSL-Win64&quot;
-    &quot;C:/OpenSSL/&quot;
-    &quot;C:/OpenSSL-Win32/&quot;
-    &quot;C:/OpenSSL-Win64/&quot;
-    )</details>
-    <lineRange>81-88</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set(_OPENSSL_ROOT_HINTS
-    ${OPENSSL_ROOT_DIR}
-    ENV OPENSSL_ROOT_DIR
-    )</details>
-    <lineRange>91-94</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
     <details>set(_OPENSSL_ROOT_HINTS_AND_PATHS
     HINTS ${_OPENSSL_ROOT_HINTS}
     PATHS ${_OPENSSL_ROOT_PATHS}

@@ -26,7 +26,38 @@ class SimulationState {
         this.suspiciousPoints = suspiciousPoints;
     }
 
+    String getNodeFromState(Node argumentNode) {
+        StringBuilder sb = new StringBuilder();
+
+        argumentNode.visitAll(new NodeVisitorAdapter() {
+            @Override
+            public void accept(ExpressionNode node) {
+                StringBuilder exprBuilder = new StringBuilder();
+
+                if (node.getKey() != null) {
+                    exprBuilder.append(node.getKey());
+                }
+
+                node.getNested().stream().forEach(n -> exprBuilder.append(getNodeFromState(n)));
+
+                String expr = exprBuilder.toString();
+                getValue(expr);
+
+                sb.append('*').append(expr);
+            }
+
+            @Override
+            public void accept(ConstantNode node) {
+                sb.append(node.getValue());
+            }
+        });
+
+        return sb.toString();
+    }
+
     String getValue(ArgumentNode argumentNode) {
+        getNodeFromState(argumentNode);
+
         return getValue(getArgument(argumentNode));
     }
 
@@ -55,8 +86,10 @@ class SimulationState {
     }
 
     void putValue(ArgumentNode argumentNode, CommandInvocationNode command, boolean parentScope) {
+        // expressions from argumentNode should be used
+
         // todo inline argumentNode via getValue()
-        variables.put(getArgument(argumentNode), Collections.singleton(command));
+        variables.put(getNodeFromState(argumentNode), Collections.singleton(command));
     }
 
     static String getArgument(Node argumentNode) {
@@ -108,49 +141,12 @@ class SimulationState {
             }
 
             private void processUsages(CommandInvocationNode node) {
-                if (node.getCommandName().equals("set")) {
-                    List<Node> arguments = node.getArguments();
+                List<Node> arguments = node.getArguments();
 
-                    if (arguments.isEmpty()) {
-                        return;
-                    }
-
-                    arguments.get(0).visitAll(new NodeVisitorAdapter() {
-                        @Override
-                        public void accept(ExpressionNode node) {
-                            processExpression(node, suspiciousPoints);
-                        }
-                    });
-
-                    for (int i = 1; i < arguments.size(); i++) {
-                        arguments.get(i).visitAll(new NodeVisitorAdapter() {
-                            @Override
-                            public void accept(ExpressionNode node) {
-                                processExpression(node, suspiciousPoints);
-                            }
-
-                            @Override
-                            public void accept(ConstantNode node) {
-                                processUsage(node.getValue(), suspiciousPoints);
-                            }
-                        });
-                    }
-
-                    return;
+                for (Node argument : arguments) {
+                    String arg = getNodeFromState(argument);
+                    getValue(arg); // todo shouldnt do for all!
                 }
-
-                node.visitAll(new NodeVisitorAdapter() {
-                    @Override
-                    public void accept(ExpressionNode node) {
-                        processExpression(node, suspiciousPoints);
-                    }
-
-                    @Override
-                    public void accept(ArgumentNode node) {
-                        // not to hardcore?
-                        processUsage(getArgument(node), suspiciousPoints);
-                    }
-                });
             }
         });
     }

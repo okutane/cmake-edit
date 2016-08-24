@@ -1,9 +1,10 @@
 <list>
   <problem>
     <problem>Value not used</problem>
-    <details>set(_IMAGEMAGICK_EXECUTABLE
-    ${ImageMagick_EXECUTABLE_DIR}/${component}${CMAKE_EXECUTABLE_SUFFIX})</details>
-    <lineRange>171-172</lineRange>
+    <details>set(ImageMagick_${component}_INCLUDE_DIRS
+      ${ImageMagick_${component}_INCLUDE_DIR}
+      )</details>
+    <lineRange>147-149</lineRange>
   </problem>
   <problem>
     <problem>Value not used</problem>

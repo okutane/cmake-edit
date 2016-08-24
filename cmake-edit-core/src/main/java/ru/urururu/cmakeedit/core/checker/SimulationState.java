@@ -65,6 +65,9 @@ class SimulationState {
         argumentNode.visitAll(new NodeVisitorAdapter() {
             @Override
             public void accept(ExpressionNode node) {
+                if (node.getKey() != null) {
+                    sb.append(node.getKey());
+                }
                 //throw new IllegalStateException("not implemented");
                 node.getNested().stream().forEach(n -> n.visitAll(this));
             }

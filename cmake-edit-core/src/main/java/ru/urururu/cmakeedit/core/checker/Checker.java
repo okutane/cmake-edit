@@ -17,13 +17,13 @@ public class Checker {
     static final Map<String, Function<CommandInvocationNode, Node>> setters =
             new HashMap<String, Function<CommandInvocationNode, Node>>() {{
                 put("set", cmd -> {
-                    if (cmd.getArguments().size() > 2 && ((ArgumentNode)cmd.getArguments().get(cmd.getArguments().size() - 1)).getArgument().equals("PARENT_SCOPE")){
+                    if (cmd.getArguments().size() > 2 && SimulationState.getArgument(cmd.getArguments().get(cmd.getArguments().size() - 1)).equals("PARENT_SCOPE")){
                         return null;
                     }
                     return cmd.getArguments().get(0);
                 });
                 put("list", cmd -> {
-                    if (Arrays.asList("LENGTH", "GET", "FIND").contains(((ArgumentNode) cmd.getArguments().get(0)).getArgument()))
+                    if (Arrays.asList("LENGTH", "GET", "FIND").contains(SimulationState.getArgument(cmd.getArguments().get(0))))
                         return cmd.getArguments().get(cmd.getArguments().size() - 1);
                     return null;
                 });
@@ -49,7 +49,7 @@ public class Checker {
 
                     ArgumentNode argument = (ArgumentNode) setter.apply(node);
 
-                    if (argument == null || argument.getArgument().startsWith("CMAKE_")) {
+                    if (argument == null || SimulationState.getArgument(argument).startsWith("CMAKE_")) {
                         return;
                     }
 

@@ -4,13 +4,19 @@
       <commandName>include</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>Compiler/PGI</argument>
-          <start>
-            <offset>8</offset>
-          </start>
-          <end>
-            <offset>19</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>Compiler/PGI</value>
+              <start>
+                <offset>8</offset>
+              </start>
+              <end>
+                <offset>19</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -25,13 +31,19 @@
       <commandName>__compiler_pgi</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CXX</argument>
-          <start>
-            <offset>37</offset>
-          </start>
-          <end>
-            <offset>39</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CXX</value>
+              <start>
+                <offset>37</offset>
+              </start>
+              <end>
+                <offset>39</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -46,19 +58,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_CXX_FLAGS_MINSIZEREL_INIT</argument>
-          <start>
-            <offset>46</offset>
-          </start>
-          <end>
-            <offset>76</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_CXX_FLAGS_MINSIZEREL_INIT</value>
+              <start>
+                <offset>46</offset>
+              </start>
+              <end>
+                <offset>76</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_CXX_FLAGS_MINSIZEREL_INIT} -DNDEBUG</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_CXX_FLAGS_MINSIZEREL_INIT}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_CXX_FLAGS_MINSIZEREL_INIT</value>
+                  <start>
+                    <offset>81</offset>
+                  </start>
+                  <end>
+                    <offset>111</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>79</offset>
               </start>
@@ -66,6 +93,15 @@
                 <offset>112</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value> -DNDEBUG</value>
+              <start>
+                <offset>112</offset>
+              </start>
+              <end>
+                <offset>121</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
           <start>
             <offset>78</offset>
@@ -87,19 +123,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_CXX_FLAGS_RELEASE_INIT</argument>
-          <start>
-            <offset>129</offset>
-          </start>
-          <end>
-            <offset>156</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_CXX_FLAGS_RELEASE_INIT</value>
+              <start>
+                <offset>129</offset>
+              </start>
+              <end>
+                <offset>156</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_CXX_FLAGS_RELEASE_INIT} -DNDEBUG</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_CXX_FLAGS_RELEASE_INIT}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_CXX_FLAGS_RELEASE_INIT</value>
+                  <start>
+                    <offset>161</offset>
+                  </start>
+                  <end>
+                    <offset>188</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>159</offset>
               </start>
@@ -107,6 +158,15 @@
                 <offset>189</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value> -DNDEBUG</value>
+              <start>
+                <offset>189</offset>
+              </start>
+              <end>
+                <offset>198</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
           <start>
             <offset>158</offset>

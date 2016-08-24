@@ -20,6 +20,11 @@ public class NodeVisitorAdapter implements NodeVisitor {
     }
 
     @Override
+    public void accept(ConstantNode node) {
+
+    }
+
+    @Override
     public void accept(CommandInvocationNode node) {
 
     }

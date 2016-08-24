@@ -27,7 +27,7 @@ class SimulationState {
     }
 
     String getValue(ArgumentNode argumentNode) {
-        return getValue(argumentNode.getArgument());
+        return getValue(getArgument(argumentNode));
     }
 
     String getValue(String expression) {
@@ -56,7 +56,26 @@ class SimulationState {
 
     void putValue(ArgumentNode argumentNode, CommandInvocationNode command, boolean parentScope) {
         // todo inline argumentNode via getValue()
-        variables.put(argumentNode.getArgument(), Collections.singleton(command));
+        variables.put(getArgument(argumentNode), Collections.singleton(command));
+    }
+
+    static String getArgument(Node argumentNode) {
+        StringBuilder sb = new StringBuilder();
+
+        argumentNode.visitAll(new NodeVisitorAdapter() {
+            @Override
+            public void accept(ExpressionNode node) {
+                //throw new IllegalStateException("not implemented");
+                node.getNested().stream().forEach(n -> n.visitAll(this));
+            }
+
+            @Override
+            public void accept(ConstantNode node) {
+                sb.append(node.getValue());
+            }
+        });
+
+        return sb.toString();
     }
 
     void simulate(Set<CommandInvocationNode> suspiciousPoints, Node node) {
@@ -70,14 +89,14 @@ class SimulationState {
                     Node argument = setter.apply(node);
 
                     if (argument != null) {
-                        String variable = ((ArgumentNode) argument).getArgument();
+                        String variable = getArgument(argument);
                         // todo if variable is a reference through other variables we should inline it.
                         variables.put(variable, Collections.singleton(node));
                     }
                 } else if (node.getCommandName().equals("unset")) {
                     List<Node> arguments = node.getArguments();
                     if (arguments.size() > 0) {
-                        String variable = ((ArgumentNode) arguments.get(0)).getArgument();
+                        String variable = getArgument(arguments.get(0));
                         // todo if variable is a reference through other variables we should inline it.
 
                         variables.remove(variable);
@@ -108,10 +127,8 @@ class SimulationState {
                             }
 
                             @Override
-                            public void accept(ArgumentNode node) {
-                                // not to hardcore?
-                                String argument = node.getArgument();
-                                processUsage(argument, suspiciousPoints);
+                            public void accept(ConstantNode node) {
+                                processUsage(node.getValue(), suspiciousPoints);
                             }
                         });
                     }
@@ -128,8 +145,7 @@ class SimulationState {
                     @Override
                     public void accept(ArgumentNode node) {
                         // not to hardcore?
-                        String argument = node.getArgument();
-                        processUsage(argument, suspiciousPoints);
+                        processUsage(getArgument(node), suspiciousPoints);
                     }
                 });
             }
@@ -141,15 +157,14 @@ class SimulationState {
             return;
         }
 
-        // fixme dirty
-        String expression = node.getExpression();
-        int expressionStart = expression.indexOf('{');
-        int expressionEnd = expression.lastIndexOf('}');
+        NodeVisitor visitor = new NodeVisitorAdapter() {
+            @Override
+            public void accept(ConstantNode node) {
+                processUsage(node.getValue(), suspiciousPoints);
+            }
+        };
 
-        if (expressionStart != -1 && expressionEnd != -1) {
-            String argument = expression.substring(expressionStart + 1, expressionEnd);
-            processUsage(argument, suspiciousPoints);
-        }
+        node.visitAll(visitor);
     }
 
     private void processUsage(String argument, Set<CommandInvocationNode> suspiciousPoints) {

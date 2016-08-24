@@ -312,16 +312,32 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>_cmake_oldestSupported</argument>
-          <start>
-            <offset>1488</offset>
-          </start>
-          <end>
-            <offset>1509</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_cmake_oldestSupported</value>
+              <start>
+                <offset>1488</offset>
+              </start>
+              <end>
+                <offset>1509</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>((__clang_major__ * 100) + __clang_minor__) &gt;= 400</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>((__clang_major__ * 100) + __clang_minor__) &gt;= 400</value>
+              <start>
+                <offset>1512</offset>
+              </start>
+              <end>
+                <offset>1561</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>1511</offset>
           </start>
@@ -342,10 +358,19 @@
       <commandName>include</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_CURRENT_LIST_DIR}/Clang-CXX-TestableFeatures.cmake</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_CURRENT_LIST_DIR}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_CURRENT_LIST_DIR</value>
+                  <start>
+                    <offset>1577</offset>
+                  </start>
+                  <end>
+                    <offset>1598</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1575</offset>
               </start>
@@ -353,6 +378,15 @@
                 <offset>1599</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/Clang-CXX-TestableFeatures.cmake</value>
+              <start>
+                <offset>1599</offset>
+              </start>
+              <end>
+                <offset>1632</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
           <start>
             <offset>1574</offset>
@@ -374,16 +408,32 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>AppleClang51_CXX14</argument>
-          <start>
-            <offset>1641</offset>
-          </start>
-          <end>
-            <offset>1658</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>AppleClang51_CXX14</value>
+              <start>
+                <offset>1641</offset>
+              </start>
+              <end>
+                <offset>1658</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>((__clang_major__ * 100) + __clang_minor__) &gt;= 501 &amp;&amp; __cplusplus &gt; 201103L</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>((__clang_major__ * 100) + __clang_minor__) &gt;= 501 &amp;&amp; __cplusplus &gt; 201103L</value>
+              <start>
+                <offset>1661</offset>
+              </start>
+              <end>
+                <offset>1735</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>1660</offset>
           </start>
@@ -418,19 +468,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>_cmake_feature_test_cxx_attribute_deprecated</argument>
-          <start>
-            <offset>1788</offset>
-          </start>
-          <end>
-            <offset>1831</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_cmake_feature_test_cxx_attribute_deprecated</value>
+              <start>
+                <offset>1788</offset>
+              </start>
+              <end>
+                <offset>1831</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${AppleClang51_CXX14}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${AppleClang51_CXX14}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>AppleClang51_CXX14</value>
+                  <start>
+                    <offset>1836</offset>
+                  </start>
+                  <end>
+                    <offset>1853</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1834</offset>
               </start>
@@ -473,19 +538,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>_cmake_feature_test_cxx_decltype_auto</argument>
-          <start>
-            <offset>1907</offset>
-          </start>
-          <end>
-            <offset>1943</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_cmake_feature_test_cxx_decltype_auto</value>
+              <start>
+                <offset>1907</offset>
+              </start>
+              <end>
+                <offset>1943</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${AppleClang51_CXX14}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${AppleClang51_CXX14}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>AppleClang51_CXX14</value>
+                  <start>
+                    <offset>1948</offset>
+                  </start>
+                  <end>
+                    <offset>1965</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1946</offset>
               </start>
@@ -514,19 +594,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>_cmake_feature_test_cxx_digit_separators</argument>
-          <start>
-            <offset>1974</offset>
-          </start>
-          <end>
-            <offset>2013</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_cmake_feature_test_cxx_digit_separators</value>
+              <start>
+                <offset>1974</offset>
+              </start>
+              <end>
+                <offset>2013</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${AppleClang51_CXX14}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${AppleClang51_CXX14}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>AppleClang51_CXX14</value>
+                  <start>
+                    <offset>2018</offset>
+                  </start>
+                  <end>
+                    <offset>2035</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2016</offset>
               </start>
@@ -569,19 +664,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>_cmake_feature_test_cxx_generic_lambdas</argument>
-          <start>
-            <offset>2089</offset>
-          </start>
-          <end>
-            <offset>2127</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_cmake_feature_test_cxx_generic_lambdas</value>
+              <start>
+                <offset>2089</offset>
+              </start>
+              <end>
+                <offset>2127</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${AppleClang51_CXX14}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${AppleClang51_CXX14}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>AppleClang51_CXX14</value>
+                  <start>
+                    <offset>2132</offset>
+                  </start>
+                  <end>
+                    <offset>2149</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2130</offset>
               </start>
@@ -610,19 +720,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>AppleClang40_CXX11</argument>
-          <start>
-            <offset>2159</offset>
-          </start>
-          <end>
-            <offset>2176</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>AppleClang40_CXX11</value>
+              <start>
+                <offset>2159</offset>
+              </start>
+              <end>
+                <offset>2176</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${_cmake_oldestSupported} &amp;&amp; __cplusplus &gt;= 201103L</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${_cmake_oldestSupported}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>_cmake_oldestSupported</value>
+                  <start>
+                    <offset>2181</offset>
+                  </start>
+                  <end>
+                    <offset>2202</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2179</offset>
               </start>
@@ -630,6 +755,15 @@
                 <offset>2203</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value> &amp;&amp; __cplusplus &gt;= 201103L</value>
+              <start>
+                <offset>2203</offset>
+              </start>
+              <end>
+                <offset>2229</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
           <start>
             <offset>2178</offset>
@@ -651,19 +785,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>_cmake_feature_test_cxx_enum_forward_declarations</argument>
-          <start>
-            <offset>2237</offset>
-          </start>
-          <end>
-            <offset>2285</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_cmake_feature_test_cxx_enum_forward_declarations</value>
+              <start>
+                <offset>2237</offset>
+              </start>
+              <end>
+                <offset>2285</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${AppleClang40_CXX11}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${AppleClang40_CXX11}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>AppleClang40_CXX11</value>
+                  <start>
+                    <offset>2290</offset>
+                  </start>
+                  <end>
+                    <offset>2307</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2288</offset>
               </start>
@@ -692,19 +841,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>_cmake_feature_test_cxx_sizeof_member</argument>
-          <start>
-            <offset>2316</offset>
-          </start>
-          <end>
-            <offset>2352</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_cmake_feature_test_cxx_sizeof_member</value>
+              <start>
+                <offset>2316</offset>
+              </start>
+              <end>
+                <offset>2352</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${AppleClang40_CXX11}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${AppleClang40_CXX11}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>AppleClang40_CXX11</value>
+                  <start>
+                    <offset>2357</offset>
+                  </start>
+                  <end>
+                    <offset>2374</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2355</offset>
               </start>
@@ -733,19 +897,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>_cmake_feature_test_cxx_extended_friend_declarations</argument>
-          <start>
-            <offset>2383</offset>
-          </start>
-          <end>
-            <offset>2434</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_cmake_feature_test_cxx_extended_friend_declarations</value>
+              <start>
+                <offset>2383</offset>
+              </start>
+              <end>
+                <offset>2434</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${AppleClang40_CXX11}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${AppleClang40_CXX11}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>AppleClang40_CXX11</value>
+                  <start>
+                    <offset>2439</offset>
+                  </start>
+                  <end>
+                    <offset>2456</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2437</offset>
               </start>
@@ -774,19 +953,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>_cmake_feature_test_cxx_extern_templates</argument>
-          <start>
-            <offset>2465</offset>
-          </start>
-          <end>
-            <offset>2504</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_cmake_feature_test_cxx_extern_templates</value>
+              <start>
+                <offset>2465</offset>
+              </start>
+              <end>
+                <offset>2504</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${AppleClang40_CXX11}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${AppleClang40_CXX11}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>AppleClang40_CXX11</value>
+                  <start>
+                    <offset>2509</offset>
+                  </start>
+                  <end>
+                    <offset>2526</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2507</offset>
               </start>
@@ -815,19 +1009,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>_cmake_feature_test_cxx_func_identifier</argument>
-          <start>
-            <offset>2535</offset>
-          </start>
-          <end>
-            <offset>2573</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_cmake_feature_test_cxx_func_identifier</value>
+              <start>
+                <offset>2535</offset>
+              </start>
+              <end>
+                <offset>2573</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${AppleClang40_CXX11}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${AppleClang40_CXX11}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>AppleClang40_CXX11</value>
+                  <start>
+                    <offset>2578</offset>
+                  </start>
+                  <end>
+                    <offset>2595</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2576</offset>
               </start>
@@ -856,19 +1065,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>_cmake_feature_test_cxx_inline_namespaces</argument>
-          <start>
-            <offset>2604</offset>
-          </start>
-          <end>
-            <offset>2644</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_cmake_feature_test_cxx_inline_namespaces</value>
+              <start>
+                <offset>2604</offset>
+              </start>
+              <end>
+                <offset>2644</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${AppleClang40_CXX11}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${AppleClang40_CXX11}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>AppleClang40_CXX11</value>
+                  <start>
+                    <offset>2649</offset>
+                  </start>
+                  <end>
+                    <offset>2666</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2647</offset>
               </start>
@@ -897,19 +1121,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>_cmake_feature_test_cxx_long_long_type</argument>
-          <start>
-            <offset>2675</offset>
-          </start>
-          <end>
-            <offset>2712</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_cmake_feature_test_cxx_long_long_type</value>
+              <start>
+                <offset>2675</offset>
+              </start>
+              <end>
+                <offset>2712</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${AppleClang40_CXX11}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${AppleClang40_CXX11}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>AppleClang40_CXX11</value>
+                  <start>
+                    <offset>2717</offset>
+                  </start>
+                  <end>
+                    <offset>2734</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2715</offset>
               </start>
@@ -938,19 +1177,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>_cmake_feature_test_cxx_right_angle_brackets</argument>
-          <start>
-            <offset>2743</offset>
-          </start>
-          <end>
-            <offset>2786</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_cmake_feature_test_cxx_right_angle_brackets</value>
+              <start>
+                <offset>2743</offset>
+              </start>
+              <end>
+                <offset>2786</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${AppleClang40_CXX11}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${AppleClang40_CXX11}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>AppleClang40_CXX11</value>
+                  <start>
+                    <offset>2791</offset>
+                  </start>
+                  <end>
+                    <offset>2808</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2789</offset>
               </start>
@@ -979,19 +1233,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>_cmake_feature_test_cxx_variadic_macros</argument>
-          <start>
-            <offset>2817</offset>
-          </start>
-          <end>
-            <offset>2855</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_cmake_feature_test_cxx_variadic_macros</value>
+              <start>
+                <offset>2817</offset>
+              </start>
+              <end>
+                <offset>2855</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${AppleClang40_CXX11}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${AppleClang40_CXX11}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>AppleClang40_CXX11</value>
+                  <start>
+                    <offset>2860</offset>
+                  </start>
+                  <end>
+                    <offset>2877</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2858</offset>
               </start>
@@ -1020,19 +1289,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>AppleClang_CXX98</argument>
-          <start>
-            <offset>2887</offset>
-          </start>
-          <end>
-            <offset>2902</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>AppleClang_CXX98</value>
+              <start>
+                <offset>2887</offset>
+              </start>
+              <end>
+                <offset>2902</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${_cmake_oldestSupported} &amp;&amp; __cplusplus &gt;= 199711L</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${_cmake_oldestSupported}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>_cmake_oldestSupported</value>
+                  <start>
+                    <offset>2907</offset>
+                  </start>
+                  <end>
+                    <offset>2928</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2905</offset>
               </start>
@@ -1040,6 +1324,15 @@
                 <offset>2929</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value> &amp;&amp; __cplusplus &gt;= 199711L</value>
+              <start>
+                <offset>2929</offset>
+              </start>
+              <end>
+                <offset>2955</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
           <start>
             <offset>2904</offset>
@@ -1061,19 +1354,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>_cmake_feature_test_cxx_template_template_parameters</argument>
-          <start>
-            <offset>2963</offset>
-          </start>
-          <end>
-            <offset>3014</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_cmake_feature_test_cxx_template_template_parameters</value>
+              <start>
+                <offset>2963</offset>
+              </start>
+              <end>
+                <offset>3014</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${AppleClang_CXX98}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${AppleClang_CXX98}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>AppleClang_CXX98</value>
+                  <start>
+                    <offset>3019</offset>
+                  </start>
+                  <end>
+                    <offset>3034</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>3017</offset>
               </start>

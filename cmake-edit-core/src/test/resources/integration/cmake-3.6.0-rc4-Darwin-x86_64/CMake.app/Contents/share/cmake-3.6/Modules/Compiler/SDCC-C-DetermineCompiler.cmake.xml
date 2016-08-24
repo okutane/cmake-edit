@@ -32,16 +32,32 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>_compiler_id_pp_test</argument>
-          <start>
-            <offset>100</offset>
-          </start>
-          <end>
-            <offset>119</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_compiler_id_pp_test</value>
+              <start>
+                <offset>100</offset>
+              </start>
+              <end>
+                <offset>119</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>defined(SDCC)</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>defined(SDCC)</value>
+              <start>
+                <offset>122</offset>
+              </start>
+              <end>
+                <offset>134</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>121</offset>
           </start>
@@ -62,20 +78,36 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>_compiler_id_version_compute</argument>
-          <start>
-            <offset>143</offset>
-          </start>
-          <end>
-            <offset>170</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_compiler_id_version_compute</value>
+              <start>
+                <offset>143</offset>
+              </start>
+              <end>
+                <offset>170</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>
   /* SDCC = VRP */
 #  define COMPILER_VERSION_MAJOR @MACRO_DEC@(SDCC/100)
 #  define COMPILER_VERSION_MINOR @MACRO_DEC@(SDCC/10 % 10)
-#  define COMPILER_VERSION_PATCH @MACRO_DEC@(SDCC    % 10)</argument>
+#  define COMPILER_VERSION_PATCH @MACRO_DEC@(SDCC    % 10)</value>
+              <start>
+                <offset>173</offset>
+              </start>
+              <end>
+                <offset>364</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>172</offset>
           </start>

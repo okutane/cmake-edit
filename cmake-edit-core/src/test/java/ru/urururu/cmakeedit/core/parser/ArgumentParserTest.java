@@ -2,13 +2,7 @@ package ru.urururu.cmakeedit.core.parser;
 
 import org.junit.Assert;
 import org.junit.Test;
-import ru.urururu.cmakeedit.core.ArgumentNode;
-import ru.urururu.cmakeedit.core.ExpressionNode;
-import ru.urururu.cmakeedit.core.Node;
-import ru.urururu.cmakeedit.core.SourceRef;
-import ru.urururu.cmakeedit.core.parser.ArgumentParser;
-import ru.urururu.cmakeedit.core.parser.ParseException;
-import ru.urururu.cmakeedit.core.parser.StringParseContext;
+import ru.urururu.cmakeedit.core.*;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -22,20 +16,20 @@ public class ArgumentParserTest {
     public void testPlain() throws ParseException {
         checkArguments("()");
 
-        checkArguments("(a)", arg("a", 1, 1));
-        checkArguments("(\"a\")", arg("a", 1, 3));
-        checkArguments("([=[a]=])", arg("", 1, 7));
+        checkArguments("(a)", arg(val("a", 1, 1)));
+        checkArguments("(\"a\")", arg(1, 3, val("a", 2, 2)));
+        checkArguments("([=[a]=])", arg(val("", 1, 7)));
     }
 
     @Test
     public void testNested() throws ParseException {
         checkArguments("(FALSE AND (FALSE OR TRUE))",
-                arg("FALSE", 1, 5),
-                arg("AND", 7, 9),
+                arg(val("FALSE", 1, 5)),
+                arg(val("AND", 7, 9)),
                 nested(12, 24,
-                        arg("FALSE", 12, 16),
-                        arg("OR", 18, 19),
-                        arg("TRUE", 21, 24)
+                        arg(val("FALSE", 12, 16)),
+                        arg(val("OR", 18, 19)),
+                        arg(val("TRUE", 21, 24))
                 )
         );
     }
@@ -43,37 +37,52 @@ public class ArgumentParserTest {
     @Test
     public void testExpressions() throws ParseException {
         checkArguments("(${a})",
-                arg("${a}", 1, 4, expr("", "${a}", 1, 4))
+                arg(expr("", 1, 4, val("a", 3, 3)))
         );
         checkArguments("(${a})",
-                arg("${a}", 1, 4, expr("", "${a}", 1, 4)));
+                arg(expr("", 1, 4, val("a", 3, 3))));
         checkArguments("($ENV{a})",
-                arg("$ENV{a}", 1, 7, expr("ENV", "$ENV{a}", 1, 7))
+                arg(expr("ENV", 1, 7, val("a", 6, 6)))
         );
-        checkArguments("(\"$a${b}\")", arg("$a${b}", 1, 8, expr("", "${b}", 4, 7)));
+        checkArguments("(\"$a${b}\")", arg(1, 8, val("$a", 2, 3), expr("", 4, 7, val("b", 6, 6))));
     }
 
     @Test
     public void testSpecialCharacters() throws ParseException {
         checkArguments("(regex \"[0-9]+$\")",
-                arg("regex", 1, 5), arg("[0-9]+$", 7, 15));
+                arg(val("regex", 1, 5)), arg(7, 15, val("[0-9]+$", 8, 14)));
     }
 
     @Test
     public void testLogicalExpression() throws ParseException {
         checkArguments("($<$<BOOL:$<CONFIGURATION>>:_$<CONFIGURATION>>)",
-                arg("$<$<BOOL:$<CONFIGURATION>>:_$<CONFIGURATION>>", 1, 45,
-                        expr("", "$<$<BOOL:$<CONFIGURATION>>:_$<CONFIGURATION>>", 1, 45)
+                arg(
+                        expr("", 1, 45,
+                                expr("", 3, 26,
+                                        val("BOOL:", 5, 9),
+                                        expr("", 10, 25, val("CONFIGURATION", 12, 24))
+                                ),
+                                val(":_", 26, 28),
+                                expr("", 29, 44, val("CONFIGURATION", 31, 43)))
                 )
+
         );
     }
 
-    private ArgumentNode arg(String argument, int from, int to, Node... expressions) {
-        return new ArgumentNode(argument, Arrays.asList(expressions), new SourceRef(from), new SourceRef(to));
+    private ArgumentNode arg(int from, int to, Node... expressions) {
+        return new ArgumentNode(Arrays.asList(expressions), new SourceRef(from), new SourceRef(to));
     }
 
-    private ExpressionNode expr(String key, String expr, int from, int to, Node... nested) {
-        return new ExpressionNode(key, expr, Arrays.asList(nested), new SourceRef(from), new SourceRef(to));
+    private ArgumentNode arg(Node... expressions) {
+        return new ArgumentNode(Arrays.asList(expressions));
+    }
+
+    private ConstantNode val(String value, int from, int to) {
+        return new ConstantNode(value, new SourceRef(from), new SourceRef(to));
+    }
+
+    private ExpressionNode expr(String key, int from, int to, Node... nested) {
+        return new ExpressionNode(key, Arrays.asList(nested), new SourceRef(from), new SourceRef(to));
     }
 
     private ArgumentNode nested(int from, int to, ArgumentNode... children) {

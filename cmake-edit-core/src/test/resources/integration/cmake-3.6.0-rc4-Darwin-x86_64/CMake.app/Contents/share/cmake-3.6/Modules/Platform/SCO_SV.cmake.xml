@@ -4,16 +4,22 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_DL_LIBS</argument>
-          <start>
-            <offset>4</offset>
-          </start>
-          <end>
-            <offset>16</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_DL_LIBS</value>
+              <start>
+                <offset>4</offset>
+              </start>
+              <end>
+                <offset>16</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument></argument>
+          <children/>
           <start>
             <offset>18</offset>
           </start>
@@ -34,13 +40,19 @@
       <commandName>include</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>Platform/UnixPaths</argument>
-          <start>
-            <offset>30</offset>
-          </start>
-          <end>
-            <offset>47</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>Platform/UnixPaths</value>
+              <start>
+                <offset>30</offset>
+              </start>
+              <end>
+                <offset>47</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>

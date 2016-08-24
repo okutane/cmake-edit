@@ -4,13 +4,19 @@
       <commandName>include</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>Platform/Linux-Intel</argument>
-          <start>
-            <offset>8</offset>
-          </start>
-          <end>
-            <offset>27</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>Platform/Linux-Intel</value>
+              <start>
+                <offset>8</offset>
+              </start>
+              <end>
+                <offset>27</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -25,13 +31,19 @@
       <commandName>__linux_compiler_intel</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>Fortran</argument>
-          <start>
-            <offset>53</offset>
-          </start>
-          <end>
-            <offset>59</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>Fortran</value>
+              <start>
+                <offset>53</offset>
+              </start>
+              <end>
+                <offset>59</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -46,19 +58,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_SHARED_LIBRARY_CREATE_Fortran_FLAGS</argument>
-          <start>
-            <offset>66</offset>
-          </start>
-          <end>
-            <offset>106</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_SHARED_LIBRARY_CREATE_Fortran_FLAGS</value>
+              <start>
+                <offset>66</offset>
+              </start>
+              <end>
+                <offset>106</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_SHARED_LIBRARY_CREATE_Fortran_FLAGS} -nofor_main</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_SHARED_LIBRARY_CREATE_Fortran_FLAGS}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_SHARED_LIBRARY_CREATE_Fortran_FLAGS</value>
+                  <start>
+                    <offset>111</offset>
+                  </start>
+                  <end>
+                    <offset>151</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>109</offset>
               </start>
@@ -66,6 +93,15 @@
                 <offset>152</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value> -nofor_main</value>
+              <start>
+                <offset>152</offset>
+              </start>
+              <end>
+                <offset>164</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
           <start>
             <offset>108</offset>
@@ -87,16 +123,22 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_SHARED_LIBRARY_LINK_Fortran_FLAGS</argument>
-          <start>
-            <offset>172</offset>
-          </start>
-          <end>
-            <offset>210</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_SHARED_LIBRARY_LINK_Fortran_FLAGS</value>
+              <start>
+                <offset>172</offset>
+              </start>
+              <end>
+                <offset>210</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument></argument>
+          <children/>
           <start>
             <offset>212</offset>
           </start>

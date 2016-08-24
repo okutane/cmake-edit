@@ -4,13 +4,19 @@
       <commandName>include</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>Platform/Generic-ADSP-Common</argument>
-          <start>
-            <offset>8</offset>
-          </start>
-          <end>
-            <offset>35</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>Platform/Generic-ADSP-Common</value>
+              <start>
+                <offset>8</offset>
+              </start>
+              <end>
+                <offset>35</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -25,22 +31,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_ASM_SOURCE_FILE_EXTENSIONS</argument>
-          <start>
-            <offset>43</offset>
-          </start>
-          <end>
-            <offset>74</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_ASM_SOURCE_FILE_EXTENSIONS</value>
+              <start>
+                <offset>43</offset>
+              </start>
+              <end>
+                <offset>74</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>asm</argument>
-          <start>
-            <offset>76</offset>
-          </start>
-          <end>
-            <offset>78</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>asm</value>
+              <start>
+                <offset>76</offset>
+              </start>
+              <end>
+                <offset>78</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -55,16 +73,32 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_ASM_OUTPUT_EXTENSION</argument>
-          <start>
-            <offset>85</offset>
-          </start>
-          <end>
-            <offset>110</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_ASM_OUTPUT_EXTENSION</value>
+              <start>
+                <offset>85</offset>
+              </start>
+              <end>
+                <offset>110</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>.doj</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>.doj</value>
+              <start>
+                <offset>113</offset>
+              </start>
+              <end>
+                <offset>116</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>112</offset>
           </start>
@@ -85,20 +119,44 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_ASM_COMPILE_OBJECT
-</argument>
-          <start>
-            <offset>125</offset>
-          </start>
-          <end>
-            <offset>149</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_ASM_COMPILE_OBJECT
+</value>
+              <start>
+                <offset>125</offset>
+              </start>
+              <end>
+                <offset>149</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>&lt;CMAKE_ASM_COMPILER&gt; &lt;INCLUDES&gt; &lt;FLAGS&gt; -proc ${ADSP_PROCESSOR} -si-revision ${ADSP_PROCESSOR_SILICIUM_REVISION} -o &lt;OBJECT&gt; &lt;SOURCE&gt;</argument>
           <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>&lt;CMAKE_ASM_COMPILER&gt; &lt;INCLUDES&gt; &lt;FLAGS&gt; -proc </value>
+              <start>
+                <offset>155</offset>
+              </start>
+              <end>
+                <offset>200</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${ADSP_PROCESSOR}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>ADSP_PROCESSOR</value>
+                  <start>
+                    <offset>203</offset>
+                  </start>
+                  <end>
+                    <offset>216</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>201</offset>
               </start>
@@ -106,8 +164,27 @@
                 <offset>217</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value> -si-revision </value>
+              <start>
+                <offset>217</offset>
+              </start>
+              <end>
+                <offset>231</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${ADSP_PROCESSOR_SILICIUM_REVISION}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>ADSP_PROCESSOR_SILICIUM_REVISION</value>
+                  <start>
+                    <offset>234</offset>
+                  </start>
+                  <end>
+                    <offset>265</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>232</offset>
               </start>
@@ -115,6 +192,15 @@
                 <offset>266</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value> -o &lt;OBJECT&gt; &lt;SOURCE&gt;</value>
+              <start>
+                <offset>266</offset>
+              </start>
+              <end>
+                <offset>287</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
           <start>
             <offset>154</offset>

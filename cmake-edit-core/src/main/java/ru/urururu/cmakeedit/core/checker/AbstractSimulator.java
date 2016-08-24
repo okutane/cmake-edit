@@ -29,7 +29,7 @@ class AbstractSimulator {
             LogicalBlock logicalBlock = LogicalBlockFinder.find(state.getNodes(), state.getPosition(), "endfunction");
 
             ArgumentNode node = (ArgumentNode) cmd.getArguments().get(0);
-            state.addSimulator(node.getArgument(), new FunctionSimulator(this, logicalBlock.bodies.get(0)));
+            state.addSimulator(SimulationState.getArgument(node), new FunctionSimulator(this, logicalBlock.bodies.get(0)));
 
             state.setPosition(logicalBlock.endPosition);
             return state;
@@ -44,7 +44,7 @@ class AbstractSimulator {
             LogicalBlock logicalBlock = LogicalBlockFinder.find(state.getNodes(), state.getPosition(), "endmacro");
 
             ArgumentNode node = (ArgumentNode) cmd.getArguments().get(0);
-            state.addSimulator(node.getArgument(), new MacroSimulator(this, logicalBlock.bodies.get(0)));
+            state.addSimulator(SimulationState.getArgument(node), new MacroSimulator(this, logicalBlock.bodies.get(0)));
 
             state.setPosition(logicalBlock.endPosition);
             return state;

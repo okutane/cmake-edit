@@ -452,58 +452,94 @@
       <commandName>macro</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_DEPENDENT_OPTION</argument>
-          <start>
-            <offset>1403</offset>
-          </start>
-          <end>
-            <offset>1424</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_DEPENDENT_OPTION</value>
+              <start>
+                <offset>1403</offset>
+              </start>
+              <end>
+                <offset>1424</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>option</argument>
-          <start>
-            <offset>1426</offset>
-          </start>
-          <end>
-            <offset>1431</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>option</value>
+              <start>
+                <offset>1426</offset>
+              </start>
+              <end>
+                <offset>1431</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>doc</argument>
-          <start>
-            <offset>1433</offset>
-          </start>
-          <end>
-            <offset>1435</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>doc</value>
+              <start>
+                <offset>1433</offset>
+              </start>
+              <end>
+                <offset>1435</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>default</argument>
-          <start>
-            <offset>1437</offset>
-          </start>
-          <end>
-            <offset>1443</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>default</value>
+              <start>
+                <offset>1437</offset>
+              </start>
+              <end>
+                <offset>1443</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>depends</argument>
-          <start>
-            <offset>1445</offset>
-          </start>
-          <end>
-            <offset>1451</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>depends</value>
+              <start>
+                <offset>1445</offset>
+              </start>
+              <end>
+                <offset>1451</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>force</argument>
-          <start>
-            <offset>1453</offset>
-          </start>
-          <end>
-            <offset>1457</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>force</value>
+              <start>
+                <offset>1453</offset>
+              </start>
+              <end>
+                <offset>1457</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -518,10 +554,19 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${option}_ISSET</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${option}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>option</value>
+                  <start>
+                    <offset>1467</offset>
+                  </start>
+                  <end>
+                    <offset>1472</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1465</offset>
               </start>
@@ -529,28 +574,57 @@
                 <offset>1473</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_ISSET</value>
+              <start>
+                <offset>1473</offset>
+              </start>
+              <end>
+                <offset>1479</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
-          <start>
-            <offset>1465</offset>
-          </start>
-          <end>
-            <offset>1479</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>MATCHES</argument>
-          <start>
-            <offset>1481</offset>
-          </start>
-          <end>
-            <offset>1487</offset>
-          </end>
-        </ru.urururu.cmakeedit.core.ArgumentNode>
-        <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>^${option}_ISSET$</argument>
           <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>MATCHES</value>
+              <start>
+                <offset>1481</offset>
+              </start>
+              <end>
+                <offset>1487</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
+        </ru.urururu.cmakeedit.core.ArgumentNode>
+        <ru.urururu.cmakeedit.core.ArgumentNode>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>^</value>
+              <start>
+                <offset>1490</offset>
+              </start>
+              <end>
+                <offset>1490</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${option}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>option</value>
+                  <start>
+                    <offset>1493</offset>
+                  </start>
+                  <end>
+                    <offset>1498</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1491</offset>
               </start>
@@ -558,6 +632,15 @@
                 <offset>1499</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_ISSET$</value>
+              <start>
+                <offset>1499</offset>
+              </start>
+              <end>
+                <offset>1506</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
           <start>
             <offset>1489</offset>
@@ -579,10 +662,19 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${option}_AVAILABLE</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${option}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>option</value>
+                  <start>
+                    <offset>1520</offset>
+                  </start>
+                  <end>
+                    <offset>1525</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1518</offset>
               </start>
@@ -590,22 +682,33 @@
                 <offset>1526</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_AVAILABLE</value>
+              <start>
+                <offset>1526</offset>
+              </start>
+              <end>
+                <offset>1536</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
-          <start>
-            <offset>1518</offset>
-          </start>
-          <end>
-            <offset>1536</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>1</argument>
-          <start>
-            <offset>1538</offset>
-          </start>
-          <end>
-            <offset>1538</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>1</value>
+              <start>
+                <offset>1538</offset>
+              </start>
+              <end>
+                <offset>1538</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -620,19 +723,34 @@
       <commandName>foreach</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>d</argument>
-          <start>
-            <offset>1553</offset>
-          </start>
-          <end>
-            <offset>1553</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>d</value>
+              <start>
+                <offset>1553</offset>
+              </start>
+              <end>
+                <offset>1553</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${depends}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${depends}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>depends</value>
+                  <start>
+                    <offset>1557</offset>
+                  </start>
+                  <end>
+                    <offset>1563</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1555</offset>
               </start>
@@ -641,12 +759,8 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>1555</offset>
-          </start>
-          <end>
-            <offset>1564</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -661,25 +775,47 @@
       <commandName>string</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>REGEX</argument>
-          <start>
-            <offset>1580</offset>
-          </start>
-          <end>
-            <offset>1584</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>REGEX</value>
+              <start>
+                <offset>1580</offset>
+              </start>
+              <end>
+                <offset>1584</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>REPLACE</argument>
-          <start>
-            <offset>1586</offset>
-          </start>
-          <end>
-            <offset>1592</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>REPLACE</value>
+              <start>
+                <offset>1586</offset>
+              </start>
+              <end>
+                <offset>1592</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument> +</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value> +</value>
+              <start>
+                <offset>1595</offset>
+              </start>
+              <end>
+                <offset>1596</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>1594</offset>
           </start>
@@ -688,7 +824,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>;</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>;</value>
+              <start>
+                <offset>1600</offset>
+              </start>
+              <end>
+                <offset>1600</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>1599</offset>
           </start>
@@ -697,19 +843,34 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_DEPENDENT_OPTION_DEP</argument>
-          <start>
-            <offset>1603</offset>
-          </start>
-          <end>
-            <offset>1628</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_DEPENDENT_OPTION_DEP</value>
+              <start>
+                <offset>1603</offset>
+              </start>
+              <end>
+                <offset>1628</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${d}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${d}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>d</value>
+                  <start>
+                    <offset>1633</offset>
+                  </start>
+                  <end>
+                    <offset>1633</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1631</offset>
               </start>
@@ -738,10 +899,19 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_DEPENDENT_OPTION_DEP}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_DEPENDENT_OPTION_DEP}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_DEPENDENT_OPTION_DEP</value>
+                  <start>
+                    <offset>1649</offset>
+                  </start>
+                  <end>
+                    <offset>1674</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1647</offset>
               </start>
@@ -750,12 +920,8 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>1647</offset>
-          </start>
-          <end>
-            <offset>1675</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -781,10 +947,19 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${option}_AVAILABLE</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${option}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>option</value>
+                  <start>
+                    <offset>1705</offset>
+                  </start>
+                  <end>
+                    <offset>1710</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1703</offset>
               </start>
@@ -792,22 +967,33 @@
                 <offset>1711</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_AVAILABLE</value>
+              <start>
+                <offset>1711</offset>
+              </start>
+              <end>
+                <offset>1721</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
-          <start>
-            <offset>1703</offset>
-          </start>
-          <end>
-            <offset>1721</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>0</argument>
-          <start>
-            <offset>1723</offset>
-          </start>
-          <end>
-            <offset>1723</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>0</value>
+              <start>
+                <offset>1723</offset>
+              </start>
+              <end>
+                <offset>1723</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -844,10 +1030,19 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${option}_AVAILABLE</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${option}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>option</value>
+                  <start>
+                    <offset>1766</offset>
+                  </start>
+                  <end>
+                    <offset>1771</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1764</offset>
               </start>
@@ -855,13 +1050,18 @@
                 <offset>1772</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_AVAILABLE</value>
+              <start>
+                <offset>1772</offset>
+              </start>
+              <end>
+                <offset>1782</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
-          <start>
-            <offset>1764</offset>
-          </start>
-          <end>
-            <offset>1782</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -876,10 +1076,19 @@
       <commandName>option</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${option}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${option}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>option</value>
+                  <start>
+                    <offset>1800</offset>
+                  </start>
+                  <end>
+                    <offset>1805</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1798</offset>
               </start>
@@ -888,18 +1097,23 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>1798</offset>
-          </start>
-          <end>
-            <offset>1806</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${doc}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${doc}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>doc</value>
+                  <start>
+                    <offset>1811</offset>
+                  </start>
+                  <end>
+                    <offset>1813</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1809</offset>
               </start>
@@ -916,10 +1130,19 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${default}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${default}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>default</value>
+                  <start>
+                    <offset>1820</offset>
+                  </start>
+                  <end>
+                    <offset>1826</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1818</offset>
               </start>
@@ -948,10 +1171,19 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${option}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${option}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>option</value>
+                  <start>
+                    <offset>1843</offset>
+                  </start>
+                  <end>
+                    <offset>1848</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1841</offset>
               </start>
@@ -960,21 +1192,25 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>1841</offset>
-          </start>
-          <end>
-            <offset>1849</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${${option}}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${${option}}</expression>
               <nested>
                 <ru.urururu.cmakeedit.core.ExpressionNode>
-                  <expression>${option}</expression>
+                  <nested>
+                    <ru.urururu.cmakeedit.core.ConstantNode>
+                      <value>option</value>
+                      <start>
+                        <offset>1856</offset>
+                      </start>
+                      <end>
+                        <offset>1861</offset>
+                      </end>
+                    </ru.urururu.cmakeedit.core.ConstantNode>
+                  </nested>
                   <start>
                     <offset>1854</offset>
                   </start>
@@ -999,28 +1235,49 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CACHE</argument>
-          <start>
-            <offset>1866</offset>
-          </start>
-          <end>
-            <offset>1870</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CACHE</value>
+              <start>
+                <offset>1866</offset>
+              </start>
+              <end>
+                <offset>1870</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>BOOL</argument>
-          <start>
-            <offset>1872</offset>
-          </start>
-          <end>
-            <offset>1875</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>BOOL</value>
+              <start>
+                <offset>1872</offset>
+              </start>
+              <end>
+                <offset>1875</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${doc}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${doc}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>doc</value>
+                  <start>
+                    <offset>1880</offset>
+                  </start>
+                  <end>
+                    <offset>1882</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1878</offset>
               </start>
@@ -1037,13 +1294,19 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>FORCE</argument>
-          <start>
-            <offset>1886</offset>
-          </start>
-          <end>
-            <offset>1890</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>FORCE</value>
+              <start>
+                <offset>1886</offset>
+              </start>
+              <end>
+                <offset>1890</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -1069,10 +1332,19 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${option}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${option}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>option</value>
+                  <start>
+                    <offset>1915</offset>
+                  </start>
+                  <end>
+                    <offset>1920</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1913</offset>
               </start>
@@ -1081,27 +1353,47 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>1913</offset>
-          </start>
-          <end>
-            <offset>1921</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>MATCHES</argument>
-          <start>
-            <offset>1923</offset>
-          </start>
-          <end>
-            <offset>1929</offset>
-          </end>
-        </ru.urururu.cmakeedit.core.ArgumentNode>
-        <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>^${option}$</argument>
           <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>MATCHES</value>
+              <start>
+                <offset>1923</offset>
+              </start>
+              <end>
+                <offset>1929</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
+        </ru.urururu.cmakeedit.core.ArgumentNode>
+        <ru.urururu.cmakeedit.core.ArgumentNode>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>^</value>
+              <start>
+                <offset>1932</offset>
+              </start>
+              <end>
+                <offset>1932</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${option}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>option</value>
+                  <start>
+                    <offset>1935</offset>
+                  </start>
+                  <end>
+                    <offset>1940</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1933</offset>
               </start>
@@ -1109,6 +1401,15 @@
                 <offset>1941</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>$</value>
+              <start>
+                <offset>1941</offset>
+              </start>
+              <end>
+                <offset>1942</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
           <start>
             <offset>1931</offset>
@@ -1141,10 +1442,19 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${option}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${option}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>option</value>
+                  <start>
+                    <offset>1973</offset>
+                  </start>
+                  <end>
+                    <offset>1978</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1971</offset>
               </start>
@@ -1153,21 +1463,25 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>1971</offset>
-          </start>
-          <end>
-            <offset>1979</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${${option}}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${${option}}</expression>
               <nested>
                 <ru.urururu.cmakeedit.core.ExpressionNode>
-                  <expression>${option}</expression>
+                  <nested>
+                    <ru.urururu.cmakeedit.core.ConstantNode>
+                      <value>option</value>
+                      <start>
+                        <offset>1986</offset>
+                      </start>
+                      <end>
+                        <offset>1991</offset>
+                      </end>
+                    </ru.urururu.cmakeedit.core.ConstantNode>
+                  </nested>
                   <start>
                     <offset>1984</offset>
                   </start>
@@ -1192,28 +1506,49 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CACHE</argument>
-          <start>
-            <offset>1996</offset>
-          </start>
-          <end>
-            <offset>2000</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CACHE</value>
+              <start>
+                <offset>1996</offset>
+              </start>
+              <end>
+                <offset>2000</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>INTERNAL</argument>
-          <start>
-            <offset>2002</offset>
-          </start>
-          <end>
-            <offset>2009</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>INTERNAL</value>
+              <start>
+                <offset>2002</offset>
+              </start>
+              <end>
+                <offset>2009</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${doc}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${doc}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>doc</value>
+                  <start>
+                    <offset>2014</offset>
+                  </start>
+                  <end>
+                    <offset>2016</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2012</offset>
               </start>
@@ -1253,10 +1588,19 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${option}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${option}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>option</value>
+                  <start>
+                    <offset>2047</offset>
+                  </start>
+                  <end>
+                    <offset>2052</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2045</offset>
               </start>
@@ -1265,18 +1609,23 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>2045</offset>
-          </start>
-          <end>
-            <offset>2053</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${force}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${force}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>force</value>
+                  <start>
+                    <offset>2057</offset>
+                  </start>
+                  <end>
+                    <offset>2061</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2055</offset>
               </start>
@@ -1285,12 +1634,8 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>2055</offset>
-          </start>
-          <end>
-            <offset>2062</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -1327,10 +1672,19 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${option}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${option}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>option</value>
+                  <start>
+                    <offset>2096</offset>
+                  </start>
+                  <end>
+                    <offset>2101</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2094</offset>
               </start>
@@ -1339,21 +1693,25 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>2094</offset>
-          </start>
-          <end>
-            <offset>2102</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${${option}_ISSET}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${${option}_ISSET}</expression>
               <nested>
                 <ru.urururu.cmakeedit.core.ExpressionNode>
-                  <expression>${option}</expression>
+                  <nested>
+                    <ru.urururu.cmakeedit.core.ConstantNode>
+                      <value>option</value>
+                      <start>
+                        <offset>2109</offset>
+                      </start>
+                      <end>
+                        <offset>2114</offset>
+                      </end>
+                    </ru.urururu.cmakeedit.core.ConstantNode>
+                  </nested>
                   <start>
                     <offset>2107</offset>
                   </start>
@@ -1361,6 +1719,15 @@
                     <offset>2115</offset>
                   </end>
                 </ru.urururu.cmakeedit.core.ExpressionNode>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>_ISSET</value>
+                  <start>
+                    <offset>2115</offset>
+                  </start>
+                  <end>
+                    <offset>2121</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
               </nested>
               <start>
                 <offset>2105</offset>

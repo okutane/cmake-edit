@@ -4,16 +4,32 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>_compiler_id_pp_test</argument>
-          <start>
-            <offset>5</offset>
-          </start>
-          <end>
-            <offset>24</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_compiler_id_pp_test</value>
+              <start>
+                <offset>5</offset>
+              </start>
+              <end>
+                <offset>24</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>defined(__BORLANDC__)</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>defined(__BORLANDC__)</value>
+              <start>
+                <offset>27</offset>
+              </start>
+              <end>
+                <offset>47</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>26</offset>
           </start>
@@ -34,19 +50,35 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>_compiler_id_version_compute</argument>
-          <start>
-            <offset>56</offset>
-          </start>
-          <end>
-            <offset>83</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_compiler_id_version_compute</value>
+              <start>
+                <offset>56</offset>
+              </start>
+              <end>
+                <offset>83</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>
   /* __BORLANDC__ = 0xVRR */
 # define @PREFIX@COMPILER_VERSION_MAJOR @MACRO_HEX@(__BORLANDC__&gt;&gt;8)
-# define @PREFIX@COMPILER_VERSION_MINOR @MACRO_HEX@(__BORLANDC__ &amp; 0xFF)</argument>
+# define @PREFIX@COMPILER_VERSION_MINOR @MACRO_HEX@(__BORLANDC__ &amp; 0xFF)</value>
+              <start>
+                <offset>86</offset>
+              </start>
+              <end>
+                <offset>256</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>85</offset>
           </start>

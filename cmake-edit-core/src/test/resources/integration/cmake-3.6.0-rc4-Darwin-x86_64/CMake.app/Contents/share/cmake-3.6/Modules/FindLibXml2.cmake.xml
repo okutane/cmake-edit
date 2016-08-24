@@ -426,22 +426,34 @@
       <commandName>find_package</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>PkgConfig</argument>
-          <start>
-            <offset>1302</offset>
-          </start>
-          <end>
-            <offset>1310</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>PkgConfig</value>
+              <start>
+                <offset>1302</offset>
+              </start>
+              <end>
+                <offset>1310</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>QUIET</argument>
-          <start>
-            <offset>1312</offset>
-          </start>
-          <end>
-            <offset>1316</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>QUIET</value>
+              <start>
+                <offset>1312</offset>
+              </start>
+              <end>
+                <offset>1316</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -456,31 +468,49 @@
       <commandName>PKG_CHECK_MODULES</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>PC_LIBXML</argument>
-          <start>
-            <offset>1337</offset>
-          </start>
-          <end>
-            <offset>1345</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>PC_LIBXML</value>
+              <start>
+                <offset>1337</offset>
+              </start>
+              <end>
+                <offset>1345</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>QUIET</argument>
-          <start>
-            <offset>1347</offset>
-          </start>
-          <end>
-            <offset>1351</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>QUIET</value>
+              <start>
+                <offset>1347</offset>
+              </start>
+              <end>
+                <offset>1351</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>libxml-2.0</argument>
-          <start>
-            <offset>1353</offset>
-          </start>
-          <end>
-            <offset>1362</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>libxml-2.0</value>
+              <start>
+                <offset>1353</offset>
+              </start>
+              <end>
+                <offset>1362</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -495,19 +525,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>LIBXML2_DEFINITIONS</argument>
-          <start>
-            <offset>1369</offset>
-          </start>
-          <end>
-            <offset>1387</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>LIBXML2_DEFINITIONS</value>
+              <start>
+                <offset>1369</offset>
+              </start>
+              <end>
+                <offset>1387</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${PC_LIBXML_CFLAGS_OTHER}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${PC_LIBXML_CFLAGS_OTHER}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>PC_LIBXML_CFLAGS_OTHER</value>
+                  <start>
+                    <offset>1391</offset>
+                  </start>
+                  <end>
+                    <offset>1412</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1389</offset>
               </start>
@@ -516,12 +561,8 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>1389</offset>
-          </start>
-          <end>
-            <offset>1413</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -536,49 +577,81 @@
       <commandName>find_path</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>LIBXML2_INCLUDE_DIR</argument>
-          <start>
-            <offset>1427</offset>
-          </start>
-          <end>
-            <offset>1445</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>LIBXML2_INCLUDE_DIR</value>
+              <start>
+                <offset>1427</offset>
+              </start>
+              <end>
+                <offset>1445</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>NAMES</argument>
-          <start>
-            <offset>1447</offset>
-          </start>
-          <end>
-            <offset>1451</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>NAMES</value>
+              <start>
+                <offset>1447</offset>
+              </start>
+              <end>
+                <offset>1451</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>libxml/xpath.h
-</argument>
-          <start>
-            <offset>1453</offset>
-          </start>
-          <end>
-            <offset>1467</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>libxml/xpath.h
+</value>
+              <start>
+                <offset>1453</offset>
+              </start>
+              <end>
+                <offset>1467</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>HINTS
-</argument>
-          <start>
-            <offset>1471</offset>
-          </start>
-          <end>
-            <offset>1476</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>HINTS
+</value>
+              <start>
+                <offset>1471</offset>
+              </start>
+              <end>
+                <offset>1476</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${PC_LIBXML_INCLUDEDIR}
-</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${PC_LIBXML_INCLUDEDIR}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>PC_LIBXML_INCLUDEDIR</value>
+                  <start>
+                    <offset>1482</offset>
+                  </start>
+                  <end>
+                    <offset>1501</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1480</offset>
               </start>
@@ -586,20 +659,34 @@
                 <offset>1502</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>
+</value>
+              <start>
+                <offset>1502</offset>
+              </start>
+              <end>
+                <offset>1503</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
-          <start>
-            <offset>1480</offset>
-          </start>
-          <end>
-            <offset>1503</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${PC_LIBXML_INCLUDE_DIRS}
-</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${PC_LIBXML_INCLUDE_DIRS}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>PC_LIBXML_INCLUDE_DIRS</value>
+                  <start>
+                    <offset>1509</offset>
+                  </start>
+                  <end>
+                    <offset>1530</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1507</offset>
               </start>
@@ -607,32 +694,50 @@
                 <offset>1531</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>
+</value>
+              <start>
+                <offset>1531</offset>
+              </start>
+              <end>
+                <offset>1532</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
-          <start>
-            <offset>1507</offset>
-          </start>
-          <end>
-            <offset>1532</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>PATH_SUFFIXES</argument>
-          <start>
-            <offset>1536</offset>
-          </start>
-          <end>
-            <offset>1548</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>PATH_SUFFIXES</value>
+              <start>
+                <offset>1536</offset>
+              </start>
+              <end>
+                <offset>1548</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>libxml2
-</argument>
-          <start>
-            <offset>1550</offset>
-          </start>
-          <end>
-            <offset>1557</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>libxml2
+</value>
+              <start>
+                <offset>1550</offset>
+              </start>
+              <end>
+                <offset>1557</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -647,58 +752,96 @@
       <commandName>find_library</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>LIBXML2_LIBRARIES</argument>
-          <start>
-            <offset>1577</offset>
-          </start>
-          <end>
-            <offset>1593</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>LIBXML2_LIBRARIES</value>
+              <start>
+                <offset>1577</offset>
+              </start>
+              <end>
+                <offset>1593</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>NAMES</argument>
-          <start>
-            <offset>1595</offset>
-          </start>
-          <end>
-            <offset>1599</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>NAMES</value>
+              <start>
+                <offset>1595</offset>
+              </start>
+              <end>
+                <offset>1599</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>xml2</argument>
-          <start>
-            <offset>1601</offset>
-          </start>
-          <end>
-            <offset>1604</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>xml2</value>
+              <start>
+                <offset>1601</offset>
+              </start>
+              <end>
+                <offset>1604</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>libxml2
-</argument>
-          <start>
-            <offset>1606</offset>
-          </start>
-          <end>
-            <offset>1613</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>libxml2
+</value>
+              <start>
+                <offset>1606</offset>
+              </start>
+              <end>
+                <offset>1613</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>HINTS
-</argument>
-          <start>
-            <offset>1617</offset>
-          </start>
-          <end>
-            <offset>1622</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>HINTS
+</value>
+              <start>
+                <offset>1617</offset>
+              </start>
+              <end>
+                <offset>1622</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${PC_LIBXML_LIBDIR}
-</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${PC_LIBXML_LIBDIR}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>PC_LIBXML_LIBDIR</value>
+                  <start>
+                    <offset>1628</offset>
+                  </start>
+                  <end>
+                    <offset>1643</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1626</offset>
               </start>
@@ -706,20 +849,34 @@
                 <offset>1644</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>
+</value>
+              <start>
+                <offset>1644</offset>
+              </start>
+              <end>
+                <offset>1645</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
-          <start>
-            <offset>1626</offset>
-          </start>
-          <end>
-            <offset>1645</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${PC_LIBXML_LIBRARY_DIRS}
-</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${PC_LIBXML_LIBRARY_DIRS}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>PC_LIBXML_LIBRARY_DIRS</value>
+                  <start>
+                    <offset>1651</offset>
+                  </start>
+                  <end>
+                    <offset>1672</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1649</offset>
               </start>
@@ -727,13 +884,19 @@
                 <offset>1673</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>
+</value>
+              <start>
+                <offset>1673</offset>
+              </start>
+              <end>
+                <offset>1674</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
-          <start>
-            <offset>1649</offset>
-          </start>
-          <end>
-            <offset>1674</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -748,22 +911,34 @@
       <commandName>find_program</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>LIBXML2_XMLLINT_EXECUTABLE</argument>
-          <start>
-            <offset>1694</offset>
-          </start>
-          <end>
-            <offset>1719</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>LIBXML2_XMLLINT_EXECUTABLE</value>
+              <start>
+                <offset>1694</offset>
+              </start>
+              <end>
+                <offset>1719</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>xmllint</argument>
-          <start>
-            <offset>1721</offset>
-          </start>
-          <end>
-            <offset>1727</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>xmllint</value>
+              <start>
+                <offset>1721</offset>
+              </start>
+              <end>
+                <offset>1727</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -792,19 +967,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>XMLLINT_EXECUTABLE</argument>
-          <start>
-            <offset>1774</offset>
-          </start>
-          <end>
-            <offset>1791</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>XMLLINT_EXECUTABLE</value>
+              <start>
+                <offset>1774</offset>
+              </start>
+              <end>
+                <offset>1791</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${LIBXML2_XMLLINT_EXECUTABLE}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${LIBXML2_XMLLINT_EXECUTABLE}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>LIBXML2_XMLLINT_EXECUTABLE</value>
+                  <start>
+                    <offset>1796</offset>
+                  </start>
+                  <end>
+                    <offset>1821</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1794</offset>
               </start>
@@ -833,13 +1023,19 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>PC_LIBXML_VERSION</argument>
-          <start>
-            <offset>1830</offset>
-          </start>
-          <end>
-            <offset>1846</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>PC_LIBXML_VERSION</value>
+              <start>
+                <offset>1830</offset>
+              </start>
+              <end>
+                <offset>1846</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -854,19 +1050,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>LIBXML2_VERSION_STRING</argument>
-          <start>
-            <offset>1857</offset>
-          </start>
-          <end>
-            <offset>1878</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>LIBXML2_VERSION_STRING</value>
+              <start>
+                <offset>1857</offset>
+              </start>
+              <end>
+                <offset>1878</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${PC_LIBXML_VERSION}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${PC_LIBXML_VERSION}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>PC_LIBXML_VERSION</value>
+                  <start>
+                    <offset>1882</offset>
+                  </start>
+                  <end>
+                    <offset>1898</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1880</offset>
               </start>
@@ -875,12 +1086,8 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>1880</offset>
-          </start>
-          <end>
-            <offset>1899</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -895,37 +1102,64 @@
       <commandName>elseif</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>LIBXML2_INCLUDE_DIR</argument>
-          <start>
-            <offset>1909</offset>
-          </start>
-          <end>
-            <offset>1927</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>LIBXML2_INCLUDE_DIR</value>
+              <start>
+                <offset>1909</offset>
+              </start>
+              <end>
+                <offset>1927</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>AND</argument>
-          <start>
-            <offset>1929</offset>
-          </start>
-          <end>
-            <offset>1931</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>AND</value>
+              <start>
+                <offset>1929</offset>
+              </start>
+              <end>
+                <offset>1931</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>EXISTS</argument>
-          <start>
-            <offset>1933</offset>
-          </start>
-          <end>
-            <offset>1938</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>EXISTS</value>
+              <start>
+                <offset>1933</offset>
+              </start>
+              <end>
+                <offset>1938</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${LIBXML2_INCLUDE_DIR}/libxml/xmlversion.h</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${LIBXML2_INCLUDE_DIR}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>LIBXML2_INCLUDE_DIR</value>
+                  <start>
+                    <offset>1943</offset>
+                  </start>
+                  <end>
+                    <offset>1961</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1941</offset>
               </start>
@@ -933,6 +1167,15 @@
                 <offset>1962</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/libxml/xmlversion.h</value>
+              <start>
+                <offset>1962</offset>
+              </start>
+              <end>
+                <offset>1982</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
           <start>
             <offset>1940</offset>
@@ -954,19 +1197,34 @@
       <commandName>file</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>STRINGS</argument>
-          <start>
-            <offset>1995</offset>
-          </start>
-          <end>
-            <offset>2001</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>STRINGS</value>
+              <start>
+                <offset>1995</offset>
+              </start>
+              <end>
+                <offset>2001</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${LIBXML2_INCLUDE_DIR}/libxml/xmlversion.h</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${LIBXML2_INCLUDE_DIR}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>LIBXML2_INCLUDE_DIR</value>
+                  <start>
+                    <offset>2006</offset>
+                  </start>
+                  <end>
+                    <offset>2024</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2004</offset>
               </start>
@@ -974,6 +1232,15 @@
                 <offset>2025</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/libxml/xmlversion.h</value>
+              <start>
+                <offset>2025</offset>
+              </start>
+              <end>
+                <offset>2045</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
           <start>
             <offset>2003</offset>
@@ -983,26 +1250,48 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>libxml2_version_str
-</argument>
-          <start>
-            <offset>2048</offset>
-          </start>
-          <end>
-            <offset>2067</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>libxml2_version_str
+</value>
+              <start>
+                <offset>2048</offset>
+              </start>
+              <end>
+                <offset>2067</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>REGEX</argument>
-          <start>
-            <offset>2077</offset>
-          </start>
-          <end>
-            <offset>2081</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>REGEX</value>
+              <start>
+                <offset>2077</offset>
+              </start>
+              <end>
+                <offset>2081</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>^#define[\	 ]+LIBXML_DOTTED_VERSION[\	 ]+\&quot;.*\&quot;</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>^#define[\	 ]+LIBXML_DOTTED_VERSION[\	 ]+\&quot;.*\&quot;</value>
+              <start>
+                <offset>2084</offset>
+              </start>
+              <end>
+                <offset>2129</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>2083</offset>
           </start>
@@ -1023,25 +1312,47 @@
       <commandName>string</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>REGEX</argument>
-          <start>
-            <offset>2146</offset>
-          </start>
-          <end>
-            <offset>2150</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>REGEX</value>
+              <start>
+                <offset>2146</offset>
+              </start>
+              <end>
+                <offset>2150</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>REPLACE</argument>
-          <start>
-            <offset>2152</offset>
-          </start>
-          <end>
-            <offset>2158</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>REPLACE</value>
+              <start>
+                <offset>2152</offset>
+              </start>
+              <end>
+                <offset>2158</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>^#define[\	 ]+LIBXML_DOTTED_VERSION[\	 ]+\&quot;([^\&quot;]*)\&quot;.*</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>^#define[\	 ]+LIBXML_DOTTED_VERSION[\	 ]+\&quot;([^\&quot;]*)\&quot;.*</value>
+              <start>
+                <offset>2161</offset>
+              </start>
+              <end>
+                <offset>2215</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>2160</offset>
           </start>
@@ -1050,7 +1361,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>\\1</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>\\1</value>
+              <start>
+                <offset>2219</offset>
+              </start>
+              <end>
+                <offset>2221</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>2218</offset>
           </start>
@@ -1059,29 +1380,50 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>
-</argument>
-          <start>
-            <offset>2223</offset>
-          </start>
-          <end>
-            <offset>2223</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>
+</value>
+              <start>
+                <offset>2223</offset>
+              </start>
+              <end>
+                <offset>2223</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>LIBXML2_VERSION_STRING</argument>
-          <start>
-            <offset>2235</offset>
-          </start>
-          <end>
-            <offset>2256</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>LIBXML2_VERSION_STRING</value>
+              <start>
+                <offset>2235</offset>
+              </start>
+              <end>
+                <offset>2256</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${libxml2_version_str}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${libxml2_version_str}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>libxml2_version_str</value>
+                  <start>
+                    <offset>2261</offset>
+                  </start>
+                  <end>
+                    <offset>2279</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2259</offset>
               </start>
@@ -1110,13 +1452,19 @@
       <commandName>unset</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>libxml2_version_str</argument>
-          <start>
-            <offset>2294</offset>
-          </start>
-          <end>
-            <offset>2312</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>libxml2_version_str</value>
+              <start>
+                <offset>2294</offset>
+              </start>
+              <end>
+                <offset>2312</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -1170,10 +1518,19 @@
       <commandName>include</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_CURRENT_LIST_DIR}/FindPackageHandleStandardArgs.cmake</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_CURRENT_LIST_DIR}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_CURRENT_LIST_DIR</value>
+                  <start>
+                    <offset>2443</offset>
+                  </start>
+                  <end>
+                    <offset>2464</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2441</offset>
               </start>
@@ -1181,13 +1538,18 @@
                 <offset>2465</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/FindPackageHandleStandardArgs.cmake</value>
+              <start>
+                <offset>2465</offset>
+              </start>
+              <end>
+                <offset>2501</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
-          <start>
-            <offset>2441</offset>
-          </start>
-          <end>
-            <offset>2501</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -1202,60 +1564,96 @@
       <commandName>FIND_PACKAGE_HANDLE_STANDARD_ARGS</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>LibXml2
-</argument>
-          <start>
-            <offset>2538</offset>
-          </start>
-          <end>
-            <offset>2545</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>LibXml2
+</value>
+              <start>
+                <offset>2538</offset>
+              </start>
+              <end>
+                <offset>2545</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>REQUIRED_VARS</argument>
-          <start>
-            <offset>2580</offset>
-          </start>
-          <end>
-            <offset>2592</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>REQUIRED_VARS</value>
+              <start>
+                <offset>2580</offset>
+              </start>
+              <end>
+                <offset>2592</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>LIBXML2_LIBRARIES</argument>
-          <start>
-            <offset>2594</offset>
-          </start>
-          <end>
-            <offset>2610</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>LIBXML2_LIBRARIES</value>
+              <start>
+                <offset>2594</offset>
+              </start>
+              <end>
+                <offset>2610</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>LIBXML2_INCLUDE_DIR
-</argument>
-          <start>
-            <offset>2612</offset>
-          </start>
-          <end>
-            <offset>2631</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>LIBXML2_INCLUDE_DIR
+</value>
+              <start>
+                <offset>2612</offset>
+              </start>
+              <end>
+                <offset>2631</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>VERSION_VAR</argument>
-          <start>
-            <offset>2666</offset>
-          </start>
-          <end>
-            <offset>2676</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>VERSION_VAR</value>
+              <start>
+                <offset>2666</offset>
+              </start>
+              <end>
+                <offset>2676</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>LIBXML2_VERSION_STRING</argument>
-          <start>
-            <offset>2678</offset>
-          </start>
-          <end>
-            <offset>2699</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>LIBXML2_VERSION_STRING</value>
+              <start>
+                <offset>2678</offset>
+              </start>
+              <end>
+                <offset>2699</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -1270,31 +1668,49 @@
       <commandName>mark_as_advanced</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>LIBXML2_INCLUDE_DIR</argument>
-          <start>
-            <offset>2720</offset>
-          </start>
-          <end>
-            <offset>2738</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>LIBXML2_INCLUDE_DIR</value>
+              <start>
+                <offset>2720</offset>
+              </start>
+              <end>
+                <offset>2738</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>LIBXML2_LIBRARIES</argument>
-          <start>
-            <offset>2740</offset>
-          </start>
-          <end>
-            <offset>2756</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>LIBXML2_LIBRARIES</value>
+              <start>
+                <offset>2740</offset>
+              </start>
+              <end>
+                <offset>2756</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>LIBXML2_XMLLINT_EXECUTABLE</argument>
-          <start>
-            <offset>2758</offset>
-          </start>
-          <end>
-            <offset>2783</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>LIBXML2_XMLLINT_EXECUTABLE</value>
+              <start>
+                <offset>2758</offset>
+              </start>
+              <end>
+                <offset>2783</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>

@@ -72,7 +72,7 @@ abstract class ArgumentParser {
                 if (nested.isEmpty()) {
                     arguments.add(ArgumentNode.EMPTY);
                 } else {
-                    arguments.add(new ArgumentNode(nested, nested.get(0).getStart(), nested.get(nested.size() - 1).getEnd()));
+                    arguments.add(new ArgumentNode(nested));
                 }
                 ctx.advance();
             } else {
@@ -150,7 +150,7 @@ abstract class ArgumentParser {
                     if (firstBraceSeen && closeLen == len) {
                         SourceRef end = ctx.position();
                         ctx.advance();
-                        return new ArgumentNode("", Collections.emptyList(), start, end);
+                        return new ArgumentNode(new ConstantNode("", start, end));
                     }
                     firstBraceSeen = true;
                     closeLen = 0;
@@ -185,15 +185,17 @@ abstract class ArgumentParser {
         ArgumentNode parseInternal(ParseContext ctx) throws ParseException {
             List<Node> expressions = new ArrayList<>();
 
-            SourceRef start = ctx.position();
-            SourceRef end;
-            StringBuilder sb = new StringBuilder();
+            SourceRef argumentStart = ctx.position();
+
             char prev = 0;
 
             ctx.advance();
 
+            StringBuilder sb = new StringBuilder();
+            SourceRef constantStart = ctx.position();
+            SourceRef constantEnd = null;
+
             while (!ctx.reachedEnd()) {
-                end = ctx.position();
                 char cur = ctx.peek();
                 if (prev == '\\') {
                     switch (cur) {
@@ -226,13 +228,29 @@ abstract class ArgumentParser {
                     }
                     prev = 0;
                 } else if (cur == '$' && ExpressionParser.canParse(ctx, true)) {
+                    if (sb.length() != 0) {
+                        expressions.add(new ConstantNode(sb.toString(), constantStart, constantEnd));
+                    }
+
                     ExpressionNode expression = ExpressionParser.parseExpression(ctx);
                     expressions.add(expression);
-                    sb.append(expression);
+
+                    // begin read of new constant
+                    sb.setLength(0);
+                    constantStart = ctx.position();
+                    constantEnd = null;
                 } else if (cur == '"') {
+                    SourceRef argumentEnd = ctx.position();
+
                     ctx.advance();
-                    return new ArgumentNode(sb.toString(), expressions, start, end);
+
+                    if (sb.length() != 0) {
+                        expressions.add(new ConstantNode(sb.toString(), constantStart, constantEnd));
+                    }
+
+                    return new ArgumentNode(expressions, argumentStart, argumentEnd);
                 } else {
+                    constantEnd = ctx.position();
                     sb.append(cur);
                     prev = cur;
                 }
@@ -301,16 +319,28 @@ abstract class ArgumentParser {
                     }
                     prev = 0;
                 } else if (cur == ' ' || cur == '\t' || cur == '"' || cur == '(' || cur == ')' || cur == '#')  {
-                    return new ArgumentNode(sb.toString(), expressions, start, end);
-                } else if (cur == '$') {
+                    if (sb.length() != 0) {
+                        expressions.add(new ConstantNode(sb.toString(), start, end));
+                    }
+
+                    return new ArgumentNode(expressions);
+                } else if (cur == '$') {// todo add canParse check?
+                    if (sb.length() != 0) {
+                        expressions.add(new ConstantNode(sb.toString(), start, end));
+                    }
+
                     ExpressionNode expression = ExpressionParser.parseExpression(ctx);
                     expressions.add(expression);
-                    sb.append(expression);
+
+                    // reset constant builder
+                    sb.setLength(0);
+                    start = ctx.position();
+                    end = null;
                 } else {
+                    end = ctx.position();
                     sb.append(cur);
                     prev = cur;
                 }
-                end = ctx.position();
                 ctx.advance();
             }
 

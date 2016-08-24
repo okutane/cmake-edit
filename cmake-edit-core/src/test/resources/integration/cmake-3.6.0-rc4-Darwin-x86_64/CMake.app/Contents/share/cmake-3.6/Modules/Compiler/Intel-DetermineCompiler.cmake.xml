@@ -4,16 +4,32 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>_compiler_id_pp_test</argument>
-          <start>
-            <offset>5</offset>
-          </start>
-          <end>
-            <offset>24</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_compiler_id_pp_test</value>
+              <start>
+                <offset>5</offset>
+              </start>
+              <end>
+                <offset>24</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>defined(__INTEL_COMPILER) || defined(__ICC)</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>defined(__INTEL_COMPILER) || defined(__ICC)</value>
+              <start>
+                <offset>27</offset>
+              </start>
+              <end>
+                <offset>69</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>26</offset>
           </start>
@@ -34,16 +50,24 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>_compiler_id_version_compute</argument>
-          <start>
-            <offset>78</offset>
-          </start>
-          <end>
-            <offset>105</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_compiler_id_version_compute</value>
+              <start>
+                <offset>78</offset>
+              </start>
+              <end>
+                <offset>105</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>
   /* __INTEL_COMPILER = VRP */
 # define @PREFIX@COMPILER_VERSION_MAJOR @MACRO_DEC@(__INTEL_COMPILER/100)
 # define @PREFIX@COMPILER_VERSION_MINOR @MACRO_DEC@(__INTEL_COMPILER/10 % 10)
@@ -60,7 +84,15 @@
    /* _MSC_VER = VVRR */
 #  define @PREFIX@SIMULATE_VERSION_MAJOR @MACRO_DEC@(_MSC_VER / 100)
 #  define @PREFIX@SIMULATE_VERSION_MINOR @MACRO_DEC@(_MSC_VER % 100)
-# endif</argument>
+# endif</value>
+              <start>
+                <offset>108</offset>
+              </start>
+              <end>
+                <offset>872</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>107</offset>
           </start>
@@ -81,19 +113,35 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>_compiler_id_simulate</argument>
-          <start>
-            <offset>881</offset>
-          </start>
-          <end>
-            <offset>901</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_compiler_id_simulate</value>
+              <start>
+                <offset>881</offset>
+              </start>
+              <end>
+                <offset>901</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>
 # if defined(_MSC_VER)
 #  define @PREFIX@SIMULATE_ID \&quot;MSVC\&quot;
-# endif</argument>
+# endif</value>
+              <start>
+                <offset>904</offset>
+              </start>
+              <end>
+                <offset>973</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>903</offset>
           </start>

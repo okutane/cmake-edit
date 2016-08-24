@@ -13,4 +13,6 @@ public interface NodeVisitor {
     void accept(CommandInvocationNode node);
 
     void accept(ParseErrorNode node);
+
+    void accept(ConstantNode node);
 }

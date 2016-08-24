@@ -328,10 +328,19 @@
       <commandName>include</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_CURRENT_LIST_DIR}/CheckIncludeFileCXX.cmake</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_CURRENT_LIST_DIR}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_CURRENT_LIST_DIR</value>
+                  <start>
+                    <offset>903</offset>
+                  </start>
+                  <end>
+                    <offset>924</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>901</offset>
               </start>
@@ -339,13 +348,18 @@
                 <offset>925</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/CheckIncludeFileCXX.cmake</value>
+              <start>
+                <offset>925</offset>
+              </start>
+              <end>
+                <offset>951</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
-          <start>
-            <offset>901</offset>
-          </start>
-          <end>
-            <offset>951</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -360,22 +374,34 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>NOT</argument>
-          <start>
-            <offset>958</offset>
-          </start>
-          <end>
-            <offset>960</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>NOT</value>
+              <start>
+                <offset>958</offset>
+              </start>
+              <end>
+                <offset>960</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_NO_ANSI_STREAM_HEADERS</argument>
-          <start>
-            <offset>962</offset>
-          </start>
-          <end>
-            <offset>989</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_NO_ANSI_STREAM_HEADERS</value>
+              <start>
+                <offset>962</offset>
+              </start>
+              <end>
+                <offset>989</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -390,22 +416,34 @@
       <commandName>CHECK_INCLUDE_FILE_CXX</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>iostream</argument>
-          <start>
-            <offset>1017</offset>
-          </start>
-          <end>
-            <offset>1024</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>iostream</value>
+              <start>
+                <offset>1017</offset>
+              </start>
+              <end>
+                <offset>1024</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_ANSI_STREAM_HEADERS</argument>
-          <start>
-            <offset>1026</offset>
-          </start>
-          <end>
-            <offset>1050</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_ANSI_STREAM_HEADERS</value>
+              <start>
+                <offset>1026</offset>
+              </start>
+              <end>
+                <offset>1050</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -420,13 +458,19 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_ANSI_STREAM_HEADERS</argument>
-          <start>
-            <offset>1059</offset>
-          </start>
-          <end>
-            <offset>1083</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_ANSI_STREAM_HEADERS</value>
+              <start>
+                <offset>1059</offset>
+              </start>
+              <end>
+                <offset>1083</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -441,44 +485,78 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_NO_ANSI_STREAM_HEADERS</argument>
-          <start>
-            <offset>1095</offset>
-          </start>
-          <end>
-            <offset>1122</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_NO_ANSI_STREAM_HEADERS</value>
+              <start>
+                <offset>1095</offset>
+              </start>
+              <end>
+                <offset>1122</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>0</argument>
-          <start>
-            <offset>1124</offset>
-          </start>
-          <end>
-            <offset>1124</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>0</value>
+              <start>
+                <offset>1124</offset>
+              </start>
+              <end>
+                <offset>1124</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CACHE</argument>
-          <start>
-            <offset>1126</offset>
-          </start>
-          <end>
-            <offset>1130</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CACHE</value>
+              <start>
+                <offset>1126</offset>
+              </start>
+              <end>
+                <offset>1130</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>INTERNAL
-</argument>
-          <start>
-            <offset>1132</offset>
-          </start>
-          <end>
-            <offset>1140</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>INTERNAL
+</value>
+              <start>
+                <offset>1132</offset>
+              </start>
+              <end>
+                <offset>1140</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>Does the compiler support headers like iostream.</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>Does the compiler support headers like iostream.</value>
+              <start>
+                <offset>1151</offset>
+              </start>
+              <end>
+                <offset>1198</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>1150</offset>
           </start>
@@ -510,44 +588,78 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_NO_ANSI_STREAM_HEADERS</argument>
-          <start>
-            <offset>1221</offset>
-          </start>
-          <end>
-            <offset>1248</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_NO_ANSI_STREAM_HEADERS</value>
+              <start>
+                <offset>1221</offset>
+              </start>
+              <end>
+                <offset>1248</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>1</argument>
-          <start>
-            <offset>1250</offset>
-          </start>
-          <end>
-            <offset>1250</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>1</value>
+              <start>
+                <offset>1250</offset>
+              </start>
+              <end>
+                <offset>1250</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CACHE</argument>
-          <start>
-            <offset>1252</offset>
-          </start>
-          <end>
-            <offset>1256</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CACHE</value>
+              <start>
+                <offset>1252</offset>
+              </start>
+              <end>
+                <offset>1256</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>INTERNAL
-</argument>
-          <start>
-            <offset>1258</offset>
-          </start>
-          <end>
-            <offset>1266</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>INTERNAL
+</value>
+              <start>
+                <offset>1258</offset>
+              </start>
+              <end>
+                <offset>1266</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>Does the compiler support headers like iostream.</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>Does the compiler support headers like iostream.</value>
+              <start>
+                <offset>1275</offset>
+              </start>
+              <end>
+                <offset>1322</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>1274</offset>
           </start>
@@ -579,13 +691,19 @@
       <commandName>mark_as_advanced</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_NO_ANSI_STREAM_HEADERS</argument>
-          <start>
-            <offset>1357</offset>
-          </start>
-          <end>
-            <offset>1384</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_NO_ANSI_STREAM_HEADERS</value>
+              <start>
+                <offset>1357</offset>
+              </start>
+              <end>
+                <offset>1384</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>

@@ -448,22 +448,34 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>NOT</argument>
-          <start>
-            <offset>1152</offset>
-          </start>
-          <end>
-            <offset>1154</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>NOT</value>
+              <start>
+                <offset>1152</offset>
+              </start>
+              <end>
+                <offset>1154</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CABLE</argument>
-          <start>
-            <offset>1156</offset>
-          </start>
-          <end>
-            <offset>1160</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CABLE</value>
+              <start>
+                <offset>1156</offset>
+              </start>
+              <end>
+                <offset>1160</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -478,22 +490,34 @@
       <commandName>find_path</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CABLE_BUILD_DIR</argument>
-          <start>
-            <offset>1175</offset>
-          </start>
-          <end>
-            <offset>1189</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CABLE_BUILD_DIR</value>
+              <start>
+                <offset>1175</offset>
+              </start>
+              <end>
+                <offset>1189</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>cableVersion.h</argument>
-          <start>
-            <offset>1191</offset>
-          </start>
-          <end>
-            <offset>1204</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>cableVersion.h</value>
+              <start>
+                <offset>1191</offset>
+              </start>
+              <end>
+                <offset>1204</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -519,13 +543,19 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CABLE_BUILD_DIR</argument>
-          <start>
-            <offset>1219</offset>
-          </start>
-          <end>
-            <offset>1233</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CABLE_BUILD_DIR</value>
+              <start>
+                <offset>1219</offset>
+              </start>
+              <end>
+                <offset>1233</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -540,11 +570,19 @@
       <commandName>load_cache</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CABLE_BUILD_DIR}
-</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CABLE_BUILD_DIR}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CABLE_BUILD_DIR</value>
+                  <start>
+                    <offset>1251</offset>
+                  </start>
+                  <end>
+                    <offset>1265</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1249</offset>
               </start>
@@ -552,102 +590,162 @@
                 <offset>1266</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>
+</value>
+              <start>
+                <offset>1266</offset>
+              </start>
+              <end>
+                <offset>1267</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
-          <start>
-            <offset>1249</offset>
-          </start>
-          <end>
-            <offset>1267</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>EXCLUDE
-</argument>
-          <start>
-            <offset>1281</offset>
-          </start>
-          <end>
-            <offset>1288</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>EXCLUDE
+</value>
+              <start>
+                <offset>1281</offset>
+              </start>
+              <end>
+                <offset>1288</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>BUILD_SHARED_LIBS
-</argument>
-          <start>
-            <offset>1304</offset>
-          </start>
-          <end>
-            <offset>1321</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>BUILD_SHARED_LIBS
+</value>
+              <start>
+                <offset>1304</offset>
+              </start>
+              <end>
+                <offset>1321</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>LIBRARY_OUTPUT_PATH
-</argument>
-          <start>
-            <offset>1337</offset>
-          </start>
-          <end>
-            <offset>1356</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>LIBRARY_OUTPUT_PATH
+</value>
+              <start>
+                <offset>1337</offset>
+              </start>
+              <end>
+                <offset>1356</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>EXECUTABLE_OUTPUT_PATH
-</argument>
-          <start>
-            <offset>1372</offset>
-          </start>
-          <end>
-            <offset>1394</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>EXECUTABLE_OUTPUT_PATH
+</value>
+              <start>
+                <offset>1372</offset>
+              </start>
+              <end>
+                <offset>1394</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>MAKECOMMAND
-</argument>
-          <start>
-            <offset>1410</offset>
-          </start>
-          <end>
-            <offset>1421</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>MAKECOMMAND
+</value>
+              <start>
+                <offset>1410</offset>
+              </start>
+              <end>
+                <offset>1421</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_INSTALL_PREFIX
-</argument>
-          <start>
-            <offset>1437</offset>
-          </start>
-          <end>
-            <offset>1457</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_INSTALL_PREFIX
+</value>
+              <start>
+                <offset>1437</offset>
+              </start>
+              <end>
+                <offset>1457</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>INCLUDE_INTERNALS
-</argument>
-          <start>
-            <offset>1471</offset>
-          </start>
-          <end>
-            <offset>1488</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>INCLUDE_INTERNALS
+</value>
+              <start>
+                <offset>1471</offset>
+              </start>
+              <end>
+                <offset>1488</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CABLE_LIBRARY_PATH
-</argument>
-          <start>
-            <offset>1504</offset>
-          </start>
-          <end>
-            <offset>1522</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CABLE_LIBRARY_PATH
+</value>
+              <start>
+                <offset>1504</offset>
+              </start>
+              <end>
+                <offset>1522</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CABLE_EXECUTABLE_PATH</argument>
-          <start>
-            <offset>1538</offset>
-          </start>
-          <end>
-            <offset>1558</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CABLE_EXECUTABLE_PATH</value>
+              <start>
+                <offset>1538</offset>
+              </start>
+              <end>
+                <offset>1558</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -662,13 +760,19 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CABLE_LIBRARY_PATH</argument>
-          <start>
-            <offset>1567</offset>
-          </start>
-          <end>
-            <offset>1584</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CABLE_LIBRARY_PATH</value>
+              <start>
+                <offset>1567</offset>
+              </start>
+              <end>
+                <offset>1584</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -683,48 +787,80 @@
       <commandName>find_library</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CABLE_TCL_LIBRARY</argument>
-          <start>
-            <offset>1604</offset>
-          </start>
-          <end>
-            <offset>1620</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CABLE_TCL_LIBRARY</value>
+              <start>
+                <offset>1604</offset>
+              </start>
+              <end>
+                <offset>1620</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>NAMES</argument>
-          <start>
-            <offset>1622</offset>
-          </start>
-          <end>
-            <offset>1626</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>NAMES</value>
+              <start>
+                <offset>1622</offset>
+              </start>
+              <end>
+                <offset>1626</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CableTclFacility</argument>
-          <start>
-            <offset>1628</offset>
-          </start>
-          <end>
-            <offset>1643</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CableTclFacility</value>
+              <start>
+                <offset>1628</offset>
+              </start>
+              <end>
+                <offset>1643</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>PATHS
-</argument>
-          <start>
-            <offset>1645</offset>
-          </start>
-          <end>
-            <offset>1650</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>PATHS
+</value>
+              <start>
+                <offset>1645</offset>
+              </start>
+              <end>
+                <offset>1650</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CABLE_LIBRARY_PATH}
-</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CABLE_LIBRARY_PATH}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CABLE_LIBRARY_PATH</value>
+                  <start>
+                    <offset>1670</offset>
+                  </start>
+                  <end>
+                    <offset>1687</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1668</offset>
               </start>
@@ -732,19 +868,34 @@
                 <offset>1688</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>
+</value>
+              <start>
+                <offset>1688</offset>
+              </start>
+              <end>
+                <offset>1689</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
-          <start>
-            <offset>1668</offset>
-          </start>
-          <end>
-            <offset>1689</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CABLE_LIBRARY_PATH}/*</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CABLE_LIBRARY_PATH}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CABLE_LIBRARY_PATH</value>
+                  <start>
+                    <offset>1709</offset>
+                  </start>
+                  <end>
+                    <offset>1726</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1707</offset>
               </start>
@@ -752,13 +903,18 @@
                 <offset>1727</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/*</value>
+              <start>
+                <offset>1727</offset>
+              </start>
+              <end>
+                <offset>1729</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
-          <start>
-            <offset>1707</offset>
-          </start>
-          <end>
-            <offset>1729</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -784,48 +940,80 @@
       <commandName>find_library</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CABLE_TCL_LIBRARY</argument>
-          <start>
-            <offset>1758</offset>
-          </start>
-          <end>
-            <offset>1774</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CABLE_TCL_LIBRARY</value>
+              <start>
+                <offset>1758</offset>
+              </start>
+              <end>
+                <offset>1774</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>NAMES</argument>
-          <start>
-            <offset>1776</offset>
-          </start>
-          <end>
-            <offset>1780</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>NAMES</value>
+              <start>
+                <offset>1776</offset>
+              </start>
+              <end>
+                <offset>1780</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CableTclFacility</argument>
-          <start>
-            <offset>1782</offset>
-          </start>
-          <end>
-            <offset>1797</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CableTclFacility</value>
+              <start>
+                <offset>1782</offset>
+              </start>
+              <end>
+                <offset>1797</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>PATHS
-</argument>
-          <start>
-            <offset>1799</offset>
-          </start>
-          <end>
-            <offset>1804</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>PATHS
+</value>
+              <start>
+                <offset>1799</offset>
+              </start>
+              <end>
+                <offset>1804</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CABLE_BINARY_DIR}/CableTclFacility
-</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CABLE_BINARY_DIR}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CABLE_BINARY_DIR</value>
+                  <start>
+                    <offset>1824</offset>
+                  </start>
+                  <end>
+                    <offset>1839</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1822</offset>
               </start>
@@ -833,19 +1021,34 @@
                 <offset>1840</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/CableTclFacility
+</value>
+              <start>
+                <offset>1840</offset>
+              </start>
+              <end>
+                <offset>1858</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
-          <start>
-            <offset>1822</offset>
-          </start>
-          <end>
-            <offset>1858</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CABLE_BINARY_DIR}/CableTclFacility/*</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CABLE_BINARY_DIR}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CABLE_BINARY_DIR</value>
+                  <start>
+                    <offset>1878</offset>
+                  </start>
+                  <end>
+                    <offset>1893</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1876</offset>
               </start>
@@ -853,13 +1056,18 @@
                 <offset>1894</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/CableTclFacility/*</value>
+              <start>
+                <offset>1894</offset>
+              </start>
+              <end>
+                <offset>1913</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
-          <start>
-            <offset>1876</offset>
-          </start>
-          <end>
-            <offset>1913</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -885,13 +1093,19 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CABLE_EXECUTABLE_PATH</argument>
-          <start>
-            <offset>1932</offset>
-          </start>
-          <end>
-            <offset>1952</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CABLE_EXECUTABLE_PATH</value>
+              <start>
+                <offset>1932</offset>
+              </start>
+              <end>
+                <offset>1952</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -906,48 +1120,80 @@
       <commandName>find_program</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CABLE</argument>
-          <start>
-            <offset>1972</offset>
-          </start>
-          <end>
-            <offset>1976</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CABLE</value>
+              <start>
+                <offset>1972</offset>
+              </start>
+              <end>
+                <offset>1976</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>NAMES</argument>
-          <start>
-            <offset>1978</offset>
-          </start>
-          <end>
-            <offset>1982</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>NAMES</value>
+              <start>
+                <offset>1978</offset>
+              </start>
+              <end>
+                <offset>1982</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>cable</argument>
-          <start>
-            <offset>1984</offset>
-          </start>
-          <end>
-            <offset>1988</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>cable</value>
+              <start>
+                <offset>1984</offset>
+              </start>
+              <end>
+                <offset>1988</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>PATHS
-</argument>
-          <start>
-            <offset>1990</offset>
-          </start>
-          <end>
-            <offset>1995</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>PATHS
+</value>
+              <start>
+                <offset>1990</offset>
+              </start>
+              <end>
+                <offset>1995</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CABLE_EXECUTABLE_PATH}
-</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CABLE_EXECUTABLE_PATH}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CABLE_EXECUTABLE_PATH</value>
+                  <start>
+                    <offset>2015</offset>
+                  </start>
+                  <end>
+                    <offset>2035</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2013</offset>
               </start>
@@ -955,19 +1201,34 @@
                 <offset>2036</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>
+</value>
+              <start>
+                <offset>2036</offset>
+              </start>
+              <end>
+                <offset>2037</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
-          <start>
-            <offset>2013</offset>
-          </start>
-          <end>
-            <offset>2037</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CABLE_EXECUTABLE_PATH}/*</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CABLE_EXECUTABLE_PATH}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CABLE_EXECUTABLE_PATH</value>
+                  <start>
+                    <offset>2057</offset>
+                  </start>
+                  <end>
+                    <offset>2077</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2055</offset>
               </start>
@@ -975,13 +1236,18 @@
                 <offset>2078</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/*</value>
+              <start>
+                <offset>2078</offset>
+              </start>
+              <end>
+                <offset>2080</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
-          <start>
-            <offset>2055</offset>
-          </start>
-          <end>
-            <offset>2080</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -1007,48 +1273,80 @@
       <commandName>find_program</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CABLE</argument>
-          <start>
-            <offset>2109</offset>
-          </start>
-          <end>
-            <offset>2113</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CABLE</value>
+              <start>
+                <offset>2109</offset>
+              </start>
+              <end>
+                <offset>2113</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>NAMES</argument>
-          <start>
-            <offset>2115</offset>
-          </start>
-          <end>
-            <offset>2119</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>NAMES</value>
+              <start>
+                <offset>2115</offset>
+              </start>
+              <end>
+                <offset>2119</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>cable</argument>
-          <start>
-            <offset>2121</offset>
-          </start>
-          <end>
-            <offset>2125</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>cable</value>
+              <start>
+                <offset>2121</offset>
+              </start>
+              <end>
+                <offset>2125</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>PATHS
-</argument>
-          <start>
-            <offset>2127</offset>
-          </start>
-          <end>
-            <offset>2132</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>PATHS
+</value>
+              <start>
+                <offset>2127</offset>
+              </start>
+              <end>
+                <offset>2132</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CABLE_BINARY_DIR}/Executables
-</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CABLE_BINARY_DIR}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CABLE_BINARY_DIR</value>
+                  <start>
+                    <offset>2152</offset>
+                  </start>
+                  <end>
+                    <offset>2167</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2150</offset>
               </start>
@@ -1056,19 +1354,34 @@
                 <offset>2168</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/Executables
+</value>
+              <start>
+                <offset>2168</offset>
+              </start>
+              <end>
+                <offset>2181</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
-          <start>
-            <offset>2150</offset>
-          </start>
-          <end>
-            <offset>2181</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CABLE_BINARY_DIR}/Executables/*</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CABLE_BINARY_DIR}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CABLE_BINARY_DIR</value>
+                  <start>
+                    <offset>2201</offset>
+                  </start>
+                  <end>
+                    <offset>2216</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2199</offset>
               </start>
@@ -1076,13 +1389,18 @@
                 <offset>2217</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/Executables/*</value>
+              <start>
+                <offset>2217</offset>
+              </start>
+              <end>
+                <offset>2231</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
-          <start>
-            <offset>2199</offset>
-          </start>
-          <end>
-            <offset>2231</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -1108,29 +1426,50 @@
       <commandName>find_path</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CABLE_INCLUDE_DIR</argument>
-          <start>
-            <offset>2257</offset>
-          </start>
-          <end>
-            <offset>2273</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CABLE_INCLUDE_DIR</value>
+              <start>
+                <offset>2257</offset>
+              </start>
+              <end>
+                <offset>2273</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CableTclFacility/ctCalls.h
-</argument>
-          <start>
-            <offset>2275</offset>
-          </start>
-          <end>
-            <offset>2301</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CableTclFacility/ctCalls.h
+</value>
+              <start>
+                <offset>2275</offset>
+              </start>
+              <end>
+                <offset>2301</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CABLE_SOURCE_DIR}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CABLE_SOURCE_DIR}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CABLE_SOURCE_DIR</value>
+                  <start>
+                    <offset>2316</offset>
+                  </start>
+                  <end>
+                    <offset>2331</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2314</offset>
               </start>
@@ -1139,12 +1478,8 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>2314</offset>
-          </start>
-          <end>
-            <offset>2332</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -1184,31 +1519,49 @@
       <commandName>find_program</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CABLE</argument>
-          <start>
-            <offset>2400</offset>
-          </start>
-          <end>
-            <offset>2404</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CABLE</value>
+              <start>
+                <offset>2400</offset>
+              </start>
+              <end>
+                <offset>2404</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>NAMES</argument>
-          <start>
-            <offset>2406</offset>
-          </start>
-          <end>
-            <offset>2410</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>NAMES</value>
+              <start>
+                <offset>2406</offset>
+              </start>
+              <end>
+                <offset>2410</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>cable</argument>
-          <start>
-            <offset>2412</offset>
-          </start>
-          <end>
-            <offset>2416</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>cable</value>
+              <start>
+                <offset>2412</offset>
+              </start>
+              <end>
+                <offset>2416</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -1251,19 +1604,34 @@
       <commandName>get_filename_component</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CABLE_ROOT_BIN</argument>
-          <start>
-            <offset>2532</offset>
-          </start>
-          <end>
-            <offset>2545</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CABLE_ROOT_BIN</value>
+              <start>
+                <offset>2532</offset>
+              </start>
+              <end>
+                <offset>2545</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CABLE}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CABLE}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CABLE</value>
+                  <start>
+                    <offset>2549</offset>
+                  </start>
+                  <end>
+                    <offset>2553</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2547</offset>
               </start>
@@ -1272,21 +1640,23 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>2547</offset>
-          </start>
-          <end>
-            <offset>2554</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>PATH</argument>
-          <start>
-            <offset>2556</offset>
-          </start>
-          <end>
-            <offset>2559</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>PATH</value>
+              <start>
+                <offset>2556</offset>
+              </start>
+              <end>
+                <offset>2559</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -1329,29 +1699,50 @@
       <commandName>find_path</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CABLE_INCLUDE_DIR</argument>
-          <start>
-            <offset>2660</offset>
-          </start>
-          <end>
-            <offset>2676</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CABLE_INCLUDE_DIR</value>
+              <start>
+                <offset>2660</offset>
+              </start>
+              <end>
+                <offset>2676</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CableTclFacility/ctCalls.h
-</argument>
-          <start>
-            <offset>2678</offset>
-          </start>
-          <end>
-            <offset>2704</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CableTclFacility/ctCalls.h
+</value>
+              <start>
+                <offset>2678</offset>
+              </start>
+              <end>
+                <offset>2704</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CABLE_ROOT_BIN}/../include/Cable</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CABLE_ROOT_BIN}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CABLE_ROOT_BIN</value>
+                  <start>
+                    <offset>2719</offset>
+                  </start>
+                  <end>
+                    <offset>2732</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2717</offset>
               </start>
@@ -1359,13 +1750,18 @@
                 <offset>2733</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/../include/Cable</value>
+              <start>
+                <offset>2733</offset>
+              </start>
+              <end>
+                <offset>2750</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
-          <start>
-            <offset>2717</offset>
-          </start>
-          <end>
-            <offset>2750</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -1408,47 +1804,80 @@
       <commandName>find_library</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CABLE_TCL_LIBRARY</argument>
-          <start>
-            <offset>2854</offset>
-          </start>
-          <end>
-            <offset>2870</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CABLE_TCL_LIBRARY</value>
+              <start>
+                <offset>2854</offset>
+              </start>
+              <end>
+                <offset>2870</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>NAMES</argument>
-          <start>
-            <offset>2872</offset>
-          </start>
-          <end>
-            <offset>2876</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>NAMES</value>
+              <start>
+                <offset>2872</offset>
+              </start>
+              <end>
+                <offset>2876</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CableTclFacility</argument>
-          <start>
-            <offset>2878</offset>
-          </start>
-          <end>
-            <offset>2893</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CableTclFacility</value>
+              <start>
+                <offset>2878</offset>
+              </start>
+              <end>
+                <offset>2893</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>PATHS
-</argument>
-          <start>
-            <offset>2895</offset>
-          </start>
-          <end>
-            <offset>2900</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>PATHS
+</value>
+              <start>
+                <offset>2895</offset>
+              </start>
+              <end>
+                <offset>2900</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CABLE_ROOT_BIN}/../lib/Cable</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CABLE_ROOT_BIN}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CABLE_ROOT_BIN</value>
+                  <start>
+                    <offset>2918</offset>
+                  </start>
+                  <end>
+                    <offset>2931</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2916</offset>
               </start>
@@ -1456,13 +1885,18 @@
                 <offset>2932</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/../lib/Cable</value>
+              <start>
+                <offset>2932</offset>
+              </start>
+              <end>
+                <offset>2945</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
-          <start>
-            <offset>2916</offset>
-          </start>
-          <end>
-            <offset>2945</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>

@@ -40,8 +40,8 @@ public abstract class Node implements Serializable {
         return end;
     }
 
-    List<Node> maskEmpty(List<Node> list) {
-        return list.isEmpty() ? null : list;
+    static String unmask(String string) {
+        return string == null ? "" : string;
     }
 
     String maskEmpty(String string) {

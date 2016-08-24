@@ -416,10 +416,19 @@
       <commandName>include</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_CURRENT_LIST_DIR}/FindCygwin.cmake</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_CURRENT_LIST_DIR}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_CURRENT_LIST_DIR</value>
+                  <start>
+                    <offset>971</offset>
+                  </start>
+                  <end>
+                    <offset>992</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>969</offset>
               </start>
@@ -427,13 +436,18 @@
                 <offset>993</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/FindCygwin.cmake</value>
+              <start>
+                <offset>993</offset>
+              </start>
+              <end>
+                <offset>1010</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
-          <start>
-            <offset>969</offset>
-          </start>
-          <end>
-            <offset>1010</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -448,71 +462,115 @@
       <commandName>find_program</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>GNUPLOT_EXECUTABLE
-</argument>
-          <start>
-            <offset>1027</offset>
-          </start>
-          <end>
-            <offset>1045</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>GNUPLOT_EXECUTABLE
+</value>
+              <start>
+                <offset>1027</offset>
+              </start>
+              <end>
+                <offset>1045</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>NAMES
-</argument>
-          <start>
-            <offset>1048</offset>
-          </start>
-          <end>
-            <offset>1053</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>NAMES
+</value>
+              <start>
+                <offset>1048</offset>
+              </start>
+              <end>
+                <offset>1053</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>gnuplot
-</argument>
-          <start>
-            <offset>1056</offset>
-          </start>
-          <end>
-            <offset>1063</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>gnuplot
+</value>
+              <start>
+                <offset>1056</offset>
+              </start>
+              <end>
+                <offset>1063</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>pgnuplot
-</argument>
-          <start>
-            <offset>1066</offset>
-          </start>
-          <end>
-            <offset>1074</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>pgnuplot
+</value>
+              <start>
+                <offset>1066</offset>
+              </start>
+              <end>
+                <offset>1074</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>wgnupl32
-</argument>
-          <start>
-            <offset>1077</offset>
-          </start>
-          <end>
-            <offset>1085</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>wgnupl32
+</value>
+              <start>
+                <offset>1077</offset>
+              </start>
+              <end>
+                <offset>1085</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>PATHS
-</argument>
-          <start>
-            <offset>1088</offset>
-          </start>
-          <end>
-            <offset>1093</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>PATHS
+</value>
+              <start>
+                <offset>1088</offset>
+              </start>
+              <end>
+                <offset>1093</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CYGWIN_INSTALL_PATH}/bin
-</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CYGWIN_INSTALL_PATH}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CYGWIN_INSTALL_PATH</value>
+                  <start>
+                    <offset>1098</offset>
+                  </start>
+                  <end>
+                    <offset>1116</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1096</offset>
               </start>
@@ -520,13 +578,19 @@
                 <offset>1117</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/bin
+</value>
+              <start>
+                <offset>1117</offset>
+              </start>
+              <end>
+                <offset>1122</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
-          <start>
-            <offset>1096</offset>
-          </start>
-          <end>
-            <offset>1122</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -541,13 +605,19 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>GNUPLOT_EXECUTABLE</argument>
-          <start>
-            <offset>1130</offset>
-          </start>
-          <end>
-            <offset>1147</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>GNUPLOT_EXECUTABLE</value>
+              <start>
+                <offset>1130</offset>
+              </start>
+              <end>
+                <offset>1147</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -562,19 +632,34 @@
       <commandName>execute_process</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>COMMAND</argument>
-          <start>
-            <offset>1170</offset>
-          </start>
-          <end>
-            <offset>1176</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>COMMAND</value>
+              <start>
+                <offset>1170</offset>
+              </start>
+              <end>
+                <offset>1176</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${GNUPLOT_EXECUTABLE}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${GNUPLOT_EXECUTABLE}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>GNUPLOT_EXECUTABLE</value>
+                  <start>
+                    <offset>1181</offset>
+                  </start>
+                  <end>
+                    <offset>1198</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1179</offset>
               </start>
@@ -591,52 +676,82 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>--version
-</argument>
-          <start>
-            <offset>1202</offset>
-          </start>
-          <end>
-            <offset>1211</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>--version
+</value>
+              <start>
+                <offset>1202</offset>
+              </start>
+              <end>
+                <offset>1211</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>OUTPUT_VARIABLE</argument>
-          <start>
-            <offset>1230</offset>
-          </start>
-          <end>
-            <offset>1244</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>OUTPUT_VARIABLE</value>
+              <start>
+                <offset>1230</offset>
+              </start>
+              <end>
+                <offset>1244</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>GNUPLOT_OUTPUT_VARIABLE
-</argument>
-          <start>
-            <offset>1246</offset>
-          </start>
-          <end>
-            <offset>1269</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>GNUPLOT_OUTPUT_VARIABLE
+</value>
+              <start>
+                <offset>1246</offset>
+              </start>
+              <end>
+                <offset>1269</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>ERROR_QUIET
-</argument>
-          <start>
-            <offset>1288</offset>
-          </start>
-          <end>
-            <offset>1299</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>ERROR_QUIET
+</value>
+              <start>
+                <offset>1288</offset>
+              </start>
+              <end>
+                <offset>1299</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>OUTPUT_STRIP_TRAILING_WHITESPACE</argument>
-          <start>
-            <offset>1318</offset>
-          </start>
-          <end>
-            <offset>1349</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>OUTPUT_STRIP_TRAILING_WHITESPACE</value>
+              <start>
+                <offset>1318</offset>
+              </start>
+              <end>
+                <offset>1349</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -651,25 +766,47 @@
       <commandName>string</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>REGEX</argument>
-          <start>
-            <offset>1364</offset>
-          </start>
-          <end>
-            <offset>1368</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>REGEX</value>
+              <start>
+                <offset>1364</offset>
+              </start>
+              <end>
+                <offset>1368</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>REPLACE</argument>
-          <start>
-            <offset>1370</offset>
-          </start>
-          <end>
-            <offset>1376</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>REPLACE</value>
+              <start>
+                <offset>1370</offset>
+              </start>
+              <end>
+                <offset>1376</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>^gnuplot ([0-9\\.]+)( patchlevel )?</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>^gnuplot ([0-9\\.]+)( patchlevel )?</value>
+              <start>
+                <offset>1379</offset>
+              </start>
+              <end>
+                <offset>1413</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>1378</offset>
           </start>
@@ -678,7 +815,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>\\1.</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>\\1.</value>
+              <start>
+                <offset>1417</offset>
+              </start>
+              <end>
+                <offset>1420</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>1416</offset>
           </start>
@@ -687,19 +834,34 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>GNUPLOT_VERSION_STRING</argument>
-          <start>
-            <offset>1423</offset>
-          </start>
-          <end>
-            <offset>1444</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>GNUPLOT_VERSION_STRING</value>
+              <start>
+                <offset>1423</offset>
+              </start>
+              <end>
+                <offset>1444</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${GNUPLOT_OUTPUT_VARIABLE}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${GNUPLOT_OUTPUT_VARIABLE}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>GNUPLOT_OUTPUT_VARIABLE</value>
+                  <start>
+                    <offset>1449</offset>
+                  </start>
+                  <end>
+                    <offset>1471</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1447</offset>
               </start>
@@ -728,25 +890,47 @@
       <commandName>string</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>REGEX</argument>
-          <start>
-            <offset>1487</offset>
-          </start>
-          <end>
-            <offset>1491</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>REGEX</value>
+              <start>
+                <offset>1487</offset>
+              </start>
+              <end>
+                <offset>1491</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>REPLACE</argument>
-          <start>
-            <offset>1493</offset>
-          </start>
-          <end>
-            <offset>1499</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>REPLACE</value>
+              <start>
+                <offset>1493</offset>
+              </start>
+              <end>
+                <offset>1499</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>\\.$</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>\\.$</value>
+              <start>
+                <offset>1502</offset>
+              </start>
+              <end>
+                <offset>1505</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>1501</offset>
           </start>
@@ -755,7 +939,7 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument></argument>
+          <children/>
           <start>
             <offset>1508</offset>
           </start>
@@ -764,19 +948,34 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>GNUPLOT_VERSION_STRING</argument>
-          <start>
-            <offset>1511</offset>
-          </start>
-          <end>
-            <offset>1532</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>GNUPLOT_VERSION_STRING</value>
+              <start>
+                <offset>1511</offset>
+              </start>
+              <end>
+                <offset>1532</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${GNUPLOT_VERSION_STRING}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${GNUPLOT_VERSION_STRING}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>GNUPLOT_VERSION_STRING</value>
+                  <start>
+                    <offset>1537</offset>
+                  </start>
+                  <end>
+                    <offset>1558</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1535</offset>
               </start>
@@ -805,13 +1004,19 @@
       <commandName>unset</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>GNUPLOT_OUTPUT_VARIABLE</argument>
-          <start>
-            <offset>1573</offset>
-          </start>
-          <end>
-            <offset>1595</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>GNUPLOT_OUTPUT_VARIABLE</value>
+              <start>
+                <offset>1573</offset>
+              </start>
+              <end>
+                <offset>1595</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -851,19 +1056,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>GNUPLOT</argument>
-          <start>
-            <offset>1631</offset>
-          </start>
-          <end>
-            <offset>1637</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>GNUPLOT</value>
+              <start>
+                <offset>1631</offset>
+              </start>
+              <end>
+                <offset>1637</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${GNUPLOT_EXECUTABLE}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${GNUPLOT_EXECUTABLE}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>GNUPLOT_EXECUTABLE</value>
+                  <start>
+                    <offset>1641</offset>
+                  </start>
+                  <end>
+                    <offset>1658</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1639</offset>
               </start>
@@ -872,12 +1092,8 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>1639</offset>
-          </start>
-          <end>
-            <offset>1659</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -920,10 +1136,19 @@
       <commandName>include</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_CURRENT_LIST_DIR}/FindPackageHandleStandardArgs.cmake</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_CURRENT_LIST_DIR}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_CURRENT_LIST_DIR</value>
+                  <start>
+                    <offset>1782</offset>
+                  </start>
+                  <end>
+                    <offset>1803</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1780</offset>
               </start>
@@ -931,13 +1156,18 @@
                 <offset>1804</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/FindPackageHandleStandardArgs.cmake</value>
+              <start>
+                <offset>1804</offset>
+              </start>
+              <end>
+                <offset>1840</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
-          <start>
-            <offset>1780</offset>
-          </start>
-          <end>
-            <offset>1840</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -952,51 +1182,81 @@
       <commandName>FIND_PACKAGE_HANDLE_STANDARD_ARGS</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>Gnuplot
-</argument>
-          <start>
-            <offset>1877</offset>
-          </start>
-          <end>
-            <offset>1884</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>Gnuplot
+</value>
+              <start>
+                <offset>1877</offset>
+              </start>
+              <end>
+                <offset>1884</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>REQUIRED_VARS</argument>
-          <start>
-            <offset>1919</offset>
-          </start>
-          <end>
-            <offset>1931</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>REQUIRED_VARS</value>
+              <start>
+                <offset>1919</offset>
+              </start>
+              <end>
+                <offset>1931</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>GNUPLOT_EXECUTABLE
-</argument>
-          <start>
-            <offset>1933</offset>
-          </start>
-          <end>
-            <offset>1951</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>GNUPLOT_EXECUTABLE
+</value>
+              <start>
+                <offset>1933</offset>
+              </start>
+              <end>
+                <offset>1951</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>VERSION_VAR</argument>
-          <start>
-            <offset>1986</offset>
-          </start>
-          <end>
-            <offset>1996</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>VERSION_VAR</value>
+              <start>
+                <offset>1986</offset>
+              </start>
+              <end>
+                <offset>1996</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>GNUPLOT_VERSION_STRING</argument>
-          <start>
-            <offset>1998</offset>
-          </start>
-          <end>
-            <offset>2019</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>GNUPLOT_VERSION_STRING</value>
+              <start>
+                <offset>1998</offset>
+              </start>
+              <end>
+                <offset>2019</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -1011,13 +1271,19 @@
       <commandName>mark_as_advanced</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>GNUPLOT_EXECUTABLE</argument>
-          <start>
-            <offset>2041</offset>
-          </start>
-          <end>
-            <offset>2058</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>GNUPLOT_EXECUTABLE</value>
+              <start>
+                <offset>2041</offset>
+              </start>
+              <end>
+                <offset>2058</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>

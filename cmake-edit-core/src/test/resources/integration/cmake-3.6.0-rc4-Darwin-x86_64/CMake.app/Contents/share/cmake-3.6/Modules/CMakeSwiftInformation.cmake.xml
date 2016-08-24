@@ -168,22 +168,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_Swift_OUTPUT_EXTENSION</argument>
-          <start>
-            <offset>613</offset>
-          </start>
-          <end>
-            <offset>640</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_Swift_OUTPUT_EXTENSION</value>
+              <start>
+                <offset>613</offset>
+              </start>
+              <end>
+                <offset>640</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>.o</argument>
-          <start>
-            <offset>642</offset>
-          </start>
-          <end>
-            <offset>643</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>.o</value>
+              <start>
+                <offset>642</offset>
+              </start>
+              <end>
+                <offset>643</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -212,13 +224,19 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_Swift_COMPILER_ID</argument>
-          <start>
-            <offset>688</offset>
-          </start>
-          <end>
-            <offset>710</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_Swift_COMPILER_ID</value>
+              <start>
+                <offset>688</offset>
+              </start>
+              <end>
+                <offset>710</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -233,10 +251,28 @@
       <commandName>include</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>Compiler/${CMAKE_Swift_COMPILER_ID}-Swift</argument>
           <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>Compiler/</value>
+              <start>
+                <offset>723</offset>
+              </start>
+              <end>
+                <offset>731</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_Swift_COMPILER_ID}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_Swift_COMPILER_ID</value>
+                  <start>
+                    <offset>734</offset>
+                  </start>
+                  <end>
+                    <offset>756</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>732</offset>
               </start>
@@ -244,22 +280,33 @@
                 <offset>757</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>-Swift</value>
+              <start>
+                <offset>757</offset>
+              </start>
+              <end>
+                <offset>763</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
-          <start>
-            <offset>723</offset>
-          </start>
-          <end>
-            <offset>763</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode[2]/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>OPTIONAL</argument>
-          <start>
-            <offset>765</offset>
-          </start>
-          <end>
-            <offset>772</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>OPTIONAL</value>
+              <start>
+                <offset>765</offset>
+              </start>
+              <end>
+                <offset>772</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -299,13 +346,19 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_Swift_COMPILER_ID</argument>
-          <start>
-            <offset>834</offset>
-          </start>
-          <end>
-            <offset>856</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_Swift_COMPILER_ID</value>
+              <start>
+                <offset>834</offset>
+              </start>
+              <end>
+                <offset>856</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -334,13 +387,19 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_SYSTEM_PROCESSOR</argument>
-          <start>
-            <offset>936</offset>
-          </start>
-          <end>
-            <offset>957</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_SYSTEM_PROCESSOR</value>
+              <start>
+                <offset>936</offset>
+              </start>
+              <end>
+                <offset>957</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -355,10 +414,28 @@
       <commandName>include</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>Platform/${CMAKE_SYSTEM_NAME}-${CMAKE_Swift_COMPILER_ID}-Swift-${CMAKE_SYSTEM_PROCESSOR}</argument>
           <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>Platform/</value>
+              <start>
+                <offset>972</offset>
+              </start>
+              <end>
+                <offset>980</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_SYSTEM_NAME}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_SYSTEM_NAME</value>
+                  <start>
+                    <offset>983</offset>
+                  </start>
+                  <end>
+                    <offset>999</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>981</offset>
               </start>
@@ -366,8 +443,27 @@
                 <offset>1000</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>-</value>
+              <start>
+                <offset>1000</offset>
+              </start>
+              <end>
+                <offset>1001</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_Swift_COMPILER_ID}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_Swift_COMPILER_ID</value>
+                  <start>
+                    <offset>1004</offset>
+                  </start>
+                  <end>
+                    <offset>1026</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1002</offset>
               </start>
@@ -375,8 +471,27 @@
                 <offset>1027</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>-Swift-</value>
+              <start>
+                <offset>1027</offset>
+              </start>
+              <end>
+                <offset>1034</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_SYSTEM_PROCESSOR}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_SYSTEM_PROCESSOR</value>
+                  <start>
+                    <offset>1037</offset>
+                  </start>
+                  <end>
+                    <offset>1058</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1035</offset>
               </start>
@@ -385,21 +500,23 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>972</offset>
-          </start>
-          <end>
-            <offset>1059</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode[3]/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>OPTIONAL</argument>
-          <start>
-            <offset>1061</offset>
-          </start>
-          <end>
-            <offset>1068</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>OPTIONAL</value>
+              <start>
+                <offset>1061</offset>
+              </start>
+              <end>
+                <offset>1068</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -425,10 +542,28 @@
       <commandName>include</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>Platform/${CMAKE_SYSTEM_NAME}-${CMAKE_Swift_COMPILER_ID}-Swift</argument>
           <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>Platform/</value>
+              <start>
+                <offset>1091</offset>
+              </start>
+              <end>
+                <offset>1099</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_SYSTEM_NAME}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_SYSTEM_NAME</value>
+                  <start>
+                    <offset>1102</offset>
+                  </start>
+                  <end>
+                    <offset>1118</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1100</offset>
               </start>
@@ -436,8 +571,27 @@
                 <offset>1119</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>-</value>
+              <start>
+                <offset>1119</offset>
+              </start>
+              <end>
+                <offset>1120</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_Swift_COMPILER_ID}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_Swift_COMPILER_ID</value>
+                  <start>
+                    <offset>1123</offset>
+                  </start>
+                  <end>
+                    <offset>1145</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1121</offset>
               </start>
@@ -445,22 +599,33 @@
                 <offset>1146</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>-Swift</value>
+              <start>
+                <offset>1146</offset>
+              </start>
+              <end>
+                <offset>1152</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
-          <start>
-            <offset>1091</offset>
-          </start>
-          <end>
-            <offset>1152</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode[3]/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>OPTIONAL</argument>
-          <start>
-            <offset>1154</offset>
-          </start>
-          <end>
-            <offset>1161</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>OPTIONAL</value>
+              <start>
+                <offset>1154</offset>
+              </start>
+              <end>
+                <offset>1161</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -528,22 +693,34 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>NOT</argument>
-          <start>
-            <offset>1338</offset>
-          </start>
-          <end>
-            <offset>1340</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>NOT</value>
+              <start>
+                <offset>1338</offset>
+              </start>
+              <end>
+                <offset>1340</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_MODULE_EXISTS</argument>
-          <start>
-            <offset>1342</offset>
-          </start>
-          <end>
-            <offset>1360</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_MODULE_EXISTS</value>
+              <start>
+                <offset>1342</offset>
+              </start>
+              <end>
+                <offset>1360</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -558,19 +735,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_SHARED_MODULE_Swift_FLAGS</argument>
-          <start>
-            <offset>1369</offset>
-          </start>
-          <end>
-            <offset>1399</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_SHARED_MODULE_Swift_FLAGS</value>
+              <start>
+                <offset>1369</offset>
+              </start>
+              <end>
+                <offset>1399</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_SHARED_LIBRARY_Swift_FLAGS}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_SHARED_LIBRARY_Swift_FLAGS}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_SHARED_LIBRARY_Swift_FLAGS</value>
+                  <start>
+                    <offset>1403</offset>
+                  </start>
+                  <end>
+                    <offset>1434</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1401</offset>
               </start>
@@ -579,12 +771,8 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>1401</offset>
-          </start>
-          <end>
-            <offset>1435</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -599,19 +787,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_SHARED_MODULE_CREATE_Swift_FLAGS</argument>
-          <start>
-            <offset>1444</offset>
-          </start>
-          <end>
-            <offset>1481</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_SHARED_MODULE_CREATE_Swift_FLAGS</value>
+              <start>
+                <offset>1444</offset>
+              </start>
+              <end>
+                <offset>1481</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_SHARED_LIBRARY_CREATE_Swift_FLAGS}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_SHARED_LIBRARY_CREATE_Swift_FLAGS}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_SHARED_LIBRARY_CREATE_Swift_FLAGS</value>
+                  <start>
+                    <offset>1485</offset>
+                  </start>
+                  <end>
+                    <offset>1523</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1483</offset>
               </start>
@@ -620,12 +823,8 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>1483</offset>
-          </start>
-          <end>
-            <offset>1524</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -651,13 +850,19 @@
       <commandName>include</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMakeCommonLanguageInclude</argument>
-          <start>
-            <offset>1544</offset>
-          </start>
-          <end>
-            <offset>1569</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMakeCommonLanguageInclude</value>
+              <start>
+                <offset>1544</offset>
+              </start>
+              <end>
+                <offset>1569</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -672,22 +877,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_Swift_INFORMATION_LOADED</argument>
-          <start>
-            <offset>1577</offset>
-          </start>
-          <end>
-            <offset>1606</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_Swift_INFORMATION_LOADED</value>
+              <start>
+                <offset>1577</offset>
+              </start>
+              <end>
+                <offset>1606</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>1</argument>
-          <start>
-            <offset>1608</offset>
-          </start>
-          <end>
-            <offset>1608</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>1</value>
+              <start>
+                <offset>1608</offset>
+              </start>
+              <end>
+                <offset>1608</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>

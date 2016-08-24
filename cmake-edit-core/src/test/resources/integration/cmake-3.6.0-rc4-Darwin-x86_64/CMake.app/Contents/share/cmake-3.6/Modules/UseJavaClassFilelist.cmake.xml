@@ -312,13 +312,19 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_JAVA_CLASS_OUTPUT_PATH</argument>
-          <start>
-            <offset>863</offset>
-          </start>
-          <end>
-            <offset>890</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_JAVA_CLASS_OUTPUT_PATH</value>
+              <start>
+                <offset>863</offset>
+              </start>
+              <end>
+                <offset>890</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -333,19 +339,34 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>EXISTS</argument>
-          <start>
-            <offset>901</offset>
-          </start>
-          <end>
-            <offset>906</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>EXISTS</value>
+              <start>
+                <offset>901</offset>
+              </start>
+              <end>
+                <offset>906</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_JAVA_CLASS_OUTPUT_PATH}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_JAVA_CLASS_OUTPUT_PATH}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_JAVA_CLASS_OUTPUT_PATH</value>
+                  <start>
+                    <offset>911</offset>
+                  </start>
+                  <end>
+                    <offset>938</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>909</offset>
               </start>
@@ -374,13 +395,19 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>_JAVA_GLOBBED_FILES</argument>
-          <start>
-            <offset>956</offset>
-          </start>
-          <end>
-            <offset>974</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_JAVA_GLOBBED_FILES</value>
+              <start>
+                <offset>956</offset>
+              </start>
+              <end>
+                <offset>974</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -395,13 +422,19 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_JAR_CLASSES_PREFIX</argument>
-          <start>
-            <offset>989</offset>
-          </start>
-          <end>
-            <offset>1012</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_JAR_CLASSES_PREFIX</value>
+              <start>
+                <offset>989</offset>
+              </start>
+              <end>
+                <offset>1012</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -416,19 +449,34 @@
       <commandName>foreach</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>JAR_CLASS_PREFIX</argument>
-          <start>
-            <offset>1035</offset>
-          </start>
-          <end>
-            <offset>1050</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>JAR_CLASS_PREFIX</value>
+              <start>
+                <offset>1035</offset>
+              </start>
+              <end>
+                <offset>1050</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_JAR_CLASSES_PREFIX}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_JAR_CLASSES_PREFIX}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_JAR_CLASSES_PREFIX</value>
+                  <start>
+                    <offset>1054</offset>
+                  </start>
+                  <end>
+                    <offset>1077</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1052</offset>
               </start>
@@ -437,12 +485,8 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>1052</offset>
-          </start>
-          <end>
-            <offset>1078</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -457,19 +501,43 @@
       <commandName>message</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>STATUS</argument>
-          <start>
-            <offset>1105</offset>
-          </start>
-          <end>
-            <offset>1110</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>STATUS</value>
+              <start>
+                <offset>1105</offset>
+              </start>
+              <end>
+                <offset>1110</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>JAR_CLASS_PREFIX: ${JAR_CLASS_PREFIX}</argument>
           <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>JAR_CLASS_PREFIX: </value>
+              <start>
+                <offset>1113</offset>
+              </start>
+              <end>
+                <offset>1130</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${JAR_CLASS_PREFIX}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>JAR_CLASS_PREFIX</value>
+                  <start>
+                    <offset>1133</offset>
+                  </start>
+                  <end>
+                    <offset>1148</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1131</offset>
               </start>
@@ -498,28 +566,49 @@
       <commandName>file</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>GLOB_RECURSE</argument>
-          <start>
-            <offset>1175</offset>
-          </start>
-          <end>
-            <offset>1186</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>GLOB_RECURSE</value>
+              <start>
+                <offset>1175</offset>
+              </start>
+              <end>
+                <offset>1186</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>_JAVA_GLOBBED_TMP_FILES</argument>
-          <start>
-            <offset>1188</offset>
-          </start>
-          <end>
-            <offset>1210</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_JAVA_GLOBBED_TMP_FILES</value>
+              <start>
+                <offset>1188</offset>
+              </start>
+              <end>
+                <offset>1210</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_JAVA_CLASS_OUTPUT_PATH}/${JAR_CLASS_PREFIX}/*.class</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_JAVA_CLASS_OUTPUT_PATH}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_JAVA_CLASS_OUTPUT_PATH</value>
+                  <start>
+                    <offset>1215</offset>
+                  </start>
+                  <end>
+                    <offset>1242</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1213</offset>
               </start>
@@ -527,8 +616,27 @@
                 <offset>1243</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/</value>
+              <start>
+                <offset>1243</offset>
+              </start>
+              <end>
+                <offset>1244</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${JAR_CLASS_PREFIX}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>JAR_CLASS_PREFIX</value>
+                  <start>
+                    <offset>1247</offset>
+                  </start>
+                  <end>
+                    <offset>1262</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1245</offset>
               </start>
@@ -536,6 +644,15 @@
                 <offset>1263</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/*.class</value>
+              <start>
+                <offset>1263</offset>
+              </start>
+              <end>
+                <offset>1271</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
           <start>
             <offset>1212</offset>
@@ -557,13 +674,19 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>_JAVA_GLOBBED_TMP_FILES</argument>
-          <start>
-            <offset>1295</offset>
-          </start>
-          <end>
-            <offset>1317</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_JAVA_GLOBBED_TMP_FILES</value>
+              <start>
+                <offset>1295</offset>
+              </start>
+              <end>
+                <offset>1317</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -578,28 +701,49 @@
       <commandName>list</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>APPEND</argument>
-          <start>
-            <offset>1345</offset>
-          </start>
-          <end>
-            <offset>1350</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>APPEND</value>
+              <start>
+                <offset>1345</offset>
+              </start>
+              <end>
+                <offset>1350</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>_JAVA_GLOBBED_FILES</argument>
-          <start>
-            <offset>1352</offset>
-          </start>
-          <end>
-            <offset>1370</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_JAVA_GLOBBED_FILES</value>
+              <start>
+                <offset>1352</offset>
+              </start>
+              <end>
+                <offset>1370</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${_JAVA_GLOBBED_TMP_FILES}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${_JAVA_GLOBBED_TMP_FILES}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>_JAVA_GLOBBED_TMP_FILES</value>
+                  <start>
+                    <offset>1374</offset>
+                  </start>
+                  <end>
+                    <offset>1396</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1372</offset>
               </start>
@@ -608,12 +752,8 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>1372</offset>
-          </start>
-          <end>
-            <offset>1397</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -661,28 +801,49 @@
       <commandName>file</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>GLOB_RECURSE</argument>
-          <start>
-            <offset>1482</offset>
-          </start>
-          <end>
-            <offset>1493</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>GLOB_RECURSE</value>
+              <start>
+                <offset>1482</offset>
+              </start>
+              <end>
+                <offset>1493</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>_JAVA_GLOBBED_FILES</argument>
-          <start>
-            <offset>1495</offset>
-          </start>
-          <end>
-            <offset>1513</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_JAVA_GLOBBED_FILES</value>
+              <start>
+                <offset>1495</offset>
+              </start>
+              <end>
+                <offset>1513</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_JAVA_CLASS_OUTPUT_PATH}/*.class</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_JAVA_CLASS_OUTPUT_PATH}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_JAVA_CLASS_OUTPUT_PATH</value>
+                  <start>
+                    <offset>1518</offset>
+                  </start>
+                  <end>
+                    <offset>1545</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1516</offset>
               </start>
@@ -690,6 +851,15 @@
                 <offset>1546</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/*.class</value>
+              <start>
+                <offset>1546</offset>
+              </start>
+              <end>
+                <offset>1554</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
           <start>
             <offset>1515</offset>
@@ -722,13 +892,19 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>_JAVA_CLASS_FILES</argument>
-          <start>
-            <offset>1588</offset>
-          </start>
-          <end>
-            <offset>1604</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_JAVA_CLASS_FILES</value>
+              <start>
+                <offset>1588</offset>
+              </start>
+              <end>
+                <offset>1604</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -757,19 +933,34 @@
       <commandName>foreach</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>_JAVA_GLOBBED_FILE</argument>
-          <start>
-            <offset>1692</offset>
-          </start>
-          <end>
-            <offset>1709</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_JAVA_GLOBBED_FILE</value>
+              <start>
+                <offset>1692</offset>
+              </start>
+              <end>
+                <offset>1709</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${_JAVA_GLOBBED_FILES}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${_JAVA_GLOBBED_FILES}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>_JAVA_GLOBBED_FILES</value>
+                  <start>
+                    <offset>1713</offset>
+                  </start>
+                  <end>
+                    <offset>1731</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1711</offset>
               </start>
@@ -778,12 +969,8 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>1711</offset>
-          </start>
-          <end>
-            <offset>1732</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -798,28 +985,49 @@
       <commandName>file</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>RELATIVE_PATH</argument>
-          <start>
-            <offset>1752</offset>
-          </start>
-          <end>
-            <offset>1764</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>RELATIVE_PATH</value>
+              <start>
+                <offset>1752</offset>
+              </start>
+              <end>
+                <offset>1764</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>_JAVA_CLASS_FILE</argument>
-          <start>
-            <offset>1766</offset>
-          </start>
-          <end>
-            <offset>1781</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_JAVA_CLASS_FILE</value>
+              <start>
+                <offset>1766</offset>
+              </start>
+              <end>
+                <offset>1781</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_JAVA_CLASS_OUTPUT_PATH}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_JAVA_CLASS_OUTPUT_PATH}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_JAVA_CLASS_OUTPUT_PATH</value>
+                  <start>
+                    <offset>1785</offset>
+                  </start>
+                  <end>
+                    <offset>1812</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1783</offset>
               </start>
@@ -828,18 +1036,23 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>1783</offset>
-          </start>
-          <end>
-            <offset>1813</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${_JAVA_GLOBBED_FILE}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${_JAVA_GLOBBED_FILE}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>_JAVA_GLOBBED_FILE</value>
+                  <start>
+                    <offset>1817</offset>
+                  </start>
+                  <end>
+                    <offset>1834</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1815</offset>
               </start>
@@ -848,12 +1061,8 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>1815</offset>
-          </start>
-          <end>
-            <offset>1835</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -868,20 +1077,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>_JAVA_CLASS_FILES</argument>
-          <start>
-            <offset>1854</offset>
-          </start>
-          <end>
-            <offset>1870</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_JAVA_CLASS_FILES</value>
+              <start>
+                <offset>1854</offset>
+              </start>
+              <end>
+                <offset>1870</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${_JAVA_CLASS_FILES}${_JAVA_CLASS_FILE}\
-</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${_JAVA_CLASS_FILES}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>_JAVA_CLASS_FILES</value>
+                  <start>
+                    <offset>1874</offset>
+                  </start>
+                  <end>
+                    <offset>1890</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1872</offset>
               </start>
@@ -890,7 +1113,17 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${_JAVA_CLASS_FILE}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>_JAVA_CLASS_FILE</value>
+                  <start>
+                    <offset>1894</offset>
+                  </start>
+                  <end>
+                    <offset>1909</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1892</offset>
               </start>
@@ -898,13 +1131,19 @@
                 <offset>1910</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>\
+</value>
+              <start>
+                <offset>1910</offset>
+              </start>
+              <end>
+                <offset>1912</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
-          <start>
-            <offset>1872</offset>
-          </start>
-          <end>
-            <offset>1912</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -944,19 +1183,34 @@
       <commandName>file</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>WRITE</argument>
-          <start>
-            <offset>1974</offset>
-          </start>
-          <end>
-            <offset>1978</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>WRITE</value>
+              <start>
+                <offset>1974</offset>
+              </start>
+              <end>
+                <offset>1978</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_JAVA_CLASS_OUTPUT_PATH}/java_class_filelist</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_JAVA_CLASS_OUTPUT_PATH}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_JAVA_CLASS_OUTPUT_PATH</value>
+                  <start>
+                    <offset>1982</offset>
+                  </start>
+                  <end>
+                    <offset>2009</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1980</offset>
               </start>
@@ -964,19 +1218,33 @@
                 <offset>2010</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/java_class_filelist</value>
+              <start>
+                <offset>2010</offset>
+              </start>
+              <end>
+                <offset>2030</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
-          <start>
-            <offset>1980</offset>
-          </start>
-          <end>
-            <offset>2030</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${_JAVA_CLASS_FILES}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${_JAVA_CLASS_FILES}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>_JAVA_CLASS_FILES</value>
+                  <start>
+                    <offset>2034</offset>
+                  </start>
+                  <end>
+                    <offset>2050</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2032</offset>
               </start>
@@ -985,12 +1253,8 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>2032</offset>
-          </start>
-          <end>
-            <offset>2051</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -1016,16 +1280,32 @@
       <commandName>message</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>SEND_ERROR</argument>
-          <start>
-            <offset>2083</offset>
-          </start>
-          <end>
-            <offset>2092</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>SEND_ERROR</value>
+              <start>
+                <offset>2083</offset>
+              </start>
+              <end>
+                <offset>2092</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>FATAL: Java class output path doesn&apos;t exist</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>FATAL: Java class output path doesn&apos;t exist</value>
+              <start>
+                <offset>2095</offset>
+              </start>
+              <end>
+                <offset>2137</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>2094</offset>
           </start>
@@ -1068,16 +1348,32 @@
       <commandName>message</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>SEND_ERROR</argument>
-          <start>
-            <offset>2174</offset>
-          </start>
-          <end>
-            <offset>2183</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>SEND_ERROR</value>
+              <start>
+                <offset>2174</offset>
+              </start>
+              <end>
+                <offset>2183</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>FATAL: Can&apos;t find CMAKE_JAVA_CLASS_OUTPUT_PATH</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>FATAL: Can&apos;t find CMAKE_JAVA_CLASS_OUTPUT_PATH</value>
+              <start>
+                <offset>2186</offset>
+              </start>
+              <end>
+                <offset>2231</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>2185</offset>
           </start>

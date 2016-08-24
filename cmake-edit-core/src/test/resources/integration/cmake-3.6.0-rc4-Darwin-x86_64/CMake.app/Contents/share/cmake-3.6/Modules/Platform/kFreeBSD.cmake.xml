@@ -18,13 +18,19 @@
       <commandName>include</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>Platform/Linux</argument>
-          <start>
-            <offset>42</offset>
-          </start>
-          <end>
-            <offset>55</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>Platform/Linux</value>
+              <start>
+                <offset>42</offset>
+              </start>
+              <end>
+                <offset>55</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -39,16 +45,32 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_LIBRARY_ARCHITECTURE_REGEX</argument>
-          <start>
-            <offset>63</offset>
-          </start>
-          <end>
-            <offset>94</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_LIBRARY_ARCHITECTURE_REGEX</value>
+              <start>
+                <offset>63</offset>
+              </start>
+              <end>
+                <offset>94</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>[a-z0-9_]+(-[a-z0-9_]+)?-kfreebsd-gnu[a-z0-9_]*</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>[a-z0-9_]+(-[a-z0-9_]+)?-kfreebsd-gnu[a-z0-9_]*</value>
+              <start>
+                <offset>97</offset>
+              </start>
+              <end>
+                <offset>143</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>96</offset>
           </start>

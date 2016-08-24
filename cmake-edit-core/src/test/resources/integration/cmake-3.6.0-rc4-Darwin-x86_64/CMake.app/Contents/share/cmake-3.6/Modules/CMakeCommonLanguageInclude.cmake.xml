@@ -210,20 +210,44 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>NOT</argument>
-          <start>
-            <offset>800</offset>
-          </start>
-          <end>
-            <offset>802</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>NOT</value>
+              <start>
+                <offset>800</offset>
+              </start>
+              <end>
+                <offset>802</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>x$ENV{LDFLAGS}</argument>
           <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>x</value>
+              <start>
+                <offset>805</offset>
+              </start>
+              <end>
+                <offset>805</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
             <ru.urururu.cmakeedit.core.ExpressionNode>
               <key>ENV</key>
-              <expression>$ENV{LDFLAGS}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>LDFLAGS</value>
+                  <start>
+                    <offset>811</offset>
+                  </start>
+                  <end>
+                    <offset>817</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>806</offset>
               </start>
@@ -240,16 +264,32 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>STREQUAL</argument>
-          <start>
-            <offset>821</offset>
-          </start>
-          <end>
-            <offset>828</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>STREQUAL</value>
+              <start>
+                <offset>821</offset>
+              </start>
+              <end>
+                <offset>828</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>x</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>x</value>
+              <start>
+                <offset>831</offset>
+              </start>
+              <end>
+                <offset>831</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>830</offset>
           </start>
@@ -270,19 +310,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_EXE_LINKER_FLAGS_INIT</argument>
-          <start>
-            <offset>842</offset>
-          </start>
-          <end>
-            <offset>868</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_EXE_LINKER_FLAGS_INIT</value>
+              <start>
+                <offset>842</offset>
+              </start>
+              <end>
+                <offset>868</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_EXE_LINKER_FLAGS_INIT} $ENV{LDFLAGS}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_EXE_LINKER_FLAGS_INIT}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_EXE_LINKER_FLAGS_INIT</value>
+                  <start>
+                    <offset>873</offset>
+                  </start>
+                  <end>
+                    <offset>899</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>871</offset>
               </start>
@@ -290,9 +345,28 @@
                 <offset>900</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value> </value>
+              <start>
+                <offset>900</offset>
+              </start>
+              <end>
+                <offset>901</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
             <ru.urururu.cmakeedit.core.ExpressionNode>
               <key>ENV</key>
-              <expression>$ENV{LDFLAGS}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>LDFLAGS</value>
+                  <start>
+                    <offset>907</offset>
+                  </start>
+                  <end>
+                    <offset>913</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>902</offset>
               </start>
@@ -321,19 +395,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_SHARED_LINKER_FLAGS_INIT</argument>
-          <start>
-            <offset>925</offset>
-          </start>
-          <end>
-            <offset>954</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_SHARED_LINKER_FLAGS_INIT</value>
+              <start>
+                <offset>925</offset>
+              </start>
+              <end>
+                <offset>954</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_SHARED_LINKER_FLAGS_INIT} $ENV{LDFLAGS}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_SHARED_LINKER_FLAGS_INIT}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_SHARED_LINKER_FLAGS_INIT</value>
+                  <start>
+                    <offset>959</offset>
+                  </start>
+                  <end>
+                    <offset>988</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>957</offset>
               </start>
@@ -341,9 +430,28 @@
                 <offset>989</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value> </value>
+              <start>
+                <offset>989</offset>
+              </start>
+              <end>
+                <offset>990</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
             <ru.urururu.cmakeedit.core.ExpressionNode>
               <key>ENV</key>
-              <expression>$ENV{LDFLAGS}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>LDFLAGS</value>
+                  <start>
+                    <offset>996</offset>
+                  </start>
+                  <end>
+                    <offset>1002</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>991</offset>
               </start>
@@ -372,19 +480,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_MODULE_LINKER_FLAGS_INIT</argument>
-          <start>
-            <offset>1014</offset>
-          </start>
-          <end>
-            <offset>1043</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_MODULE_LINKER_FLAGS_INIT</value>
+              <start>
+                <offset>1014</offset>
+              </start>
+              <end>
+                <offset>1043</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_MODULE_LINKER_FLAGS_INIT} $ENV{LDFLAGS}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_MODULE_LINKER_FLAGS_INIT}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_MODULE_LINKER_FLAGS_INIT</value>
+                  <start>
+                    <offset>1048</offset>
+                  </start>
+                  <end>
+                    <offset>1077</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1046</offset>
               </start>
@@ -392,9 +515,28 @@
                 <offset>1078</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value> </value>
+              <start>
+                <offset>1078</offset>
+              </start>
+              <end>
+                <offset>1079</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
             <ru.urururu.cmakeedit.core.ExpressionNode>
               <key>ENV</key>
-              <expression>$ENV{LDFLAGS}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>LDFLAGS</value>
+                  <start>
+                    <offset>1085</offset>
+                  </start>
+                  <end>
+                    <offset>1091</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1080</offset>
               </start>
@@ -434,22 +576,34 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>NOT</argument>
-          <start>
-            <offset>1108</offset>
-          </start>
-          <end>
-            <offset>1110</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>NOT</value>
+              <start>
+                <offset>1108</offset>
+              </start>
+              <end>
+                <offset>1110</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_NOT_USING_CONFIG_FLAGS</argument>
-          <start>
-            <offset>1112</offset>
-          </start>
-          <end>
-            <offset>1139</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_NOT_USING_CONFIG_FLAGS</value>
+              <start>
+                <offset>1112</offset>
+              </start>
+              <end>
+                <offset>1139</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -478,22 +632,34 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>NOT</argument>
-          <start>
-            <offset>1176</offset>
-          </start>
-          <end>
-            <offset>1178</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>NOT</value>
+              <start>
+                <offset>1176</offset>
+              </start>
+              <end>
+                <offset>1178</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_NO_BUILD_TYPE</argument>
-          <start>
-            <offset>1180</offset>
-          </start>
-          <end>
-            <offset>1198</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_NO_BUILD_TYPE</value>
+              <start>
+                <offset>1180</offset>
+              </start>
+              <end>
+                <offset>1198</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -508,19 +674,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_BUILD_TYPE</argument>
-          <start>
-            <offset>1210</offset>
-          </start>
-          <end>
-            <offset>1225</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_BUILD_TYPE</value>
+              <start>
+                <offset>1210</offset>
+              </start>
+              <end>
+                <offset>1225</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_BUILD_TYPE_INIT}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_BUILD_TYPE_INIT}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_BUILD_TYPE_INIT</value>
+                  <start>
+                    <offset>1229</offset>
+                  </start>
+                  <end>
+                    <offset>1249</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1227</offset>
               </start>
@@ -529,34 +710,52 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>1227</offset>
-          </start>
-          <end>
-            <offset>1250</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CACHE</argument>
-          <start>
-            <offset>1252</offset>
-          </start>
-          <end>
-            <offset>1256</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CACHE</value>
+              <start>
+                <offset>1252</offset>
+              </start>
+              <end>
+                <offset>1256</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>STRING
-</argument>
-          <start>
-            <offset>1258</offset>
-          </start>
-          <end>
-            <offset>1264</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>STRING
+</value>
+              <start>
+                <offset>1258</offset>
+              </start>
+              <end>
+                <offset>1264</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>Choose the type of build, options are: None(CMAKE_CXX_FLAGS or CMAKE_C_FLAGS used) Debug Release RelWithDebInfo MinSizeRel.</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>Choose the type of build, options are: None(CMAKE_CXX_FLAGS or CMAKE_C_FLAGS used) Debug Release RelWithDebInfo MinSizeRel.</value>
+              <start>
+                <offset>1272</offset>
+              </start>
+              <end>
+                <offset>1394</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>1271</offset>
           </start>
@@ -588,19 +787,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_EXE_LINKER_FLAGS_DEBUG</argument>
-          <start>
-            <offset>1416</offset>
-          </start>
-          <end>
-            <offset>1443</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_EXE_LINKER_FLAGS_DEBUG</value>
+              <start>
+                <offset>1416</offset>
+              </start>
+              <end>
+                <offset>1443</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_EXE_LINKER_FLAGS_DEBUG_INIT}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_EXE_LINKER_FLAGS_DEBUG_INIT}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_EXE_LINKER_FLAGS_DEBUG_INIT</value>
+                  <start>
+                    <offset>1447</offset>
+                  </start>
+                  <end>
+                    <offset>1479</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1445</offset>
               </start>
@@ -609,34 +823,52 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>1445</offset>
-          </start>
-          <end>
-            <offset>1480</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CACHE</argument>
-          <start>
-            <offset>1482</offset>
-          </start>
-          <end>
-            <offset>1486</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CACHE</value>
+              <start>
+                <offset>1482</offset>
+              </start>
+              <end>
+                <offset>1486</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>STRING
-</argument>
-          <start>
-            <offset>1488</offset>
-          </start>
-          <end>
-            <offset>1494</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>STRING
+</value>
+              <start>
+                <offset>1488</offset>
+              </start>
+              <end>
+                <offset>1494</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>Flags used by the linker during debug builds.</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>Flags used by the linker during debug builds.</value>
+              <start>
+                <offset>1501</offset>
+              </start>
+              <end>
+                <offset>1545</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>1500</offset>
           </start>
@@ -657,19 +889,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_EXE_LINKER_FLAGS_MINSIZEREL</argument>
-          <start>
-            <offset>1557</offset>
-          </start>
-          <end>
-            <offset>1589</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_EXE_LINKER_FLAGS_MINSIZEREL</value>
+              <start>
+                <offset>1557</offset>
+              </start>
+              <end>
+                <offset>1589</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_EXE_LINKER_FLAGS_MINSIZEREL_INIT}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_EXE_LINKER_FLAGS_MINSIZEREL_INIT}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_EXE_LINKER_FLAGS_MINSIZEREL_INIT</value>
+                  <start>
+                    <offset>1593</offset>
+                  </start>
+                  <end>
+                    <offset>1630</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1591</offset>
               </start>
@@ -678,34 +925,52 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>1591</offset>
-          </start>
-          <end>
-            <offset>1631</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CACHE</argument>
-          <start>
-            <offset>1633</offset>
-          </start>
-          <end>
-            <offset>1637</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CACHE</value>
+              <start>
+                <offset>1633</offset>
+              </start>
+              <end>
+                <offset>1637</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>STRING
-</argument>
-          <start>
-            <offset>1639</offset>
-          </start>
-          <end>
-            <offset>1645</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>STRING
+</value>
+              <start>
+                <offset>1639</offset>
+              </start>
+              <end>
+                <offset>1645</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>Flags used by the linker during release minsize builds.</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>Flags used by the linker during release minsize builds.</value>
+              <start>
+                <offset>1652</offset>
+              </start>
+              <end>
+                <offset>1706</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>1651</offset>
           </start>
@@ -726,19 +991,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_EXE_LINKER_FLAGS_RELEASE</argument>
-          <start>
-            <offset>1718</offset>
-          </start>
-          <end>
-            <offset>1747</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_EXE_LINKER_FLAGS_RELEASE</value>
+              <start>
+                <offset>1718</offset>
+              </start>
+              <end>
+                <offset>1747</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_EXE_LINKER_FLAGS_RELEASE_INIT}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_EXE_LINKER_FLAGS_RELEASE_INIT}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_EXE_LINKER_FLAGS_RELEASE_INIT</value>
+                  <start>
+                    <offset>1751</offset>
+                  </start>
+                  <end>
+                    <offset>1785</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1749</offset>
               </start>
@@ -747,34 +1027,52 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>1749</offset>
-          </start>
-          <end>
-            <offset>1786</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CACHE</argument>
-          <start>
-            <offset>1788</offset>
-          </start>
-          <end>
-            <offset>1792</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CACHE</value>
+              <start>
+                <offset>1788</offset>
+              </start>
+              <end>
+                <offset>1792</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>STRING
-</argument>
-          <start>
-            <offset>1794</offset>
-          </start>
-          <end>
-            <offset>1800</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>STRING
+</value>
+              <start>
+                <offset>1794</offset>
+              </start>
+              <end>
+                <offset>1800</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>Flags used by the linker during release builds.</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>Flags used by the linker during release builds.</value>
+              <start>
+                <offset>1807</offset>
+              </start>
+              <end>
+                <offset>1853</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>1806</offset>
           </start>
@@ -795,20 +1093,35 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO
-</argument>
-          <start>
-            <offset>1865</offset>
-          </start>
-          <end>
-            <offset>1902</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO
+</value>
+              <start>
+                <offset>1865</offset>
+              </start>
+              <end>
+                <offset>1902</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO_INIT}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO_INIT}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO_INIT</value>
+                  <start>
+                    <offset>1910</offset>
+                  </start>
+                  <end>
+                    <offset>1951</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1908</offset>
               </start>
@@ -817,34 +1130,52 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>1908</offset>
-          </start>
-          <end>
-            <offset>1952</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CACHE</argument>
-          <start>
-            <offset>1954</offset>
-          </start>
-          <end>
-            <offset>1958</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CACHE</value>
+              <start>
+                <offset>1954</offset>
+              </start>
+              <end>
+                <offset>1958</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>STRING
-</argument>
-          <start>
-            <offset>1960</offset>
-          </start>
-          <end>
-            <offset>1966</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>STRING
+</value>
+              <start>
+                <offset>1960</offset>
+              </start>
+              <end>
+                <offset>1966</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>Flags used by the linker during Release with Debug Info builds.</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>Flags used by the linker during Release with Debug Info builds.</value>
+              <start>
+                <offset>1973</offset>
+              </start>
+              <end>
+                <offset>2035</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>1972</offset>
           </start>
@@ -865,19 +1196,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_SHARED_LINKER_FLAGS_DEBUG</argument>
-          <start>
-            <offset>2047</offset>
-          </start>
-          <end>
-            <offset>2077</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_SHARED_LINKER_FLAGS_DEBUG</value>
+              <start>
+                <offset>2047</offset>
+              </start>
+              <end>
+                <offset>2077</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_SHARED_LINKER_FLAGS_DEBUG_INIT}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_SHARED_LINKER_FLAGS_DEBUG_INIT}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_SHARED_LINKER_FLAGS_DEBUG_INIT</value>
+                  <start>
+                    <offset>2081</offset>
+                  </start>
+                  <end>
+                    <offset>2116</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2079</offset>
               </start>
@@ -886,34 +1232,52 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>2079</offset>
-          </start>
-          <end>
-            <offset>2117</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CACHE</argument>
-          <start>
-            <offset>2119</offset>
-          </start>
-          <end>
-            <offset>2123</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CACHE</value>
+              <start>
+                <offset>2119</offset>
+              </start>
+              <end>
+                <offset>2123</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>STRING
-</argument>
-          <start>
-            <offset>2125</offset>
-          </start>
-          <end>
-            <offset>2131</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>STRING
+</value>
+              <start>
+                <offset>2125</offset>
+              </start>
+              <end>
+                <offset>2131</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>Flags used by the linker during debug builds.</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>Flags used by the linker during debug builds.</value>
+              <start>
+                <offset>2138</offset>
+              </start>
+              <end>
+                <offset>2182</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>2137</offset>
           </start>
@@ -934,20 +1298,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_SHARED_LINKER_FLAGS_MINSIZEREL</argument>
-          <start>
-            <offset>2194</offset>
-          </start>
-          <end>
-            <offset>2229</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_SHARED_LINKER_FLAGS_MINSIZEREL</value>
+              <start>
+                <offset>2194</offset>
+              </start>
+              <end>
+                <offset>2229</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_SHARED_LINKER_FLAGS_MINSIZEREL_INIT}
-</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_SHARED_LINKER_FLAGS_MINSIZEREL_INIT}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_SHARED_LINKER_FLAGS_MINSIZEREL_INIT</value>
+                  <start>
+                    <offset>2233</offset>
+                  </start>
+                  <end>
+                    <offset>2273</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2231</offset>
               </start>
@@ -955,35 +1333,63 @@
                 <offset>2274</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>
+</value>
+              <start>
+                <offset>2274</offset>
+              </start>
+              <end>
+                <offset>2275</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
-          <start>
-            <offset>2231</offset>
-          </start>
-          <end>
-            <offset>2275</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CACHE</argument>
-          <start>
-            <offset>2281</offset>
-          </start>
-          <end>
-            <offset>2285</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CACHE</value>
+              <start>
+                <offset>2281</offset>
+              </start>
+              <end>
+                <offset>2285</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>STRING
-</argument>
-          <start>
-            <offset>2287</offset>
-          </start>
-          <end>
-            <offset>2293</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>STRING
+</value>
+              <start>
+                <offset>2287</offset>
+              </start>
+              <end>
+                <offset>2293</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>Flags used by the linker during release minsize builds.</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>Flags used by the linker during release minsize builds.</value>
+              <start>
+                <offset>2300</offset>
+              </start>
+              <end>
+                <offset>2354</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>2299</offset>
           </start>
@@ -1004,19 +1410,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_SHARED_LINKER_FLAGS_RELEASE</argument>
-          <start>
-            <offset>2366</offset>
-          </start>
-          <end>
-            <offset>2398</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_SHARED_LINKER_FLAGS_RELEASE</value>
+              <start>
+                <offset>2366</offset>
+              </start>
+              <end>
+                <offset>2398</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_SHARED_LINKER_FLAGS_RELEASE_INIT}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_SHARED_LINKER_FLAGS_RELEASE_INIT}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_SHARED_LINKER_FLAGS_RELEASE_INIT</value>
+                  <start>
+                    <offset>2402</offset>
+                  </start>
+                  <end>
+                    <offset>2439</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2400</offset>
               </start>
@@ -1025,34 +1446,52 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>2400</offset>
-          </start>
-          <end>
-            <offset>2440</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CACHE</argument>
-          <start>
-            <offset>2442</offset>
-          </start>
-          <end>
-            <offset>2446</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CACHE</value>
+              <start>
+                <offset>2442</offset>
+              </start>
+              <end>
+                <offset>2446</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>STRING
-</argument>
-          <start>
-            <offset>2448</offset>
-          </start>
-          <end>
-            <offset>2454</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>STRING
+</value>
+              <start>
+                <offset>2448</offset>
+              </start>
+              <end>
+                <offset>2454</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>Flags used by the linker during release builds.</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>Flags used by the linker during release builds.</value>
+              <start>
+                <offset>2461</offset>
+              </start>
+              <end>
+                <offset>2507</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>2460</offset>
           </start>
@@ -1073,20 +1512,35 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_SHARED_LINKER_FLAGS_RELWITHDEBINFO
-</argument>
-          <start>
-            <offset>2519</offset>
-          </start>
-          <end>
-            <offset>2559</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_SHARED_LINKER_FLAGS_RELWITHDEBINFO
+</value>
+              <start>
+                <offset>2519</offset>
+              </start>
+              <end>
+                <offset>2559</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_SHARED_LINKER_FLAGS_RELWITHDEBINFO_INIT}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_SHARED_LINKER_FLAGS_RELWITHDEBINFO_INIT}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_SHARED_LINKER_FLAGS_RELWITHDEBINFO_INIT</value>
+                  <start>
+                    <offset>2567</offset>
+                  </start>
+                  <end>
+                    <offset>2611</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2565</offset>
               </start>
@@ -1095,34 +1549,52 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>2565</offset>
-          </start>
-          <end>
-            <offset>2612</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CACHE</argument>
-          <start>
-            <offset>2614</offset>
-          </start>
-          <end>
-            <offset>2618</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CACHE</value>
+              <start>
+                <offset>2614</offset>
+              </start>
+              <end>
+                <offset>2618</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>STRING
-</argument>
-          <start>
-            <offset>2620</offset>
-          </start>
-          <end>
-            <offset>2626</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>STRING
+</value>
+              <start>
+                <offset>2620</offset>
+              </start>
+              <end>
+                <offset>2626</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>Flags used by the linker during Release with Debug Info builds.</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>Flags used by the linker during Release with Debug Info builds.</value>
+              <start>
+                <offset>2633</offset>
+              </start>
+              <end>
+                <offset>2695</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>2632</offset>
           </start>
@@ -1143,19 +1615,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_MODULE_LINKER_FLAGS_DEBUG</argument>
-          <start>
-            <offset>2707</offset>
-          </start>
-          <end>
-            <offset>2737</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_MODULE_LINKER_FLAGS_DEBUG</value>
+              <start>
+                <offset>2707</offset>
+              </start>
+              <end>
+                <offset>2737</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_MODULE_LINKER_FLAGS_DEBUG_INIT}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_MODULE_LINKER_FLAGS_DEBUG_INIT}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_MODULE_LINKER_FLAGS_DEBUG_INIT</value>
+                  <start>
+                    <offset>2741</offset>
+                  </start>
+                  <end>
+                    <offset>2776</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2739</offset>
               </start>
@@ -1164,34 +1651,52 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>2739</offset>
-          </start>
-          <end>
-            <offset>2777</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CACHE</argument>
-          <start>
-            <offset>2779</offset>
-          </start>
-          <end>
-            <offset>2783</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CACHE</value>
+              <start>
+                <offset>2779</offset>
+              </start>
+              <end>
+                <offset>2783</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>STRING
-</argument>
-          <start>
-            <offset>2785</offset>
-          </start>
-          <end>
-            <offset>2791</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>STRING
+</value>
+              <start>
+                <offset>2785</offset>
+              </start>
+              <end>
+                <offset>2791</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>Flags used by the linker during debug builds.</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>Flags used by the linker during debug builds.</value>
+              <start>
+                <offset>2798</offset>
+              </start>
+              <end>
+                <offset>2842</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>2797</offset>
           </start>
@@ -1212,20 +1717,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_MODULE_LINKER_FLAGS_MINSIZEREL</argument>
-          <start>
-            <offset>2854</offset>
-          </start>
-          <end>
-            <offset>2889</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_MODULE_LINKER_FLAGS_MINSIZEREL</value>
+              <start>
+                <offset>2854</offset>
+              </start>
+              <end>
+                <offset>2889</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_MODULE_LINKER_FLAGS_MINSIZEREL_INIT}
-</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_MODULE_LINKER_FLAGS_MINSIZEREL_INIT}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_MODULE_LINKER_FLAGS_MINSIZEREL_INIT</value>
+                  <start>
+                    <offset>2893</offset>
+                  </start>
+                  <end>
+                    <offset>2933</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2891</offset>
               </start>
@@ -1233,35 +1752,63 @@
                 <offset>2934</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>
+</value>
+              <start>
+                <offset>2934</offset>
+              </start>
+              <end>
+                <offset>2935</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
-          <start>
-            <offset>2891</offset>
-          </start>
-          <end>
-            <offset>2935</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CACHE</argument>
-          <start>
-            <offset>2941</offset>
-          </start>
-          <end>
-            <offset>2945</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CACHE</value>
+              <start>
+                <offset>2941</offset>
+              </start>
+              <end>
+                <offset>2945</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>STRING
-</argument>
-          <start>
-            <offset>2947</offset>
-          </start>
-          <end>
-            <offset>2953</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>STRING
+</value>
+              <start>
+                <offset>2947</offset>
+              </start>
+              <end>
+                <offset>2953</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>Flags used by the linker during release minsize builds.</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>Flags used by the linker during release minsize builds.</value>
+              <start>
+                <offset>2960</offset>
+              </start>
+              <end>
+                <offset>3014</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>2959</offset>
           </start>
@@ -1282,19 +1829,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_MODULE_LINKER_FLAGS_RELEASE</argument>
-          <start>
-            <offset>3026</offset>
-          </start>
-          <end>
-            <offset>3058</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_MODULE_LINKER_FLAGS_RELEASE</value>
+              <start>
+                <offset>3026</offset>
+              </start>
+              <end>
+                <offset>3058</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_MODULE_LINKER_FLAGS_RELEASE_INIT}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_MODULE_LINKER_FLAGS_RELEASE_INIT}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_MODULE_LINKER_FLAGS_RELEASE_INIT</value>
+                  <start>
+                    <offset>3062</offset>
+                  </start>
+                  <end>
+                    <offset>3099</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>3060</offset>
               </start>
@@ -1303,34 +1865,52 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>3060</offset>
-          </start>
-          <end>
-            <offset>3100</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CACHE</argument>
-          <start>
-            <offset>3102</offset>
-          </start>
-          <end>
-            <offset>3106</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CACHE</value>
+              <start>
+                <offset>3102</offset>
+              </start>
+              <end>
+                <offset>3106</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>STRING
-</argument>
-          <start>
-            <offset>3108</offset>
-          </start>
-          <end>
-            <offset>3114</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>STRING
+</value>
+              <start>
+                <offset>3108</offset>
+              </start>
+              <end>
+                <offset>3114</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>Flags used by the linker during release builds.</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>Flags used by the linker during release builds.</value>
+              <start>
+                <offset>3121</offset>
+              </start>
+              <end>
+                <offset>3167</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>3120</offset>
           </start>
@@ -1351,20 +1931,35 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO
-</argument>
-          <start>
-            <offset>3179</offset>
-          </start>
-          <end>
-            <offset>3219</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO
+</value>
+              <start>
+                <offset>3179</offset>
+              </start>
+              <end>
+                <offset>3219</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO_INIT}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO_INIT}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO_INIT</value>
+                  <start>
+                    <offset>3227</offset>
+                  </start>
+                  <end>
+                    <offset>3271</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>3225</offset>
               </start>
@@ -1373,34 +1968,52 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>3225</offset>
-          </start>
-          <end>
-            <offset>3272</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CACHE</argument>
-          <start>
-            <offset>3274</offset>
-          </start>
-          <end>
-            <offset>3278</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CACHE</value>
+              <start>
+                <offset>3274</offset>
+              </start>
+              <end>
+                <offset>3278</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>STRING
-</argument>
-          <start>
-            <offset>3280</offset>
-          </start>
-          <end>
-            <offset>3286</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>STRING
+</value>
+              <start>
+                <offset>3280</offset>
+              </start>
+              <end>
+                <offset>3286</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>Flags used by the linker during Release with Debug Info builds.</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>Flags used by the linker during Release with Debug Info builds.</value>
+              <start>
+                <offset>3293</offset>
+              </start>
+              <end>
+                <offset>3355</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>3292</offset>
           </start>
@@ -1421,19 +2034,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_STATIC_LINKER_FLAGS_DEBUG</argument>
-          <start>
-            <offset>3367</offset>
-          </start>
-          <end>
-            <offset>3397</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_STATIC_LINKER_FLAGS_DEBUG</value>
+              <start>
+                <offset>3367</offset>
+              </start>
+              <end>
+                <offset>3397</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_STATIC_LINKER_FLAGS_DEBUG_INIT}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_STATIC_LINKER_FLAGS_DEBUG_INIT}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_STATIC_LINKER_FLAGS_DEBUG_INIT</value>
+                  <start>
+                    <offset>3401</offset>
+                  </start>
+                  <end>
+                    <offset>3436</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>3399</offset>
               </start>
@@ -1442,34 +2070,52 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>3399</offset>
-          </start>
-          <end>
-            <offset>3437</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CACHE</argument>
-          <start>
-            <offset>3439</offset>
-          </start>
-          <end>
-            <offset>3443</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CACHE</value>
+              <start>
+                <offset>3439</offset>
+              </start>
+              <end>
+                <offset>3443</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>STRING
-</argument>
-          <start>
-            <offset>3445</offset>
-          </start>
-          <end>
-            <offset>3451</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>STRING
+</value>
+              <start>
+                <offset>3445</offset>
+              </start>
+              <end>
+                <offset>3451</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>Flags used by the linker during debug builds.</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>Flags used by the linker during debug builds.</value>
+              <start>
+                <offset>3458</offset>
+              </start>
+              <end>
+                <offset>3502</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>3457</offset>
           </start>
@@ -1490,20 +2136,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_STATIC_LINKER_FLAGS_MINSIZEREL</argument>
-          <start>
-            <offset>3514</offset>
-          </start>
-          <end>
-            <offset>3549</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_STATIC_LINKER_FLAGS_MINSIZEREL</value>
+              <start>
+                <offset>3514</offset>
+              </start>
+              <end>
+                <offset>3549</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_STATIC_LINKER_FLAGS_MINSIZEREL_INIT}
-</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_STATIC_LINKER_FLAGS_MINSIZEREL_INIT}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_STATIC_LINKER_FLAGS_MINSIZEREL_INIT</value>
+                  <start>
+                    <offset>3553</offset>
+                  </start>
+                  <end>
+                    <offset>3593</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>3551</offset>
               </start>
@@ -1511,35 +2171,63 @@
                 <offset>3594</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>
+</value>
+              <start>
+                <offset>3594</offset>
+              </start>
+              <end>
+                <offset>3595</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
-          <start>
-            <offset>3551</offset>
-          </start>
-          <end>
-            <offset>3595</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CACHE</argument>
-          <start>
-            <offset>3601</offset>
-          </start>
-          <end>
-            <offset>3605</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CACHE</value>
+              <start>
+                <offset>3601</offset>
+              </start>
+              <end>
+                <offset>3605</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>STRING
-</argument>
-          <start>
-            <offset>3607</offset>
-          </start>
-          <end>
-            <offset>3613</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>STRING
+</value>
+              <start>
+                <offset>3607</offset>
+              </start>
+              <end>
+                <offset>3613</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>Flags used by the linker during release minsize builds.</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>Flags used by the linker during release minsize builds.</value>
+              <start>
+                <offset>3620</offset>
+              </start>
+              <end>
+                <offset>3674</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>3619</offset>
           </start>
@@ -1560,19 +2248,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_STATIC_LINKER_FLAGS_RELEASE</argument>
-          <start>
-            <offset>3686</offset>
-          </start>
-          <end>
-            <offset>3718</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_STATIC_LINKER_FLAGS_RELEASE</value>
+              <start>
+                <offset>3686</offset>
+              </start>
+              <end>
+                <offset>3718</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_STATIC_LINKER_FLAGS_RELEASE_INIT}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_STATIC_LINKER_FLAGS_RELEASE_INIT}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_STATIC_LINKER_FLAGS_RELEASE_INIT</value>
+                  <start>
+                    <offset>3722</offset>
+                  </start>
+                  <end>
+                    <offset>3759</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>3720</offset>
               </start>
@@ -1581,34 +2284,52 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>3720</offset>
-          </start>
-          <end>
-            <offset>3760</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CACHE</argument>
-          <start>
-            <offset>3762</offset>
-          </start>
-          <end>
-            <offset>3766</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CACHE</value>
+              <start>
+                <offset>3762</offset>
+              </start>
+              <end>
+                <offset>3766</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>STRING
-</argument>
-          <start>
-            <offset>3768</offset>
-          </start>
-          <end>
-            <offset>3774</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>STRING
+</value>
+              <start>
+                <offset>3768</offset>
+              </start>
+              <end>
+                <offset>3774</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>Flags used by the linker during release builds.</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>Flags used by the linker during release builds.</value>
+              <start>
+                <offset>3781</offset>
+              </start>
+              <end>
+                <offset>3827</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>3780</offset>
           </start>
@@ -1629,20 +2350,35 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO
-</argument>
-          <start>
-            <offset>3839</offset>
-          </start>
-          <end>
-            <offset>3879</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO
+</value>
+              <start>
+                <offset>3839</offset>
+              </start>
+              <end>
+                <offset>3879</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO_INIT}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO_INIT}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO_INIT</value>
+                  <start>
+                    <offset>3887</offset>
+                  </start>
+                  <end>
+                    <offset>3931</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>3885</offset>
               </start>
@@ -1651,34 +2387,52 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>3885</offset>
-          </start>
-          <end>
-            <offset>3932</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CACHE</argument>
-          <start>
-            <offset>3934</offset>
-          </start>
-          <end>
-            <offset>3938</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CACHE</value>
+              <start>
+                <offset>3934</offset>
+              </start>
+              <end>
+                <offset>3938</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>STRING
-</argument>
-          <start>
-            <offset>3940</offset>
-          </start>
-          <end>
-            <offset>3946</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>STRING
+</value>
+              <start>
+                <offset>3940</offset>
+              </start>
+              <end>
+                <offset>3946</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>Flags used by the linker during Release with Debug Info builds.</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>Flags used by the linker during Release with Debug Info builds.</value>
+              <start>
+                <offset>3953</offset>
+              </start>
+              <end>
+                <offset>4015</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>3952</offset>
           </start>
@@ -1724,19 +2478,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_EXE_LINKER_FLAGS</argument>
-          <start>
-            <offset>4059</offset>
-          </start>
-          <end>
-            <offset>4080</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_EXE_LINKER_FLAGS</value>
+              <start>
+                <offset>4059</offset>
+              </start>
+              <end>
+                <offset>4080</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_EXE_LINKER_FLAGS_INIT}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_EXE_LINKER_FLAGS_INIT}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_EXE_LINKER_FLAGS_INIT</value>
+                  <start>
+                    <offset>4085</offset>
+                  </start>
+                  <end>
+                    <offset>4111</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>4083</offset>
               </start>
@@ -1753,35 +2522,63 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>
-</argument>
-          <start>
-            <offset>4114</offset>
-          </start>
-          <end>
-            <offset>4114</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>
+</value>
+              <start>
+                <offset>4114</offset>
+              </start>
+              <end>
+                <offset>4114</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CACHE</argument>
-          <start>
-            <offset>4120</offset>
-          </start>
-          <end>
-            <offset>4124</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CACHE</value>
+              <start>
+                <offset>4120</offset>
+              </start>
+              <end>
+                <offset>4124</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>STRING</argument>
-          <start>
-            <offset>4126</offset>
-          </start>
-          <end>
-            <offset>4131</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>STRING</value>
+              <start>
+                <offset>4126</offset>
+              </start>
+              <end>
+                <offset>4131</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>Flags used by the linker.</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>Flags used by the linker.</value>
+              <start>
+                <offset>4134</offset>
+              </start>
+              <end>
+                <offset>4158</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>4133</offset>
           </start>
@@ -1816,19 +2613,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_SHARED_LINKER_FLAGS</argument>
-          <start>
-            <offset>4190</offset>
-          </start>
-          <end>
-            <offset>4214</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_SHARED_LINKER_FLAGS</value>
+              <start>
+                <offset>4190</offset>
+              </start>
+              <end>
+                <offset>4214</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_SHARED_LINKER_FLAGS_INIT}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_SHARED_LINKER_FLAGS_INIT}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_SHARED_LINKER_FLAGS_INIT</value>
+                  <start>
+                    <offset>4219</offset>
+                  </start>
+                  <end>
+                    <offset>4248</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>4217</offset>
               </start>
@@ -1845,35 +2657,63 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>
-</argument>
-          <start>
-            <offset>4251</offset>
-          </start>
-          <end>
-            <offset>4251</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>
+</value>
+              <start>
+                <offset>4251</offset>
+              </start>
+              <end>
+                <offset>4251</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CACHE</argument>
-          <start>
-            <offset>4257</offset>
-          </start>
-          <end>
-            <offset>4261</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CACHE</value>
+              <start>
+                <offset>4257</offset>
+              </start>
+              <end>
+                <offset>4261</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>STRING</argument>
-          <start>
-            <offset>4263</offset>
-          </start>
-          <end>
-            <offset>4268</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>STRING</value>
+              <start>
+                <offset>4263</offset>
+              </start>
+              <end>
+                <offset>4268</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>Flags used by the linker during the creation of dll&apos;s.</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>Flags used by the linker during the creation of dll&apos;s.</value>
+              <start>
+                <offset>4271</offset>
+              </start>
+              <end>
+                <offset>4324</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>4270</offset>
           </start>
@@ -1908,19 +2748,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_MODULE_LINKER_FLAGS</argument>
-          <start>
-            <offset>4356</offset>
-          </start>
-          <end>
-            <offset>4380</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_MODULE_LINKER_FLAGS</value>
+              <start>
+                <offset>4356</offset>
+              </start>
+              <end>
+                <offset>4380</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_MODULE_LINKER_FLAGS_INIT}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_MODULE_LINKER_FLAGS_INIT}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_MODULE_LINKER_FLAGS_INIT</value>
+                  <start>
+                    <offset>4385</offset>
+                  </start>
+                  <end>
+                    <offset>4414</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>4383</offset>
               </start>
@@ -1937,35 +2792,63 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>
-</argument>
-          <start>
-            <offset>4417</offset>
-          </start>
-          <end>
-            <offset>4417</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>
+</value>
+              <start>
+                <offset>4417</offset>
+              </start>
+              <end>
+                <offset>4417</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CACHE</argument>
-          <start>
-            <offset>4423</offset>
-          </start>
-          <end>
-            <offset>4427</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CACHE</value>
+              <start>
+                <offset>4423</offset>
+              </start>
+              <end>
+                <offset>4427</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>STRING</argument>
-          <start>
-            <offset>4429</offset>
-          </start>
-          <end>
-            <offset>4434</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>STRING</value>
+              <start>
+                <offset>4429</offset>
+              </start>
+              <end>
+                <offset>4434</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>Flags used by the linker during the creation of modules.</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>Flags used by the linker during the creation of modules.</value>
+              <start>
+                <offset>4437</offset>
+              </start>
+              <end>
+                <offset>4492</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>4436</offset>
           </start>
@@ -2000,19 +2883,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_STATIC_LINKER_FLAGS</argument>
-          <start>
-            <offset>4524</offset>
-          </start>
-          <end>
-            <offset>4548</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_STATIC_LINKER_FLAGS</value>
+              <start>
+                <offset>4524</offset>
+              </start>
+              <end>
+                <offset>4548</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_STATIC_LINKER_FLAGS_INIT}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_STATIC_LINKER_FLAGS_INIT}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_STATIC_LINKER_FLAGS_INIT</value>
+                  <start>
+                    <offset>4553</offset>
+                  </start>
+                  <end>
+                    <offset>4582</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>4551</offset>
               </start>
@@ -2029,35 +2927,63 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>
-</argument>
-          <start>
-            <offset>4585</offset>
-          </start>
-          <end>
-            <offset>4585</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>
+</value>
+              <start>
+                <offset>4585</offset>
+              </start>
+              <end>
+                <offset>4585</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CACHE</argument>
-          <start>
-            <offset>4591</offset>
-          </start>
-          <end>
-            <offset>4595</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CACHE</value>
+              <start>
+                <offset>4591</offset>
+              </start>
+              <end>
+                <offset>4595</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>STRING</argument>
-          <start>
-            <offset>4597</offset>
-          </start>
-          <end>
-            <offset>4602</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>STRING</value>
+              <start>
+                <offset>4597</offset>
+              </start>
+              <end>
+                <offset>4602</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>Flags used by the linker during the creation of static libraries.</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>Flags used by the linker during the creation of static libraries.</value>
+              <start>
+                <offset>4605</offset>
+              </start>
+              <end>
+                <offset>4669</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>4604</offset>
           </start>
@@ -2092,19 +3018,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_BUILD_TOOL</argument>
-          <start>
-            <offset>4738</offset>
-          </start>
-          <end>
-            <offset>4753</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_BUILD_TOOL</value>
+              <start>
+                <offset>4738</offset>
+              </start>
+              <end>
+                <offset>4753</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_MAKE_PROGRAM}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_MAKE_PROGRAM}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_MAKE_PROGRAM</value>
+                  <start>
+                    <offset>4757</offset>
+                  </start>
+                  <end>
+                    <offset>4774</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>4755</offset>
               </start>
@@ -2113,12 +3054,8 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>4755</offset>
-          </start>
-          <end>
-            <offset>4775</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -2133,7 +3070,9 @@
       <commandName>mark_as_advanced</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>
 CMAKE_VERBOSE_MAKEFILE
 
 CMAKE_EXE_LINKER_FLAGS
@@ -2159,13 +3098,17 @@ CMAKE_STATIC_LINKER_FLAGS_DEBUG
 CMAKE_STATIC_LINKER_FLAGS_MINSIZEREL
 CMAKE_STATIC_LINKER_FLAGS_RELEASE
 CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO
-</argument>
-          <start>
-            <offset>4796</offset>
-          </start>
-          <end>
-            <offset>5488</offset>
-          </end>
+</value>
+              <start>
+                <offset>4796</offset>
+              </start>
+              <end>
+                <offset>5488</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>

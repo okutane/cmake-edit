@@ -4,16 +4,32 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>_compiler_id_pp_test</argument>
-          <start>
-            <offset>5</offset>
-          </start>
-          <end>
-            <offset>24</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_compiler_id_pp_test</value>
+              <start>
+                <offset>5</offset>
+              </start>
+              <end>
+                <offset>24</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>defined(__IBMC__) &amp;&amp; defined(__COMPILER_VER__)</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>defined(__IBMC__) &amp;&amp; defined(__COMPILER_VER__)</value>
+              <start>
+                <offset>27</offset>
+              </start>
+              <end>
+                <offset>72</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>26</offset>
           </start>
@@ -34,10 +50,19 @@
       <commandName>include</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_CURRENT_LIST_DIR}/IBMCPP-C-DetermineVersionInternal.cmake</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_CURRENT_LIST_DIR}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_CURRENT_LIST_DIR</value>
+                  <start>
+                    <offset>88</offset>
+                  </start>
+                  <end>
+                    <offset>109</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>86</offset>
               </start>
@@ -45,6 +70,15 @@
                 <offset>110</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/IBMCPP-C-DetermineVersionInternal.cmake</value>
+              <start>
+                <offset>110</offset>
+              </start>
+              <end>
+                <offset>150</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
           <start>
             <offset>85</offset>

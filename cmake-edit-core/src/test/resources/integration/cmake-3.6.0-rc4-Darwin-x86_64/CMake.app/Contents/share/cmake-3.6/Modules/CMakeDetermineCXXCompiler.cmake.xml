@@ -402,10 +402,19 @@
       <commandName>include</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_ROOT}/Modules/CMakeDetermineCompiler.cmake</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_ROOT}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_ROOT</value>
+                  <start>
+                    <offset>1259</offset>
+                  </start>
+                  <end>
+                    <offset>1268</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1257</offset>
               </start>
@@ -413,13 +422,18 @@
                 <offset>1269</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/Modules/CMakeDetermineCompiler.cmake</value>
+              <start>
+                <offset>1269</offset>
+              </start>
+              <end>
+                <offset>1306</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
-          <start>
-            <offset>1257</offset>
-          </start>
-          <end>
-            <offset>1306</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -448,10 +462,28 @@
       <commandName>include</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>Platform/${CMAKE_SYSTEM_NAME}-CXX</argument>
           <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>Platform/</value>
+              <start>
+                <offset>1381</offset>
+              </start>
+              <end>
+                <offset>1389</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_SYSTEM_NAME}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_SYSTEM_NAME</value>
+                  <start>
+                    <offset>1392</offset>
+                  </start>
+                  <end>
+                    <offset>1408</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1390</offset>
               </start>
@@ -459,22 +491,33 @@
                 <offset>1409</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>-CXX</value>
+              <start>
+                <offset>1409</offset>
+              </start>
+              <end>
+                <offset>1413</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
-          <start>
-            <offset>1381</offset>
-          </start>
-          <end>
-            <offset>1413</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode[2]/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>OPTIONAL</argument>
-          <start>
-            <offset>1415</offset>
-          </start>
-          <end>
-            <offset>1422</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>OPTIONAL</value>
+              <start>
+                <offset>1415</offset>
+              </start>
+              <end>
+                <offset>1422</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -489,22 +532,34 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>NOT</argument>
-          <start>
-            <offset>1428</offset>
-          </start>
-          <end>
-            <offset>1430</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>NOT</value>
+              <start>
+                <offset>1428</offset>
+              </start>
+              <end>
+                <offset>1430</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_CXX_COMPILER_NAMES</argument>
-          <start>
-            <offset>1432</offset>
-          </start>
-          <end>
-            <offset>1455</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_CXX_COMPILER_NAMES</value>
+              <start>
+                <offset>1432</offset>
+              </start>
+              <end>
+                <offset>1455</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -519,22 +574,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_CXX_COMPILER_NAMES</argument>
-          <start>
-            <offset>1464</offset>
-          </start>
-          <end>
-            <offset>1487</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_CXX_COMPILER_NAMES</value>
+              <start>
+                <offset>1464</offset>
+              </start>
+              <end>
+                <offset>1487</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CC</argument>
-          <start>
-            <offset>1489</offset>
-          </start>
-          <end>
-            <offset>1490</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CC</value>
+              <start>
+                <offset>1489</offset>
+              </start>
+              <end>
+                <offset>1490</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -560,10 +627,19 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_GENERATOR}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_GENERATOR}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_GENERATOR</value>
+                  <start>
+                    <offset>1507</offset>
+                  </start>
+                  <end>
+                    <offset>1521</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1505</offset>
               </start>
@@ -572,24 +648,36 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>1505</offset>
-          </start>
-          <end>
-            <offset>1522</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>MATCHES</argument>
-          <start>
-            <offset>1524</offset>
-          </start>
-          <end>
-            <offset>1530</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>MATCHES</value>
+              <start>
+                <offset>1524</offset>
+              </start>
+              <end>
+                <offset>1530</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>Visual Studio</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>Visual Studio</value>
+              <start>
+                <offset>1533</offset>
+              </start>
+              <end>
+                <offset>1545</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>1532</offset>
           </start>
@@ -610,10 +698,19 @@
       <commandName>elseif</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_GENERATOR}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_GENERATOR}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_GENERATOR</value>
+                  <start>
+                    <offset>1559</offset>
+                  </start>
+                  <end>
+                    <offset>1573</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1557</offset>
               </start>
@@ -630,16 +727,32 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>MATCHES</argument>
-          <start>
-            <offset>1577</offset>
-          </start>
-          <end>
-            <offset>1583</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>MATCHES</value>
+              <start>
+                <offset>1577</offset>
+              </start>
+              <end>
+                <offset>1583</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>Xcode</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>Xcode</value>
+              <start>
+                <offset>1586</offset>
+              </start>
+              <end>
+                <offset>1590</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>1585</offset>
           </start>
@@ -660,22 +773,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_CXX_COMPILER_XCODE_TYPE</argument>
-          <start>
-            <offset>1600</offset>
-          </start>
-          <end>
-            <offset>1628</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_CXX_COMPILER_XCODE_TYPE</value>
+              <start>
+                <offset>1600</offset>
+              </start>
+              <end>
+                <offset>1628</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>sourcecode.cpp.cpp</argument>
-          <start>
-            <offset>1630</offset>
-          </start>
-          <end>
-            <offset>1647</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>sourcecode.cpp.cpp</value>
+              <start>
+                <offset>1630</offset>
+              </start>
+              <end>
+                <offset>1647</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -690,13 +815,19 @@
       <commandName>_cmake_find_compiler_path</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CXX</argument>
-          <start>
-            <offset>1678</offset>
-          </start>
-          <end>
-            <offset>1680</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CXX</value>
+              <start>
+                <offset>1678</offset>
+              </start>
+              <end>
+                <offset>1680</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -722,22 +853,34 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>NOT</argument>
-          <start>
-            <offset>1695</offset>
-          </start>
-          <end>
-            <offset>1697</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>NOT</value>
+              <start>
+                <offset>1695</offset>
+              </start>
+              <end>
+                <offset>1697</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_CXX_COMPILER</argument>
-          <start>
-            <offset>1699</offset>
-          </start>
-          <end>
-            <offset>1716</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_CXX_COMPILER</value>
+              <start>
+                <offset>1699</offset>
+              </start>
+              <end>
+                <offset>1716</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -752,22 +895,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_CXX_COMPILER_INIT</argument>
-          <start>
-            <offset>1727</offset>
-          </start>
-          <end>
-            <offset>1749</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_CXX_COMPILER_INIT</value>
+              <start>
+                <offset>1727</offset>
+              </start>
+              <end>
+                <offset>1749</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>NOTFOUND</argument>
-          <start>
-            <offset>1751</offset>
-          </start>
-          <end>
-            <offset>1758</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>NOTFOUND</value>
+              <start>
+                <offset>1751</offset>
+              </start>
+              <end>
+                <offset>1758</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -796,20 +951,35 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>NOT</argument>
-          <start>
-            <offset>1811</offset>
-          </start>
-          <end>
-            <offset>1813</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>NOT</value>
+              <start>
+                <offset>1811</offset>
+              </start>
+              <end>
+                <offset>1813</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>$ENV{CXX}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
               <key>ENV</key>
-              <expression>$ENV{CXX}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CXX</value>
+                  <start>
+                    <offset>1820</offset>
+                  </start>
+                  <end>
+                    <offset>1822</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1815</offset>
               </start>
@@ -818,24 +988,26 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>1815</offset>
-          </start>
-          <end>
-            <offset>1823</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>STREQUAL</argument>
-          <start>
-            <offset>1825</offset>
-          </start>
-          <end>
-            <offset>1832</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>STREQUAL</value>
+              <start>
+                <offset>1825</offset>
+              </start>
+              <end>
+                <offset>1832</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument></argument>
+          <children/>
           <start>
             <offset>1834</offset>
           </start>
@@ -856,20 +1028,35 @@
       <commandName>get_filename_component</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_CXX_COMPILER_INIT</argument>
-          <start>
-            <offset>1867</offset>
-          </start>
-          <end>
-            <offset>1889</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_CXX_COMPILER_INIT</value>
+              <start>
+                <offset>1867</offset>
+              </start>
+              <end>
+                <offset>1889</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>$ENV{CXX}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
               <key>ENV</key>
-              <expression>$ENV{CXX}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CXX</value>
+                  <start>
+                    <offset>1896</offset>
+                  </start>
+                  <end>
+                    <offset>1898</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1891</offset>
               </start>
@@ -878,39 +1065,53 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>1891</offset>
-          </start>
-          <end>
-            <offset>1899</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>PROGRAM</argument>
-          <start>
-            <offset>1901</offset>
-          </start>
-          <end>
-            <offset>1907</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>PROGRAM</value>
+              <start>
+                <offset>1901</offset>
+              </start>
+              <end>
+                <offset>1907</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>PROGRAM_ARGS</argument>
-          <start>
-            <offset>1909</offset>
-          </start>
-          <end>
-            <offset>1920</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>PROGRAM_ARGS</value>
+              <start>
+                <offset>1909</offset>
+              </start>
+              <end>
+                <offset>1920</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_CXX_FLAGS_ENV_INIT</argument>
-          <start>
-            <offset>1922</offset>
-          </start>
-          <end>
-            <offset>1945</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_CXX_FLAGS_ENV_INIT</value>
+              <start>
+                <offset>1922</offset>
+              </start>
+              <end>
+                <offset>1945</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -925,13 +1126,19 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_CXX_FLAGS_ENV_INIT</argument>
-          <start>
-            <offset>1957</offset>
-          </start>
-          <end>
-            <offset>1980</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_CXX_FLAGS_ENV_INIT</value>
+              <start>
+                <offset>1957</offset>
+              </start>
+              <end>
+                <offset>1980</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -946,19 +1153,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_CXX_COMPILER_ARG1</argument>
-          <start>
-            <offset>1995</offset>
-          </start>
-          <end>
-            <offset>2017</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_CXX_COMPILER_ARG1</value>
+              <start>
+                <offset>1995</offset>
+              </start>
+              <end>
+                <offset>2017</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_CXX_FLAGS_ENV_INIT}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_CXX_FLAGS_ENV_INIT}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_CXX_FLAGS_ENV_INIT</value>
+                  <start>
+                    <offset>2022</offset>
+                  </start>
+                  <end>
+                    <offset>2045</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2020</offset>
               </start>
@@ -975,25 +1197,47 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CACHE</argument>
-          <start>
-            <offset>2049</offset>
-          </start>
-          <end>
-            <offset>2053</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CACHE</value>
+              <start>
+                <offset>2049</offset>
+              </start>
+              <end>
+                <offset>2053</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>STRING</argument>
-          <start>
-            <offset>2055</offset>
-          </start>
-          <end>
-            <offset>2060</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>STRING</value>
+              <start>
+                <offset>2055</offset>
+              </start>
+              <end>
+                <offset>2060</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>First argument to CXX compiler</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>First argument to CXX compiler</value>
+              <start>
+                <offset>2063</offset>
+              </start>
+              <end>
+                <offset>2092</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>2062</offset>
           </start>
@@ -1025,28 +1269,49 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>NOT</argument>
-          <start>
-            <offset>2119</offset>
-          </start>
-          <end>
-            <offset>2121</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>NOT</value>
+              <start>
+                <offset>2119</offset>
+              </start>
+              <end>
+                <offset>2121</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>EXISTS</argument>
-          <start>
-            <offset>2123</offset>
-          </start>
-          <end>
-            <offset>2128</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>EXISTS</value>
+              <start>
+                <offset>2123</offset>
+              </start>
+              <end>
+                <offset>2128</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_CXX_COMPILER_INIT}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_CXX_COMPILER_INIT}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_CXX_COMPILER_INIT</value>
+                  <start>
+                    <offset>2132</offset>
+                  </start>
+                  <end>
+                    <offset>2154</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2130</offset>
               </start>
@@ -1055,12 +1320,8 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>2130</offset>
-          </start>
-          <end>
-            <offset>2155</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -1075,22 +1336,45 @@
       <commandName>message</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>FATAL_ERROR</argument>
-          <start>
-            <offset>2174</offset>
-          </start>
-          <end>
-            <offset>2184</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>FATAL_ERROR</value>
+              <start>
+                <offset>2174</offset>
+              </start>
+              <end>
+                <offset>2184</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>Could not find compiler set in environment variable CXX:\
-$ENV{CXX}.\
-${CMAKE_CXX_COMPILER_INIT}</argument>
           <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>Could not find compiler set in environment variable CXX:\
+</value>
+              <start>
+                <offset>2187</offset>
+              </start>
+              <end>
+                <offset>2243</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
             <ru.urururu.cmakeedit.core.ExpressionNode>
               <key>ENV</key>
-              <expression>$ENV{CXX}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CXX</value>
+                  <start>
+                    <offset>2250</offset>
+                  </start>
+                  <end>
+                    <offset>2252</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2245</offset>
               </start>
@@ -1098,8 +1382,28 @@ ${CMAKE_CXX_COMPILER_INIT}</argument>
                 <offset>2253</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>.\
+</value>
+              <start>
+                <offset>2253</offset>
+              </start>
+              <end>
+                <offset>2255</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_CXX_COMPILER_INIT}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_CXX_COMPILER_INIT</value>
+                  <start>
+                    <offset>2259</offset>
+                  </start>
+                  <end>
+                    <offset>2281</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2257</offset>
               </start>
@@ -1164,13 +1468,19 @@ ${CMAKE_CXX_COMPILER_INIT}</argument>
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_GENERATOR_CXX</argument>
-          <start>
-            <offset>2371</offset>
-          </start>
-          <end>
-            <offset>2389</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_GENERATOR_CXX</value>
+              <start>
+                <offset>2371</offset>
+              </start>
+              <end>
+                <offset>2389</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -1185,22 +1495,34 @@ ${CMAKE_CXX_COMPILER_INIT}</argument>
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>NOT</argument>
-          <start>
-            <offset>2401</offset>
-          </start>
-          <end>
-            <offset>2403</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>NOT</value>
+              <start>
+                <offset>2401</offset>
+              </start>
+              <end>
+                <offset>2403</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_CXX_COMPILER_INIT</argument>
-          <start>
-            <offset>2405</offset>
-          </start>
-          <end>
-            <offset>2427</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_CXX_COMPILER_INIT</value>
+              <start>
+                <offset>2405</offset>
+              </start>
+              <end>
+                <offset>2427</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -1215,19 +1537,34 @@ ${CMAKE_CXX_COMPILER_INIT}</argument>
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_CXX_COMPILER_INIT</argument>
-          <start>
-            <offset>2442</offset>
-          </start>
-          <end>
-            <offset>2464</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_CXX_COMPILER_INIT</value>
+              <start>
+                <offset>2442</offset>
+              </start>
+              <end>
+                <offset>2464</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_GENERATOR_CXX}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_GENERATOR_CXX}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_GENERATOR_CXX</value>
+                  <start>
+                    <offset>2468</offset>
+                  </start>
+                  <end>
+                    <offset>2486</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2466</offset>
               </start>
@@ -1236,12 +1573,8 @@ ${CMAKE_CXX_COMPILER_INIT}</argument>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>2466</offset>
-          </start>
-          <end>
-            <offset>2487</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -1292,22 +1625,34 @@ ${CMAKE_CXX_COMPILER_INIT}</argument>
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>NOT</argument>
-          <start>
-            <offset>2560</offset>
-          </start>
-          <end>
-            <offset>2562</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>NOT</value>
+              <start>
+                <offset>2560</offset>
+              </start>
+              <end>
+                <offset>2562</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_CXX_COMPILER_INIT</argument>
-          <start>
-            <offset>2564</offset>
-          </start>
-          <end>
-            <offset>2586</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_CXX_COMPILER_INIT</value>
+              <start>
+                <offset>2564</offset>
+              </start>
+              <end>
+                <offset>2586</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -1322,28 +1667,49 @@ ${CMAKE_CXX_COMPILER_INIT}</argument>
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_CXX_COMPILER_LIST</argument>
-          <start>
-            <offset>2599</offset>
-          </start>
-          <end>
-            <offset>2621</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_CXX_COMPILER_LIST</value>
+              <start>
+                <offset>2599</offset>
+              </start>
+              <end>
+                <offset>2621</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CC</argument>
-          <start>
-            <offset>2623</offset>
-          </start>
-          <end>
-            <offset>2624</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CC</value>
+              <start>
+                <offset>2623</offset>
+              </start>
+              <end>
+                <offset>2624</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${_CMAKE_TOOLCHAIN_PREFIX}c++</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${_CMAKE_TOOLCHAIN_PREFIX}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>_CMAKE_TOOLCHAIN_PREFIX</value>
+                  <start>
+                    <offset>2628</offset>
+                  </start>
+                  <end>
+                    <offset>2650</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2626</offset>
               </start>
@@ -1351,19 +1717,33 @@ ${CMAKE_CXX_COMPILER_INIT}</argument>
                 <offset>2651</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>c++</value>
+              <start>
+                <offset>2651</offset>
+              </start>
+              <end>
+                <offset>2654</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
-          <start>
-            <offset>2626</offset>
-          </start>
-          <end>
-            <offset>2654</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${_CMAKE_TOOLCHAIN_PREFIX}g++</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${_CMAKE_TOOLCHAIN_PREFIX}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>_CMAKE_TOOLCHAIN_PREFIX</value>
+                  <start>
+                    <offset>2658</offset>
+                  </start>
+                  <end>
+                    <offset>2680</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2656</offset>
               </start>
@@ -1371,58 +1751,93 @@ ${CMAKE_CXX_COMPILER_INIT}</argument>
                 <offset>2681</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>g++</value>
+              <start>
+                <offset>2681</offset>
+              </start>
+              <end>
+                <offset>2684</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
-          <start>
-            <offset>2656</offset>
-          </start>
-          <end>
-            <offset>2684</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>aCC</argument>
-          <start>
-            <offset>2686</offset>
-          </start>
-          <end>
-            <offset>2688</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>aCC</value>
+              <start>
+                <offset>2686</offset>
+              </start>
+              <end>
+                <offset>2688</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>cl</argument>
-          <start>
-            <offset>2690</offset>
-          </start>
-          <end>
-            <offset>2691</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>cl</value>
+              <start>
+                <offset>2690</offset>
+              </start>
+              <end>
+                <offset>2691</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>bcc</argument>
-          <start>
-            <offset>2693</offset>
-          </start>
-          <end>
-            <offset>2695</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>bcc</value>
+              <start>
+                <offset>2693</offset>
+              </start>
+              <end>
+                <offset>2695</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>xlC</argument>
-          <start>
-            <offset>2697</offset>
-          </start>
-          <end>
-            <offset>2699</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>xlC</value>
+              <start>
+                <offset>2697</offset>
+              </start>
+              <end>
+                <offset>2699</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>clang++</argument>
-          <start>
-            <offset>2701</offset>
-          </start>
-          <end>
-            <offset>2707</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>clang++</value>
+              <start>
+                <offset>2701</offset>
+              </start>
+              <end>
+                <offset>2707</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -1448,13 +1863,19 @@ ${CMAKE_CXX_COMPILER_INIT}</argument>
       <commandName>_cmake_find_compiler</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CXX</argument>
-          <start>
-            <offset>2748</offset>
-          </start>
-          <end>
-            <offset>2750</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CXX</value>
+              <start>
+                <offset>2748</offset>
+              </start>
+              <end>
+                <offset>2750</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -1480,13 +1901,19 @@ ${CMAKE_CXX_COMPILER_INIT}</argument>
       <commandName>_cmake_find_compiler_path</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CXX</argument>
-          <start>
-            <offset>2792</offset>
-          </start>
-          <end>
-            <offset>2794</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CXX</value>
+              <start>
+                <offset>2792</offset>
+              </start>
+              <end>
+                <offset>2794</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -1512,13 +1939,19 @@ ${CMAKE_CXX_COMPILER_INIT}</argument>
       <commandName>mark_as_advanced</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_CXX_COMPILER</argument>
-          <start>
-            <offset>2826</offset>
-          </start>
-          <end>
-            <offset>2843</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_CXX_COMPILER</value>
+              <start>
+                <offset>2826</offset>
+              </start>
+              <end>
+                <offset>2843</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -1575,13 +2008,19 @@ ${CMAKE_CXX_COMPILER_INIT}</argument>
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_CXX_COMPILER_ID_TEST_FLAGS_FIRST</argument>
-          <start>
-            <offset>3003</offset>
-          </start>
-          <end>
-            <offset>3040</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_CXX_COMPILER_ID_TEST_FLAGS_FIRST</value>
+              <start>
+                <offset>3003</offset>
+              </start>
+              <end>
+                <offset>3040</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -1596,27 +2035,49 @@ ${CMAKE_CXX_COMPILER_INIT}</argument>
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_CXX_COMPILER_ID_TEST_FLAGS
-</argument>
-          <start>
-            <offset>3049</offset>
-          </start>
-          <end>
-            <offset>3081</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_CXX_COMPILER_ID_TEST_FLAGS
+</value>
+              <start>
+                <offset>3049</offset>
+              </start>
+              <end>
+                <offset>3081</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>
-</argument>
-          <start>
-            <offset>3125</offset>
-          </start>
-          <end>
-            <offset>3125</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>
+</value>
+              <start>
+                <offset>3125</offset>
+              </start>
+              <end>
+                <offset>3125</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>-c</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>-c</value>
+              <start>
+                <offset>3131</offset>
+              </start>
+              <end>
+                <offset>3132</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>3130</offset>
           </start>
@@ -1625,14 +2086,20 @@ ${CMAKE_CXX_COMPILER_INIT}</argument>
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>
-</argument>
-          <start>
-            <offset>3134</offset>
-          </start>
-          <end>
-            <offset>3134</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>
+</value>
+              <start>
+                <offset>3134</offset>
+              </start>
+              <end>
+                <offset>3134</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments>
@@ -1681,22 +2148,34 @@ ${CMAKE_CXX_COMPILER_INIT}</argument>
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>NOT</argument>
-          <start>
-            <offset>3207</offset>
-          </start>
-          <end>
-            <offset>3209</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>NOT</value>
+              <start>
+                <offset>3207</offset>
+              </start>
+              <end>
+                <offset>3209</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_CXX_COMPILER_ID_RUN</argument>
-          <start>
-            <offset>3211</offset>
-          </start>
-          <end>
-            <offset>3235</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_CXX_COMPILER_ID_RUN</value>
+              <start>
+                <offset>3211</offset>
+              </start>
+              <end>
+                <offset>3235</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -1711,22 +2190,34 @@ ${CMAKE_CXX_COMPILER_INIT}</argument>
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_CXX_COMPILER_ID_RUN</argument>
-          <start>
-            <offset>3244</offset>
-          </start>
-          <end>
-            <offset>3268</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_CXX_COMPILER_ID_RUN</value>
+              <start>
+                <offset>3244</offset>
+              </start>
+              <end>
+                <offset>3268</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>1</argument>
-          <start>
-            <offset>3270</offset>
-          </start>
-          <end>
-            <offset>3270</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>1</value>
+              <start>
+                <offset>3270</offset>
+              </start>
+              <end>
+                <offset>3270</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -1755,13 +2246,19 @@ ${CMAKE_CXX_COMPILER_INIT}</argument>
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_CXX_COMPILER_ID</argument>
-          <start>
-            <offset>3314</offset>
-          </start>
-          <end>
-            <offset>3334</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_CXX_COMPILER_ID</value>
+              <start>
+                <offset>3314</offset>
+              </start>
+              <end>
+                <offset>3334</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -1776,13 +2273,19 @@ ${CMAKE_CXX_COMPILER_INIT}</argument>
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_CXX_PLATFORM_ID</argument>
-          <start>
-            <offset>3343</offset>
-          </start>
-          <end>
-            <offset>3363</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_CXX_PLATFORM_ID</value>
+              <start>
+                <offset>3343</offset>
+              </start>
+              <end>
+                <offset>3363</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -1797,20 +2300,34 @@ ${CMAKE_CXX_COMPILER_INIT}</argument>
       <commandName>file</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>READ</argument>
-          <start>
-            <offset>3373</offset>
-          </start>
-          <end>
-            <offset>3376</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>READ</value>
+              <start>
+                <offset>3373</offset>
+              </start>
+              <end>
+                <offset>3376</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_ROOT}/Modules/CMakePlatformId.h.in
-</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_ROOT}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_ROOT</value>
+                  <start>
+                    <offset>3380</offset>
+                  </start>
+                  <end>
+                    <offset>3389</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>3378</offset>
               </start>
@@ -1818,22 +2335,34 @@ ${CMAKE_CXX_COMPILER_INIT}</argument>
                 <offset>3390</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/Modules/CMakePlatformId.h.in
+</value>
+              <start>
+                <offset>3390</offset>
+              </start>
+              <end>
+                <offset>3420</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
-          <start>
-            <offset>3378</offset>
-          </start>
-          <end>
-            <offset>3420</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_CXX_COMPILER_ID_PLATFORM_CONTENT</argument>
-          <start>
-            <offset>3425</offset>
-          </start>
-          <end>
-            <offset>3462</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_CXX_COMPILER_ID_PLATFORM_CONTENT</value>
+              <start>
+                <offset>3425</offset>
+              </start>
+              <end>
+                <offset>3462</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -1876,31 +2405,49 @@ ${CMAKE_CXX_COMPILER_INIT}</argument>
       <commandName>list</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>APPEND</argument>
-          <start>
-            <offset>3572</offset>
-          </start>
-          <end>
-            <offset>3577</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>APPEND</value>
+              <start>
+                <offset>3572</offset>
+              </start>
+              <end>
+                <offset>3577</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_CXX_COMPILER_ID_VENDORS</argument>
-          <start>
-            <offset>3579</offset>
-          </start>
-          <end>
-            <offset>3607</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_CXX_COMPILER_ID_VENDORS</value>
+              <start>
+                <offset>3579</offset>
+              </start>
+              <end>
+                <offset>3607</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>IAR</argument>
-          <start>
-            <offset>3609</offset>
-          </start>
-          <end>
-            <offset>3611</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>IAR</value>
+              <start>
+                <offset>3609</offset>
+              </start>
+              <end>
+                <offset>3611</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -1915,13 +2462,19 @@ ${CMAKE_CXX_COMPILER_INIT}</argument>
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_CXX_COMPILER_ID_VENDOR_FLAGS_IAR</argument>
-          <start>
-            <offset>3620</offset>
-          </start>
-          <end>
-            <offset>3657</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_CXX_COMPILER_ID_VENDOR_FLAGS_IAR</value>
+              <start>
+                <offset>3620</offset>
+              </start>
+              <end>
+                <offset>3657</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -1936,16 +2489,32 @@ ${CMAKE_CXX_COMPILER_INIT}</argument>
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_CXX_COMPILER_ID_VENDOR_REGEX_IAR</argument>
-          <start>
-            <offset>3667</offset>
-          </start>
-          <end>
-            <offset>3704</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_CXX_COMPILER_ID_VENDOR_REGEX_IAR</value>
+              <start>
+                <offset>3667</offset>
+              </start>
+              <end>
+                <offset>3704</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>IAR .+ Compiler</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>IAR .+ Compiler</value>
+              <start>
+                <offset>3707</offset>
+              </start>
+              <end>
+                <offset>3721</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>3706</offset>
           </start>
@@ -2036,16 +2605,24 @@ ${CMAKE_CXX_COMPILER_INIT}</argument>
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_CXX_COMPILER_ID_TOOL_MATCH_REGEX</argument>
-          <start>
-            <offset>3914</offset>
-          </start>
-          <end>
-            <offset>3951</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_CXX_COMPILER_ID_TOOL_MATCH_REGEX</value>
+              <start>
+                <offset>3914</offset>
+              </start>
+              <end>
+                <offset>3951</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>\
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>\
 Ld[^\
 ]*(\
 [ \	]+[^\
@@ -2054,7 +2631,15 @@ Ld[^\
 ]+)[^\&#x0D;\
 ]*-o[^\&#x0D;\
 ]*CompilerIdCXX/(\\./)?(CompilerIdCXX.xctest/)?CompilerIdCXX[ \	\
-\\\&quot;]</argument>
+\\\&quot;]</value>
+              <start>
+                <offset>3954</offset>
+              </start>
+              <end>
+                <offset>4088</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>3953</offset>
           </start>
@@ -2075,22 +2660,34 @@ Ld[^\
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_CXX_COMPILER_ID_TOOL_MATCH_INDEX</argument>
-          <start>
-            <offset>4098</offset>
-          </start>
-          <end>
-            <offset>4135</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_CXX_COMPILER_ID_TOOL_MATCH_INDEX</value>
+              <start>
+                <offset>4098</offset>
+              </start>
+              <end>
+                <offset>4135</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>2</argument>
-          <start>
-            <offset>4137</offset>
-          </start>
-          <end>
-            <offset>4137</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>2</value>
+              <start>
+                <offset>4137</offset>
+              </start>
+              <end>
+                <offset>4137</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -2105,10 +2702,19 @@ Ld[^\
       <commandName>include</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_ROOT}/Modules/CMakeDetermineCompilerId.cmake</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_ROOT}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_ROOT</value>
+                  <start>
+                    <offset>4153</offset>
+                  </start>
+                  <end>
+                    <offset>4162</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>4151</offset>
               </start>
@@ -2116,13 +2722,18 @@ Ld[^\
                 <offset>4163</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/Modules/CMakeDetermineCompilerId.cmake</value>
+              <start>
+                <offset>4163</offset>
+              </start>
+              <end>
+                <offset>4202</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
-          <start>
-            <offset>4151</offset>
-          </start>
-          <end>
-            <offset>4202</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -2137,31 +2748,49 @@ Ld[^\
       <commandName>CMAKE_DETERMINE_COMPILER_ID</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CXX</argument>
-          <start>
-            <offset>4235</offset>
-          </start>
-          <end>
-            <offset>4237</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CXX</value>
+              <start>
+                <offset>4235</offset>
+              </start>
+              <end>
+                <offset>4237</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CXXFLAGS</argument>
-          <start>
-            <offset>4239</offset>
-          </start>
-          <end>
-            <offset>4246</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CXXFLAGS</value>
+              <start>
+                <offset>4239</offset>
+              </start>
+              <end>
+                <offset>4246</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMakeCXXCompilerId.cpp</argument>
-          <start>
-            <offset>4248</offset>
-          </start>
-          <end>
-            <offset>4269</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMakeCXXCompilerId.cpp</value>
+              <start>
+                <offset>4248</offset>
+              </start>
+              <end>
+                <offset>4269</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -2190,25 +2819,47 @@ Ld[^\
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_CXX_COMPILER_ID</argument>
-          <start>
-            <offset>4326</offset>
-          </start>
-          <end>
-            <offset>4346</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_CXX_COMPILER_ID</value>
+              <start>
+                <offset>4326</offset>
+              </start>
+              <end>
+                <offset>4346</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>STREQUAL</argument>
-          <start>
-            <offset>4348</offset>
-          </start>
-          <end>
-            <offset>4355</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>STREQUAL</value>
+              <start>
+                <offset>4348</offset>
+              </start>
+              <end>
+                <offset>4355</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>GNU</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>GNU</value>
+              <start>
+                <offset>4358</offset>
+              </start>
+              <end>
+                <offset>4360</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>4357</offset>
           </start>
@@ -2229,22 +2880,34 @@ Ld[^\
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_COMPILER_IS_GNUCXX</argument>
-          <start>
-            <offset>4372</offset>
-          </start>
-          <end>
-            <offset>4395</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_COMPILER_IS_GNUCXX</value>
+              <start>
+                <offset>4372</offset>
+              </start>
+              <end>
+                <offset>4395</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>1</argument>
-          <start>
-            <offset>4397</offset>
-          </start>
-          <end>
-            <offset>4397</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>1</value>
+              <start>
+                <offset>4397</offset>
+              </start>
+              <end>
+                <offset>4397</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -2270,25 +2933,47 @@ Ld[^\
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_CXX_PLATFORM_ID</argument>
-          <start>
-            <offset>4415</offset>
-          </start>
-          <end>
-            <offset>4435</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_CXX_PLATFORM_ID</value>
+              <start>
+                <offset>4415</offset>
+              </start>
+              <end>
+                <offset>4435</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>MATCHES</argument>
-          <start>
-            <offset>4437</offset>
-          </start>
-          <end>
-            <offset>4443</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>MATCHES</value>
+              <start>
+                <offset>4437</offset>
+              </start>
+              <end>
+                <offset>4443</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>MinGW</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>MinGW</value>
+              <start>
+                <offset>4446</offset>
+              </start>
+              <end>
+                <offset>4450</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>4445</offset>
           </start>
@@ -2309,22 +2994,34 @@ Ld[^\
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_COMPILER_IS_MINGW</argument>
-          <start>
-            <offset>4462</offset>
-          </start>
-          <end>
-            <offset>4484</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_COMPILER_IS_MINGW</value>
+              <start>
+                <offset>4462</offset>
+              </start>
+              <end>
+                <offset>4484</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>1</argument>
-          <start>
-            <offset>4486</offset>
-          </start>
-          <end>
-            <offset>4486</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>1</value>
+              <start>
+                <offset>4486</offset>
+              </start>
+              <end>
+                <offset>4486</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -2339,25 +3036,47 @@ Ld[^\
       <commandName>elseif</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_CXX_PLATFORM_ID</argument>
-          <start>
-            <offset>4498</offset>
-          </start>
-          <end>
-            <offset>4518</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_CXX_PLATFORM_ID</value>
+              <start>
+                <offset>4498</offset>
+              </start>
+              <end>
+                <offset>4518</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>MATCHES</argument>
-          <start>
-            <offset>4520</offset>
-          </start>
-          <end>
-            <offset>4526</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>MATCHES</value>
+              <start>
+                <offset>4520</offset>
+              </start>
+              <end>
+                <offset>4526</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>Cygwin</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>Cygwin</value>
+              <start>
+                <offset>4529</offset>
+              </start>
+              <end>
+                <offset>4534</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>4528</offset>
           </start>
@@ -2378,22 +3097,34 @@ Ld[^\
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_COMPILER_IS_CYGWIN</argument>
-          <start>
-            <offset>4546</offset>
-          </start>
-          <end>
-            <offset>4569</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_COMPILER_IS_CYGWIN</value>
+              <start>
+                <offset>4546</offset>
+              </start>
+              <end>
+                <offset>4569</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>1</argument>
-          <start>
-            <offset>4571</offset>
-          </start>
-          <end>
-            <offset>4571</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>1</value>
+              <start>
+                <offset>4571</offset>
+              </start>
+              <end>
+                <offset>4571</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -2430,22 +3161,34 @@ Ld[^\
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>NOT</argument>
-          <start>
-            <offset>4597</offset>
-          </start>
-          <end>
-            <offset>4599</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>NOT</value>
+              <start>
+                <offset>4597</offset>
+              </start>
+              <end>
+                <offset>4599</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>_CMAKE_TOOLCHAIN_LOCATION</argument>
-          <start>
-            <offset>4601</offset>
-          </start>
-          <end>
-            <offset>4625</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_CMAKE_TOOLCHAIN_LOCATION</value>
+              <start>
+                <offset>4601</offset>
+              </start>
+              <end>
+                <offset>4625</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -2460,19 +3203,34 @@ Ld[^\
       <commandName>get_filename_component</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>_CMAKE_TOOLCHAIN_LOCATION</argument>
-          <start>
-            <offset>4653</offset>
-          </start>
-          <end>
-            <offset>4677</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_CMAKE_TOOLCHAIN_LOCATION</value>
+              <start>
+                <offset>4653</offset>
+              </start>
+              <end>
+                <offset>4677</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_CXX_COMPILER}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_CXX_COMPILER}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_CXX_COMPILER</value>
+                  <start>
+                    <offset>4682</offset>
+                  </start>
+                  <end>
+                    <offset>4699</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>4680</offset>
               </start>
@@ -2489,13 +3247,19 @@ Ld[^\
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>PATH</argument>
-          <start>
-            <offset>4703</offset>
-          </start>
-          <end>
-            <offset>4706</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>PATH</value>
+              <start>
+                <offset>4703</offset>
+              </start>
+              <end>
+                <offset>4706</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -2619,40 +3383,64 @@ Ld[^\
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_CROSSCOMPILING</argument>
-          <start>
-            <offset>5218</offset>
-          </start>
-          <end>
-            <offset>5237</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_CROSSCOMPILING</value>
+              <start>
+                <offset>5218</offset>
+              </start>
+              <end>
+                <offset>5237</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>AND</argument>
-          <start>
-            <offset>5240</offset>
-          </start>
-          <end>
-            <offset>5242</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>AND</value>
+              <start>
+                <offset>5240</offset>
+              </start>
+              <end>
+                <offset>5242</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>NOT</argument>
-          <start>
-            <offset>5244</offset>
-          </start>
-          <end>
-            <offset>5246</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>NOT</value>
+              <start>
+                <offset>5244</offset>
+              </start>
+              <end>
+                <offset>5246</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>_CMAKE_TOOLCHAIN_PREFIX</argument>
-          <start>
-            <offset>5249</offset>
-          </start>
-          <end>
-            <offset>5271</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_CMAKE_TOOLCHAIN_PREFIX</value>
+              <start>
+                <offset>5249</offset>
+              </start>
+              <end>
+                <offset>5271</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -2667,10 +3455,19 @@ Ld[^\
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_CXX_COMPILER_ID}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_CXX_COMPILER_ID}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_CXX_COMPILER_ID</value>
+                  <start>
+                    <offset>5283</offset>
+                  </start>
+                  <end>
+                    <offset>5303</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>5281</offset>
               </start>
@@ -2687,16 +3484,32 @@ Ld[^\
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>MATCHES</argument>
-          <start>
-            <offset>5307</offset>
-          </start>
-          <end>
-            <offset>5313</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>MATCHES</value>
+              <start>
+                <offset>5307</offset>
+              </start>
+              <end>
+                <offset>5313</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>GNU</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>GNU</value>
+              <start>
+                <offset>5316</offset>
+              </start>
+              <end>
+                <offset>5318</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>5315</offset>
           </start>
@@ -2705,19 +3518,34 @@ Ld[^\
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>OR</argument>
-          <start>
-            <offset>5321</offset>
-          </start>
-          <end>
-            <offset>5322</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>OR</value>
+              <start>
+                <offset>5321</offset>
+              </start>
+              <end>
+                <offset>5322</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_CXX_COMPILER_ID}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_CXX_COMPILER_ID}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_CXX_COMPILER_ID</value>
+                  <start>
+                    <offset>5327</offset>
+                  </start>
+                  <end>
+                    <offset>5347</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>5325</offset>
               </start>
@@ -2734,16 +3562,32 @@ Ld[^\
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>MATCHES</argument>
-          <start>
-            <offset>5351</offset>
-          </start>
-          <end>
-            <offset>5357</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>MATCHES</value>
+              <start>
+                <offset>5351</offset>
+              </start>
+              <end>
+                <offset>5357</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>Clang</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>Clang</value>
+              <start>
+                <offset>5360</offset>
+              </start>
+              <end>
+                <offset>5364</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>5359</offset>
           </start>
@@ -2764,19 +3608,34 @@ Ld[^\
       <commandName>get_filename_component</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>COMPILER_BASENAME</argument>
-          <start>
-            <offset>5395</offset>
-          </start>
-          <end>
-            <offset>5411</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>COMPILER_BASENAME</value>
+              <start>
+                <offset>5395</offset>
+              </start>
+              <end>
+                <offset>5411</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_CXX_COMPILER}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_CXX_COMPILER}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_CXX_COMPILER</value>
+                  <start>
+                    <offset>5416</offset>
+                  </start>
+                  <end>
+                    <offset>5433</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>5414</offset>
               </start>
@@ -2793,13 +3652,19 @@ Ld[^\
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>NAME</argument>
-          <start>
-            <offset>5437</offset>
-          </start>
-          <end>
-            <offset>5440</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>NAME</value>
+              <start>
+                <offset>5437</offset>
+              </start>
+              <end>
+                <offset>5440</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -2814,25 +3679,47 @@ Ld[^\
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>COMPILER_BASENAME</argument>
-          <start>
-            <offset>5451</offset>
-          </start>
-          <end>
-            <offset>5467</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>COMPILER_BASENAME</value>
+              <start>
+                <offset>5451</offset>
+              </start>
+              <end>
+                <offset>5467</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>MATCHES</argument>
-          <start>
-            <offset>5469</offset>
-          </start>
-          <end>
-            <offset>5475</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>MATCHES</value>
+              <start>
+                <offset>5469</offset>
+              </start>
+              <end>
+                <offset>5475</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>^(.+-)(clan)?[gc]\\+\\+(-[0-9]+\\.[0-9]+\\.[0-9]+)?(\\.exe)?$</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>^(.+-)(clan)?[gc]\\+\\+(-[0-9]+\\.[0-9]+\\.[0-9]+)?(\\.exe)?$</value>
+              <start>
+                <offset>5478</offset>
+              </start>
+              <end>
+                <offset>5538</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>5477</offset>
           </start>
@@ -2853,19 +3740,34 @@ Ld[^\
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>_CMAKE_TOOLCHAIN_PREFIX</argument>
-          <start>
-            <offset>5552</offset>
-          </start>
-          <end>
-            <offset>5574</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_CMAKE_TOOLCHAIN_PREFIX</value>
+              <start>
+                <offset>5552</offset>
+              </start>
+              <end>
+                <offset>5574</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_MATCH_1}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_MATCH_1}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_MATCH_1</value>
+                  <start>
+                    <offset>5578</offset>
+                  </start>
+                  <end>
+                    <offset>5590</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>5576</offset>
               </start>
@@ -2874,12 +3776,8 @@ Ld[^\
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>5576</offset>
-          </start>
-          <end>
-            <offset>5591</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -2894,10 +3792,19 @@ Ld[^\
       <commandName>elseif</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_CXX_COMPILER_ID}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_CXX_COMPILER_ID}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_CXX_COMPILER_ID</value>
+                  <start>
+                    <offset>5608</offset>
+                  </start>
+                  <end>
+                    <offset>5628</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>5606</offset>
               </start>
@@ -2914,16 +3821,32 @@ Ld[^\
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>MATCHES</argument>
-          <start>
-            <offset>5632</offset>
-          </start>
-          <end>
-            <offset>5638</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>MATCHES</value>
+              <start>
+                <offset>5632</offset>
+              </start>
+              <end>
+                <offset>5638</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>Clang</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>Clang</value>
+              <start>
+                <offset>5641</offset>
+              </start>
+              <end>
+                <offset>5645</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>5640</offset>
           </start>
@@ -2944,13 +3867,19 @@ Ld[^\
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_CXX_COMPILER_TARGET</argument>
-          <start>
-            <offset>5658</offset>
-          </start>
-          <end>
-            <offset>5682</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_CXX_COMPILER_TARGET</value>
+              <start>
+                <offset>5658</offset>
+              </start>
+              <end>
+                <offset>5682</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -2965,19 +3894,34 @@ Ld[^\
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>_CMAKE_TOOLCHAIN_PREFIX</argument>
-          <start>
-            <offset>5697</offset>
-          </start>
-          <end>
-            <offset>5719</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_CMAKE_TOOLCHAIN_PREFIX</value>
+              <start>
+                <offset>5697</offset>
+              </start>
+              <end>
+                <offset>5719</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_CXX_COMPILER_TARGET}-</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_CXX_COMPILER_TARGET}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_CXX_COMPILER_TARGET</value>
+                  <start>
+                    <offset>5723</offset>
+                  </start>
+                  <end>
+                    <offset>5747</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>5721</offset>
               </start>
@@ -2985,13 +3929,18 @@ Ld[^\
                 <offset>5748</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>-</value>
+              <start>
+                <offset>5748</offset>
+              </start>
+              <end>
+                <offset>5749</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
-          <start>
-            <offset>5721</offset>
-          </start>
-          <end>
-            <offset>5749</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -3017,25 +3966,47 @@ Ld[^\
       <commandName>elseif</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>COMPILER_BASENAME</argument>
-          <start>
-            <offset>5777</offset>
-          </start>
-          <end>
-            <offset>5793</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>COMPILER_BASENAME</value>
+              <start>
+                <offset>5777</offset>
+              </start>
+              <end>
+                <offset>5793</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>MATCHES</argument>
-          <start>
-            <offset>5795</offset>
-          </start>
-          <end>
-            <offset>5801</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>MATCHES</value>
+              <start>
+                <offset>5795</offset>
+              </start>
+              <end>
+                <offset>5801</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>QCC(\\.exe)?$</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>QCC(\\.exe)?$</value>
+              <start>
+                <offset>5804</offset>
+              </start>
+              <end>
+                <offset>5816</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>5803</offset>
           </start>
@@ -3056,25 +4027,47 @@ Ld[^\
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_CXX_COMPILER_TARGET</argument>
-          <start>
-            <offset>5829</offset>
-          </start>
-          <end>
-            <offset>5853</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_CXX_COMPILER_TARGET</value>
+              <start>
+                <offset>5829</offset>
+              </start>
+              <end>
+                <offset>5853</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>MATCHES</argument>
-          <start>
-            <offset>5855</offset>
-          </start>
-          <end>
-            <offset>5861</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>MATCHES</value>
+              <start>
+                <offset>5855</offset>
+              </start>
+              <end>
+                <offset>5861</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>gcc_nto([^_le]+)(le)?</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>gcc_nto([^_le]+)(le)?</value>
+              <start>
+                <offset>5864</offset>
+              </start>
+              <end>
+                <offset>5884</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>5863</offset>
           </start>
@@ -3095,19 +4088,43 @@ Ld[^\
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>_CMAKE_TOOLCHAIN_PREFIX</argument>
-          <start>
-            <offset>5900</offset>
-          </start>
-          <end>
-            <offset>5922</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_CMAKE_TOOLCHAIN_PREFIX</value>
+              <start>
+                <offset>5900</offset>
+              </start>
+              <end>
+                <offset>5922</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>nto${CMAKE_MATCH_1}-</argument>
           <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>nto</value>
+              <start>
+                <offset>5924</offset>
+              </start>
+              <end>
+                <offset>5926</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_MATCH_1}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_MATCH_1</value>
+                  <start>
+                    <offset>5929</offset>
+                  </start>
+                  <end>
+                    <offset>5941</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>5927</offset>
               </start>
@@ -3115,13 +4132,18 @@ Ld[^\
                 <offset>5942</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>-</value>
+              <start>
+                <offset>5942</offset>
+              </start>
+              <end>
+                <offset>5943</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
-          <start>
-            <offset>5924</offset>
-          </start>
-          <end>
-            <offset>5943</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode[2]/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -3186,10 +4208,19 @@ Ld[^\
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${_CMAKE_TOOLCHAIN_PREFIX}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${_CMAKE_TOOLCHAIN_PREFIX}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>_CMAKE_TOOLCHAIN_PREFIX</value>
+                  <start>
+                    <offset>6153</offset>
+                  </start>
+                  <end>
+                    <offset>6175</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>6151</offset>
               </start>
@@ -3206,16 +4237,32 @@ Ld[^\
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>MATCHES</argument>
-          <start>
-            <offset>6179</offset>
-          </start>
-          <end>
-            <offset>6185</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>MATCHES</value>
+              <start>
+                <offset>6179</offset>
+              </start>
+              <end>
+                <offset>6185</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>(.+-)?llvm-$</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>(.+-)?llvm-$</value>
+              <start>
+                <offset>6188</offset>
+              </start>
+              <end>
+                <offset>6199</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>6187</offset>
           </start>
@@ -3236,19 +4283,34 @@ Ld[^\
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>_CMAKE_TOOLCHAIN_PREFIX</argument>
-          <start>
-            <offset>6213</offset>
-          </start>
-          <end>
-            <offset>6235</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_CMAKE_TOOLCHAIN_PREFIX</value>
+              <start>
+                <offset>6213</offset>
+              </start>
+              <end>
+                <offset>6235</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_MATCH_1}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_MATCH_1}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_MATCH_1</value>
+                  <start>
+                    <offset>6239</offset>
+                  </start>
+                  <end>
+                    <offset>6251</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>6237</offset>
               </start>
@@ -3257,12 +4319,8 @@ Ld[^\
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>6237</offset>
-          </start>
-          <end>
-            <offset>6252</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -3288,10 +4346,19 @@ Ld[^\
       <commandName>elseif</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_CXX_COMPILER_ID}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_CXX_COMPILER_ID}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_CXX_COMPILER_ID</value>
+                  <start>
+                    <offset>6280</offset>
+                  </start>
+                  <end>
+                    <offset>6300</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>6278</offset>
               </start>
@@ -3308,16 +4375,32 @@ Ld[^\
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>MATCHES</argument>
-          <start>
-            <offset>6304</offset>
-          </start>
-          <end>
-            <offset>6310</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>MATCHES</value>
+              <start>
+                <offset>6304</offset>
+              </start>
+              <end>
+                <offset>6310</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>TI</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>TI</value>
+              <start>
+                <offset>6313</offset>
+              </start>
+              <end>
+                <offset>6314</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>6312</offset>
           </start>
@@ -3352,19 +4435,34 @@ Ld[^\
       <commandName>get_filename_component</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>COMPILER_BASENAME</argument>
-          <start>
-            <offset>6404</offset>
-          </start>
-          <end>
-            <offset>6420</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>COMPILER_BASENAME</value>
+              <start>
+                <offset>6404</offset>
+              </start>
+              <end>
+                <offset>6420</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_CXX_COMPILER}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_CXX_COMPILER}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_CXX_COMPILER</value>
+                  <start>
+                    <offset>6425</offset>
+                  </start>
+                  <end>
+                    <offset>6442</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>6423</offset>
               </start>
@@ -3381,13 +4479,19 @@ Ld[^\
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>NAME</argument>
-          <start>
-            <offset>6446</offset>
-          </start>
-          <end>
-            <offset>6449</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>NAME</value>
+              <start>
+                <offset>6446</offset>
+              </start>
+              <end>
+                <offset>6449</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -3402,25 +4506,47 @@ Ld[^\
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>COMPILER_BASENAME</argument>
-          <start>
-            <offset>6460</offset>
-          </start>
-          <end>
-            <offset>6476</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>COMPILER_BASENAME</value>
+              <start>
+                <offset>6460</offset>
+              </start>
+              <end>
+                <offset>6476</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>MATCHES</argument>
-          <start>
-            <offset>6478</offset>
-          </start>
-          <end>
-            <offset>6484</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>MATCHES</value>
+              <start>
+                <offset>6478</offset>
+              </start>
+              <end>
+                <offset>6484</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>^(.+)?cl([^.]+)?(\\.exe)?$</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>^(.+)?cl([^.]+)?(\\.exe)?$</value>
+              <start>
+                <offset>6487</offset>
+              </start>
+              <end>
+                <offset>6512</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>6486</offset>
           </start>
@@ -3441,19 +4567,34 @@ Ld[^\
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>_CMAKE_TOOLCHAIN_PREFIX</argument>
-          <start>
-            <offset>6526</offset>
-          </start>
-          <end>
-            <offset>6548</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_CMAKE_TOOLCHAIN_PREFIX</value>
+              <start>
+                <offset>6526</offset>
+              </start>
+              <end>
+                <offset>6548</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_MATCH_1}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_MATCH_1}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_MATCH_1</value>
+                  <start>
+                    <offset>6553</offset>
+                  </start>
+                  <end>
+                    <offset>6565</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>6551</offset>
               </start>
@@ -3482,19 +4623,34 @@ Ld[^\
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>_CMAKE_TOOLCHAIN_SUFFIX</argument>
-          <start>
-            <offset>6580</offset>
-          </start>
-          <end>
-            <offset>6602</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_CMAKE_TOOLCHAIN_SUFFIX</value>
+              <start>
+                <offset>6580</offset>
+              </start>
+              <end>
+                <offset>6602</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_MATCH_2}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_MATCH_2}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_MATCH_2</value>
+                  <start>
+                    <offset>6607</offset>
+                  </start>
+                  <end>
+                    <offset>6619</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>6605</offset>
               </start>
@@ -3556,13 +4712,19 @@ Ld[^\
       <commandName>include</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMakeFindBinUtils</argument>
-          <start>
-            <offset>6667</offset>
-          </start>
-          <end>
-            <offset>6683</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMakeFindBinUtils</value>
+              <start>
+                <offset>6667</offset>
+              </start>
+              <end>
+                <offset>6683</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -3577,13 +4739,19 @@ Ld[^\
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>MSVC_CXX_ARCHITECTURE_ID</argument>
-          <start>
-            <offset>6689</offset>
-          </start>
-          <end>
-            <offset>6712</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>MSVC_CXX_ARCHITECTURE_ID</value>
+              <start>
+                <offset>6689</offset>
+              </start>
+              <end>
+                <offset>6712</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -3598,20 +4766,44 @@ Ld[^\
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>SET_MSVC_CXX_ARCHITECTURE_ID
-</argument>
-          <start>
-            <offset>6721</offset>
-          </start>
-          <end>
-            <offset>6749</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>SET_MSVC_CXX_ARCHITECTURE_ID
+</value>
+              <start>
+                <offset>6721</offset>
+              </start>
+              <end>
+                <offset>6749</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>set(MSVC_CXX_ARCHITECTURE_ID ${MSVC_CXX_ARCHITECTURE_ID})</argument>
           <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>set(MSVC_CXX_ARCHITECTURE_ID </value>
+              <start>
+                <offset>6755</offset>
+              </start>
+              <end>
+                <offset>6783</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${MSVC_CXX_ARCHITECTURE_ID}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>MSVC_CXX_ARCHITECTURE_ID</value>
+                  <start>
+                    <offset>6786</offset>
+                  </start>
+                  <end>
+                    <offset>6809</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>6784</offset>
               </start>
@@ -3619,6 +4811,15 @@ Ld[^\
                 <offset>6810</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>)</value>
+              <start>
+                <offset>6810</offset>
+              </start>
+              <end>
+                <offset>6811</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
           <start>
             <offset>6754</offset>
@@ -3665,11 +4866,19 @@ Ld[^\
       <commandName>configure_file</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_ROOT}/Modules/CMakeCXXCompiler.cmake.in
-</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_ROOT}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_ROOT</value>
+                  <start>
+                    <offset>6884</offset>
+                  </start>
+                  <end>
+                    <offset>6893</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>6882</offset>
               </start>
@@ -3677,20 +4886,34 @@ Ld[^\
                 <offset>6894</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/Modules/CMakeCXXCompiler.cmake.in
+</value>
+              <start>
+                <offset>6894</offset>
+              </start>
+              <end>
+                <offset>6929</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
-          <start>
-            <offset>6882</offset>
-          </start>
-          <end>
-            <offset>6929</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_PLATFORM_INFO_DIR}/CMakeCXXCompiler.cmake
-</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_PLATFORM_INFO_DIR}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_PLATFORM_INFO_DIR</value>
+                  <start>
+                    <offset>6934</offset>
+                  </start>
+                  <end>
+                    <offset>6956</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>6932</offset>
               </start>
@@ -3698,23 +4921,35 @@ Ld[^\
                 <offset>6957</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/CMakeCXXCompiler.cmake
+</value>
+              <start>
+                <offset>6957</offset>
+              </start>
+              <end>
+                <offset>6981</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
-          <start>
-            <offset>6932</offset>
-          </start>
-          <end>
-            <offset>6981</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>@ONLY
-</argument>
-          <start>
-            <offset>6984</offset>
-          </start>
-          <end>
-            <offset>6989</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>@ONLY
+</value>
+              <start>
+                <offset>6984</offset>
+              </start>
+              <end>
+                <offset>6989</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -3729,16 +4964,32 @@ Ld[^\
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_CXX_COMPILER_ENV_VAR</argument>
-          <start>
-            <offset>6999</offset>
-          </start>
-          <end>
-            <offset>7024</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_CXX_COMPILER_ENV_VAR</value>
+              <start>
+                <offset>6999</offset>
+              </start>
+              <end>
+                <offset>7024</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CXX</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CXX</value>
+              <start>
+                <offset>7027</offset>
+              </start>
+              <end>
+                <offset>7029</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>7026</offset>
           </start>

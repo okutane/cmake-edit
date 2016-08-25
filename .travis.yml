@@ -2,4 +2,4 @@ script: mvn compile
 jdk:
   - oraclejdk8
 after_success:
-  - mvn org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar -Dsonar.host.url=https://sonarqube.com -Dsonar.login=9cbedb34e2ab1cb418b2b0e48b5ef23000769f58
+  - ./check.sh

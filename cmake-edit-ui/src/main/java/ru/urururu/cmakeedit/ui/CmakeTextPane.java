@@ -67,8 +67,8 @@ class CmakeTextPane extends JScrollPane implements DocumentListener, NodeVisitor
         try {
             fileNode = Parser.parse(new DocumentParseContext(styledDocument), Parser.ErrorHandling.NodesBefore);
         } catch (ParseException e) {
-            // can't be thrown since we're using Parser.ErrorHandling.NodesBefore
-            return;
+            // shouldn't be reachable, we're returning partially parsed tree.
+            throw new IllegalStateException(e);
         }
 
         fileNode.visitAll(CmakeTextPane.this);

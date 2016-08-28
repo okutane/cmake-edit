@@ -155,7 +155,7 @@ public class Checker {
                         throw new LogicalException("Unknown CMake command '" + commandName + "'", node, node);
                     }
 
-                    state.simulate(suspiciousPoints, state.getCurrent());
+                    state.simulate(state.getCurrent());
                     super.process(state, node);
                 }
             };

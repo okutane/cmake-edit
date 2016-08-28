@@ -54,7 +54,7 @@ class AbstractSimulator {
             LogicalBlock branches = LogicalBlockFinder.findIfNodes(state.getNodes(), state.getPosition());
 
             for (CommandInvocationNode header : branches.headers) {
-                state.simulate(suspiciousPoints, header);
+                state.simulate(header);
             }
 
             List<SimulationState> newStates = new ArrayList<>();
@@ -105,7 +105,7 @@ class AbstractSimulator {
 
     private SimulationState simulateLoop(CheckContext ctx, SimulationState state, LogicalBlock logicalBlock) throws LogicalException {
         for (CommandInvocationNode header : logicalBlock.headers) {
-            state.simulate(suspiciousPoints, header);
+            state.simulate(header);
         }
 
         List<SimulationState> loopStates = new ArrayList<>();

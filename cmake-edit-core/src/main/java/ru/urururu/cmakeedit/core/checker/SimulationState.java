@@ -114,7 +114,7 @@ class SimulationState {
         return sb.toString();
     }
 
-    void simulate(Set<CommandInvocationNode> suspiciousPoints, Node node) {
+    void simulate(Node node) {
         node.visitAll(new NodeVisitorAdapter() {
             @Override
             public void accept(CommandInvocationNode node) {
@@ -149,31 +149,6 @@ class SimulationState {
                 }
             }
         });
-    }
-
-    private void processExpression(ExpressionNode node, Set<CommandInvocationNode> suspiciousPoints) {
-        if (node.getKey() != null) {
-            return;
-        }
-
-        NodeVisitor visitor = new NodeVisitorAdapter() {
-            @Override
-            public void accept(ConstantNode node) {
-                processUsage(node.getValue(), suspiciousPoints);
-            }
-        };
-
-        node.visitAll(visitor);
-    }
-
-    private void processUsage(String argument, Set<CommandInvocationNode> suspiciousPoints) {
-        Set<CommandInvocationNode> commandInvocationNode = variables.get(argument);
-
-        if (commandInvocationNode == null) {
-            return;
-        }
-
-        suspiciousPoints.removeAll(commandInvocationNode);
     }
 
     public CommandInvocationNode getCurrent() {

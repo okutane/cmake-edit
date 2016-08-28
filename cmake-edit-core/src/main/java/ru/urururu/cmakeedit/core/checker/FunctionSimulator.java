@@ -43,20 +43,12 @@ public class FunctionSimulator implements AbstractSimulator.CommandSimulator {
 
                 SimulationState entryState = new SimulationState(body, 0, state.getSuspiciousPoints());
 
-                AbstractSimulator functionSimulator = new AbstractSimulator(null) {
-                    @Override
-                    protected void init(Map<String, CommandSimulator> simulators) {
-                        simulator.init(simulators);
-                    }
-                };
-
                 exitState = simulator.simulate(functionCtx, entryState);
                 stage = Stage.Used;
         }
 
         state.setPosition(state.getPosition() + 1);
         return state;
-        //throw new IllegalStateException("not implemented");
     }
 
     private enum Stage {

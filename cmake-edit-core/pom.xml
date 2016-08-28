@@ -18,6 +18,12 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.12.4</version>
 
+                <configuration>
+                    <systemPropertyVariables>
+                        <SRC_ROOT>${build.testSourceDirectory}/../resources</SRC_ROOT>
+                    </systemPropertyVariables>
+                </configuration>
+
                 <executions>
                     <execution>
                         <id>default-test</id>

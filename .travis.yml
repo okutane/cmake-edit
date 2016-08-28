@@ -3,3 +3,4 @@ jdk:
   - oraclejdk8
 after_success:
   - ./check.sh
+  - bash <(curl -s https://codecov.io/bash)

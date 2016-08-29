@@ -2,9 +2,7 @@ package ru.urururu.cmakeedit.core.checker;
 
 import ru.urururu.cmakeedit.core.CommandInvocationNode;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Created by okutane on 22/08/16.
@@ -14,6 +12,9 @@ public class FunctionSimulator implements AbstractSimulator.CommandSimulator {
     private final List<CommandInvocationNode> body;
     private Stage stage = Stage.Unused;
     private SimulationState exitState;
+
+    /** Variables from parent scopes are stored here. */
+    private Set<String> unknownUsages = new HashSet<>();
 
     public FunctionSimulator(AbstractSimulator simulator, List<CommandInvocationNode> body) {
         this.simulator = simulator;
@@ -41,11 +42,18 @@ public class FunctionSimulator implements AbstractSimulator.CommandSimulator {
                     }
                 };
 
-                SimulationState entryState = new SimulationState(body, 0, state.getSuspiciousPoints());
+                SimulationState entryState = new SimulationState(body, 0, state.getSuspiciousPoints()) {
+                    @Override
+                    protected void processUnknownUsage(String variable) {
+                        unknownUsages.add(variable);
+                    }
+                };
 
                 exitState = simulator.simulate(functionCtx, entryState);
                 stage = Stage.Used;
         }
+
+        unknownUsages.forEach(state::processUsage);
 
         state.setPosition(state.getPosition() + 1);
         return state;

@@ -26,7 +26,8 @@ class SimulationState {
         this.suspiciousPoints = suspiciousPoints;
     }
 
-    String getNodeFromState(Node argumentNode) {
+    /** todo think of better name */
+    String getValue(Node argumentNode) {
         StringBuilder sb = new StringBuilder();
 
         argumentNode.visitAll(new NodeVisitorAdapter() {
@@ -38,10 +39,10 @@ class SimulationState {
                     exprBuilder.append(node.getKey());
                 }
 
-                node.getNested().stream().forEach(n -> exprBuilder.append(getNodeFromState(n)));
+                node.getNested().stream().forEach(n -> exprBuilder.append(getValue(n)));
 
                 String expr = exprBuilder.toString();
-                getValue(expr);
+                processUsage(expr);
 
                 sb.append('*').append(expr);
             }
@@ -59,24 +60,24 @@ class SimulationState {
         return sb.toString();
     }
 
-    void getValue(ArgumentNode argumentNode) {
-        getNodeFromState(argumentNode);
+    void processUsage(ArgumentNode argumentNode) {
+        getValue(argumentNode);
 
-        getValue(getArgument(argumentNode));
+        processUsage(getArgument(argumentNode));
     }
 
-    protected Set<CommandInvocationNode> getDefault(String variable) {
-        return Collections.emptySet();
+    protected void processUnknownUsage(String variable) {
+
     }
 
-    void getValue(String variable) {
+    void processUsage(String variable) {
         Set<CommandInvocationNode> nodes = variables.get(variable);
 
         if (nodes == null) {
-            nodes = getDefault(variable);
+            processUnknownUsage(variable);
+        } else {
+            suspiciousPoints.removeAll(nodes);
         }
-
-        suspiciousPoints.removeAll(nodes);
     }
 
     void putValue(ArgumentNode argumentNode, CommandInvocationNode command) {
@@ -86,8 +87,8 @@ class SimulationState {
     void putValue(ArgumentNode argumentNode, CommandInvocationNode command, boolean parentScope) {
         // expressions from argumentNode should be used
 
-        // todo inline argumentNode via getValue()
-        variables.put(getNodeFromState(argumentNode), Collections.singleton(command));
+        // todo inline argumentNode via processUsage()
+        variables.put(getValue(argumentNode), Collections.singleton(command));
     }
 
     static String getArgument(Node argumentNode) {
@@ -142,8 +143,8 @@ class SimulationState {
                 List<Node> arguments = node.getArguments();
 
                 for (Node argument : arguments) {
-                    String arg = getNodeFromState(argument);
-                    getValue(arg); // todo shouldnt do for all!
+                    String arg = getValue(argument);
+                    processUsage(arg); // todo shouldnt do for all!
                 }
             }
         });

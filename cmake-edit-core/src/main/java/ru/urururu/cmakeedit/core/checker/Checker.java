@@ -109,7 +109,8 @@ public class Checker {
 
                             String lastValue = null;
                             while (iterator.hasNext()) {
-                                lastValue = state.getValue((ArgumentNode) iterator.next());
+                                lastValue = state.getNodeFromState(iterator.next());
+                                state.getValue(lastValue);
                             }
 
                             boolean parentScope = "PARENT_SCOPE".equals(lastValue);
@@ -127,7 +128,7 @@ public class Checker {
                         @Override
                         public SimulationState simulate(CheckContext ctx, SimulationState state, CommandInvocationNode command) throws LogicalException {
                             List<Node> arguments = command.getArguments();
-                            String operation = state.getValue((ArgumentNode) arguments.get(0));
+                            String operation = state.getNodeFromState(arguments.get(0));
 
                             for (int i = 1; i < arguments.size() - 1; i++) {
                                 // use every argument

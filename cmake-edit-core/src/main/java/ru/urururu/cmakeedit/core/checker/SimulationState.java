@@ -48,37 +48,35 @@ class SimulationState {
 
             @Override
             public void accept(ConstantNode node) {
-                sb.append(node.getValue());
+                String value = node.getValue();
+                if (value.endsWith("\n")) {
+                    value = value.replace("\n", ""); // todo this hack should be replaced by fix in parser!
+                }
+                sb.append(value);
             }
         });
 
         return sb.toString();
     }
 
-    String getValue(ArgumentNode argumentNode) {
+    void getValue(ArgumentNode argumentNode) {
         getNodeFromState(argumentNode);
 
-        return getValue(getArgument(argumentNode));
+        getValue(getArgument(argumentNode));
     }
 
-    String getValue(String expression) {
-        int expressionStart = expression.indexOf("${"); // todo add support for ENV
-        int expressionEnd = expression.lastIndexOf('}');
+    protected Set<CommandInvocationNode> getDefault(String variable) {
+        return Collections.emptySet();
+    }
 
-        String result;
-        if (expressionStart != -1 && expressionEnd > expressionStart) {
-            String sub = expression.substring(expressionStart + 2, expressionEnd);
+    void getValue(String variable) {
+        Set<CommandInvocationNode> nodes = variables.get(variable);
 
-            // todo remove suspicious point for sub or for getValue(sub)?
-
-            result = expression.substring(0, expressionStart) + getValue(sub) + expression.substring(expressionEnd);
-        } else {
-            result = expression;
+        if (nodes == null) {
+            nodes = getDefault(variable);
         }
 
-        suspiciousPoints.removeAll(variables.getOrDefault(result, Collections.emptySet()));
-
-        return result;
+        suspiciousPoints.removeAll(nodes);
     }
 
     void putValue(ArgumentNode argumentNode, CommandInvocationNode command) {

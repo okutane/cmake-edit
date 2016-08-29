@@ -34,7 +34,9 @@ public class ArgumentNode extends Node {
     public void visitAll(NodeVisitor visitor) {
         visitor.accept(this);
         if (children != null) {
-            children.forEach(n -> n.visitAll(visitor));
+            children.forEach(n -> {
+                n.visitAll(visitor);
+            });
         }
     }
 }

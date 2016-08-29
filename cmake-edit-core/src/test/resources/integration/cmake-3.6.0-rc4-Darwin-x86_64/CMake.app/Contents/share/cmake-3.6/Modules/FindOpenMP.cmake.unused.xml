@@ -1,32 +1,6 @@
 <list>
   <problem>
     <problem>Value not used</problem>
-    <details>set(OpenMP_FLAG_CANDIDATES
-    #Empty, if compiler automatically accepts openmp
-    &quot; &quot;
-    #GNU
-    &quot;-fopenmp&quot;
-    #Clang
-    &quot;-fopenmp=libomp&quot;
-    #Microsoft Visual Studio
-    &quot;/openmp&quot;
-    #Intel windows
-    &quot;-Qopenmp&quot;
-    #PathScale, Intel
-    &quot;-openmp&quot;
-    #Sun
-    &quot;-xopenmp&quot;
-    #HP
-    &quot;+Oopenmp&quot;
-    #IBM XL C/c++
-    &quot;-qsmp&quot;
-    #Portland Group, MIPSpro
-    &quot;-mp&quot;
-  )</details>
-    <lineRange>48-69</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
     <details>set(OMP_FLAG_GNU &quot;-fopenmp&quot;)</details>
     <lineRange>71</lineRange>
   </problem>
@@ -89,33 +63,5 @@
     <problem>Value not used</problem>
     <details>set(OMP_FLAG_Cray &quot; &quot;)</details>
     <lineRange>88</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set(OpenMP_C_TEST_SOURCE
-&quot;
-#include &lt;omp.h&gt;
-int main() {
-#ifdef _OPENMP
-  return 0;
-#else
-  breaks_on_purpose
-#endif
-}
-&quot;)</details>
-    <lineRange>102-112</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set(OpenMP_Fortran_TEST_SOURCE
-  &quot;
-      program test
-      use omp_lib
-      integer :: n
-      n = omp_get_num_threads()
-      end program test
-  &quot;
-  )</details>
-    <lineRange>115-123</lineRange>
   </problem>
 </list>

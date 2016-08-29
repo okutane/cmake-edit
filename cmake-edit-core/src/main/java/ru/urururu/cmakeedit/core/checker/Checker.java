@@ -17,9 +17,6 @@ public class Checker {
     static final Map<String, Function<CommandInvocationNode, Node>> setters =
             new HashMap<String, Function<CommandInvocationNode, Node>>() {{
                 put("set", cmd -> {
-                    if (cmd.getArguments().size() > 2 && SimulationState.getArgument(cmd.getArguments().get(cmd.getArguments().size() - 1)).equals("PARENT_SCOPE")){
-                        return null;
-                    }
                     return cmd.getArguments().get(0);
                 });
                 put("list", cmd -> {
@@ -137,7 +134,7 @@ public class Checker {
 
                             ArgumentNode lastArgument = (ArgumentNode) arguments.get(arguments.size() - 1);
                             if (setterOperations.contains(operation)) {
-                                state.putValue(lastArgument, command);
+                                state.putValue(lastArgument, command, false);
                             } else {
                                 // use last argument
                                 state.processUsage(lastArgument);

@@ -3,7 +3,6 @@ package ru.urururu.cmakeedit.core.checker;
 import ru.urururu.cmakeedit.core.*;
 
 import java.util.*;
-import java.util.function.Function;
 
 /**
  * Created by okutane on 16/08/16.
@@ -80,15 +79,17 @@ class SimulationState {
         }
     }
 
-    void putValue(ArgumentNode argumentNode, CommandInvocationNode command) {
-        putValue(argumentNode, command, false);
-    }
-
     void putValue(ArgumentNode argumentNode, CommandInvocationNode command, boolean parentScope) {
-        // expressions from argumentNode should be used
+        // todo check that expressions from argumentNode are used
 
         // todo inline argumentNode via processUsage()
-        variables.put(getValue(argumentNode), Collections.singleton(command));
+        String variable = getValue(argumentNode);
+
+        putValue(command, variable, parentScope);
+    }
+
+    protected void putValue(CommandInvocationNode command, String variable, boolean parentScope) {
+        variables.put(variable, Collections.singleton(command));
     }
 
     static String getArgument(Node argumentNode) {
@@ -119,16 +120,7 @@ class SimulationState {
             public void accept(CommandInvocationNode node) {
                 processUsages(node);
 
-                Function<CommandInvocationNode, Node> setter = Checker.setters.get(node.getCommandName());
-                if (setter != null) {
-                    Node argument = setter.apply(node);
-
-                    if (argument != null) {
-                        String variable = getArgument(argument);
-                        // todo if variable is a reference through other variables we should inline it.
-                        variables.put(variable, Collections.singleton(node));
-                    }
-                } else if (node.getCommandName().equals("unset")) {
+                if (node.getCommandName().equals("unset")) {
                     List<Node> arguments = node.getArguments();
                     if (arguments.size() > 0) {
                         String variable = getArgument(arguments.get(0));

@@ -1,5 +1,6 @@
 package ru.urururu.cmakeedit.core.checker;
 
+import ru.urururu.cmakeedit.core.ArgumentNode;
 import ru.urururu.cmakeedit.core.CommandInvocationNode;
 
 import java.util.*;
@@ -15,6 +16,9 @@ public class FunctionSimulator implements AbstractSimulator.CommandSimulator {
 
     /** Variables from parent scopes are stored here. */
     private Set<String> unknownUsages = new HashSet<>();
+
+    /** Variables written to parent scope are stored here. */
+    private Map<String, Set<CommandInvocationNode>> parentVariables = new HashMap<>();
 
     public FunctionSimulator(AbstractSimulator simulator, List<CommandInvocationNode> body) {
         this.simulator = simulator;
@@ -47,6 +51,15 @@ public class FunctionSimulator implements AbstractSimulator.CommandSimulator {
                     protected void processUnknownUsage(String variable) {
                         unknownUsages.add(variable);
                     }
+
+                    @Override
+                    protected void putValue(CommandInvocationNode command, String variable, boolean parentScope) {
+                        if (parentScope) {
+                            parentVariables.put(variable, Collections.singleton(command));
+                        }
+
+                        super.putValue(command, variable, parentScope);
+                    }
                 };
 
                 exitState = simulator.simulate(functionCtx, entryState);
@@ -54,6 +67,7 @@ public class FunctionSimulator implements AbstractSimulator.CommandSimulator {
         }
 
         unknownUsages.forEach(state::processUsage);
+        parentVariables.forEach((k, nodes) -> state.putValue(nodes.iterator().next(), k, false));
 
         state.setPosition(state.getPosition() + 1);
         return state;

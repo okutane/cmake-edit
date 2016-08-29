@@ -1,6 +1,5 @@
 package ru.urururu.cmakeedit.core.checker;
 
-import ru.urururu.cmakeedit.core.ArgumentNode;
 import ru.urururu.cmakeedit.core.CommandInvocationNode;
 
 import java.util.*;
@@ -12,7 +11,6 @@ public class FunctionSimulator implements AbstractSimulator.CommandSimulator {
     private final AbstractSimulator simulator;
     private final List<CommandInvocationNode> body;
     private Stage stage = Stage.Unused;
-    private SimulationState exitState;
 
     /** Variables from parent scopes are stored here. */
     private Set<String> unknownUsages = new HashSet<>();
@@ -62,7 +60,8 @@ public class FunctionSimulator implements AbstractSimulator.CommandSimulator {
                     }
                 };
 
-                exitState = simulator.simulate(functionCtx, entryState);
+                simulator.simulate(functionCtx, entryState);
+
                 stage = Stage.Used;
         }
 

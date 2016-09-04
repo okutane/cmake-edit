@@ -1,6 +1,8 @@
 package ru.urururu.cmakeedit.core.checker;
 
+import ru.urururu.cmakeedit.core.ArgumentNode;
 import ru.urururu.cmakeedit.core.CommandInvocationNode;
+import ru.urururu.cmakeedit.core.Node;
 
 import java.util.*;
 
@@ -9,6 +11,7 @@ import java.util.*;
  */
 public class FunctionSimulator implements AbstractSimulator.CommandSimulator {
     private final AbstractSimulator simulator;
+    private final List<String> formalParameters;
     private final List<CommandInvocationNode> body;
     private Stage stage = Stage.Unused;
 
@@ -16,10 +19,11 @@ public class FunctionSimulator implements AbstractSimulator.CommandSimulator {
     private Set<String> unknownUsages = new HashSet<>();
 
     /** Variables written to parent scope are stored here. */
-    private Map<String, Set<CommandInvocationNode>> parentVariables = new HashMap<>();
+    private Map<ArgumentNode, Set<CommandInvocationNode>> parentVariables = new HashMap<>();
 
-    public FunctionSimulator(AbstractSimulator simulator, List<CommandInvocationNode> body) {
+    FunctionSimulator(AbstractSimulator simulator, List<String> formalParameters, List<CommandInvocationNode> body) {
         this.simulator = simulator;
+        this.formalParameters = formalParameters;
         this.body = body;
     }
 
@@ -51,12 +55,12 @@ public class FunctionSimulator implements AbstractSimulator.CommandSimulator {
                     }
 
                     @Override
-                    protected void putValue(CommandInvocationNode command, String variable, boolean parentScope) {
+                    void putValue(ArgumentNode argumentNode, CommandInvocationNode command, boolean parentScope) {
                         if (parentScope) {
-                            parentVariables.put(variable, Collections.singleton(command));
+                            parentVariables.put(argumentNode, Collections.singleton(command));
                         }
 
-                        super.putValue(command, variable, parentScope);
+                        super.putValue(argumentNode, command, parentScope);
                     }
                 };
 
@@ -65,11 +69,25 @@ public class FunctionSimulator implements AbstractSimulator.CommandSimulator {
                 stage = Stage.Used;
         }
 
+        Map<String, Node> parameters = mapParameters(formalParameters, command.getArguments());
+
         unknownUsages.forEach(state::processUsage);
-        parentVariables.forEach((k, nodes) -> state.putValue(nodes.iterator().next(), k, false));
+        parentVariables.forEach((k, nodes) -> state.putValue(k, nodes.iterator().next(), parameters, false));
 
         state.setPosition(state.getPosition() + 1);
         return state;
+    }
+
+    private static Map<String, Node> mapParameters(List<String> formalParameters, List<Node> actualParameters) {
+        Map<String, Node> parameters = new LinkedHashMap<>();
+
+        Iterator<String> keys = formalParameters.iterator();
+        Iterator<Node> values = actualParameters.iterator();
+
+        while (keys.hasNext() && values.hasNext()) {
+            parameters.put(keys.next(), values.next());
+        }
+        return parameters;
     }
 
     private enum Stage {

@@ -25,6 +25,10 @@ public class ArgumentNode extends Node {
         this.children = children;
     }
 
+    public List<Node> getChildren() {
+        return children;
+    }
+
     @Override
     public String toString() {
         return "children:" + children + " from:" + getStart().getOffset() + " to: " + getEnd().getOffset();

@@ -5,6 +5,7 @@ import ru.urururu.cmakeedit.core.ArgumentNode;
 import ru.urururu.cmakeedit.core.CommandInvocationNode;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 import static com.codahale.metrics.MetricRegistry.name;
 
@@ -29,7 +30,12 @@ class AbstractSimulator {
             LogicalBlock logicalBlock = LogicalBlockFinder.find(state.getNodes(), state.getPosition(), "endfunction");
 
             ArgumentNode node = (ArgumentNode) cmd.getArguments().get(0);
-            state.addSimulator(SimulationState.getArgument(node), new FunctionSimulator(this, logicalBlock.bodies.get(0)));
+
+            String name = state.getValue(node);
+            List<String> formalParameters = cmd.getArguments().subList(1, cmd.getArguments().size())
+                    .stream().map(state::getValue).collect(Collectors.toList());
+
+            state.addSimulator(name, new FunctionSimulator(this, formalParameters, logicalBlock.bodies.get(0)));
 
             state.setPosition(logicalBlock.endPosition);
             return state;

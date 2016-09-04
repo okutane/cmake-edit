@@ -25,8 +25,12 @@ class SimulationState {
         this.suspiciousPoints = suspiciousPoints;
     }
 
-    /** todo think of better name */
     String getValue(Node argumentNode) {
+        return getValue(argumentNode, Collections.emptyMap());
+    }
+
+    /** todo think of better name */
+    String getValue(Node argumentNode, Map<String, Node> substitutions) {
         StringBuilder sb = new StringBuilder();
 
         argumentNode.visitAll(new NodeVisitorAdapter() {
@@ -38,12 +42,18 @@ class SimulationState {
                     exprBuilder.append(node.getKey());
                 }
 
-                node.getNested().stream().forEach(n -> exprBuilder.append(getValue(n)));
+                node.getNested().stream().forEach(n -> exprBuilder.append(getValue(n, substitutions)));
 
                 String expr = exprBuilder.toString();
-                processUsage(expr);
 
-                sb.append('*').append(expr);
+                Node substitution = substitutions.get(expr);
+
+                if (substitution != null) {
+                    substitution.visitAll(this);
+                } else {
+                    processUsage(expr);
+                    sb.append('*').append(expr);
+                }
             }
 
             @Override
@@ -80,10 +90,14 @@ class SimulationState {
     }
 
     void putValue(ArgumentNode argumentNode, CommandInvocationNode command, boolean parentScope) {
+        putValue(argumentNode, command, Collections.emptyMap(), parentScope);
+    }
+
+    void putValue(ArgumentNode argumentNode, CommandInvocationNode command, Map<String, Node> substitutions, boolean parentScope) {
         // todo check that expressions from argumentNode are used
 
         // todo inline argumentNode via processUsage()
-        String variable = getValue(argumentNode);
+        String variable = getValue(argumentNode, substitutions);
 
         putValue(command, variable, parentScope);
     }

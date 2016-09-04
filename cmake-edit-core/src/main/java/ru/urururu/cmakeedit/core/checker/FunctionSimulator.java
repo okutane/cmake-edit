@@ -48,21 +48,7 @@ public class FunctionSimulator implements AbstractSimulator.CommandSimulator {
                     }
                 };
 
-                SimulationState entryState = new SimulationState(body, 0, state.getSuspiciousPoints()) {
-                    @Override
-                    protected void processUnknownUsage(String variable) {
-                        unknownUsages.add(variable);
-                    }
-
-                    @Override
-                    void putValue(ArgumentNode argumentNode, CommandInvocationNode command, boolean parentScope) {
-                        if (parentScope) {
-                            parentVariables.put(argumentNode, Collections.singleton(command));
-                        }
-
-                        super.putValue(argumentNode, command, parentScope);
-                    }
-                };
+                SimulationState entryState = new FunctionState(state);
 
                 simulator.simulate(functionCtx, entryState);
 
@@ -94,5 +80,43 @@ public class FunctionSimulator implements AbstractSimulator.CommandSimulator {
         Unused,
         FirstUse,
         Used
+    }
+
+    private class FunctionState extends SimulationState {
+        FunctionState(SimulationState state) {
+            super(FunctionSimulator.this.body, 0, state.getSuspiciousPoints());
+        }
+
+        FunctionState(List<CommandInvocationNode> nodes, int position, FunctionState state) {
+            super(nodes, position, state);
+        }
+
+        FunctionState(List<CommandInvocationNode> nodes, int position, List<SimulationState> newStates) {
+            super(nodes, position, newStates);
+        }
+
+        @Override
+        SimulationState copyAt(List<CommandInvocationNode> nodes, int position) {
+            return new FunctionState(nodes, position, this);
+        }
+
+        @Override
+        SimulationState merge(List<CommandInvocationNode> nodes, int position, List<SimulationState> newStates) {
+            return new FunctionState(nodes, position, newStates);
+        }
+
+        @Override
+        protected void processUnknownUsage(String variable) {
+            unknownUsages.add(variable);
+        }
+
+        @Override
+        void putValue(ArgumentNode argumentNode, CommandInvocationNode command, boolean parentScope) {
+            if (parentScope) {
+                parentVariables.put(argumentNode, Collections.singleton(command));
+            }
+
+            super.putValue(argumentNode, command, parentScope);
+        }
     }
 }

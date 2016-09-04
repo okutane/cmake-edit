@@ -1,5 +1,7 @@
 package ru.urururu.cmakeedit.core.checker;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import ru.urururu.cmakeedit.core.*;
 
 import java.util.*;
@@ -8,62 +10,123 @@ import java.util.*;
  * Created by okutane on 16/08/16.
  */
 class SimulationState {
+    private static final Logger logger = LoggerFactory.getLogger(SimulationState.class);
+
     private final List<CommandInvocationNode> nodes;
     private int position;
     private final Map<String, Set<CommandInvocationNode>> variables;
     private final Set<CommandInvocationNode> suspiciousPoints;
-    private final Map<String, AbstractSimulator.CommandSimulator> dynamicSimulators = new HashMap<>();
+    private final Map<String, AbstractSimulator.CommandSimulator> dynamicSimulators;
 
     SimulationState(List<CommandInvocationNode> nodes, int position, Set<CommandInvocationNode> suspiciousPoints) {
-        this(nodes, position, suspiciousPoints, new HashMap<>());
+        this(nodes, position, suspiciousPoints, new HashMap<>(), new HashMap<>());
     }
 
-    SimulationState(List<CommandInvocationNode> nodes, int position, Set<CommandInvocationNode> suspiciousPoints, Map<String, Set<CommandInvocationNode>> variables) {
+    private SimulationState(List<CommandInvocationNode> nodes, int position, Set<CommandInvocationNode> suspiciousPoints, Map<String, Set<CommandInvocationNode>> variables, Map<String, AbstractSimulator.CommandSimulator> dynamicSimulators) {
         this.nodes = nodes;
         this.position = position;
         this.variables = variables;
         this.suspiciousPoints = suspiciousPoints;
+        this.dynamicSimulators = dynamicSimulators;
+    }
+
+    protected SimulationState(List<CommandInvocationNode> nodes, int position, SimulationState from) {
+        this(
+                nodes, position, // what will be simulated in this state
+                from.suspiciousPoints, // shared
+                new LinkedHashMap<>(from.variables), // reused, but can be modified
+                new LinkedHashMap<>(from.dynamicSimulators) // reused, but can be modified
+        );
+    }
+
+    protected SimulationState(List<CommandInvocationNode> nodes, int position, List<SimulationState> newStates) {
+        this.nodes = nodes;
+        this.position = position;
+        this.suspiciousPoints = newStates.get(0).getSuspiciousPoints();
+
+        variables = new HashMap<>();
+        for (SimulationState newState : newStates) {
+            for (Map.Entry<String, Set<CommandInvocationNode>> variable : newState.getVariables().entrySet()) {
+                variables.computeIfAbsent(variable.getKey(), key -> new HashSet<>()).addAll(variable.getValue());
+            }
+        }
+
+        dynamicSimulators = new HashMap<>();
+        for (SimulationState newState : newStates) {
+            for (Map.Entry<String, AbstractSimulator.CommandSimulator> simulator : newState.dynamicSimulators.entrySet()) {
+                AbstractSimulator.CommandSimulator old = dynamicSimulators.put(simulator.getKey(), simulator.getValue());
+                if (old != null && !old.equals(simulator.getValue())) {
+                    // should merge these
+                    logger.warn("throwing away simulator for " + simulator.getKey());
+                }
+            }
+        }
+    }
+
+    SimulationState copyAt(List<CommandInvocationNode> nodes, int position) {
+        return new SimulationState(nodes, position, this);
+    }
+
+    SimulationState merge(List<CommandInvocationNode> nodes, int position, List<SimulationState> newStates) {
+        if (newStates.isEmpty()) {
+            return null;
+        }
+
+        return new SimulationState(nodes, position, newStates);
     }
 
     String getValue(Node argumentNode) {
         return getValue(argumentNode, Collections.emptyMap());
     }
 
+    int getValueDepth = 0;
+
     /** todo think of better name */
     String getValue(Node argumentNode, Map<String, Node> substitutions) {
-        StringBuilder sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
 
-        argumentNode.visitAll(new NodeVisitorAdapter() {
-            @Override
-            public void accept(ExpressionNode node) {
-                StringBuilder exprBuilder = new StringBuilder();
+            argumentNode.visitAll(new NodeVisitorAdapter() {
+                @Override
+                public void accept(ExpressionNode node) {
+                    getValueDepth++;
+                    if (getValueDepth == 30) {
+                        // todo fix and remove
+                        logger.warn("lost in infinite recursion with substitutions: " + substitutions.keySet());
+                        return;
+                    }
+                    try {
 
-                if (node.getKey() != null) {
-                    exprBuilder.append(node.getKey());
+                        StringBuilder exprBuilder = new StringBuilder();
+
+                        if (node.getKey() != null) {
+                            exprBuilder.append(node.getKey());
+                        }
+
+                        node.getNested().stream().forEach(n -> exprBuilder.append(getValue(n, substitutions)));
+
+                        String expr = exprBuilder.toString();
+
+                        Node substitution = substitutions.get(expr);
+
+                        if (substitution != null) {
+                            substitution.visitAll(this);
+                        } else {
+                            processUsage(expr);
+                            sb.append('*').append(expr);
+                        }
+                    } finally {
+                        getValueDepth--;
+                    }
                 }
 
-                node.getNested().stream().forEach(n -> exprBuilder.append(getValue(n, substitutions)));
-
-                String expr = exprBuilder.toString();
-
-                Node substitution = substitutions.get(expr);
-
-                if (substitution != null) {
-                    substitution.visitAll(this);
-                } else {
-                    processUsage(expr);
-                    sb.append('*').append(expr);
+                @Override
+                public void accept(ConstantNode node) {
+                    String value = node.getValue();
+                    sb.append(value);
                 }
-            }
+            });
 
-            @Override
-            public void accept(ConstantNode node) {
-                String value = node.getValue();
-                sb.append(value);
-            }
-        });
-
-        return sb.toString();
+            return sb.toString();
     }
 
     void processUsage(ArgumentNode argumentNode) {

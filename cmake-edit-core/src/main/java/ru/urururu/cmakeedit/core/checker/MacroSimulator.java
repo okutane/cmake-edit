@@ -1,9 +1,9 @@
 package ru.urururu.cmakeedit.core.checker;
 
 import ru.urururu.cmakeedit.core.CommandInvocationNode;
+import ru.urururu.cmakeedit.core.Node;
 
 import java.util.Collections;
-import java.util.LinkedHashMap;
 import java.util.List;
 
 /**
@@ -20,9 +20,13 @@ class MacroSimulator implements AbstractSimulator.CommandSimulator {
 
     @Override
     public SimulationState simulate(CheckContext ctx, SimulationState state, CommandInvocationNode command) throws LogicalException {
-        SimulationState newState = simulator.simulate(ctx, new SimulationState(body, 0, state.getSuspiciousPoints(), new LinkedHashMap<>(state.getVariables())));
+        for (Node node : command.getArguments()) {
+            state.getValue(node);
+        }
+
+        SimulationState newState = simulator.simulate(ctx, state.copyAt(body, 0));
         if (newState != null) {
-            return simulator.merge(Collections.singletonList(newState), state.getNodes(), state.getPosition() + 1);
+            return state.merge(state.getNodes(), state.getPosition() + 1, Collections.singletonList(newState));
         }
 
         return null;

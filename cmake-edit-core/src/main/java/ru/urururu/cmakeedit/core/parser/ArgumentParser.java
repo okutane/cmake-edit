@@ -27,9 +27,9 @@ abstract class ArgumentParser {
         try (Timer.Context timer = ctx.getRegistry().timer(name + ".parse").time()) {
             return parseInternal(ctx);
         } catch (ParseException e) {
-            throw e;
+            throw e; // $COVERAGE-IGNORE$
         } catch (Exception e) {
-            throw new ParseException(ctx, e);
+            throw new ParseException(ctx, e); // $COVERAGE-IGNORE$
         }
     }
 

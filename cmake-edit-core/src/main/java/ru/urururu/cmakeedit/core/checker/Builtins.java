@@ -6,7 +6,11 @@ import java.util.List;
 /**
  * Created by okutane on 22/08/16.
  */
-public class Builtins {
+class Builtins {
+    private Builtins() {
+        // prevent creation.
+    }
+
     /** @see <a href='https://cmake.org/cmake/help/v3.0/manual/cmake-commands.7.html#normal-commands'>cmake help</a> */
     static List<String> NORMAL = Arrays.asList("add_compile_options",
             "add_custom_command",

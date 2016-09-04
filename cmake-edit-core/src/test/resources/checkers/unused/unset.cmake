@@ -1,2 +1,5 @@
 set(var value)
-unset(var) # stupid
+unset(var) # unsetting without use
+
+set(var2 value2)
+set(var2) # unsetting without use

@@ -17,7 +17,10 @@ public class Checker {
     static final Map<String, Function<CommandInvocationNode, Node>> setters =
             new HashMap<String, Function<CommandInvocationNode, Node>>() {{
                 put("set", cmd -> {
-                    return cmd.getArguments().get(0);
+                    if (cmd.getArguments().size() > 1) {
+                        return cmd.getArguments().get(0);
+                    }
+                    return null;
                 });
                 put("list", cmd -> {
                     if (Arrays.asList("LENGTH", "GET", "FIND").contains(SimulationState.getArgument(cmd.getArguments().get(0))))
@@ -118,6 +121,8 @@ public class Checker {
                             return state;
                         }
                     });
+
+                    simulators.put("unset", simulators.get("set")); // semantics are similar
 
                     simulators.put("list", new CommandSimulator() {
                         List<String> setterOperations = Arrays.asList("LENGTH", "GET", "FIND");

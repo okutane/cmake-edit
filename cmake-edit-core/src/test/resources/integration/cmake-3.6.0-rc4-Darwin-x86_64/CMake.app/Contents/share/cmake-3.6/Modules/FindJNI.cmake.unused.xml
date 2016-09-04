@@ -1,6 +1,27 @@
 <list>
   <problem>
     <problem>Value not used</problem>
+    <details>set(_JNI_FRAMEWORK_JAWT &quot;${_JNI_FRAMEWORK_JVM}&quot;)</details>
+    <lineRange>247</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(_JNI_NORMAL_JVM
+  NAMES jvm
+  PATHS ${JAVA_JVM_LIBRARY_DIRECTORIES}
+  )</details>
+    <lineRange>252-255</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(_JNI_NORMAL_JAWT
+  NAMES jawt
+  PATHS ${JAVA_AWT_LIBRARY_DIRECTORIES}
+  )</details>
+    <lineRange>257-260</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
     <details>set(JNI_LIBRARIES
   ${JAVA_AWT_LIBRARY}
   ${JAVA_JVM_LIBRARY}

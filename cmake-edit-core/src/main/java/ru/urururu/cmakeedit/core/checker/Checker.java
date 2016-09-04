@@ -57,7 +57,7 @@ public class Checker {
                 }
             });
 
-            AbstractSimulator unusedSimulator = new AbstractSimulator(suspiciousPoints) {
+            AbstractSimulator unusedSimulator = new AbstractSimulator() {
                 @Override
                 protected void init(Map<String, CommandSimulator> simulators) {
                     super.init(simulators);

@@ -13,13 +13,9 @@ import static com.codahale.metrics.MetricRegistry.name;
  * Created by okutane on 16/08/16.
  */
 class AbstractSimulator {
-    private Set<CommandInvocationNode> suspiciousPoints; // todo delete
-
     private Map<String, CommandSimulator> staticSimulators = new HashMap<>();
 
-    AbstractSimulator(Set<CommandInvocationNode> suspiciousPoints) {
-        this.suspiciousPoints = suspiciousPoints;
-
+    AbstractSimulator() {
         Map<String, CommandSimulator> simulators = new HashMap<>();
         init(simulators);
         this.staticSimulators = new HashMap<>(simulators);

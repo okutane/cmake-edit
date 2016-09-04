@@ -76,7 +76,7 @@ class SimulationState {
     }
 
     protected void processUnknownUsage(String variable) {
-
+        // do nothing, allow subclasses to do something.
     }
 
     void processUsage(String variable) {
@@ -99,10 +99,10 @@ class SimulationState {
         // todo inline argumentNode via processUsage()
         String variable = getValue(argumentNode, substitutions);
 
-        putValue(command, variable, parentScope);
+        putValue(command, variable);
     }
 
-    protected void putValue(CommandInvocationNode command, String variable, boolean parentScope) {
+    protected void putValue(CommandInvocationNode command, String variable) {
         variables.put(variable, Collections.singleton(command));
     }
 

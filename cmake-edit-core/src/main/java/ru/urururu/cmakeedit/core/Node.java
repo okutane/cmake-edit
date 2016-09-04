@@ -1,7 +1,6 @@
 package ru.urururu.cmakeedit.core;
 
 import java.io.Serializable;
-import java.util.List;
 
 /**
  * Created by okutane on 07/07/16.

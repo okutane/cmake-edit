@@ -1,6 +1,7 @@
 package ru.urururu.cmakeedit.core.parser;
 
 import com.codahale.metrics.Timer;
+import ru.urururu.cmakeedit.core.ConstantNode;
 import ru.urururu.cmakeedit.core.ExpressionNode;
 import ru.urururu.cmakeedit.core.Node;
 import ru.urururu.cmakeedit.core.SourceRef;
@@ -54,9 +55,7 @@ public class ExpressionParser {
         try (Timer.Context timer = ctx.getRegistry().timer(ExpressionParser.class.getSimpleName() + ".parseExpression").time()) {
             List<Node> nested = new ArrayList<>();
             SourceRef start = ctx.position();
-            StringBuilder sb = new StringBuilder();
 
-            sb.append(ctx.peek());
             ctx.advance();
 
             StringBuilder keyBuilder = new StringBuilder();
@@ -70,28 +69,43 @@ public class ExpressionParser {
                 throw new ParseException(ctx, "Key " + key + " is not used yet. For now only $ENV{..} is allowed");
             }
 
-            sb.append(keyBuilder);
-
             if (ctx.reachedEnd()) {
                 throw new ParseException(ctx, "Unexpected end of source");
             }
 
             char closingBracket = BRACKETS.get(ctx.peek());
 
-            sb.append(ctx.peek());
             ctx.advance();
+
+            StringBuilder sb = new StringBuilder();
+            SourceRef constantStart = ctx.position();
+            SourceRef constantEnd = null;
 
             while (!ctx.reachedEnd()) {
                 char cur = ctx.peek();
                 if (cur == closingBracket) {
-                    sb.append(cur);
-                    return new ExpressionNode(key, sb.toString(), nested, start, ctx.position());
+                    if (sb.length() != 0) {
+                        nested.add(new ConstantNode(sb.toString(), constantStart, constantEnd));
+                    }
+
+                    return new ExpressionNode(key, nested, start, ctx.position());
                 } else if (cur == '$') {
+                    if (sb.length() != 0) {
+                        nested.add(new ConstantNode(sb.toString(), constantStart, constantEnd));
+                    }
+
                     // we need to go deeper
                     ExpressionNode expression = ExpressionParser.parseExpression(ctx);
                     nested.add(expression);
-                    sb.append(expression);
+
+                    // reset constant builder
+                    constantStart = null;
+                    sb.setLength(0);
                 } else {
+                    if (constantStart == null) {
+                        constantStart = ctx.position();
+                    }
+                    constantEnd = ctx.position();
                     sb.append(cur);
                 }
                 ctx.advance();

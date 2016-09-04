@@ -594,13 +594,19 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>WIN32</argument>
-          <start>
-            <offset>1319</offset>
-          </start>
-          <end>
-            <offset>1323</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>WIN32</value>
+              <start>
+                <offset>1319</offset>
+              </start>
+              <end>
+                <offset>1323</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -615,47 +621,79 @@
       <commandName>find_path</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>GLUT_INCLUDE_DIR</argument>
-          <start>
-            <offset>1339</offset>
-          </start>
-          <end>
-            <offset>1354</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>GLUT_INCLUDE_DIR</value>
+              <start>
+                <offset>1339</offset>
+              </start>
+              <end>
+                <offset>1354</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>NAMES</argument>
-          <start>
-            <offset>1356</offset>
-          </start>
-          <end>
-            <offset>1360</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>NAMES</value>
+              <start>
+                <offset>1356</offset>
+              </start>
+              <end>
+                <offset>1360</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>GL/glut.h
-</argument>
-          <start>
-            <offset>1362</offset>
-          </start>
-          <end>
-            <offset>1371</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>GL/glut.h</value>
+              <start>
+                <offset>1362</offset>
+              </start>
+              <end>
+                <offset>1370</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>PATHS</argument>
-          <start>
-            <offset>1376</offset>
-          </start>
-          <end>
-            <offset>1380</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>PATHS</value>
+              <start>
+                <offset>1376</offset>
+              </start>
+              <end>
+                <offset>1380</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${GLUT_ROOT_PATH}/include</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${GLUT_ROOT_PATH}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>GLUT_ROOT_PATH</value>
+                  <start>
+                    <offset>1385</offset>
+                  </start>
+                  <end>
+                    <offset>1398</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1383</offset>
               </start>
@@ -663,13 +701,18 @@
                 <offset>1399</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/include</value>
+              <start>
+                <offset>1400</offset>
+              </start>
+              <end>
+                <offset>1407</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
-          <start>
-            <offset>1383</offset>
-          </start>
-          <end>
-            <offset>1407</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -684,67 +727,109 @@
       <commandName>find_library</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>GLUT_glut_LIBRARY</argument>
-          <start>
-            <offset>1427</offset>
-          </start>
-          <end>
-            <offset>1443</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>GLUT_glut_LIBRARY</value>
+              <start>
+                <offset>1427</offset>
+              </start>
+              <end>
+                <offset>1443</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>NAMES</argument>
-          <start>
-            <offset>1445</offset>
-          </start>
-          <end>
-            <offset>1449</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>NAMES</value>
+              <start>
+                <offset>1445</offset>
+              </start>
+              <end>
+                <offset>1449</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>glut</argument>
-          <start>
-            <offset>1451</offset>
-          </start>
-          <end>
-            <offset>1454</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>glut</value>
+              <start>
+                <offset>1451</offset>
+              </start>
+              <end>
+                <offset>1454</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>glut32</argument>
-          <start>
-            <offset>1456</offset>
-          </start>
-          <end>
-            <offset>1461</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>glut32</value>
+              <start>
+                <offset>1456</offset>
+              </start>
+              <end>
+                <offset>1461</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>freeglut
-</argument>
-          <start>
-            <offset>1463</offset>
-          </start>
-          <end>
-            <offset>1471</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>freeglut</value>
+              <start>
+                <offset>1463</offset>
+              </start>
+              <end>
+                <offset>1470</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>PATHS
-</argument>
-          <start>
-            <offset>1476</offset>
-          </start>
-          <end>
-            <offset>1481</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>PATHS</value>
+              <start>
+                <offset>1476</offset>
+              </start>
+              <end>
+                <offset>1480</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${OPENGL_LIBRARY_DIR}
-</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${OPENGL_LIBRARY_DIR}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>OPENGL_LIBRARY_DIR</value>
+                  <start>
+                    <offset>1488</offset>
+                  </start>
+                  <end>
+                    <offset>1505</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1486</offset>
               </start>
@@ -753,19 +838,23 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>1486</offset>
-          </start>
-          <end>
-            <offset>1507</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${GLUT_ROOT_PATH}/Release
-</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${GLUT_ROOT_PATH}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>GLUT_ROOT_PATH</value>
+                  <start>
+                    <offset>1514</offset>
+                  </start>
+                  <end>
+                    <offset>1527</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1512</offset>
               </start>
@@ -773,13 +862,18 @@
                 <offset>1528</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/Release</value>
+              <start>
+                <offset>1529</offset>
+              </start>
+              <end>
+                <offset>1536</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
-          <start>
-            <offset>1512</offset>
-          </start>
-          <end>
-            <offset>1537</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -805,13 +899,19 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>APPLE</argument>
-          <start>
-            <offset>1559</offset>
-          </start>
-          <end>
-            <offset>1563</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>APPLE</value>
+              <start>
+                <offset>1559</offset>
+              </start>
+              <end>
+                <offset>1563</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -826,28 +926,49 @@
       <commandName>find_path</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>GLUT_INCLUDE_DIR</argument>
-          <start>
-            <offset>1580</offset>
-          </start>
-          <end>
-            <offset>1595</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>GLUT_INCLUDE_DIR</value>
+              <start>
+                <offset>1580</offset>
+              </start>
+              <end>
+                <offset>1595</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>glut.h</argument>
-          <start>
-            <offset>1597</offset>
-          </start>
-          <end>
-            <offset>1602</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>glut.h</value>
+              <start>
+                <offset>1597</offset>
+              </start>
+              <end>
+                <offset>1602</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${OPENGL_LIBRARY_DIR}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${OPENGL_LIBRARY_DIR}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>OPENGL_LIBRARY_DIR</value>
+                  <start>
+                    <offset>1606</offset>
+                  </start>
+                  <end>
+                    <offset>1623</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1604</offset>
               </start>
@@ -856,12 +977,8 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>1604</offset>
-          </start>
-          <end>
-            <offset>1624</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -876,34 +993,62 @@
       <commandName>find_library</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>GLUT_glut_LIBRARY</argument>
-          <start>
-            <offset>1644</offset>
-          </start>
-          <end>
-            <offset>1660</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>GLUT_glut_LIBRARY</value>
+              <start>
+                <offset>1644</offset>
+              </start>
+              <end>
+                <offset>1660</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>GLUT</argument>
-          <start>
-            <offset>1662</offset>
-          </start>
-          <end>
-            <offset>1665</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>GLUT</value>
+              <start>
+                <offset>1662</offset>
+              </start>
+              <end>
+                <offset>1665</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>DOC</argument>
-          <start>
-            <offset>1667</offset>
-          </start>
-          <end>
-            <offset>1669</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>DOC</value>
+              <start>
+                <offset>1667</offset>
+              </start>
+              <end>
+                <offset>1669</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>GLUT library for OSX</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>GLUT library for OSX</value>
+              <start>
+                <offset>1672</offset>
+              </start>
+              <end>
+                <offset>1691</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>1671</offset>
           </start>
@@ -924,34 +1069,62 @@
       <commandName>find_library</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>GLUT_cocoa_LIBRARY</argument>
-          <start>
-            <offset>1712</offset>
-          </start>
-          <end>
-            <offset>1729</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>GLUT_cocoa_LIBRARY</value>
+              <start>
+                <offset>1712</offset>
+              </start>
+              <end>
+                <offset>1729</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>Cocoa</argument>
-          <start>
-            <offset>1731</offset>
-          </start>
-          <end>
-            <offset>1735</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>Cocoa</value>
+              <start>
+                <offset>1731</offset>
+              </start>
+              <end>
+                <offset>1735</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>DOC</argument>
-          <start>
-            <offset>1737</offset>
-          </start>
-          <end>
-            <offset>1739</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>DOC</value>
+              <start>
+                <offset>1737</offset>
+              </start>
+              <end>
+                <offset>1739</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>Cocoa framework for OSX</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>Cocoa framework for OSX</value>
+              <start>
+                <offset>1742</offset>
+              </start>
+              <end>
+                <offset>1764</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>1741</offset>
           </start>
@@ -972,49 +1145,79 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>GLUT_cocoa_LIBRARY</argument>
-          <start>
-            <offset>1776</offset>
-          </start>
-          <end>
-            <offset>1793</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>GLUT_cocoa_LIBRARY</value>
+              <start>
+                <offset>1776</offset>
+              </start>
+              <end>
+                <offset>1793</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>AND</argument>
-          <start>
-            <offset>1795</offset>
-          </start>
-          <end>
-            <offset>1797</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>AND</value>
+              <start>
+                <offset>1795</offset>
+              </start>
+              <end>
+                <offset>1797</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>NOT</argument>
-          <start>
-            <offset>1799</offset>
-          </start>
-          <end>
-            <offset>1801</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>NOT</value>
+              <start>
+                <offset>1799</offset>
+              </start>
+              <end>
+                <offset>1801</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>TARGET</argument>
-          <start>
-            <offset>1803</offset>
-          </start>
-          <end>
-            <offset>1808</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>TARGET</value>
+              <start>
+                <offset>1803</offset>
+              </start>
+              <end>
+                <offset>1808</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>GLUT::Cocoa</argument>
-          <start>
-            <offset>1810</offset>
-          </start>
-          <end>
-            <offset>1820</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>GLUT::Cocoa</value>
+              <start>
+                <offset>1810</offset>
+              </start>
+              <end>
+                <offset>1820</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -1029,31 +1232,49 @@
       <commandName>add_library</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>GLUT::Cocoa</argument>
-          <start>
-            <offset>1841</offset>
-          </start>
-          <end>
-            <offset>1851</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>GLUT::Cocoa</value>
+              <start>
+                <offset>1841</offset>
+              </start>
+              <end>
+                <offset>1851</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>UNKNOWN</argument>
-          <start>
-            <offset>1853</offset>
-          </start>
-          <end>
-            <offset>1859</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>UNKNOWN</value>
+              <start>
+                <offset>1853</offset>
+              </start>
+              <end>
+                <offset>1859</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>IMPORTED</argument>
-          <start>
-            <offset>1861</offset>
-          </start>
-          <end>
-            <offset>1868</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>IMPORTED</value>
+              <start>
+                <offset>1861</offset>
+              </start>
+              <end>
+                <offset>1868</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -1082,25 +1303,47 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>GLUT_cocoa_LIBRARY</argument>
-          <start>
-            <offset>1951</offset>
-          </start>
-          <end>
-            <offset>1968</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>GLUT_cocoa_LIBRARY</value>
+              <start>
+                <offset>1951</offset>
+              </start>
+              <end>
+                <offset>1968</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>MATCHES</argument>
-          <start>
-            <offset>1970</offset>
-          </start>
-          <end>
-            <offset>1976</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>MATCHES</value>
+              <start>
+                <offset>1970</offset>
+              </start>
+              <end>
+                <offset>1976</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>/([^/]+)\\.framework$</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/([^/]+)\\.framework$</value>
+              <start>
+                <offset>1979</offset>
+              </start>
+              <end>
+                <offset>1999</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>1978</offset>
           </start>
@@ -1121,38 +1364,64 @@
       <commandName>set_target_properties</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>GLUT::Cocoa</argument>
-          <start>
-            <offset>2033</offset>
-          </start>
-          <end>
-            <offset>2043</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>GLUT::Cocoa</value>
+              <start>
+                <offset>2033</offset>
+              </start>
+              <end>
+                <offset>2043</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>PROPERTIES
-</argument>
-          <start>
-            <offset>2045</offset>
-          </start>
-          <end>
-            <offset>2055</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>PROPERTIES</value>
+              <start>
+                <offset>2045</offset>
+              </start>
+              <end>
+                <offset>2054</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>IMPORTED_LOCATION</argument>
-          <start>
-            <offset>2066</offset>
-          </start>
-          <end>
-            <offset>2082</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>IMPORTED_LOCATION</value>
+              <start>
+                <offset>2066</offset>
+              </start>
+              <end>
+                <offset>2082</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${GLUT_cocoa_LIBRARY}/${CMAKE_MATCH_1}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${GLUT_cocoa_LIBRARY}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>GLUT_cocoa_LIBRARY</value>
+                  <start>
+                    <offset>2087</offset>
+                  </start>
+                  <end>
+                    <offset>2104</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2085</offset>
               </start>
@@ -1160,8 +1429,27 @@
                 <offset>2105</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/</value>
+              <start>
+                <offset>2106</offset>
+              </start>
+              <end>
+                <offset>2106</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_MATCH_1}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_MATCH_1</value>
+                  <start>
+                    <offset>2109</offset>
+                  </start>
+                  <end>
+                    <offset>2121</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2107</offset>
               </start>
@@ -1201,38 +1489,64 @@
       <commandName>set_target_properties</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>GLUT::Cocoa</argument>
-          <start>
-            <offset>2169</offset>
-          </start>
-          <end>
-            <offset>2179</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>GLUT::Cocoa</value>
+              <start>
+                <offset>2169</offset>
+              </start>
+              <end>
+                <offset>2179</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>PROPERTIES
-</argument>
-          <start>
-            <offset>2181</offset>
-          </start>
-          <end>
-            <offset>2191</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>PROPERTIES</value>
+              <start>
+                <offset>2181</offset>
+              </start>
+              <end>
+                <offset>2190</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>IMPORTED_LOCATION</argument>
-          <start>
-            <offset>2202</offset>
-          </start>
-          <end>
-            <offset>2218</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>IMPORTED_LOCATION</value>
+              <start>
+                <offset>2202</offset>
+              </start>
+              <end>
+                <offset>2218</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${GLUT_cocoa_LIBRARY}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${GLUT_cocoa_LIBRARY}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>GLUT_cocoa_LIBRARY</value>
+                  <start>
+                    <offset>2223</offset>
+                  </start>
+                  <end>
+                    <offset>2240</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2221</offset>
               </start>
@@ -1294,13 +1608,19 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>BEOS</argument>
-          <start>
-            <offset>2290</offset>
-          </start>
-          <end>
-            <offset>2293</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>BEOS</value>
+              <start>
+                <offset>2290</offset>
+              </start>
+              <end>
+                <offset>2293</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -1315,22 +1635,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>_GLUT_INC_DIR</argument>
-          <start>
-            <offset>2307</offset>
-          </start>
-          <end>
-            <offset>2319</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_GLUT_INC_DIR</value>
+              <start>
+                <offset>2307</offset>
+              </start>
+              <end>
+                <offset>2319</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>/boot/develop/headers/os/opengl</argument>
-          <start>
-            <offset>2321</offset>
-          </start>
-          <end>
-            <offset>2351</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/boot/develop/headers/os/opengl</value>
+              <start>
+                <offset>2321</offset>
+              </start>
+              <end>
+                <offset>2351</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -1345,22 +1677,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>_GLUT_glut_LIB_DIR</argument>
-          <start>
-            <offset>2364</offset>
-          </start>
-          <end>
-            <offset>2381</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_GLUT_glut_LIB_DIR</value>
+              <start>
+                <offset>2364</offset>
+              </start>
+              <end>
+                <offset>2381</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>/boot/develop/lib/x86</argument>
-          <start>
-            <offset>2383</offset>
-          </start>
-          <end>
-            <offset>2403</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/boot/develop/lib/x86</value>
+              <start>
+                <offset>2383</offset>
+              </start>
+              <end>
+                <offset>2403</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -1386,33 +1730,49 @@
       <commandName>find_library</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>GLUT_Xi_LIBRARY</argument>
-          <start>
-            <offset>2439</offset>
-          </start>
-          <end>
-            <offset>2453</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>GLUT_Xi_LIBRARY</value>
+              <start>
+                <offset>2439</offset>
+              </start>
+              <end>
+                <offset>2453</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>Xi
-</argument>
-          <start>
-            <offset>2455</offset>
-          </start>
-          <end>
-            <offset>2457</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>Xi</value>
+              <start>
+                <offset>2455</offset>
+              </start>
+              <end>
+                <offset>2456</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>/usr/openwin/lib
-</argument>
-          <start>
-            <offset>2466</offset>
-          </start>
-          <end>
-            <offset>2482</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/usr/openwin/lib</value>
+              <start>
+                <offset>2466</offset>
+              </start>
+              <end>
+                <offset>2481</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -1427,33 +1787,49 @@
       <commandName>find_library</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>GLUT_Xmu_LIBRARY</argument>
-          <start>
-            <offset>2514</offset>
-          </start>
-          <end>
-            <offset>2529</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>GLUT_Xmu_LIBRARY</value>
+              <start>
+                <offset>2514</offset>
+              </start>
+              <end>
+                <offset>2529</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>Xmu
-</argument>
-          <start>
-            <offset>2531</offset>
-          </start>
-          <end>
-            <offset>2534</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>Xmu</value>
+              <start>
+                <offset>2531</offset>
+              </start>
+              <end>
+                <offset>2533</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>/usr/openwin/lib
-</argument>
-          <start>
-            <offset>2543</offset>
-          </start>
-          <end>
-            <offset>2559</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/usr/openwin/lib</value>
+              <start>
+                <offset>2543</offset>
+              </start>
+              <end>
+                <offset>2558</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -1468,49 +1844,79 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>GLUT_Xi_LIBRARY</argument>
-          <start>
-            <offset>2580</offset>
-          </start>
-          <end>
-            <offset>2594</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>GLUT_Xi_LIBRARY</value>
+              <start>
+                <offset>2580</offset>
+              </start>
+              <end>
+                <offset>2594</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>AND</argument>
-          <start>
-            <offset>2596</offset>
-          </start>
-          <end>
-            <offset>2598</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>AND</value>
+              <start>
+                <offset>2596</offset>
+              </start>
+              <end>
+                <offset>2598</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>NOT</argument>
-          <start>
-            <offset>2600</offset>
-          </start>
-          <end>
-            <offset>2602</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>NOT</value>
+              <start>
+                <offset>2600</offset>
+              </start>
+              <end>
+                <offset>2602</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>TARGET</argument>
-          <start>
-            <offset>2604</offset>
-          </start>
-          <end>
-            <offset>2609</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>TARGET</value>
+              <start>
+                <offset>2604</offset>
+              </start>
+              <end>
+                <offset>2609</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>GLUT::Xi</argument>
-          <start>
-            <offset>2611</offset>
-          </start>
-          <end>
-            <offset>2618</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>GLUT::Xi</value>
+              <start>
+                <offset>2611</offset>
+              </start>
+              <end>
+                <offset>2618</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -1525,31 +1931,49 @@
       <commandName>add_library</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>GLUT::Xi</argument>
-          <start>
-            <offset>2641</offset>
-          </start>
-          <end>
-            <offset>2648</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>GLUT::Xi</value>
+              <start>
+                <offset>2641</offset>
+              </start>
+              <end>
+                <offset>2648</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>UNKNOWN</argument>
-          <start>
-            <offset>2650</offset>
-          </start>
-          <end>
-            <offset>2656</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>UNKNOWN</value>
+              <start>
+                <offset>2650</offset>
+              </start>
+              <end>
+                <offset>2656</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>IMPORTED</argument>
-          <start>
-            <offset>2658</offset>
-          </start>
-          <end>
-            <offset>2665</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>IMPORTED</value>
+              <start>
+                <offset>2658</offset>
+              </start>
+              <end>
+                <offset>2665</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -1564,38 +1988,64 @@
       <commandName>set_target_properties</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>GLUT::Xi</argument>
-          <start>
-            <offset>2698</offset>
-          </start>
-          <end>
-            <offset>2705</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>GLUT::Xi</value>
+              <start>
+                <offset>2698</offset>
+              </start>
+              <end>
+                <offset>2705</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>PROPERTIES
-</argument>
-          <start>
-            <offset>2707</offset>
-          </start>
-          <end>
-            <offset>2717</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>PROPERTIES</value>
+              <start>
+                <offset>2707</offset>
+              </start>
+              <end>
+                <offset>2716</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>IMPORTED_LOCATION</argument>
-          <start>
-            <offset>2728</offset>
-          </start>
-          <end>
-            <offset>2744</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>IMPORTED_LOCATION</value>
+              <start>
+                <offset>2728</offset>
+              </start>
+              <end>
+                <offset>2744</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${GLUT_Xi_LIBRARY}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${GLUT_Xi_LIBRARY}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>GLUT_Xi_LIBRARY</value>
+                  <start>
+                    <offset>2749</offset>
+                  </start>
+                  <end>
+                    <offset>2763</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2747</offset>
               </start>
@@ -1635,49 +2085,79 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>GLUT_Xmu_LIBRARY</argument>
-          <start>
-            <offset>2792</offset>
-          </start>
-          <end>
-            <offset>2807</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>GLUT_Xmu_LIBRARY</value>
+              <start>
+                <offset>2792</offset>
+              </start>
+              <end>
+                <offset>2807</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>AND</argument>
-          <start>
-            <offset>2809</offset>
-          </start>
-          <end>
-            <offset>2811</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>AND</value>
+              <start>
+                <offset>2809</offset>
+              </start>
+              <end>
+                <offset>2811</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>NOT</argument>
-          <start>
-            <offset>2813</offset>
-          </start>
-          <end>
-            <offset>2815</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>NOT</value>
+              <start>
+                <offset>2813</offset>
+              </start>
+              <end>
+                <offset>2815</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>TARGET</argument>
-          <start>
-            <offset>2817</offset>
-          </start>
-          <end>
-            <offset>2822</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>TARGET</value>
+              <start>
+                <offset>2817</offset>
+              </start>
+              <end>
+                <offset>2822</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>GLUT::Xmu</argument>
-          <start>
-            <offset>2824</offset>
-          </start>
-          <end>
-            <offset>2832</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>GLUT::Xmu</value>
+              <start>
+                <offset>2824</offset>
+              </start>
+              <end>
+                <offset>2832</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -1692,31 +2172,49 @@
       <commandName>add_library</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>GLUT::Xmu</argument>
-          <start>
-            <offset>2855</offset>
-          </start>
-          <end>
-            <offset>2863</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>GLUT::Xmu</value>
+              <start>
+                <offset>2855</offset>
+              </start>
+              <end>
+                <offset>2863</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>UNKNOWN</argument>
-          <start>
-            <offset>2865</offset>
-          </start>
-          <end>
-            <offset>2871</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>UNKNOWN</value>
+              <start>
+                <offset>2865</offset>
+              </start>
+              <end>
+                <offset>2871</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>IMPORTED</argument>
-          <start>
-            <offset>2873</offset>
-          </start>
-          <end>
-            <offset>2880</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>IMPORTED</value>
+              <start>
+                <offset>2873</offset>
+              </start>
+              <end>
+                <offset>2880</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -1731,38 +2229,64 @@
       <commandName>set_target_properties</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>GLUT::Xmu</argument>
-          <start>
-            <offset>2913</offset>
-          </start>
-          <end>
-            <offset>2921</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>GLUT::Xmu</value>
+              <start>
+                <offset>2913</offset>
+              </start>
+              <end>
+                <offset>2921</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>PROPERTIES
-</argument>
-          <start>
-            <offset>2923</offset>
-          </start>
-          <end>
-            <offset>2933</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>PROPERTIES</value>
+              <start>
+                <offset>2923</offset>
+              </start>
+              <end>
+                <offset>2932</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>IMPORTED_LOCATION</argument>
-          <start>
-            <offset>2944</offset>
-          </start>
-          <end>
-            <offset>2960</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>IMPORTED_LOCATION</value>
+              <start>
+                <offset>2944</offset>
+              </start>
+              <end>
+                <offset>2960</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${GLUT_Xmu_LIBRARY}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${GLUT_Xmu_LIBRARY}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>GLUT_Xmu_LIBRARY</value>
+                  <start>
+                    <offset>2965</offset>
+                  </start>
+                  <end>
+                    <offset>2980</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2963</offset>
               </start>
@@ -1813,80 +2337,124 @@
       <commandName>find_path</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>GLUT_INCLUDE_DIR</argument>
-          <start>
-            <offset>3029</offset>
-          </start>
-          <end>
-            <offset>3044</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>GLUT_INCLUDE_DIR</value>
+              <start>
+                <offset>3029</offset>
+              </start>
+              <end>
+                <offset>3044</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>GL/glut.h
-</argument>
-          <start>
-            <offset>3046</offset>
-          </start>
-          <end>
-            <offset>3055</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>GL/glut.h</value>
+              <start>
+                <offset>3046</offset>
+              </start>
+              <end>
+                <offset>3054</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>/usr/include/GL
-</argument>
-          <start>
-            <offset>3062</offset>
-          </start>
-          <end>
-            <offset>3077</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/usr/include/GL</value>
+              <start>
+                <offset>3062</offset>
+              </start>
+              <end>
+                <offset>3076</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>/usr/openwin/share/include
-</argument>
-          <start>
-            <offset>3084</offset>
-          </start>
-          <end>
-            <offset>3110</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/usr/openwin/share/include</value>
+              <start>
+                <offset>3084</offset>
+              </start>
+              <end>
+                <offset>3109</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>/usr/openwin/include
-</argument>
-          <start>
-            <offset>3117</offset>
-          </start>
-          <end>
-            <offset>3137</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/usr/openwin/include</value>
+              <start>
+                <offset>3117</offset>
+              </start>
+              <end>
+                <offset>3136</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>/opt/graphics/OpenGL/include
-</argument>
-          <start>
-            <offset>3144</offset>
-          </start>
-          <end>
-            <offset>3172</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/opt/graphics/OpenGL/include</value>
+              <start>
+                <offset>3144</offset>
+              </start>
+              <end>
+                <offset>3171</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>/opt/graphics/OpenGL/contrib/libglut
-</argument>
-          <start>
-            <offset>3179</offset>
-          </start>
-          <end>
-            <offset>3215</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/opt/graphics/OpenGL/contrib/libglut</value>
+              <start>
+                <offset>3179</offset>
+              </start>
+              <end>
+                <offset>3214</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${_GLUT_INC_DIR}
-</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${_GLUT_INC_DIR}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>_GLUT_INC_DIR</value>
+                  <start>
+                    <offset>3224</offset>
+                  </start>
+                  <end>
+                    <offset>3236</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>3222</offset>
               </start>
@@ -1895,12 +2463,8 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>3222</offset>
-          </start>
-          <end>
-            <offset>3238</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -1915,40 +2479,64 @@
       <commandName>find_library</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>GLUT_glut_LIBRARY</argument>
-          <start>
-            <offset>3266</offset>
-          </start>
-          <end>
-            <offset>3282</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>GLUT_glut_LIBRARY</value>
+              <start>
+                <offset>3266</offset>
+              </start>
+              <end>
+                <offset>3282</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>glut
-</argument>
-          <start>
-            <offset>3284</offset>
-          </start>
-          <end>
-            <offset>3288</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>glut</value>
+              <start>
+                <offset>3284</offset>
+              </start>
+              <end>
+                <offset>3287</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>/usr/openwin/lib
-</argument>
-          <start>
-            <offset>3295</offset>
-          </start>
-          <end>
-            <offset>3311</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/usr/openwin/lib</value>
+              <start>
+                <offset>3295</offset>
+              </start>
+              <end>
+                <offset>3310</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${_GLUT_glut_LIB_DIR}
-</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${_GLUT_glut_LIB_DIR}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>_GLUT_glut_LIB_DIR</value>
+                  <start>
+                    <offset>3320</offset>
+                  </start>
+                  <end>
+                    <offset>3337</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>3318</offset>
               </start>
@@ -1957,12 +2545,8 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>3318</offset>
-          </start>
-          <end>
-            <offset>3339</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -1977,13 +2561,19 @@
       <commandName>unset</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>_GLUT_INC_DIR</argument>
-          <start>
-            <offset>3359</offset>
-          </start>
-          <end>
-            <offset>3371</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_GLUT_INC_DIR</value>
+              <start>
+                <offset>3359</offset>
+              </start>
+              <end>
+                <offset>3371</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -1998,13 +2588,19 @@
       <commandName>unset</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>_GLUT_glut_LIB_DIR</argument>
-          <start>
-            <offset>3384</offset>
-          </start>
-          <end>
-            <offset>3401</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_GLUT_glut_LIB_DIR</value>
+              <start>
+                <offset>3384</offset>
+              </start>
+              <end>
+                <offset>3401</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -2041,10 +2637,19 @@
       <commandName>include</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_CURRENT_LIST_DIR}/FindPackageHandleStandardArgs.cmake</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_CURRENT_LIST_DIR}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_CURRENT_LIST_DIR</value>
+                  <start>
+                    <offset>3437</offset>
+                  </start>
+                  <end>
+                    <offset>3458</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>3435</offset>
               </start>
@@ -2052,13 +2657,18 @@
                 <offset>3459</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/FindPackageHandleStandardArgs.cmake</value>
+              <start>
+                <offset>3460</offset>
+              </start>
+              <end>
+                <offset>3495</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
-          <start>
-            <offset>3435</offset>
-          </start>
-          <end>
-            <offset>3495</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -2073,40 +2683,64 @@
       <commandName>FIND_PACKAGE_HANDLE_STANDARD_ARGS</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>GLUT</argument>
-          <start>
-            <offset>3532</offset>
-          </start>
-          <end>
-            <offset>3535</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>GLUT</value>
+              <start>
+                <offset>3532</offset>
+              </start>
+              <end>
+                <offset>3535</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>REQUIRED_VARS</argument>
-          <start>
-            <offset>3537</offset>
-          </start>
-          <end>
-            <offset>3549</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>REQUIRED_VARS</value>
+              <start>
+                <offset>3537</offset>
+              </start>
+              <end>
+                <offset>3549</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>GLUT_glut_LIBRARY</argument>
-          <start>
-            <offset>3551</offset>
-          </start>
-          <end>
-            <offset>3567</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>GLUT_glut_LIBRARY</value>
+              <start>
+                <offset>3551</offset>
+              </start>
+              <end>
+                <offset>3567</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>GLUT_INCLUDE_DIR</argument>
-          <start>
-            <offset>3569</offset>
-          </start>
-          <end>
-            <offset>3584</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>GLUT_INCLUDE_DIR</value>
+              <start>
+                <offset>3569</offset>
+              </start>
+              <end>
+                <offset>3584</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -2121,13 +2755,19 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>GLUT_FOUND</argument>
-          <start>
-            <offset>3592</offset>
-          </start>
-          <end>
-            <offset>3601</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>GLUT_FOUND</value>
+              <start>
+                <offset>3592</offset>
+              </start>
+              <end>
+                <offset>3601</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -2170,21 +2810,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>GLUT_LIBRARIES
-</argument>
-          <start>
-            <offset>3741</offset>
-          </start>
-          <end>
-            <offset>3755</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>GLUT_LIBRARIES</value>
+              <start>
+                <offset>3741</offset>
+              </start>
+              <end>
+                <offset>3754</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${GLUT_glut_LIBRARY}
-</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${GLUT_glut_LIBRARY}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>GLUT_glut_LIBRARY</value>
+                  <start>
+                    <offset>3762</offset>
+                  </start>
+                  <end>
+                    <offset>3778</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>3760</offset>
               </start>
@@ -2193,19 +2846,23 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>3760</offset>
-          </start>
-          <end>
-            <offset>3780</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${GLUT_Xmu_LIBRARY}
-</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${GLUT_Xmu_LIBRARY}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>GLUT_Xmu_LIBRARY</value>
+                  <start>
+                    <offset>3787</offset>
+                  </start>
+                  <end>
+                    <offset>3802</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>3785</offset>
               </start>
@@ -2214,19 +2871,23 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>3785</offset>
-          </start>
-          <end>
-            <offset>3804</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${GLUT_Xi_LIBRARY}
-</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${GLUT_Xi_LIBRARY}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>GLUT_Xi_LIBRARY</value>
+                  <start>
+                    <offset>3811</offset>
+                  </start>
+                  <end>
+                    <offset>3825</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>3809</offset>
               </start>
@@ -2235,19 +2896,23 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>3809</offset>
-          </start>
-          <end>
-            <offset>3827</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${GLUT_cocoa_LIBRARY}
-</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${GLUT_cocoa_LIBRARY}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>GLUT_cocoa_LIBRARY</value>
+                  <start>
+                    <offset>3834</offset>
+                  </start>
+                  <end>
+                    <offset>3851</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>3832</offset>
               </start>
@@ -2256,12 +2921,8 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>3832</offset>
-          </start>
-          <end>
-            <offset>3853</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -2276,31 +2937,49 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>NOT</argument>
-          <start>
-            <offset>3866</offset>
-          </start>
-          <end>
-            <offset>3868</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>NOT</value>
+              <start>
+                <offset>3866</offset>
+              </start>
+              <end>
+                <offset>3868</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>TARGET</argument>
-          <start>
-            <offset>3870</offset>
-          </start>
-          <end>
-            <offset>3875</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>TARGET</value>
+              <start>
+                <offset>3870</offset>
+              </start>
+              <end>
+                <offset>3875</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>GLUT::GLUT</argument>
-          <start>
-            <offset>3877</offset>
-          </start>
-          <end>
-            <offset>3886</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>GLUT::GLUT</value>
+              <start>
+                <offset>3877</offset>
+              </start>
+              <end>
+                <offset>3886</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -2315,31 +2994,49 @@
       <commandName>add_library</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>GLUT::GLUT</argument>
-          <start>
-            <offset>3905</offset>
-          </start>
-          <end>
-            <offset>3914</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>GLUT::GLUT</value>
+              <start>
+                <offset>3905</offset>
+              </start>
+              <end>
+                <offset>3914</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>UNKNOWN</argument>
-          <start>
-            <offset>3916</offset>
-          </start>
-          <end>
-            <offset>3922</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>UNKNOWN</value>
+              <start>
+                <offset>3916</offset>
+              </start>
+              <end>
+                <offset>3922</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>IMPORTED</argument>
-          <start>
-            <offset>3924</offset>
-          </start>
-          <end>
-            <offset>3931</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>IMPORTED</value>
+              <start>
+                <offset>3924</offset>
+              </start>
+              <end>
+                <offset>3931</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -2354,38 +3051,64 @@
       <commandName>set_target_properties</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>GLUT::GLUT</argument>
-          <start>
-            <offset>3960</offset>
-          </start>
-          <end>
-            <offset>3969</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>GLUT::GLUT</value>
+              <start>
+                <offset>3960</offset>
+              </start>
+              <end>
+                <offset>3969</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>PROPERTIES
-</argument>
-          <start>
-            <offset>3971</offset>
-          </start>
-          <end>
-            <offset>3981</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>PROPERTIES</value>
+              <start>
+                <offset>3971</offset>
+              </start>
+              <end>
+                <offset>3980</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>INTERFACE_INCLUDE_DIRECTORIES</argument>
-          <start>
-            <offset>3988</offset>
-          </start>
-          <end>
-            <offset>4016</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>INTERFACE_INCLUDE_DIRECTORIES</value>
+              <start>
+                <offset>3988</offset>
+              </start>
+              <end>
+                <offset>4016</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${GLUT_INCLUDE_DIR}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${GLUT_INCLUDE_DIR}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>GLUT_INCLUDE_DIR</value>
+                  <start>
+                    <offset>4021</offset>
+                  </start>
+                  <end>
+                    <offset>4036</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>4019</offset>
               </start>
@@ -2414,25 +3137,47 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>GLUT_glut_LIBRARY</argument>
-          <start>
-            <offset>4048</offset>
-          </start>
-          <end>
-            <offset>4064</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>GLUT_glut_LIBRARY</value>
+              <start>
+                <offset>4048</offset>
+              </start>
+              <end>
+                <offset>4064</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>MATCHES</argument>
-          <start>
-            <offset>4066</offset>
-          </start>
-          <end>
-            <offset>4072</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>MATCHES</value>
+              <start>
+                <offset>4066</offset>
+              </start>
+              <end>
+                <offset>4072</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>/([^/]+)\\.framework$</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/([^/]+)\\.framework$</value>
+              <start>
+                <offset>4075</offset>
+              </start>
+              <end>
+                <offset>4095</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>4074</offset>
           </start>
@@ -2453,38 +3198,64 @@
       <commandName>set_target_properties</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>GLUT::GLUT</argument>
-          <start>
-            <offset>4127</offset>
-          </start>
-          <end>
-            <offset>4136</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>GLUT::GLUT</value>
+              <start>
+                <offset>4127</offset>
+              </start>
+              <end>
+                <offset>4136</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>PROPERTIES
-</argument>
-          <start>
-            <offset>4138</offset>
-          </start>
-          <end>
-            <offset>4148</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>PROPERTIES</value>
+              <start>
+                <offset>4138</offset>
+              </start>
+              <end>
+                <offset>4147</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>IMPORTED_LOCATION</argument>
-          <start>
-            <offset>4157</offset>
-          </start>
-          <end>
-            <offset>4173</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>IMPORTED_LOCATION</value>
+              <start>
+                <offset>4157</offset>
+              </start>
+              <end>
+                <offset>4173</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${GLUT_glut_LIBRARY}/${CMAKE_MATCH_1}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${GLUT_glut_LIBRARY}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>GLUT_glut_LIBRARY</value>
+                  <start>
+                    <offset>4178</offset>
+                  </start>
+                  <end>
+                    <offset>4194</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>4176</offset>
               </start>
@@ -2492,8 +3263,27 @@
                 <offset>4195</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/</value>
+              <start>
+                <offset>4196</offset>
+              </start>
+              <end>
+                <offset>4196</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_MATCH_1}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_MATCH_1</value>
+                  <start>
+                    <offset>4199</offset>
+                  </start>
+                  <end>
+                    <offset>4211</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>4197</offset>
               </start>
@@ -2533,38 +3323,64 @@
       <commandName>set_target_properties</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>GLUT::GLUT</argument>
-          <start>
-            <offset>4255</offset>
-          </start>
-          <end>
-            <offset>4264</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>GLUT::GLUT</value>
+              <start>
+                <offset>4255</offset>
+              </start>
+              <end>
+                <offset>4264</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>PROPERTIES
-</argument>
-          <start>
-            <offset>4266</offset>
-          </start>
-          <end>
-            <offset>4276</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>PROPERTIES</value>
+              <start>
+                <offset>4266</offset>
+              </start>
+              <end>
+                <offset>4275</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>IMPORTED_LOCATION</argument>
-          <start>
-            <offset>4285</offset>
-          </start>
-          <end>
-            <offset>4301</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>IMPORTED_LOCATION</value>
+              <start>
+                <offset>4285</offset>
+              </start>
+              <end>
+                <offset>4301</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${GLUT_glut_LIBRARY}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${GLUT_glut_LIBRARY}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>GLUT_glut_LIBRARY</value>
+                  <start>
+                    <offset>4306</offset>
+                  </start>
+                  <end>
+                    <offset>4322</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>4304</offset>
               </start>
@@ -2604,22 +3420,34 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>TARGET</argument>
-          <start>
-            <offset>4347</offset>
-          </start>
-          <end>
-            <offset>4352</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>TARGET</value>
+              <start>
+                <offset>4347</offset>
+              </start>
+              <end>
+                <offset>4352</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>GLUT::Xmu</argument>
-          <start>
-            <offset>4354</offset>
-          </start>
-          <end>
-            <offset>4362</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>GLUT::Xmu</value>
+              <start>
+                <offset>4354</offset>
+              </start>
+              <end>
+                <offset>4362</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -2634,59 +3462,94 @@
       <commandName>set_property</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>TARGET</argument>
-          <start>
-            <offset>4384</offset>
-          </start>
-          <end>
-            <offset>4389</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>TARGET</value>
+              <start>
+                <offset>4384</offset>
+              </start>
+              <end>
+                <offset>4389</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>GLUT::GLUT</argument>
-          <start>
-            <offset>4391</offset>
-          </start>
-          <end>
-            <offset>4400</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>GLUT::GLUT</value>
+              <start>
+                <offset>4391</offset>
+              </start>
+              <end>
+                <offset>4400</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>APPEND
-</argument>
-          <start>
-            <offset>4402</offset>
-          </start>
-          <end>
-            <offset>4408</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>APPEND</value>
+              <start>
+                <offset>4402</offset>
+              </start>
+              <end>
+                <offset>4407</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>PROPERTY</argument>
-          <start>
-            <offset>4417</offset>
-          </start>
-          <end>
-            <offset>4424</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>PROPERTY</value>
+              <start>
+                <offset>4417</offset>
+              </start>
+              <end>
+                <offset>4424</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>INTERFACE_LINK_LIBRARIES</argument>
-          <start>
-            <offset>4426</offset>
-          </start>
-          <end>
-            <offset>4449</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>INTERFACE_LINK_LIBRARIES</value>
+              <start>
+                <offset>4426</offset>
+              </start>
+              <end>
+                <offset>4449</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>GLUT::Xmu</argument>
-          <start>
-            <offset>4451</offset>
-          </start>
-          <end>
-            <offset>4459</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>GLUT::Xmu</value>
+              <start>
+                <offset>4451</offset>
+              </start>
+              <end>
+                <offset>4459</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -2712,22 +3575,34 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>TARGET</argument>
-          <start>
-            <offset>4482</offset>
-          </start>
-          <end>
-            <offset>4487</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>TARGET</value>
+              <start>
+                <offset>4482</offset>
+              </start>
+              <end>
+                <offset>4487</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>GLUT::Xi</argument>
-          <start>
-            <offset>4489</offset>
-          </start>
-          <end>
-            <offset>4496</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>GLUT::Xi</value>
+              <start>
+                <offset>4489</offset>
+              </start>
+              <end>
+                <offset>4496</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -2742,59 +3617,94 @@
       <commandName>set_property</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>TARGET</argument>
-          <start>
-            <offset>4518</offset>
-          </start>
-          <end>
-            <offset>4523</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>TARGET</value>
+              <start>
+                <offset>4518</offset>
+              </start>
+              <end>
+                <offset>4523</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>GLUT::GLUT</argument>
-          <start>
-            <offset>4525</offset>
-          </start>
-          <end>
-            <offset>4534</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>GLUT::GLUT</value>
+              <start>
+                <offset>4525</offset>
+              </start>
+              <end>
+                <offset>4534</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>APPEND
-</argument>
-          <start>
-            <offset>4536</offset>
-          </start>
-          <end>
-            <offset>4542</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>APPEND</value>
+              <start>
+                <offset>4536</offset>
+              </start>
+              <end>
+                <offset>4541</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>PROPERTY</argument>
-          <start>
-            <offset>4551</offset>
-          </start>
-          <end>
-            <offset>4558</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>PROPERTY</value>
+              <start>
+                <offset>4551</offset>
+              </start>
+              <end>
+                <offset>4558</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>INTERFACE_LINK_LIBRARIES</argument>
-          <start>
-            <offset>4560</offset>
-          </start>
-          <end>
-            <offset>4583</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>INTERFACE_LINK_LIBRARIES</value>
+              <start>
+                <offset>4560</offset>
+              </start>
+              <end>
+                <offset>4583</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>GLUT::Xi</argument>
-          <start>
-            <offset>4585</offset>
-          </start>
-          <end>
-            <offset>4592</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>GLUT::Xi</value>
+              <start>
+                <offset>4585</offset>
+              </start>
+              <end>
+                <offset>4592</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -2820,22 +3730,34 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>TARGET</argument>
-          <start>
-            <offset>4615</offset>
-          </start>
-          <end>
-            <offset>4620</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>TARGET</value>
+              <start>
+                <offset>4615</offset>
+              </start>
+              <end>
+                <offset>4620</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>GLUT::Cocoa</argument>
-          <start>
-            <offset>4622</offset>
-          </start>
-          <end>
-            <offset>4632</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>GLUT::Cocoa</value>
+              <start>
+                <offset>4622</offset>
+              </start>
+              <end>
+                <offset>4632</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -2850,59 +3772,94 @@
       <commandName>set_property</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>TARGET</argument>
-          <start>
-            <offset>4654</offset>
-          </start>
-          <end>
-            <offset>4659</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>TARGET</value>
+              <start>
+                <offset>4654</offset>
+              </start>
+              <end>
+                <offset>4659</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>GLUT::GLUT</argument>
-          <start>
-            <offset>4661</offset>
-          </start>
-          <end>
-            <offset>4670</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>GLUT::GLUT</value>
+              <start>
+                <offset>4661</offset>
+              </start>
+              <end>
+                <offset>4670</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>APPEND
-</argument>
-          <start>
-            <offset>4672</offset>
-          </start>
-          <end>
-            <offset>4678</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>APPEND</value>
+              <start>
+                <offset>4672</offset>
+              </start>
+              <end>
+                <offset>4677</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>PROPERTY</argument>
-          <start>
-            <offset>4687</offset>
-          </start>
-          <end>
-            <offset>4694</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>PROPERTY</value>
+              <start>
+                <offset>4687</offset>
+              </start>
+              <end>
+                <offset>4694</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>INTERFACE_LINK_LIBRARIES</argument>
-          <start>
-            <offset>4696</offset>
-          </start>
-          <end>
-            <offset>4719</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>INTERFACE_LINK_LIBRARIES</value>
+              <start>
+                <offset>4696</offset>
+              </start>
+              <end>
+                <offset>4719</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>GLUT::Cocoa</argument>
-          <start>
-            <offset>4721</offset>
-          </start>
-          <end>
-            <offset>4731</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>GLUT::Cocoa</value>
+              <start>
+                <offset>4721</offset>
+              </start>
+              <end>
+                <offset>4731</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -2953,19 +3910,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>GLUT_LIBRARY</argument>
-          <start>
-            <offset>4847</offset>
-          </start>
-          <end>
-            <offset>4858</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>GLUT_LIBRARY</value>
+              <start>
+                <offset>4847</offset>
+              </start>
+              <end>
+                <offset>4858</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${GLUT_LIBRARIES}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${GLUT_LIBRARIES}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>GLUT_LIBRARIES</value>
+                  <start>
+                    <offset>4862</offset>
+                  </start>
+                  <end>
+                    <offset>4875</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>4860</offset>
               </start>
@@ -2974,12 +3946,8 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>4860</offset>
-          </start>
-          <end>
-            <offset>4876</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -2994,19 +3962,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>GLUT_INCLUDE_PATH</argument>
-          <start>
-            <offset>4886</offset>
-          </start>
-          <end>
-            <offset>4902</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>GLUT_INCLUDE_PATH</value>
+              <start>
+                <offset>4886</offset>
+              </start>
+              <end>
+                <offset>4902</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${GLUT_INCLUDE_DIR}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${GLUT_INCLUDE_DIR}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>GLUT_INCLUDE_DIR</value>
+                  <start>
+                    <offset>4906</offset>
+                  </start>
+                  <end>
+                    <offset>4921</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>4904</offset>
               </start>
@@ -3015,12 +3998,8 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>4904</offset>
-          </start>
-          <end>
-            <offset>4922</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -3046,54 +4025,64 @@
       <commandName>mark_as_advanced</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>
-</argument>
-          <start>
-            <offset>4951</offset>
-          </start>
-          <end>
-            <offset>4951</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>GLUT_INCLUDE_DIR</value>
+              <start>
+                <offset>4954</offset>
+              </start>
+              <end>
+                <offset>4969</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>GLUT_INCLUDE_DIR
-</argument>
-          <start>
-            <offset>4954</offset>
-          </start>
-          <end>
-            <offset>4970</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>GLUT_glut_LIBRARY</value>
+              <start>
+                <offset>4973</offset>
+              </start>
+              <end>
+                <offset>4989</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>GLUT_glut_LIBRARY
-</argument>
-          <start>
-            <offset>4973</offset>
-          </start>
-          <end>
-            <offset>4990</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>GLUT_Xmu_LIBRARY</value>
+              <start>
+                <offset>4993</offset>
+              </start>
+              <end>
+                <offset>5008</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>GLUT_Xmu_LIBRARY
-</argument>
-          <start>
-            <offset>4993</offset>
-          </start>
-          <end>
-            <offset>5009</offset>
-          </end>
-        </ru.urururu.cmakeedit.core.ArgumentNode>
-        <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>GLUT_Xi_LIBRARY
-</argument>
-          <start>
-            <offset>5012</offset>
-          </start>
-          <end>
-            <offset>5027</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>GLUT_Xi_LIBRARY</value>
+              <start>
+                <offset>5012</offset>
+              </start>
+              <end>
+                <offset>5026</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>

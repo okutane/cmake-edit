@@ -31,15 +31,13 @@
   </problem>
   <problem>
     <problem>Value not used</problem>
-    <details>set(scratch_directory
-    ${CMAKE_CURRENT_BINARY_DIR}${CMAKE_FILES_DIRECTORY}/hdf5)</details>
-    <lineRange>181-182</lineRange>
+    <details>set(${version} ${${version}} PARENT_SCOPE)</details>
+    <lineRange>210</lineRange>
   </problem>
   <problem>
     <problem>Value not used</problem>
-    <details>set(scratch_directory
-      ${CMAKE_CURRENT_BINARY_DIR}${CMAKE_FILES_DIRECTORY}/hdf5)</details>
-    <lineRange>250-251</lineRange>
+    <details>set(${version} ${${version}} PARENT_SCOPE)</details>
+    <lineRange>244</lineRange>
   </problem>
   <problem>
     <problem>Value not used</problem>
@@ -83,18 +81,6 @@
   </problem>
   <problem>
     <problem>Value not used</problem>
-    <details>set(HDF5_${__lang}_COMPILER_EXECUTABLE_NO_INTERROGATE
-          &quot;${CMAKE_${__lang}_COMPILER}&quot;
-          CACHE FILEPATH &quot;HDF5 ${__lang} compiler wrapper&quot;)</details>
-    <lineRange>423-425</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set(HDF5_VERSION ${HDF5_${__lang}_VERSION})</details>
-    <lineRange>498</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
     <details>set(HDF5_CXX_HL_LIBRARY_NAMES     hdf5_hl_cpp ${HDF5_C_HL_LIBRARY_NAMES} ${HDF5_CXX_LIBRARY_NAMES})</details>
     <lineRange>555</lineRange>
   </problem>
@@ -102,30 +88,6 @@
     <problem>Value not used</problem>
     <details>set(HDF5_Fortran_HL_LIBRARY_NAMES hdf5_hl_fortran ${HDF5_C_HL_LIBRARY_NAMES} ${HDF5_Fortran_LIBRARY_NAMES})</details>
     <lineRange>558</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set( THIS_LIBRARY_SEARCH_DEBUG
-                    lib${LIB}d.a lib${LIB}_debug.a ${LIB}d ${LIB}_debug
-                    lib${LIB}d-static.a lib${LIB}_debug-static.a ${LIB}d-static ${LIB}_debug-static )</details>
-    <lineRange>590-592</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set( THIS_LIBRARY_SEARCH_DEBUG
-                        lib${LIB}d.a lib${LIB}_debug.a ${LIB}d ${LIB}_debug
-                        lib${LIB}d-static.a lib${LIB}_debug-static.a ${LIB}d-static ${LIB}_debug-static )</details>
-    <lineRange>624-626</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set( HDF5_VERSION &quot;&quot; )</details>
-    <lineRange>659</lineRange>
-  </problem>
-  <problem>
-    <problem>Value not used</problem>
-    <details>set( HDF5_VERSION ${HDF5_VERSION}.${CMAKE_MATCH_3})</details>
-    <lineRange>678</lineRange>
   </problem>
   <problem>
     <problem>Value not used</problem>

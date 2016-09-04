@@ -182,16 +182,32 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>ASM_DIALECT</argument>
-          <start>
-            <offset>662</offset>
-          </start>
-          <end>
-            <offset>672</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>ASM_DIALECT</value>
+              <start>
+                <offset>662</offset>
+              </start>
+              <end>
+                <offset>672</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>_MASM</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_MASM</value>
+              <start>
+                <offset>675</offset>
+              </start>
+              <end>
+                <offset>679</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>674</offset>
           </start>
@@ -212,10 +228,28 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_ASM${ASM_DIALECT}_SOURCE_FILE_EXTENSIONS</argument>
           <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_ASM</value>
+              <start>
+                <offset>688</offset>
+              </start>
+              <end>
+                <offset>696</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${ASM_DIALECT}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>ASM_DIALECT</value>
+                  <start>
+                    <offset>699</offset>
+                  </start>
+                  <end>
+                    <offset>709</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>697</offset>
               </start>
@@ -223,22 +257,33 @@
                 <offset>710</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_SOURCE_FILE_EXTENSIONS</value>
+              <start>
+                <offset>711</offset>
+              </start>
+              <end>
+                <offset>733</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
-          <start>
-            <offset>688</offset>
-          </start>
-          <end>
-            <offset>733</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode[2]/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>asm</argument>
-          <start>
-            <offset>735</offset>
-          </start>
-          <end>
-            <offset>737</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>asm</value>
+              <start>
+                <offset>735</offset>
+              </start>
+              <end>
+                <offset>737</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -253,10 +298,28 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_ASM${ASM_DIALECT}_COMPILE_OBJECT</argument>
           <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_ASM</value>
+              <start>
+                <offset>745</offset>
+              </start>
+              <end>
+                <offset>753</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${ASM_DIALECT}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>ASM_DIALECT</value>
+                  <start>
+                    <offset>756</offset>
+                  </start>
+                  <end>
+                    <offset>766</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>754</offset>
               </start>
@@ -264,19 +327,42 @@
                 <offset>767</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_COMPILE_OBJECT</value>
+              <start>
+                <offset>768</offset>
+              </start>
+              <end>
+                <offset>782</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
-          <start>
-            <offset>745</offset>
-          </start>
-          <end>
-            <offset>782</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode[2]/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>&lt;CMAKE_ASM${ASM_DIALECT}_COMPILER&gt; &lt;DEFINES&gt; &lt;INCLUDES&gt; &lt;FLAGS&gt; /c  /Fo &lt;OBJECT&gt; &lt;SOURCE&gt;</argument>
           <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>&lt;CMAKE_ASM</value>
+              <start>
+                <offset>785</offset>
+              </start>
+              <end>
+                <offset>794</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${ASM_DIALECT}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>ASM_DIALECT</value>
+                  <start>
+                    <offset>797</offset>
+                  </start>
+                  <end>
+                    <offset>807</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>795</offset>
               </start>
@@ -284,6 +370,15 @@
                 <offset>808</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_COMPILER&gt; &lt;DEFINES&gt; &lt;INCLUDES&gt; &lt;FLAGS&gt; /c  /Fo &lt;OBJECT&gt; &lt;SOURCE&gt;</value>
+              <start>
+                <offset>809</offset>
+              </start>
+              <end>
+                <offset>873</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
           <start>
             <offset>784</offset>
@@ -305,13 +400,19 @@
       <commandName>include</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMakeASMInformation</argument>
-          <start>
-            <offset>886</offset>
-          </start>
-          <end>
-            <offset>904</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMakeASMInformation</value>
+              <start>
+                <offset>886</offset>
+              </start>
+              <end>
+                <offset>904</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -326,13 +427,19 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>ASM_DIALECT</argument>
-          <start>
-            <offset>911</offset>
-          </start>
-          <end>
-            <offset>921</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>ASM_DIALECT</value>
+              <start>
+                <offset>911</offset>
+              </start>
+              <end>
+                <offset>921</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>

@@ -342,13 +342,19 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>WIN32</argument>
-          <start>
-            <offset>932</offset>
-          </start>
-          <end>
-            <offset>936</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>WIN32</value>
+              <start>
+                <offset>932</offset>
+              </start>
+              <end>
+                <offset>936</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -363,27 +369,47 @@
       <commandName>find_program</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>HTML_HELP_COMPILER
-</argument>
-          <start>
-            <offset>955</offset>
-          </start>
-          <end>
-            <offset>973</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>HTML_HELP_COMPILER</value>
+              <start>
+                <offset>955</offset>
+              </start>
+              <end>
+                <offset>972</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>hhc
-</argument>
-          <start>
-            <offset>978</offset>
-          </start>
-          <end>
-            <offset>981</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>hhc</value>
+              <start>
+                <offset>978</offset>
+              </start>
+              <end>
+                <offset>980</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>[HKEY_CURRENT_USER\\Software\\Microsoft\\HTML Help Workshop;InstallDir]</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>[HKEY_CURRENT_USER\\Software\\Microsoft\\HTML Help Workshop;InstallDir]</value>
+              <start>
+                <offset>987</offset>
+              </start>
+              <end>
+                <offset>1057</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>986</offset>
           </start>
@@ -392,21 +418,20 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>
-</argument>
-          <start>
-            <offset>1059</offset>
-          </start>
-          <end>
-            <offset>1059</offset>
-          </end>
-        </ru.urururu.cmakeedit.core.ArgumentNode>
-        <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>$ENV{ProgramFiles}/HTML Help Workshop</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
               <key>ENV</key>
-              <expression>$ENV{ProgramFiles}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>ProgramFiles</value>
+                  <start>
+                    <offset>1070</offset>
+                  </start>
+                  <end>
+                    <offset>1081</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1065</offset>
               </start>
@@ -414,6 +439,15 @@
                 <offset>1082</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/HTML Help Workshop</value>
+              <start>
+                <offset>1083</offset>
+              </start>
+              <end>
+                <offset>1101</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
           <start>
             <offset>1064</offset>
@@ -423,32 +457,22 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>
-</argument>
-          <start>
-            <offset>1103</offset>
-          </start>
-          <end>
-            <offset>1103</offset>
-          </end>
-        </ru.urururu.cmakeedit.core.ArgumentNode>
-        <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>C:/Program Files/HTML Help Workshop</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>C:/Program Files/HTML Help Workshop</value>
+              <start>
+                <offset>1109</offset>
+              </start>
+              <end>
+                <offset>1143</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>1108</offset>
           </start>
           <end>
             <offset>1144</offset>
-          </end>
-        </ru.urururu.cmakeedit.core.ArgumentNode>
-        <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>
-</argument>
-          <start>
-            <offset>1145</offset>
-          </start>
-          <end>
-            <offset>1145</offset>
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
@@ -464,19 +488,34 @@
       <commandName>get_filename_component</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>HTML_HELP_COMPILER_PATH</argument>
-          <start>
-            <offset>1178</offset>
-          </start>
-          <end>
-            <offset>1200</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>HTML_HELP_COMPILER_PATH</value>
+              <start>
+                <offset>1178</offset>
+              </start>
+              <end>
+                <offset>1200</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${HTML_HELP_COMPILER}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${HTML_HELP_COMPILER}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>HTML_HELP_COMPILER</value>
+                  <start>
+                    <offset>1205</offset>
+                  </start>
+                  <end>
+                    <offset>1222</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1203</offset>
               </start>
@@ -493,13 +532,19 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>PATH</argument>
-          <start>
-            <offset>1226</offset>
-          </start>
-          <end>
-            <offset>1229</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>PATH</value>
+              <start>
+                <offset>1226</offset>
+              </start>
+              <end>
+                <offset>1229</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -514,30 +559,49 @@
       <commandName>find_path</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>HTML_HELP_INCLUDE_PATH
-</argument>
-          <start>
-            <offset>1245</offset>
-          </start>
-          <end>
-            <offset>1267</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>HTML_HELP_INCLUDE_PATH</value>
+              <start>
+                <offset>1245</offset>
+              </start>
+              <end>
+                <offset>1266</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>htmlhelp.h
-</argument>
-          <start>
-            <offset>1272</offset>
-          </start>
-          <end>
-            <offset>1282</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>htmlhelp.h</value>
+              <start>
+                <offset>1272</offset>
+              </start>
+              <end>
+                <offset>1281</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${HTML_HELP_COMPILER_PATH}/include</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${HTML_HELP_COMPILER_PATH}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>HTML_HELP_COMPILER_PATH</value>
+                  <start>
+                    <offset>1290</offset>
+                  </start>
+                  <end>
+                    <offset>1312</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1288</offset>
               </start>
@@ -545,6 +609,15 @@
                 <offset>1313</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/include</value>
+              <start>
+                <offset>1314</offset>
+              </start>
+              <end>
+                <offset>1321</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
           <start>
             <offset>1287</offset>
@@ -554,17 +627,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>
-</argument>
-          <start>
-            <offset>1323</offset>
-          </start>
-          <end>
-            <offset>1323</offset>
-          </end>
-        </ru.urururu.cmakeedit.core.ArgumentNode>
-        <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>[HKEY_CURRENT_USER\\Software\\Microsoft\\HTML Help Workshop;InstallDir]/include</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>[HKEY_CURRENT_USER\\Software\\Microsoft\\HTML Help Workshop;InstallDir]/include</value>
+              <start>
+                <offset>1329</offset>
+              </start>
+              <end>
+                <offset>1407</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>1328</offset>
           </start>
@@ -573,21 +646,20 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>
-</argument>
-          <start>
-            <offset>1409</offset>
-          </start>
-          <end>
-            <offset>1409</offset>
-          </end>
-        </ru.urururu.cmakeedit.core.ArgumentNode>
-        <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>$ENV{ProgramFiles}/HTML Help Workshop/include</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
               <key>ENV</key>
-              <expression>$ENV{ProgramFiles}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>ProgramFiles</value>
+                  <start>
+                    <offset>1420</offset>
+                  </start>
+                  <end>
+                    <offset>1431</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1415</offset>
               </start>
@@ -595,6 +667,15 @@
                 <offset>1432</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/HTML Help Workshop/include</value>
+              <start>
+                <offset>1433</offset>
+              </start>
+              <end>
+                <offset>1459</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
           <start>
             <offset>1414</offset>
@@ -604,32 +685,22 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>
-</argument>
-          <start>
-            <offset>1461</offset>
-          </start>
-          <end>
-            <offset>1461</offset>
-          </end>
-        </ru.urururu.cmakeedit.core.ArgumentNode>
-        <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>C:/Program Files/HTML Help Workshop/include</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>C:/Program Files/HTML Help Workshop/include</value>
+              <start>
+                <offset>1467</offset>
+              </start>
+              <end>
+                <offset>1509</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>1466</offset>
           </start>
           <end>
             <offset>1510</offset>
-          </end>
-        </ru.urururu.cmakeedit.core.ArgumentNode>
-        <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>
-</argument>
-          <start>
-            <offset>1511</offset>
-          </start>
-          <end>
-            <offset>1511</offset>
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
@@ -645,30 +716,49 @@
       <commandName>find_library</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>HTML_HELP_LIBRARY
-</argument>
-          <start>
-            <offset>1534</offset>
-          </start>
-          <end>
-            <offset>1551</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>HTML_HELP_LIBRARY</value>
+              <start>
+                <offset>1534</offset>
+              </start>
+              <end>
+                <offset>1550</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>htmlhelp
-</argument>
-          <start>
-            <offset>1556</offset>
-          </start>
-          <end>
-            <offset>1564</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>htmlhelp</value>
+              <start>
+                <offset>1556</offset>
+              </start>
+              <end>
+                <offset>1563</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${HTML_HELP_COMPILER_PATH}/lib</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${HTML_HELP_COMPILER_PATH}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>HTML_HELP_COMPILER_PATH</value>
+                  <start>
+                    <offset>1572</offset>
+                  </start>
+                  <end>
+                    <offset>1594</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1570</offset>
               </start>
@@ -676,6 +766,15 @@
                 <offset>1595</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/lib</value>
+              <start>
+                <offset>1596</offset>
+              </start>
+              <end>
+                <offset>1599</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
           <start>
             <offset>1569</offset>
@@ -685,17 +784,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>
-</argument>
-          <start>
-            <offset>1601</offset>
-          </start>
-          <end>
-            <offset>1601</offset>
-          </end>
-        </ru.urururu.cmakeedit.core.ArgumentNode>
-        <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>[HKEY_CURRENT_USER\\Software\\Microsoft\\HTML Help Workshop;InstallDir]/lib</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>[HKEY_CURRENT_USER\\Software\\Microsoft\\HTML Help Workshop;InstallDir]/lib</value>
+              <start>
+                <offset>1607</offset>
+              </start>
+              <end>
+                <offset>1681</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>1606</offset>
           </start>
@@ -704,21 +803,20 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>
-</argument>
-          <start>
-            <offset>1683</offset>
-          </start>
-          <end>
-            <offset>1683</offset>
-          </end>
-        </ru.urururu.cmakeedit.core.ArgumentNode>
-        <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>$ENV{ProgramFiles}/HTML Help Workshop/lib</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
               <key>ENV</key>
-              <expression>$ENV{ProgramFiles}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>ProgramFiles</value>
+                  <start>
+                    <offset>1694</offset>
+                  </start>
+                  <end>
+                    <offset>1705</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1689</offset>
               </start>
@@ -726,6 +824,15 @@
                 <offset>1706</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/HTML Help Workshop/lib</value>
+              <start>
+                <offset>1707</offset>
+              </start>
+              <end>
+                <offset>1729</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
           <start>
             <offset>1688</offset>
@@ -735,32 +842,22 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>
-</argument>
-          <start>
-            <offset>1731</offset>
-          </start>
-          <end>
-            <offset>1731</offset>
-          </end>
-        </ru.urururu.cmakeedit.core.ArgumentNode>
-        <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>C:/Program Files/HTML Help Workshop/lib</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>C:/Program Files/HTML Help Workshop/lib</value>
+              <start>
+                <offset>1737</offset>
+              </start>
+              <end>
+                <offset>1775</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>1736</offset>
           </start>
           <end>
             <offset>1776</offset>
-          </end>
-        </ru.urururu.cmakeedit.core.ArgumentNode>
-        <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>
-</argument>
-          <start>
-            <offset>1777</offset>
-          </start>
-          <end>
-            <offset>1777</offset>
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
@@ -776,44 +873,49 @@
       <commandName>mark_as_advanced</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>
-</argument>
-          <start>
-            <offset>1804</offset>
-          </start>
-          <end>
-            <offset>1804</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>HTML_HELP_COMPILER</value>
+              <start>
+                <offset>1809</offset>
+              </start>
+              <end>
+                <offset>1826</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>HTML_HELP_COMPILER
-</argument>
-          <start>
-            <offset>1809</offset>
-          </start>
-          <end>
-            <offset>1827</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>HTML_HELP_INCLUDE_PATH</value>
+              <start>
+                <offset>1832</offset>
+              </start>
+              <end>
+                <offset>1853</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>HTML_HELP_INCLUDE_PATH
-</argument>
-          <start>
-            <offset>1832</offset>
-          </start>
-          <end>
-            <offset>1854</offset>
-          </end>
-        </ru.urururu.cmakeedit.core.ArgumentNode>
-        <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>HTML_HELP_LIBRARY
-</argument>
-          <start>
-            <offset>1859</offset>
-          </start>
-          <end>
-            <offset>1876</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>HTML_HELP_LIBRARY</value>
+              <start>
+                <offset>1859</offset>
+              </start>
+              <end>
+                <offset>1875</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>

@@ -1,12 +1,9 @@
 <list>
   <problem>
     <problem>Value not used</problem>
-    <details>set(COMPILER_DESCRIPTION
-    &quot;Compiler: ${CMAKE_${lang}_COMPILER} ${CMAKE_${lang}_COMPILER_ID_ARG1}
-Build flags: ${CMAKE_${lang}_COMPILER_ID_FLAGS_LIST}
-Id flags: ${testflags}
-&quot;)</details>
-    <lineRange>145-149</lineRange>
+    <details>set(MSVC_${lang}_ARCHITECTURE_ID &quot;${MSVC_${lang}_ARCHITECTURE_ID}&quot;
+    PARENT_SCOPE)</details>
+    <lineRange>106-107</lineRange>
   </problem>
   <problem>
     <problem>Value not used</problem>
@@ -191,15 +188,13 @@ Id flags: ${testflags}
   </problem>
   <problem>
     <problem>Value not used</problem>
-    <details>set(MSG
-      &quot;Compiling the ${lang} compiler identification source file \&quot;${src}\&quot; failed.
-${COMPILER_DESCRIPTION}
-The output was:
-${CMAKE_${lang}_COMPILER_ID_RESULT}
-${CMAKE_${lang}_COMPILER_ID_OUTPUT}
-
-&quot;)</details>
-    <lineRange>339-346</lineRange>
+    <details>set(COMPILER_${lang}_PRODUCED_FILES &quot;${COMPILER_${lang}_PRODUCED_FILES}&quot; PARENT_SCOPE)</details>
+    <lineRange>400</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(COMPILER_${lang}_PRODUCED_OUTPUT &quot;${COMPILER_${lang}_PRODUCED_OUTPUT}&quot; PARENT_SCOPE)</details>
+    <lineRange>401</lineRange>
   </problem>
   <problem>
     <problem>Value not used</problem>
@@ -245,5 +240,16 @@ ${CMAKE_${lang}_COMPILER_ID_OUTPUT}
     <problem>Value not used</problem>
     <details>set(HAVE_COMPILER_VERSION_${comp} 1)</details>
     <lineRange>469</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(MSVC_${lang}_ARCHITECTURE_ID &quot;${MSVC_${lang}_ARCHITECTURE_ID}&quot;
+    PARENT_SCOPE)</details>
+    <lineRange>585-586</lineRange>
+  </problem>
+  <problem>
+    <problem>Value not used</problem>
+    <details>set(COMPILER_QNXNTO &quot;${COMPILER_QNXNTO}&quot; PARENT_SCOPE)</details>
+    <lineRange>592</lineRange>
   </problem>
 </list>

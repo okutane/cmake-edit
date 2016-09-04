@@ -17,7 +17,7 @@ import java.awt.*;
 /**
  * Created by okutane on 07/08/16.
  */
-class CmakeTextPane extends JScrollPane implements DocumentListener, NodeVisitor {
+class CmakeTextPane extends JScrollPane implements DocumentListener {
     private final JTextPane textPane;
 
     private final DefaultStyledDocument styledDocument;
@@ -71,7 +71,32 @@ class CmakeTextPane extends JScrollPane implements DocumentListener, NodeVisitor
             throw new IllegalStateException(e);
         }
 
-        fileNode.visitAll(CmakeTextPane.this);
+        fileNode.visitAll(new NodeVisitorAdapter() {
+            @Override
+            public void accept(CommandInvocationNode node) {
+                colorize(node, normal);
+            }
+
+            @Override
+            public void accept(ArgumentNode node) {
+                colorize(node, argument);
+            }
+
+            @Override
+            public void accept(ExpressionNode node) {
+                colorize(node, expression);
+            }
+
+            @Override
+            public void accept(CommentNode node) {
+                colorize(node, comment);
+            }
+
+            @Override
+            public void accept(ParseErrorNode node) {
+                addHighlight(node.getStart(), node.getEnd(), errorsHighlighter);
+            }
+        });
 
         try {
             Checker.findUnused(new FileCheckContext(fileNode, new MetricRegistry(),(range, problem) -> addHighlight(range.getStart(), range.getEnd(), warningsHighlighter)));
@@ -105,31 +130,6 @@ class CmakeTextPane extends JScrollPane implements DocumentListener, NodeVisitor
     @Override
     public void changedUpdate(DocumentEvent e) {
         // generated on style change, not interested.
-    }
-
-    @Override
-    public void accept(CommandInvocationNode node) {
-        colorize(node, normal);
-    }
-
-    @Override
-    public void accept(ArgumentNode node) {
-        colorize(node, argument);
-    }
-
-    @Override
-    public void accept(ExpressionNode node) {
-        colorize(node, expression);
-    }
-
-    @Override
-    public void accept(CommentNode node) {
-        colorize(node, comment);
-    }
-
-    @Override
-    public void accept(ParseErrorNode node) {
-        addHighlight(node.getStart(), node.getEnd(), errorsHighlighter);
     }
 
     private void colorize(Node node, Style style) {

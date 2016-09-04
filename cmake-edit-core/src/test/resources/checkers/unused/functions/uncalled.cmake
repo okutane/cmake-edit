@@ -5,5 +5,5 @@ function(localscope)
 endfunction()
 
 function(parentscope)
-    set(global foo PARENT_SCOPE) # no problem
+    set(global foo PARENT_SCOPE)
 endfunction()

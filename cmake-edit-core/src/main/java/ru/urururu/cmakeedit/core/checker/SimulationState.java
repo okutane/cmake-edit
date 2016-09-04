@@ -3,7 +3,6 @@ package ru.urururu.cmakeedit.core.checker;
 import ru.urururu.cmakeedit.core.*;
 
 import java.util.*;
-import java.util.function.Function;
 
 /**
  * Created by okutane on 16/08/16.
@@ -12,37 +11,130 @@ class SimulationState {
     private final List<CommandInvocationNode> nodes;
     private int position;
     private final Map<String, Set<CommandInvocationNode>> variables;
-    private final Map<String, LogicalBlock> subroutines = new HashMap<>();
+    private final Set<CommandInvocationNode> suspiciousPoints;
+    private final Map<String, AbstractSimulator.CommandSimulator> dynamicSimulators = new HashMap<>();
 
-    SimulationState(List<CommandInvocationNode> nodes, int position) {
-        this(nodes, position, new HashMap<>());
+    SimulationState(List<CommandInvocationNode> nodes, int position, Set<CommandInvocationNode> suspiciousPoints) {
+        this(nodes, position, suspiciousPoints, new HashMap<>());
     }
 
-    SimulationState(List<CommandInvocationNode> nodes, int position, Map<String, Set<CommandInvocationNode>> variables) {
+    SimulationState(List<CommandInvocationNode> nodes, int position, Set<CommandInvocationNode> suspiciousPoints, Map<String, Set<CommandInvocationNode>> variables) {
         this.nodes = nodes;
         this.position = position;
         this.variables = variables;
+        this.suspiciousPoints = suspiciousPoints;
     }
 
-    void simulate(Set<Node> suspiciousPoints, Node node) {
+    String getValue(Node argumentNode) {
+        return getValue(argumentNode, Collections.emptyMap());
+    }
+
+    /** todo think of better name */
+    String getValue(Node argumentNode, Map<String, Node> substitutions) {
+        StringBuilder sb = new StringBuilder();
+
+        argumentNode.visitAll(new NodeVisitorAdapter() {
+            @Override
+            public void accept(ExpressionNode node) {
+                StringBuilder exprBuilder = new StringBuilder();
+
+                if (node.getKey() != null) {
+                    exprBuilder.append(node.getKey());
+                }
+
+                node.getNested().stream().forEach(n -> exprBuilder.append(getValue(n, substitutions)));
+
+                String expr = exprBuilder.toString();
+
+                Node substitution = substitutions.get(expr);
+
+                if (substitution != null) {
+                    substitution.visitAll(this);
+                } else {
+                    processUsage(expr);
+                    sb.append('*').append(expr);
+                }
+            }
+
+            @Override
+            public void accept(ConstantNode node) {
+                String value = node.getValue();
+                sb.append(value);
+            }
+        });
+
+        return sb.toString();
+    }
+
+    void processUsage(ArgumentNode argumentNode) {
+        getValue(argumentNode);
+
+        processUsage(getArgument(argumentNode));
+    }
+
+    protected void processUnknownUsage(String variable) {
+        // do nothing, allow subclasses to do something.
+    }
+
+    void processUsage(String variable) {
+        Set<CommandInvocationNode> nodes = variables.get(variable);
+
+        if (nodes == null) {
+            processUnknownUsage(variable);
+        } else {
+            suspiciousPoints.removeAll(nodes);
+        }
+    }
+
+    void putValue(ArgumentNode argumentNode, CommandInvocationNode command, boolean parentScope) {
+        putValue(argumentNode, command, Collections.emptyMap(), parentScope);
+    }
+
+    void putValue(ArgumentNode argumentNode, CommandInvocationNode command, Map<String, Node> substitutions, boolean parentScope) {
+        // todo check that expressions from argumentNode are used
+
+        // todo inline argumentNode via processUsage()
+        String variable = getValue(argumentNode, substitutions);
+
+        putValue(command, variable);
+    }
+
+    protected void putValue(CommandInvocationNode command, String variable) {
+        variables.put(variable, Collections.singleton(command));
+    }
+
+    static String getArgument(Node argumentNode) {
+        StringBuilder sb = new StringBuilder();
+
+        argumentNode.visitAll(new NodeVisitorAdapter() {
+            @Override
+            public void accept(ExpressionNode node) {
+                if (node.getKey() != null) {
+                    sb.append(node.getKey());
+                }
+                //throw new IllegalStateException("not implemented");
+                node.getNested().stream().forEach(n -> n.visitAll(this));
+            }
+
+            @Override
+            public void accept(ConstantNode node) {
+                sb.append(node.getValue());
+            }
+        });
+
+        return sb.toString();
+    }
+
+    void simulate(Node node) {
         node.visitAll(new NodeVisitorAdapter() {
             @Override
             public void accept(CommandInvocationNode node) {
                 processUsages(node);
 
-                Function<CommandInvocationNode, Node> setter = Checker.setters.get(node.getCommandName());
-                if (setter != null) {
-                    Node argument = setter.apply(node);
-
-                    if (argument != null) {
-                        String variable = ((ArgumentNode) argument).getArgument();
-                        // todo if variable is a reference through other variables we should inline it.
-                        variables.put(variable, Collections.singleton(node));
-                    }
-                } else if (node.getCommandName().equals("unset")) {
+                if (node.getCommandName().equals("unset")) {
                     List<Node> arguments = node.getArguments();
                     if (arguments.size() > 0) {
-                        String variable = ((ArgumentNode) arguments.get(0)).getArgument();
+                        String variable = getArgument(arguments.get(0));
                         // todo if variable is a reference through other variables we should inline it.
 
                         variables.remove(variable);
@@ -51,80 +143,14 @@ class SimulationState {
             }
 
             private void processUsages(CommandInvocationNode node) {
-                if (node.getCommandName().equals("set")) {
-                    List<Node> arguments = node.getArguments();
+                List<Node> arguments = node.getArguments();
 
-                    if (arguments.isEmpty()) {
-                        return;
-                    }
-
-                    arguments.get(0).visitAll(new NodeVisitorAdapter() {
-                        @Override
-                        public void accept(ExpressionNode node) {
-                            processExpression(node, suspiciousPoints);
-                        }
-                    });
-
-                    for (int i = 1; i < arguments.size(); i++) {
-                        arguments.get(i).visitAll(new NodeVisitorAdapter() {
-                            @Override
-                            public void accept(ExpressionNode node) {
-                                processExpression(node, suspiciousPoints);
-                            }
-
-                            @Override
-                            public void accept(ArgumentNode node) {
-                                // not to hardcore?
-                                String argument = node.getArgument();
-                                processUsage(argument, suspiciousPoints);
-                            }
-                        });
-                    }
-
-                    return;
+                for (Node argument : arguments) {
+                    String arg = getValue(argument);
+                    processUsage(arg); // todo shouldnt do for all!
                 }
-
-                node.visitAll(new NodeVisitorAdapter() {
-                    @Override
-                    public void accept(ExpressionNode node) {
-                        processExpression(node, suspiciousPoints);
-                    }
-
-                    @Override
-                    public void accept(ArgumentNode node) {
-                        // not to hardcore?
-                        String argument = node.getArgument();
-                        processUsage(argument, suspiciousPoints);
-                    }
-                });
             }
         });
-    }
-
-    private void processExpression(ExpressionNode node, Set<Node> suspiciousPoints) {
-        if (node.getKey() != null) {
-            return;
-        }
-
-        // fixme dirty
-        String expression = node.getExpression();
-        int expressionStart = expression.indexOf('{');
-        int expressionEnd = expression.lastIndexOf('}');
-
-        if (expressionStart != -1 && expressionEnd != -1) {
-            String argument = expression.substring(expressionStart + 1, expressionEnd);
-            processUsage(argument, suspiciousPoints);
-        }
-    }
-
-    private void processUsage(String argument, Set<Node> suspiciousPoints) {
-        Set<CommandInvocationNode> commandInvocationNode = variables.get(argument);
-
-        if (commandInvocationNode == null) {
-            return;
-        }
-
-        suspiciousPoints.removeAll(commandInvocationNode);
     }
 
     public CommandInvocationNode getCurrent() {
@@ -139,6 +165,10 @@ class SimulationState {
         return nodes;
     }
 
+    public Set<CommandInvocationNode> getSuspiciousPoints() {
+        return suspiciousPoints;
+    }
+
     public Map<String, Set<CommandInvocationNode>> getVariables() {
         return variables;
     }
@@ -147,11 +177,11 @@ class SimulationState {
         this.position = position;
     }
 
-    public void addSubroutine(String name, LogicalBlock block) {
-        subroutines.put(name, block);
+    public void addSimulator(String name, AbstractSimulator.CommandSimulator simulator) {
+        dynamicSimulators.put(name, simulator);
     }
 
-    public LogicalBlock getSubroutine(String name) {
-        return subroutines.get(name);
+    public AbstractSimulator.CommandSimulator getSimulator(String name) {
+        return dynamicSimulators.get(name);
     }
 }

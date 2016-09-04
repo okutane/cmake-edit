@@ -4,20 +4,36 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>_compiler_id_version_compute</argument>
-          <start>
-            <offset>5</offset>
-          </start>
-          <end>
-            <offset>32</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_compiler_id_version_compute</value>
+              <start>
+                <offset>5</offset>
+              </start>
+              <end>
+                <offset>32</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>
   /* __IBMCPP__ = VRP */
 # define @PREFIX@COMPILER_VERSION_MAJOR @MACRO_DEC@(__IBMCPP__/100)
 # define @PREFIX@COMPILER_VERSION_MINOR @MACRO_DEC@(__IBMCPP__/10 % 10)
-# define @PREFIX@COMPILER_VERSION_PATCH @MACRO_DEC@(__IBMCPP__    % 10)</argument>
+# define @PREFIX@COMPILER_VERSION_PATCH @MACRO_DEC@(__IBMCPP__    % 10)</value>
+              <start>
+                <offset>35</offset>
+              </start>
+              <end>
+                <offset>271</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>34</offset>
           </start>

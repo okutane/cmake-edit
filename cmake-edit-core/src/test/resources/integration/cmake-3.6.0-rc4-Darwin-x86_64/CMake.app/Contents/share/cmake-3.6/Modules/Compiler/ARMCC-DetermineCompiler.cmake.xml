@@ -18,16 +18,32 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>_compiler_id_pp_test</argument>
-          <start>
-            <offset>22</offset>
-          </start>
-          <end>
-            <offset>41</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_compiler_id_pp_test</value>
+              <start>
+                <offset>22</offset>
+              </start>
+              <end>
+                <offset>41</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>defined(__ARMCC_VERSION)</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>defined(__ARMCC_VERSION)</value>
+              <start>
+                <offset>44</offset>
+              </start>
+              <end>
+                <offset>67</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>43</offset>
           </start>
@@ -48,16 +64,24 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>_compiler_id_version_compute</argument>
-          <start>
-            <offset>76</offset>
-          </start>
-          <end>
-            <offset>103</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_compiler_id_version_compute</value>
+              <start>
+                <offset>76</offset>
+              </start>
+              <end>
+                <offset>103</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>
 #if __ARMCC_VERSION &gt;= 1000000
   /* __ARMCC_VERSION = VRRPPPP */
   # define @PREFIX@COMPILER_VERSION_MAJOR @MACRO_DEC@(__ARMCC_VERSION/1000000)
@@ -69,7 +93,15 @@
   # define @PREFIX@COMPILER_VERSION_MINOR @MACRO_DEC@(__ARMCC_VERSION/10000 % 10)
   # define @PREFIX@COMPILER_VERSION_PATCH @MACRO_DEC@(__ARMCC_VERSION    % 10000)
 #endif
-</argument>
+</value>
+              <start>
+                <offset>106</offset>
+              </start>
+              <end>
+                <offset>704</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>105</offset>
           </start>

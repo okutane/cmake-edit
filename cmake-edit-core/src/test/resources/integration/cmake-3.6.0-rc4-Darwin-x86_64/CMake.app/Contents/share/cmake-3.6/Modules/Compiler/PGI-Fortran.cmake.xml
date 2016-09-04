@@ -4,13 +4,19 @@
       <commandName>include</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>Compiler/PGI</argument>
-          <start>
-            <offset>8</offset>
-          </start>
-          <end>
-            <offset>19</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>Compiler/PGI</value>
+              <start>
+                <offset>8</offset>
+              </start>
+              <end>
+                <offset>19</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -25,13 +31,19 @@
       <commandName>__compiler_pgi</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>Fortran</argument>
-          <start>
-            <offset>37</offset>
-          </start>
-          <end>
-            <offset>43</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>Fortran</value>
+              <start>
+                <offset>37</offset>
+              </start>
+              <end>
+                <offset>43</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -46,16 +58,32 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_Fortran_FORMAT_FIXED_FLAG</argument>
-          <start>
-            <offset>51</offset>
-          </start>
-          <end>
-            <offset>81</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_Fortran_FORMAT_FIXED_FLAG</value>
+              <start>
+                <offset>51</offset>
+              </start>
+              <end>
+                <offset>81</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>-Mnofreeform</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>-Mnofreeform</value>
+              <start>
+                <offset>84</offset>
+              </start>
+              <end>
+                <offset>95</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>83</offset>
           </start>
@@ -76,16 +104,32 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_Fortran_FORMAT_FREE_FLAG</argument>
-          <start>
-            <offset>103</offset>
-          </start>
-          <end>
-            <offset>132</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_Fortran_FORMAT_FREE_FLAG</value>
+              <start>
+                <offset>103</offset>
+              </start>
+              <end>
+                <offset>132</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>-Mfreeform</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>-Mfreeform</value>
+              <start>
+                <offset>135</offset>
+              </start>
+              <end>
+                <offset>144</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>134</offset>
           </start>
@@ -106,19 +150,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_Fortran_FLAGS_INIT</argument>
-          <start>
-            <offset>153</offset>
-          </start>
-          <end>
-            <offset>176</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_Fortran_FLAGS_INIT</value>
+              <start>
+                <offset>153</offset>
+              </start>
+              <end>
+                <offset>176</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_Fortran_FLAGS_INIT} -Mpreprocess -Kieee</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_Fortran_FLAGS_INIT}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_Fortran_FLAGS_INIT</value>
+                  <start>
+                    <offset>181</offset>
+                  </start>
+                  <end>
+                    <offset>204</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>179</offset>
               </start>
@@ -126,6 +185,15 @@
                 <offset>205</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value> -Mpreprocess -Kieee</value>
+              <start>
+                <offset>206</offset>
+              </start>
+              <end>
+                <offset>225</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
           <start>
             <offset>178</offset>
@@ -147,19 +215,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_Fortran_FLAGS_DEBUG_INIT</argument>
-          <start>
-            <offset>233</offset>
-          </start>
-          <end>
-            <offset>262</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_Fortran_FLAGS_DEBUG_INIT</value>
+              <start>
+                <offset>233</offset>
+              </start>
+              <end>
+                <offset>262</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_Fortran_FLAGS_DEBUG_INIT} -Mbounds</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_Fortran_FLAGS_DEBUG_INIT}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_Fortran_FLAGS_DEBUG_INIT</value>
+                  <start>
+                    <offset>267</offset>
+                  </start>
+                  <end>
+                    <offset>296</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>265</offset>
               </start>
@@ -167,6 +250,15 @@
                 <offset>297</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value> -Mbounds</value>
+              <start>
+                <offset>298</offset>
+              </start>
+              <end>
+                <offset>306</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
           <start>
             <offset>264</offset>
@@ -188,16 +280,32 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_Fortran_MODDIR_FLAG</argument>
-          <start>
-            <offset>315</offset>
-          </start>
-          <end>
-            <offset>339</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_Fortran_MODDIR_FLAG</value>
+              <start>
+                <offset>315</offset>
+              </start>
+              <end>
+                <offset>339</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>-module </argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>-module </value>
+              <start>
+                <offset>342</offset>
+              </start>
+              <end>
+                <offset>349</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>341</offset>
           </start>

@@ -590,40 +590,64 @@
       <commandName>macro</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>RTI_MESSAGE_QUIETLY</argument>
-          <start>
-            <offset>1467</offset>
-          </start>
-          <end>
-            <offset>1485</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>RTI_MESSAGE_QUIETLY</value>
+              <start>
+                <offset>1467</offset>
+              </start>
+              <end>
+                <offset>1485</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>QUIET</argument>
-          <start>
-            <offset>1487</offset>
-          </start>
-          <end>
-            <offset>1491</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>QUIET</value>
+              <start>
+                <offset>1487</offset>
+              </start>
+              <end>
+                <offset>1491</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>TYPE</argument>
-          <start>
-            <offset>1493</offset>
-          </start>
-          <end>
-            <offset>1496</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>TYPE</value>
+              <start>
+                <offset>1493</offset>
+              </start>
+              <end>
+                <offset>1496</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>MSG</argument>
-          <start>
-            <offset>1498</offset>
-          </start>
-          <end>
-            <offset>1500</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>MSG</value>
+              <start>
+                <offset>1498</offset>
+              </start>
+              <end>
+                <offset>1500</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -638,19 +662,34 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>NOT</argument>
-          <start>
-            <offset>1508</offset>
-          </start>
-          <end>
-            <offset>1510</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>NOT</value>
+              <start>
+                <offset>1508</offset>
+              </start>
+              <end>
+                <offset>1510</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${QUIET}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${QUIET}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>QUIET</value>
+                  <start>
+                    <offset>1514</offset>
+                  </start>
+                  <end>
+                    <offset>1518</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1512</offset>
               </start>
@@ -659,12 +698,8 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>1512</offset>
-          </start>
-          <end>
-            <offset>1519</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -679,10 +714,19 @@
       <commandName>message</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${TYPE}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${TYPE}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>TYPE</value>
+                  <start>
+                    <offset>1536</offset>
+                  </start>
+                  <end>
+                    <offset>1539</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1534</offset>
               </start>
@@ -691,18 +735,23 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>1534</offset>
-          </start>
-          <end>
-            <offset>1540</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${MSG}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${MSG}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>MSG</value>
+                  <start>
+                    <offset>1545</offset>
+                  </start>
+                  <end>
+                    <offset>1547</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1543</offset>
               </start>
@@ -753,16 +802,32 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>RTI_DEFINITIONS</argument>
-          <start>
-            <offset>1578</offset>
-          </start>
-          <end>
-            <offset>1592</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>RTI_DEFINITIONS</value>
+              <start>
+                <offset>1578</offset>
+              </start>
+              <end>
+                <offset>1592</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>-DRTI_USES_STD_FSTREAM</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>-DRTI_USES_STD_FSTREAM</value>
+              <start>
+                <offset>1595</offset>
+              </start>
+              <end>
+                <offset>1616</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>1594</offset>
           </start>
@@ -825,36 +890,62 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>RTI_POSSIBLE_DIRS
-</argument>
-          <start>
-            <offset>1843</offset>
-          </start>
-          <end>
-            <offset>1860</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>RTI_POSSIBLE_DIRS</value>
+              <start>
+                <offset>1843</offset>
+              </start>
+              <end>
+                <offset>1859</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>ENV</argument>
-          <start>
-            <offset>1863</offset>
-          </start>
-          <end>
-            <offset>1865</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>ENV</value>
+              <start>
+                <offset>1863</offset>
+              </start>
+              <end>
+                <offset>1865</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CERTI_HOME
-</argument>
-          <start>
-            <offset>1867</offset>
-          </start>
-          <end>
-            <offset>1877</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CERTI_HOME</value>
+              <start>
+                <offset>1867</offset>
+              </start>
+              <end>
+                <offset>1876</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>[HKEY_LOCAL_MACHINE\\SOFTWARE\\MAK Technologies\\MAK RTI 3.2 MSVC++ 8.0;Location]</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>[HKEY_LOCAL_MACHINE\\SOFTWARE\\MAK Technologies\\MAK RTI 3.2 MSVC++ 8.0;Location]</value>
+              <start>
+                <offset>1881</offset>
+              </start>
+              <end>
+                <offset>1961</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>1880</offset>
           </start>
@@ -863,17 +954,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>
-</argument>
-          <start>
-            <offset>1963</offset>
-          </start>
-          <end>
-            <offset>1963</offset>
-          </end>
-        </ru.urururu.cmakeedit.core.ArgumentNode>
-        <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>[HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\MAK RTI 3.2-win32-msvc++8.0;InstallLocation]</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>[HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\MAK RTI 3.2-win32-msvc++8.0;InstallLocation]</value>
+              <start>
+                <offset>1967</offset>
+              </start>
+              <end>
+                <offset>2088</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>1966</offset>
           </start>
@@ -882,17 +973,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>
-</argument>
-          <start>
-            <offset>2090</offset>
-          </start>
-          <end>
-            <offset>2090</offset>
-          </end>
-        </ru.urururu.cmakeedit.core.ArgumentNode>
-        <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>[HKEY_LOCAL_MACHINE\\SOFTWARE\\MAK Technologies\\MAK RTI 2.2;Location]</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>[HKEY_LOCAL_MACHINE\\SOFTWARE\\MAK Technologies\\MAK RTI 2.2;Location]</value>
+              <start>
+                <offset>2094</offset>
+              </start>
+              <end>
+                <offset>2163</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>2093</offset>
           </start>
@@ -901,17 +992,17 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>
-</argument>
-          <start>
-            <offset>2165</offset>
-          </start>
-          <end>
-            <offset>2165</offset>
-          </end>
-        </ru.urururu.cmakeedit.core.ArgumentNode>
-        <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>[HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\MAK RTI 2.2;InstallLocation]</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>[HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\MAK RTI 2.2;InstallLocation]</value>
+              <start>
+                <offset>2169</offset>
+              </start>
+              <end>
+                <offset>2274</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>2168</offset>
           </start>
@@ -932,19 +1023,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>RTI_OLD_FIND_LIBRARY_PREFIXES</argument>
-          <start>
-            <offset>2283</offset>
-          </start>
-          <end>
-            <offset>2311</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>RTI_OLD_FIND_LIBRARY_PREFIXES</value>
+              <start>
+                <offset>2283</offset>
+              </start>
+              <end>
+                <offset>2311</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_FIND_LIBRARY_PREFIXES}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_FIND_LIBRARY_PREFIXES}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_FIND_LIBRARY_PREFIXES</value>
+                  <start>
+                    <offset>2316</offset>
+                  </start>
+                  <end>
+                    <offset>2342</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2314</offset>
               </start>
@@ -987,16 +1093,32 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_FIND_LIBRARY_PREFIXES</argument>
-          <start>
-            <offset>2403</offset>
-          </start>
-          <end>
-            <offset>2429</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_FIND_LIBRARY_PREFIXES</value>
+              <start>
+                <offset>2403</offset>
+              </start>
+              <end>
+                <offset>2429</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>lib</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>lib</value>
+              <start>
+                <offset>2432</offset>
+              </start>
+              <end>
+                <offset>2434</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>2431</offset>
           </start>
@@ -1005,7 +1127,7 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument></argument>
+          <children/>
           <start>
             <offset>2437</offset>
           </start>
@@ -1026,58 +1148,94 @@
       <commandName>find_library</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>RTI_LIBRARY
-</argument>
-          <start>
-            <offset>2455</offset>
-          </start>
-          <end>
-            <offset>2466</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>RTI_LIBRARY</value>
+              <start>
+                <offset>2455</offset>
+              </start>
+              <end>
+                <offset>2465</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>NAMES</argument>
-          <start>
-            <offset>2469</offset>
-          </start>
-          <end>
-            <offset>2473</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>NAMES</value>
+              <start>
+                <offset>2469</offset>
+              </start>
+              <end>
+                <offset>2473</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>RTI</argument>
-          <start>
-            <offset>2475</offset>
-          </start>
-          <end>
-            <offset>2477</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>RTI</value>
+              <start>
+                <offset>2475</offset>
+              </start>
+              <end>
+                <offset>2477</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>RTI-NG
-</argument>
-          <start>
-            <offset>2479</offset>
-          </start>
-          <end>
-            <offset>2485</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>RTI-NG</value>
+              <start>
+                <offset>2479</offset>
+              </start>
+              <end>
+                <offset>2484</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>PATHS</argument>
-          <start>
-            <offset>2488</offset>
-          </start>
-          <end>
-            <offset>2492</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>PATHS</value>
+              <start>
+                <offset>2488</offset>
+              </start>
+              <end>
+                <offset>2492</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${RTI_POSSIBLE_DIRS}
-</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${RTI_POSSIBLE_DIRS}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>RTI_POSSIBLE_DIRS</value>
+                  <start>
+                    <offset>2496</offset>
+                  </start>
+                  <end>
+                    <offset>2512</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2494</offset>
               </start>
@@ -1086,43 +1244,66 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>2494</offset>
-          </start>
-          <end>
-            <offset>2514</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>PATH_SUFFIXES</argument>
-          <start>
-            <offset>2517</offset>
-          </start>
-          <end>
-            <offset>2529</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>PATH_SUFFIXES</value>
+              <start>
+                <offset>2517</offset>
+              </start>
+              <end>
+                <offset>2529</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>lib
-</argument>
-          <start>
-            <offset>2531</offset>
-          </start>
-          <end>
-            <offset>2534</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>lib</value>
+              <start>
+                <offset>2531</offset>
+              </start>
+              <end>
+                <offset>2533</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>DOC</argument>
-          <start>
-            <offset>2537</offset>
-          </start>
-          <end>
-            <offset>2539</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>DOC</value>
+              <start>
+                <offset>2537</offset>
+              </start>
+              <end>
+                <offset>2539</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>The RTI Library</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>The RTI Library</value>
+              <start>
+                <offset>2542</offset>
+              </start>
+              <end>
+                <offset>2556</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>2541</offset>
           </start>
@@ -1143,13 +1324,19 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>RTI_LIBRARY</argument>
-          <start>
-            <offset>2565</offset>
-          </start>
-          <end>
-            <offset>2575</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>RTI_LIBRARY</value>
+              <start>
+                <offset>2565</offset>
+              </start>
+              <end>
+                <offset>2575</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -1164,19 +1351,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>RTI_LIBRARIES</argument>
-          <start>
-            <offset>2584</offset>
-          </start>
-          <end>
-            <offset>2596</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>RTI_LIBRARIES</value>
+              <start>
+                <offset>2584</offset>
+              </start>
+              <end>
+                <offset>2596</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${RTI_LIBRARY}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${RTI_LIBRARY}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>RTI_LIBRARY</value>
+                  <start>
+                    <offset>2600</offset>
+                  </start>
+                  <end>
+                    <offset>2610</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2598</offset>
               </start>
@@ -1185,12 +1387,8 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>2598</offset>
-          </start>
-          <end>
-            <offset>2611</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -1205,28 +1403,58 @@
       <commandName>RTI_MESSAGE_QUIETLY</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>RTI_FIND_QUIETLY</argument>
-          <start>
-            <offset>2636</offset>
-          </start>
-          <end>
-            <offset>2651</offset>
-          </end>
-        </ru.urururu.cmakeedit.core.ArgumentNode>
-        <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>STATUS</argument>
-          <start>
-            <offset>2653</offset>
-          </start>
-          <end>
-            <offset>2658</offset>
-          </end>
-        </ru.urururu.cmakeedit.core.ArgumentNode>
-        <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>RTI library found: ${RTI_LIBRARY}</argument>
           <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>RTI_FIND_QUIETLY</value>
+              <start>
+                <offset>2636</offset>
+              </start>
+              <end>
+                <offset>2651</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
+        </ru.urururu.cmakeedit.core.ArgumentNode>
+        <ru.urururu.cmakeedit.core.ArgumentNode>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>STATUS</value>
+              <start>
+                <offset>2653</offset>
+              </start>
+              <end>
+                <offset>2658</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
+        </ru.urururu.cmakeedit.core.ArgumentNode>
+        <ru.urururu.cmakeedit.core.ArgumentNode>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>RTI library found: </value>
+              <start>
+                <offset>2661</offset>
+              </start>
+              <end>
+                <offset>2679</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${RTI_LIBRARY}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>RTI_LIBRARY</value>
+                  <start>
+                    <offset>2682</offset>
+                  </start>
+                  <end>
+                    <offset>2692</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2680</offset>
               </start>
@@ -1266,25 +1494,47 @@
       <commandName>RTI_MESSAGE_QUIETLY</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>RTI_FIND_QUIETLY</argument>
-          <start>
-            <offset>2727</offset>
-          </start>
-          <end>
-            <offset>2742</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>RTI_FIND_QUIETLY</value>
+              <start>
+                <offset>2727</offset>
+              </start>
+              <end>
+                <offset>2742</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>STATUS</argument>
-          <start>
-            <offset>2744</offset>
-          </start>
-          <end>
-            <offset>2749</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>STATUS</value>
+              <start>
+                <offset>2744</offset>
+              </start>
+              <end>
+                <offset>2749</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>RTI library NOT found</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>RTI library NOT found</value>
+              <start>
+                <offset>2752</offset>
+              </start>
+              <end>
+                <offset>2772</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>2751</offset>
           </start>
@@ -1316,49 +1566,79 @@
       <commandName>find_library</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>RTI_FEDTIME_LIBRARY
-</argument>
-          <start>
-            <offset>2799</offset>
-          </start>
-          <end>
-            <offset>2818</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>RTI_FEDTIME_LIBRARY</value>
+              <start>
+                <offset>2799</offset>
+              </start>
+              <end>
+                <offset>2817</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>NAMES</argument>
-          <start>
-            <offset>2821</offset>
-          </start>
-          <end>
-            <offset>2825</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>NAMES</value>
+              <start>
+                <offset>2821</offset>
+              </start>
+              <end>
+                <offset>2825</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>FedTime
-</argument>
-          <start>
-            <offset>2827</offset>
-          </start>
-          <end>
-            <offset>2834</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>FedTime</value>
+              <start>
+                <offset>2827</offset>
+              </start>
+              <end>
+                <offset>2833</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>PATHS</argument>
-          <start>
-            <offset>2837</offset>
-          </start>
-          <end>
-            <offset>2841</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>PATHS</value>
+              <start>
+                <offset>2837</offset>
+              </start>
+              <end>
+                <offset>2841</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${RTI_POSSIBLE_DIRS}
-</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${RTI_POSSIBLE_DIRS}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>RTI_POSSIBLE_DIRS</value>
+                  <start>
+                    <offset>2845</offset>
+                  </start>
+                  <end>
+                    <offset>2861</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2843</offset>
               </start>
@@ -1367,43 +1647,66 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>2843</offset>
-          </start>
-          <end>
-            <offset>2863</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>PATH_SUFFIXES</argument>
-          <start>
-            <offset>2866</offset>
-          </start>
-          <end>
-            <offset>2878</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>PATH_SUFFIXES</value>
+              <start>
+                <offset>2866</offset>
+              </start>
+              <end>
+                <offset>2878</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>lib
-</argument>
-          <start>
-            <offset>2880</offset>
-          </start>
-          <end>
-            <offset>2883</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>lib</value>
+              <start>
+                <offset>2880</offset>
+              </start>
+              <end>
+                <offset>2882</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>DOC</argument>
-          <start>
-            <offset>2886</offset>
-          </start>
-          <end>
-            <offset>2888</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>DOC</value>
+              <start>
+                <offset>2886</offset>
+              </start>
+              <end>
+                <offset>2888</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>The FedTime Library</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>The FedTime Library</value>
+              <start>
+                <offset>2891</offset>
+              </start>
+              <end>
+                <offset>2909</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>2890</offset>
           </start>
@@ -1424,13 +1727,19 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>RTI_FEDTIME_LIBRARY</argument>
-          <start>
-            <offset>2918</offset>
-          </start>
-          <end>
-            <offset>2936</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>RTI_FEDTIME_LIBRARY</value>
+              <start>
+                <offset>2918</offset>
+              </start>
+              <end>
+                <offset>2936</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -1445,19 +1754,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>RTI_LIBRARIES</argument>
-          <start>
-            <offset>2945</offset>
-          </start>
-          <end>
-            <offset>2957</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>RTI_LIBRARIES</value>
+              <start>
+                <offset>2945</offset>
+              </start>
+              <end>
+                <offset>2957</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${RTI_LIBRARIES}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${RTI_LIBRARIES}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>RTI_LIBRARIES</value>
+                  <start>
+                    <offset>2961</offset>
+                  </start>
+                  <end>
+                    <offset>2973</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2959</offset>
               </start>
@@ -1466,18 +1790,23 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>2959</offset>
-          </start>
-          <end>
-            <offset>2974</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${RTI_FEDTIME_LIBRARY}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${RTI_FEDTIME_LIBRARY}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>RTI_FEDTIME_LIBRARY</value>
+                  <start>
+                    <offset>2978</offset>
+                  </start>
+                  <end>
+                    <offset>2996</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2976</offset>
               </start>
@@ -1486,12 +1815,8 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>2976</offset>
-          </start>
-          <end>
-            <offset>2997</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -1506,28 +1831,58 @@
       <commandName>RTI_MESSAGE_QUIETLY</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>RTI_FIND_QUIETLY</argument>
-          <start>
-            <offset>3022</offset>
-          </start>
-          <end>
-            <offset>3037</offset>
-          </end>
-        </ru.urururu.cmakeedit.core.ArgumentNode>
-        <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>STATUS</argument>
-          <start>
-            <offset>3039</offset>
-          </start>
-          <end>
-            <offset>3044</offset>
-          </end>
-        </ru.urururu.cmakeedit.core.ArgumentNode>
-        <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>RTI FedTime found: ${RTI_FEDTIME_LIBRARY}</argument>
           <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>RTI_FIND_QUIETLY</value>
+              <start>
+                <offset>3022</offset>
+              </start>
+              <end>
+                <offset>3037</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
+        </ru.urururu.cmakeedit.core.ArgumentNode>
+        <ru.urururu.cmakeedit.core.ArgumentNode>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>STATUS</value>
+              <start>
+                <offset>3039</offset>
+              </start>
+              <end>
+                <offset>3044</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
+        </ru.urururu.cmakeedit.core.ArgumentNode>
+        <ru.urururu.cmakeedit.core.ArgumentNode>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>RTI FedTime found: </value>
+              <start>
+                <offset>3047</offset>
+              </start>
+              <end>
+                <offset>3065</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${RTI_FEDTIME_LIBRARY}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>RTI_FEDTIME_LIBRARY</value>
+                  <start>
+                    <offset>3068</offset>
+                  </start>
+                  <end>
+                    <offset>3086</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>3066</offset>
               </start>
@@ -1567,49 +1922,79 @@
       <commandName>find_path</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>RTI_INCLUDE_DIR
-</argument>
-          <start>
-            <offset>3111</offset>
-          </start>
-          <end>
-            <offset>3126</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>RTI_INCLUDE_DIR</value>
+              <start>
+                <offset>3111</offset>
+              </start>
+              <end>
+                <offset>3125</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>NAMES</argument>
-          <start>
-            <offset>3129</offset>
-          </start>
-          <end>
-            <offset>3133</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>NAMES</value>
+              <start>
+                <offset>3129</offset>
+              </start>
+              <end>
+                <offset>3133</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>RTI.hh
-</argument>
-          <start>
-            <offset>3135</offset>
-          </start>
-          <end>
-            <offset>3141</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>RTI.hh</value>
+              <start>
+                <offset>3135</offset>
+              </start>
+              <end>
+                <offset>3140</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>PATHS</argument>
-          <start>
-            <offset>3144</offset>
-          </start>
-          <end>
-            <offset>3148</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>PATHS</value>
+              <start>
+                <offset>3144</offset>
+              </start>
+              <end>
+                <offset>3148</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${RTI_POSSIBLE_DIRS}
-</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${RTI_POSSIBLE_DIRS}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>RTI_POSSIBLE_DIRS</value>
+                  <start>
+                    <offset>3152</offset>
+                  </start>
+                  <end>
+                    <offset>3168</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>3150</offset>
               </start>
@@ -1618,43 +2003,66 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>3150</offset>
-          </start>
-          <end>
-            <offset>3170</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>PATH_SUFFIXES</argument>
-          <start>
-            <offset>3173</offset>
-          </start>
-          <end>
-            <offset>3185</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>PATH_SUFFIXES</value>
+              <start>
+                <offset>3173</offset>
+              </start>
+              <end>
+                <offset>3185</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>include
-</argument>
-          <start>
-            <offset>3187</offset>
-          </start>
-          <end>
-            <offset>3194</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>include</value>
+              <start>
+                <offset>3187</offset>
+              </start>
+              <end>
+                <offset>3193</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>DOC</argument>
-          <start>
-            <offset>3197</offset>
-          </start>
-          <end>
-            <offset>3199</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>DOC</value>
+              <start>
+                <offset>3197</offset>
+              </start>
+              <end>
+                <offset>3199</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>The RTI Include Files</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>The RTI Include Files</value>
+              <start>
+                <offset>3202</offset>
+              </start>
+              <end>
+                <offset>3222</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>3201</offset>
           </start>
@@ -1675,13 +2083,19 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>RTI_INCLUDE_DIR</argument>
-          <start>
-            <offset>3231</offset>
-          </start>
-          <end>
-            <offset>3245</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>RTI_INCLUDE_DIR</value>
+              <start>
+                <offset>3231</offset>
+              </start>
+              <end>
+                <offset>3245</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -1696,28 +2110,58 @@
       <commandName>RTI_MESSAGE_QUIETLY</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>RTI_FIND_QUIETLY</argument>
-          <start>
-            <offset>3270</offset>
-          </start>
-          <end>
-            <offset>3285</offset>
-          </end>
-        </ru.urururu.cmakeedit.core.ArgumentNode>
-        <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>STATUS</argument>
-          <start>
-            <offset>3287</offset>
-          </start>
-          <end>
-            <offset>3292</offset>
-          </end>
-        </ru.urururu.cmakeedit.core.ArgumentNode>
-        <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>RTI headers found: ${RTI_INCLUDE_DIR}</argument>
           <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>RTI_FIND_QUIETLY</value>
+              <start>
+                <offset>3270</offset>
+              </start>
+              <end>
+                <offset>3285</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
+        </ru.urururu.cmakeedit.core.ArgumentNode>
+        <ru.urururu.cmakeedit.core.ArgumentNode>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>STATUS</value>
+              <start>
+                <offset>3287</offset>
+              </start>
+              <end>
+                <offset>3292</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
+        </ru.urururu.cmakeedit.core.ArgumentNode>
+        <ru.urururu.cmakeedit.core.ArgumentNode>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>RTI headers found: </value>
+              <start>
+                <offset>3295</offset>
+              </start>
+              <end>
+                <offset>3313</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${RTI_INCLUDE_DIR}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>RTI_INCLUDE_DIR</value>
+                  <start>
+                    <offset>3316</offset>
+                  </start>
+                  <end>
+                    <offset>3330</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>3314</offset>
               </start>
@@ -1757,25 +2201,47 @@
       <commandName>RTI_MESSAGE_QUIETLY</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>RTI_FIND_QUIETLY</argument>
-          <start>
-            <offset>3365</offset>
-          </start>
-          <end>
-            <offset>3380</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>RTI_FIND_QUIETLY</value>
+              <start>
+                <offset>3365</offset>
+              </start>
+              <end>
+                <offset>3380</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>STATUS</argument>
-          <start>
-            <offset>3382</offset>
-          </start>
-          <end>
-            <offset>3387</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>STATUS</value>
+              <start>
+                <offset>3382</offset>
+              </start>
+              <end>
+                <offset>3387</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>RTI headers NOT found</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>RTI headers NOT found</value>
+              <start>
+                <offset>3390</offset>
+              </start>
+              <end>
+                <offset>3410</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>3389</offset>
           </start>
@@ -1821,19 +2287,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_FIND_LIBRARY_PREFIXES</argument>
-          <start>
-            <offset>3492</offset>
-          </start>
-          <end>
-            <offset>3518</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_FIND_LIBRARY_PREFIXES</value>
+              <start>
+                <offset>3492</offset>
+              </start>
+              <end>
+                <offset>3518</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${RTI_OLD_FIND_LIBRARY_PREFIXES}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${RTI_OLD_FIND_LIBRARY_PREFIXES}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>RTI_OLD_FIND_LIBRARY_PREFIXES</value>
+                  <start>
+                    <offset>3523</offset>
+                  </start>
+                  <end>
+                    <offset>3551</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>3521</offset>
               </start>
@@ -1862,10 +2343,19 @@
       <commandName>include</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_CURRENT_LIST_DIR}/FindPackageHandleStandardArgs.cmake</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_CURRENT_LIST_DIR}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_CURRENT_LIST_DIR</value>
+                  <start>
+                    <offset>3567</offset>
+                  </start>
+                  <end>
+                    <offset>3588</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>3565</offset>
               </start>
@@ -1873,13 +2363,18 @@
                 <offset>3589</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/FindPackageHandleStandardArgs.cmake</value>
+              <start>
+                <offset>3590</offset>
+              </start>
+              <end>
+                <offset>3625</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
-          <start>
-            <offset>3565</offset>
-          </start>
-          <end>
-            <offset>3625</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -1894,41 +2389,64 @@
       <commandName>FIND_PACKAGE_HANDLE_STANDARD_ARGS</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>RTI</argument>
-          <start>
-            <offset>3662</offset>
-          </start>
-          <end>
-            <offset>3664</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>RTI</value>
+              <start>
+                <offset>3662</offset>
+              </start>
+              <end>
+                <offset>3664</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>DEFAULT_MSG
-</argument>
-          <start>
-            <offset>3666</offset>
-          </start>
-          <end>
-            <offset>3677</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>DEFAULT_MSG</value>
+              <start>
+                <offset>3666</offset>
+              </start>
+              <end>
+                <offset>3676</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>RTI_LIBRARY</argument>
-          <start>
-            <offset>3680</offset>
-          </start>
-          <end>
-            <offset>3690</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>RTI_LIBRARY</value>
+              <start>
+                <offset>3680</offset>
+              </start>
+              <end>
+                <offset>3690</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>RTI_INCLUDE_DIR</argument>
-          <start>
-            <offset>3692</offset>
-          </start>
-          <end>
-            <offset>3706</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>RTI_INCLUDE_DIR</value>
+              <start>
+                <offset>3692</offset>
+              </start>
+              <end>
+                <offset>3706</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>

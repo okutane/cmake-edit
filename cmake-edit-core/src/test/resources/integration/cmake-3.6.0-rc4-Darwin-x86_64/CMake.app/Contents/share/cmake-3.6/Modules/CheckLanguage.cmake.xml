@@ -558,22 +558,34 @@
       <commandName>macro</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>check_language</argument>
-          <start>
-            <offset>1274</offset>
-          </start>
-          <end>
-            <offset>1287</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>check_language</value>
+              <start>
+                <offset>1274</offset>
+              </start>
+              <end>
+                <offset>1287</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>lang</argument>
-          <start>
-            <offset>1289</offset>
-          </start>
-          <end>
-            <offset>1292</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>lang</value>
+              <start>
+                <offset>1289</offset>
+              </start>
+              <end>
+                <offset>1292</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -588,28 +600,58 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>NOT</argument>
-          <start>
-            <offset>1300</offset>
-          </start>
-          <end>
-            <offset>1302</offset>
-          </end>
-        </ru.urururu.cmakeedit.core.ArgumentNode>
-        <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>DEFINED</argument>
-          <start>
-            <offset>1304</offset>
-          </start>
-          <end>
-            <offset>1310</offset>
-          </end>
-        </ru.urururu.cmakeedit.core.ArgumentNode>
-        <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_${lang}_COMPILER</argument>
           <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>NOT</value>
+              <start>
+                <offset>1300</offset>
+              </start>
+              <end>
+                <offset>1302</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
+        </ru.urururu.cmakeedit.core.ArgumentNode>
+        <ru.urururu.cmakeedit.core.ArgumentNode>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>DEFINED</value>
+              <start>
+                <offset>1304</offset>
+              </start>
+              <end>
+                <offset>1310</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
+        </ru.urururu.cmakeedit.core.ArgumentNode>
+        <ru.urururu.cmakeedit.core.ArgumentNode>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_</value>
+              <start>
+                <offset>1312</offset>
+              </start>
+              <end>
+                <offset>1317</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${lang}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>lang</value>
+                  <start>
+                    <offset>1320</offset>
+                  </start>
+                  <end>
+                    <offset>1323</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1318</offset>
               </start>
@@ -617,13 +659,18 @@
                 <offset>1324</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_COMPILER</value>
+              <start>
+                <offset>1325</offset>
+              </start>
+              <end>
+                <offset>1333</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
-          <start>
-            <offset>1312</offset>
-          </start>
-          <end>
-            <offset>1333</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode[2]/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -638,19 +685,43 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>_desc</argument>
-          <start>
-            <offset>1344</offset>
-          </start>
-          <end>
-            <offset>1348</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_desc</value>
+              <start>
+                <offset>1344</offset>
+              </start>
+              <end>
+                <offset>1348</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>Looking for a ${lang} compiler</argument>
           <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>Looking for a </value>
+              <start>
+                <offset>1351</offset>
+              </start>
+              <end>
+                <offset>1364</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${lang}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>lang</value>
+                  <start>
+                    <offset>1367</offset>
+                  </start>
+                  <end>
+                    <offset>1370</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1365</offset>
               </start>
@@ -658,6 +729,15 @@
                 <offset>1371</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value> compiler</value>
+              <start>
+                <offset>1372</offset>
+              </start>
+              <end>
+                <offset>1380</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
           <start>
             <offset>1350</offset>
@@ -679,19 +759,34 @@
       <commandName>message</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>STATUS</argument>
-          <start>
-            <offset>1396</offset>
-          </start>
-          <end>
-            <offset>1401</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>STATUS</value>
+              <start>
+                <offset>1396</offset>
+              </start>
+              <end>
+                <offset>1401</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${_desc}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${_desc}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>_desc</value>
+                  <start>
+                    <offset>1405</offset>
+                  </start>
+                  <end>
+                    <offset>1409</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1403</offset>
               </start>
@@ -700,12 +795,8 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>1403</offset>
-          </start>
-          <end>
-            <offset>1410</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -720,19 +811,34 @@
       <commandName>file</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>REMOVE_RECURSE</argument>
-          <start>
-            <offset>1422</offset>
-          </start>
-          <end>
-            <offset>1435</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>REMOVE_RECURSE</value>
+              <start>
+                <offset>1422</offset>
+              </start>
+              <end>
+                <offset>1435</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_CURRENT_BINARY_DIR}/CMakeFiles/Check${lang}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_CURRENT_BINARY_DIR}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_CURRENT_BINARY_DIR</value>
+                  <start>
+                    <offset>1439</offset>
+                  </start>
+                  <end>
+                    <offset>1462</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1437</offset>
               </start>
@@ -740,8 +846,27 @@
                 <offset>1463</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/CMakeFiles/Check</value>
+              <start>
+                <offset>1464</offset>
+              </start>
+              <end>
+                <offset>1480</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${lang}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>lang</value>
+                  <start>
+                    <offset>1483</offset>
+                  </start>
+                  <end>
+                    <offset>1486</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1481</offset>
               </start>
@@ -750,12 +875,8 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>1437</offset>
-          </start>
-          <end>
-            <offset>1487</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode[2]/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -770,19 +891,34 @@
       <commandName>file</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>WRITE</argument>
-          <start>
-            <offset>1499</offset>
-          </start>
-          <end>
-            <offset>1503</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>WRITE</value>
+              <start>
+                <offset>1499</offset>
+              </start>
+              <end>
+                <offset>1503</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_CURRENT_BINARY_DIR}/CMakeFiles/Check${lang}/CMakeLists.txt</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_CURRENT_BINARY_DIR}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_CURRENT_BINARY_DIR</value>
+                  <start>
+                    <offset>1508</offset>
+                  </start>
+                  <end>
+                    <offset>1531</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1506</offset>
               </start>
@@ -790,8 +926,27 @@
                 <offset>1532</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/CMakeFiles/Check</value>
+              <start>
+                <offset>1533</offset>
+              </start>
+              <end>
+                <offset>1549</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${lang}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>lang</value>
+                  <start>
+                    <offset>1552</offset>
+                  </start>
+                  <end>
+                    <offset>1555</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1550</offset>
               </start>
@@ -799,6 +954,15 @@
                 <offset>1556</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/CMakeLists.txt</value>
+              <start>
+                <offset>1557</offset>
+              </start>
+              <end>
+                <offset>1571</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
           <start>
             <offset>1505</offset>
@@ -808,25 +972,28 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>
-</argument>
-          <start>
-            <offset>1573</offset>
-          </start>
-          <end>
-            <offset>1573</offset>
-          </end>
-        </ru.urururu.cmakeedit.core.ArgumentNode>
-        <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>cmake_minimum_required(VERSION ${CMAKE_VERSION})
-project(Check${lang} ${lang})
-file(WRITE \&quot;\${CMAKE_CURRENT_BINARY_DIR}/result.cmake\&quot;
-  \&quot;set(CMAKE_${lang}_COMPILER \\\&quot;\${CMAKE_${lang}_COMPILER}\\\&quot;)\\n\&quot;
-  )
-</argument>
           <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>cmake_minimum_required(VERSION </value>
+              <start>
+                <offset>1581</offset>
+              </start>
+              <end>
+                <offset>1611</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_VERSION}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_VERSION</value>
+                  <start>
+                    <offset>1614</offset>
+                  </start>
+                  <end>
+                    <offset>1626</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1612</offset>
               </start>
@@ -834,8 +1001,28 @@ file(WRITE \&quot;\${CMAKE_CURRENT_BINARY_DIR}/result.cmake\&quot;
                 <offset>1627</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>)
+project(Check</value>
+              <start>
+                <offset>1628</offset>
+              </start>
+              <end>
+                <offset>1642</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${lang}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>lang</value>
+                  <start>
+                    <offset>1645</offset>
+                  </start>
+                  <end>
+                    <offset>1648</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1643</offset>
               </start>
@@ -843,8 +1030,27 @@ file(WRITE \&quot;\${CMAKE_CURRENT_BINARY_DIR}/result.cmake\&quot;
                 <offset>1649</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value> </value>
+              <start>
+                <offset>1650</offset>
+              </start>
+              <end>
+                <offset>1650</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${lang}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>lang</value>
+                  <start>
+                    <offset>1653</offset>
+                  </start>
+                  <end>
+                    <offset>1656</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1651</offset>
               </start>
@@ -852,8 +1058,29 @@ file(WRITE \&quot;\${CMAKE_CURRENT_BINARY_DIR}/result.cmake\&quot;
                 <offset>1657</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>)
+file(WRITE \&quot;\${CMAKE_CURRENT_BINARY_DIR}/result.cmake\&quot;
+  \&quot;set(CMAKE_</value>
+              <start>
+                <offset>1658</offset>
+              </start>
+              <end>
+                <offset>1730</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${lang}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>lang</value>
+                  <start>
+                    <offset>1733</offset>
+                  </start>
+                  <end>
+                    <offset>1736</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1731</offset>
               </start>
@@ -861,8 +1088,27 @@ file(WRITE \&quot;\${CMAKE_CURRENT_BINARY_DIR}/result.cmake\&quot;
                 <offset>1737</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_COMPILER \\\&quot;\${CMAKE_</value>
+              <start>
+                <offset>1738</offset>
+              </start>
+              <end>
+                <offset>1760</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${lang}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>lang</value>
+                  <start>
+                    <offset>1763</offset>
+                  </start>
+                  <end>
+                    <offset>1766</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1761</offset>
               </start>
@@ -870,6 +1116,17 @@ file(WRITE \&quot;\${CMAKE_CURRENT_BINARY_DIR}/result.cmake\&quot;
                 <offset>1767</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_COMPILER}\\\&quot;)\\n\&quot;
+  )
+</value>
+              <start>
+                <offset>1768</offset>
+              </start>
+              <end>
+                <offset>1792</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
           <start>
             <offset>1580</offset>
@@ -891,30 +1148,34 @@ file(WRITE \&quot;\${CMAKE_CURRENT_BINARY_DIR}/result.cmake\&quot;
       <commandName>execute_process</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>
-</argument>
-          <start>
-            <offset>1816</offset>
-          </start>
-          <end>
-            <offset>1816</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>WORKING_DIRECTORY</value>
+              <start>
+                <offset>1823</offset>
+              </start>
+              <end>
+                <offset>1839</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>WORKING_DIRECTORY</argument>
-          <start>
-            <offset>1823</offset>
-          </start>
-          <end>
-            <offset>1839</offset>
-          </end>
-        </ru.urururu.cmakeedit.core.ArgumentNode>
-        <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_CURRENT_BINARY_DIR}/CMakeFiles/Check${lang}
-</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_CURRENT_BINARY_DIR}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_CURRENT_BINARY_DIR</value>
+                  <start>
+                    <offset>1843</offset>
+                  </start>
+                  <end>
+                    <offset>1866</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1841</offset>
               </start>
@@ -922,8 +1183,27 @@ file(WRITE \&quot;\${CMAKE_CURRENT_BINARY_DIR}/result.cmake\&quot;
                 <offset>1867</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/CMakeFiles/Check</value>
+              <start>
+                <offset>1868</offset>
+              </start>
+              <end>
+                <offset>1884</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${lang}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>lang</value>
+                  <start>
+                    <offset>1887</offset>
+                  </start>
+                  <end>
+                    <offset>1890</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1885</offset>
               </start>
@@ -932,27 +1212,38 @@ file(WRITE \&quot;\${CMAKE_CURRENT_BINARY_DIR}/result.cmake\&quot;
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>1841</offset>
-          </start>
-          <end>
-            <offset>1892</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode[2]/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>COMMAND</argument>
-          <start>
-            <offset>1899</offset>
-          </start>
-          <end>
-            <offset>1905</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>COMMAND</value>
+              <start>
+                <offset>1899</offset>
+              </start>
+              <end>
+                <offset>1905</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_COMMAND}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_COMMAND}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_COMMAND</value>
+                  <start>
+                    <offset>1909</offset>
+                  </start>
+                  <end>
+                    <offset>1921</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1907</offset>
               </start>
@@ -961,37 +1252,53 @@ file(WRITE \&quot;\${CMAKE_CURRENT_BINARY_DIR}/result.cmake\&quot;
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>1907</offset>
-          </start>
-          <end>
-            <offset>1922</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>.</argument>
-          <start>
-            <offset>1924</offset>
-          </start>
-          <end>
-            <offset>1924</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>.</value>
+              <start>
+                <offset>1924</offset>
+              </start>
+              <end>
+                <offset>1924</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>-G</argument>
-          <start>
-            <offset>1926</offset>
-          </start>
-          <end>
-            <offset>1927</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>-G</value>
+              <start>
+                <offset>1926</offset>
+              </start>
+              <end>
+                <offset>1927</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_GENERATOR}
-</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_GENERATOR}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_GENERATOR</value>
+                  <start>
+                    <offset>1931</offset>
+                  </start>
+                  <end>
+                    <offset>1945</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1929</offset>
               </start>
@@ -1000,69 +1307,98 @@ file(WRITE \&quot;\${CMAKE_CURRENT_BINARY_DIR}/result.cmake\&quot;
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>1929</offset>
-          </start>
-          <end>
-            <offset>1947</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>OUTPUT_VARIABLE</argument>
-          <start>
-            <offset>1954</offset>
-          </start>
-          <end>
-            <offset>1968</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>OUTPUT_VARIABLE</value>
+              <start>
+                <offset>1954</offset>
+              </start>
+              <end>
+                <offset>1968</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>output
-</argument>
-          <start>
-            <offset>1970</offset>
-          </start>
-          <end>
-            <offset>1976</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>output</value>
+              <start>
+                <offset>1970</offset>
+              </start>
+              <end>
+                <offset>1975</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>ERROR_VARIABLE</argument>
-          <start>
-            <offset>1983</offset>
-          </start>
-          <end>
-            <offset>1996</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>ERROR_VARIABLE</value>
+              <start>
+                <offset>1983</offset>
+              </start>
+              <end>
+                <offset>1996</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>output
-</argument>
-          <start>
-            <offset>1998</offset>
-          </start>
-          <end>
-            <offset>2004</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>output</value>
+              <start>
+                <offset>1998</offset>
+              </start>
+              <end>
+                <offset>2003</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>RESULT_VARIABLE</argument>
-          <start>
-            <offset>2011</offset>
-          </start>
-          <end>
-            <offset>2025</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>RESULT_VARIABLE</value>
+              <start>
+                <offset>2011</offset>
+              </start>
+              <end>
+                <offset>2025</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>result
-</argument>
-          <start>
-            <offset>2027</offset>
-          </start>
-          <end>
-            <offset>2033</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>result</value>
+              <start>
+                <offset>2027</offset>
+              </start>
+              <end>
+                <offset>2032</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -1077,10 +1413,19 @@ file(WRITE \&quot;\${CMAKE_CURRENT_BINARY_DIR}/result.cmake\&quot;
       <commandName>include</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_CURRENT_BINARY_DIR}/CMakeFiles/Check${lang}/result.cmake</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_CURRENT_BINARY_DIR}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_CURRENT_BINARY_DIR</value>
+                  <start>
+                    <offset>2056</offset>
+                  </start>
+                  <end>
+                    <offset>2079</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2054</offset>
               </start>
@@ -1088,8 +1433,27 @@ file(WRITE \&quot;\${CMAKE_CURRENT_BINARY_DIR}/result.cmake\&quot;
                 <offset>2080</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/CMakeFiles/Check</value>
+              <start>
+                <offset>2081</offset>
+              </start>
+              <end>
+                <offset>2097</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${lang}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>lang</value>
+                  <start>
+                    <offset>2100</offset>
+                  </start>
+                  <end>
+                    <offset>2103</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2098</offset>
               </start>
@@ -1097,22 +1461,33 @@ file(WRITE \&quot;\${CMAKE_CURRENT_BINARY_DIR}/result.cmake\&quot;
                 <offset>2104</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/result.cmake</value>
+              <start>
+                <offset>2105</offset>
+              </start>
+              <end>
+                <offset>2117</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
-          <start>
-            <offset>2054</offset>
-          </start>
-          <end>
-            <offset>2117</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode[2]/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>OPTIONAL</argument>
-          <start>
-            <offset>2119</offset>
-          </start>
-          <end>
-            <offset>2126</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>OPTIONAL</value>
+              <start>
+                <offset>2119</offset>
+              </start>
+              <end>
+                <offset>2126</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -1127,10 +1502,28 @@ file(WRITE \&quot;\${CMAKE_CURRENT_BINARY_DIR}/result.cmake\&quot;
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_${lang}_COMPILER</argument>
           <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_</value>
+              <start>
+                <offset>2136</offset>
+              </start>
+              <end>
+                <offset>2141</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${lang}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>lang</value>
+                  <start>
+                    <offset>2144</offset>
+                  </start>
+                  <end>
+                    <offset>2147</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2142</offset>
               </start>
@@ -1138,28 +1531,48 @@ file(WRITE \&quot;\${CMAKE_CURRENT_BINARY_DIR}/result.cmake\&quot;
                 <offset>2148</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_COMPILER</value>
+              <start>
+                <offset>2149</offset>
+              </start>
+              <end>
+                <offset>2157</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
-          <start>
-            <offset>2136</offset>
-          </start>
-          <end>
-            <offset>2157</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode[2]/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>AND</argument>
-          <start>
-            <offset>2159</offset>
-          </start>
-          <end>
-            <offset>2161</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>AND</value>
+              <start>
+                <offset>2159</offset>
+              </start>
+              <end>
+                <offset>2161</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${result}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${result}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>result</value>
+                  <start>
+                    <offset>2166</offset>
+                  </start>
+                  <end>
+                    <offset>2171</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2164</offset>
               </start>
@@ -1176,16 +1589,32 @@ file(WRITE \&quot;\${CMAKE_CURRENT_BINARY_DIR}/result.cmake\&quot;
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>STREQUAL</argument>
-          <start>
-            <offset>2175</offset>
-          </start>
-          <end>
-            <offset>2182</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>STREQUAL</value>
+              <start>
+                <offset>2175</offset>
+              </start>
+              <end>
+                <offset>2182</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>0</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>0</value>
+              <start>
+                <offset>2185</offset>
+              </start>
+              <end>
+                <offset>2185</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>2184</offset>
           </start>
@@ -1206,20 +1635,34 @@ file(WRITE \&quot;\${CMAKE_CURRENT_BINARY_DIR}/result.cmake\&quot;
       <commandName>file</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>APPEND</argument>
-          <start>
-            <offset>2200</offset>
-          </start>
-          <end>
-            <offset>2205</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>APPEND</value>
+              <start>
+                <offset>2200</offset>
+              </start>
+              <end>
+                <offset>2205</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_BINARY_DIR}${CMAKE_FILES_DIRECTORY}/CMakeOutput.log
-</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_BINARY_DIR}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_BINARY_DIR</value>
+                  <start>
+                    <offset>2209</offset>
+                  </start>
+                  <end>
+                    <offset>2224</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2207</offset>
               </start>
@@ -1228,7 +1671,17 @@ file(WRITE \&quot;\${CMAKE_CURRENT_BINARY_DIR}/result.cmake\&quot;
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_FILES_DIRECTORY}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_FILES_DIRECTORY</value>
+                  <start>
+                    <offset>2228</offset>
+                  </start>
+                  <end>
+                    <offset>2248</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2226</offset>
               </start>
@@ -1236,20 +1689,33 @@ file(WRITE \&quot;\${CMAKE_CURRENT_BINARY_DIR}/result.cmake\&quot;
                 <offset>2249</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/CMakeOutput.log</value>
+              <start>
+                <offset>2250</offset>
+              </start>
+              <end>
+                <offset>2265</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
-          <start>
-            <offset>2207</offset>
-          </start>
-          <end>
-            <offset>2266</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${_desc} passed with the following output:\
-</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${_desc}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>_desc</value>
+                  <start>
+                    <offset>2278</offset>
+                  </start>
+                  <end>
+                    <offset>2282</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2276</offset>
               </start>
@@ -1257,6 +1723,16 @@ file(WRITE \&quot;\${CMAKE_CURRENT_BINARY_DIR}/result.cmake\&quot;
                 <offset>2283</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value> passed with the following output:\
+</value>
+              <start>
+                <offset>2284</offset>
+              </start>
+              <end>
+                <offset>2318</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
           <start>
             <offset>2275</offset>
@@ -1266,21 +1742,19 @@ file(WRITE \&quot;\${CMAKE_CURRENT_BINARY_DIR}/result.cmake\&quot;
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>
-</argument>
-          <start>
-            <offset>2321</offset>
-          </start>
-          <end>
-            <offset>2321</offset>
-          </end>
-        </ru.urururu.cmakeedit.core.ArgumentNode>
-        <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${output}\
-</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${output}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>output</value>
+                  <start>
+                    <offset>2333</offset>
+                  </start>
+                  <end>
+                    <offset>2338</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2331</offset>
               </start>
@@ -1288,6 +1762,16 @@ file(WRITE \&quot;\${CMAKE_CURRENT_BINARY_DIR}/result.cmake\&quot;
                 <offset>2339</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>\
+</value>
+              <start>
+                <offset>2340</offset>
+              </start>
+              <end>
+                <offset>2340</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
           <start>
             <offset>2330</offset>
@@ -1320,10 +1804,28 @@ file(WRITE \&quot;\${CMAKE_CURRENT_BINARY_DIR}/result.cmake\&quot;
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_${lang}_COMPILER</argument>
           <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_</value>
+              <start>
+                <offset>2366</offset>
+              </start>
+              <end>
+                <offset>2371</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${lang}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>lang</value>
+                  <start>
+                    <offset>2374</offset>
+                  </start>
+                  <end>
+                    <offset>2377</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2372</offset>
               </start>
@@ -1331,22 +1833,33 @@ file(WRITE \&quot;\${CMAKE_CURRENT_BINARY_DIR}/result.cmake\&quot;
                 <offset>2378</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_COMPILER</value>
+              <start>
+                <offset>2379</offset>
+              </start>
+              <end>
+                <offset>2387</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
-          <start>
-            <offset>2366</offset>
-          </start>
-          <end>
-            <offset>2387</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode[2]/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>NOTFOUND</argument>
-          <start>
-            <offset>2389</offset>
-          </start>
-          <end>
-            <offset>2396</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>NOTFOUND</value>
+              <start>
+                <offset>2389</offset>
+              </start>
+              <end>
+                <offset>2396</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -1361,20 +1874,34 @@ file(WRITE \&quot;\${CMAKE_CURRENT_BINARY_DIR}/result.cmake\&quot;
       <commandName>file</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>APPEND</argument>
-          <start>
-            <offset>2410</offset>
-          </start>
-          <end>
-            <offset>2415</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>APPEND</value>
+              <start>
+                <offset>2410</offset>
+              </start>
+              <end>
+                <offset>2415</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_BINARY_DIR}${CMAKE_FILES_DIRECTORY}/CMakeError.log
-</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_BINARY_DIR}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_BINARY_DIR</value>
+                  <start>
+                    <offset>2419</offset>
+                  </start>
+                  <end>
+                    <offset>2434</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2417</offset>
               </start>
@@ -1383,7 +1910,17 @@ file(WRITE \&quot;\${CMAKE_CURRENT_BINARY_DIR}/result.cmake\&quot;
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_FILES_DIRECTORY}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_FILES_DIRECTORY</value>
+                  <start>
+                    <offset>2438</offset>
+                  </start>
+                  <end>
+                    <offset>2458</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2436</offset>
               </start>
@@ -1391,20 +1928,33 @@ file(WRITE \&quot;\${CMAKE_CURRENT_BINARY_DIR}/result.cmake\&quot;
                 <offset>2459</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/CMakeError.log</value>
+              <start>
+                <offset>2460</offset>
+              </start>
+              <end>
+                <offset>2474</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
-          <start>
-            <offset>2417</offset>
-          </start>
-          <end>
-            <offset>2475</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${_desc} failed with the following output:\
-</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${_desc}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>_desc</value>
+                  <start>
+                    <offset>2487</offset>
+                  </start>
+                  <end>
+                    <offset>2491</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2485</offset>
               </start>
@@ -1412,6 +1962,16 @@ file(WRITE \&quot;\${CMAKE_CURRENT_BINARY_DIR}/result.cmake\&quot;
                 <offset>2492</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value> failed with the following output:\
+</value>
+              <start>
+                <offset>2493</offset>
+              </start>
+              <end>
+                <offset>2527</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
           <start>
             <offset>2484</offset>
@@ -1421,21 +1981,19 @@ file(WRITE \&quot;\${CMAKE_CURRENT_BINARY_DIR}/result.cmake\&quot;
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>
-</argument>
-          <start>
-            <offset>2530</offset>
-          </start>
-          <end>
-            <offset>2530</offset>
-          </end>
-        </ru.urururu.cmakeedit.core.ArgumentNode>
-        <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${output}\
-</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${output}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>output</value>
+                  <start>
+                    <offset>2542</offset>
+                  </start>
+                  <end>
+                    <offset>2547</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2540</offset>
               </start>
@@ -1443,6 +2001,16 @@ file(WRITE \&quot;\${CMAKE_CURRENT_BINARY_DIR}/result.cmake\&quot;
                 <offset>2548</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>\
+</value>
+              <start>
+                <offset>2549</offset>
+              </start>
+              <end>
+                <offset>2549</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
           <start>
             <offset>2539</offset>
@@ -1475,19 +2043,34 @@ file(WRITE \&quot;\${CMAKE_CURRENT_BINARY_DIR}/result.cmake\&quot;
       <commandName>message</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>STATUS</argument>
-          <start>
-            <offset>2578</offset>
-          </start>
-          <end>
-            <offset>2583</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>STATUS</value>
+              <start>
+                <offset>2578</offset>
+              </start>
+              <end>
+                <offset>2583</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${_desc} - ${CMAKE_${lang}_COMPILER}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${_desc}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>_desc</value>
+                  <start>
+                    <offset>2588</offset>
+                  </start>
+                  <end>
+                    <offset>2592</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2586</offset>
               </start>
@@ -1495,11 +2078,38 @@ file(WRITE \&quot;\${CMAKE_CURRENT_BINARY_DIR}/result.cmake\&quot;
                 <offset>2593</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value> - </value>
+              <start>
+                <offset>2594</offset>
+              </start>
+              <end>
+                <offset>2596</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_${lang}_COMPILER}</expression>
               <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_</value>
+                  <start>
+                    <offset>2599</offset>
+                  </start>
+                  <end>
+                    <offset>2604</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
                 <ru.urururu.cmakeedit.core.ExpressionNode>
-                  <expression>${lang}</expression>
+                  <nested>
+                    <ru.urururu.cmakeedit.core.ConstantNode>
+                      <value>lang</value>
+                      <start>
+                        <offset>2607</offset>
+                      </start>
+                      <end>
+                        <offset>2610</offset>
+                      </end>
+                    </ru.urururu.cmakeedit.core.ConstantNode>
+                  </nested>
                   <start>
                     <offset>2605</offset>
                   </start>
@@ -1507,6 +2117,15 @@ file(WRITE \&quot;\${CMAKE_CURRENT_BINARY_DIR}/result.cmake\&quot;
                     <offset>2611</offset>
                   </end>
                 </ru.urururu.cmakeedit.core.ExpressionNode>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>_COMPILER</value>
+                  <start>
+                    <offset>2612</offset>
+                  </start>
+                  <end>
+                    <offset>2620</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
               </nested>
               <start>
                 <offset>2597</offset>
@@ -1536,10 +2155,28 @@ file(WRITE \&quot;\${CMAKE_CURRENT_BINARY_DIR}/result.cmake\&quot;
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_${lang}_COMPILER</argument>
           <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_</value>
+              <start>
+                <offset>2633</offset>
+              </start>
+              <end>
+                <offset>2638</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${lang}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>lang</value>
+                  <start>
+                    <offset>2641</offset>
+                  </start>
+                  <end>
+                    <offset>2644</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2639</offset>
               </start>
@@ -1547,22 +2184,44 @@ file(WRITE \&quot;\${CMAKE_CURRENT_BINARY_DIR}/result.cmake\&quot;
                 <offset>2645</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_COMPILER</value>
+              <start>
+                <offset>2646</offset>
+              </start>
+              <end>
+                <offset>2654</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
-          <start>
-            <offset>2633</offset>
-          </start>
-          <end>
-            <offset>2654</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode[2]/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_${lang}_COMPILER}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_${lang}_COMPILER}</expression>
               <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_</value>
+                  <start>
+                    <offset>2659</offset>
+                  </start>
+                  <end>
+                    <offset>2664</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
                 <ru.urururu.cmakeedit.core.ExpressionNode>
-                  <expression>${lang}</expression>
+                  <nested>
+                    <ru.urururu.cmakeedit.core.ConstantNode>
+                      <value>lang</value>
+                      <start>
+                        <offset>2667</offset>
+                      </start>
+                      <end>
+                        <offset>2670</offset>
+                      </end>
+                    </ru.urururu.cmakeedit.core.ConstantNode>
+                  </nested>
                   <start>
                     <offset>2665</offset>
                   </start>
@@ -1570,6 +2229,15 @@ file(WRITE \&quot;\${CMAKE_CURRENT_BINARY_DIR}/result.cmake\&quot;
                     <offset>2671</offset>
                   </end>
                 </ru.urururu.cmakeedit.core.ExpressionNode>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>_COMPILER</value>
+                  <start>
+                    <offset>2672</offset>
+                  </start>
+                  <end>
+                    <offset>2680</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
               </nested>
               <start>
                 <offset>2657</offset>
@@ -1587,28 +2255,49 @@ file(WRITE \&quot;\${CMAKE_CURRENT_BINARY_DIR}/result.cmake\&quot;
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CACHE</argument>
-          <start>
-            <offset>2684</offset>
-          </start>
-          <end>
-            <offset>2688</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CACHE</value>
+              <start>
+                <offset>2684</offset>
+              </start>
+              <end>
+                <offset>2688</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>FILEPATH</argument>
-          <start>
-            <offset>2690</offset>
-          </start>
-          <end>
-            <offset>2697</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>FILEPATH</value>
+              <start>
+                <offset>2690</offset>
+              </start>
+              <end>
+                <offset>2697</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${lang} compiler</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${lang}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>lang</value>
+                  <start>
+                    <offset>2702</offset>
+                  </start>
+                  <end>
+                    <offset>2705</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2700</offset>
               </start>
@@ -1616,6 +2305,15 @@ file(WRITE \&quot;\${CMAKE_CURRENT_BINARY_DIR}/result.cmake\&quot;
                 <offset>2706</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value> compiler</value>
+              <start>
+                <offset>2707</offset>
+              </start>
+              <end>
+                <offset>2715</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
           <start>
             <offset>2699</offset>
@@ -1637,10 +2335,28 @@ file(WRITE \&quot;\${CMAKE_CURRENT_BINARY_DIR}/result.cmake\&quot;
       <commandName>mark_as_advanced</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_${lang}_COMPILER</argument>
           <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_</value>
+              <start>
+                <offset>2740</offset>
+              </start>
+              <end>
+                <offset>2745</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${lang}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>lang</value>
+                  <start>
+                    <offset>2748</offset>
+                  </start>
+                  <end>
+                    <offset>2751</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>2746</offset>
               </start>
@@ -1648,13 +2364,18 @@ file(WRITE \&quot;\${CMAKE_CURRENT_BINARY_DIR}/result.cmake\&quot;
                 <offset>2752</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_COMPILER</value>
+              <start>
+                <offset>2753</offset>
+              </start>
+              <end>
+                <offset>2761</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
-          <start>
-            <offset>2740</offset>
-          </start>
-          <end>
-            <offset>2761</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode[2]/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>

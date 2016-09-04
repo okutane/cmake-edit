@@ -252,22 +252,34 @@
       <commandName>macro</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CHECK_COMPILER_FLAG_COMMON_PATTERNS</argument>
-          <start>
-            <offset>951</offset>
-          </start>
-          <end>
-            <offset>985</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CHECK_COMPILER_FLAG_COMMON_PATTERNS</value>
+              <start>
+                <offset>951</offset>
+              </start>
+              <end>
+                <offset>985</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>_VAR</argument>
-          <start>
-            <offset>987</offset>
-          </start>
-          <end>
-            <offset>990</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_VAR</value>
+              <start>
+                <offset>987</offset>
+              </start>
+              <end>
+                <offset>990</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -282,11 +294,19 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${_VAR}
-</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${_VAR}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>_VAR</value>
+                  <start>
+                    <offset>1002</offset>
+                  </start>
+                  <end>
+                    <offset>1005</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1000</offset>
               </start>
@@ -295,24 +315,36 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>1000</offset>
-          </start>
-          <end>
-            <offset>1007</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>FAIL_REGEX</argument>
-          <start>
-            <offset>1013</offset>
-          </start>
-          <end>
-            <offset>1022</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>FAIL_REGEX</value>
+              <start>
+                <offset>1013</offset>
+              </start>
+              <end>
+                <offset>1022</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>[Uu]nrecogni[sz]ed .*option</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>[Uu]nrecogni[sz]ed .*option</value>
+              <start>
+                <offset>1025</offset>
+              </start>
+              <end>
+                <offset>1051</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>1024</offset>
           </start>
@@ -321,26 +353,32 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>
-</argument>
-          <start>
-            <offset>1078</offset>
-          </start>
-          <end>
-            <offset>1078</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>FAIL_REGEX</value>
+              <start>
+                <offset>1084</offset>
+              </start>
+              <end>
+                <offset>1093</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>FAIL_REGEX</argument>
-          <start>
-            <offset>1084</offset>
-          </start>
-          <end>
-            <offset>1093</offset>
-          </end>
-        </ru.urururu.cmakeedit.core.ArgumentNode>
-        <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>unknown .*option</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>unknown .*option</value>
+              <start>
+                <offset>1096</offset>
+              </start>
+              <end>
+                <offset>1111</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>1095</offset>
           </start>
@@ -349,26 +387,32 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>
-</argument>
-          <start>
-            <offset>1146</offset>
-          </start>
-          <end>
-            <offset>1146</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>FAIL_REGEX</value>
+              <start>
+                <offset>1152</offset>
+              </start>
+              <end>
+                <offset>1161</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>FAIL_REGEX</argument>
-          <start>
-            <offset>1152</offset>
-          </start>
-          <end>
-            <offset>1161</offset>
-          </end>
-        </ru.urururu.cmakeedit.core.ArgumentNode>
-        <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>optimization flag .* not supported</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>optimization flag .* not supported</value>
+              <start>
+                <offset>1164</offset>
+              </start>
+              <end>
+                <offset>1197</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>1163</offset>
           </start>
@@ -377,26 +421,32 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>
-</argument>
-          <start>
-            <offset>1214</offset>
-          </start>
-          <end>
-            <offset>1214</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>FAIL_REGEX</value>
+              <start>
+                <offset>1220</offset>
+              </start>
+              <end>
+                <offset>1229</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>FAIL_REGEX</argument>
-          <start>
-            <offset>1220</offset>
-          </start>
-          <end>
-            <offset>1229</offset>
-          </end>
-        </ru.urururu.cmakeedit.core.ArgumentNode>
-        <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>unknown argument ignored</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>unknown argument ignored</value>
+              <start>
+                <offset>1232</offset>
+              </start>
+              <end>
+                <offset>1255</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>1231</offset>
           </start>
@@ -405,26 +455,32 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>
-</argument>
-          <start>
-            <offset>1287</offset>
-          </start>
-          <end>
-            <offset>1287</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>FAIL_REGEX</value>
+              <start>
+                <offset>1293</offset>
+              </start>
+              <end>
+                <offset>1302</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>FAIL_REGEX</argument>
-          <start>
-            <offset>1293</offset>
-          </start>
-          <end>
-            <offset>1302</offset>
-          </end>
-        </ru.urururu.cmakeedit.core.ArgumentNode>
-        <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>ignoring unknown option</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>ignoring unknown option</value>
+              <start>
+                <offset>1305</offset>
+              </start>
+              <end>
+                <offset>1327</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>1304</offset>
           </start>
@@ -433,26 +489,32 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>
-</argument>
-          <start>
-            <offset>1361</offset>
-          </start>
-          <end>
-            <offset>1361</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>FAIL_REGEX</value>
+              <start>
+                <offset>1367</offset>
+              </start>
+              <end>
+                <offset>1376</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>FAIL_REGEX</argument>
-          <start>
-            <offset>1367</offset>
-          </start>
-          <end>
-            <offset>1376</offset>
-          </end>
-        </ru.urururu.cmakeedit.core.ArgumentNode>
-        <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>warning D9002</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>warning D9002</value>
+              <start>
+                <offset>1379</offset>
+              </start>
+              <end>
+                <offset>1391</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>1378</offset>
           </start>
@@ -461,26 +523,32 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>
-</argument>
-          <start>
-            <offset>1438</offset>
-          </start>
-          <end>
-            <offset>1438</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>FAIL_REGEX</value>
+              <start>
+                <offset>1444</offset>
+              </start>
+              <end>
+                <offset>1453</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>FAIL_REGEX</argument>
-          <start>
-            <offset>1444</offset>
-          </start>
-          <end>
-            <offset>1453</offset>
-          </end>
-        </ru.urururu.cmakeedit.core.ArgumentNode>
-        <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>option.*not supported</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>option.*not supported</value>
+              <start>
+                <offset>1456</offset>
+              </start>
+              <end>
+                <offset>1476</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>1455</offset>
           </start>
@@ -489,26 +557,32 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>
-</argument>
-          <start>
-            <offset>1506</offset>
-          </start>
-          <end>
-            <offset>1506</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>FAIL_REGEX</value>
+              <start>
+                <offset>1512</offset>
+              </start>
+              <end>
+                <offset>1521</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>FAIL_REGEX</argument>
-          <start>
-            <offset>1512</offset>
-          </start>
-          <end>
-            <offset>1521</offset>
-          </end>
-        </ru.urururu.cmakeedit.core.ArgumentNode>
-        <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>invalid argument .*option</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>invalid argument .*option</value>
+              <start>
+                <offset>1524</offset>
+              </start>
+              <end>
+                <offset>1548</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>1523</offset>
           </start>
@@ -517,26 +591,32 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>
-</argument>
-          <start>
-            <offset>1574</offset>
-          </start>
-          <end>
-            <offset>1574</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>FAIL_REGEX</value>
+              <start>
+                <offset>1580</offset>
+              </start>
+              <end>
+                <offset>1589</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>FAIL_REGEX</argument>
-          <start>
-            <offset>1580</offset>
-          </start>
-          <end>
-            <offset>1589</offset>
-          </end>
-        </ru.urururu.cmakeedit.core.ArgumentNode>
-        <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>ignoring option .*argument required</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>ignoring option .*argument required</value>
+              <start>
+                <offset>1592</offset>
+              </start>
+              <end>
+                <offset>1626</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>1591</offset>
           </start>
@@ -545,26 +625,32 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>
-</argument>
-          <start>
-            <offset>1642</offset>
-          </start>
-          <end>
-            <offset>1642</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>FAIL_REGEX</value>
+              <start>
+                <offset>1648</offset>
+              </start>
+              <end>
+                <offset>1657</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>FAIL_REGEX</argument>
-          <start>
-            <offset>1648</offset>
-          </start>
-          <end>
-            <offset>1657</offset>
-          </end>
-        </ru.urururu.cmakeedit.core.ArgumentNode>
-        <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>ignoring option .*argument is of wrong type</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>ignoring option .*argument is of wrong type</value>
+              <start>
+                <offset>1660</offset>
+              </start>
+              <end>
+                <offset>1702</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>1659</offset>
           </start>
@@ -573,26 +659,32 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>
-</argument>
-          <start>
-            <offset>1712</offset>
-          </start>
-          <end>
-            <offset>1712</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>FAIL_REGEX</value>
+              <start>
+                <offset>1718</offset>
+              </start>
+              <end>
+                <offset>1727</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>FAIL_REGEX</argument>
-          <start>
-            <offset>1718</offset>
-          </start>
-          <end>
-            <offset>1727</offset>
-          </end>
-        </ru.urururu.cmakeedit.core.ArgumentNode>
-        <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>[Uu]nknown option</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>[Uu]nknown option</value>
+              <start>
+                <offset>1730</offset>
+              </start>
+              <end>
+                <offset>1746</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>1729</offset>
           </start>
@@ -601,26 +693,32 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>
-</argument>
-          <start>
-            <offset>1777</offset>
-          </start>
-          <end>
-            <offset>1777</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>FAIL_REGEX</value>
+              <start>
+                <offset>1783</offset>
+              </start>
+              <end>
+                <offset>1792</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>FAIL_REGEX</argument>
-          <start>
-            <offset>1783</offset>
-          </start>
-          <end>
-            <offset>1792</offset>
-          </end>
-        </ru.urururu.cmakeedit.core.ArgumentNode>
-        <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>[Ww]arning: [Oo]ption</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>[Ww]arning: [Oo]ption</value>
+              <start>
+                <offset>1795</offset>
+              </start>
+              <end>
+                <offset>1815</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>1794</offset>
           </start>
@@ -629,26 +727,32 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>
-</argument>
-          <start>
-            <offset>1846</offset>
-          </start>
-          <end>
-            <offset>1846</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>FAIL_REGEX</value>
+              <start>
+                <offset>1852</offset>
+              </start>
+              <end>
+                <offset>1861</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>FAIL_REGEX</argument>
-          <start>
-            <offset>1852</offset>
-          </start>
-          <end>
-            <offset>1861</offset>
-          </end>
-        </ru.urururu.cmakeedit.core.ArgumentNode>
-        <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>command option .* is not recognized</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>command option .* is not recognized</value>
+              <start>
+                <offset>1864</offset>
+              </start>
+              <end>
+                <offset>1898</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>1863</offset>
           </start>
@@ -657,26 +761,32 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>
-</argument>
-          <start>
-            <offset>1911</offset>
-          </start>
-          <end>
-            <offset>1911</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>FAIL_REGEX</value>
+              <start>
+                <offset>1917</offset>
+              </start>
+              <end>
+                <offset>1926</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>FAIL_REGEX</argument>
-          <start>
-            <offset>1917</offset>
-          </start>
-          <end>
-            <offset>1926</offset>
-          </end>
-        </ru.urururu.cmakeedit.core.ArgumentNode>
-        <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>command option .* contains an incorrect subargument</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>command option .* contains an incorrect subargument</value>
+              <start>
+                <offset>1929</offset>
+              </start>
+              <end>
+                <offset>1979</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>1928</offset>
           </start>
@@ -685,26 +795,32 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>
-</argument>
-          <start>
-            <offset>1986</offset>
-          </start>
-          <end>
-            <offset>1986</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>FAIL_REGEX</value>
+              <start>
+                <offset>1992</offset>
+              </start>
+              <end>
+                <offset>2001</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>FAIL_REGEX</argument>
-          <start>
-            <offset>1992</offset>
-          </start>
-          <end>
-            <offset>2001</offset>
-          </end>
-        </ru.urururu.cmakeedit.core.ArgumentNode>
-        <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>not supported in this configuration. ignored</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>not supported in this configuration. ignored</value>
+              <start>
+                <offset>2004</offset>
+              </start>
+              <end>
+                <offset>2047</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>2003</offset>
           </start>
@@ -713,26 +829,32 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>
-</argument>
-          <start>
-            <offset>2061</offset>
-          </start>
-          <end>
-            <offset>2061</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>FAIL_REGEX</value>
+              <start>
+                <offset>2067</offset>
+              </start>
+              <end>
+                <offset>2076</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>FAIL_REGEX</argument>
-          <start>
-            <offset>2067</offset>
-          </start>
-          <end>
-            <offset>2076</offset>
-          </end>
-        </ru.urururu.cmakeedit.core.ArgumentNode>
-        <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>File with unknown suffix passed to linker</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>File with unknown suffix passed to linker</value>
+              <start>
+                <offset>2079</offset>
+              </start>
+              <end>
+                <offset>2119</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>2078</offset>
           </start>
@@ -741,26 +863,32 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>
-</argument>
-          <start>
-            <offset>2127</offset>
-          </start>
-          <end>
-            <offset>2127</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>FAIL_REGEX</value>
+              <start>
+                <offset>2133</offset>
+              </start>
+              <end>
+                <offset>2142</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>FAIL_REGEX</argument>
-          <start>
-            <offset>2133</offset>
-          </start>
-          <end>
-            <offset>2142</offset>
-          </end>
-        </ru.urururu.cmakeedit.core.ArgumentNode>
-        <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>[Uu]nknown switch</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>[Uu]nknown switch</value>
+              <start>
+                <offset>2145</offset>
+              </start>
+              <end>
+                <offset>2161</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>2144</offset>
           </start>
@@ -769,26 +897,32 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>
-</argument>
-          <start>
-            <offset>2193</offset>
-          </start>
-          <end>
-            <offset>2193</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>FAIL_REGEX</value>
+              <start>
+                <offset>2199</offset>
+              </start>
+              <end>
+                <offset>2208</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>FAIL_REGEX</argument>
-          <start>
-            <offset>2199</offset>
-          </start>
-          <end>
-            <offset>2208</offset>
-          </end>
-        </ru.urururu.cmakeedit.core.ArgumentNode>
-        <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>WARNING: unknown flag:</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>WARNING: unknown flag:</value>
+              <start>
+                <offset>2211</offset>
+              </start>
+              <end>
+                <offset>2232</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>2210</offset>
           </start>
@@ -797,26 +931,32 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>
-</argument>
-          <start>
-            <offset>2262</offset>
-          </start>
-          <end>
-            <offset>2262</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>FAIL_REGEX</value>
+              <start>
+                <offset>2268</offset>
+              </start>
+              <end>
+                <offset>2277</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>FAIL_REGEX</argument>
-          <start>
-            <offset>2268</offset>
-          </start>
-          <end>
-            <offset>2277</offset>
-          </end>
-        </ru.urururu.cmakeedit.core.ArgumentNode>
-        <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>Incorrect command line option:</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>Incorrect command line option:</value>
+              <start>
+                <offset>2280</offset>
+              </start>
+              <end>
+                <offset>2309</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>2279</offset>
           </start>
@@ -825,26 +965,32 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>
-</argument>
-          <start>
-            <offset>2332</offset>
-          </start>
-          <end>
-            <offset>2332</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>FAIL_REGEX</value>
+              <start>
+                <offset>2338</offset>
+              </start>
+              <end>
+                <offset>2347</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>FAIL_REGEX</argument>
-          <start>
-            <offset>2338</offset>
-          </start>
-          <end>
-            <offset>2347</offset>
-          </end>
-        </ru.urururu.cmakeedit.core.ArgumentNode>
-        <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>Warning: illegal option</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>Warning: illegal option</value>
+              <start>
+                <offset>2350</offset>
+              </start>
+              <end>
+                <offset>2372</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>2349</offset>
           </start>
@@ -853,41 +999,37 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>
-</argument>
-          <start>
-            <offset>2407</offset>
-          </start>
-          <end>
-            <offset>2407</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>FAIL_REGEX</value>
+              <start>
+                <offset>2413</offset>
+              </start>
+              <end>
+                <offset>2422</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>FAIL_REGEX</argument>
-          <start>
-            <offset>2413</offset>
-          </start>
-          <end>
-            <offset>2422</offset>
-          </end>
-        </ru.urururu.cmakeedit.core.ArgumentNode>
-        <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>[Ww]arning: Invalid suboption</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>[Ww]arning: Invalid suboption</value>
+              <start>
+                <offset>2425</offset>
+              </start>
+              <end>
+                <offset>2453</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>2424</offset>
           </start>
           <end>
             <offset>2454</offset>
-          </end>
-        </ru.urururu.cmakeedit.core.ArgumentNode>
-        <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>
-</argument>
-          <start>
-            <offset>2477</offset>
-          </start>
-          <end>
-            <offset>2477</offset>
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>

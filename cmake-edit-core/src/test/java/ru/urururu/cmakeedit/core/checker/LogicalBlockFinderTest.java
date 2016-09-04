@@ -4,6 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 import ru.urururu.cmakeedit.core.ArgumentNode;
 import ru.urururu.cmakeedit.core.CommandInvocationNode;
+import ru.urururu.cmakeedit.core.ConstantNode;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -40,7 +41,7 @@ public class LogicalBlockFinderTest {
     private CommandInvocationNode command(String commandName, String... arguments) {
         return new CommandInvocationNode(
                 commandName,
-                Arrays.stream(arguments).map(arg -> new ArgumentNode(arg, Collections.emptyList(), null, null)).collect(Collectors.toList()),
+                Arrays.stream(arguments).map(arg -> new ArgumentNode(Collections.singletonList(new ConstantNode(arg, null, null)), null, null)).collect(Collectors.toList()),
                 Collections.emptyList(),
                 null,
                 null

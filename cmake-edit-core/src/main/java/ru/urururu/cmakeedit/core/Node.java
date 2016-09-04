@@ -1,7 +1,6 @@
 package ru.urururu.cmakeedit.core;
 
 import java.io.Serializable;
-import java.util.List;
 
 /**
  * Created by okutane on 07/07/16.
@@ -40,8 +39,8 @@ public abstract class Node implements Serializable {
         return end;
     }
 
-    List<Node> maskEmpty(List<Node> list) {
-        return list.isEmpty() ? null : list;
+    static String unmask(String string) {
+        return string == null ? "" : string;
     }
 
     String maskEmpty(String string) {

@@ -4,16 +4,24 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>_compiler_id_version_compute</argument>
-          <start>
-            <offset>5</offset>
-          </start>
-          <end>
-            <offset>32</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_compiler_id_version_compute</value>
+              <start>
+                <offset>5</offset>
+              </start>
+              <end>
+                <offset>32</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>
 # define @PREFIX@COMPILER_VERSION_MAJOR @MACRO_DEC@(__clang_major__)
 # define @PREFIX@COMPILER_VERSION_MINOR @MACRO_DEC@(__clang_minor__)
 # define @PREFIX@COMPILER_VERSION_PATCH @MACRO_DEC@(__clang_patchlevel__)
@@ -21,7 +29,15 @@
    /* _MSC_VER = VVRR */
 #  define @PREFIX@SIMULATE_VERSION_MAJOR @MACRO_DEC@(_MSC_VER / 100)
 #  define @PREFIX@SIMULATE_VERSION_MINOR @MACRO_DEC@(_MSC_VER % 100)
-# endif</argument>
+# endif</value>
+              <start>
+                <offset>35</offset>
+              </start>
+              <end>
+                <offset>440</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>34</offset>
           </start>
@@ -42,19 +58,35 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>_compiler_id_simulate</argument>
-          <start>
-            <offset>449</offset>
-          </start>
-          <end>
-            <offset>469</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_compiler_id_simulate</value>
+              <start>
+                <offset>449</offset>
+              </start>
+              <end>
+                <offset>469</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>
 # if defined(_MSC_VER)
 #  define @PREFIX@SIMULATE_ID \&quot;MSVC\&quot;
-# endif</argument>
+# endif</value>
+              <start>
+                <offset>472</offset>
+              </start>
+              <end>
+                <offset>541</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>471</offset>
           </start>

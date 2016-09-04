@@ -168,13 +168,19 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_BINARY_DIR</argument>
-          <start>
-            <offset>612</offset>
-          </start>
-          <end>
-            <offset>627</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_BINARY_DIR</value>
+              <start>
+                <offset>612</offset>
+              </start>
+              <end>
+                <offset>627</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -189,16 +195,32 @@
       <commandName>message</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>FATAL_ERROR</argument>
-          <start>
-            <offset>640</offset>
-          </start>
-          <end>
-            <offset>650</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>FATAL_ERROR</value>
+              <start>
+                <offset>640</offset>
+              </start>
+              <end>
+                <offset>650</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CPackZIP.cmake may only be used by CPack internally.</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CPackZIP.cmake may only be used by CPack internally.</value>
+              <start>
+                <offset>653</offset>
+              </start>
+              <end>
+                <offset>704</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>652</offset>
           </start>
@@ -230,38 +252,65 @@
       <commandName>find_program</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>ZIP_EXECUTABLE</argument>
-          <start>
-            <offset>730</offset>
-          </start>
-          <end>
-            <offset>743</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>ZIP_EXECUTABLE</value>
+              <start>
+                <offset>730</offset>
+              </start>
+              <end>
+                <offset>743</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>wzzip</argument>
-          <start>
-            <offset>745</offset>
-          </start>
-          <end>
-            <offset>749</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>wzzip</value>
+              <start>
+                <offset>745</offset>
+              </start>
+              <end>
+                <offset>749</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>PATHS</argument>
-          <start>
-            <offset>751</offset>
-          </start>
-          <end>
-            <offset>755</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>PATHS</value>
+              <start>
+                <offset>751</offset>
+              </start>
+              <end>
+                <offset>755</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>$ENV{ProgramFiles}/WinZip</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
               <key>ENV</key>
-              <expression>$ENV{ProgramFiles}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>ProgramFiles</value>
+                  <start>
+                    <offset>763</offset>
+                  </start>
+                  <end>
+                    <offset>774</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>758</offset>
               </start>
@@ -269,6 +318,15 @@
                 <offset>775</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/WinZip</value>
+              <start>
+                <offset>776</offset>
+              </start>
+              <end>
+                <offset>782</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
           <start>
             <offset>757</offset>
@@ -290,13 +348,19 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>ZIP_EXECUTABLE</argument>
-          <start>
-            <offset>789</offset>
-          </start>
-          <end>
-            <offset>802</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>ZIP_EXECUTABLE</value>
+              <start>
+                <offset>789</offset>
+              </start>
+              <end>
+                <offset>802</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -311,19 +375,43 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CPACK_ZIP_COMMAND</argument>
-          <start>
-            <offset>811</offset>
-          </start>
-          <end>
-            <offset>827</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CPACK_ZIP_COMMAND</value>
+              <start>
+                <offset>811</offset>
+              </start>
+              <end>
+                <offset>827</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>\&quot;${ZIP_EXECUTABLE}\&quot; -P \&quot;&lt;ARCHIVE&gt;\&quot; @&lt;FILELIST&gt;</argument>
           <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>\&quot;</value>
+              <start>
+                <offset>830</offset>
+              </start>
+              <end>
+                <offset>830</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${ZIP_EXECUTABLE}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>ZIP_EXECUTABLE</value>
+                  <start>
+                    <offset>834</offset>
+                  </start>
+                  <end>
+                    <offset>847</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>832</offset>
               </start>
@@ -331,6 +419,15 @@
                 <offset>848</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>\&quot; -P \&quot;&lt;ARCHIVE&gt;\&quot; @&lt;FILELIST&gt;</value>
+              <start>
+                <offset>849</offset>
+              </start>
+              <end>
+                <offset>879</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
           <start>
             <offset>829</offset>
@@ -352,22 +449,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CPACK_ZIP_NEED_QUOTES</argument>
-          <start>
-            <offset>889</offset>
-          </start>
-          <end>
-            <offset>909</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CPACK_ZIP_NEED_QUOTES</value>
+              <start>
+                <offset>889</offset>
+              </start>
+              <end>
+                <offset>909</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>TRUE</argument>
-          <start>
-            <offset>911</offset>
-          </start>
-          <end>
-            <offset>914</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>TRUE</value>
+              <start>
+                <offset>911</offset>
+              </start>
+              <end>
+                <offset>914</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -393,22 +502,34 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>NOT</argument>
-          <start>
-            <offset>929</offset>
-          </start>
-          <end>
-            <offset>931</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>NOT</value>
+              <start>
+                <offset>929</offset>
+              </start>
+              <end>
+                <offset>931</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>ZIP_EXECUTABLE</argument>
-          <start>
-            <offset>933</offset>
-          </start>
-          <end>
-            <offset>946</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>ZIP_EXECUTABLE</value>
+              <start>
+                <offset>933</offset>
+              </start>
+              <end>
+                <offset>946</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -423,38 +544,65 @@
       <commandName>find_program</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>ZIP_EXECUTABLE</argument>
-          <start>
-            <offset>964</offset>
-          </start>
-          <end>
-            <offset>977</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>ZIP_EXECUTABLE</value>
+              <start>
+                <offset>964</offset>
+              </start>
+              <end>
+                <offset>977</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>7z</argument>
-          <start>
-            <offset>979</offset>
-          </start>
-          <end>
-            <offset>980</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>7z</value>
+              <start>
+                <offset>979</offset>
+              </start>
+              <end>
+                <offset>980</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>PATHS</argument>
-          <start>
-            <offset>982</offset>
-          </start>
-          <end>
-            <offset>986</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>PATHS</value>
+              <start>
+                <offset>982</offset>
+              </start>
+              <end>
+                <offset>986</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>$ENV{ProgramFiles}/7-Zip</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
               <key>ENV</key>
-              <expression>$ENV{ProgramFiles}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>ProgramFiles</value>
+                  <start>
+                    <offset>994</offset>
+                  </start>
+                  <end>
+                    <offset>1005</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>989</offset>
               </start>
@@ -462,6 +610,15 @@
                 <offset>1006</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/7-Zip</value>
+              <start>
+                <offset>1007</offset>
+              </start>
+              <end>
+                <offset>1012</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
           <start>
             <offset>988</offset>
@@ -483,13 +640,19 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>ZIP_EXECUTABLE</argument>
-          <start>
-            <offset>1021</offset>
-          </start>
-          <end>
-            <offset>1034</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>ZIP_EXECUTABLE</value>
+              <start>
+                <offset>1021</offset>
+              </start>
+              <end>
+                <offset>1034</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -504,19 +667,43 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CPACK_ZIP_COMMAND</argument>
-          <start>
-            <offset>1045</offset>
-          </start>
-          <end>
-            <offset>1061</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CPACK_ZIP_COMMAND</value>
+              <start>
+                <offset>1045</offset>
+              </start>
+              <end>
+                <offset>1061</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>\&quot;${ZIP_EXECUTABLE}\&quot; a -tzip \&quot;&lt;ARCHIVE&gt;\&quot; @&lt;FILELIST&gt;</argument>
           <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>\&quot;</value>
+              <start>
+                <offset>1064</offset>
+              </start>
+              <end>
+                <offset>1064</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${ZIP_EXECUTABLE}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>ZIP_EXECUTABLE</value>
+                  <start>
+                    <offset>1068</offset>
+                  </start>
+                  <end>
+                    <offset>1081</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1066</offset>
               </start>
@@ -524,6 +711,15 @@
                 <offset>1082</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>\&quot; a -tzip \&quot;&lt;ARCHIVE&gt;\&quot; @&lt;FILELIST&gt;</value>
+              <start>
+                <offset>1083</offset>
+              </start>
+              <end>
+                <offset>1118</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
           <start>
             <offset>1063</offset>
@@ -545,22 +741,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CPACK_ZIP_NEED_QUOTES</argument>
-          <start>
-            <offset>1128</offset>
-          </start>
-          <end>
-            <offset>1148</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CPACK_ZIP_NEED_QUOTES</value>
+              <start>
+                <offset>1128</offset>
+              </start>
+              <end>
+                <offset>1148</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>TRUE</argument>
-          <start>
-            <offset>1150</offset>
-          </start>
-          <end>
-            <offset>1153</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>TRUE</value>
+              <start>
+                <offset>1150</offset>
+              </start>
+              <end>
+                <offset>1153</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -597,22 +805,34 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>NOT</argument>
-          <start>
-            <offset>1178</offset>
-          </start>
-          <end>
-            <offset>1180</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>NOT</value>
+              <start>
+                <offset>1178</offset>
+              </start>
+              <end>
+                <offset>1180</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>ZIP_EXECUTABLE</argument>
-          <start>
-            <offset>1182</offset>
-          </start>
-          <end>
-            <offset>1195</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>ZIP_EXECUTABLE</value>
+              <start>
+                <offset>1182</offset>
+              </start>
+              <end>
+                <offset>1195</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -627,13 +847,19 @@
       <commandName>find_package</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>Cygwin</argument>
-          <start>
-            <offset>1213</offset>
-          </start>
-          <end>
-            <offset>1218</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>Cygwin</value>
+              <start>
+                <offset>1213</offset>
+              </start>
+              <end>
+                <offset>1218</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -648,37 +874,64 @@
       <commandName>find_program</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>ZIP_EXECUTABLE</argument>
-          <start>
-            <offset>1236</offset>
-          </start>
-          <end>
-            <offset>1249</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>ZIP_EXECUTABLE</value>
+              <start>
+                <offset>1236</offset>
+              </start>
+              <end>
+                <offset>1249</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>zip</argument>
-          <start>
-            <offset>1251</offset>
-          </start>
-          <end>
-            <offset>1253</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>zip</value>
+              <start>
+                <offset>1251</offset>
+              </start>
+              <end>
+                <offset>1253</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>PATHS</argument>
-          <start>
-            <offset>1255</offset>
-          </start>
-          <end>
-            <offset>1259</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>PATHS</value>
+              <start>
+                <offset>1255</offset>
+              </start>
+              <end>
+                <offset>1259</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CYGWIN_INSTALL_PATH}/bin</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CYGWIN_INSTALL_PATH}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CYGWIN_INSTALL_PATH</value>
+                  <start>
+                    <offset>1264</offset>
+                  </start>
+                  <end>
+                    <offset>1282</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1262</offset>
               </start>
@@ -686,6 +939,15 @@
                 <offset>1283</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/bin</value>
+              <start>
+                <offset>1284</offset>
+              </start>
+              <end>
+                <offset>1287</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
           <start>
             <offset>1261</offset>
@@ -707,13 +969,19 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>ZIP_EXECUTABLE</argument>
-          <start>
-            <offset>1296</offset>
-          </start>
-          <end>
-            <offset>1309</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>ZIP_EXECUTABLE</value>
+              <start>
+                <offset>1296</offset>
+              </start>
+              <end>
+                <offset>1309</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -728,19 +996,43 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CPACK_ZIP_COMMAND</argument>
-          <start>
-            <offset>1320</offset>
-          </start>
-          <end>
-            <offset>1336</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CPACK_ZIP_COMMAND</value>
+              <start>
+                <offset>1320</offset>
+              </start>
+              <end>
+                <offset>1336</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>\&quot;${ZIP_EXECUTABLE}\&quot; -r \&quot;&lt;ARCHIVE&gt;\&quot; . -i@&lt;FILELIST&gt;</argument>
           <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>\&quot;</value>
+              <start>
+                <offset>1339</offset>
+              </start>
+              <end>
+                <offset>1339</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${ZIP_EXECUTABLE}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>ZIP_EXECUTABLE</value>
+                  <start>
+                    <offset>1343</offset>
+                  </start>
+                  <end>
+                    <offset>1356</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1341</offset>
               </start>
@@ -748,6 +1040,15 @@
                 <offset>1357</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>\&quot; -r \&quot;&lt;ARCHIVE&gt;\&quot; . -i@&lt;FILELIST&gt;</value>
+              <start>
+                <offset>1358</offset>
+              </start>
+              <end>
+                <offset>1392</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
           <start>
             <offset>1338</offset>
@@ -769,22 +1070,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CPACK_ZIP_NEED_QUOTES</argument>
-          <start>
-            <offset>1404</offset>
-          </start>
-          <end>
-            <offset>1424</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CPACK_ZIP_NEED_QUOTES</value>
+              <start>
+                <offset>1404</offset>
+              </start>
+              <end>
+                <offset>1424</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>FALSE</argument>
-          <start>
-            <offset>1426</offset>
-          </start>
-          <end>
-            <offset>1430</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>FALSE</value>
+              <start>
+                <offset>1426</offset>
+              </start>
+              <end>
+                <offset>1430</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>

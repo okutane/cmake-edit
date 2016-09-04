@@ -684,10 +684,19 @@
       <commandName>include</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_CURRENT_LIST_DIR}/CheckLibraryExists.cmake</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_CURRENT_LIST_DIR}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_CURRENT_LIST_DIR</value>
+                  <start>
+                    <offset>1701</offset>
+                  </start>
+                  <end>
+                    <offset>1722</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>1699</offset>
               </start>
@@ -695,13 +704,18 @@
                 <offset>1723</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/CheckLibraryExists.cmake</value>
+              <start>
+                <offset>1724</offset>
+              </start>
+              <end>
+                <offset>1748</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
-          <start>
-            <offset>1699</offset>
-          </start>
-          <end>
-            <offset>1748</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -716,31 +730,49 @@
       <commandName>find_library</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CURSES_CURSES_LIBRARY</argument>
-          <start>
-            <offset>1765</offset>
-          </start>
-          <end>
-            <offset>1785</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CURSES_CURSES_LIBRARY</value>
+              <start>
+                <offset>1765</offset>
+              </start>
+              <end>
+                <offset>1785</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>NAMES</argument>
-          <start>
-            <offset>1787</offset>
-          </start>
-          <end>
-            <offset>1791</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>NAMES</value>
+              <start>
+                <offset>1787</offset>
+              </start>
+              <end>
+                <offset>1791</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>curses</argument>
-          <start>
-            <offset>1793</offset>
-          </start>
-          <end>
-            <offset>1798</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>curses</value>
+              <start>
+                <offset>1793</offset>
+              </start>
+              <end>
+                <offset>1798</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -755,31 +787,49 @@
       <commandName>find_library</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CURSES_NCURSES_LIBRARY</argument>
-          <start>
-            <offset>1816</offset>
-          </start>
-          <end>
-            <offset>1837</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CURSES_NCURSES_LIBRARY</value>
+              <start>
+                <offset>1816</offset>
+              </start>
+              <end>
+                <offset>1837</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>NAMES</argument>
-          <start>
-            <offset>1839</offset>
-          </start>
-          <end>
-            <offset>1843</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>NAMES</value>
+              <start>
+                <offset>1839</offset>
+              </start>
+              <end>
+                <offset>1843</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>ncurses</argument>
-          <start>
-            <offset>1845</offset>
-          </start>
-          <end>
-            <offset>1851</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>ncurses</value>
+              <start>
+                <offset>1845</offset>
+              </start>
+              <end>
+                <offset>1851</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -794,22 +844,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CURSES_USE_NCURSES</argument>
-          <start>
-            <offset>1859</offset>
-          </start>
-          <end>
-            <offset>1876</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CURSES_USE_NCURSES</value>
+              <start>
+                <offset>1859</offset>
+              </start>
+              <end>
+                <offset>1876</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>FALSE</argument>
-          <start>
-            <offset>1878</offset>
-          </start>
-          <end>
-            <offset>1882</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>FALSE</value>
+              <start>
+                <offset>1878</offset>
+              </start>
+              <end>
+                <offset>1882</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -824,70 +886,106 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CURSES_NCURSES_LIBRARY</argument>
-          <start>
-            <offset>1889</offset>
-          </start>
-          <end>
-            <offset>1910</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CURSES_NCURSES_LIBRARY</value>
+              <start>
+                <offset>1889</offset>
+              </start>
+              <end>
+                <offset>1910</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>AND</argument>
-          <start>
-            <offset>1913</offset>
-          </start>
-          <end>
-            <offset>1915</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>AND</value>
+              <start>
+                <offset>1913</offset>
+              </start>
+              <end>
+                <offset>1915</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
           <children>
             <ru.urururu.cmakeedit.core.ArgumentNode>
               <children>
                 <ru.urururu.cmakeedit.core.ArgumentNode>
-                  <argument>NOT</argument>
-                  <start>
-                    <offset>1919</offset>
-                  </start>
-                  <end>
-                    <offset>1921</offset>
-                  </end>
+                  <children>
+                    <ru.urururu.cmakeedit.core.ConstantNode>
+                      <value>NOT</value>
+                      <start>
+                        <offset>1919</offset>
+                      </start>
+                      <end>
+                        <offset>1921</offset>
+                      </end>
+                    </ru.urururu.cmakeedit.core.ConstantNode>
+                  </children>
+                  <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+                  <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
                 </ru.urururu.cmakeedit.core.ArgumentNode>
                 <ru.urururu.cmakeedit.core.ArgumentNode>
-                  <argument>CURSES_CURSES_LIBRARY</argument>
-                  <start>
-                    <offset>1923</offset>
-                  </start>
-                  <end>
-                    <offset>1943</offset>
-                  </end>
+                  <children>
+                    <ru.urururu.cmakeedit.core.ConstantNode>
+                      <value>CURSES_CURSES_LIBRARY</value>
+                      <start>
+                        <offset>1923</offset>
+                      </start>
+                      <end>
+                        <offset>1943</offset>
+                      </end>
+                    </ru.urururu.cmakeedit.core.ConstantNode>
+                  </children>
+                  <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+                  <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
                 </ru.urururu.cmakeedit.core.ArgumentNode>
               </children>
-              <start reference="../children/ru.urururu.cmakeedit.core.ArgumentNode/start"/>
-              <end reference="../children/ru.urururu.cmakeedit.core.ArgumentNode[2]/end"/>
+              <start reference="../children/ru.urururu.cmakeedit.core.ArgumentNode/children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+              <end reference="../children/ru.urururu.cmakeedit.core.ArgumentNode[2]/children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
             </ru.urururu.cmakeedit.core.ArgumentNode>
             <ru.urururu.cmakeedit.core.ArgumentNode>
-              <argument>OR</argument>
-              <start>
-                <offset>1946</offset>
-              </start>
-              <end>
-                <offset>1947</offset>
-              </end>
+              <children>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>OR</value>
+                  <start>
+                    <offset>1946</offset>
+                  </start>
+                  <end>
+                    <offset>1947</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </children>
+              <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+              <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
             </ru.urururu.cmakeedit.core.ArgumentNode>
             <ru.urururu.cmakeedit.core.ArgumentNode>
-              <argument>CURSES_NEED_NCURSES</argument>
-              <start>
-                <offset>1949</offset>
-              </start>
-              <end>
-                <offset>1967</offset>
-              </end>
+              <children>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CURSES_NEED_NCURSES</value>
+                  <start>
+                    <offset>1949</offset>
+                  </start>
+                  <end>
+                    <offset>1967</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </children>
+              <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+              <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
             </ru.urururu.cmakeedit.core.ArgumentNode>
           </children>
-          <start reference="../children/ru.urururu.cmakeedit.core.ArgumentNode/children/ru.urururu.cmakeedit.core.ArgumentNode/start"/>
-          <end reference="../children/ru.urururu.cmakeedit.core.ArgumentNode[3]/end"/>
+          <start reference="../children/ru.urururu.cmakeedit.core.ArgumentNode/children/ru.urururu.cmakeedit.core.ArgumentNode/children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ArgumentNode[3]/children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -902,22 +1000,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CURSES_USE_NCURSES</argument>
-          <start>
-            <offset>1977</offset>
-          </start>
-          <end>
-            <offset>1994</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CURSES_USE_NCURSES</value>
+              <start>
+                <offset>1977</offset>
+              </start>
+              <end>
+                <offset>1994</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>TRUE</argument>
-          <start>
-            <offset>1996</offset>
-          </start>
-          <end>
-            <offset>1999</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>TRUE</value>
+              <start>
+                <offset>1996</offset>
+              </start>
+              <end>
+                <offset>1999</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -999,13 +1109,19 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CYGWIN</argument>
-          <start>
-            <offset>2235</offset>
-          </start>
-          <end>
-            <offset>2240</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CYGWIN</value>
+              <start>
+                <offset>2235</offset>
+              </start>
+              <end>
+                <offset>2240</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -1020,31 +1136,49 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>NOT</argument>
-          <start>
-            <offset>2248</offset>
-          </start>
-          <end>
-            <offset>2250</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>NOT</value>
+              <start>
+                <offset>2248</offset>
+              </start>
+              <end>
+                <offset>2250</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>EXISTS</argument>
-          <start>
-            <offset>2252</offset>
-          </start>
-          <end>
-            <offset>2257</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>EXISTS</value>
+              <start>
+                <offset>2252</offset>
+              </start>
+              <end>
+                <offset>2257</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>/usr/include/curses.h</argument>
-          <start>
-            <offset>2259</offset>
-          </start>
-          <end>
-            <offset>2279</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/usr/include/curses.h</value>
+              <start>
+                <offset>2259</offset>
+              </start>
+              <end>
+                <offset>2279</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -1059,22 +1193,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CURSES_USE_NCURSES</argument>
-          <start>
-            <offset>2290</offset>
-          </start>
-          <end>
-            <offset>2307</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CURSES_USE_NCURSES</value>
+              <start>
+                <offset>2290</offset>
+              </start>
+              <end>
+                <offset>2307</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>TRUE</argument>
-          <start>
-            <offset>2309</offset>
-          </start>
-          <end>
-            <offset>2312</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>TRUE</value>
+              <start>
+                <offset>2309</offset>
+              </start>
+              <end>
+                <offset>2312</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -1265,31 +1411,49 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CURSES_CURSES_LIBRARY</argument>
-          <start>
-            <offset>3034</offset>
-          </start>
-          <end>
-            <offset>3054</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CURSES_CURSES_LIBRARY</value>
+              <start>
+                <offset>3034</offset>
+              </start>
+              <end>
+                <offset>3054</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>AND</argument>
-          <start>
-            <offset>3057</offset>
-          </start>
-          <end>
-            <offset>3059</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>AND</value>
+              <start>
+                <offset>3057</offset>
+              </start>
+              <end>
+                <offset>3059</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CURSES_NEED_NCURSES</argument>
-          <start>
-            <offset>3062</offset>
-          </start>
-          <end>
-            <offset>3080</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CURSES_NEED_NCURSES</value>
+              <start>
+                <offset>3062</offset>
+              </start>
+              <end>
+                <offset>3080</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -1304,10 +1468,19 @@
       <commandName>include</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_CURRENT_LIST_DIR}/CMakePushCheckState.cmake</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_CURRENT_LIST_DIR}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_CURRENT_LIST_DIR</value>
+                  <start>
+                    <offset>3095</offset>
+                  </start>
+                  <end>
+                    <offset>3116</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>3093</offset>
               </start>
@@ -1315,13 +1488,18 @@
                 <offset>3117</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/CMakePushCheckState.cmake</value>
+              <start>
+                <offset>3118</offset>
+              </start>
+              <end>
+                <offset>3143</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
-          <start>
-            <offset>3093</offset>
-          </start>
-          <end>
-            <offset>3143</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -1347,19 +1525,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_REQUIRED_QUIET</argument>
-          <start>
-            <offset>3179</offset>
-          </start>
-          <end>
-            <offset>3198</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_REQUIRED_QUIET</value>
+              <start>
+                <offset>3179</offset>
+              </start>
+              <end>
+                <offset>3198</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${Curses_FIND_QUIETLY}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${Curses_FIND_QUIETLY}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>Curses_FIND_QUIETLY</value>
+                  <start>
+                    <offset>3202</offset>
+                  </start>
+                  <end>
+                    <offset>3220</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>3200</offset>
               </start>
@@ -1368,12 +1561,8 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>3200</offset>
-          </start>
-          <end>
-            <offset>3221</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -1388,10 +1577,19 @@
       <commandName>CHECK_LIBRARY_EXISTS</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CURSES_CURSES_LIBRARY}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CURSES_CURSES_LIBRARY}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CURSES_CURSES_LIBRARY</value>
+                  <start>
+                    <offset>3250</offset>
+                  </start>
+                  <end>
+                    <offset>3270</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>3248</offset>
               </start>
@@ -1408,26 +1606,22 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>
-</argument>
-          <start>
-            <offset>3273</offset>
-          </start>
-          <end>
-            <offset>3273</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>wsyncup</value>
+              <start>
+                <offset>3278</offset>
+              </start>
+              <end>
+                <offset>3284</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>wsyncup</argument>
-          <start>
-            <offset>3278</offset>
-          </start>
-          <end>
-            <offset>3284</offset>
-          </end>
-        </ru.urururu.cmakeedit.core.ArgumentNode>
-        <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument></argument>
+          <children/>
           <start>
             <offset>3286</offset>
           </start>
@@ -1436,13 +1630,19 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CURSES_CURSES_HAS_WSYNCUP</argument>
-          <start>
-            <offset>3289</offset>
-          </start>
-          <end>
-            <offset>3313</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CURSES_CURSES_HAS_WSYNCUP</value>
+              <start>
+                <offset>3289</offset>
+              </start>
+              <end>
+                <offset>3313</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -1457,40 +1657,64 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CURSES_NCURSES_LIBRARY</argument>
-          <start>
-            <offset>3322</offset>
-          </start>
-          <end>
-            <offset>3343</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CURSES_NCURSES_LIBRARY</value>
+              <start>
+                <offset>3322</offset>
+              </start>
+              <end>
+                <offset>3343</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>AND</argument>
-          <start>
-            <offset>3346</offset>
-          </start>
-          <end>
-            <offset>3348</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>AND</value>
+              <start>
+                <offset>3346</offset>
+              </start>
+              <end>
+                <offset>3348</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>NOT</argument>
-          <start>
-            <offset>3350</offset>
-          </start>
-          <end>
-            <offset>3352</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>NOT</value>
+              <start>
+                <offset>3350</offset>
+              </start>
+              <end>
+                <offset>3352</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CURSES_CURSES_HAS_WSYNCUP</argument>
-          <start>
-            <offset>3355</offset>
-          </start>
-          <end>
-            <offset>3379</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CURSES_CURSES_HAS_WSYNCUP</value>
+              <start>
+                <offset>3355</offset>
+              </start>
+              <end>
+                <offset>3379</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -1505,10 +1729,19 @@
       <commandName>CHECK_LIBRARY_EXISTS</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CURSES_NCURSES_LIBRARY}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CURSES_NCURSES_LIBRARY}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CURSES_NCURSES_LIBRARY</value>
+                  <start>
+                    <offset>3410</offset>
+                  </start>
+                  <end>
+                    <offset>3431</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>3408</offset>
               </start>
@@ -1525,26 +1758,22 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>
-</argument>
-          <start>
-            <offset>3434</offset>
-          </start>
-          <end>
-            <offset>3434</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>wsyncup</value>
+              <start>
+                <offset>3441</offset>
+              </start>
+              <end>
+                <offset>3447</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>wsyncup</argument>
-          <start>
-            <offset>3441</offset>
-          </start>
-          <end>
-            <offset>3447</offset>
-          </end>
-        </ru.urururu.cmakeedit.core.ArgumentNode>
-        <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument></argument>
+          <children/>
           <start>
             <offset>3449</offset>
           </start>
@@ -1553,13 +1782,19 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CURSES_NCURSES_HAS_WSYNCUP</argument>
-          <start>
-            <offset>3452</offset>
-          </start>
-          <end>
-            <offset>3477</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CURSES_NCURSES_HAS_WSYNCUP</value>
+              <start>
+                <offset>3452</offset>
+              </start>
+              <end>
+                <offset>3477</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -1574,13 +1809,19 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CURSES_NCURSES_HAS_WSYNCUP</argument>
-          <start>
-            <offset>3488</offset>
-          </start>
-          <end>
-            <offset>3513</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CURSES_NCURSES_HAS_WSYNCUP</value>
+              <start>
+                <offset>3488</offset>
+              </start>
+              <end>
+                <offset>3513</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -1595,22 +1836,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CURSES_USE_NCURSES</argument>
-          <start>
-            <offset>3526</offset>
-          </start>
-          <end>
-            <offset>3543</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CURSES_USE_NCURSES</value>
+              <start>
+                <offset>3526</offset>
+              </start>
+              <end>
+                <offset>3543</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>TRUE</argument>
-          <start>
-            <offset>3545</offset>
-          </start>
-          <end>
-            <offset>3548</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>TRUE</value>
+              <start>
+                <offset>3545</offset>
+              </start>
+              <end>
+                <offset>3548</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -1669,13 +1922,19 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CURSES_USE_NCURSES</argument>
-          <start>
-            <offset>3612</offset>
-          </start>
-          <end>
-            <offset>3629</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CURSES_USE_NCURSES</value>
+              <start>
+                <offset>3612</offset>
+              </start>
+              <end>
+                <offset>3629</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -1690,19 +1949,34 @@
       <commandName>get_filename_component</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>_cursesLibDir</argument>
-          <start>
-            <offset>3657</offset>
-          </start>
-          <end>
-            <offset>3669</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_cursesLibDir</value>
+              <start>
+                <offset>3657</offset>
+              </start>
+              <end>
+                <offset>3669</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CURSES_NCURSES_LIBRARY}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CURSES_NCURSES_LIBRARY}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CURSES_NCURSES_LIBRARY</value>
+                  <start>
+                    <offset>3674</offset>
+                  </start>
+                  <end>
+                    <offset>3695</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>3672</offset>
               </start>
@@ -1719,13 +1993,19 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>PATH</argument>
-          <start>
-            <offset>3699</offset>
-          </start>
-          <end>
-            <offset>3702</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>PATH</value>
+              <start>
+                <offset>3699</offset>
+              </start>
+              <end>
+                <offset>3702</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -1740,19 +2020,34 @@
       <commandName>get_filename_component</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>_cursesParentDir</argument>
-          <start>
-            <offset>3730</offset>
-          </start>
-          <end>
-            <offset>3745</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_cursesParentDir</value>
+              <start>
+                <offset>3730</offset>
+              </start>
+              <end>
+                <offset>3745</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${_cursesLibDir}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${_cursesLibDir}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>_cursesLibDir</value>
+                  <start>
+                    <offset>3750</offset>
+                  </start>
+                  <end>
+                    <offset>3762</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>3748</offset>
               </start>
@@ -1769,13 +2064,19 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>PATH</argument>
-          <start>
-            <offset>3766</offset>
-          </start>
-          <end>
-            <offset>3769</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>PATH</value>
+              <start>
+                <offset>3766</offset>
+              </start>
+              <end>
+                <offset>3769</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -1804,13 +2105,19 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CURSES_NCURSES_INCLUDE_PATH</argument>
-          <start>
-            <offset>3841</offset>
-          </start>
-          <end>
-            <offset>3867</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CURSES_NCURSES_INCLUDE_PATH</value>
+              <start>
+                <offset>3841</offset>
+              </start>
+              <end>
+                <offset>3867</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -1825,76 +2132,124 @@
       <commandName>find_path</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CURSES_INCLUDE_PATH
-</argument>
-          <start>
-            <offset>3884</offset>
-          </start>
-          <end>
-            <offset>3903</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CURSES_INCLUDE_PATH</value>
+              <start>
+                <offset>3884</offset>
+              </start>
+              <end>
+                <offset>3902</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>NAMES</argument>
-          <start>
-            <offset>3910</offset>
-          </start>
-          <end>
-            <offset>3914</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>NAMES</value>
+              <start>
+                <offset>3910</offset>
+              </start>
+              <end>
+                <offset>3914</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>ncurses/ncurses.h</argument>
-          <start>
-            <offset>3916</offset>
-          </start>
-          <end>
-            <offset>3932</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>ncurses/ncurses.h</value>
+              <start>
+                <offset>3916</offset>
+              </start>
+              <end>
+                <offset>3932</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>ncurses/curses.h</argument>
-          <start>
-            <offset>3934</offset>
-          </start>
-          <end>
-            <offset>3949</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>ncurses/curses.h</value>
+              <start>
+                <offset>3934</offset>
+              </start>
+              <end>
+                <offset>3949</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>ncurses.h</argument>
-          <start>
-            <offset>3951</offset>
-          </start>
-          <end>
-            <offset>3959</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>ncurses.h</value>
+              <start>
+                <offset>3951</offset>
+              </start>
+              <end>
+                <offset>3959</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>curses.h
-</argument>
-          <start>
-            <offset>3961</offset>
-          </start>
-          <end>
-            <offset>3969</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>curses.h</value>
+              <start>
+                <offset>3961</offset>
+              </start>
+              <end>
+                <offset>3968</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>PATHS</argument>
-          <start>
-            <offset>3976</offset>
-          </start>
-          <end>
-            <offset>3980</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>PATHS</value>
+              <start>
+                <offset>3976</offset>
+              </start>
+              <end>
+                <offset>3980</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CURSES_NCURSES_INCLUDE_PATH}
-</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CURSES_NCURSES_INCLUDE_PATH}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CURSES_NCURSES_INCLUDE_PATH</value>
+                  <start>
+                    <offset>3984</offset>
+                  </start>
+                  <end>
+                    <offset>4010</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>3982</offset>
               </start>
@@ -1903,22 +2258,23 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>3982</offset>
-          </start>
-          <end>
-            <offset>4012</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>NO_DEFAULT_PATH
-</argument>
-          <start>
-            <offset>4019</offset>
-          </start>
-          <end>
-            <offset>4034</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>NO_DEFAULT_PATH</value>
+              <start>
+                <offset>4019</offset>
+              </start>
+              <end>
+                <offset>4033</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -1944,75 +2300,124 @@
       <commandName>find_path</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CURSES_INCLUDE_PATH
-</argument>
-          <start>
-            <offset>4066</offset>
-          </start>
-          <end>
-            <offset>4085</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CURSES_INCLUDE_PATH</value>
+              <start>
+                <offset>4066</offset>
+              </start>
+              <end>
+                <offset>4084</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>NAMES</argument>
-          <start>
-            <offset>4090</offset>
-          </start>
-          <end>
-            <offset>4094</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>NAMES</value>
+              <start>
+                <offset>4090</offset>
+              </start>
+              <end>
+                <offset>4094</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>ncurses/ncurses.h</argument>
-          <start>
-            <offset>4096</offset>
-          </start>
-          <end>
-            <offset>4112</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>ncurses/ncurses.h</value>
+              <start>
+                <offset>4096</offset>
+              </start>
+              <end>
+                <offset>4112</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>ncurses/curses.h</argument>
-          <start>
-            <offset>4114</offset>
-          </start>
-          <end>
-            <offset>4129</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>ncurses/curses.h</value>
+              <start>
+                <offset>4114</offset>
+              </start>
+              <end>
+                <offset>4129</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>ncurses.h</argument>
-          <start>
-            <offset>4131</offset>
-          </start>
-          <end>
-            <offset>4139</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>ncurses.h</value>
+              <start>
+                <offset>4131</offset>
+              </start>
+              <end>
+                <offset>4139</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>curses.h
-</argument>
-          <start>
-            <offset>4141</offset>
-          </start>
-          <end>
-            <offset>4149</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>curses.h</value>
+              <start>
+                <offset>4141</offset>
+              </start>
+              <end>
+                <offset>4148</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>HINTS</argument>
-          <start>
-            <offset>4154</offset>
-          </start>
-          <end>
-            <offset>4158</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>HINTS</value>
+              <start>
+                <offset>4154</offset>
+              </start>
+              <end>
+                <offset>4158</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${_cursesParentDir}/include</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${_cursesParentDir}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>_cursesParentDir</value>
+                  <start>
+                    <offset>4163</offset>
+                  </start>
+                  <end>
+                    <offset>4178</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>4161</offset>
               </start>
@@ -2020,22 +2425,21 @@
                 <offset>4179</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/include</value>
+              <start>
+                <offset>4180</offset>
+              </start>
+              <end>
+                <offset>4187</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
           <start>
             <offset>4160</offset>
           </start>
           <end>
             <offset>4188</offset>
-          </end>
-        </ru.urururu.cmakeedit.core.ArgumentNode>
-        <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>
-</argument>
-          <start>
-            <offset>4189</offset>
-          </start>
-          <end>
-            <offset>4189</offset>
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
@@ -2065,31 +2469,49 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>NOT</argument>
-          <start>
-            <offset>4261</offset>
-          </start>
-          <end>
-            <offset>4263</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>NOT</value>
+              <start>
+                <offset>4261</offset>
+              </start>
+              <end>
+                <offset>4263</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>DEFINED</argument>
-          <start>
-            <offset>4265</offset>
-          </start>
-          <end>
-            <offset>4271</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>DEFINED</value>
+              <start>
+                <offset>4265</offset>
+              </start>
+              <end>
+                <offset>4271</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CURSES_LIBRARY</argument>
-          <start>
-            <offset>4273</offset>
-          </start>
-          <end>
-            <offset>4286</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CURSES_LIBRARY</value>
+              <start>
+                <offset>4273</offset>
+              </start>
+              <end>
+                <offset>4286</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -2104,19 +2526,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CURSES_LIBRARY</argument>
-          <start>
-            <offset>4297</offset>
-          </start>
-          <end>
-            <offset>4310</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CURSES_LIBRARY</value>
+              <start>
+                <offset>4297</offset>
+              </start>
+              <end>
+                <offset>4310</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CURSES_NCURSES_LIBRARY}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CURSES_NCURSES_LIBRARY}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CURSES_NCURSES_LIBRARY</value>
+                  <start>
+                    <offset>4315</offset>
+                  </start>
+                  <end>
+                    <offset>4336</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>4313</offset>
               </start>
@@ -2156,10 +2593,19 @@
       <commandName>CHECK_LIBRARY_EXISTS</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CURSES_NCURSES_LIBRARY}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CURSES_NCURSES_LIBRARY}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CURSES_NCURSES_LIBRARY</value>
+                  <start>
+                    <offset>4378</offset>
+                  </start>
+                  <end>
+                    <offset>4399</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>4376</offset>
               </start>
@@ -2176,26 +2622,22 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>
-</argument>
-          <start>
-            <offset>4402</offset>
-          </start>
-          <end>
-            <offset>4402</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>cbreak</value>
+              <start>
+                <offset>4407</offset>
+              </start>
+              <end>
+                <offset>4412</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>cbreak</argument>
-          <start>
-            <offset>4407</offset>
-          </start>
-          <end>
-            <offset>4412</offset>
-          </end>
-        </ru.urururu.cmakeedit.core.ArgumentNode>
-        <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument></argument>
+          <children/>
           <start>
             <offset>4414</offset>
           </start>
@@ -2204,13 +2646,19 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CURSES_NCURSES_HAS_CBREAK</argument>
-          <start>
-            <offset>4417</offset>
-          </start>
-          <end>
-            <offset>4441</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CURSES_NCURSES_HAS_CBREAK</value>
+              <start>
+                <offset>4417</offset>
+              </start>
+              <end>
+                <offset>4441</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -2225,22 +2673,34 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>NOT</argument>
-          <start>
-            <offset>4449</offset>
-          </start>
-          <end>
-            <offset>4451</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>NOT</value>
+              <start>
+                <offset>4449</offset>
+              </start>
+              <end>
+                <offset>4451</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CURSES_NCURSES_HAS_CBREAK</argument>
-          <start>
-            <offset>4453</offset>
-          </start>
-          <end>
-            <offset>4477</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CURSES_NCURSES_HAS_CBREAK</value>
+              <start>
+                <offset>4453</offset>
+              </start>
+              <end>
+                <offset>4477</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -2255,37 +2715,64 @@
       <commandName>find_library</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CURSES_EXTRA_LIBRARY</argument>
-          <start>
-            <offset>4497</offset>
-          </start>
-          <end>
-            <offset>4516</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CURSES_EXTRA_LIBRARY</value>
+              <start>
+                <offset>4497</offset>
+              </start>
+              <end>
+                <offset>4516</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>tinfo</argument>
-          <start>
-            <offset>4518</offset>
-          </start>
-          <end>
-            <offset>4522</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>tinfo</value>
+              <start>
+                <offset>4518</offset>
+              </start>
+              <end>
+                <offset>4522</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>HINTS</argument>
-          <start>
-            <offset>4524</offset>
-          </start>
-          <end>
-            <offset>4528</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>HINTS</value>
+              <start>
+                <offset>4524</offset>
+              </start>
+              <end>
+                <offset>4528</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${_cursesLibDir}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${_cursesLibDir}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>_cursesLibDir</value>
+                  <start>
+                    <offset>4533</offset>
+                  </start>
+                  <end>
+                    <offset>4545</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>4531</offset>
               </start>
@@ -2314,22 +2801,34 @@
       <commandName>find_library</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CURSES_EXTRA_LIBRARY</argument>
-          <start>
-            <offset>4567</offset>
-          </start>
-          <end>
-            <offset>4586</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CURSES_EXTRA_LIBRARY</value>
+              <start>
+                <offset>4567</offset>
+              </start>
+              <end>
+                <offset>4586</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>tinfo</argument>
-          <start>
-            <offset>4588</offset>
-          </start>
-          <end>
-            <offset>4592</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>tinfo</value>
+              <start>
+                <offset>4588</offset>
+              </start>
+              <end>
+                <offset>4592</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -2366,19 +2865,34 @@
       <commandName>get_filename_component</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>_cursesLibDir</argument>
-          <start>
-            <offset>4638</offset>
-          </start>
-          <end>
-            <offset>4650</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_cursesLibDir</value>
+              <start>
+                <offset>4638</offset>
+              </start>
+              <end>
+                <offset>4650</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CURSES_CURSES_LIBRARY}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CURSES_CURSES_LIBRARY}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CURSES_CURSES_LIBRARY</value>
+                  <start>
+                    <offset>4655</offset>
+                  </start>
+                  <end>
+                    <offset>4675</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>4653</offset>
               </start>
@@ -2395,13 +2909,19 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>PATH</argument>
-          <start>
-            <offset>4679</offset>
-          </start>
-          <end>
-            <offset>4682</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>PATH</value>
+              <start>
+                <offset>4679</offset>
+              </start>
+              <end>
+                <offset>4682</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -2416,19 +2936,34 @@
       <commandName>get_filename_component</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>_cursesParentDir</argument>
-          <start>
-            <offset>4710</offset>
-          </start>
-          <end>
-            <offset>4725</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_cursesParentDir</value>
+              <start>
+                <offset>4710</offset>
+              </start>
+              <end>
+                <offset>4725</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${_cursesLibDir}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${_cursesLibDir}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>_cursesLibDir</value>
+                  <start>
+                    <offset>4730</offset>
+                  </start>
+                  <end>
+                    <offset>4742</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>4728</offset>
               </start>
@@ -2445,13 +2980,19 @@
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>PATH</argument>
-          <start>
-            <offset>4746</offset>
-          </start>
-          <end>
-            <offset>4749</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>PATH</value>
+              <start>
+                <offset>4746</offset>
+              </start>
+              <end>
+                <offset>4749</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -2466,48 +3007,79 @@
       <commandName>find_path</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CURSES_INCLUDE_PATH
-</argument>
-          <start>
-            <offset>4765</offset>
-          </start>
-          <end>
-            <offset>4784</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CURSES_INCLUDE_PATH</value>
+              <start>
+                <offset>4765</offset>
+              </start>
+              <end>
+                <offset>4783</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>NAMES</argument>
-          <start>
-            <offset>4789</offset>
-          </start>
-          <end>
-            <offset>4793</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>NAMES</value>
+              <start>
+                <offset>4789</offset>
+              </start>
+              <end>
+                <offset>4793</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>curses.h
-</argument>
-          <start>
-            <offset>4795</offset>
-          </start>
-          <end>
-            <offset>4803</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>curses.h</value>
+              <start>
+                <offset>4795</offset>
+              </start>
+              <end>
+                <offset>4802</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>HINTS</argument>
-          <start>
-            <offset>4808</offset>
-          </start>
-          <end>
-            <offset>4812</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>HINTS</value>
+              <start>
+                <offset>4808</offset>
+              </start>
+              <end>
+                <offset>4812</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${_cursesParentDir}/include</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${_cursesParentDir}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>_cursesParentDir</value>
+                  <start>
+                    <offset>4817</offset>
+                  </start>
+                  <end>
+                    <offset>4832</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>4815</offset>
               </start>
@@ -2515,22 +3087,21 @@
                 <offset>4833</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/include</value>
+              <start>
+                <offset>4834</offset>
+              </start>
+              <end>
+                <offset>4841</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
           <start>
             <offset>4814</offset>
           </start>
           <end>
             <offset>4842</offset>
-          </end>
-        </ru.urururu.cmakeedit.core.ArgumentNode>
-        <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>
-</argument>
-          <start>
-            <offset>4843</offset>
-          </start>
-          <end>
-            <offset>4843</offset>
           </end>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
@@ -2560,31 +3131,49 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>NOT</argument>
-          <start>
-            <offset>4915</offset>
-          </start>
-          <end>
-            <offset>4917</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>NOT</value>
+              <start>
+                <offset>4915</offset>
+              </start>
+              <end>
+                <offset>4917</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>DEFINED</argument>
-          <start>
-            <offset>4919</offset>
-          </start>
-          <end>
-            <offset>4925</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>DEFINED</value>
+              <start>
+                <offset>4919</offset>
+              </start>
+              <end>
+                <offset>4925</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CURSES_CURSES_H_PATH</argument>
-          <start>
-            <offset>4927</offset>
-          </start>
-          <end>
-            <offset>4946</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CURSES_CURSES_H_PATH</value>
+              <start>
+                <offset>4927</offset>
+              </start>
+              <end>
+                <offset>4946</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -2599,19 +3188,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CURSES_CURSES_H_PATH</argument>
-          <start>
-            <offset>4957</offset>
-          </start>
-          <end>
-            <offset>4976</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CURSES_CURSES_H_PATH</value>
+              <start>
+                <offset>4957</offset>
+              </start>
+              <end>
+                <offset>4976</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CURSES_INCLUDE_PATH}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CURSES_INCLUDE_PATH}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CURSES_INCLUDE_PATH</value>
+                  <start>
+                    <offset>4981</offset>
+                  </start>
+                  <end>
+                    <offset>4999</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>4979</offset>
               </start>
@@ -2651,31 +3255,49 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>NOT</argument>
-          <start>
-            <offset>5019</offset>
-          </start>
-          <end>
-            <offset>5021</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>NOT</value>
+              <start>
+                <offset>5019</offset>
+              </start>
+              <end>
+                <offset>5021</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>DEFINED</argument>
-          <start>
-            <offset>5023</offset>
-          </start>
-          <end>
-            <offset>5029</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>DEFINED</value>
+              <start>
+                <offset>5023</offset>
+              </start>
+              <end>
+                <offset>5029</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CURSES_LIBRARY</argument>
-          <start>
-            <offset>5031</offset>
-          </start>
-          <end>
-            <offset>5044</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CURSES_LIBRARY</value>
+              <start>
+                <offset>5031</offset>
+              </start>
+              <end>
+                <offset>5044</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -2690,19 +3312,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CURSES_LIBRARY</argument>
-          <start>
-            <offset>5055</offset>
-          </start>
-          <end>
-            <offset>5068</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CURSES_LIBRARY</value>
+              <start>
+                <offset>5055</offset>
+              </start>
+              <end>
+                <offset>5068</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CURSES_CURSES_LIBRARY}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CURSES_CURSES_LIBRARY}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CURSES_CURSES_LIBRARY</value>
+                  <start>
+                    <offset>5073</offset>
+                  </start>
+                  <end>
+                    <offset>5093</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>5071</offset>
               </start>
@@ -2767,31 +3404,49 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>NOT</argument>
-          <start>
-            <offset>5196</offset>
-          </start>
-          <end>
-            <offset>5198</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>NOT</value>
+              <start>
+                <offset>5196</offset>
+              </start>
+              <end>
+                <offset>5198</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>DEFINED</argument>
-          <start>
-            <offset>5200</offset>
-          </start>
-          <end>
-            <offset>5206</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>DEFINED</value>
+              <start>
+                <offset>5200</offset>
+              </start>
+              <end>
+                <offset>5206</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CURSES_HAVE_NCURSES_NCURSES_H</argument>
-          <start>
-            <offset>5208</offset>
-          </start>
-          <end>
-            <offset>5236</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CURSES_HAVE_NCURSES_NCURSES_H</value>
+              <start>
+                <offset>5208</offset>
+              </start>
+              <end>
+                <offset>5236</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -2806,19 +3461,34 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>EXISTS</argument>
-          <start>
-            <offset>5244</offset>
-          </start>
-          <end>
-            <offset>5249</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>EXISTS</value>
+              <start>
+                <offset>5244</offset>
+              </start>
+              <end>
+                <offset>5249</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CURSES_INCLUDE_PATH}/ncurses/ncurses.h</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CURSES_INCLUDE_PATH}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CURSES_INCLUDE_PATH</value>
+                  <start>
+                    <offset>5254</offset>
+                  </start>
+                  <end>
+                    <offset>5272</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>5252</offset>
               </start>
@@ -2826,6 +3496,15 @@
                 <offset>5273</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/ncurses/ncurses.h</value>
+              <start>
+                <offset>5274</offset>
+              </start>
+              <end>
+                <offset>5291</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
           <start>
             <offset>5251</offset>
@@ -2847,19 +3526,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CURSES_HAVE_NCURSES_NCURSES_H</argument>
-          <start>
-            <offset>5303</offset>
-          </start>
-          <end>
-            <offset>5331</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CURSES_HAVE_NCURSES_NCURSES_H</value>
+              <start>
+                <offset>5303</offset>
+              </start>
+              <end>
+                <offset>5331</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CURSES_INCLUDE_PATH}/ncurses/ncurses.h</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CURSES_INCLUDE_PATH}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CURSES_INCLUDE_PATH</value>
+                  <start>
+                    <offset>5336</offset>
+                  </start>
+                  <end>
+                    <offset>5354</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>5334</offset>
               </start>
@@ -2867,6 +3561,15 @@
                 <offset>5355</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/ncurses/ncurses.h</value>
+              <start>
+                <offset>5356</offset>
+              </start>
+              <end>
+                <offset>5373</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
           <start>
             <offset>5333</offset>
@@ -2899,16 +3602,32 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CURSES_HAVE_NCURSES_NCURSES_H</argument>
-          <start>
-            <offset>5394</offset>
-          </start>
-          <end>
-            <offset>5422</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CURSES_HAVE_NCURSES_NCURSES_H</value>
+              <start>
+                <offset>5394</offset>
+              </start>
+              <end>
+                <offset>5422</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CURSES_HAVE_NCURSES_NCURSES_H-NOTFOUND</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CURSES_HAVE_NCURSES_NCURSES_H-NOTFOUND</value>
+              <start>
+                <offset>5425</offset>
+              </start>
+              <end>
+                <offset>5462</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>5424</offset>
           </start>
@@ -2951,31 +3670,49 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>NOT</argument>
-          <start>
-            <offset>5487</offset>
-          </start>
-          <end>
-            <offset>5489</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>NOT</value>
+              <start>
+                <offset>5487</offset>
+              </start>
+              <end>
+                <offset>5489</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>DEFINED</argument>
-          <start>
-            <offset>5491</offset>
-          </start>
-          <end>
-            <offset>5497</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>DEFINED</value>
+              <start>
+                <offset>5491</offset>
+              </start>
+              <end>
+                <offset>5497</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CURSES_HAVE_NCURSES_CURSES_H</argument>
-          <start>
-            <offset>5499</offset>
-          </start>
-          <end>
-            <offset>5526</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CURSES_HAVE_NCURSES_CURSES_H</value>
+              <start>
+                <offset>5499</offset>
+              </start>
+              <end>
+                <offset>5526</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -2990,19 +3727,34 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>EXISTS</argument>
-          <start>
-            <offset>5534</offset>
-          </start>
-          <end>
-            <offset>5539</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>EXISTS</value>
+              <start>
+                <offset>5534</offset>
+              </start>
+              <end>
+                <offset>5539</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CURSES_INCLUDE_PATH}/ncurses/curses.h</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CURSES_INCLUDE_PATH}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CURSES_INCLUDE_PATH</value>
+                  <start>
+                    <offset>5544</offset>
+                  </start>
+                  <end>
+                    <offset>5562</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>5542</offset>
               </start>
@@ -3010,6 +3762,15 @@
                 <offset>5563</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/ncurses/curses.h</value>
+              <start>
+                <offset>5564</offset>
+              </start>
+              <end>
+                <offset>5580</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
           <start>
             <offset>5541</offset>
@@ -3031,19 +3792,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CURSES_HAVE_NCURSES_CURSES_H</argument>
-          <start>
-            <offset>5592</offset>
-          </start>
-          <end>
-            <offset>5619</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CURSES_HAVE_NCURSES_CURSES_H</value>
+              <start>
+                <offset>5592</offset>
+              </start>
+              <end>
+                <offset>5619</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CURSES_INCLUDE_PATH}/ncurses/curses.h</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CURSES_INCLUDE_PATH}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CURSES_INCLUDE_PATH</value>
+                  <start>
+                    <offset>5624</offset>
+                  </start>
+                  <end>
+                    <offset>5642</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>5622</offset>
               </start>
@@ -3051,6 +3827,15 @@
                 <offset>5643</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/ncurses/curses.h</value>
+              <start>
+                <offset>5644</offset>
+              </start>
+              <end>
+                <offset>5660</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
           <start>
             <offset>5621</offset>
@@ -3083,16 +3868,32 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CURSES_HAVE_NCURSES_CURSES_H</argument>
-          <start>
-            <offset>5681</offset>
-          </start>
-          <end>
-            <offset>5708</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CURSES_HAVE_NCURSES_CURSES_H</value>
+              <start>
+                <offset>5681</offset>
+              </start>
+              <end>
+                <offset>5708</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CURSES_HAVE_NCURSES_CURSES_H-NOTFOUND</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CURSES_HAVE_NCURSES_CURSES_H-NOTFOUND</value>
+              <start>
+                <offset>5711</offset>
+              </start>
+              <end>
+                <offset>5747</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>5710</offset>
           </start>
@@ -3135,31 +3936,49 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>NOT</argument>
-          <start>
-            <offset>5772</offset>
-          </start>
-          <end>
-            <offset>5774</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>NOT</value>
+              <start>
+                <offset>5772</offset>
+              </start>
+              <end>
+                <offset>5774</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>DEFINED</argument>
-          <start>
-            <offset>5776</offset>
-          </start>
-          <end>
-            <offset>5782</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>DEFINED</value>
+              <start>
+                <offset>5776</offset>
+              </start>
+              <end>
+                <offset>5782</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CURSES_HAVE_NCURSES_H</argument>
-          <start>
-            <offset>5784</offset>
-          </start>
-          <end>
-            <offset>5804</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CURSES_HAVE_NCURSES_H</value>
+              <start>
+                <offset>5784</offset>
+              </start>
+              <end>
+                <offset>5804</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -3174,19 +3993,34 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>EXISTS</argument>
-          <start>
-            <offset>5812</offset>
-          </start>
-          <end>
-            <offset>5817</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>EXISTS</value>
+              <start>
+                <offset>5812</offset>
+              </start>
+              <end>
+                <offset>5817</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CURSES_INCLUDE_PATH}/ncurses.h</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CURSES_INCLUDE_PATH}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CURSES_INCLUDE_PATH</value>
+                  <start>
+                    <offset>5822</offset>
+                  </start>
+                  <end>
+                    <offset>5840</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>5820</offset>
               </start>
@@ -3194,6 +4028,15 @@
                 <offset>5841</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/ncurses.h</value>
+              <start>
+                <offset>5842</offset>
+              </start>
+              <end>
+                <offset>5851</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
           <start>
             <offset>5819</offset>
@@ -3215,19 +4058,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CURSES_HAVE_NCURSES_H</argument>
-          <start>
-            <offset>5863</offset>
-          </start>
-          <end>
-            <offset>5883</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CURSES_HAVE_NCURSES_H</value>
+              <start>
+                <offset>5863</offset>
+              </start>
+              <end>
+                <offset>5883</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CURSES_INCLUDE_PATH}/ncurses.h</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CURSES_INCLUDE_PATH}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CURSES_INCLUDE_PATH</value>
+                  <start>
+                    <offset>5888</offset>
+                  </start>
+                  <end>
+                    <offset>5906</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>5886</offset>
               </start>
@@ -3235,6 +4093,15 @@
                 <offset>5907</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/ncurses.h</value>
+              <start>
+                <offset>5908</offset>
+              </start>
+              <end>
+                <offset>5917</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
           <start>
             <offset>5885</offset>
@@ -3267,16 +4134,32 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CURSES_HAVE_NCURSES_H</argument>
-          <start>
-            <offset>5938</offset>
-          </start>
-          <end>
-            <offset>5958</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CURSES_HAVE_NCURSES_H</value>
+              <start>
+                <offset>5938</offset>
+              </start>
+              <end>
+                <offset>5958</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CURSES_HAVE_NCURSES_H-NOTFOUND</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CURSES_HAVE_NCURSES_H-NOTFOUND</value>
+              <start>
+                <offset>5961</offset>
+              </start>
+              <end>
+                <offset>5990</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>5960</offset>
           </start>
@@ -3319,31 +4202,49 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>NOT</argument>
-          <start>
-            <offset>6015</offset>
-          </start>
-          <end>
-            <offset>6017</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>NOT</value>
+              <start>
+                <offset>6015</offset>
+              </start>
+              <end>
+                <offset>6017</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>DEFINED</argument>
-          <start>
-            <offset>6019</offset>
-          </start>
-          <end>
-            <offset>6025</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>DEFINED</value>
+              <start>
+                <offset>6019</offset>
+              </start>
+              <end>
+                <offset>6025</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CURSES_HAVE_CURSES_H</argument>
-          <start>
-            <offset>6027</offset>
-          </start>
-          <end>
-            <offset>6046</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CURSES_HAVE_CURSES_H</value>
+              <start>
+                <offset>6027</offset>
+              </start>
+              <end>
+                <offset>6046</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -3358,19 +4259,34 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>EXISTS</argument>
-          <start>
-            <offset>6054</offset>
-          </start>
-          <end>
-            <offset>6059</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>EXISTS</value>
+              <start>
+                <offset>6054</offset>
+              </start>
+              <end>
+                <offset>6059</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CURSES_INCLUDE_PATH}/curses.h</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CURSES_INCLUDE_PATH}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CURSES_INCLUDE_PATH</value>
+                  <start>
+                    <offset>6064</offset>
+                  </start>
+                  <end>
+                    <offset>6082</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>6062</offset>
               </start>
@@ -3378,6 +4294,15 @@
                 <offset>6083</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/curses.h</value>
+              <start>
+                <offset>6084</offset>
+              </start>
+              <end>
+                <offset>6092</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
           <start>
             <offset>6061</offset>
@@ -3399,19 +4324,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CURSES_HAVE_CURSES_H</argument>
-          <start>
-            <offset>6104</offset>
-          </start>
-          <end>
-            <offset>6123</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CURSES_HAVE_CURSES_H</value>
+              <start>
+                <offset>6104</offset>
+              </start>
+              <end>
+                <offset>6123</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CURSES_INCLUDE_PATH}/curses.h</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CURSES_INCLUDE_PATH}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CURSES_INCLUDE_PATH</value>
+                  <start>
+                    <offset>6128</offset>
+                  </start>
+                  <end>
+                    <offset>6146</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>6126</offset>
               </start>
@@ -3419,6 +4359,15 @@
                 <offset>6147</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/curses.h</value>
+              <start>
+                <offset>6148</offset>
+              </start>
+              <end>
+                <offset>6156</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
           <start>
             <offset>6125</offset>
@@ -3451,16 +4400,32 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CURSES_HAVE_CURSES_H</argument>
-          <start>
-            <offset>6177</offset>
-          </start>
-          <end>
-            <offset>6196</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CURSES_HAVE_CURSES_H</value>
+              <start>
+                <offset>6177</offset>
+              </start>
+              <end>
+                <offset>6196</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CURSES_HAVE_CURSES_H-NOTFOUND</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CURSES_HAVE_CURSES_H-NOTFOUND</value>
+              <start>
+                <offset>6199</offset>
+              </start>
+              <end>
+                <offset>6227</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>6198</offset>
           </start>
@@ -3503,37 +4468,64 @@
       <commandName>find_library</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CURSES_FORM_LIBRARY</argument>
-          <start>
-            <offset>6263</offset>
-          </start>
-          <end>
-            <offset>6281</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CURSES_FORM_LIBRARY</value>
+              <start>
+                <offset>6263</offset>
+              </start>
+              <end>
+                <offset>6281</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>form</argument>
-          <start>
-            <offset>6283</offset>
-          </start>
-          <end>
-            <offset>6286</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>form</value>
+              <start>
+                <offset>6283</offset>
+              </start>
+              <end>
+                <offset>6286</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>HINTS</argument>
-          <start>
-            <offset>6288</offset>
-          </start>
-          <end>
-            <offset>6292</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>HINTS</value>
+              <start>
+                <offset>6288</offset>
+              </start>
+              <end>
+                <offset>6292</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${_cursesLibDir}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${_cursesLibDir}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>_cursesLibDir</value>
+                  <start>
+                    <offset>6297</offset>
+                  </start>
+                  <end>
+                    <offset>6309</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>6295</offset>
               </start>
@@ -3562,22 +4554,34 @@
       <commandName>find_library</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CURSES_FORM_LIBRARY</argument>
-          <start>
-            <offset>6327</offset>
-          </start>
-          <end>
-            <offset>6345</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CURSES_FORM_LIBRARY</value>
+              <start>
+                <offset>6327</offset>
+              </start>
+              <end>
+                <offset>6345</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>form</argument>
-          <start>
-            <offset>6347</offset>
-          </start>
-          <end>
-            <offset>6350</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>form</value>
+              <start>
+                <offset>6347</offset>
+              </start>
+              <end>
+                <offset>6350</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -3606,31 +4610,49 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>NOT</argument>
-          <start>
-            <offset>6415</offset>
-          </start>
-          <end>
-            <offset>6417</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>NOT</value>
+              <start>
+                <offset>6415</offset>
+              </start>
+              <end>
+                <offset>6417</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>DEFINED</argument>
-          <start>
-            <offset>6419</offset>
-          </start>
-          <end>
-            <offset>6425</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>DEFINED</value>
+              <start>
+                <offset>6419</offset>
+              </start>
+              <end>
+                <offset>6425</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>FORM_LIBRARY</argument>
-          <start>
-            <offset>6427</offset>
-          </start>
-          <end>
-            <offset>6438</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>FORM_LIBRARY</value>
+              <start>
+                <offset>6427</offset>
+              </start>
+              <end>
+                <offset>6438</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -3645,19 +4667,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>FORM_LIBRARY</argument>
-          <start>
-            <offset>6447</offset>
-          </start>
-          <end>
-            <offset>6458</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>FORM_LIBRARY</value>
+              <start>
+                <offset>6447</offset>
+              </start>
+              <end>
+                <offset>6458</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CURSES_FORM_LIBRARY}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CURSES_FORM_LIBRARY}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CURSES_FORM_LIBRARY</value>
+                  <start>
+                    <offset>6463</offset>
+                  </start>
+                  <end>
+                    <offset>6481</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>6461</offset>
               </start>
@@ -3711,19 +4748,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CURSES_LIBRARIES</argument>
-          <start>
-            <offset>6533</offset>
-          </start>
-          <end>
-            <offset>6548</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CURSES_LIBRARIES</value>
+              <start>
+                <offset>6533</offset>
+              </start>
+              <end>
+                <offset>6548</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CURSES_LIBRARY}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CURSES_LIBRARY}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CURSES_LIBRARY</value>
+                  <start>
+                    <offset>6552</offset>
+                  </start>
+                  <end>
+                    <offset>6565</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>6550</offset>
               </start>
@@ -3732,12 +4784,8 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>6550</offset>
-          </start>
-          <end>
-            <offset>6566</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -3752,13 +4800,19 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CURSES_EXTRA_LIBRARY</argument>
-          <start>
-            <offset>6573</offset>
-          </start>
-          <end>
-            <offset>6592</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CURSES_EXTRA_LIBRARY</value>
+              <start>
+                <offset>6573</offset>
+              </start>
+              <end>
+                <offset>6592</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -3773,19 +4827,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CURSES_LIBRARIES</argument>
-          <start>
-            <offset>6601</offset>
-          </start>
-          <end>
-            <offset>6616</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CURSES_LIBRARIES</value>
+              <start>
+                <offset>6601</offset>
+              </start>
+              <end>
+                <offset>6616</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CURSES_LIBRARIES}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CURSES_LIBRARIES}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CURSES_LIBRARIES</value>
+                  <start>
+                    <offset>6620</offset>
+                  </start>
+                  <end>
+                    <offset>6635</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>6618</offset>
               </start>
@@ -3794,18 +4863,23 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>6618</offset>
-          </start>
-          <end>
-            <offset>6636</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CURSES_EXTRA_LIBRARY}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CURSES_EXTRA_LIBRARY}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CURSES_EXTRA_LIBRARY</value>
+                  <start>
+                    <offset>6640</offset>
+                  </start>
+                  <end>
+                    <offset>6659</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>6638</offset>
               </start>
@@ -3814,12 +4888,8 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>6638</offset>
-          </start>
-          <end>
-            <offset>6660</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -3845,13 +4915,19 @@
       <commandName>if</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CURSES_FORM_LIBRARY</argument>
-          <start>
-            <offset>6675</offset>
-          </start>
-          <end>
-            <offset>6693</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CURSES_FORM_LIBRARY</value>
+              <start>
+                <offset>6675</offset>
+              </start>
+              <end>
+                <offset>6693</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -3866,19 +4942,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CURSES_LIBRARIES</argument>
-          <start>
-            <offset>6702</offset>
-          </start>
-          <end>
-            <offset>6717</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CURSES_LIBRARIES</value>
+              <start>
+                <offset>6702</offset>
+              </start>
+              <end>
+                <offset>6717</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CURSES_LIBRARIES}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CURSES_LIBRARIES}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CURSES_LIBRARIES</value>
+                  <start>
+                    <offset>6721</offset>
+                  </start>
+                  <end>
+                    <offset>6736</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>6719</offset>
               </start>
@@ -3887,18 +4978,23 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>6719</offset>
-          </start>
-          <end>
-            <offset>6737</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CURSES_FORM_LIBRARY}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CURSES_FORM_LIBRARY}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CURSES_FORM_LIBRARY</value>
+                  <start>
+                    <offset>6741</offset>
+                  </start>
+                  <end>
+                    <offset>6759</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>6739</offset>
               </start>
@@ -3907,12 +5003,8 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>6739</offset>
-          </start>
-          <end>
-            <offset>6760</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -3952,19 +5044,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CURSES_INCLUDE_DIRS</argument>
-          <start>
-            <offset>6813</offset>
-          </start>
-          <end>
-            <offset>6831</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CURSES_INCLUDE_DIRS</value>
+              <start>
+                <offset>6813</offset>
+              </start>
+              <end>
+                <offset>6831</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CURSES_INCLUDE_PATH}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CURSES_INCLUDE_PATH}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CURSES_INCLUDE_PATH</value>
+                  <start>
+                    <offset>6835</offset>
+                  </start>
+                  <end>
+                    <offset>6853</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>6833</offset>
               </start>
@@ -3973,12 +5080,8 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>6833</offset>
-          </start>
-          <end>
-            <offset>6854</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -3993,19 +5096,34 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CURSES_INCLUDE_DIR</argument>
-          <start>
-            <offset>6861</offset>
-          </start>
-          <end>
-            <offset>6878</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CURSES_INCLUDE_DIR</value>
+              <start>
+                <offset>6861</offset>
+              </start>
+              <end>
+                <offset>6878</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CURSES_INCLUDE_PATH}</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CURSES_INCLUDE_PATH}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CURSES_INCLUDE_PATH</value>
+                  <start>
+                    <offset>6882</offset>
+                  </start>
+                  <end>
+                    <offset>6900</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>6880</offset>
               </start>
@@ -4014,12 +5132,8 @@
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
           </children>
-          <start>
-            <offset>6880</offset>
-          </start>
-          <end>
-            <offset>6901</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -4076,10 +5190,19 @@
       <commandName>include</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>${CMAKE_CURRENT_LIST_DIR}/FindPackageHandleStandardArgs.cmake</argument>
           <children>
             <ru.urururu.cmakeedit.core.ExpressionNode>
-              <expression>${CMAKE_CURRENT_LIST_DIR}</expression>
+              <nested>
+                <ru.urururu.cmakeedit.core.ConstantNode>
+                  <value>CMAKE_CURRENT_LIST_DIR</value>
+                  <start>
+                    <offset>7039</offset>
+                  </start>
+                  <end>
+                    <offset>7060</offset>
+                  </end>
+                </ru.urururu.cmakeedit.core.ConstantNode>
+              </nested>
               <start>
                 <offset>7037</offset>
               </start>
@@ -4087,13 +5210,18 @@
                 <offset>7061</offset>
               </end>
             </ru.urururu.cmakeedit.core.ExpressionNode>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>/FindPackageHandleStandardArgs.cmake</value>
+              <start>
+                <offset>7062</offset>
+              </start>
+              <end>
+                <offset>7097</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
           </children>
-          <start>
-            <offset>7037</offset>
-          </start>
-          <end>
-            <offset>7097</offset>
-          </end>
+          <start reference="../children/ru.urururu.cmakeedit.core.ExpressionNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -4108,41 +5236,64 @@
       <commandName>FIND_PACKAGE_HANDLE_STANDARD_ARGS</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>Curses</argument>
-          <start>
-            <offset>7134</offset>
-          </start>
-          <end>
-            <offset>7139</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>Curses</value>
+              <start>
+                <offset>7134</offset>
+              </start>
+              <end>
+                <offset>7139</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>DEFAULT_MSG
-</argument>
-          <start>
-            <offset>7141</offset>
-          </start>
-          <end>
-            <offset>7152</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>DEFAULT_MSG</value>
+              <start>
+                <offset>7141</offset>
+              </start>
+              <end>
+                <offset>7151</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CURSES_LIBRARY</argument>
-          <start>
-            <offset>7155</offset>
-          </start>
-          <end>
-            <offset>7168</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CURSES_LIBRARY</value>
+              <start>
+                <offset>7155</offset>
+              </start>
+              <end>
+                <offset>7168</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CURSES_INCLUDE_PATH</argument>
-          <start>
-            <offset>7170</offset>
-          </start>
-          <end>
-            <offset>7188</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CURSES_INCLUDE_PATH</value>
+              <start>
+                <offset>7170</offset>
+              </start>
+              <end>
+                <offset>7188</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>
@@ -4157,54 +5308,64 @@
       <commandName>mark_as_advanced</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>
-</argument>
-          <start>
-            <offset>7209</offset>
-          </start>
-          <end>
-            <offset>7209</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CURSES_INCLUDE_PATH</value>
+              <start>
+                <offset>7212</offset>
+              </start>
+              <end>
+                <offset>7230</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CURSES_INCLUDE_PATH
-</argument>
-          <start>
-            <offset>7212</offset>
-          </start>
-          <end>
-            <offset>7231</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CURSES_CURSES_LIBRARY</value>
+              <start>
+                <offset>7234</offset>
+              </start>
+              <end>
+                <offset>7254</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CURSES_CURSES_LIBRARY
-</argument>
-          <start>
-            <offset>7234</offset>
-          </start>
-          <end>
-            <offset>7255</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CURSES_NCURSES_LIBRARY</value>
+              <start>
+                <offset>7258</offset>
+              </start>
+              <end>
+                <offset>7279</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CURSES_NCURSES_LIBRARY
-</argument>
-          <start>
-            <offset>7258</offset>
-          </start>
-          <end>
-            <offset>7280</offset>
-          </end>
-        </ru.urururu.cmakeedit.core.ArgumentNode>
-        <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CURSES_EXTRA_LIBRARY
-</argument>
-          <start>
-            <offset>7283</offset>
-          </start>
-          <end>
-            <offset>7303</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CURSES_EXTRA_LIBRARY</value>
+              <start>
+                <offset>7283</offset>
+              </start>
+              <end>
+                <offset>7302</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
       </arguments>
       <comments/>

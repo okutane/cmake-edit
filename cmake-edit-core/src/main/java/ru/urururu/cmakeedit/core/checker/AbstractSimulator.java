@@ -3,9 +3,9 @@ package ru.urururu.cmakeedit.core.checker;
 import com.codahale.metrics.Timer;
 import ru.urururu.cmakeedit.core.ArgumentNode;
 import ru.urururu.cmakeedit.core.CommandInvocationNode;
-import ru.urururu.cmakeedit.core.Node;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 import static com.codahale.metrics.MetricRegistry.name;
 
@@ -13,16 +13,12 @@ import static com.codahale.metrics.MetricRegistry.name;
  * Created by okutane on 16/08/16.
  */
 class AbstractSimulator {
-    private Set<Node> suspiciousPoints;
+    private Map<String, CommandSimulator> staticSimulators = new HashMap<>();
 
-    private Map<String, CommandSimulator> simulators = new HashMap<>();
-
-    AbstractSimulator(Set<Node> suspiciousPoints) {
-        this.suspiciousPoints = suspiciousPoints;
-
+    AbstractSimulator() {
         Map<String, CommandSimulator> simulators = new HashMap<>();
         init(simulators);
-        this.simulators = new HashMap<>(simulators);
+        this.staticSimulators = new HashMap<>(simulators);
     }
 
     protected void init(Map<String, CommandSimulator> simulators) {
@@ -30,7 +26,12 @@ class AbstractSimulator {
             LogicalBlock logicalBlock = LogicalBlockFinder.find(state.getNodes(), state.getPosition(), "endfunction");
 
             ArgumentNode node = (ArgumentNode) cmd.getArguments().get(0);
-            state.addSubroutine(node.getArgument(), logicalBlock);
+
+            String name = state.getValue(node);
+            List<String> formalParameters = cmd.getArguments().subList(1, cmd.getArguments().size())
+                    .stream().map(state::getValue).collect(Collectors.toList());
+
+            state.addSimulator(name, new FunctionSimulator(this, formalParameters, logicalBlock.bodies.get(0)));
 
             state.setPosition(logicalBlock.endPosition);
             return state;
@@ -45,7 +46,7 @@ class AbstractSimulator {
             LogicalBlock logicalBlock = LogicalBlockFinder.find(state.getNodes(), state.getPosition(), "endmacro");
 
             ArgumentNode node = (ArgumentNode) cmd.getArguments().get(0);
-            state.addSubroutine(node.getArgument(), logicalBlock);
+            state.addSimulator(SimulationState.getArgument(node), new MacroSimulator(this, logicalBlock.bodies.get(0)));
 
             state.setPosition(logicalBlock.endPosition);
             return state;
@@ -55,12 +56,12 @@ class AbstractSimulator {
             LogicalBlock branches = LogicalBlockFinder.findIfNodes(state.getNodes(), state.getPosition());
 
             for (CommandInvocationNode header : branches.headers) {
-                state.simulate(suspiciousPoints, header);
+                state.simulate(header);
             }
 
             List<SimulationState> newStates = new ArrayList<>();
             for (List<CommandInvocationNode> branch : branches.bodies) {
-                SimulationState newState = simulate(ctx, new SimulationState(branch, 0, new LinkedHashMap<>(state.getVariables())));
+                SimulationState newState = simulate(ctx, new SimulationState(branch, 0, state.getSuspiciousPoints(), new LinkedHashMap<>(state.getVariables())));
                 if (newState != null) {
                     newStates.add(newState);
                 }
@@ -106,7 +107,7 @@ class AbstractSimulator {
 
     private SimulationState simulateLoop(CheckContext ctx, SimulationState state, LogicalBlock logicalBlock) throws LogicalException {
         for (CommandInvocationNode header : logicalBlock.headers) {
-            state.simulate(suspiciousPoints, header);
+            state.simulate(header);
         }
 
         List<SimulationState> loopStates = new ArrayList<>();
@@ -118,7 +119,7 @@ class AbstractSimulator {
         };
 
         for (List<CommandInvocationNode> branch : logicalBlock.bodies) {
-            SimulationState newState = simulate(loopCtx, new SimulationState(branch, 0, new LinkedHashMap<>(state.getVariables())));
+            SimulationState newState = simulate(loopCtx, new SimulationState(branch, 0, state.getSuspiciousPoints(), new LinkedHashMap<>(state.getVariables())));
             if (newState != null) {
                 loopStates.add(newState);
             }
@@ -134,25 +135,15 @@ class AbstractSimulator {
                 CommandInvocationNode current = state.getNodes().get(state.getPosition());
 
                 String commandName = current.getCommandName();
-                CommandSimulator simulator = simulators.get(commandName);
-                if (simulator != null) {
-                    try (Timer.Context processTime = ctx.getRegistry().timer(name(getClass(), "process", commandName)).time()) {
-                        state = simulator.simulate(ctx, state, current);
-                    }
-                } else {
-                    LogicalBlock subroutine = state.getSubroutine(commandName);
-                    if (subroutine != null) {
-                        CommandInvocationNode header = subroutine.headers.get(0);
-                        List<CommandInvocationNode> body = subroutine.bodies.get(0);
 
-                        if (header.getCommandName().equals("macro")) {
-                            SimulationState newState = simulate(ctx, new SimulationState(body, 0, new LinkedHashMap<>(state.getVariables())));
-                            if (newState != null) {
-                                state = merge(Collections.singletonList(newState), state.getNodes(), state.getPosition() + 1);
-                            }
-                        } else if (header.getCommandName().equals("function")) {
-                            // todo push variable scope and simulate
-                            process(state, current);
+                CommandSimulator dynamicSimulator = state.getSimulator(commandName);
+                if (dynamicSimulator != null) {
+                    state = dynamicSimulator.simulate(ctx, state, current);
+                } else {
+                    CommandSimulator simulator = staticSimulators.get(commandName);
+                    if (simulator != null) {
+                        try (Timer.Context processTime = ctx.getRegistry().timer(name(getClass(), "process", commandName)).time()) {
+                            state = simulator.simulate(ctx, state, current);
                         }
                     } else {
                         process(state, current);
@@ -163,7 +154,7 @@ class AbstractSimulator {
         }
     }
 
-    protected void process(SimulationState state, CommandInvocationNode node) {
+    protected void process(SimulationState state, CommandInvocationNode node) throws LogicalException {
         advance(state);
     }
 
@@ -171,7 +162,7 @@ class AbstractSimulator {
         state.setPosition(state.getPosition() + 1);
     }
 
-    private SimulationState merge(List<SimulationState> newStates, List<CommandInvocationNode> nodes, int mergePoint) {
+    public SimulationState merge(List<SimulationState> newStates, List<CommandInvocationNode> nodes, int mergePoint) {
         if (newStates.isEmpty()) {
             return null;
         }
@@ -183,7 +174,7 @@ class AbstractSimulator {
             }
         }
 
-        return new SimulationState(nodes, mergePoint, variables);
+        return new SimulationState(nodes, mergePoint, newStates.get(0).getSuspiciousPoints(), variables);
     }
 
     interface CommandSimulator {

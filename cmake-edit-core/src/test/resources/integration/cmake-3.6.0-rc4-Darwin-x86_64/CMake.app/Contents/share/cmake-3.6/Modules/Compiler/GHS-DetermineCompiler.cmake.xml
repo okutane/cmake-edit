@@ -4,16 +4,32 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>_compiler_id_pp_test</argument>
-          <start>
-            <offset>4</offset>
-          </start>
-          <end>
-            <offset>23</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_compiler_id_pp_test</value>
+              <start>
+                <offset>4</offset>
+              </start>
+              <end>
+                <offset>23</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>defined(__INTEGRITY)</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>defined(__INTEGRITY)</value>
+              <start>
+                <offset>26</offset>
+              </start>
+              <end>
+                <offset>45</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>25</offset>
           </start>
@@ -34,19 +50,35 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>_compiler_id_version_compute</argument>
-          <start>
-            <offset>54</offset>
-          </start>
-          <end>
-            <offset>81</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>_compiler_id_version_compute</value>
+              <start>
+                <offset>54</offset>
+              </start>
+              <end>
+                <offset>81</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>
 # define @PREFIX@COMPILER_VERSION_MAJOR @MACRO_DEC@(__INTEGRITY_MAJOR_VERSION)
 # define @PREFIX@COMPILER_VERSION_MINOR @MACRO_DEC@(__INTEGRITY_MINOR_VERSION)
-# define @PREFIX@COMPILER_VERSION_PATCH @MACRO_DEC@(__INTEGRITY_PATCH_VERSION)</argument>
+# define @PREFIX@COMPILER_VERSION_PATCH @MACRO_DEC@(__INTEGRITY_PATCH_VERSION)</value>
+              <start>
+                <offset>84</offset>
+              </start>
+              <end>
+                <offset>320</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>83</offset>
           </start>

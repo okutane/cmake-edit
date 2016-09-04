@@ -4,16 +4,32 @@
       <commandName>set</commandName>
       <arguments>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>CMAKE_RC_COMPILE_OBJECT</argument>
-          <start>
-            <offset>4</offset>
-          </start>
-          <end>
-            <offset>26</offset>
-          </end>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>CMAKE_RC_COMPILE_OBJECT</value>
+              <start>
+                <offset>4</offset>
+              </start>
+              <end>
+                <offset>26</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
+          <start reference="../children/ru.urururu.cmakeedit.core.ConstantNode/start"/>
+          <end reference="../children/ru.urururu.cmakeedit.core.ConstantNode/end"/>
         </ru.urururu.cmakeedit.core.ArgumentNode>
         <ru.urururu.cmakeedit.core.ArgumentNode>
-          <argument>&lt;CMAKE_RC_COMPILER&gt; -O coff &lt;DEFINES&gt; &lt;INCLUDES&gt; &lt;FLAGS&gt; &lt;SOURCE&gt; &lt;OBJECT&gt;</argument>
+          <children>
+            <ru.urururu.cmakeedit.core.ConstantNode>
+              <value>&lt;CMAKE_RC_COMPILER&gt; -O coff &lt;DEFINES&gt; &lt;INCLUDES&gt; &lt;FLAGS&gt; &lt;SOURCE&gt; &lt;OBJECT&gt;</value>
+              <start>
+                <offset>29</offset>
+              </start>
+              <end>
+                <offset>102</offset>
+              </end>
+            </ru.urururu.cmakeedit.core.ConstantNode>
+          </children>
           <start>
             <offset>28</offset>
           </start>

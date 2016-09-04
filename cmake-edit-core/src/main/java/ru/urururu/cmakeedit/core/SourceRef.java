@@ -17,4 +17,9 @@ public class SourceRef implements Serializable {
     public int getOffset() {
         return offset;
     }
+
+    @Override
+    public String toString() {
+        return String.valueOf(offset);
+    }
 }

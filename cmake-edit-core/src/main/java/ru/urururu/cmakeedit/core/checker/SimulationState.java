@@ -59,9 +59,6 @@ class SimulationState {
             @Override
             public void accept(ConstantNode node) {
                 String value = node.getValue();
-                if (value.endsWith("\n")) {
-                    value = value.replace("\n", ""); // todo this hack should be replaced by fix in parser!
-                }
                 sb.append(value);
             }
         });

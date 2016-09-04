@@ -26,6 +26,10 @@ abstract class ArgumentParser {
     public final ArgumentNode parseExternal(ParseContext ctx) throws ParseException {
         try (Timer.Context timer = ctx.getRegistry().timer(name + ".parse").time()) {
             return parseInternal(ctx);
+        } catch (ParseException e) {
+            throw e;
+        } catch (Exception e) {
+            throw new ParseException(ctx, e);
         }
     }
 
@@ -75,7 +79,10 @@ abstract class ArgumentParser {
                 }
                 ctx.advance();
             } else {
-                arguments.add(ArgumentParser.parse(ctx));
+                ArgumentNode argument = ArgumentParser.parse(ctx);
+                if (argument != null) {
+                    arguments.add(argument);
+                }
             }
         } while (true);
     }
@@ -320,6 +327,18 @@ abstract class ArgumentParser {
                             throw new UnexpectedCharacterException(ctx);
                     }
                     prev = 0;
+                } else if (cur == '\n')  {
+                    if (sb.length() != 0) {
+                        expressions.add(new ConstantNode(sb.toString(), start, end));
+                    }
+
+                    ctx.advance();
+
+                    if (expressions.isEmpty()) {
+                        return null;
+                    }
+
+                    return new ArgumentNode(expressions);
                 } else if (cur == ' ' || cur == '\t' || cur == '"' || cur == '(' || cur == ')' || cur == '#')  {
                     if (sb.length() != 0) {
                         expressions.add(new ConstantNode(sb.toString(), start, end));

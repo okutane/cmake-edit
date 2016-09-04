@@ -22,6 +22,12 @@ public class ArgumentParserTest {
     }
 
     @Test
+    public void testMultiline() throws ParseException {
+        checkArguments("(a\n" +
+                " b)", arg(val("a", 1, 1)), arg(val("b", 4, 4)));
+    }
+
+    @Test
     public void testNested() throws ParseException {
         checkArguments("(FALSE AND (FALSE OR TRUE))",
                 arg(val("FALSE", 1, 5)),

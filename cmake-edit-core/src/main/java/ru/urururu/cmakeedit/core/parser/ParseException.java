@@ -11,4 +11,10 @@ public class ParseException extends Exception {
 
         ctx.getRegistry().counter(MetricRegistry.name(getClass(), message)).inc();
     }
+
+    public ParseException(ParseContext ctx, Throwable cause) {
+        super(cause);
+
+        ctx.getRegistry().counter(MetricRegistry.name(cause.getClass(), cause.getMessage())).inc();
+    }
 }

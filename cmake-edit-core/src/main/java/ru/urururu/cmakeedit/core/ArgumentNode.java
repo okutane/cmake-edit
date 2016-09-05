@@ -35,12 +35,7 @@ public class ArgumentNode extends Node {
     }
 
     @Override
-    public void visitAll(NodeVisitor visitor) {
+    public void visit(NodeVisitor visitor) {
         visitor.accept(this);
-        if (children != null) {
-            children.forEach(n -> {
-                n.visitAll(visitor);
-            });
-        }
     }
 }

@@ -17,7 +17,7 @@ public class ParseErrorNode extends FileElementNode {
     }
 
     @Override
-    public void visitAll(NodeVisitor visitor) {
+    public void visit(NodeVisitor visitor) {
         visitor.accept(this);
     }
 }

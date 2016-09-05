@@ -85,7 +85,14 @@ class SimulationState {
     String getValue(Node argumentNode, Map<String, Node> substitutions) {
             StringBuilder sb = new StringBuilder();
 
-            argumentNode.visitAll(new NodeVisitorAdapter() {
+            argumentNode.visit(new NodeVisitorAdapter() {
+                @Override
+                public void accept(ArgumentNode node) {
+                    for (Node child : node.getChildren()) {
+                        child.visit(this);
+                    };
+                }
+
                 @Override
                 public void accept(ExpressionNode node) {
                     getValueDepth++;
@@ -109,7 +116,7 @@ class SimulationState {
                         Node substitution = substitutions.get(expr);
 
                         if (substitution != null) {
-                            substitution.visitAll(this);
+                            substitution.visit(this);
                         } else {
                             processUsage(expr);
                             sb.append('*').append(expr);
@@ -169,14 +176,21 @@ class SimulationState {
     static String getArgument(Node argumentNode) {
         StringBuilder sb = new StringBuilder();
 
-        argumentNode.visitAll(new NodeVisitorAdapter() {
+        argumentNode.visit(new NodeVisitorAdapter() {
+            @Override
+            public void accept(ArgumentNode node) {
+                for (Node child : node.getChildren()) {
+                    child.visit(this);
+                }
+            }
+
             @Override
             public void accept(ExpressionNode node) {
                 if (node.getKey() != null) {
                     sb.append(node.getKey());
                 }
                 //throw new IllegalStateException("not implemented");
-                node.getNested().stream().forEach(n -> n.visitAll(this));
+                node.getNested().stream().forEach(n -> n.visit(this));
             }
 
             @Override
@@ -189,7 +203,7 @@ class SimulationState {
     }
 
     void simulate(Node node) {
-        node.visitAll(new NodeVisitorAdapter() {
+        node.visit(new NodeVisitorAdapter() {
             @Override
             public void accept(CommandInvocationNode node) {
                 processUsages(node);

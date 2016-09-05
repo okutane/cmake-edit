@@ -47,5 +47,5 @@ public abstract class Node implements Serializable {
         return string.isEmpty() ? null : string;
     }
 
-    public abstract void visitAll(NodeVisitor visitor);
+    public abstract void visit(NodeVisitor visitor);
 }

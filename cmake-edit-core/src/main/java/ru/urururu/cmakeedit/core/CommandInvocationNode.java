@@ -16,10 +16,8 @@ public class CommandInvocationNode extends FileElementNode {
     }
 
     @Override
-    public void visitAll(NodeVisitor visitor) {
+    public void visit(NodeVisitor visitor) {
         visitor.accept(this);
-        super.visitAll(visitor);
-        arguments.forEach(n -> n.visitAll(visitor));
     }
 
     public String getCommandName() {

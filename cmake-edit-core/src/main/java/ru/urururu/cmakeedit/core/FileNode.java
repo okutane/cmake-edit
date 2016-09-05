@@ -18,7 +18,7 @@ public class FileNode {
 
     public void visitAll(NodeVisitor visitor) {
         for (FileElementNode node : nodes) {
-            node.visitAll(visitor);
+            node.visit(visitor);
         }
     }
 }

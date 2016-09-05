@@ -22,7 +22,7 @@ public class ConstantNode extends Node {
     }
 
     @Override
-    public void visitAll(NodeVisitor visitor) {
+    public void visit(NodeVisitor visitor) {
         visitor.accept(this);
     }
 

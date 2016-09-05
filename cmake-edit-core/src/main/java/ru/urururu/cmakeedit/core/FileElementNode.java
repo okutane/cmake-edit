@@ -17,9 +17,12 @@ public class FileElementNode extends Node {
     }
 
     @Override
-    public void visitAll(NodeVisitor visitor) {
-        for (CommentNode node : comments) {
-            node.visitAll(visitor);
-        }
+    public void visit(NodeVisitor visitor) {
+        // rethink
+        comments.forEach(c -> c.visit(visitor));
+    }
+
+    public List<CommentNode> getComments() {
+        return comments;
     }
 }

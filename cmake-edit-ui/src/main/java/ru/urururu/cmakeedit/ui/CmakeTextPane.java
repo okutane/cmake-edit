@@ -75,11 +75,20 @@ class CmakeTextPane extends JScrollPane implements DocumentListener {
             @Override
             public void accept(CommandInvocationNode node) {
                 colorize(node, normal);
+                for (Node child : node.getComments()) {
+                    child.visit(this);
+                }
+                for (Node child : node.getArguments()) {
+                    child.visit(this);
+                }
             }
 
             @Override
             public void accept(ArgumentNode node) {
                 colorize(node, argument);
+                for (Node child : node.getChildren()) {
+                    child.visit(this);
+                }
             }
 
             @Override

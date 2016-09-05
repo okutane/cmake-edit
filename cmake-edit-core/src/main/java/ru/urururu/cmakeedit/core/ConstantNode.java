@@ -8,12 +8,6 @@ public class ConstantNode extends Node {
 
     public ConstantNode(String value, SourceRef start, SourceRef end) {
         super(start, end);
-
-        // todo introduce validator for nodes and move code below there. keep in mind: escape sequences affect value length.
-//        if (end.getOffset() + 1 - start.getOffset() != value.length()) {
-//            throw new IllegalArgumentException("value = [" + value + "], start = [" + start + "], end = [" + end + "]");
-//        }
-
         this.value = value;
     }
 

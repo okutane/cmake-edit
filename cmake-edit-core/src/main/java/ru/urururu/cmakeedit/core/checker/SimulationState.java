@@ -90,7 +90,7 @@ class SimulationState {
                 public void accept(ArgumentNode node) {
                     for (Node child : node.getChildren()) {
                         child.visit(this);
-                    };
+                    }
                 }
 
                 @Override

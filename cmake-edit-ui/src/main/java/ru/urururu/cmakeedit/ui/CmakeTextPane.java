@@ -5,7 +5,6 @@ import ru.urururu.cmakeedit.core.*;
 import ru.urururu.cmakeedit.core.checker.FileCheckContext;
 import ru.urururu.cmakeedit.core.checker.Checker;
 import ru.urururu.cmakeedit.core.checker.LogicalException;
-import ru.urururu.cmakeedit.core.parser.ParseException;
 import ru.urururu.cmakeedit.core.parser.Parser;
 
 import javax.swing.*;
@@ -13,12 +12,15 @@ import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import javax.swing.text.*;
 import java.awt.*;
+import java.util.*;
 
 /**
  * Created by okutane on 07/08/16.
  */
 class CmakeTextPane extends JScrollPane implements DocumentListener {
     private final JTextPane textPane;
+    private boolean isDirty;
+    private SwingWorker<Void, Void> worker = new CheckerWorker();
 
     private final DefaultStyledDocument styledDocument;
     private final Style normal;
@@ -53,70 +55,28 @@ class CmakeTextPane extends JScrollPane implements DocumentListener {
 
         if (text != null) {
             textPane.replaceSelection(text);
-            parseAll();
+            parseAll(true);
         }
 
         styledDocument.addDocumentListener(this);
     }
 
-    private void parseAll() {
-        styledDocument.setCharacterAttributes(0, styledDocument.getLength(), normal, true);
-        textPane.getHighlighter().removeAllHighlights();
-
-        FileNode fileNode;
-        try {
-            fileNode = Parser.parse(new DocumentParseContext(styledDocument), Parser.ErrorHandling.NodesBefore);
-        } catch (ParseException e) {
-            // shouldn't be reachable, we're returning partially parsed tree.
-            throw new IllegalStateException(e);
+    private void parseAll(boolean force) {
+        if (!(isDirty || force)) {
+            return;
+        }
+        if (worker != null) {
+            worker.cancel(true);
         }
 
-        fileNode.visitAll(new NodeVisitorAdapter() {
-            @Override
-            public void accept(CommandInvocationNode node) {
-                colorize(node, normal);
-                for (Node child : node.getComments()) {
-                    child.visit(this);
-                }
-                for (Node child : node.getArguments()) {
-                    child.visit(this);
-                }
-            }
-
-            @Override
-            public void accept(ArgumentNode node) {
-                colorize(node, argument);
-                for (Node child : node.getChildren()) {
-                    child.visit(this);
-                }
-            }
-
-            @Override
-            public void accept(ExpressionNode node) {
-                colorize(node, expression);
-            }
-
-            @Override
-            public void accept(CommentNode node) {
-                colorize(node, comment);
-            }
-
-            @Override
-            public void accept(ParseErrorNode node) {
-                addHighlight(node.getStart(), node.getEnd(), errorsHighlighter);
-            }
-        });
-
-        try {
-            Checker.findUnused(new FileCheckContext(fileNode, new MetricRegistry(),(range, problem) -> addHighlight(range.getStart(), range.getEnd(), warningsHighlighter)));
-        } catch (LogicalException e) {
-            addHighlight(e.getFirstNode().getStart(), e.getLastNode().getEnd(), errorsHighlighter);
-        }
+        worker = new CheckerWorker();
+        worker.execute();
+        isDirty = false;
     }
 
-    private void addHighlight(SourceRef start, SourceRef end, Highlighter.HighlightPainter warningsHighlighter) {
+    private void addHighlight(SourceRef start, SourceRef end, Highlighter.HighlightPainter painter) {
         try {
-            textPane.getHighlighter().addHighlight(start.getOffset(), end.getOffset() + 1, warningsHighlighter);
+            textPane.getHighlighter().addHighlight(start.getOffset(), end.getOffset() + 1, painter);
         } catch (BadLocationException e) {
             throw new IllegalStateException(e);
         }
@@ -128,7 +88,8 @@ class CmakeTextPane extends JScrollPane implements DocumentListener {
     }
 
     private void onEvent(DocumentEvent.EventType type, int offset, int length, Document document) {
-        SwingUtilities.invokeLater(this::parseAll);
+        isDirty = true;
+        SwingUtilities.invokeLater(() -> parseAll(false));
     }
 
     @Override
@@ -143,5 +104,80 @@ class CmakeTextPane extends JScrollPane implements DocumentListener {
 
     private void colorize(Node node, Style style) {
         styledDocument.setCharacterAttributes(node.getStart().getOffset(), node.getEnd().getOffset() - node.getStart().getOffset() + 1, style, false);
+    }
+
+    private class CheckerWorker extends SwingWorker<Void, Void> {
+        FileNode ast;
+        Map<Highlighter.HighlightPainter, Collection<SourceRange>> pendingHighlights = new LinkedHashMap<>();
+
+
+        @Override
+        protected Void doInBackground() throws Exception {
+            ast = Parser.parse(new DocumentParseContext(styledDocument), Parser.ErrorHandling.NodesBefore);
+
+            Collection<SourceRange> warnings = new ArrayList<>();
+            pendingHighlights.put(warningsHighlighter, warnings);
+
+            try {
+                Checker.findUnused(new FileCheckContext(ast, new MetricRegistry(), (range, problem) -> warnings.add(range)));
+            } catch (LogicalException e) {
+                pendingHighlights.put(errorsHighlighter,
+                        Collections.singleton(new SourceRange(e.getFirstNode().getStart(), e.getLastNode().getEnd())));
+            }
+
+            return null;
+        }
+
+        @Override
+        protected void done() {
+            if (ast == null) {
+                // partial results are ok, but ast is necessary.
+                return;
+            }
+
+            styledDocument.setCharacterAttributes(0, styledDocument.getLength(), normal, true);
+            textPane.getHighlighter().removeAllHighlights();
+
+            ast.visitAll(new NodeVisitorAdapter() {
+                @Override
+                public void accept(CommandInvocationNode node) {
+                    colorize(node, normal);
+                    for (Node child : node.getComments()) {
+                        child.visit(this);
+                    }
+                    for (Node child : node.getArguments()) {
+                        child.visit(this);
+                    }
+                }
+
+                @Override
+                public void accept(ArgumentNode node) {
+                    colorize(node, argument);
+                    for (Node child : node.getChildren()) {
+                        child.visit(this);
+                    }
+                }
+
+                @Override
+                public void accept(ExpressionNode node) {
+                    colorize(node, expression);
+                }
+
+                @Override
+                public void accept(CommentNode node) {
+                    colorize(node, comment);
+                }
+
+                @Override
+                public void accept(ParseErrorNode node) {
+                    addHighlight(node.getStart(), node.getEnd(), errorsHighlighter);
+                }
+            });
+
+            for (Map.Entry<Highlighter.HighlightPainter, Collection<SourceRange>> highlights : pendingHighlights.entrySet()) {
+                Highlighter.HighlightPainter painter = highlights.getKey();
+                highlights.getValue().forEach(problem -> addHighlight(problem.getStart(), problem.getEnd(), painter));
+            }
+        }
     }
 }

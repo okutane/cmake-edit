@@ -123,7 +123,7 @@ class AbstractSimulator {
             if (newState != null) {
                 loopStates.add(newState);
 
-                simulate(loopCtx, newState.copyAt(branch, 0));
+                simulate(loopCtx, newState.copyAt(branch, 0)); // re-check loop body with new variables
             }
         }
         loopStates.add(state); // case when we don't enter loop

@@ -24,3 +24,9 @@ while(SOMETHING)
    set(MyVar second) # not used
    set(MyVar third) # used in 2nd iteration
 endwhile(SOMETHING_ELSE)
+
+set(MyVar first)
+while(letter a b c)
+   print(${MyVar})
+   set(MyVar second) # used in 2nd iteration
+endwhile(SOMETHING_ELSE)

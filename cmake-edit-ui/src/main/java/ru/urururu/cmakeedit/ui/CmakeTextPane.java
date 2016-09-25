@@ -20,7 +20,7 @@ import java.util.*;
 class CmakeTextPane extends JScrollPane implements DocumentListener {
     private final JTextPane textPane;
     private boolean isDirty;
-    private SwingWorker<Void, Void> worker = new CheckerWorker();
+    private transient SwingWorker<Void, Void> worker = null;
 
     private final DefaultStyledDocument styledDocument;
     private final Style normal;

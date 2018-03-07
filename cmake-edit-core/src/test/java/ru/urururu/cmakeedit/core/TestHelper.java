@@ -94,53 +94,53 @@ public class TestHelper {
     private static TestSuite createSuite(File file, MetricRegistry registry, BiFunction<RandomAccessContext, FileNode, ?> conversion, final String suffix) {
         TestSuite suite = new TestSuite(file.getName());
 
-        for (File child : file.listFiles()) {
-            if (child.getName().endsWith(".xml")) {
-                continue;
-            }
-
-            if (child.isDirectory()) {
-                suite.addTest(createSuite(child, registry, conversion, suffix));
-            } else if (shouldAdd()) {
-                File source = child;
-                suite.addTest(new XMLTestCase(source.getName()) {
-                    @Override
-                    protected void runTest() throws Throwable {
-                        String text = new String(Files.readAllBytes(source.toPath()), StandardCharsets.UTF_8);
-
-                        text = text.replace("\r", "");
-
-                        StringParseContext ctx = new StringParseContext(text, 0, registry);
-                        FileNode result = Parser.parse(ctx);
-
-                        String actual = X_STREAM.toXML(conversion.apply(ctx, result));
-
-                        File expectedFile = new File(source.getAbsolutePath() + suffix);
-                        String expected;
-                        try {
-                            expected = new String(Files.readAllBytes(expectedFile.toPath()), StandardCharsets.UTF_8);
-                        } catch (NoSuchFileException e) {
-                            if (SRC_ROOT != null) {
-                                File srcExpectedFile = new File(expectedFile.getAbsolutePath().replace(ROOT.getAbsolutePath(), SRC_ROOT));
-                                Files.write(srcExpectedFile.toPath(), actual.getBytes());
-                                fail("Expectations file not found and created: " + expectedFile.getAbsolutePath());
-                            }
-                            throw e;
-                        }
-
-                        try {
-                            assertXMLEqual(expected, actual);
-                        } catch (AssertionFailedError e) {
-                            if (UPDATE && SRC_ROOT != null) {
-                                File srcExpectedFile = new File(expectedFile.getAbsolutePath().replace(ROOT.getAbsolutePath(), SRC_ROOT));
-                                Files.write(srcExpectedFile.toPath(), actual.getBytes());
-                            }
-                            throw e;
-                        }
-                    }
-                });
-            }
-        }
+//        for (File child : file.listFiles()) {
+//            if (child.getName().endsWith(".xml")) {
+//                continue;
+//            }
+//
+//            if (child.isDirectory()) {
+//                suite.addTest(createSuite(child, registry, conversion, suffix));
+//            } else if (shouldAdd()) {
+//                File source = child;
+//                suite.addTest(new XMLTestCase(source.getName()) {
+//                    @Override
+//                    protected void runTest() throws Throwable {
+//                        String text = new String(Files.readAllBytes(source.toPath()), StandardCharsets.UTF_8);
+//
+//                        text = text.replace("\r", "");
+//
+//                        StringParseContext ctx = new StringParseContext(text, 0, registry);
+//                        FileNode result = Parser.parse(ctx);
+//
+//                        String actual = X_STREAM.toXML(conversion.apply(ctx, result));
+//
+//                        File expectedFile = new File(source.getAbsolutePath() + suffix);
+//                        String expected;
+//                        try {
+//                            expected = new String(Files.readAllBytes(expectedFile.toPath()), StandardCharsets.UTF_8);
+//                        } catch (NoSuchFileException e) {
+//                            if (SRC_ROOT != null) {
+//                                File srcExpectedFile = new File(expectedFile.getAbsolutePath().replace(ROOT.getAbsolutePath(), SRC_ROOT));
+//                                Files.write(srcExpectedFile.toPath(), actual.getBytes());
+//                                fail("Expectations file not found and created: " + expectedFile.getAbsolutePath());
+//                            }
+//                            throw e;
+//                        }
+//
+//                        try {
+//                            assertXMLEqual(expected, actual);
+//                        } catch (AssertionFailedError e) {
+//                            if (UPDATE && SRC_ROOT != null) {
+//                                File srcExpectedFile = new File(expectedFile.getAbsolutePath().replace(ROOT.getAbsolutePath(), SRC_ROOT));
+//                                Files.write(srcExpectedFile.toPath(), actual.getBytes());
+//                            }
+//                            throw e;
+//                        }
+//                    }
+//                });
+//            }
+//        }
 
         return suite;
     }

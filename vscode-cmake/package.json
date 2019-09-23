@@ -10,14 +10,22 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:extension.helloWorld"
+		"onLanguage:cmake"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
-		"commands": [
+		"languages": [
 			{
-				"command": "extension.helloWorld",
-				"title": "Hello World"
+				"id": "cmake",
+				"aliases": [
+					"CMake"
+				],
+				"extensions": [
+					".cmake"
+				],
+				"filenames": [
+					"CMakeLists.txt"
+				]
 			}
 		]
 	},
@@ -27,6 +35,9 @@
 		"watch": "tsc -watch -p ./",
 		"pretest": "npm run compile",
 		"test": "node ./out/test/runTest.js"
+	},
+	"dependencies": {
+		"vscode-languageclient": "^4.1.4"
 	},
 	"devDependencies": {
 		"@types/glob": "^7.1.1",

@@ -2,28 +2,27 @@ package ru.urururu.cmakeedit.lsp;
 
 import org.eclipse.lsp4j.Color;
 import org.eclipse.lsp4j.ColorInformation;
-import org.eclipse.lsp4j.CompletionOptions;
 import org.eclipse.lsp4j.DidChangeConfigurationParams;
 import org.eclipse.lsp4j.DidChangeTextDocumentParams;
 import org.eclipse.lsp4j.DidChangeWatchedFilesParams;
 import org.eclipse.lsp4j.DidCloseTextDocumentParams;
 import org.eclipse.lsp4j.DidOpenTextDocumentParams;
 import org.eclipse.lsp4j.DidSaveTextDocumentParams;
-import org.eclipse.lsp4j.DocumentColorParams;
 import org.eclipse.lsp4j.DocumentHighlight;
 import org.eclipse.lsp4j.DocumentSymbol;
 import org.eclipse.lsp4j.DocumentSymbolParams;
 import org.eclipse.lsp4j.InitializeParams;
 import org.eclipse.lsp4j.InitializeResult;
+import org.eclipse.lsp4j.Location;
 import org.eclipse.lsp4j.MessageParams;
 import org.eclipse.lsp4j.MessageType;
 import org.eclipse.lsp4j.Position;
 import org.eclipse.lsp4j.Range;
+import org.eclipse.lsp4j.SemanticHighlightingServerCapabilities;
 import org.eclipse.lsp4j.ServerCapabilities;
 import org.eclipse.lsp4j.SymbolInformation;
+import org.eclipse.lsp4j.SymbolKind;
 import org.eclipse.lsp4j.TextDocumentPositionParams;
-import org.eclipse.lsp4j.TextDocumentSyncKind;
-import org.eclipse.lsp4j.TextDocumentSyncOptions;
 import org.eclipse.lsp4j.jsonrpc.Launcher;
 import org.eclipse.lsp4j.jsonrpc.messages.Either;
 import org.eclipse.lsp4j.launch.LSPLauncher;
@@ -49,7 +48,6 @@ import java.io.File;
 import java.net.URI;
 import java.nio.file.Files;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
@@ -77,11 +75,6 @@ public class Server {
             }
 
             @Override
-            public CompletableFuture<List<Either<SymbolInformation, DocumentSymbol>>> documentSymbol(DocumentSymbolParams params) {
-                return null;
-            }
-
-            @Override
             public CompletableFuture<List<? extends DocumentHighlight>> documentHighlight(TextDocumentPositionParams position) {
                 CompletableFuture<List<? extends DocumentHighlight>> cf = new CompletableFuture<>();
 
@@ -93,59 +86,75 @@ public class Server {
             }
 
             @Override
-            public CompletableFuture<List<ColorInformation>> documentColor(DocumentColorParams params) {
-                final CompletableFuture<List<ColorInformation>> result = new CompletableFuture<>();
+            public CompletableFuture<List<Either<SymbolInformation, DocumentSymbol>>> documentSymbol(DocumentSymbolParams params) {
+                final CompletableFuture<List<Either<SymbolInformation, DocumentSymbol>>> result = new CompletableFuture<>();
 
                 try {
                     URI uri = new URI(params.getTextDocument().getUri());
                     File file = new File(uri);
 
                     String content = new String(Files.readAllBytes(file.toPath()));
-                    FileNode fileNode = Parser.parse(new StringParseContext(content, 0));
+                    FileNode fileNode = Parser.parse(new StringParseContext(content, 0), Parser.ErrorHandling.PartialResult);
 
-                    List<ColorInformation> colors = new ArrayList<>();
+                    List<Either<SymbolInformation, DocumentSymbol>> symbols = new ArrayList<>();
 
                     fileNode.visitAll(new NodeVisitor() {
                         @Override
                         public void accept(ArgumentNode node) {
-                            colors.add(new ColorInformation(toRange(node), new Color(0.5, 0.5, 0.5, 1)));
+                            addSymbol(node, SymbolKind.Variable);
+                            for (Node child : node.getChildren()) {
+                                child.visit(this);
+                            }
                         }
 
                         @Override
                         public void accept(CommentNode node) {
-                            colors.add(new ColorInformation(toRange(node), new Color(0, 0.5, 0, 1)));
+                            //addSymbol(node, SymbolKind.);
                         }
 
                         @Override
                         public void accept(ExpressionNode node) {
-                            colors.add(new ColorInformation(toRange(node), new Color(0, 0, 0.5, 1)));
+                            //addSymbol(node, SymbolKind.);
                         }
 
                         @Override
                         public void accept(CommandInvocationNode node) {
-                            colors.add(new ColorInformation(toRange(node), new Color(0.5, 0.5, 0, 1)));
+                            //colors.add(new ColorInformation(toRange(node), new Color(0.5, 0.5, 0, 1)));
+                            for (Node child : node.getComments()) {
+                                child.visit(this);
+                            }
+                            for (Node child : node.getArguments()) {
+                                child.visit(this);
+                            }
                         }
 
                         @Override
                         public void accept(ParseErrorNode node) {
-                            colors.add(new ColorInformation(toRange(node), new Color(0.5, 0, 0, 1)));
+                            //colors.add(new ColorInformation(toRange(node), new Color(0.5, 0, 0, 1)));
                         }
 
                         @Override
                         public void accept(ConstantNode node) {
-                            colors.add(new ColorInformation(toRange(node), new Color(0, 0.5, 0.5, 1)));
+                            addSymbol(node, SymbolKind.Constant);
+                            //colors.add(new ColorInformation(toRange(node), new Color(0, 0.5, 0.5, 1)));
                         }
 
-                        private Range toRange(Node node) {
-                            return new Range(toPosition(node.getStart()), toPosition(node.getEnd()));
+                        private void addSymbol(Node node, SymbolKind kind) {
+                            symbols.add(Either.forLeft(new SymbolInformation(kind.name(), kind, toRange(node))));
+                        }
+
+                        private Location toRange(Node node) {
+                            return new Location(params.getTextDocument().getUri(), new Range(  toPosition(node.getStart()), toPosition(node.getEnd())));
                         }
 
                         private Position toPosition(SourceRef sourceRef) {
-                            return new Position(1 + colors.size(), 1 + sourceRef.getOffset());
+                            return new Position(1 + symbols.size(), 1 + sourceRef.getOffset());
                         }
                     });
 
-                    result.complete(colors.subList(0, 1));
+                    System.err.println(symbols);
+
+                    result.complete(symbols);
                 } catch (Exception e) {
                     result.completeExceptionally(e);
                 }
@@ -188,8 +197,9 @@ public class Server {
         @Override
         public CompletableFuture<InitializeResult> initialize(InitializeParams initializeParams) {
             ServerCapabilities serverCapabilities = new ServerCapabilities();
-            serverCapabilities.setColorProvider(false);
+            serverCapabilities.setDocumentSymbolProvider(true);
             serverCapabilities.setDocumentHighlightProvider(true);
+            serverCapabilities.setSemanticHighlighting(new SemanticHighlightingServerCapabilities());
 //            serverCapabilities.setDocumentFormattingProvider(true);
 //            serverCapabilities.setDocumentHighlightProvider(true);
 //            TextDocumentSyncOptions textDocumentSync = new TextDocumentSyncOptions();

@@ -12,7 +12,7 @@ let client: LanguageClient;
 
 export function activate(context: vscode.ExtensionContext) {
 	let java = "/Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/bin/java";
-	let debugAgent = "-agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=5005";
+	let debugAgent = "-agentlib:jdwp=transport=dt_socket,server=n,address=ntb-cerbat.net.billing.ru:5005,suspend=y";
 	let serverOptions: ServerOptions = {
 		run: { command: java, args: ["-jar a.jar"] },
 		debug: {
